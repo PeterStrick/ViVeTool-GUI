@@ -1,4 +1,4 @@
-# This is a WIP but Core Functionality exists and works
+# This is a WIP but Core Functionality exists and does work
 
 # ViVeTool-GUI
 Windows Feature Control GUI based on ViVeTool
@@ -7,5 +7,6 @@ Windows Feature Control GUI based on ViVeTool
 - [x] Add Core Functionality
 - [ ] Add Icons and Images
 - [ ] Add a better and actually useful README.md
-- [ ] Pulish and uplaod release
+- [ ] Publish and upload release
 - [ ] Add About Dialog and Usage Help
+- [ ] Fix countless of spelling mistakes and code smells
