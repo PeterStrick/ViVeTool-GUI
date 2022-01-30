@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.WinControls.RadToastNotification</name>
+    </assembly>
+    <members>
+        <member name="M:Telerik.RadToastNotificationManager.CollectionService.GetNextDefaultName(System.Collections.Generic.IEnumerable{Telerik.RadToastNotificationManager.RadToastNotification},Telerik.RadToastNotificationManager.RadToastTemplateType)">
+            <summary>
+            Gets the next default name for the given template type.
+            </summary>
+            <param name="toastNotifications"></param>
+            <param name="templateType"></param>
+            <returns>String like RadToastTemplateType1</returns>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.CollectionService.IsNameValid(System.Collections.Generic.IEnumerable{Telerik.RadToastNotificationManager.RadToastNotification},System.String,System.String@)">
+            <summary>
+            Checks of the newName is already used.
+            </summary>
+            <param name="toastNotifications"></param>
+            <param name="name">The candidate name.</param>
+            <param name="errorMessage">Error message, false is returned</param>
+            <returns>True if the name is still available, false otherwise.</returns>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.CollectionService.GetToast(System.Collections.Generic.IEnumerable{Telerik.RadToastNotificationManager.RadToastNotification},System.String)">
+            <summary>
+            Get a toast by name. Return null if the name is not valid.
+            </summary>
+            <param name="toastNotifications"></param>
+            <param name="name"></param>
+            <returns><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></returns>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.Constants">
+            <summary>
+            [Obsolete] Contasins different GUID strings
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastOnActivatedEventArgs">
+            <summary>
+            Arguments coming from interacting with a toast notification.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastOnActivatedEventArgs.Arguments">
+            <summary>
+            Gets the arguments from the element that the user has interacted with.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastOnActivatedEventArgs.UserInput">
+            <summary>
+            Gets the user input from elementas like textboxes/comboboxes.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastAttribute.Values">
+            <summary>
+            Empty array - textbox input.
+            Non-empty array - dropdown input.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastAttribute.SelectedValue">
+            <summary>
+            The value that the user has filled in/selected.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastNotificationBuilder">
+            <summary>
+            A class that builds different toast notifications, based on a given template.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationBuilder.AddElement(System.String,Telerik.RadToastNotificationManager.RadToastElement,System.String@,System.String@)">
+            <summary>
+            Adds an element to the given xml.
+            </summary>
+            <param name="xml">The xml that will be updated.</param>
+            <param name="element">The element to add.</param>
+            <param name="newXml">The modified xml.</param>
+            <param name="errorMessage">Error message, if went horse into the river.</param>
+            <returns>True if successful, false if went horse into the river.</returns>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationBuilder.CreateToast(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Set <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag"/> and <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.BindingData"/> for parameter bindings to work.
+            </summary>        
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationBuilder.CreateScheduledToast(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Set <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.DeliveryTime"/> for scheduled toasts.
+            And <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag"/> is needed to remove a scheduled toast.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastNotificationManagerImpl">
+            <summary>
+            A manager class that registers an application, so it can raise toast and reveive toast activations.
+            The manager is also responsible for shwoing the toasts. Do not forget to unregister in the end.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastOnActivatedEventHandler">
+            <summary>
+            Event handler for toast activation.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastElementManager">
+            <summary>
+            Description of the different elements and attributes that a toast xml can contain.
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastNotificationCollection">
+            <summary>
+            A collection of RadToastNotification. Supports unique names.
+            Can access a RadToastNotification through its name. Names must be unique.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.#ctor(System.Collections.Generic.IList{Telerik.RadToastNotificationManager.RadToastNotification},System.Boolean)">
+            <summary>
+            Copy copntructor that supports shallow and deep copy.
+            </summary>
+            <param name="toastNotifications">A list of toast notifications to copy.</param>
+            <param name="deepCopy">True to use deep copy, false to use shallow copy. Deep copy is default.</param>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the toast notification at the specified index. Throws <see cref="T:Telerik.RadToastNotificationManager.RadToastNotificationInvalidNameException"/> if the name is not unique.
+            </summary>
+            <param name="index">The zero-based index of the toast notification to get or set.</param>
+            <returns><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></returns>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Item(System.String)">
+            <summary>
+            Gets a toast based on its name. Return null if the name does not exist in the collection.
+            </summary>
+            <param name="name"><see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Name"/></param>
+            <returns><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></returns>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Add(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Adds a RadToastNotification to the end of the collection, if the name is unique.
+            Throws <see cref="T:Telerik.RadToastNotificationManager.RadToastNotificationInvalidNameException"/> if the name is not unique.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.AddRange(System.Collections.Generic.IEnumerable{Telerik.RadToastNotificationManager.RadToastNotification})">
+            <summary>
+            Adds the RadToastNotifications of the given collection to the end of the RadToastNotificationCollection.
+            Throws <see cref="T:Telerik.RadToastNotificationManager.RadToastNotificationInvalidNameException"/> if one of the names is not unique.
+            </summary>
+            <param name="collection">The given collection</param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Clear">
+            <summary>
+            Clears all RadToastNotifications from the collection.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Insert(System.Int32,Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Inserts a RadToastNotification into the collection at the specified index.
+            Throws <see cref="T:Telerik.RadToastNotificationManager.RadToastNotificationInvalidNameException"/> if the name is not unique.
+            </summary>
+            <param name="index">The given index</param>
+            <param name="item"><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.InsertRange(System.Int32,System.Collections.Generic.IEnumerable{Telerik.RadToastNotificationManager.RadToastNotification})">
+            <summary>
+            Adds the RadToastNotifications of the given collection at the specified index.
+            Throws <see cref="T:Telerik.RadToastNotificationManager.RadToastNotificationInvalidNameException"/> if one of the names is not unique.
+            </summary>
+            <param name="index">The given index</param>
+            <param name="collection">The given collection</param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.Remove(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Removes a given RadToastNotification from the collection.
+            </summary>
+            <param name="item"><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></param>
+            <returns>True if RadToastNotification is successfully removed; otherwise, false. 
+            This method also returns false if RadToastNotification was not found in the collection.</returns>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes a RadToastNotification at the given index.
+            </summary>
+            <param name="index">The given index</param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of RadToastNotifications from the collection.
+            </summary>
+            <param name="index">The zero-based starting index of the range of RadToastNotifications to remove.</param>
+            <param name="count">The number of RadToastNotifications to remove.</param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotificationCollection.RemoveAll(System.Predicate{Telerik.RadToastNotificationManager.RadToastNotification})">
+            <summary>
+            Removes all the RadToastNotifications that match the conditions defined by the specified predicate.
+            </summary>
+            <param name="match">The delegate that defines the conditions of the elements to remove</param>
+            <returns>The number of elements removed</returns>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastTemplateType">
+            <summary>
+            Enumeration with the toast templates.
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastGeneric">
+            <summary>
+            Generic template used in Windows 10
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastNews">
+            <summary>
+            News template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastAlarm">
+            <summary>
+            Alarm template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastCall">
+            <summary>
+            Phone Call template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastChat">
+            <summary>
+            Chat template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastReminder">
+            <summary>
+            Meeting template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastWeather">
+            <summary>
+            Wheather template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastDownload">
+            <summary>
+            Download template
+            </summary>
+        </member>
+        <member name="F:Telerik.RadToastNotificationManager.RadToastTemplateType.ToastLegacy">
+            <summary>
+            Legacy template, used in Windows 8
+            </summary>
+        </member>
+        <member name="T:Telerik.RadToastNotificationManager.RadToastNotification">
+            <summary>
+            Represent a toast notification.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.TemplateType">
+            <summary>
+            The template type of the RadToastNotification.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.Xml">
+            <summary>
+            The body of the RadToastNotification.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.Name">
+            <summary>
+            A unique name of the RadToastNotification. Cna be used to identify the RadToastNotification in a RadToastNotificationCollection.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.DeliveryTime">
+            <summary>
+            Gets or sets delivery time for scheduled toasts.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag">
+            <summary>
+            Gets or sets the unique identifier of this notification.
+            </summary>
+        </member>
+        <member name="P:Telerik.RadToastNotificationManager.RadToastNotification.BindingData">
+            <summary>
+            Use this to set your binding data as key-value pair. Your binding parameter is the key.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotification.#ctor">
+            <summary>
+            Default constructor. Creates a generic toast with a random name.
+            </summary>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotification.#ctor(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Copy constructor
+            </summary>
+            <param name="toastNotification"><see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/></param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotification.#ctor(Telerik.RadToastNotificationManager.RadToastTemplateType,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type"><see cref="T:Telerik.RadToastNotificationManager.RadToastTemplateType"/></param>
+            <param name="name">Name of the RadToastNotification. Must be unique.</param>
+        </member>
+        <member name="M:Telerik.RadToastNotificationManager.RadToastNotification.#ctor(Telerik.RadToastNotificationManager.RadToastTemplateType,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type"><see cref="T:Telerik.RadToastNotificationManager.RadToastTemplateType"/></param>
+            <param name="name">Name of the RadToastNotification. Must be unique.</param>
+            <param name="xml">The body of the RadToastNotification represented as xml.</param>
+        </member>
+        <member name="E:Telerik.RadToastNotificationManager.RadToastNotification.PropertyChanged">
+            <summary>
+            PropertyChanged is fired upon changed name.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastActivatedEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadToastActivatedEventArgs.Arguments">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadToastActivatedEventArgs.UserInput">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadToastActivatedEventArgs.AppUserModelId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastActivatedEventArgs.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="arguments"></param>
+            <param name="userInput"></param>
+            <param name="appUserModelId"></param>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastNotificationActivatorBase">
+            <summary>
+            A base activator class. Used to register <see cref="T:Telerik.WinControls.UI.RadToastNotificationManager"/>.    
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastNotificationDefaultActivator">
+            <summary>
+            A default activator. Does nothing when activated.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationDefaultActivator.OnActivated(System.String,Microsoft.Toolkit.Uwp.Notifications.NotificationUserInput,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="arguments"></param>
+            <param name="userInput"></param>
+            <param name="appUserModelId"></param>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastNotificationInternalActivator">
+            <summary>
+            An internal activator. Fires events.
+            If no custom activator is implemented, this one is used instead.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastNotificationInternalActivator2">
+            <summary>
+            An internal activator. Fires events. Used for the example.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastNotificationManager">
+            <summary>
+            Toast Notification Manager.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadToastNotificationManager.manager">
+            <summary>
+            The manager!
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadToastNotificationManager.builder">
+            <summary>
+            A builder for toasts.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadToastNotificationManager.toastNotifications">
+            <summary>
+            A list of the created notifications.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadToastNotificationManager.shownToasts">
+            <summary>
+            Stores the shown notifications.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.#ctor(System.ComponentModel.IContainer)">
+            <summary>        
+            Creates and initializes a new instance of the RadToastNotificationManager.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadToastNotificationManager.ToastNotifications">
+            <summary>
+            A collection with initialized toast notifications.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Register``1(System.String,System.String,System.String)">
+            <summary>
+            Registers the application using the manager, so the activator can receive notification activation.
+            </summary>
+            <typeparam name="T">An activator that receives notification activations. Must inherit <see cref="T:Telerik.WinControls.UI.RadToastNotificationActivatorBase"/>.</typeparam>
+            <param name="exePath">The path of the executable</param>
+            <param name="shortcutName">A name of the shortcut that will be placed in start menu.</param>
+            <param name="aumid">Unique id of the application - recommended string - name + GUID.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Register``1">
+            <summary>
+            Registers the application using the current process filename, a default Telerik shortcut name and default AUMID.
+            </summary>
+            <typeparam name="T">An activator that receives notification activations. Must inherit <see cref="T:Telerik.WinControls.UI.RadToastNotificationActivatorBase"/>.</typeparam>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Register(System.String,System.String,System.String)">
+            <summary>
+            Registers the application using an internal activator.
+            When the internal activator is activated, it fires RadToastActivated.
+            </summary>
+            <param name="exePath">The path of the executable</param>
+            <param name="shortcutName">A name of the shortcut that will be placed in start menu.</param>
+            <param name="aumid">Unique id of the application - recommended string - name + GUID.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Register">
+            <summary>
+            Registers the application using the current process filename, a default Telerik shortcut name, default AUMID and internal activator.
+            When the internal activator is activated, it fires RadToastActivated.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Unregister``1(System.String,System.String)">
+            <summary>
+            Unregister a registered manager.
+            </summary>
+            <typeparam name="T">>The registered activator. Must inherit <see cref="T:Telerik.WinControls.UI.RadToastNotificationActivatorBase"/>.</typeparam>
+            <param name="shortcutName">A name of the shortcut that will be removed.</param>
+            <param name="aumid">Unique id of the application.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Unregister``1">
+            <summary>
+            Unregister a registered manager.
+            </summary>
+            <typeparam name="T">>The registered activator. Must inherit <see cref="T:Telerik.WinControls.UI.RadToastNotificationActivatorBase"/>.</typeparam>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Unregister(System.String,System.String)">
+            <summary>
+            Unregister a registered manager.
+            </summary>
+            <param name="shortcutName">A name of the shortcut that will be removed.</param>
+            <param name="aumid">Unique id of the application.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Unregister">
+            <summary>
+            Cleans up resources used by the Toast Notification Manager. 
+            Keep in mind that calling this will clear notifications in the action area as well.
+            You can call this, when the program exits or on uninstalling the program, 
+            but it must be called from the exe that was showing the toast notifications.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.ShowNotification(System.Int32)">
+            <summary>
+            Shows a notification from ToastNotifications collection using its index.
+            </summary>
+            <param name="index">The index of the notification.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.ShowNotification(System.String)">
+            <summary>
+            Shows a notification from ToastNotifications collection using its name.
+            </summary>
+            <param name="name">The name of the notification.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.ShowNotification(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Shows a given toast notification.
+            </summary>
+            <param name="radToastNotification">The <see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/> that will be shown.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.HideNotification">
+            <summary>
+            Hides the currently shown toast notification.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.UpdateNotification(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Updates a given notification based on its unique tag with bindingData.
+            </summary>
+            <param name="tag">Unique <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag"/>.</param>
+            <param name="bindingData">Key value pairs that will update <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.BindingData"/>.
+            The key is the binding parameter and the value is a string that will update the current value.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.AddScheduledNotification(Telerik.RadToastNotificationManager.RadToastNotification)">
+            <summary>
+            Schedules a given toast notification. You need to set <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.DeliveryTime"/>.
+            If you want to be able to remove the scheduled toast, you must set unique <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag"/>
+            and use it in <see cref="M:Telerik.WinControls.UI.RadToastNotificationManager.RemoveScheduledNotification(System.String)"/> afterwards.
+            </summary>
+            <param name="radToastNotification">The <see cref="T:Telerik.RadToastNotificationManager.RadToastNotification"/> that will be scheduled.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.RemoveScheduledNotification(System.String)">
+            <summary>
+            Removes an already scheduled notification.
+            In order to remove a scheduled notification, you must specify unique <see cref="P:Telerik.RadToastNotificationManager.RadToastNotification.Tag"/> that will be used to find the scheduled notification.
+            </summary>
+            <param name="tag">The unique Tag that will identify the notification.</param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadToastNotificationManager.RadToastActivated">
+            <summary>
+            If the manager is registered with the internal activator, this event will fire, when a toast activates.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.OnRadToastActivated(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Fires RadToastActivated, when the internal activator is used.
+            </summary>
+            <param name="arguments"></param>
+            <param name="userInput"></param>
+            <param name="appUserModelId"></param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadToastNotificationManager.RadToastOnActivated">
+            <summary>
+            Fire the event when a toast activates.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadToastNotificationManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadToastNotificationManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadToastActivatedEventHandler">
+            <summary>
+            Event handler for toast activation.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.IPdfChartRenderer">
+            <summary>
+            Defines members for classes which will be used to render charts when exporting a workbook to PDF.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.IPdfChartRenderer.RenderChart(Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor,Telerik.Windows.Documents.Spreadsheet.Model.Shapes.FloatingChartShape)">
+            <summary>
+            Renders the chart.
+            </summary>
+            <param name="editor">The editor which will render the chart.</param>
+            <param name="chart">The chart to be rendered.</param>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.Gridlines">
+            <summary>
+            The name of the grid lines layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.GridlinesOutline">
+            <summary>
+            The name of the grid lines outline layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.CellFill">
+            <summary>
+            The name of the cell fill layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.CellBorders">
+            <summary>
+            The name of the cell borders layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.CellValues">
+            <summary>
+            The name of the cell values layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.Shapes">
+            <summary>
+            The name of the shapes layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.RowHeadingMargin">
+            <summary>
+            The name of the row heading margin layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.ColumnHeadingMargin">
+            <summary>
+            The name of the column heading margin layer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.Layers.WorksheetPredefinedPdfLayers.HeaderFooter">
+            <summary>
+            The name of the header/footer layer.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings">
+            <summary>
+            Provides properties specifying what to export to PDF.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.#ctor(Telerik.Windows.Documents.Spreadsheet.FormatProviders.ExportWhat,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings" /> class.
+            </summary>
+            <param name="exportWhat">The ExportWhat option.</param>
+            <param name="ignorePrintArea">The value indicating whether to ignore print area.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.#ctor(System.Collections.Generic.IEnumerable{Telerik.Windows.Documents.Spreadsheet.Model.CellRange})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings" /> class.
+            </summary>
+            <param name="selection">The ranges to export.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.SelectedRanges">
+            <summary>
+            Gets the selected ranges.
+            </summary>
+            <value>The selected ranges.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.PdfFileSettings">
+            <summary>
+            Gets or sets the PDF settings used when the <see cref="T:Telerik.Windows.Documents.Spreadsheet.Model.Workbook"/> is exported to a file.
+            </summary>
+            <value>The PDF export settings.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings.ChartRenderer">
+            <summary>
+            Gets or sets the renderer which will be used to render charts.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider">
+            <summary>
+            Represents the PdfFormatProvider.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name of the provider.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.FilesDescription">
+            <summary>
+            Gets the files description.
+            </summary>
+            <value>The files description.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.CanExport">
+            <summary>
+            Gets a value indicating whether can export.
+            </summary>
+            <value>The value indicating whether can export.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.CanImport">
+            <summary>
+            Gets a value indicating whether can import.
+            </summary>
+            <value>The value indicating whether can import.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.SupportedExtensions">
+            <summary>
+            Gets the supported extensions.
+            </summary>
+            <value>The supported extensions.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.ExportSettings">
+            <summary>
+            Gets or sets the export settings.
+            </summary>
+            <value>The export settings.</value>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.ExportToFixedDocument(Telerik.Windows.Documents.Spreadsheet.Model.Workbook)">
+            <summary>
+            Exports to fixed document.
+            </summary>
+            <param name="workbook">The workbook.</param>
+            <returns>The exported fixed document.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider.ExportOverride(Telerik.Windows.Documents.Spreadsheet.Model.Workbook,System.IO.Stream)">
+            <summary>
+            Exports the specified workbook.
+            </summary>
+            <param name="workbook">The workbook to export.</param>
+            <param name="output">The output.</param>
+        </member>
+    </members>
+</doc>

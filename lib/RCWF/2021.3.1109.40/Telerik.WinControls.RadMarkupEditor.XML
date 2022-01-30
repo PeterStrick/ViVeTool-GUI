@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.WinControls.RadMarkupEditor</name>
+    </assembly>
+    <members>
+        <member name="F:Telerik.WinControls.UI.AddHyperlinkDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.AddHyperlinkDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.AddHyperlinkDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CleanAttributesFilter.convertAttribute(mshtml.IHTMLElement,System.String,System.Object)">
+            <summary>
+            Converts Attribute to CSS
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CleanAttributesFilter.convertCSSProperty(mshtml.IHTMLElement,System.String,System.String)">
+            <summary>
+            Converts CSS to Attribute
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CleanAttributesFilter.convertTypeAttribute(mshtml.IHTMLElement)">
+            <summary>
+            Converts type attribute to list-style-type CSS
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CleanAttributesFilter.convertListStyleTypeStyle(mshtml.IHTMLElement)">
+            <summary>
+            Converts list-style-type CSS to type attribute
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.EditorToolbar">
+            <summary>
+            The toolbar of the control
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.ToggleToolStripButton">
+            <summary>
+            Tooltip is one string or two strings separated with '|'
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ColorCommand.ConvertToColor(System.String)">
+            <summary>
+            Convert the custom integer (B G R) format to a color object.
+            </summary>
+            <param name="clrs">the custom color as a string</param>
+            <returns>the color</returns>
+        </member>
+        <member name="T:Telerik.WinControls.UI.NewLineCommand">
+            <summary>
+            Embed a break at the current selection.
+            </summary>   
+        </member>
+        <member name="P:Telerik.WinControls.UI.IHtmlBox.Value">
+            <summary>
+            Get/Set the contents of the document Body, in html.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkUpEditorWithToolbarInterface.Value">
+            <summary>
+            Get/Set the contents of the document Body, in html.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.DesignView.RawValue">
+            <summary>
+            HtmlValue without to apply the Filters (XHTML, etc.)
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.DesignView.SelectAll">
+            <summary>
+            Selects the whole text.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupEditor.Value">
+            <summary>
+            Gets the HTML value. 
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupEditor.RawValue">
+            <summary>
+            Gets the HTML value where all symbols are escaped. 
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.RadMarkupEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadMarkupEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadMarkupEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.Properties.MarkupDialogResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.bold">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.CapitalA">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.center">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.copy">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.cut">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.decreaseIndent">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.disk">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.font_color">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.format">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.highlight">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.increaseIndent">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.italic">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.LargeLink">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.left">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.link">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.okLarge">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.okSmall">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ol2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ol3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.orderedList">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.orderedListLarge">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.paste">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.redo2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.right">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.save_small">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.smallA">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ToolbarStrip">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ul2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.ul3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.underline">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.undo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.undo2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.unorderedList">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.Properties.MarkupDialogResources.unorderedListLarge">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupDialog.Value">
+            <summary>
+            Gets or sets the editor value. You can use this property to set a value in the editor before showing it and get the value of the editor after the dialog is closed. Use DialogResult property to determine whether the editor is closed by some of the Apply buttons or the Close button.    
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupDialog.Editor">
+            <summary>
+            Gets the editor used in the dialog.  
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupDialog.Form">
+            <summary>
+            Gets the form used in the dialog.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadMarkupDialog.DefaultFont">
+            <summary>
+            Gets or sets the default font used when the editor is started. No formatting tags will be added for it as it is considered default, although that font name and size can be explicitly set using the editor functionality.  
+            </summary>
+        </member>
+    </members>
+</doc>

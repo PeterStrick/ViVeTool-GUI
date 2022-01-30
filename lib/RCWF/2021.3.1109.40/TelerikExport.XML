@@ -1,0 +1,1558 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TelerikExport</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamWorkbookEventHandler">
+            <summary>
+            Represents the method that will handle the SpreadWorkbookCreated event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs">
+            <summary>
+            Provides event arguments for the SpreadWorkbookCreated event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs.#ctor(Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs" /> class.
+            </summary>
+            <param name="workbook">The workbook.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs.Workbook">
+            <summary>
+            Gets the <code>IWorkbookExporter</code> element.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventHandler">
+            <summary>
+            Represents the method that will handle the SpreadWorksheetCreated and SpreadWorksheetExporting events.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs">
+            <summary>
+            Provides event arguments for the SpreadWorksheetCreated and SpreadWorksheetExporting events.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs.#ctor(Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs" /> class.
+            </summary>
+            <param name="worksheet">The worksheet.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs.Worksheet">
+            <summary>
+            Gets the <code>IWorksheetExporter</code> element.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamCellStyleInfo">
+            <summary>
+            A wrapper class used to transform the Windows forms types to types compatible with the SpreadStreamProcessing needs
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat,System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamCellStyleInfo"/> class.
+            </summary>
+            <param name="cellFormat">Current excel cell.</param>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat,Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamCellStyleInfo" /> class.
+            </summary>
+            <param name="cellFormat">The cell format.</param>
+            <param name="workbook">The worksheet.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat,Telerik.WinControls.Export.ISpreadStreamExportCellStyleInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamCellStyleInfo" /> class.
+            </summary>
+            <param name="cellFormat">The cell format.</param>
+            <param name="cellStyle">The cell style.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.CellFormat">
+            <summary>
+            Gets or sets the cell format.
+            </summary>
+            <value>The cell format.</value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.BackColor">
+            <summary>
+            Gets or sets the fill of the excel cell.
+            </summary>
+            <value>
+            The fill.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.ForeColor">
+            <summary>
+            Gets or sets the ForeColor of the excel cell.
+            </summary>
+            <value>
+            The ForeColor.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.FontFamily">
+            <summary>
+            Gets or sets the font family of the excel cell.
+            </summary>
+            <value>
+            The font family.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.FontSize">
+            <summary>
+            Gets or sets the size of the font of the excel cell. 
+            </summary>
+            <value>
+            The size of the font in points (pt). It will be automatically converted to the Device Independent Pixels, when setting.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.IsBold">
+            <summary>
+            Gets or sets a value indicating whether this text of the excel cell is bold.
+            </summary>
+            <value>
+              <c>true</c> if the text of the excel cell is bold; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.IsItalic">
+            <summary>
+            Gets or sets a value indicating whether the text of the excel cell is italic.
+            </summary>
+            <value>
+              <c>true</c> if the text of the excel cell is italic; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.Underline">
+            <summary>
+            Gets or sets whether the text of the excel cell is underline.
+            </summary>
+            <value>
+            The underline type.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.TextAlignment">
+            <summary>
+            Gets or sets the text alignment.
+            </summary>
+            <value>
+            The text alignment.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.TextWrap">
+            <summary>
+            Gets or sets a value indicating whether the text of the excel cell is wrapped.
+            </summary>
+            <value>
+            <c>true</c> if the text of the excel cell is wrapped; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.TopBorder">
+            <summary>
+            Gets or sets the top border.
+            </summary>
+            <value>The top border.</value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.BottomBorder">
+            <summary>
+            Gets or sets the bottom border.
+            </summary>
+            <value>
+            The bottom border.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.RightBorder">
+            <summary>
+            Gets or sets the right border.
+            </summary>
+            <value>
+            The right border.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.LeftBorder">
+            <summary>
+            Gets or sets the left border.
+            </summary>
+            <value>
+            The left border.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.DiagonalUpBorder">
+            <summary>
+            Gets or sets the diagonal up border.
+            </summary>
+            <value>
+            The diagonal up border.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.DiagonalDownBorder">
+            <summary>
+            Gets or sets the diagonal down border.
+            </summary>
+            <value>
+            The diagonal down border.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamCellStyleInfo.NumberFormat">
+            <summary>
+            Gets or sets the number format.
+            </summary>
+            <value>The number format.</value>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadStreamExportRenderer">
+            <summary>
+            Represents a class which exposes all methods needed to export using RadSpreadStreamProcessing.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamExportRenderer.RowIndex">
+            <summary>
+            Gets or sets the index of the row.
+            </summary>
+            <value>The index of the row.</value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamExportRenderer.ColumnIndex">
+            <summary>
+            Gets or sets the index of the column.
+            </summary>
+            <value>The index of the column.</value>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishExport">
+            <summary>
+            Exports workbook.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetFileExtension(Telerik.WinControls.Export.SpreadStreamExportFormat)">
+            <summary>
+            Gets file extension.
+            </summary>
+            <param name="exportFormat">Export format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateColumn">
+            <summary>
+            Creates the column.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetColumn">
+            <summary>
+            Gets the column.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SkipColumns(System.Int32)">
+            <summary>
+            Skips the columns.
+            </summary>
+            <param name="count">The count.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishColumn">
+            <summary>
+            Finishes the column.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateWorkbook(System.IO.Stream,Telerik.WinControls.Export.SpreadStreamExportFormat)">
+            <summary>
+            Creates new workbook.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="exportFormat">The export format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateWorkbook(System.IO.Stream,Telerik.WinControls.Export.SpreadStreamExportFormat,Telerik.WinControls.Export.FileExportMode)">
+            <summary>
+            Creates new workbook.
+            </summary>
+            <param name="stream">The stream.</param>
+            <param name="exportFormat">The export format.</param>
+            <param name="fileExportMode">The file export mode.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetWorksheet">
+            <summary>
+            Gets current worksheet.
+            </summary>
+            <returns>Worksheet as object</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.AddWorksheet(System.String)">
+            <summary>
+            Create and add excel worksheet to the workbook.
+            </summary>
+            <param name="sheetName">Excel workbook.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CallOnWorksheetCreated">
+            <summary>
+            Calls the WorksheetCreated event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishCell">
+            <summary>
+            Finishes the cell.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishRow">
+            <summary>
+            Finishes the row.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishWorksheet">
+            <summary>
+            Finishes the worksheet.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.FinishWorkbook">
+            <summary>
+            Finishes the workbook.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetHiddenRow">
+            <summary>
+            Sets current worksheet row as hidden.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetRowHeight(System.Double,System.Boolean)">
+            <summary>
+            Sets height of current row in worksheet.
+            </summary>
+            <param name="height">Height of row.</param>
+            <param name="inPixels">If true, sets the row height in pixels, otherwise - in points.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetHiddenColumn">
+            <summary>
+            Sets current worksheet column as hidden.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetColumnWidth(System.Double,System.Boolean)">
+            <summary>
+            Sets the width of current worksheet column.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="inPixels">If true, setts the width in pixels, otherwise - in characters.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateRow">
+            <summary>
+            Creates the row.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetRow(System.Boolean)">
+            <summary>
+            Gets current Row.
+            </summary>
+            <returns>Row as object.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetCell">
+            <summary>
+            Gets current Cell.
+            </summary>
+            <returns>Cell as object.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateCell">
+            <summary>
+            Creates CellSelection.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateMergedCells(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates CellSelection.
+            </summary>
+            <param name="fromRowIndex">From row index.</param>
+            <param name="fromColumnIndex">From column index.</param>
+            <param name="toRowIndex">To row index.</param>
+            <param name="toColumnIndex">To column index.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetCellValue(System.String)">
+            <summary>
+            Sets the value of current CellSelection.
+            </summary>
+            <param name="text">Text.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetCellValue(Telerik.WinControls.Export.DataType,System.Object)">
+            <summary>
+            Sets the value of current CellSelection.
+            </summary>
+            <param name="dataType">CellSelection data type.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetDateTimeValue(System.Object)">
+            <summary>
+            Sets the value as date time.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True is the cell value is set, otherwise - false.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetNumberValue(System.Object)">
+            <summary>
+            Sets the value as number.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True is the cell value is set, otherwise - false.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetBooleanValue(System.Object)">
+            <summary>
+            Sets the value as boolean.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True is the cell value is set, otherwise - false.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetStringValue(System.Object)">
+            <summary>
+            Sets the value as string.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>True is the cell value is set, otherwise - false.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SetCellFormat(System.String,System.Boolean)">
+            <summary>
+            Sets the cell format.
+            </summary>
+            <param name="formatString">The format string.</param>
+            <param name="apply">The apply.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.ClearCellValue">
+            <summary>
+            Clears the value of current Cell.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetIsMerged(System.Int32,System.Int32)">
+            <summary>
+            Determines if a cell(by given row and column index) belongs to a merged cell.
+            </summary>
+            <param name="rowIndex">The row of cell.</param>
+            <param name="columnIndex">The column of cell.</param>
+            <returns>A value indicating, whether given cell is part of a merged cell.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.ApplyCellStyle(Telerik.WinControls.Export.ISpreadStreamExportCellStyleInfo,System.String)">
+            <summary>
+            Applies the cell style.
+            </summary>
+            <param name="cellStyle">The cell style.</param>
+            <param name="formatString">The format string.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateCellStyleFromLightStyle(Telerik.WinControls.Export.ISpreadStreamExportCellStyleInfo)">
+            <summary>
+            Creates the cell style from light style.
+            </summary>
+            <param name="cellStyle">The cell style.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.SkipCells(System.Int32)">
+            <summary>
+            Skips the cells.
+            </summary>
+            <param name="count">The count.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetCellFormat(System.Boolean)">
+            <summary>
+            Gets current SpreadCellFormat.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.ApplyCellFormat(System.Object)">
+            <summary>
+            Applies the cell format.
+            Note that format needs to be of SpreadCellFormat type in order to be applied to current cell.
+            </summary>
+            <param name="format">The format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetCellStyleInfo">
+            <summary>
+            Gets the cell style info.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateCellStyleFromTheme">
+            <summary>
+            Creates SpreadStreamCellStyleInfo from theme normal style.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateCellStyle(System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Creates a <see cref="T:Telerik.WinControls.Export.SpreadStreamCellStyleInfo"/> by given visual styles.
+            </summary>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateLightCellStyle(System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Creates a <see cref="T:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo"/> by given visual styles.
+            </summary>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateBorderCellStyle(Telerik.WinControls.Export.ISpreadStreamExportCellStyleInfo)">
+            <summary>
+            Creates the border cell style.
+            </summary>
+            <param name="cellStyle">The cell style.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GetBordersFromExistingStyle(Telerik.WinControls.Export.ISpreadStreamExportCellStyleInfo)">
+            <summary>
+            Gets the borders from existing style.
+            </summary>
+            <param name="cellStyle">The cell style.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.GroupCurrentRow(System.Int32)">
+            <summary>
+            Groups current row in current worksheet.
+            </summary>
+            <param name="level">Outline level.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.CreateFreezePanes(System.Int32,System.Int32)">
+            <summary>
+            Creates freeze panes.
+            </summary>
+            <param name="rowsCount">Count of frozen rows.</param>
+            <param name="columnsCount">Count of frozen columns.</param>
+        </member>
+        <member name="E:Telerik.WinControls.Export.SpreadStreamExportRenderer.WorksheetCreated">
+            <summary>
+            Occurs when a new worksheet is created.
+            This is suitable place to set width of columns, add indent/header rows.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.OnWorksheetCreated(Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs)">
+            <summary>
+            Raises the <see cref="E:SpreadWorksheetCreated" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:Telerik.WinControls.Export.SpreadStreamExportRenderer.WorksheetExporting">
+            <summary>
+            Occurs when a worksheet is about to be exported.
+            This is suitable place to add footer rows.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.OnWorksheetExporting(Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs)">
+            <summary>
+            Raises the <see cref="E:SpreadWorksheetExporting" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.SpreadStreamWorksheetEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:Telerik.WinControls.Export.SpreadStreamExportRenderer.WorkbookCreated">
+            <summary>
+            Occurs when the workbook is created.
+            This is suitable place to add and/or modify cell styles.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamExportRenderer.OnWorkbookCreated(Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs)">
+            <summary>
+            Raises the <see cref="E:SpreadWorkbookCreated" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.SpreadStreamWorkbookEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat,System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo"/> class.
+            </summary>
+            <param name="cellFormat">Current excel cell.</param>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo.CellFormat">
+            <summary>
+            Gets or sets the cell format.
+            </summary>
+            <value>The cell format.</value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo.BackColor">
+            <summary>
+            Gets or sets the color of the back.
+            </summary>
+            <value>The color of the back.</value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.SpreadStreamLightCellStyleInfo.ForeColor">
+            <summary>
+            Gets or sets the color of the fore.
+            </summary>
+            <value>The color of the fore.</value>
+        </member>
+        <member name="T:Telerik.WinControls.Export.CellStyleInfo">
+            <summary>
+            A wrapper class used to transform the Windows forms types to types compatible with the CellSelection object needs
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.CellStyleInfo.#ctor(Telerik.Windows.Documents.Spreadsheet.Model.CellSelection,System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.CellStyleInfo"/> class.
+            </summary>
+            <param name="currentExcelCell">Current excel cell.</param>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.CellStyleInfo.#ctor(Telerik.Windows.Documents.Spreadsheet.Model.CellSelection,Telerik.Windows.Documents.Spreadsheet.Model.Worksheet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.CellStyleInfo"/> class.
+            </summary>
+            <param name="currentExcelCell">The current excel cell.</param>
+            <param name="worksheet">The worksheet.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.BackColor">
+            <summary>
+            Gets or sets the fill of the excel cell.
+            </summary>
+            <value>
+            The fill.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.ForeColor">
+            <summary>
+            Gets or sets the ForeColor of the excel cell.
+            </summary>
+            <value>
+            The ForeColor.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.FontFamily">
+            <summary>
+            Gets or sets the font family of the excel cell.
+            </summary>
+            <value>
+            The font family.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.FontSize">
+            <summary>
+            Gets or sets the size of the font of the excel cell. 
+            </summary>
+            <value>
+            The size of the font in points (pt). It will be automatically converted to the Device Independent Pixels, when setting.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.IsBold">
+            <summary>
+            Gets or sets a value indicating whether this text of the excel cell is bold.
+            </summary>
+            <value>
+              <c>true</c> if the text of the excel cell is bold; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.IsItalic">
+            <summary>
+            Gets or sets a value indicating whether the text of the excel cell is italic.
+            </summary>
+            <value>
+              <c>true</c> if the text of the excel cell is italic; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.Underline">
+            <summary>
+            Gets or sets whether the text of the excel cell is underline.
+            </summary>
+            <value>
+            The underline type.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.TextAlignment">
+            <summary>
+            Gets or sets the text alignment.
+            </summary>
+            <value>
+            The text alignment.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.Borders">
+            <summary>
+            Gets or sets the borders.
+            </summary>
+            <value>
+            The borders.
+            </value>
+        </member>
+        <member name="P:Telerik.WinControls.Export.CellStyleInfo.TextWrap">
+            <summary>
+            Gets or sets a value indicating whether the text of the excel cell is wrapped.
+            </summary>
+            <value>
+            <c>true</c> if the text of the excel cell is wrapped; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Telerik.WinControls.Export.WorkbookCreatedEventHandler">
+            <summary>
+            Represents the method that will handle the WorkbookCreated event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.WorkbookCreatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.WorkbookCreatedEventArgs">
+            <summary>
+            Provides event arguments for the WorkbookCreated event
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.WorkbookCreatedEventArgs.#ctor(Telerik.Windows.Documents.Spreadsheet.Model.Workbook)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.WorkbookCreatedEventArgs"/> class.
+            </summary>
+            <param name="workbook">The workbook.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.WorkbookCreatedEventArgs.Workbook">
+            <summary>
+            Gets the workbook which is going to be exported.
+            </summary>
+            <value>
+            The workbook.
+            </value>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PdfEditor">
+            <summary>
+            A class which is used to draw content on RadFixedPages.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.#ctor(Telerik.Windows.Documents.Fixed.Model.RadFixedPage)">
+            <summary>
+            Creates new instance of PdfEditor
+            </summary>
+            <param name="page">Associated page.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfEditor.FixedContentEditor">
+            <summary>
+            Gets the editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfEditor.OffsetX">
+            <summary>
+            Gets editor's matrix horizontal offset.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfEditor.OffsetY">
+            <summary>
+            Gets editor's matrix vertical offset.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#DrawLine(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Draws line.
+            </summary>
+            <param name="startPoint">Start point.</param>
+            <param name="endPoint">End point.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.SetStrokeColor(System.Drawing.Color)">
+            <summary>
+            Sets the stroke color of editor's GraphicProperties.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.SetFillColor(System.Drawing.Color)">
+            <summary>
+            Sets the fill color of editor's GraphicProperties.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#DrawRectangle(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            Draws rectangle/
+            </summary>
+            <param name="topLeft">Top left point.</param>
+            <param name="bottomRight">Bottom right point.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.SetLinearGradient(System.Int32,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Creates and sets linear gradient as editor's GraphicProeprties FillColor.
+            </summary>
+            <param name="numberOfColors">NUmber of colors.</param>
+            <param name="startPoint">Start point.</param>
+            <param name="endPoint">End point.</param>
+            <param name="color">Color.</param>
+            <param name="color2">Second color.</param>
+            <param name="color3">Third color.</param>
+            <param name="color4">Fourth color.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#PushClipping(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Pushes clipping.
+            </summary>
+            <param name="x">Horizontal coordinate.</param>
+            <param name="y">Vertical coordinate.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#PopClipping">
+            <summary>
+            Pops clipping.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.CreateMatrixPosition">
+            <summary>
+            Creates matrix position.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.CreateMatrixPosition(System.Double,System.Double)">
+            <summary>
+            Creates matrix position.
+            </summary>
+            <param name="x">Horizontal coordinate.</param>
+            <param name="y">Vertical coordinate.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.TranslatePosition(System.Double,System.Double)">
+            <summary>
+            Translates editor position.
+            </summary>
+            <param name="x">Horizontal coordinate.</param>
+            <param name="y">Vertical coordinate.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#SaveProperties">
+            <summary>
+            Saves editor properties.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#SavePosition">
+            <summary>
+            Saves editor position.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#RestoreProperties">
+            <summary>
+            Restores editor properties.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.Telerik#WinControls#Export#IPdfEditor#RestorePosition">
+            <summary>
+            Restores editor position.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.SetTextFontSize(System.Double)">
+            <summary>
+            Sets editor properties font size.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfEditor.TrySetFont(System.String,System.Drawing.FontStyle)">
+            <summary>
+            Tries to set editor TextProperties font.
+            </summary>
+            <param name="fontName">The name of font.</param>
+            <param name="fontStyle">The style of font.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.HorizontalAlignmentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.Automatic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.Left">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.Right">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.Fill">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.HorizontalAlignmentType.CenterAcrossSelection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.VerticalAlignmentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.VerticalAlignmentType.Automatic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.VerticalAlignmentType.Top">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.VerticalAlignmentType.Bottom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.VerticalAlignmentType.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PageExportedEventHandler">
+            <summary>
+            Represents the method that will handle the PageExported event.
+            </summary>
+            <param name="sender">The event sender.</param>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.PageExportedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PageExportedEventArgs">
+            <summary>
+            Provides event arguments for the PageCreated event
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PageExportedEventArgs.#ctor(Telerik.Windows.Documents.Fixed.Model.RadFixedPage,Telerik.WinControls.Export.IPdfEditor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.PageExportedEventArgs"/> class.
+            </summary>
+            <param name="page">The page.</param>
+            <param name="editor">The editor of the page which is being exported.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PageExportedEventArgs.Page">
+            <summary>
+            Gets the page which is being exported.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PageExportedEventArgs.Editor">
+            <summary>
+            Gets the editor of the page which is being exported.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PdfExportingEventHandler">
+            <summary>
+            Represents the method that will handle the PdfExporting event.
+            </summary>
+            <param name="sender">The event sender.</param>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.PdfExportingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PdfExportingEventArgs">
+            <summary>
+            Provides event arguments for the PageCreated event
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportingEventArgs.#ctor(Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider,Telerik.Windows.Documents.Fixed.Model.RadFixedDocument)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.Export.PdfExportingEventArgs"/> class.
+            </summary>
+            <param name="formatProvider">The PDF format provider object.</param>
+            <param name="document">The document associated with this export.</param>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfExportingEventArgs.FormatProvider">
+            <summary>
+            Gets the PDF format provider object.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfExportingEventArgs.Document">
+            <summary>
+            Gets the document associated with this export.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.PdfExportRenderer">
+            <summary>
+            Represents a class that exposes all the methods and properties needed to export to PDF.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfExportRenderer.Editor">
+            <summary>
+            Gets current page <see cref="T:Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfExportRenderer.Telerik#WinControls#Export#IPdfExportRenderer#CurrentMatrixRow">
+            <summary>
+            Gets or sets current matrix row.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.Export.PdfExportRenderer.Telerik#WinControls#Export#IPdfExportRenderer#CurrentMatrixColumn">
+            <summary>
+            Gets or sets current matrix column.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.CreateDocumentPageMatrixEditor(System.Drawing.SizeF,Telerik.WinControls.Export.IPdfEditor@)">
+            <summary>
+            Initializes document, first page, first page editor and the matrix which holds all pages.
+            </summary>
+            <param name="pageSize">Default page size.</param>
+            <param name="pdfEditor">Editor</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.GetCurrentPageEditor">
+            <summary>
+            Gets current page editor.
+            </summary>
+            <returns><see cref="T:Telerik.WinControls.Export.IPdfEditor"/> instance</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.GetDownPageEditor">
+            <summary>
+            Gets the editor of the page below current in page matrix.
+            </summary>
+            <returns><see cref="T:Telerik.WinControls.Export.IPdfEditor"/> instance</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.GetRightPageEditor">
+            <summary>
+            Gets the editor of the page on the right of current in page matrix. 
+            </summary>
+            <returns><see cref="T:Telerik.WinControls.Export.IPdfEditor"/> instance</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.AddMatrixPagesLeftRight">
+            <summary>
+            Adds matrix pages to the document row by row.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.AddMatrixPagesUpDown">
+            <summary>
+            Adds matrix pages to the document column by column.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.IsMatrixCurrentPageLastOnRow">
+            <summary>
+            Indicates whether current page is last on row.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.GetCurrentPageNumber">
+            <summary>
+            Gets current page number.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.CreateBlock">
+            <summary>
+            Creates <see cref="T:Telerik.Windows.Documents.Fixed.Model.Editing.Block"/> instance.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.ApplyEditorGraphicAndTextPropertiesToBlock">
+            <summary>
+            Copies current page editor graphic and text properties to current block.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.SetBlockLeftIndent(System.Double)">
+            <summary>
+            Sets left indent to current block.
+            </summary>
+            <param name="indent">Indent value</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.InsertBlockText(System.String)">
+            <summary>
+            Inserts text in block.
+            </summary>
+            <param name="text">The text to be inserted.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.InsertBlockLineBreak">
+            <summary>
+            Inserts line break in block.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.InsertBlockImage(System.IO.Stream,System.Double,System.Double)">
+            <summary>
+            Inserts image in block.
+            </summary>
+            <param name="stream">Image stream.</param>
+            <param name="width">Width of image.</param>
+            <param name="height">Height of image.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.MeasureBlock">
+            <summary>
+            Measures block.
+            </summary>
+            <returns>Measured block size.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.MeasureBlock(System.Drawing.SizeF)">
+            <summary>
+            Measures block.
+            </summary>
+            <param name="size">The size in which block is measured.</param>
+            <returns>Measured block size.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.DrawBlock">
+            <summary>
+            Draws block.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.DrawBlock(System.Drawing.SizeF)">
+            <summary>
+            Draws block.
+            </summary>
+            <param name="size">The size in which block is drawn.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.CallCurrentRowPageExported">
+            <summary>
+            Calls <see cref="E:Telerik.WinControls.Export.PdfExportRenderer.PageExported"/> event of each page on current row.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.ExportDocument(System.IO.Stream,System.String,System.String,System.String)">
+            <summary>
+            Calls <see cref="E:Telerik.WinControls.Export.PdfExportRenderer.PdfExporting"/> event and exports the document.
+            </summary>
+            <param name="stream">Associated file stream.</param>
+            <param name="author">Author.</param>
+            <param name="title">Title.</param>
+            <param name="description">Description.</param>
+        </member>
+        <member name="E:Telerik.WinControls.Export.PdfExportRenderer.PageExported">
+            <summary>
+            Occurs for every page that is being exported.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.OnPageExported(Telerik.WinControls.Export.PageExportedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PageExported" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.PageExportedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:Telerik.WinControls.Export.PdfExportRenderer.PdfExporting">
+            <summary>
+            Occurs when the export process is about to be completed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.PdfExportRenderer.OnPdfExporting(Telerik.WinControls.Export.PdfExportingEventArgs)">
+            <summary>
+            Raises the <see cref="E:PDFExporting" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.PdfExportingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadExportRenderer">
+            <summary>
+            Represents a class which exposes all methods needed to export using RadSpreadProcessing.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.RegisterFormatProvider(Telerik.WinControls.Export.SpreadExportFormat)">
+            <summary>
+            Registers format provider.
+            </summary>
+            <param name="exportFormat">Export format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetFormatProvider(Telerik.WinControls.Export.SpreadExportFormat)">
+            <summary>
+            Gets current format provider.
+            </summary>
+            <param name="exportFormat">Export format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.ImportWorkbook(System.IO.Stream)">
+            <summary>
+            Imports workbook.
+            </summary>
+            <param name="stream">Associated stream.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.Export(System.IO.Stream)">
+            <summary>
+            Exports workbook.
+            </summary>
+            <param name="stream">Associated stream.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetFileExtension(Telerik.WinControls.Export.SpreadExportFormat)">
+            <summary>
+            Gets file extension.
+            </summary>
+            <param name="exportFormat">Export format.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateWorkbook">
+            <summary>
+            Creates new workbook.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetWorksheet">
+            <summary>
+            Gets current worksheet.
+            </summary>
+            <returns>Worksheet as object</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.AddWorksheet(System.String)">
+            <summary>
+            Create and add excel worksheet to the workbook.
+            </summary>
+            <param name="sheetName">Excel workbook.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.SetWorksheetRowHeight(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Sets height of row in worksheet by given row index.
+            </summary>
+            <param name="rowIndex">Row index.</param>
+            <param name="rowHeight">Height of row.</param>
+            <param name="isCustom"></param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetWorksheetRowHeight(System.Int32)">
+            <summary>
+            Gets height of row in worksheet by given row index.
+            </summary>
+            <param name="rowIndex">Row index.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetWorksheetColumnWidth(System.Int32)">
+            <summary>
+            Gets the width of column by given column index.
+            </summary>
+            <param name="columnIndex">Column index</param>
+            <returns>Column width</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.SetWorksheetColumnWidth(System.Int32,System.Double,System.Boolean)">
+            <summary>
+            Sets width of column in worksheet by given column index.
+            </summary>
+            <param name="columnIndex">Column index.</param>
+            <param name="value">Width of column.</param>
+            <param name="isCustom"></param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetCellSelection">
+            <summary>
+            Gets current CellSelection.
+            </summary>
+            <returns>CellSelection as object.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateCellSelection(System.Int32,System.Int32)">
+            <summary>
+            Creates CellSelection.
+            </summary>
+            <param name="rowIndex">Row index.</param>
+            <param name="columnIndex">Column index.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateCellSelection(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates CellSelection.
+            </summary>
+            <param name="fromRowIndex">From row index.</param>
+            <param name="fromColumnIndex">From column index.</param>
+            <param name="toRowIndex">To row index.</param>
+            <param name="toColumnIndex">To column index.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.MergeCellSelection">
+            <summary>
+            Merges the cells of current CellSelection.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetCellSelectionValue">
+            <summary>
+            Gets the value of current CellSelection.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.SetCellSelectionValue(System.String)">
+            <summary>
+            Sets the value of current CellSelection.
+            </summary>
+            <param name="text">Text.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.SetCellSelectionValue(Telerik.WinControls.Export.DataType,System.Object)">
+            <summary>
+            Sets the value of current CellSelection.
+            </summary>
+            <param name="dataType">CellSelection data type.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateFloatingImage(System.Int32,System.Int32,System.Int32,System.Int32,System.Byte[],System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new floating image in current worksheet.
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="columnIndex"></param>
+            <param name="offsetX"></param>
+            <param name="offsetY"></param>
+            <param name="bytes"></param>
+            <param name="extension"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <param name="rotationAngle"></param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.SetCellSelectionFormat(System.String)">
+            <summary>
+            Sets format of current CellSelection.
+            </summary>
+            <param name="formatString">Format string.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.ClearCellSelectionValue">
+            <summary>
+            Clears the value of current CellSelection.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetIsMerged(System.Int32,System.Int32)">
+            <summary>
+            Determines if a cell(by given row and column index) belongs to a merged cell.
+            </summary>
+            <param name="rowIndex">The row of cell.</param>
+            <param name="columnIndex">The column of cell.</param>
+            <returns>A value indicating, whether given cell is part of a merged cell.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GetCellStyleInfo">
+            <summary>
+            Gets current CellStyleInfo.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateCellStyleInfo">
+            <summary>
+            Creates CellStyleInfo using current CellSelection and Worksheet.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateCellStyleInfo(System.Drawing.Color,System.Drawing.Color,System.Drawing.FontFamily,System.Double,System.Boolean,System.Boolean,System.Boolean,System.Drawing.ContentAlignment,System.Boolean,Telerik.WinControls.BorderBoxStyle,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Creates CellStyleInfo.
+            </summary>
+            <param name="backColor">BackColor of cell.</param>
+            <param name="foreColor">ForeColor of cell.</param>
+            <param name="fontFamily">FontFamily of cell.</param>
+            <param name="fontSize">Font size of cell.</param>
+            <param name="isBold">Is text bold.</param>
+            <param name="isItalic">Is text italic.</param>
+            <param name="underline">Is text underlined.</param>
+            <param name="textAlignment">Text alignment.</param>
+            <param name="textWrap">Is text wrapped.</param>
+            <param name="borderBoxStyle">Border box style.</param>
+            <param name="borderColor">Color of border.</param>
+            <param name="borderTopColor">Color of top border.</param>
+            <param name="borderBottomColor">Color of bottom border.</param>
+            <param name="borderRightColor">Color of right border.</param>
+            <param name="borderLeftColor">Color of left border.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.Telerik#WinControls#ISpreadExportRenderer#CreateGridViewExportDataRowInfo(System.Int32,System.Collections.Generic.List{Telerik.WinControls.Export.IGridViewSpreadExportCellInfo},System.Boolean)">
+            <summary>
+            Creates and returns GridViewSpreadExportDataRowInfo.
+            </summary>
+            <param name="currentIndent">Cells indent.</param>
+            <param name="cells">Cells.</param>
+            <param name="exportAsHidden">Export as hidden.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.Telerik#WinControls#ISpreadExportRenderer#CreateGridViewExportDataRowInfo(System.Int32,System.Collections.Generic.List{Telerik.WinControls.Export.IGridViewSpreadExportCellInfo},System.Boolean,System.Int32)">
+            <summary>
+            Creates and returns GridViewSpreadExportDataRowInfo.
+            </summary>
+            <param name="currentIndent">Cells indent.</param>
+            <param name="cells">Cells.</param>
+            <param name="exportAsHidden">Export as hidden.</param>
+            <param name="hierarchyLevel">Hierarchy level of row.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.Telerik#WinControls#ISpreadExportRenderer#CreateGridViewExportGroupRowInfo(System.Int32,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Creates and returns GridViewExportGroupRowInfo.
+            </summary>
+            <param name="currentIndent">Cells indent.</param>
+            <param name="content">Content string.</param>
+            <param name="colSpan">Column span.</param>
+            <param name="exportAsHidden">Export as hidden.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.Telerik#WinControls#ISpreadExportRenderer#CreateGridViewExportGroupRowInfo(System.Int32,System.String,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Creates and returns GridViewExportGroupRowInfo.
+            </summary>
+            <param name="currentIndent">Cells indent.</param>
+            <param name="content">Content string.</param>
+            <param name="colSpan">Column span.</param>
+            <param name="exportAsHidden">Export as hidden.</param>
+            <param name="hierarchyLevel">Hierarchy level of row.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CreateFreezePanes(System.Int32,System.Int32)">
+            <summary>
+            Creates freeze panes.
+            </summary>
+            <param name="rowsCount">Count of frozen rows.</param>
+            <param name="columnsCount">Count of frozen columns.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.GroupRows(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Groups rows in current worksheet.
+            </summary>
+            <param name="startRow">Start row.</param>
+            <param name="endRow">End row.</param>
+            <param name="level">Outline level.</param>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.CallWorkbookCreated">
+            <summary>
+            Calls <see cref="E:WorkbookCreated" /> event.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.Export.SpreadExportRenderer.WorkbookCreated">
+            <summary>
+            Occurs when the workbook is created and is ready to be exported. Suitable for any final touches.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.SpreadExportRenderer.OnWorkbookCreated(Telerik.WinControls.Export.WorkbookCreatedEventArgs)">
+            <summary>
+            Raises the <see cref="E:WorkbookCreated" /> event.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.Export.WorkbookCreatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:Telerik.WinControls.Export.SpreadConstants">
+            <summary>
+            Defines constants used in the spread exports.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.SpreadConstants.MaxRowHeight">
+            <summary>
+            The maximum row height allowed by excel in points.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.Export.SpreadConstants.MaxColumnWidth">
+            <summary>
+            The maximum column width allowed by excel in characters.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.Export.ExportUtils">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.GetVerticalAlignment(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.GetHorizontalAligment(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertHorizontalAlign(System.Windows.Forms.VisualStyles.HorizontalAlign)">
+            <summary>
+            
+            </summary>
+            <param name="horizontalAlign"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentH(System.Drawing.ContentAlignment)">
+            <summary>
+            Convert ContentAlignment to HorizontalAlignmentType
+            </summary>
+            <param name="alignment">System.Drawing.ContentAlignment</param>
+            <returns>Telerik.WinControls.UI.Export.HorizontalAligmentType</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentV(System.Drawing.ContentAlignment)">
+            <summary>
+            Convert ContentAignment to VerticalAlignmentType
+            </summary>
+            <param name="alignment">System.Drawing.ContentAlignment</param>
+            <returns>Telerik.WinControls.UI.Export.VerticalAlignmentType</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ColorMixer(System.Drawing.Color[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ColorMixer(Telerik.WinControls.GradientStyles,System.Int32,System.Single,System.Single,System.Drawing.Color[])">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ColorToHex(System.Drawing.Color)">
+            <summary>
+            Converts a color to a hexidecimal value for use within HTML
+            </summary>
+            <param name="color">The color to convert</param>
+            <returns>A hex value, including '#'</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.CheckSourceOfVisualSettings(Telerik.WinControls.RadElement)">
+            <summary>
+            Check if visual style settings comes from theme.
+            </summary>
+            <param name="element">Element to check</param>
+            <returns>True if visual settings come from theme</returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentToRHA(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentToRVA(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertRVAandRHAtoContentAlignment(Telerik.Windows.Documents.Spreadsheet.Model.RadVerticalAlignment,Telerik.Windows.Documents.Spreadsheet.Model.RadHorizontalAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="va"></param>
+            <param name="ha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ColorToThemableColor(System.Drawing.Color)">
+            <summary>
+            
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertSVAandSHAtoContentAlignment(System.Nullable{Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment},System.Nullable{Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment})">
+            <summary>
+            
+            </summary>
+            <param name="va"></param>
+            <param name="ha"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentToSVA(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.Export.ExportUtils.ConvertContentAligmentToSHA(System.Drawing.ContentAlignment)">
+            <summary>
+            
+            </summary>
+            <param name="alignment"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

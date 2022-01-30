@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider">
+            <summary>
+            Binary format provider to export Spreadsheet data to XLSM.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name of the provider.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.FilesDescription">
+            <summary>
+            Gets the files description.
+            </summary>
+            <value>The files description.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.SupportedExtensions">
+            <summary>
+            Gets the supported extensions.
+            </summary>
+            <value>The supported extensions.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.CanImport">
+            <summary>
+            Gets a value indicating whether can import.
+            </summary>
+            <value>The value indicating whether can import.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.CanExport">
+            <summary>
+            Gets a value indicating whether can export.
+            </summary>
+            <value>The value indicating whether can export.</value>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.ImportOverride(System.IO.Stream)">
+            <summary>
+            Imports the specified input.
+            </summary>
+            <param name="input">The input.</param>
+            <returns>The imported workbook.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider.ExportOverride(Telerik.Windows.Documents.Spreadsheet.Model.Workbook,System.IO.Stream)">
+            <summary>
+            Exports the specified workbook.
+            </summary>
+            <param name="workbook">The workbook.</param>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.Contexts.GradientInfoType">
+            <summary>
+            Defines gradient info types.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.Contexts.XlsxWorksheetImportContext.ImportShapesSizes">
+            <summary>
+            Imports the shapes sizes from the from cell and to cell.
+            Used in case the shape size is not indicated in the TransformElement.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.Export.XlsxExportSettings">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.Import.XlsxImportSettings">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider">
+            <summary>
+            Binary format provider to export Spreadsheet data to XLSX.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name of the provider.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.FilesDescription">
+            <summary>
+            Gets the files description.
+            </summary>
+            <value>The files description.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.SupportedExtensions">
+            <summary>
+            Gets the supported extensions.
+            </summary>
+            <value>The supported extensions.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.CanImport">
+            <summary>
+            Gets a value indicating whether can import.
+            </summary>
+            <value>The value indicating whether can import.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.CanExport">
+            <summary>
+            Gets a value indicating whether can export.
+            </summary>
+            <value>The value indicating whether can export.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.ExportSettings">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.ImportSettings">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.ImportOverride(System.IO.Stream)">
+            <summary>
+            Imports the specified input.
+            </summary>
+            <param name="input">The input.</param>
+            <returns>The imported workbook.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider.ExportOverride(Telerik.Windows.Documents.Spreadsheet.Model.Workbook,System.IO.Stream)">
+            <summary>
+            Exports the specified workbook.
+            </summary>
+            <param name="workbook">The workbook.</param>
+            <param name="output">The output.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Documents.SpreadsheetStreaming</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.NumberFormats.FormatHelper">
+            <summary>
+            Defines auxiliary formatting methods.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.NumberFormats.FormatHelper.StartDate">
+            <summary>
+            Defines the earliest date the RadSpreadsheet recognizes.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.NumberFormats.FormatHelper.CultureHelper">
+            <summary>
+            Gets or sets the spreadsheet culture helper.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.NumberFormats.NumberFormatStringBuilder">
+            <summary>
+            Represents the number format string builder class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.NumberFormats.NumberFormatStringBuilder.BuildFormatStrings(System.Int32,System.Boolean)">
+            <summary>
+            Builds the format strings.
+            </summary>
+            <param name="decimalPlaces">The decimal places.</param>
+            <param name="useThousandSeparator">The use thousand separator.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.NumberFormats.SpreadsheetCultureHelper">
+            <summary>
+            Represents a culture helper class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.NumberFormats.SpreadsheetCultureHelper.#ctor(System.Globalization.CultureInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.NumberFormats.SpreadsheetCultureHelper" /> class.
+            </summary>
+            <param name="cultureInfo">The culture for the new <see cref="T:Telerik.Documents.SpreadsheetStreaming.NumberFormats.SpreadsheetCultureHelper" /> instance.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.NumberFormats.SpreadsheetCultureHelper.CultureInfo">
+            <summary>
+            Gets the culture of the spreadsheet culture helper.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats">
+            <summary>
+            A static class providing API for retreiving the built in number formats.
+            Which when exported their formatCode is impied rather that explicitly saved in the file.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetGeneral">
+            <summary>
+            Generates the General number format string.
+            Examle format in en-US culture: General.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber">
+            <summary>
+            Generates a Number number format string.
+            Example format in en-US culture: 0.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber1">
+            <summary>
+            Generates a Number number format string with 2 decimal places and no thousand separator.
+            Example format in en-US culture: 0.00.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber2">
+            <summary>
+            Generates a Number number format string with zero decimal places and using a thousand separator.
+            Example format in en-US culture: #,##0.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber3">
+            <summary>
+            Generates a Number number format string with 2 decimal places and a thousand separator.
+            Example format in en-US culture: #,##0.00.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency">
+            <summary>
+            Generates a Currency number format string with no decimal places and positive and negative format patterns and alignment.
+            Example format in en-US culture: $#,##0_);($#,##0).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency1">
+            <summary>
+            Generates a Currency number format string with no decimal places and positive and negative format with red digits patterns and alignment.
+            Example format in en-US culture: $#,##0_);[Red]($#,##0).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency2">
+            <summary>
+            Generates a Currency number format string with two decimal places and positive and negative format patterns and alignment.
+            Example format in en-US culture: $#,##0.00_);($#,##0.00).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency3">
+            <summary>
+            Generates a Currency number format string with two decimal places and positive and negative format with red digits patterns and alignment.
+            Example format in en-US culture: $#,##0.00_);[Red]($#,##0.00).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetPercent">
+            <summary>
+            Generates a Percent number format string.
+            Example format in en-US culture: 0%.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetPercent1">
+            <summary>
+            Generates a Percent number format string with 2 decimal places and no thousand separator.
+            Example format in en-US culture: 0.00%.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetScientific">
+            <summary>
+            Generates a cuture dependent Scientific number format string.
+            Example format in en-US culture: 0.00E+00.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetFraction">
+            <summary>
+            Generates a Fraction number format for up to one digit.
+            Example format in en-US culture: # ?/?.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetFraction1">
+            <summary>
+            Generates a Fraction number format for up to two digit.
+            Example format in en-US culture: # ??/??.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetShortDate">
+            <summary>
+            Generates a Date number format for short date.
+            Example format in en-US culture: m/d/yyyy.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetDayMonthYear">
+            <summary>
+            Generates a Date number format with day, month and year.
+            Example format in en-US culture: d-mmm-yy.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetDayMonth">
+            <summary>
+            Generates a Date number format with day and month.
+            Example format in en-US culture: d-mmm.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetMonthYear">
+            <summary>
+            Generates a Date number format with month and year.
+            Example format in en-US culture: mmm-yy.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetHourMinuteAMPM">
+            <summary>
+            Generates a Time number format with hours, minutes and AM/PM.
+            Example format in en-US culture: h:mm AM/PM.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetHourMinuteSecondAMPM">
+            <summary>
+            Generates a Time number format with hours, minutes, seconds and AM/PM.
+            Example format in en-US culture: h:mm:ss AM/PM.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetHourMinute">
+            <summary>
+            Generates a Time number format with hours and minutes.
+            Example format in en-US culture: h:mm.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetHourMinuteSecond">
+            <summary>
+            Generates a Time number format with hours, minutes and seconds.
+            Example format in en-US culture: h:mm:ss.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetShortDateHourMinute">
+            <summary>
+            Generates a Time number format with short date, hours and minutes.
+            Example format in en-US culture: m/d/yyyy h:mm.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetDayMonthLongYear">
+            <summary>
+            Generates a Date number format with day, month and year.
+            Example format in en-US culture: m/d/yyyy.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber4">
+            <summary>
+            Generates a Currency number format string with no decimal places, a thousand separator, and positive and negative format pattern and alignment.
+            Example format in en-US culture: #,##0_);(#,##0).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber5">
+            <summary>
+            Generates a Currency number format string with no decimal places, a thousand separator, and positive and negative format with red digits patterns and alignment.
+            Example format in en-US culture: #,##0_);[Red](#,##0).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber6">
+            <summary>
+            Generates a Currency number format string with two decimal places, a thousand separator, and positive and negative format pattern and alignment.
+            Example format in en-US culture: #,##0.00_);(#,##0.00).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetNumber7">
+            <summary>
+            Generates a Currency number format string with two decimal places, a thousand separator, and positive and negative format with red digits patterns and alignment.
+            Example format in en-US culture: #,##0.00_);[Red](#,##0.00).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency4">
+            <summary>
+            Generates a Currency number format string.
+            Example format in en-US culture: _(*#,##0_);_(*(#,##0);_(* "-"_);_(@_).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency5">
+            <summary>
+            Generates a Currency number format string.
+            Example format in en-US culture: _($*#,##0_);_($*(#,##0);_($* "-"_);_(@_).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency6">
+            <summary>
+            Generates a Currency number format string.
+            Example format in en-US culture: _(*#,##0.00_);_(*(#,##0.00);_(*"-"??_);_(@_).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetCurrency7">
+            <summary>
+            Generates a Currency number format string.
+            Example format in en-US culture: _($*#,##0.00_);_($*(#,##0.00);_($*"-"??_);_(@_).
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.BuiltInNumberFormats.GetScientific2">
+            <summary>
+            Generates a cuture dependent Scientific number format string.
+            Eample format in en-US culture: ##0.0E+0.
+            </summary>
+            <returns>The number format string.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter" /> class.
+            </summary>
+            <param name="stream">The underlying stream to write to.</param>
+            <param name="encoding">The encoding for the stream.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter" /> class.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter.#ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter" /> class using default encoding.
+            </summary>
+            <param name="stream">The underlying stream to write to.</param>
+            <param name="encoding">The encoding.</param>
+            <param name="shouldDisposeStream">Determines whether the passed stream should be disposed when 
+            <see cref="T:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter"/>is disposed.</param> 
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Core.CsvStreamWriter.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the stream writer.
+            </summary>
+            <param name="disposeManaged"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ImportExport.Core.Attributes.OpenXmlAttributeBase.MarkAsWritten">
+            <summary>
+            After calling this method, value changes are forbidden.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter">
+            <summary>
+            Defines members used to export the page setup.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetPaperSize(Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize)">
+            <summary>
+            Sets the size of the paper.
+            </summary>
+            <param name="paperSize">The paper size.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetPageOrientation(Telerik.Documents.SpreadsheetStreaming.SpreadPageOrientation)">
+            <summary>
+            Sets the page orientation.
+            </summary>
+            <param name="pageOrientation">The page orientation.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetPageOrder(Telerik.Documents.SpreadsheetStreaming.SpreadPageOrder)">
+            <summary>
+            Sets the page order.
+            </summary>
+            <param name="pageOrder">The page order.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetFitToPagesTall(System.Int32)">
+            <summary>
+            Sets the number of pages tall the worksheet will be scaled to when it's printed.
+            </summary>
+            <param name="numberOfPages">The number of pages.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetFitToPagesWide(System.Int32)">
+            <summary>
+            Sets the number of pages wide the worksheet will be scaled to when it's printed.
+            </summary>
+            <param name="numberOfPages">The number of pages.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IPageSetupExporter.SetScaleFactor(System.Double)">
+            <summary>
+            Sets the scale factor of the printed worksheet. The valid values are from 0.1 to 4.
+            </summary>
+            <param name="scaleFactor">The scale factor.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter">
+            <summary>
+            Defines members used to export the worksheet view state.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetFirstVisibleCell(System.Int32,System.Int32)">
+            <summary>
+            Sets the first visible cell of the viewport.
+            </summary>
+            <param name="rowIndex">The row index.</param>
+            <param name="columnIndex">The column index.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetFreezePanes(System.Int32,System.Int32)">
+            <summary>
+            Sets the freeze panes.
+            </summary>
+            <param name="rowsCount">The number of frozen rows.</param>
+            <param name="columnsCount">The number of frozen column.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetFreezePanes(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets the freeze panes.
+            </summary>
+            <param name="rowsCount">The number of frozen rows.</param>
+            <param name="columnsCount">The number of frozen column.</param>
+            <param name="scrollablePaneFirstVisibleCellRowIndex">The scrollable pane first visible cell row index.</param>
+            <param name="scrollablePaneFirstVisibleCellColumnIndex">The scrollable pane first visible cell column index.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetScaleFactor(System.Double)">
+            <summary>
+            Sets the scale factor.
+            </summary>
+            <param name="percent">The percentage that the viewport will be scaled to.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetShouldShowGridLines(System.Boolean)">
+            <summary>
+            Sets a value indicating whether gridlines should be visible.
+            </summary>
+            <param name="value">True for visible gridlines, otherwise False.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetShouldShowRowColumnHeaders(System.Boolean)">
+            <summary>
+            Sets a value indicating whether row and column headers should be visible.
+            </summary>
+            <param name="value">True for visible row and column headers, otherwise False.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.SetActiveSelectionCell(System.Int32,System.Int32)">
+            <summary>
+            Sets the active cell of the selection.
+            </summary>
+            <param name="rowIndex">The row index of the active cell.</param>
+            <param name="columnIndex">The column index of the active cell.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetViewExporter.AddSelectionRange(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds a range to the selection.
+            </summary>
+            <param name="fromRowIndex">The row index of the top left cell of the range.</param>
+            <param name="fromColumnIndex">The column index of the top left cell of the range.</param>
+            <param name="toRowIndex">The row index of the bottom right cell of the range.</param>
+            <param name="toColumnIndex">The column index of the bottom right cell of the range.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SheetInfo">
+            <summary>
+            Holds information about a sheet in a workbook.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SheetInfo.Name">
+            <summary>
+            Gets the name of the sheet.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadExportMode">
+            <summary>
+            Describes the supported spreadsheet export modes.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadExportMode.Create">
+            <summary>
+            Specifies that a new workbook should be created. If the stream has any content it will be overwritten.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadExportMode.Append">
+            <summary>
+            Opens existing workbook from a stream, or creates a new workbook if the stream is empty. 
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.ICellImporter">
+            <summary>
+            Defines members used to import a cell.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.ICellImporter.RowIndex">
+            <summary>
+            Gets the index of the row.
+            </summary>
+            <value>The index of the row.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.ICellImporter.ColumnIndex">
+            <summary>
+            Gets the index of the column.
+            </summary>
+            <value>The index of the column.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.ICellImporter.Format">
+            <summary>
+            Gets the format.
+            </summary>
+            <value>The format.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.ICellImporter.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IColumnImporter">
+            <summary>
+            Defines members used to import a column.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.FromIndex">
+            <summary>
+            Gets the first index of the column range with same properties.
+            </summary>
+            <value>The index.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.ToIndex">
+            <summary>
+            Gets the last index of the column range with same properties.
+            </summary>
+            <value>The index.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.IsCustomWidth">
+            <summary>
+            Gets a value indicating if the width of the column is custom.
+            </summary>
+            <value>A value indicating if the width of the column is custom.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.WidthInPixels">
+            <summary>
+            Gets the width in pixels.
+            </summary>
+            <value>The width in pixels.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.WidthInCharacters">
+            <summary>
+            Gets the width in characters.
+            </summary>
+            <value>The width in characters.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.OutlineLevel">
+            <summary>
+            Gets the outline level.
+            </summary>
+            <value>The outline level.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IColumnImporter.IsHidden">
+            <summary>
+            Gets a value indicating if the column is hidden.
+            </summary>
+            <value>A value indicating if the column is hidden.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IRowImporter">
+            <summary>
+            Defines members for the row importer classes.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.RowIndex">
+            <summary>
+            Gets the index of the row.
+            </summary>
+            <value>The index of the row.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.OutlineLevel">
+            <summary>
+            Gets the outline level.
+            </summary>
+            <value>The outline level.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.IsCustomHeight">
+            <summary>
+            Gets a value indicating if the height is custom.
+            </summary>
+            <value>A value indicating if the height is custom.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.HeightInPixels">
+            <summary>
+            Gets the height in pixels.
+            </summary>
+            <value>The height in pixels.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.HeightInPoints">
+            <summary>
+            Gets the height in points.
+            </summary>
+            <value>The height in points.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.IsHidden">
+            <summary>
+            Gets a value indicating if the row is hidden.
+            </summary>
+            <value>A value indicating if the row is hidden.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IRowImporter.Cells">
+            <summary>
+            Gets the cells.
+            </summary>
+            <value>The cells.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IWorkbookImporter">
+            <summary>
+            Defines members used to import a workbook.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IWorkbookImporter.WorksheetImporters">
+            <summary>
+            Gets the worksheet importers.
+            </summary>
+            <value>The worksheet importers.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IWorksheetImporter">
+            <summary>
+            Defines members used to import a worksheet.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IWorksheetImporter.Name">
+            <summary>
+            Gets the name of the worksheet.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IWorksheetImporter.Columns">
+            <summary>
+            Gets the columns.
+            </summary>
+            <value>The columns.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IWorksheetImporter.Rows">
+            <summary>
+            Gets the rows.
+            </summary>
+            <value>The rows.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadImporter">
+            <summary>
+            Represents an entry point to import a spreadsheet.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadImporter.CreateWorkbookImporter(Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat,System.IO.Stream)">
+            <summary>
+            Creates the workbook importer.
+            </summary>
+            <param name="documentFormat">The document format.</param>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadColor">
+            <summary>
+            Represents RGB color.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadColor.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadColor" /> class.
+            </summary>
+            <param name="r">The red component value.</param>
+            <param name="g">The green component value.</param>
+            <param name="b">The blue component value.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadColor.G">
+            <summary>
+            Gets the green component value.
+            </summary>
+            <value>The green component value.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadColor.R">
+            <summary>
+            Gets the red component value.
+            </summary>
+            <value>The red component value.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadColor.B">
+            <summary>
+            Gets the blue component value.
+            </summary>
+            <value>The blue component value.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadColor.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadColor.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType">
+            <summary>
+            Describes the possible types of predefined tint and shade proportions for themable colors.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType.Shade1">
+            <summary>
+            Represents shade 1 type of predefined tint and shade proportion.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType.Shade2">
+            <summary>
+            Represents shade 2 type of predefined tint and shade proportion.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType.Shade3">
+            <summary>
+            Represents shade 3 type of predefined tint and shade proportion.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType.Shade4">
+            <summary>
+            Represents shade 4 type of predefined tint and shade proportion.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType.Shade5">
+            <summary>
+            Represents shade 5 type of predefined tint and shade proportion.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrder">
+            <summary>
+            Represents the page order options.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrder.DownThenOver">
+            <summary>
+            Down then over page order.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrder.OverThenDown">
+            <summary>
+            Over then down page order.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrientation">
+            <summary>
+            Specifies page orientation.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrientation.Portrait">
+            <summary> 
+            Portrait page orientation.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPageOrientation.Landscape">
+            <summary> 
+            Landscape page orientation.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize">
+            <summary>
+            Provides enumeration for the most commonly used paper sizes.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A0">
+            <summary>
+            Identifies a paper sheet size of 33.1 inches x 46.8 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A1">
+            <summary>
+            Identifies a paper sheet size of 23.4 inches x 33.1 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A2">
+            <summary>
+            Identifies a paper sheet size of 16.5 inches x 23.4 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A3">
+            <summary>
+            Identifies a paper sheet size of 11.7 inches x 16.5 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A4">
+            <summary>
+            Identifies a paper sheet size of 8.3 inches x 11.7 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.A5">
+            <summary>
+            Identifies a paper sheet size of 5.8 inches x 8.3 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA0">
+            <summary>
+            Identifies a paper sheet size of 33.9 inches x 48 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA1">
+            <summary>
+            Identifies a paper sheet size of 24 inches x 33.9 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA2">
+            <summary>
+            Identifies a paper sheet size of 16.9 inches x 24 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA3">
+            <summary>
+            Identifies a paper sheet size of 12 inches x 16.9 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA4">
+            <summary>
+            Identifies a paper sheet size of 8.5 inches x 12 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.RA5">
+            <summary>
+            Identifies a paper sheet size of 4.8 inches x 8.5 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B0">
+            <summary>
+            Identifies a paper sheet size of 39.4 inches x 55.7 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B1">
+            <summary>
+            Identifies a paper sheet size of 27.8 inches x 39.4 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B2">
+            <summary>
+            Identifies a paper sheet size of 59.1 inches x 19.7 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B3">
+            <summary>
+            Identifies a paper sheet size of 13.9 inches x 19.7 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B4">
+            <summary>
+            Identifies a paper sheet size of 10.1 inches x 14.3 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.B5">
+            <summary>
+            Identifies a paper sheet size of 7.2 inches x 10.1 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Quarto">
+            <summary>
+            Identifies a paper sheet size of 8 inches x 10 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Foolscap">
+            <summary>
+            Identifies a paper sheet size of 8 inches x 13 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Executive">
+            <summary>
+            Identifies a paper sheet size of 7.5 inches x 10 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.GovernmentLetter">
+            <summary>
+            Identifies a paper sheet size of 10.5 inches x 8 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Letter">
+            <summary>
+            Identifies a paper sheet size of 8.5 inches x 11 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Legal">
+            <summary>
+            Identifies a paper sheet size of 8.5 inches x 14 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Ledger">
+            <summary>
+            Identifies a paper sheet size of 17 inches x 11 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Tabloid">
+            <summary>
+            Identifies a paper sheet size of 11 inches x 17 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Post">
+            <summary>
+            Identifies a paper sheet size of 15.6 inches x 19.2 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Crown">
+            <summary>
+            Identifies a paper sheet size of 20 inches x 15 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.LargePost">
+            <summary>
+            Identifies a paper sheet size of 16.5 inches x 21 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Demy">
+            <summary>
+            Identifies a paper sheet size of 17.5 inches x 22 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Medium">
+            <summary>
+            Identifies a paper sheet size of 18 inches x 23 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Royal">
+            <summary>
+            Identifies a paper sheet size of 20 inches x 25 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Elephant">
+            <summary>
+            Identifies a paper sheet size of 21.7 inches x 28 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.DoubleDemy">
+            <summary>
+            Identifies a paper sheet size of 23.5 inches x 35 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.QuadDemy">
+            <summary>
+            Identifies a paper sheet size of 35 inches x 45 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.STMT">
+            <summary>
+            Identifies a paper sheet size of 5.5 inches x 8.5 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Folio">
+            <summary>
+            Identifies a paper sheet size of 8.5 inches x 13 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Statement">
+            <summary>
+            Identifies a paper sheet size of 5.5 inches x 8.5 inches.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPaperSize.Size10x14">
+            <summary>
+            Identifies a paper sheet size of 10 inches x 14 inches.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor">
+            <summary>
+            Represents a color which can be used in a theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadColor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadColor,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="color">The color.</param>
+            <param name="isAutomatic">The is automatic.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="themeColorType">Type of the theme color.</param>
+            <param name="tintAndShade">The tint and shade.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="themeColorType">Type of the theme color.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType,System.Nullable{Telerik.Documents.SpreadsheetStreaming.SpreadColorShadeType})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="themeColorType">Type of the theme color.</param>
+            <param name="colorShadeType">Type of the predefined tint and shade proportion for the themable color.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.LocalValue">
+            <summary>
+            Gets the local value of the color.
+            </summary>
+            <value>The local value of the color.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.IsAutomatic">
+            <summary>
+            Gets the value indicating if the color is automatic. Automatic colors may be interpreted by a consumer as appropriate.
+            </summary>
+            <value>Value indicating if the color is automatic.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.ThemeColorType">
+            <summary>
+            Gets the type of the theme color.
+            </summary>
+            <value>The type of the theme color.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.ColorShadeType">
+            <summary>
+            Gets the type of the color shade.
+            </summary>
+            <value>The type of the color shade.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.TintAndShade">
+            <summary>
+            Gets the tint and shade proportion value. This value is applied over the theme color coming from the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType" /> to determine the final color applied over the content.
+            </summary>
+            <value>The tint and shade value.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.IsFromTheme">
+            <summary>
+            Gets a value indicating if the color comes from a theme.
+            </summary>
+            <value>The value indicating if the color comes from a theme.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.FromRgb(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Creates a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.
+            </summary>
+            <param name="red">The red component.</param>
+            <param name="green">The green component.</param>
+            <param name="blue">The blue component.</param>
+            <returns>Instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" /> class.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.op_Equality(Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Determines whether the specified themable colors are equal.
+            </summary>
+            <returns>True if the themable colors are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.op_Inequality(Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Determines whether the specified themable colors are different.
+            </summary>
+            <returns>True if the themable colors are different; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.op_Explicit(Telerik.Documents.SpreadsheetStreaming.SpreadColor)~Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor">
+            <summary>
+            Explicitly cast color to themable color.
+            </summary>
+            <param name="value">The color.</param>
+            <returns>Themable color.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.FromSpreadColor(Telerik.Documents.SpreadsheetStreaming.SpreadColor)">
+            <summary>
+            Converts <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadColor" /> to <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" />.
+            </summary>
+            <param name="value">The <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadColor" />.</param>
+            <returns>The <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor" />.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.ToString">
+            <summary>
+            Returns a string that represents the themable color.
+            </summary>
+            <returns>A string that represents the themable color.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily">
+            <summary>
+            Represents a font family which can be used in a theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily" /> class.
+            </summary>
+            <param name="fontFamily">The font family name.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadThemeFontType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily" /> class.
+            </summary>
+            <param name="themeFontType">Type of the theme font.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.LocalValue">
+            <summary>
+            Gets the local value of the font family.
+            </summary>
+            <value>The local value of the font family.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.ThemeFontType">
+            <summary>
+            Gets the type of the theme font.
+            </summary>
+            <value>The type of the theme font.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.IsFromTheme">
+            <summary>
+            Gets a value indicating if the font family comes from a theme.
+            </summary>
+            <value>The value indicating if the font family comes from a theme.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.op_Equality(Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily,Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily)">
+            <summary>
+            Determines whether the specified document themable font families are equal.
+            </summary>
+            <returns>True if the document themable font families are equal; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.op_Inequality(Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily,Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily)">
+            <summary>
+            Determines whether the specified document themable font families are different.
+            </summary>
+            <returns>True if the document themable font families are different; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.ToString">
+            <summary>
+            Returns a string that represents the document themable font family.
+            </summary>
+            <returns>A string that represents the document themable font family.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType">
+            <summary>
+            Describes the possible types of theme colors.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Light1">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Dark1">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Light2">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Dark2">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent1">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent2">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent3">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent4">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent5">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Accent6">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.Hyperlink">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeColorType.FollowedHyperlink">
+            <summary>
+            Represents Light1 theme color type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadThemeFontType">
+            <summary>
+            Describes the possible types of theme fonts.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeFontType.Minor">
+            <summary>
+            The font of the body of the document.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadThemeFontType.Major">
+            <summary>
+            The font of the headings of the document.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.CellContentSizeHelper">
+            <summary>
+            Represents a helper class for measuring the cell content size.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.CellContentSizeHelper.GetCellContentSize(System.String,Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat,System.Double)">
+            <summary>
+            The method calculates the cell content size based on the cell formatting. The result can be used to set the column width
+            so the values can fit in the columns.
+            </summary>
+            <param name="value">The cell value. If formula is passed the method will throw an ArgumentException.</param>
+            <param name="spreadCellFormat">The format of the cell.</param>
+            <param name="cellWidth">The width of the cell in pixels. This value is only respected if the value of the WrapText property
+            of the spreadCellFormat is true. The default column width is 65 pixels.</param>
+            <returns>The size of the cell content.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.CellContentSizeHelper.GetCellContentSize(System.String,System.String,System.String,System.Double,System.Boolean,System.Boolean,Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment,System.Boolean,System.Int32,System.Double)">
+            <summary>
+            The method calculates the cell content size based on the cell formatting. The result can be used to set the column width
+            so the values can fit in the columns.
+            </summary>
+            <param name="value">The cell value. If formula is passed the method will throw an ArgumentException.</param>
+            <param name="cellValueFormat">The number format of the cell.</param>
+            <param name="fontFamily">The font family.</param>
+            <param name="fontSize">The size of the font in points.</param>
+            <param name="isBold">A value indicating whether the text is bold.</param>
+            <param name="isItalic">A value indicating whether the text is italic.</param>
+            <param name="horizontalAlignment">The horizontal alignment.</param>
+            <param name="isWrapped">A value indicating whether the text is wrapped.</param>
+            <param name="indent">The cell indent.</param>
+            <param name="cellWidth">The width of the cell in pixels. This value is only respected if the value of isWrapped is true.
+            The default column width is 65 pixels.</param>
+            <returns>The size of the cell content.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertRowIndexToName(System.Int32)">
+            <summary>
+            Converts the row index to name.
+            </summary>
+            <param name="rowIndex">Index of the row.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertRowNameToIndex(System.String)">
+            <summary>
+            Converts the row name to index.
+            </summary>
+            <param name="rowName">Name of the row.</param>
+            <returns>The index.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertColumnIndexToName(System.Int32)">
+            <summary>
+            Converts the column index to name.
+            </summary>
+            <param name="columnIndex">Index of the column.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertCellIndexToName(System.Int32,System.Int32)">
+            <summary>
+            Converts the cell index to name.
+            </summary>
+            <param name="rowIndex">Index of the row.</param>
+            <param name="columnIndex">Index of the column.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertCellRangeToName(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Converts the cell range to a name.
+            </summary>
+            <param name="fromRowIndex">Index of from row.</param>
+            <param name="fromColumnIndex">Index of from column.</param>
+            <param name="toRowIndex">Index of to row.</param>
+            <param name="toColumnIndex">Index of to column.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.Utilities.NameConverter.ConvertCellIndexesToName(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Converts the cell indexes to a name.
+            </summary>
+            <param name="fromRowIndex">The start row index.</param>
+            <param name="fromColumnIndex">The start column index.</param>
+            <param name="toRowIndex">The end row index.</param>
+            <param name="toColumnIndex">The end column index.</param>
+            <returns>The name.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.ICellExporter">
+            <summary>
+            Defines members used to export a cell.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetValue(System.String)">
+            <summary>
+            Sets string as cell value.
+            </summary>
+            <param name="value">The string value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetValue(System.Double)">
+            <summary>
+            Sets double as cell value.
+            </summary>
+            <param name="value">The double value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetValue(System.Boolean)">
+            <summary>
+            Sets a boolean cell value.
+            </summary>
+            <param name="value">The boolean value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetValue(System.DateTime)">
+            <summary>
+            Sets DateTime as cell value.
+            </summary>
+            <param name="value">The DateTime value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetFormula(System.String)">
+            <summary>
+            Sets formula value.
+            </summary>
+            <param name="value">The formula value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.ICellExporter.SetFormat(Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat)">
+            <summary>
+            Sets the cell format.
+            </summary>
+            <param name="cellFormat">The cell format.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IColumnExporter">
+            <summary>
+            Defines members used to export a column.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IColumnExporter.SetWidthInPixels(System.Double)">
+            <summary>
+            Sets the column width in pixels.
+            </summary>
+            <param name="value">The width value in pixels.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IColumnExporter.SetWidthInCharacters(System.Double)">
+            <summary>
+            Sets the column width in characters count.
+            </summary>
+            <param name="count">The count of the characters.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IColumnExporter.SetOutlineLevel(System.Int32)">
+            <summary>
+            Sets the column outline level.
+            </summary>
+            <param name="value">The outline level value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IColumnExporter.SetHidden(System.Boolean)">
+            <summary>
+            Sets a value indicating whether the column should be hidden.
+            </summary>
+            <param name="value">True for hidden; otherwise false.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IRowExporter">
+            <summary>
+            Defines members for the row exporter classes.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.CreateCellExporter">
+            <summary>
+            Creates a cell exporter.
+            </summary>
+            <returns>The cell exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.SkipCells(System.Int32)">
+            <summary>
+            Skips a specified number of cells.
+            </summary>
+            <param name="count">The count of the cells to skip.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.SetOutlineLevel(System.Int32)">
+            <summary>
+            Sets the row outline level.
+            </summary>
+            <param name="value">The row outline level value.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.SetHeightInPixels(System.Double)">
+            <summary>
+            Sets the row height in pixels.
+            </summary>
+            <param name="value">The row height value in pixels.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.SetHeightInPoints(System.Double)">
+            <summary>
+            Sets the row height in points.
+            </summary>
+            <param name="value">The row height value in points.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IRowExporter.SetHidden(System.Boolean)">
+            <summary>
+            Sets a value indicating whether the row should be hidden.
+            </summary>
+            <param name="value">True for hidden; otherwise false.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter">
+            <summary>
+            Defines members used to export a workbook.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter.CellStyles">
+            <summary>
+            Gets the cell style collection.
+            </summary>
+            <value>The cell style collection.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter.CreateWorksheetExporter(System.String)">
+            <summary>
+            Creates a worksheet exporter.
+            </summary>
+            <param name="name">The name of the worksheet.</param>
+            <returns>The worksheet exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter.GetSheetInfos">
+            <summary>
+            Provides information about the sheets in the workbook.
+            </summary>
+            <returns></returns>
+            <returns>Returns an <see cref="T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;SheetInfo&gt;</see> containing information about all sheets present in the workbook.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter">
+            <summary>
+            Defines members used to export a worksheet.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.CreateWorksheetViewExporter">
+            <summary>
+            Creates a worksheet view exporter.
+            </summary>
+            <returns>The worksheet view exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.CreateRowExporter">
+            <summary>
+            Creates a row exporter.
+            </summary>
+            <returns>The row exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.CreateColumnExporter">
+            <summary>
+            Creates a column exporter.
+            </summary>
+            <returns>The column exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.CreatePageSetupExporter">
+            <summary>
+            Creates a page setup exporter.
+            </summary>
+            <returns>The page setup exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.SkipRows(System.Int32)">
+            <summary>
+            Skips a specified number of rows.
+            </summary>
+            <param name="count">The count of the rows to skip.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.SkipColumns(System.Int32)">
+            <summary>
+            Skips a specified number of columns.
+            </summary>
+            <param name="count">The count of the columns to skip.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.IWorksheetExporter.MergeCells(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Merges cells.
+            </summary>
+            <param name="fromRowIndex">The start row index of the area.</param>
+            <param name="fromColumnIndex">The start column index of the area.</param>
+            <param name="toRowIndex">The end row index of the area.</param>
+            <param name="toColumnIndex">The end column index of the area.</param>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase">
+            <summary>
+            Represent the base class for cell formats.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.LeftBorder">
+            <summary>
+            Gets or sets the left border.
+            </summary>
+            <value>The left border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.RightBorder">
+            <summary>
+            Gets or sets the right border.
+            </summary>
+            <value>The right border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.TopBorder">
+            <summary>
+            Gets or sets the top border.
+            </summary>
+            <value>The top border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.BottomBorder">
+            <summary>
+            Gets or sets the bottom border.
+            </summary>
+            <value>The bottom border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.DiagonalUpBorder">
+            <summary>
+            Gets or sets the diagonal up border.
+            </summary>
+            <value>The diagonal up border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.DiagonalDownBorder">
+            <summary>
+            Gets or sets the diagonal down border.
+            </summary>
+            <value>The diagonal down border.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.Fill">
+            <summary>
+            Gets or sets the fill.
+            </summary>
+            <value>The fill.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.NumberFormat">
+            <summary>
+            Gets or sets the number format.
+            </summary>
+            <value>The number format.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.FontSize">
+            <summary>
+            Gets or sets the size of the font in points.
+            </summary>
+            <value>The size of the font in points.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.ForeColor">
+            <summary>
+            Gets or sets the fore color.
+            </summary>
+            <value>The fore color.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.IsBold">
+            <summary>
+            Gets or sets a value indicating whether the text is bold.
+            </summary>
+            <value>The value indicating whether the text bold.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.IsItalic">
+            <summary>
+            Gets or sets a value indicating whether the text is italic.
+            </summary>
+            <value>The value indicating whether the text italic.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.Underline">
+            <summary>
+            Gets or sets the underline type.
+            </summary>
+            <value>The underline type.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.FontFamily">
+            <summary>
+            Gets or sets the font family.
+            </summary>
+            <value>The font family.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.HorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal alignment.
+            </summary>
+            <value>The horizontal alignment.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.VerticalAlignment">
+            <summary>
+            Gets or sets the vertical alignment.
+            </summary>
+            <value>The vertical alignment.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.Indent">
+            <summary>
+            Gets or sets the indent.
+            </summary>
+            <value>The indent.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormatBase.WrapText">
+            <summary>
+            Gets or sets a value indicating if the text in a cell should be line-wrapped within the cell.
+            </summary>
+            <value>The value indicating if the text in a cell should be line-wrapped within the cell.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle">
+            <summary>
+            Represents a cell style.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyBorder">
+            <summary>
+            Gets or sets a value indicating whether the border properties should be applied.
+            </summary>
+            <value>True if the border properties should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyFill">
+            <summary>
+            Gets or sets a value indicating whether the fill property should be applied.
+            </summary>
+            <value>True if the fill property should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyFont">
+            <summary>
+            Gets or sets a value indicating whether the font properties should be applied.
+            </summary>
+            <value>True if the font properties should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyNumberFormat">
+            <summary>
+            Gets or sets a value indicating whether the number format property should be applied.
+            </summary>
+            <value>True if the number format property should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyAlignment">
+            <summary>
+            Gets or sets a value indicating whether the alignment properties should be applied.
+            </summary>
+            <value>True if the alignment properties should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.ApplyProtection">
+            <summary>
+            Gets or sets a value indicating whether the protection property should be applied.
+            </summary>
+            <value>True if the protection property should be applied; otherwise, false.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.Name">
+            <summary>
+            Gets the name of the cell style.
+            </summary>
+            <value>The name of the cell style.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection">
+            <summary>
+            Represents a cell style collection.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.Count">
+            <summary>
+            Gets the number of elements contained in this collection.
+            </summary>
+            <value>The number of elements contained in this collection.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle" /> with the specified style name.
+            </summary>
+            <value>The spread cell style.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.Contains(System.String)">
+            <summary>
+            Determines whether the style with the specified name is in the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection"/>.
+            </summary>
+            <param name="styleName">The name of the style.</param>
+            <returns>True if it is present; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.Contains(Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle)">
+            <summary>
+            Determines whether the specified style is in the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection"/>.
+            </summary>
+            <param name="style">The style.</param>
+            <returns>True if it is present; otherwise, false.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.GetByName(System.String)">
+            <summary>
+             Gets the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle" /> with the specified style name.
+            </summary>
+            <param name="styleName">The name of the style.</param>
+            <returns>The style.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.Add(System.String)">
+            <summary>
+            Creates a new cell style with the specified name.
+            </summary>
+            <param name="styleName">The name of the new cell style.</param>
+            <returns>The style.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.Collections.Generic.IEnumerator`1" /> that can
+            be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellStyleCollection"/>.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be
+            used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill">
+            <summary>
+            Describes a gradient type of fill.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadGradientType,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill" /> class.
+            </summary>
+            <param name="gradientType">Type of the gradient.</param>
+            <param name="color1">The color1 themable color.</param>
+            <param name="color2">The color2 themable color.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.Color1">
+            <summary>
+            Gets the color1 themable color.
+            </summary>
+            <value>The color1 themable color.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.Color2">
+            <summary>
+            Gets the color2 themable color.
+            </summary>
+            <value>The color2 themable color.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.GradientType">
+            <summary>
+            Gets the type of the gradient.
+            </summary>
+            <value>The type of the gradient.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType">
+            <summary>
+            Describes the possible types of gradients.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.Horizontal">
+            <summary>
+            Horizontal gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.HorizontalReversed">
+            <summary>
+            HorizontalReversed gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.HorizontalRepeated">
+            <summary>
+            HorizontalRepeated gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.Vertical">
+            <summary>
+            Vertical gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.VerticalReversed">
+            <summary>
+            VerticalReversed gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.VerticalRepeated">
+            <summary>
+            VerticalRepeated gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalUp">
+            <summary>
+            DiagonalUp gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalUpReversed">
+            <summary>
+            DiagonalUpReversed gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalUpRepeated">
+            <summary>
+            DiagonalUpRepeated gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalDown">
+            <summary>
+            DiagonalDown gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalDownReversed">
+            <summary>
+            DiagonalDownReversed gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.DiagonalDownRepeated">
+            <summary>
+            DiagonalDownRepeated gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.FromTopLeftCorner">
+            <summary>
+            FromTopLeftCorner gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.FromTopRightCorner">
+            <summary>
+            FromTopRightCorner gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.FromBottomLeftCorner">
+            <summary>
+            FromBottomLeftCorner gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.FromBottomRightCorner">
+            <summary>
+            FromBottomRightCorner gradient type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadGradientType.FromCenter">
+            <summary>
+            FromCenter gradient type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.ISpreadFill">
+            <summary>
+            Defines members for the fill classes.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill">
+            <summary>
+            Describes a pattern type of fill.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadPatternType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill" /> class.
+            </summary>
+            <param name="patternType">Type of the pattern.</param>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadPatternType,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill" /> class.
+            </summary>
+            <param name="patternType">Type of the pattern.</param>
+            <param name="patternColor">Color of the pattern.</param>
+            <param name="backgroundColor">Color of the background.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.PatternType">
+            <summary>
+            Gets the type of the pattern.
+            </summary>
+            <value>The type of the pattern.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.PatternColor">
+            <summary>
+            Gets the color of the pattern.
+            </summary>
+            <value>The color of the pattern.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.BackgroundColor">
+            <summary>
+            Gets the color of the background.
+            </summary>
+            <value>The color of the background.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.CreateSolidFill(Telerik.Documents.SpreadsheetStreaming.SpreadColor)">
+            <summary>
+            Creates a solid pattern fill.
+            </summary>
+            <param name="color">The color of the pattern.</param>
+            <returns>Solid pattern fill.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.CreateSolidFill(Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Creates a solid pattern fill.
+            </summary>
+            <param name="color">The color of the pattern.</param>
+            <returns>Solid pattern fill.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment">
+            <summary>
+            Describes the possible types of vertical alignments.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.Bottom">
+            <summary>
+            Specifies that the text should align with the bottom edge of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.Center">
+            <summary>
+            Specifies that the text should be centered across the height of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.Top">
+            <summary>
+            Specifies that the text should align with the top edge of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.Justify">
+            <summary>
+            Specifies that the text should be justified across the height of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.Distributed">
+            <summary>
+            Specifies that the text should be evenly distributed across the height of the cell.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment">
+            <summary>
+            Describes the possible types of horizontal alignments.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.General">
+            <summary>
+            General horizontal alignment. Text data is left-aligned. Numbers, dates, and times are right-aligned. Boolean types are centered. 
+            Changing the alignment does not change the type of data.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Left">
+            <summary>
+            Specifies that the text should align with the left edge of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Center">
+            <summary>
+            Specifies that the text should be centered across the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Right">
+            <summary>
+            Specifies that the text should align with the right edge of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Justify">
+            <summary>
+            Specifies that the text should be justified between the left and right edges of the cell except the last line. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Fill">
+            <summary>
+            Specifies that the value of the cell should be filled across the entire width of the cell.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.CenterContinuous">
+            <summary>
+            Specifies that the text should be centered across multiple cells.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.Distributed">
+            <summary>
+            Specifies that the text should be evenly distributed between the left and right edges of the cell. 
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType">
+            <summary>
+            Describes the possible types of underline.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.None">
+            <summary>
+            None underline type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.Single">
+            <summary>
+            Single underline type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.Double">
+            <summary>
+            Double underline type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.SingleAccounting">
+            <summary>
+            Single accounting underline type. The underline should be drawn under the lower part of characters such as g and p.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.DoubleAccounting">
+            <summary>
+            Double accounting underline type. The underline should be drawn under the lower part of characters such as g and p.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadBorder">
+            <summary>
+            Describes the settings which are used to determine how the border will appear in the document.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadBorder.#ctor(Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle,Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Documents.SpreadsheetStreaming.SpreadBorder" /> class.
+            </summary>
+            <param name="style">The border style.</param>
+            <param name="color">The border color.</param>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadBorder.Style">
+            <summary>
+            Gets the border style.
+            </summary>
+            <value>The border style.</value>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadBorder.Color">
+            <summary>
+            Gets the themable color.
+            </summary>
+            <value>The themable color.</value>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadBorder.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal
+            to the current <see cref="T:System.Object" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current
+            <see cref="T:System.Object" />.</param>
+            <returns>
+            Returns true if the specified <see cref="T:System.Object" /> is equal to the
+            current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadBorder.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>A hash code for the current <see cref="T:System.Object" />.</returns>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle">
+            <summary>
+            Describes the possible types for the style of the border.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.None">
+            <summary>
+            None border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Hair">
+            <summary>
+            Hair border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Dotted">
+            <summary>
+            Dotted border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.DashDotDot">
+            <summary>
+            DashDotDot border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.DashDot">
+            <summary>
+            DashDot border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Dashed">
+            <summary>
+            Dashed border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Thin">
+            <summary>
+            Thin border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.MediumDashDotDot">
+            <summary>
+            MediumDashDotDot border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.MediumDashDot">
+            <summary>
+            MediumDashDot border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.MediumDashed">
+            <summary>
+            MediumDashed border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Double">
+            <summary>
+            Double border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Medium">
+            <summary>
+            Medium border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.SlantDashDot">
+            <summary>
+            SlantDashDot border style.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadBorderStyle.Thick">
+            <summary>
+            Thick border style.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat">
+            <summary>
+            Represents a cell format.
+            </summary>
+        </member>
+        <member name="P:Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat.CellStyle">
+            <summary>
+            Gets or sets the cell style.
+            </summary>
+            <value>The cell style.</value>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType">
+            <summary>
+            Describes the possible types of patterns.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Solid">
+            <summary>
+            Solid pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Gray75Percent">
+            <summary>
+            Gray75Percent pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Gray50Percent">
+            <summary>
+            Gray50Percent pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Gray25Percent">
+            <summary>
+            Gray25Percent pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Gray12Percent">
+            <summary>
+            Gray12Percent pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.Gray6Percent">
+            <summary>
+            Gray6Percent pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.HorizontalStripe">
+            <summary>
+            HorizontalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.VerticalStripe">
+            <summary>
+            VerticalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ReverseDiagonalStripe">
+            <summary>
+            ReverseDiagonalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.DiagonalStripe">
+            <summary>
+            DiagonalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.DiagonalCrosshatch">
+            <summary>
+            DiagonalCrosshatch pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThickDiagonalCrosshatch">
+            <summary>
+            ThickDiagonalCrosshatch pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinHorizontalStripe">
+            <summary>
+            ThinHorizontalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinVerticalStripe">
+            <summary>
+            ThinVerticalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinReverseDiagonalStripe">
+            <summary>
+            ThinReverseDiagonalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinDiagonalStripe">
+            <summary>
+            ThinDiagonalStripe pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinHorizontalCrossHatch">
+            <summary>
+            ThinHorizontalCrossHatch pattern type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadPatternType.ThinDiagonalCrosshatch">
+            <summary>
+            ThinDiagonalCrosshatch pattern type.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat">
+            <summary>
+            Describes the supported spreadsheet document formats.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat.Xlsx">
+            <summary>
+            Xlsx spreadsheet document format.
+            </summary>
+        </member>
+        <member name="F:Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat.Csv">
+            <summary>
+            Csv spreadsheet document format.
+            </summary>
+        </member>
+        <member name="T:Telerik.Documents.SpreadsheetStreaming.SpreadExporter">
+            <summary>
+            Represents an entry point to export a spreadsheet.
+            </summary>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadExporter.CreateWorkbookExporter(Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat,System.IO.Stream)">
+            <summary>
+            Creates a workbook exporter.
+            </summary>
+            <param name="documentFormat">The document format.</param>
+            <param name="stream">The output stream.</param>
+            <returns>The workbook exporter.</returns>
+        </member>
+        <member name="M:Telerik.Documents.SpreadsheetStreaming.SpreadExporter.CreateWorkbookExporter(Telerik.Documents.SpreadsheetStreaming.SpreadDocumentFormat,System.IO.Stream,Telerik.Documents.SpreadsheetStreaming.SpreadExportMode)">
+            <summary>
+            Creates the workbook exporter.
+            </summary>
+            <param name="documentFormat">The document format.</param>
+            <param name="stream">The stream.</param>
+            <param name="exportMode">The export mode.</param>
+            <returns>The workbook exporter.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.WinControls.RadWebCam</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.WinControls.UI.CameraSetting">
+            <summary>
+            Represents a single setting on a <see cref="T:Telerik.WinControls.UI.CameraSettingsDialog"/>.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.CameraSetting.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSetting.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSetting.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.CameraSettingsDialog">
+            <summary>
+            Represents a settings dialog for the <see cref="T:Telerik.WinControls.UI.RadWebCam"/> control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSettingsDialog.OnLoad(System.EventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Form.Load event.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.CameraSettingsDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSettingsDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSettingsDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.CameraErrorEventArgs">
+            <summary>
+            Contains state information and event data associated with a camera error event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraErrorEventArgs.#ctor(Telerik.WinControls.UI.ErrorInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.CameraErrorEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.CameraErrorEventArgs.Error">
+            <summary>
+            Gets the info associated with this error.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.CameraErrorState">
+            <summary>
+            Represents the type of error RadWebCam encountered.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.CameraErrorState.NoCamera">
+            <summary>
+            The are no cameras detected.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.CameraErrorState.CameraIsBusy">
+            <summary>
+            The camera is currently unavailable.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.CameraErrorState.CameraAccessDenied">
+            <summary>
+            Access to the camera is denied.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.ErrorInfo">
+            <summary>
+            Contains error information.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ErrorInfo.#ctor(System.String,Telerik.WinControls.UI.CameraErrorState)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.ErrorInfo"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ErrorInfo.Message">
+            <summary>
+            Gets or sets the message associated with this error.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ErrorInfo.ErrorState">
+            <summary>
+            Gets the cause of this error.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ErrorInfo.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.CameraSettingsDialogShowingEventArgs">
+            <summary>
+            Contains the event data of a settings dialog showing event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.CameraSettingsDialogShowingEventArgs.#ctor(Telerik.WinControls.UI.CameraSettingsDialog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.CameraSettingsDialogShowingEventArgs"/> class.
+            </summary>
+            <param name="dialog">The dialog to be shown.</param>
+        </member>
+        <member name="P:Telerik.WinControls.UI.CameraSettingsDialogShowingEventArgs.SettingsDialog">
+            <summary>
+            Gets or sets the dialog that will be shown.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.SnapshotTakenEventArgs">
+            <summary>
+            Contains state information and event data associated with a snapshot taken event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.SnapshotTakenEventArgs.#ctor(System.Drawing.Image)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.SnapshotTakenEventArgs"/> class.
+            </summary>
+            <param name="snapshot"></param>
+        </member>
+        <member name="P:Telerik.WinControls.UI.SnapshotTakenEventArgs.Snapshot">
+            <summary>
+            Gets the snapshot that has been taken.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.Localization.RadWebCamLocalizationProvider">
+            <summary>
+            Provides localization services for RadWebCam
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.Localization.RadWebCamLocalizationProvider.GetLocalizedString(System.String)">
+            <summary>
+            Gets the string corresponding to the given ID.
+            </summary>
+            <param name="id">String ID</param>
+            <returns>The string corresponding to the given ID.</returns>
+        </member>
+        <member name="T:Telerik.WinControls.UI.Localization.RadWebCamStringId">
+            <summary>
+            Represents localization strings in RadWebCam.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadWebCam">
+            <summary>
+            Represents a web cam control that displays the stream provided by a web cam.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.RadWebCam"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateChildItems(Telerik.WinControls.RadElement)">
+            <summary>
+            Creates the child elements of the control.
+            </summary>
+            <param name="parent">The root element of the control's element tree.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateRootElement">
+            <summary>
+            Creates the root RadElement of the control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateWebCamRootElement">
+            <summary>
+            Creates the root element of <see cref="T:Telerik.WinControls.UI.RadWebCam"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateWebCamElement">
+            <summary>
+            Creates the main <see cref="T:Telerik.WinControls.UI.RadWebCam"/> element.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateSnapshotPreviewElement">
+            <summary>
+            Creates the snapshot preview element.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.CreateCameraBorderElement">
+            <summary>
+            Creates the camera border element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.WebCamElement">
+            <summary>
+            Gets the main web cam control element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.SnapshotPreviewElement">
+            <summary>
+            Gets the snapshot preview element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.CameraBorderElement">
+            <summary>
+            Gets the element representing the border of the camera.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.HasError">
+            <summary>
+            Gets a value indicating whether the camera is in a state where something is preventing normal operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.IsRecording">
+            <summary>
+            Gets or sets a value indicating whether the source content is being recorded to a file.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.IsPreviewingSnapshot">
+            <summary>
+            Gets or sets a value indicating whether the control is in snapshot preview mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.PreviewSnapshots">
+            <summary>
+            Gets or sets whether the control will go into preview mode when a snapshot is taken.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.AutoStart">
+            <summary>
+            Gets or sets whether the control will start the first webcam it finds upon starting the application.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.ControlPanelHeight">
+            <summary>
+            Gets or sets the height of the panel with the camera controls.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.RecordingFilePath">
+            <summary>
+            Gets or sets the location where video files are stored when capturing.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.VideoRecordingElapsedTimeFormat">
+            <summary>
+            Gets or sets the format of the elapsed time displayed during recording.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.GetAudioCaptureDevices">
+            <summary>
+            Gets a list with all the available audio capture devices.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.GetVideoCaptureDevices">
+            <summary>
+            Gets a list with all the available video capture devices.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.GetVideoFormats(Telerik.Windows.MediaFoundation.MediaFoundationDeviceInfo,System.Boolean)">
+            <summary>
+            Gets a list with all the available video file formats for the provided device.
+            </summary>
+            <param name="device">The device for which to get the available formats.</param>
+            <param name="recordingFormatsOnly">If set to true - only formats that allow saving to a video file will be returned.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Initialize(Telerik.Windows.MediaFoundation.MediaFoundationDeviceInfo,Telerik.Windows.MediaFoundation.MediaFoundationVideoFormatInfo)">
+            <summary>
+            Starts up the video pipeline and displays the video from the source inside of the control.
+            <param name="videoDevice">The device to use as a video source.</param>
+            <param name="videoFormat">The format from the video source.</param>
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Initialize(Telerik.Windows.MediaFoundation.MediaFoundationDeviceInfo,Telerik.Windows.MediaFoundation.MediaFoundationVideoFormatInfo,Telerik.Windows.MediaFoundation.MediaFoundationDeviceInfo)">
+            <summary>
+            Starts up the video pipeline and displays the video from the source inside of the control.
+            <param name="videoDevice">The device to use as a video source.</param>
+            <param name="videoFormat">The format from the video source.</param>
+            <param name="audioDevice">The device to use as a audio source.</param>
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.ShutDown">
+            <summary>
+            Shuts down the video pipeline.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Start">
+            <summary>
+            Starts the video pipeline and starts displaying the video feed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Pause">
+            <summary>
+            Pauses the video pipeline and pauses displaying the video feed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Stop">
+            <summary>
+            Stops the video pipeline and stops displaying the video feed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.StartRecording">
+            <summary>
+            Starts capturing the media source(s) to a file. The <see cref="P:Telerik.WinControls.UI.RadWebCam.RecordingFilePath"/> property must be set before calling this method.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.StopRecording">
+            <summary>
+            Stops the file capture.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.TakeSnapshot">
+            <summary>
+            Takes a snapshot from the currently displayed video feed. To get the snapshot subscribe to the <see cref="E:Telerik.WinControls.UI.RadWebCam.SnapshotTaken"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.SaveSnapshot">
+            <summary>
+            Triggers the <see cref="E:Telerik.WinControls.UI.RadWebCam.SnapshotTaken"/> event when the control is in preview snapshot mode.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.DiscardSnapshot">
+            <summary>
+            Discards the taken snapshot when the control is in preview snapshot mode.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.ShowSettingsDialog">
+            <summary>
+            Shows the camera settings dialog.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.Windows.Forms.Control and
+            its child controls and optionally releases the managed resources.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCam.DefaultSize">
+            <summary>
+            Gets the default size of the control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.StartRecordingCore">
+            <summary>
+            Starts capturing the content of the source(s) to a file.
+            This call must be made in a new thread as Windows Media Foundation must run in a MTAThread and WPF is STAThread.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.StopRecordingCore">
+            <summary>
+            Stops capturing the content of the source(s) to a file. 
+            This call must be made in a new thread as Windows Media Foundation must run in a MTAThread and WPF is STAThread.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.InvalidatePlayerPosition">
+            <summary>
+            Invalidates the rectangle where the MF player paints the webcam stream.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadWebCam.SnapshotTaken">
+            <summary>
+            Occurs when a snapshot is taken. If <see cref="P:Telerik.WinControls.UI.RadWebCam.PreviewSnapshots"/> is set to true the event is fired only if the SaveSnapshot button is pressed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnSnapshotTaken(Telerik.WinControls.UI.SnapshotTakenEventArgs)">
+            <summary>
+            Fires the <see cref="E:Telerik.WinControls.UI.RadWebCam.SnapshotTaken"/> event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadWebCam.CameraError">
+            <summary>
+            Occurs when an error is preventing the camera from operating normally.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnCameraError(Telerik.WinControls.UI.CameraErrorEventArgs)">
+            <summary>
+            Fires the <see cref="E:Telerik.WinControls.UI.RadWebCam.CameraError"/> event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadWebCam.RecordingStarted">
+            <summary>
+            Occurs when video recording is started.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnRecordingStarted(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Fires the <see cref="E:Telerik.WinControls.UI.RadWebCam.RecordingStarted"/> event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadWebCam.RecordingEnded">
+            <summary>
+            Occurs when video recording has ended.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnRecordingEnded(System.EventArgs)">
+            <summary>
+            Fires the <see cref="E:Telerik.WinControls.UI.RadWebCam.RecordingEnded"/> event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadWebCam.SettingsDialogShowing">
+            <summary>
+            Occurs when the settings dialog is about to be shown.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnSettingsDialogShowing(Telerik.WinControls.UI.CameraSettingsDialogShowingEventArgs)">
+            <summary>
+            Fires the <see cref="E:Telerik.WinControls.UI.RadWebCam.SettingsDialogShowing"/> event.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Raises the System.Windows.Forms.Control.HandleCreated event.
+            </summary>
+            <param name="e">An System.EventArgs that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.OnLoad(System.Drawing.Size)">
+            <summary>
+            Notifies that the control is about to be visualized.
+            </summary>
+            <param name="desiredSize"></param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCam.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>
+            Performs the work of setting the specified bounds of this control.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadWebCamElement">
+            <summary>
+            Represents the UI that users can interact with in a <see cref="T:Telerik.WinControls.UI.RadWebCam"/> control.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.#ctor(Telerik.WinControls.UI.RadWebCam)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.RadWebCamElement"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateChildElements">
+            <summary>
+            Called by the element when constructed. Allows inheritors to build the element tree.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateLeftElementsStack">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.LeftElementsStack"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateCenterElementsStack">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.CenterElementsStack"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateRightElementsStack">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.RightElementsStack"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateTakeSnapshotButton">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshotButton"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateSaveSnapshotButton">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshotButton"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateDiscardSnapshotButton">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshotButton"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateToggleRecordingButton">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.ToggleRecordingButton"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateSettingsButton">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.SettingsButton"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateRecordingTimeLabel">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.RecordingTimeLabel"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.CreateRecordingDotElement">
+            <summary>
+            Creates the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.RecordingDotElement"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.LeftElementsStack">
+            <summary>
+            Gets the left elements stack.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.CenterElementsStack">
+            <summary>
+            Gets the center elements stack.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.RightElementsStack">
+            <summary>
+            Gets the right elements stack.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshotButton">
+            <summary>
+            Gets the take snapshot button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.SaveSnapshotButton">
+            <summary>
+            Gets the save snapshot button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.DiscardSnapshotButton">
+            <summary>
+            Gets the discard snapshot button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.ToggleRecordingButton">
+            <summary>
+            Gets the toggle recording button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.SettingsButton">
+            <summary>
+            Gets the settings button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.RecordingTimeLabel">
+            <summary>
+            Gets the toggle recording button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.RecordingDotElement">
+            <summary>
+            Gets the toggle recording button element.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadWebCamElement.IsPreviewingSnapshot">
+            <summary>
+            Gets a value indicating whether the component is curently in preview a snapshot mode. 
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.ShouldArrangeChild(Telerik.WinControls.RadElement)">
+            <summary>
+            Determines whether a given child should be arranged.For example when base.ArrangeOverride is called, but we have custom layout logic for current element.
+            </summary>
+            <param name="child"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.ArrangeOverride(System.Drawing.SizeF)">
+            <summary>
+            
+            </summary>
+            <param name="finalSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.SetIsPreviewingSnapshot(System.Boolean)">
+            <summary>
+            Sets up the control for displaying a snapshot.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshot_Click(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.TakeSnapshotButton"/> is clicked.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.SaveSnapshot_Click(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.SaveSnapshotButton"/> is clicked.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.DiscardSnapshot_Click(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.DiscardSnapshotButton"/> is clicked.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.ToggleRecording_Click(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.ToggleRecordingButton"/> is clicked.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadWebCamElement.Settings_Click(System.Object,System.EventArgs)">
+            <summary>
+            Called when the <see cref="P:Telerik.WinControls.UI.RadWebCamElement.SettingsButton"/> is clicked.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.WebCamRootRadElement">
+            <summary>
+            Represents root element of a <see cref="T:Telerik.WinControls.UI.RadWebCam"/> control.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.WebCamRootRadElement.ControlPanelHeightProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.WinControls.UI.WebCamRootRadElement.ControlPanelHeight"/> RadProperty.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.WebCamRootRadElement.#ctor(Telerik.WinControls.UI.RadWebCam)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.WebCamRootRadElement"/> class.
+            </summary>
+            <param name="webCam"></param>
+        </member>
+        <member name="P:Telerik.WinControls.UI.WebCamRootRadElement.ControlPanelHeight">
+            <summary>
+            Gets the height of the panel with the camera controls.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.WebCamRootRadElement.MeasureOverride(System.Drawing.SizeF)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.WebCamRootRadElement.ArrangeOverride(System.Drawing.SizeF)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.WebCamRootRadElement.OnPropertyChanged(Telerik.WinControls.RadPropertyChangedEventArgs)">
+            <summary>
+            Raised when a property value is changed.
+            </summary>
+            <param name="e">The <see cref="T:Telerik.WinControls.RadPropertyChangedEventArgs"/> arguments.</param>
+        </member>
+    </members>
+</doc>

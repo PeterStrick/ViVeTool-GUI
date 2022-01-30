@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.Windows.Documents.Flow.FormatProviders.Pdf</name>
+    </assembly>
+    <members>
+        <member name="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export.PdfExportSettings">
+            <summary>
+            Represents PDF export settings.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export.PdfExportSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export.PdfExportSettings" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export.PdfExportSettings.ExtensibilityManager">
+            <summary>
+            Gets the extensibility manager.
+            </summary>
+            <value>The extensibility manager.</value>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider">
+            <summary>
+            Represents PDF format provider.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.ExportSettings">
+            <summary>
+            Gets or sets the export settings.
+            </summary>
+            <value>The export settings.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.CanExport">
+            <summary>
+            Gets a value indicating whether format provider can export.
+            </summary>
+            <value>The value indicating whether can export.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.CanImport">
+            <summary>
+            Gets a value indicating whether format provider can import.
+            </summary>
+            <value>The value indicating whether can import.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.SupportedExtensions">
+            <summary>
+            Gets the supported extensions.
+            </summary>
+            <value>The supported extensions.</value>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.ExportToFixedDocument(Telerik.Windows.Documents.Flow.Model.RadFlowDocument)">
+            <summary>
+            Exports to fixed document.
+            </summary>
+            <param name="document">The document.</param>
+            <returns>The fixed document.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider.ExportOverride(Telerik.Windows.Documents.Flow.Model.RadFlowDocument,System.IO.Stream)">
+            <summary>
+            Exports the specified document.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="output">The output.</param>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Utils.ExtensibilityManager">
+            <summary>
+            Provides methods for extending the functionality of the PdfFormatProvider.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Utils.ExtensibilityManager.RegisterNumberingStyleConverter(Telerik.Windows.Documents.Flow.Model.Lists.NumberingStyle,Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Utils.INumberingStyleConverter)">
+            <summary>
+            Registers the numbering style converter.
+            </summary>
+            <param name="numberingStyle">The numbering style.</param>
+            <param name="converter">The converter.</param>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Utils.INumberingStyleConverter">
+            <summary>
+            Represents a numbering style converter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Utils.INumberingStyleConverter.ConvertNumberToText(System.Int32)">
+            <summary>
+            Converts the number to text.
+            </summary>
+            <param name="number">The number.</param>
+            <returns>The text representation of the given number.</returns>
+        </member>
+    </members>
+</doc>

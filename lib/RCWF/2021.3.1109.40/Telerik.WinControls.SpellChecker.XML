@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Telerik.WinControls.SpellChecker</name>
+    </assembly>
+    <members>
+        <member name="P:Telerik.WinControls.UI.ControlSpellCheckerBase.IgnoredWords">
+            <summary>
+            <seealso cref="P:Telerik.WinControls.UI.IControlSpellChecker.IgnoredWords"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ControlSpellCheckerBase.SpellChecker">
+            <summary>
+            <seealso cref="P:Telerik.WinControls.UI.IControlSpellChecker.SpellChecker"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ControlSpellCheckerBase.CurrentControl">
+            <summary>
+            <seealso cref="P:Telerik.WinControls.UI.IControlSpellChecker.CurrentControl"/>
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ControlSpellCheckerBase.ShowAllCapitalLettersWord">
+            <summary>
+            Get or set the words with all capital letters
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ControlSpellCheckerBase.ChangeCurrentWord(System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ControlSpellCheckerBase.MoveToNextError">
+            <summary>
+            <seealso cref="M:Telerik.WinControls.UI.IControlSpellChecker.MoveToNextError"/>
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ControlSpellCheckerBase.SetContentFromDocument(System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.ControlSpellCheckerBase.ResetFields">
+            <summary>
+            <seealso cref="M:Telerik.WinControls.UI.IControlSpellChecker.ResetFields"/>
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.SpellingFormShowingEventHandler">
+            <summary>
+            Represents a method that will handle the SpellingFormShowing event.
+            </summary>
+            <param name="sender"></param>
+            <param name="e">An instance of <see cref="T:Telerik.WinControls.UI.SpellingFormShowingEventArgs"/> arguments.</param>
+        </member>
+        <member name="T:Telerik.WinControls.UI.SpellingFormShowingEventArgs">
+            <summary>
+            Provides data for the SpellingFormShowing event.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.SpellingFormShowingEventArgs.SpellingForm">
+            <summary>
+            Gets or sets the spelling form.
+            </summary>
+            <value>The spelling form.</value>
+        </member>
+        <member name="P:Telerik.WinControls.UI.SpellingFormShowingEventArgs.SpellChecker">
+            <summary>
+            Gets an instance of <see cref="T:Telerik.WinControls.UI.IControlSpellChecker"/>
+            </summary>
+            <value>The spell checker.</value>
+        </member>
+        <member name="P:Telerik.WinControls.UI.IControlSpellChecker.CurrentControl">
+            <summary>
+            Gets or sets the control that is spell checked
+            </summary>
+            <value>The current control.</value>
+        </member>
+        <member name="P:Telerik.WinControls.UI.IControlSpellChecker.IgnoredWords">
+            <summary>
+            Gets or sets the words ignored by the spell checker
+            </summary>
+            <value>The ignored words.</value>
+        </member>
+        <member name="P:Telerik.WinControls.UI.IControlSpellChecker.IgnoredOnceWords">
+            <summary>
+            Gets or sets the words ignored once by the spell checker
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.IControlSpellChecker.SpellChecker">
+            <summary>
+            Gets the spell checker.
+            </summary>
+            <value>The spell checker.</value>
+        </member>
+        <member name="M:Telerik.WinControls.UI.IControlSpellChecker.ChangeCurrentWord(System.String)">
+            <summary>
+            Changes the current word.
+            </summary>
+            <param name="suggestion">The suggestion.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.IControlSpellChecker.MoveToNextError">
+            <summary>
+            Moves to next spell check error.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.IControlSpellChecker.SetContentFromDocument(System.String)">
+            <summary>
+            Sets the content from string.
+            </summary>
+            <param name="document">The document.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.IControlSpellChecker.ResetFields">
+            <summary>
+            Resets the fields.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadSpellCheckerLocalizationProvider">
+            <summary>
+            RadSpellChecker localization provider.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadSpellCheckerStringId">
+            <summary>
+            RadSpellChecker localization strings.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadSpellChecker">
+            <summary>
+            Represents the spell checker component
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.AutoSpellCheckControl">
+            <summary>
+            Checks as you type the specified TextBox control for spelling mistakes.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.EnableCompleteMessageBox">
+            <summary>
+            Gets or set a value that determine whether the Complete Dialog Message Box is enabled
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.FormSettings">
+            <summary>
+            Gets the form settings.
+            </summary>
+            <value>The form settings.</value>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.SpellCheckMode">
+            <summary>
+            Gets or set the spell checking mode
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.ThemeName">
+            <summary>
+                Gets or sets control's preferred theme name. Themes are stored and retrieved using
+                APIs of <see cref="T:Telerik.WinControls.ThemeResolutionService"/>.
+            </summary>
+            <remarks>
+            If <strong>ThemeResolutionService.ApplicatonThemeName</strong> refers to a
+            non-empty string, the theme of a RadControl can differ from the one set using
+            <strong>RadControls.ThemeName</strong> property. If the themes differ, the
+            <strong>RadControls.ThemeName</strong> property will be overridden by
+            <strong>ThemeResolutionService.ApplicatonThemeName</strong>. If no theme is registered
+            with a name as <strong>ThemeResolutionService.ApplicatonThemeName</strong>, then
+            control will revert to the theme specified by its <strong>ThemeName</strong> property.
+            If <strong>ThemeName</strong> is assigned to a non-existing theme name, the control may
+            have no visual properties assigned, which will cause it look and behave in unexpected
+            manner. If <strong>ThemeName</strong> equals empty string, control's theme is set to a
+            theme that is registered within <strong>ThemeResolutionService</strong> with the name
+            "ControlDefault".
+            </remarks>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSpellChecker.SpellingFormStartPosition">
+            <summary>
+            Gets or sets the start position of the spelling form.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadSpellChecker.Check(System.Windows.Forms.Control)">
+            <summary>
+            Checks the specified edit control for spelling mistakes.
+            </summary>
+            <param name="editControl">The edit control.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadSpellChecker.RegisterControlSpellChecker(System.Type,Telerik.WinControls.UI.IControlSpellChecker)">
+            <summary>
+            Registers an instance of <see cref="T:Telerik.WinControls.UI.IControlSpellChecker"/> that is responsible for
+            managing the spell checking of concrete type control
+            </summary>
+            <param name="controlType">The type of control.</param>
+            <param name="spellChecker">The spell checker.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadSpellChecker.GetControlSpellChecker(System.Type)">
+            <summary>
+            Gets the control spell checker.
+            </summary>
+            <param name="editControlType">Type of the edit control.</param>
+            <returns></returns>
+        </member>
+        <member name="E:Telerik.WinControls.UI.RadSpellChecker.SpellingFormShowing">
+            <summary>
+            Occurs when the spelling form is about to be displayed.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextBoxSpellChecker.PaintLinesTextBox">
+            <summary>
+            Draws the red lines.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextBoxSpellChecker.DrawLine(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Draws a red  line at the given from and to 
+            </summary>
+            <param name="g">the graphics context</param>
+            <param name="from">the from point</param>
+            <param name="to">the to point</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextBoxSpellChecker.PerformAsYouTypeSpellChecking(System.Windows.Forms.TextBoxBase)">
+            <summary>
+            Performs the spell checking on the control.
+            </summary>
+            <param name="control">the control</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextBoxSpellChecker.WaitForIdleTimeToElapse(System.Object)">
+            <summary>
+            A thread start method that waits for the specified idle time to elapse.
+            </summary>
+            <param name="param">the parameter</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextRange.AddToSelection(Telerik.WinControls.UI.RadTextBox)">
+            <summary>
+            Adds the current text range to the selection ranges of the document.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.TextRange.SetSelection(Telerik.WinControls.UI.RadTextBox)">
+            <summary>
+            Sets the selection of the document to the current text range.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.SpellCheckAllAtOnceForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.SpellCheckAllAtOnceForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Telerik.WinControls.UI.SpellCheckAllAtOnceForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.UI.SpellCheckWordByWordForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.SpellCheckWordByWordForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.DictionaryList">
+            <summary>
+            Gets or sets the list of dictionaries used by SpellChecker. Generally, this property is not intended to be used directly from your code, rather it is set automatically by MEF.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.AddDictionary(Telerik.WinControls.SpellChecker.Proofing.IWordDictionary,System.Globalization.CultureInfo)">
+            <summary>
+            Adds a dictionary with the specified culture to the spell checker. If a dictionary with this culture already exists, it is overwritten.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.AddDictionary(System.Lazy{Telerik.WinControls.SpellChecker.Proofing.IWordDictionary},System.Globalization.CultureInfo)">
+            <summary>
+            Adds a lazily initialized dictionary with the specified culture to the spell checker. If a dictionary with this culture already exists, it is overwritten.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.RemoveDictionary(System.Globalization.CultureInfo)">
+            <summary>
+            Removes the dictionary with the specified culture from the spell checker. This method returns false if no such dictionary is found.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.AddCustomDictionary(Telerik.WinControls.SpellChecker.Proofing.ICustomWordDictionary,System.Globalization.CultureInfo)">
+            <summary>
+            Adds a custom dictionary with the specified culture to the spell checker. If a dictionary with this culture already exists, it is overwritten.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DocumentSpellChecker.RemoveCustomDictionary(System.Globalization.CultureInfo)">
+            <summary>
+            Removes the custom dictionary with the specified culture from the spell checker. This method returns false if no such dictionary is found.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.VOWELS">
+            "Vowels" to test for
+        </member>
+        <member name="F:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.SILENT_START">
+            Prefixes when present which are not pronounced
+        </member>
+        <member name="F:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.maxCodeLen">
+            Maximum length of an encoding, default is 4
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Encode(System.String)">
+             Encode a value with Double Metaphone
+            
+             @param value string to encode
+             @return an encoded string
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Encode(System.String,System.Boolean)">
+             Encode a value with Double Metaphone, optionally using the alternate
+             encoding.
+            
+             @param value string to encode
+             @param alternate use alternate encode
+             @return an encoded string
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.IsDoubleMetaphoneEqual(System.String,System.String)">
+            Check if the Double Metaphone values of two <code>string</code> values
+            are equal.
+            
+            @param value1 The left-hand side of the encoded {@link string#equals(Object)}.
+            @param value2 The right-hand side of the encoded {@link string#equals(Object)}.
+            @return <code>true</code> if the encoded <code>string</code>s are equal;
+                     <code>false</code> otherwise.
+            @see #isDoubleMetaphoneEqual(string,string,bool)
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.IsDoubleMetaphoneEqual(System.String,System.String,System.Boolean)">
+            Check if the Double Metaphone values of two <code>string</code> values
+            are equal, optionally using the alternate value.
+            
+            @param value1 The left-hand side of the encoded {@link string#equals(Object)}.
+            @param value2 The right-hand side of the encoded {@link string#equals(Object)}.
+            @param alternate use the alternate value if <code>true</code>.
+            @return <code>true</code> if the encoded <code>string</code>s are equal;
+                     <code>false</code> otherwise.
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.GetMaxCodeLen">
+            Returns the maxCodeLen.
+            @return int
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.SetMaxCodeLen(System.Int32)">
+            Sets the maxCodeLen.
+            @param maxCodeLen The maxCodeLen to set
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleAEIOUY(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'A', 'E', 'I', 'O', 'U', and 'Y' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleC(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'C' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleCC(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'CC' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleCH(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'CH' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleD(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'D' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleG(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'G' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleGH(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'GH' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleH(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'H' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleJ(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'J' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleL(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'L' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleP(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'P' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleR(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'R' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleS(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'S' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleSC(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'SC' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleT(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'T' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleW(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'W' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleX(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32)">
+            Handles 'X' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.HandleZ(System.String,Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult,System.Int32,System.Boolean)">
+            Handles 'Z' cases
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.ConditionC0(System.String,System.Int32)">
+            Complex condition 0 for 'C'
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.ConditionCH0(System.String,System.Int32)">
+            Complex condition 0 for 'CH'
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.ConditionCH1(System.String,System.Int32)">
+            Complex condition 1 for 'CH'
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.ConditionL0(System.String,System.Int32)">
+            Complex condition 0 for 'L'
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.ConditionM0(System.String,System.Int32)">
+            Complex condition 0 for 'M'
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.IsSlavoGermanic(System.String)">
+            Determines whether or not a value is of slavo-germanic orgin. A value is
+            of slavo-germanic origin if it contians any of 'W', 'K', 'CZ', or 'WITZ'.
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.IsVowel(System.Char)">
+            Determines whether or not a character is a vowel or not
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.IsSilentStart(System.String)">
+            Determines whether or not the value starts with a silent letter.  It will
+            return <code>true</code> if the value starts with any of 'GN', 'KN',
+            'PN', 'WR' or 'PS'.
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.CleanInput(System.String)">
+            Cleans the input
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.CharAt(System.String,System.Int32)">
+            Gets the character at index <code>index</code> if available, otherwise
+            it returns <code>Character.MIN_VALUE</code> so that there is some sort
+            of a default
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String)">
+            Shortcut method with 1 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String)">
+            Shortcut method with 2 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+            Shortcut method with 3 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            Shortcut method with 4 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+            Shortcut method with 5 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+            Shortcut method with 6 criteria
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphone.Contains(System.String,System.Int32,System.Int32,System.String[])">
+                    * Determines whether <code>value</code> contains any of the criteria 
+                    starting
+                    * at index <code>start</code> and matching up to length <code>length</code>
+        </member>
+        <member name="T:Telerik.WinControls.SpellChecker.Proofing.DoubleMetaphoneResult">
+            Inner class for storing results, since there is the optional alternate
+            encoding.
+        </member>
+        <member name="T:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary">
+            <summary>
+            Represents a class which is used to import dictionary files containing only words seprated by new line, or just define custom dictionary using set of words.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary" /> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.Words">
+            <summary>
+            Gets the words.
+            </summary>
+            <value>The words.</value>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.Load(System.IO.Stream)">
+            <summary>
+            Loads the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.Load(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Loads the specified words.
+            </summary>
+            <param name="words">The words.</param>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.ContainsWord(System.String)">
+            <summary>
+            Determines whether the specified word is contained in the dictionary.
+            </summary>
+            <param name="word">The word.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.GetMetaphoneKey(System.String)">
+            <summary>
+            Gets the metaphone key.
+            </summary>
+            <param name="word">The word.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.WinControls.SpellChecker.Proofing.RadWordsDictionary.GetWordsByMetaphoneKey(System.String)">
+            <summary>
+            Gets the words by metaphone key.
+            </summary>
+            <param name="word">The word.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
