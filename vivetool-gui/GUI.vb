@@ -237,6 +237,9 @@ Public Class GUI
                        RGV_MainGridView.CurrentRow = Nothing
                        RLE_StatusLabel.Text = "Done."
                    End Sub)
+
+            'Delete Feature List from %TEMP%
+            IO.File.Delete(path)
         Else
             Return
         End If
