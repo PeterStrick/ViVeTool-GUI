@@ -27,29 +27,32 @@ Partial Class GUI
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI))
         Me.RDDL_Build = New Telerik.WinControls.UI.RadDropDownList()
         Me.RSS_MainStatusStrip = New Telerik.WinControls.UI.RadStatusStrip()
         Me.RLE_StatusLabel = New Telerik.WinControls.UI.RadLabelElement()
         Me.RGV_MainGridView = New Telerik.WinControls.UI.RadGridView()
         Me.BGW_PopulateGridView = New System.ComponentModel.BackgroundWorker()
         Me.RTB_SearchF = New Telerik.WinControls.UI.RadTextBox()
+        Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
+        Me.P_CommandPanel = New System.Windows.Forms.Panel()
+        Me.RB_About = New Telerik.WinControls.UI.RadButton()
+        Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
         Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
         Me.RMI_ActivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_DeactivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
-        Me.Fluent = New Telerik.WinControls.Themes.FluentTheme()
-        Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
-        Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
-        Me.P_CommandPanel = New System.Windows.Forms.Panel()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
+        Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTB_SearchF, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_CommandPanel.SuspendLayout()
+        CType(Me.RB_About, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_DataPanel.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,13 +60,16 @@ Partial Class GUI
         'RDDL_Build
         '
         Me.RDDL_Build.DropDownAnimationEnabled = True
+        Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
+        Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
+        Me.RDDL_Build.Location = New System.Drawing.Point(3, 7)
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.NullText = "Select Build..."
         Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
         Me.RDDL_Build.TabIndex = 0
         Me.RDDL_Build.Text = "Select Build..."
+        Me.RDDL_Build.ThemeName = "Fluent"
         '
         'RSS_MainStatusStrip
         '
@@ -72,7 +78,9 @@ Partial Class GUI
         Me.RSS_MainStatusStrip.Location = New System.Drawing.Point(0, 543)
         Me.RSS_MainStatusStrip.Name = "RSS_MainStatusStrip"
         Me.RSS_MainStatusStrip.Size = New System.Drawing.Size(792, 24)
+        Me.RSS_MainStatusStrip.SizingGrip = False
         Me.RSS_MainStatusStrip.TabIndex = 3
+        Me.RSS_MainStatusStrip.ThemeName = "Fluent"
         '
         'RLE_StatusLabel
         '
@@ -130,7 +138,8 @@ Partial Class GUI
         Me.RGV_MainGridView.ShowGroupPanel = False
         Me.RGV_MainGridView.ShowGroupPanelScrollbars = False
         Me.RGV_MainGridView.Size = New System.Drawing.Size(792, 505)
-        Me.RGV_MainGridView.TabIndex = 4
+        Me.RGV_MainGridView.TabIndex = 5
+        Me.RGV_MainGridView.ThemeName = "Fluent"
         '
         'BGW_PopulateGridView
         '
@@ -138,46 +147,18 @@ Partial Class GUI
         '
         'RTB_SearchF
         '
-        Me.RTB_SearchF.Location = New System.Drawing.Point(134, 5)
+        Me.RTB_SearchF.AutoSize = False
+        Me.RTB_SearchF.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.RTB_SearchF.Location = New System.Drawing.Point(134, 4)
         Me.RTB_SearchF.Name = "RTB_SearchF"
         Me.RTB_SearchF.NullText = "Search for a Feature"
-        Me.RTB_SearchF.Size = New System.Drawing.Size(377, 28)
-        Me.RTB_SearchF.TabIndex = 5
-        '
-        'RDDB_PerformAction
-        '
-        Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
-        Me.RDDB_PerformAction.Location = New System.Drawing.Point(517, 4)
-        Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
-        Me.RDDB_PerformAction.Size = New System.Drawing.Size(141, 30)
-        Me.RDDB_PerformAction.TabIndex = 1
-        Me.RDDB_PerformAction.Text = "Perform Action"
-        '
-        'RMI_ActivateF
-        '
-        Me.RMI_ActivateF.Name = "RMI_ActivateF"
-        Me.RMI_ActivateF.Text = "Activate Feature"
-        '
-        'RMI_DeactivateF
-        '
-        Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
-        Me.RMI_DeactivateF.Text = "Deactivate Feature"
-        '
-        'RMI_RevertF
-        '
-        Me.RMI_RevertF.Name = "RMI_RevertF"
-        Me.RMI_RevertF.Text = "Revert Feature to Default Settings"
-        '
-        'RTB_ThemeToggle
-        '
-        Me.RTB_ThemeToggle.Location = New System.Drawing.Point(664, 4)
-        Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
-        Me.RTB_ThemeToggle.Size = New System.Drawing.Size(131, 30)
-        Me.RTB_ThemeToggle.TabIndex = 1
-        Me.RTB_ThemeToggle.Text = "Light Theme"
+        Me.RTB_SearchF.Size = New System.Drawing.Size(292, 30)
+        Me.RTB_SearchF.TabIndex = 1
+        Me.RTB_SearchF.ThemeName = "Fluent"
         '
         'P_CommandPanel
         '
+        Me.P_CommandPanel.Controls.Add(Me.RB_About)
         Me.P_CommandPanel.Controls.Add(Me.RDDL_Build)
         Me.P_CommandPanel.Controls.Add(Me.RTB_ThemeToggle)
         Me.P_CommandPanel.Controls.Add(Me.RTB_SearchF)
@@ -187,6 +168,55 @@ Partial Class GUI
         Me.P_CommandPanel.Name = "P_CommandPanel"
         Me.P_CommandPanel.Size = New System.Drawing.Size(792, 38)
         Me.P_CommandPanel.TabIndex = 6
+        '
+        'RB_About
+        '
+        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
+        Me.RB_About.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RB_About.Location = New System.Drawing.Point(756, 4)
+        Me.RB_About.Name = "RB_About"
+        Me.RB_About.Size = New System.Drawing.Size(30, 30)
+        Me.RB_About.TabIndex = 4
+        '
+        'RTB_ThemeToggle
+        '
+        Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_sun_24
+        Me.RTB_ThemeToggle.Location = New System.Drawing.Point(592, 4)
+        Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
+        Me.RTB_ThemeToggle.Size = New System.Drawing.Size(158, 30)
+        Me.RTB_ThemeToggle.TabIndex = 3
+        Me.RTB_ThemeToggle.Text = "  Light Theme"
+        Me.RTB_ThemeToggle.ThemeName = "Fluent"
+        '
+        'RDDB_PerformAction
+        '
+        Me.RDDB_PerformAction.Enabled = False
+        Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
+        Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
+        Me.RDDB_PerformAction.Location = New System.Drawing.Point(432, 4)
+        Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
+        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 30)
+        Me.RDDB_PerformAction.TabIndex = 2
+        Me.RDDB_PerformAction.Text = "      Perform Action"
+        Me.RDDB_PerformAction.ThemeName = "Fluent"
+        '
+        'RMI_ActivateF
+        '
+        Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
+        Me.RMI_ActivateF.Name = "RMI_ActivateF"
+        Me.RMI_ActivateF.Text = "  Activate Feature"
+        '
+        'RMI_DeactivateF
+        '
+        Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
+        Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
+        Me.RMI_DeactivateF.Text = "  Deactivate Feature"
+        '
+        'RMI_RevertF
+        '
+        Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
+        Me.RMI_RevertF.Name = "RMI_RevertF"
+        Me.RMI_RevertF.Text = "  Revert Feature to Default Settings"
         '
         'P_DataPanel
         '
@@ -207,6 +237,7 @@ Partial Class GUI
         Me.Controls.Add(Me.RSS_MainStatusStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "GUI"
         '
@@ -214,15 +245,17 @@ Partial Class GUI
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.Text = "ViVeTool GUI"
+        Me.ThemeName = "Fluent"
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTB_SearchF, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_CommandPanel.ResumeLayout(False)
         Me.P_CommandPanel.PerformLayout()
+        CType(Me.RB_About, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_DataPanel.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -242,9 +275,10 @@ Partial Class GUI
     Friend WithEvents RMI_ActivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_RevertF As Telerik.WinControls.UI.RadMenuItem
-    Friend WithEvents Fluent As Telerik.WinControls.Themes.FluentTheme
     Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
     Friend WithEvents RTB_ThemeToggle As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents P_CommandPanel As Panel
     Friend WithEvents P_DataPanel As Panel
+    Friend WithEvents FluentTheme As Telerik.WinControls.Themes.FluentTheme
+    Friend WithEvents RB_About As Telerik.WinControls.UI.RadButton
 End Class

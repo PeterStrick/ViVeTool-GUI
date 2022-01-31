@@ -13,19 +13,20 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Collections.Generic, Newtonsoft.Json.Linq, System.Net, Telerik.WinControls.Data, Albacore.ViVe
+Imports Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
 
 ''' <summary>
 ''' ViVeTool GUI
 ''' </summary>
 Public Class GUI
     ''' <summary>
-    ''' Load Event, Populates the Build Combo Box
+    ''' P/Invoke constants
     ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
-    Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim TempJSONUsedInDevelopment As String = "{
+    Private Const WM_SYSCOMMAND As Integer = &H112
+    Private Const MF_STRING As Integer = &H0
+    Private Const MF_SEPARATOR As Integer = &H800
+    Private Const SYSMENU_ABOUT_ID As Integer = &H1
+    Dim TempJSONUsedInDevelopment As String = "{
   ""sha"": ""afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""url"": ""https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""tree"": [
@@ -71,6 +72,35 @@ Public Class GUI
     }  ],
   ""truncated"": false
 }"
+
+    ''' <summary>
+    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function get's the System Menu
+    ''' </summary>
+    ''' <param name="hWnd"></param>
+    ''' <param name="bRevert"></param>
+    ''' <returns></returns>
+    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
+    Private Shared Function GetSystemMenu(hWnd As IntPtr, bRevert As Boolean) As IntPtr
+    End Function
+
+    ''' <summary>
+    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function Appends to the System Menu
+    ''' </summary>
+    ''' <param name="hMenu"></param>
+    ''' <param name="uFlags"></param>
+    ''' <param name="uIDNewItem"></param>
+    ''' <param name="lpNewItem"></param>
+    ''' <returns></returns>
+    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
+    Private Shared Function AppendMenu(hMenu As IntPtr, uFlags As Integer, uIDNewItem As Integer, lpNewItem As String) As Boolean
+    End Function
+
+    ''' <summary>
+    ''' Load Event, Populates the Build Combo Box
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'returns JSON File Contents of riverar/mach2/features
         Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
 
@@ -79,32 +109,64 @@ Public Class GUI
             .Encoding = System.Text.Encoding.UTF8
         }
         WebClient.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
-        WebClient.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/mach2-gui")
+        WebClient.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
         'Get the "tree" array from the API JSON Result
+        Try
+            '[DEV] Use Demo JSON to not get rate limited while Testing/Developing
+            'Dim ContentsJSON As String = TempJSONUsedInDevelopment
+            Dim ContentsJSON As String = WebClient.DownloadString(URL)
+            Dim JSONObject As JObject = JObject.Parse(ContentsJSON)
+            Dim JSONArray As JArray = CType(JSONObject.SelectToken("tree"), JArray)
 
-        '[DEV] Use Demo JSON to not get rate limited
-        'Dim ContentsJSON As String = WebClient.DownloadString(URL)
-        Dim ContentsJSON As String = TempJSONUsedInDevelopment
+            'For each element in the Array, add a Combo Box Item with the name of the path element
+            For Each element In JSONArray
+                Dim Name() As String = element("path").ToString.Split(".")
 
-        Dim JSONObject As JObject = JObject.Parse(ContentsJSON)
-        Dim JSONArray As JArray = CType(JSONObject.SelectToken("tree"), JArray)
-
-        'For each element in the Array, add a Combo Box Item with the name of the path element
-        For Each element In JSONArray
-
-            Dim Name() As String = element("path").ToString.Split(".")
-
-            If Name(1) = "txt" Then
-                RDDL_Build.Items.Add(Name(0))
-            Else
-                'MsgBox("Fail. Extension is " & Name(1))
-            End If
-        Next
+                If Name(1) = "txt" Then
+                    RDDL_Build.Items.Add(Name(0))
+                Else
+                    'MsgBox("Fail. Extension is " & Name(1))
+                End If
+            Next
+        Catch ex As WebException
+            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." + vbNewLine + vbNewLine + ex.Message + vbNewLine + vbNewLine + ex.Response.ToString)
+        Catch ex As Exception
+            MsgBox("An Unknown Exception occurred." + vbNewLine + vbNewLine + ex.ToString)
+        End Try
 
         '[DEV] Dummy Row
         'RGV_MainGridView.Rows.Add("Dummy - 36808198", "36808198", "Unknown")
+    End Sub
+    ''' <summary>
+    ''' Override of OnHandleCreated(e As EventArgs).
+    ''' Appends the About Element into the System Menu
+    ''' </summary>
+    ''' <param name="e">Default EventArgs</param>
+    Protected Overrides Sub OnHandleCreated(e As EventArgs)
+        MyBase.OnHandleCreated(e)
 
+        ' Get a handle to a copy of this form's system (window) menu
+        Dim hSysMenu As IntPtr = GetSystemMenu(Me.Handle, False)
+
+        ' Add a separator
+        AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
+
+        ' Add the About menu item
+        AppendMenu(hSysMenu, MF_STRING, SYSMENU_ABOUT_ID, "&About…")
+    End Sub
+    ''' <summary>
+    ''' Overrides WndProc(ByRef m As Message).
+    ''' Checks if the message is SYSMENU_ABOUT_ID, in which case it shows the About Dialog.
+    ''' </summary>
+    ''' <param name="m">Windows Forms Message to be sent.</param>
+    Protected Overrides Sub WndProc(ByRef m As Message)
+        MyBase.WndProc(m)
+
+        ' Test if the About item was selected from the system menu
+        If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = SYSMENU_ABOUT_ID) Then
+            About.ShowDialog()
+        End If
     End Sub
 
     ''' <summary>
@@ -130,7 +192,7 @@ Public Class GUI
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If BGW_PopulateGridView.CancellationPending = False Then
             'Set Status Label
-            Invoke(Sub() RLE_StatusLabel.Text = "Populating Data Grid View... This can take a while.")
+            Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
 
             'Clear Data Grid View
             Invoke(Sub() RGV_MainGridView.Rows.Clear())
@@ -152,11 +214,12 @@ Public Class GUI
                 'Split the Line at the :
                 Dim Str() As String = Line.Split(": ")
 
-                'Remove any Spaces from the first Str Array (Feature Name)
-
-
                 'If the Line is not empty, continue
                 If Line IsNot "" Then
+                    'Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
+                    Str(0).Replace(" ", "")
+                    Str(1).Replace(" ", "")
+
                     'Get the Feature Enabled State from the currently processing line.
                     'RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
@@ -215,9 +278,11 @@ Public Class GUI
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             RTB_ThemeToggle.Text = "Dark Theme"
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
+            RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
         Else
             RTB_ThemeToggle.Text = "Light Theme"
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
+            RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
         End If
     End Sub
 
@@ -280,7 +345,7 @@ Public Class GUI
             If RtlFeatureManager.SetBootFeatureConfigurations(_configs) = False Or RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 RLE_StatusLabel.Text = "An error occurred while setting a feature configuration for " + RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
             Else
-                RLE_StatusLabel.Text = "Successfully set feature configuration for " + RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString + " with Value " + FeatureEnabledState.ToString
+                RLE_StatusLabel.Text = "Successfully set feature configuration for" + RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString + " with Value " + FeatureEnabledState.ToString
             End If
 
             'Set Cell Text
@@ -290,5 +355,42 @@ Public Class GUI
             'Catch Any Exception that may occur
             MsgBox(ex.ToString)
         End Try
+    End Sub
+
+    ''' <summary>
+    ''' Form Closing Event. Used to store the My.Settings.DarkMode parameter by determining the Toggle State of RTB_ThemeToggle
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub GUI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
+            My.Settings.DarkMode = True
+            My.Settings.Save()
+        Else
+            My.Settings.DarkMode = False
+            My.Settings.Save()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Selection Changed Event. Used to enable the RDDB_PerformAction Button, upon selecting a row.
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RGV_MainGridView_SelectionChanged(sender As Object, e As EventArgs) Handles RGV_MainGridView.SelectionChanged
+        If RGV_MainGridView.CurrentRow Is Nothing Then
+            RDDB_PerformAction.Enabled = False
+        Else
+            RDDB_PerformAction.Enabled = True
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Click Event. Used to show the About Box
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RB_About_Click(sender As Object, e As EventArgs) Handles RB_About.Click
+        About.ShowDialog()
     End Sub
 End Class
