@@ -45,6 +45,6 @@ ViVeTool-GUI uses [files](https://github.com/riverar/mach2/tree/master/features)
 - [x] Add Core Functionality
 - [x] Add Icons and Images
 - [x] Add a better and actually useful README.md
-- [ ] Publish and upload release
+- [x] Publish and upload release
 - [x] Add About Dialog and Usage Help
 - [x] Fix countless of spelling mistakes and code smells
