@@ -8,6 +8,9 @@
 ## What is ViVeTool-GUI?
 ViVeTool-GUI let´s you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
 
+## Disclaimer.
+### No one, including me / [PeterStrick](https://github.com/PeterStrick), [the creators of ViVe and ViVeTool](https://github.com/thebookisclosed/ViVe) or [the creators of mach2](https://github.com/riverar/mach2) are responsible for any damage or unintended side effects, this program might cause to your computer, by changing the Windows Feature Store. Use this program at your own risk.
+
 ## How to use it?
 Using it is simple, 
 1. Select the Build for which you want to enable or disable features for.
