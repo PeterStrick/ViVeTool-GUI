@@ -32,6 +32,14 @@ Namespace My
         ''' <param name="sender">Default sender Object</param>
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            ' Check for Build
+            If Environment.OSVersion.Version.Build >= 18963 Then
+                ' OS Build Check passed.
+            Else
+                MsgBox("You are running a unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is: " & Environment.OSVersion.Version.Build.ToString, vbCritical, "Unsupported Build")
+                Environment.Exit(-1)
+            End If
+
             'Enable Dark Mode if previously turned on
             If Settings.DarkMode Then
                 Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
