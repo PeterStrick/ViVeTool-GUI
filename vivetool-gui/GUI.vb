@@ -13,8 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports AutoUpdaterDotNET
-Imports Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -142,6 +141,7 @@ Public Class GUI
         '[DEV] Dummy Row
         'RGV_MainGridView.Rows.Add("Dummy - 36808198", "36808198", "Unknown")
     End Sub
+
     ''' <summary>
     ''' Override of OnHandleCreated(e As EventArgs).
     ''' Appends the About Element into the System Menu
@@ -159,6 +159,7 @@ Public Class GUI
         ' Add the About menu item
         AppendMenu(hSysMenu, MF_STRING, SYSMENU_ABOUT_ID, "&About…")
     End Sub
+
     ''' <summary>
     ''' Overrides WndProc(ByRef m As Message).
     ''' Checks if the message is SYSMENU_ABOUT_ID, in which case it shows the About Dialog.
