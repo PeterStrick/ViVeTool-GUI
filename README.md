@@ -29,7 +29,7 @@ Apart from being able to manage features, ViVeTool-GUI let´s you also:
 ## What are the System Requirements?
 Since ViVeTool-GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and newer is the only OS Requirement.
 
-Apart from that, the only Requiremnt is .Net Framework 4.7.2
+Apart from that, the only Requirement is .Net Framework 4.7.2
 
 ## Why not just use ViVeTool?
 Using ViVeTool-GUI is more easier and user-friendly, besides it let's you also search for features and enable them with a few clicks.
