@@ -76,7 +76,7 @@ Partial Class About
         '
         Me.RL_Comments.Location = New System.Drawing.Point(70, 141)
         Me.RL_Comments.Name = "RL_Comments"
-        Me.RL_Comments.Size = New System.Drawing.Size(252, 105)
+        Me.RL_Comments.Size = New System.Drawing.Size(269, 134)
         Me.RL_Comments.TabIndex = 8
         Me.RL_Comments.Text = resources.GetString("RL_Comments.Text")
         '
@@ -94,7 +94,7 @@ Partial Class About
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(366, 267)
+        Me.ClientSize = New System.Drawing.Size(366, 296)
         Me.Controls.Add(Me.RL_Comments)
         Me.Controls.Add(Me.RL_Description)
         Me.Controls.Add(Me.RL_License)
@@ -111,7 +111,7 @@ Partial Class About
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.Text = "CHNAGED AT RUNTIME - Title"
-        Me.ThemeName = "ControlDefault"
+        Me.ThemeName = "Fluent"
         CType(Me.RL_Description, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_Version, System.ComponentModel.ISupportInitialize).EndInit()

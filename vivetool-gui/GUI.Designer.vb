@@ -86,7 +86,7 @@ Partial Class GUI
         '
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        Me.RLE_StatusLabel.Text = "Done."
+        Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
@@ -148,6 +148,7 @@ Partial Class GUI
         'RTB_SearchF
         '
         Me.RTB_SearchF.AutoSize = False
+        Me.RTB_SearchF.Enabled = False
         Me.RTB_SearchF.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.RTB_SearchF.Location = New System.Drawing.Point(134, 4)
         Me.RTB_SearchF.Name = "RTB_SearchF"

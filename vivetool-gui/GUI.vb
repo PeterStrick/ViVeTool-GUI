@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Imports AutoUpdaterDotNET
 Imports Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
 
 ''' <summary>
@@ -101,6 +102,9 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Check for Updates
+        AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
+
         'returns JSON File Contents of riverar/mach2/features
         Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
 
@@ -176,6 +180,7 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) Handles RDDL_Build.SelectedIndexChanged
         RDDL_Build.Enabled = False
+        RTB_SearchF.Enabled = True
         BGW_PopulateGridView.RunWorkerAsync()
     End Sub
 
