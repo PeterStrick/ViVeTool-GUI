@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Imports AutoUpdaterDotNET
 Namespace My
     ' Für MyApplication sind folgende Ereignisse verfügbar:
     ' Startup: Wird beim Starten der Anwendung noch vor dem Erstellen des Startformulars ausgelöst.
@@ -32,7 +33,8 @@ Namespace My
         ''' <param name="sender">Default sender Object</param>
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
-            If Settings.DarkMode = True Then
+            'Enable Dark Mode if previously turned on
+            If Settings.DarkMode Then
                 Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
                 GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
                 GUI.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
@@ -41,6 +43,9 @@ Namespace My
                 GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
                 GUI.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
             End If
+
+            'Check for Updates
+            AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
         End Sub
     End Class
 End Namespace

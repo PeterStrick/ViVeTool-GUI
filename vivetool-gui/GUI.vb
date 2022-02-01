@@ -121,7 +121,7 @@ Public Class GUI
 
             'For each element in the Array, add a Combo Box Item with the name of the path element
             For Each element In JSONArray
-                Dim Name() As String = element("path").ToString.Split(".")
+                Dim Name As String() = element("path").ToString.Split(CChar("."))
 
                 If Name(1) = "txt" Then
                     RDDL_Build.Items.Add(Name(0))
@@ -130,9 +130,9 @@ Public Class GUI
                 End If
             Next
         Catch ex As WebException
-            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." + vbNewLine + vbNewLine + ex.Message + vbNewLine + vbNewLine + ex.Response.ToString)
+            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & ex.Response.ToString)
         Catch ex As Exception
-            MsgBox("An Unknown Exception occurred." + vbNewLine + vbNewLine + ex.ToString)
+            MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
         End Try
 
         '[DEV] Dummy Row
@@ -190,7 +190,7 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
-        If BGW_PopulateGridView.CancellationPending = False Then
+        If Not BGW_PopulateGridView.CancellationPending Then
             'Set Status Label
             Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
 
@@ -202,7 +202,7 @@ Public Class GUI
                 .Encoding = System.Text.Encoding.UTF8
             }
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
-            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" + RDDL_Build.Text + ".txt", path)
+            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
             'Fix Text File Formatting and remove comments
             Dim newLines = From line In IO.File.ReadAllLines(path)
@@ -212,7 +212,7 @@ Public Class GUI
             'For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
                 'Split the Line at the :
-                Dim Str() As String = Line.Split(": ")
+                Dim Str As String() = Line.Split(CChar(":"))
 
                 'If the Line is not empty, continue
                 If Line IsNot "" Then
@@ -345,10 +345,10 @@ Public Class GUI
             'On Successful Operations; 
             'RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
-            If RtlFeatureManager.SetBootFeatureConfigurations(_configs) = False Or RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
-                RLE_StatusLabel.Text = "An error occurred while setting a feature configuration for " + RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
+            If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
+                RLE_StatusLabel.Text = "An error occurred while setting a feature configuration for " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
             Else
-                RLE_StatusLabel.Text = "Successfully set feature configuration for" + RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString + " with Value " + FeatureEnabledState.ToString
+                RLE_StatusLabel.Text = "Successfully set feature configuration for" & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " with Value " & FeatureEnabledState.ToString
             End If
 
             'Set Cell Text
