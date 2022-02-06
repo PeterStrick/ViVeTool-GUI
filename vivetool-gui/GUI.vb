@@ -118,8 +118,8 @@ Public Class GUI
         'Get the "tree" array from the API JSON Result
         Try
             '[DEV] Use Dev JSON to not get rate limited while Testing/Developing
-            Dim ContentsJSON As String = TempJSONUsedInDevelopment
-            'Dim ContentsJSON As String = WebClient.DownloadString(URL)
+            'Dim ContentsJSON As String = TempJSONUsedInDevelopment
+            Dim ContentsJSON As String = WebClient.DownloadString(URL)
             Dim JSONObject As JObject = JObject.Parse(ContentsJSON)
             Dim JSONArray As JArray = CType(JSONObject.SelectToken("tree"), JArray)
 
