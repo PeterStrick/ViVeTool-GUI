@@ -13,8 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports AutoUpdaterDotNET
-Imports Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -73,6 +72,7 @@ Public Class GUI
     }  ],
   ""truncated"": false
 }"
+    Dim LineStage As String = String.Empty
 
     ''' <summary>
     ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function get's the System Menu
@@ -117,7 +117,7 @@ Public Class GUI
 
         'Get the "tree" array from the API JSON Result
         Try
-            '[DEV] Use Demo JSON to not get rate limited while Testing/Developing
+            '[DEV] Use Dev JSON to not get rate limited while Testing/Developing
             'Dim ContentsJSON As String = TempJSONUsedInDevelopment
             Dim ContentsJSON As String = WebClient.DownloadString(URL)
             Dim JSONObject As JObject = JObject.Parse(ContentsJSON)
@@ -126,22 +126,15 @@ Public Class GUI
             'For each element in the Array, add a Combo Box Item with the name of the path element
             For Each element In JSONArray
                 Dim Name As String() = element("path").ToString.Split(CChar("."))
-
-                If Name(1) = "txt" Then
-                    RDDL_Build.Items.Add(Name(0))
-                Else
-                    'MsgBox("Fail. Extension is " & Name(1))
-                End If
+                If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             Next
         Catch ex As WebException
             MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & ex.Response.ToString)
         Catch ex As Exception
             MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
         End Try
-
-        '[DEV] Dummy Row
-        'RGV_MainGridView.Rows.Add("Dummy - 36808198", "36808198", "Unknown")
     End Sub
+
     ''' <summary>
     ''' Override of OnHandleCreated(e As EventArgs).
     ''' Appends the About Element into the System Menu
@@ -159,6 +152,7 @@ Public Class GUI
         ' Add the About menu item
         AppendMenu(hSysMenu, MF_STRING, SYSMENU_ABOUT_ID, "&About…")
     End Sub
+
     ''' <summary>
     ''' Overrides WndProc(ByRef m As Message).
     ''' Checks if the message is SYSMENU_ABOUT_ID, in which case it shows the About Dialog.
@@ -179,8 +173,14 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) Handles RDDL_Build.SelectedIndexChanged
+        'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
+        RDDL_Build.CloseDropDown()
+
+        'Disable Combo Box and Enable Search Text Box
         RDDL_Build.Enabled = False
         RTB_SearchF.Enabled = True
+
+        'Run Background Worker
         BGW_PopulateGridView.RunWorkerAsync()
     End Sub
 
@@ -196,6 +196,9 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
+            'Remove all Group Descriptors
+            Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
+
             'Set Status Label
             Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
 
@@ -209,18 +212,31 @@ Public Class GUI
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
-            'Fix Text File Formatting and remove comments
-            Dim newLines = From line In IO.File.ReadAllLines(path)
-                           Where Not line.StartsWith("#")
-            IO.File.WriteAllLines(path, newLines)
-
             'For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
+
+                ' Check Line Stage, used for Grouping
+                If CInt(RDDL_Build.Text) >= 17704 Then
+                    If Line = "## Unknown:" Then
+                        LineStage = "Modifiable"
+                    ElseIf Line = "## Always Enabled:" Then
+                        LineStage = "Always Enabled"
+                    ElseIf Line = "## Enabled By Default:" Then
+                        LineStage = "Enabled By Default"
+                    ElseIf Line = "## Disabled By Default:" Then
+                        LineStage = "Disabled by Default"
+                    ElseIf Line = "## Always Disabled:" Then
+                        LineStage = "Always Disabled"
+                    End If
+                Else
+                    LineStage = "Select Build 17704 or higher to use Grouping"
+                End If
+
                 'Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))
 
                 'If the Line is not empty, continue
-                If Line IsNot "" Then
+                If Line IsNot "" AndAlso Line.Contains("#") = False Then
                     'Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
                     Str(0).Replace(" ", "")
                     Str(1).Replace(" ", "")
@@ -229,9 +245,9 @@ Public Class GUI
                     'RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
                         Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State))
+                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage))
                     Catch ex As NullReferenceException
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), "Default"))
+                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), "Default", LineStage))
                     End Try
                 End If
             Next
@@ -245,6 +261,11 @@ Public Class GUI
 
             'Delete Feature List from %TEMP%
             IO.File.Delete(path)
+
+            'Enable Grouping
+            Dim LineGroup As New GroupDescriptor()
+            LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
+            Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
         Else
             Return
         End If

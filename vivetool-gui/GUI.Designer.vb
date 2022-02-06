@@ -26,6 +26,7 @@ Partial Class GUI
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI))
         Me.RDDL_Build = New Telerik.WinControls.UI.RadDropDownList()
@@ -116,7 +117,7 @@ Partial Class GUI
         GridViewTextBoxColumn1.MinWidth = 6
         GridViewTextBoxColumn1.Name = "FeatureName"
         GridViewTextBoxColumn1.ReadOnly = True
-        GridViewTextBoxColumn1.Width = 560
+        GridViewTextBoxColumn1.Width = 535
         GridViewTextBoxColumn2.AllowGroup = False
         GridViewTextBoxColumn2.AllowHide = False
         GridViewTextBoxColumn2.AllowReorder = False
@@ -128,9 +129,13 @@ Partial Class GUI
         GridViewTextBoxColumn3.HeaderText = "Feature State"
         GridViewTextBoxColumn3.Name = "FeatureState"
         GridViewTextBoxColumn3.Width = 100
-        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3})
+        GridViewTextBoxColumn4.HeaderText = "Features that are"
+        GridViewTextBoxColumn4.IsVisible = False
+        GridViewTextBoxColumn4.Name = "FeatureInfo"
+        GridViewTextBoxColumn4.VisibleInColumnChooser = False
+        GridViewTextBoxColumn4.Width = 20
+        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
         Me.RGV_MainGridView.MasterTemplate.EnableFiltering = True
-        Me.RGV_MainGridView.MasterTemplate.EnableGrouping = False
         Me.RGV_MainGridView.MasterTemplate.ShowFilteringRow = False
         Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RGV_MainGridView.Name = "RGV_MainGridView"
@@ -230,7 +235,7 @@ Partial Class GUI
         '
         'GUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(792, 567)
         Me.Controls.Add(Me.P_DataPanel)
