@@ -121,8 +121,14 @@
   <data name="icons8_about_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icons8_about_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_about_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8_about_96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_advertisement_page_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icons8_advertisement_page_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_advertisement_page_96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8_advertisement_page_96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_moon_and_stars_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icons8_moon_and_stars_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
