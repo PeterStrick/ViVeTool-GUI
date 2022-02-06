@@ -126,21 +126,13 @@ Public Class GUI
             'For each element in the Array, add a Combo Box Item with the name of the path element
             For Each element In JSONArray
                 Dim Name As String() = element("path").ToString.Split(CChar("."))
-
-                If Name(1) = "txt" Then
-                    RDDL_Build.Items.Add(Name(0))
-                Else
-                    'MsgBox("Fail. Extension is " & Name(1))
-                End If
+                If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             Next
         Catch ex As WebException
             MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & ex.Response.ToString)
         Catch ex As Exception
             MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
         End Try
-
-        '[DEV] Dummy Row
-        'RGV_MainGridView.Rows.Add("Dummy - 36808198", "36808198", "Unknown")
     End Sub
 
     ''' <summary>
@@ -220,11 +212,6 @@ Public Class GUI
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
-            'Fix Text File Formatting and remove comments
-            'Dim newLines = From line In IO.File.ReadAllLines(path)
-            'Where Not line.StartsWith("#")
-            'IO.File.WriteAllLines(path, newLines)
-
             'For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
 
@@ -244,7 +231,6 @@ Public Class GUI
                 Else
                     LineStage = "Select Build 17704 or higher to use Grouping"
                 End If
-
 
                 'Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))
