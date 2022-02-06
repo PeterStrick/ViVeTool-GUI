@@ -229,17 +229,22 @@ Public Class GUI
             For Each Line In IO.File.ReadAllLines(path)
 
                 ' Check Line Stage, used for Grouping
-                If Line = "## Unknown:" Then
-                    LineStage = "Modifiable"
-                ElseIf Line = "## Always Enabled:" Then
-                    LineStage = "Always Enabled"
-                ElseIf Line = "## Enabled By Default:" Then
-                    LineStage = "Enabled By Default"
-                ElseIf Line = "## Disabled By Default:" Then
-                    LineStage = "Disabled by Default"
-                ElseIf Line = "## Always Disabled:" Then
-                    LineStage = "Always Disabled"
+                If CInt(RDDL_Build.Text) >= 17704 Then
+                    If Line = "## Unknown:" Then
+                        LineStage = "Modifiable"
+                    ElseIf Line = "## Always Enabled:" Then
+                        LineStage = "Always Enabled"
+                    ElseIf Line = "## Enabled By Default:" Then
+                        LineStage = "Enabled By Default"
+                    ElseIf Line = "## Disabled By Default:" Then
+                        LineStage = "Disabled by Default"
+                    ElseIf Line = "## Always Disabled:" Then
+                        LineStage = "Always Disabled"
+                    End If
+                Else
+                    LineStage = "Select Build 17704 or higher to use Grouping"
                 End If
+
 
                 'Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))
