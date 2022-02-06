@@ -172,7 +172,7 @@ Partial Class GUI
         '
         'RB_About
         '
-        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
+        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.icons8_about_24
         Me.RB_About.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.RB_About.Location = New System.Drawing.Point(756, 4)
         Me.RB_About.Name = "RB_About"

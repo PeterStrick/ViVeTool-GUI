@@ -65,17 +65,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_about_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-about-24", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property icons8_about_96() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-about-96", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_about_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -85,17 +75,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_advertisement_page_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-advertisement-page-24", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property icons8_advertisement_page_96() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-advertisement-page-96", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_advertisement_page_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -105,7 +85,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_moon_and_stars_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-moon-and-stars-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_moon_and_stars_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -115,7 +95,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_rollback_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-rollback-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_rollback_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -125,7 +105,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_start_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-start-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_start_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -135,7 +115,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_sun_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-sun-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_sun_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -145,7 +125,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_toggle_off_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-toggle-off-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_toggle_off_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -155,7 +135,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property icons8_toggle_on_24() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("icons8-toggle-on-24", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("icons8_toggle_on_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
