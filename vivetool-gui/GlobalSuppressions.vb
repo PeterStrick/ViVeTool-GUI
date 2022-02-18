@@ -6,3 +6,4 @@
 Imports System.Diagnostics.CodeAnalysis
 
 <Assembly: SuppressMessage("Minor Code Smell", "S1075:URIs should not be hardcoded", Justification:="<Ausstehend>", Scope:="member", Target:="~M:ViVeTool_GUI.GUI.GUI_Load(System.Object,System.EventArgs)")>
+<Assembly: SuppressMessage("Minor Code Smell", "S1075:URIs should not be hardcoded", Justification:="<Ausstehend>", Scope:="member", Target:="~M:ViVeTool_GUI.GUI.PopulateBuildComboBox")>

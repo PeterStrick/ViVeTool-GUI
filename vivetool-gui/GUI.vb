@@ -105,34 +105,75 @@ Public Class GUI
         'Check for Updates
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
-        'returns JSON File Contents of riverar/mach2/features
-        Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
+        'Populate the Build Combo Box
+        PopulateBuildComboBox()
+    End Sub
 
+    ''' <summary>
+    ''' Populates the Build Combo Box. Used at the Form_Load Event
+    ''' </summary>
+    Private Sub PopulateBuildComboBox()
+        'Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
+        Dim RepoURL As String = "https://api.github.com/repos/riverar/mach2/git/trees/master"
+        Dim FeaturesFolderURL As String = String.Empty
+
+        'Gets the URL of the features Folder that is used in section 2
+#Region "1. Get the URL of the features folder"
         'Required Headers for the GitHub API
-        Dim WebClient As New WebClient With {
+        Dim WebClientRepo As New WebClient With {
             .Encoding = System.Text.Encoding.UTF8
         }
-        WebClient.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
-        WebClient.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
+        WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
+        WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
+
+        'Get the "tree" array from the API JSON Result
+        Try
+            Dim ContentsJSONRepo As String = WebClientRepo.DownloadString(RepoURL)
+            Dim JSONObjectRepo As JObject = JObject.Parse(ContentsJSONRepo)
+            Dim JSONArrayRepo As JArray = CType(JSONObjectRepo.SelectToken("tree"), JArray)
+
+            'Look in the JSON Array for the element: "path" = "features"
+            For Each element In JSONArrayRepo
+                If element("path").ToString = "features" Then
+                    FeaturesFolderURL = element("url").ToString
+                End If
+            Next
+        Catch ex As WebException
+            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & DirectCast(ex.Response, HttpWebResponse).StatusDescription)
+        Catch ex As Exception
+            MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
+        End Try
+
+#End Region
+
+        'returns JSON File Contents of riverar/mach2/features
+#Region "2. Get the features folder File Contents"
+        'Required Headers for the GitHub API
+        Dim WebClientFeatures As New WebClient With {
+            .Encoding = System.Text.Encoding.UTF8
+        }
+        WebClientFeatures.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
+        WebClientFeatures.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
         'Get the "tree" array from the API JSON Result
         Try
             '[DEV] Use Dev JSON to not get rate limited while Testing/Developing
             'Dim ContentsJSON As String = TempJSONUsedInDevelopment
-            Dim ContentsJSON As String = WebClient.DownloadString(URL)
-            Dim JSONObject As JObject = JObject.Parse(ContentsJSON)
-            Dim JSONArray As JArray = CType(JSONObject.SelectToken("tree"), JArray)
+            Dim ContentsJSONFeatures As String = WebClientFeatures.DownloadString(FeaturesFolderURL)
+            Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
+            Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
             'For each element in the Array, add a Combo Box Item with the name of the path element
-            For Each element In JSONArray
+            For Each element In JSONArrayFeatures
                 Dim Name As String() = element("path").ToString.Split(CChar("."))
                 If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             Next
         Catch ex As WebException
-            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & ex.Response.ToString)
+            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & DirectCast(ex.Response, HttpWebResponse).StatusDescription)
         Catch ex As Exception
             MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
         End Try
+#End Region
     End Sub
 
     ''' <summary>
