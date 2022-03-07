@@ -190,7 +190,7 @@ Public Class GUI
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
 
         ' Add the Manually set Feature ID menu item
-        AppendMenu(hSysMenu, MF_STRING, 2, "&Manually Set Feature ID")
+        AppendMenu(hSysMenu, MF_STRING, 2, "Manually Set Feature ID")
 
         ' Add a separator
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
@@ -201,7 +201,7 @@ Public Class GUI
 
     ''' <summary>
     ''' Overrides WndProc(ByRef m As Message).
-    ''' Checks if the message is SYSMENU_ABOUT_ID, in which case it shows the About Dialog.
+    ''' Checks if the message ID and performs an action depending on the ID. Example: ID 1 Shows the About Dialog.
     ''' </summary>
     ''' <param name="m">Windows Forms Message to be sent.</param>
     Protected Overrides Sub WndProc(ByRef m As Message)
