@@ -105,14 +105,13 @@ Public Class GUI
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
         'Populate the Build Combo Box
-        'PopulateBuildComboBox()
+        PopulateBuildComboBox()
     End Sub
 
     ''' <summary>
     ''' Populates the Build Combo Box. Used at the Form_Load Event
     ''' </summary>
     Private Sub PopulateBuildComboBox()
-        'Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
         Dim RepoURL As String = "https://api.github.com/repos/riverar/mach2/git/trees/master"
         Dim FeaturesFolderURL As String = String.Empty
 
