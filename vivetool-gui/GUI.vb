@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -137,11 +137,38 @@ Public Class GUI
                 End If
             Next
         Catch ex As WebException
-            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & DirectCast(ex.Response, HttpWebResponse).StatusDescription)
-        Catch ex As Exception
-            MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
-        End Try
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                .Text = "Copy Exception and Close"
+            }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
 
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " A Network Exception occurred",
+                    .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
+            RTD.Expander.Text = DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RadTaskDialog.ShowDialog(RTD)
+        Catch ex As Exception
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                .Text = "Copy Exception and Close"
+            }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " An Exception occurred",
+                    .Heading = "An unknown Exception occurred.",
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
+            RTD.Expander.Text = ex.ToString
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RadTaskDialog.ShowDialog(RTD)
+        End Try
 #End Region
 
         'returns JSON File Contents of riverar/mach2/features
@@ -167,9 +194,37 @@ Public Class GUI
                 If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             Next
         Catch ex As WebException
-            MsgBox("A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour." & vbNewLine & vbNewLine & ex.Message & vbNewLine & vbNewLine & DirectCast(ex.Response, HttpWebResponse).StatusDescription)
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                .Text = "Copy Exception and Close"
+            }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
+
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " A Network Exception occurred",
+                    .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
+            RTD.Expander.Text = DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
-            MsgBox("An Unknown Exception occurred." & vbNewLine & vbNewLine & ex.ToString)
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                .Text = "Copy Exception and Close"
+            }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " An Exception occurred",
+                    .Heading = "An unknown Exception occurred.",
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
+            RTD.Expander.Text = ex.ToString
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RadTaskDialog.ShowDialog(RTD)
         End Try
 #End Region
     End Sub
@@ -426,10 +481,23 @@ Public Class GUI
 
             'Set Cell Text
             RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
-
         Catch ex As Exception
             'Catch Any Exception that may occur
-            MsgBox(ex.ToString)
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                .Text = "Copy Exception and Close"
+            }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " An Exception occurred",
+                    .Heading = "An unknown Exception occurred.",
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
+            RTD.Expander.Text = ex.ToString
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RadTaskDialog.ShowDialog(RTD)
         End Try
     End Sub
 
