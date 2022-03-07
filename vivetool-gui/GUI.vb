@@ -538,6 +538,11 @@ Public Class GUI
         About.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Show the Manually Set Feature ID UI when F12 is pressed
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Key EventArgs</param>
     Private Sub GUI_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.F12 Then
             SetManual.ShowDialog()
