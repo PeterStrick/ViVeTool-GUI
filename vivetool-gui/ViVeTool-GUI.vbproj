@@ -134,6 +134,12 @@
       <DependentUpon>GUI.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SetManual.Designer.vb">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +162,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="SetManual.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\licenses.licx" />

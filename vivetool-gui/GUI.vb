@@ -106,7 +106,7 @@ Public Class GUI
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
         'Populate the Build Combo Box
-        PopulateBuildComboBox()
+        'PopulateBuildComboBox()
     End Sub
 
     ''' <summary>
@@ -462,5 +462,11 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_About_Click(sender As Object, e As EventArgs) Handles RB_About.Click
         About.ShowDialog()
+    End Sub
+
+    Private Sub GUI_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.F12 Then
+            SetManual.ShowDialog()
+        End If
     End Sub
 End Class
