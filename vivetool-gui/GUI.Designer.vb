@@ -87,7 +87,8 @@ Partial Class GUI
         '
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started."
+        Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F" &
+    "12 to manually change a Feature ID."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
@@ -235,7 +236,7 @@ Partial Class GUI
         '
         'GUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(792, 567)
         Me.Controls.Add(Me.P_DataPanel)
@@ -244,6 +245,7 @@ Partial Class GUI
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "GUI"
         '

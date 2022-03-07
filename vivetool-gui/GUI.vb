@@ -25,7 +25,6 @@ Public Class GUI
     Private Const WM_SYSCOMMAND As Integer = &H112
     Private Const MF_STRING As Integer = &H0
     Private Const MF_SEPARATOR As Integer = &H800
-    Private Const SYSMENU_ABOUT_ID As Integer = &H1
     Dim TempJSONUsedInDevelopment As String = "{
   ""sha"": ""afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""url"": ""https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
@@ -113,7 +112,6 @@ Public Class GUI
     ''' Populates the Build Combo Box. Used at the Form_Load Event
     ''' </summary>
     Private Sub PopulateBuildComboBox()
-        'Dim URL As String = "https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"
         Dim RepoURL As String = "https://api.github.com/repos/riverar/mach2/git/trees/master"
         Dim FeaturesFolderURL As String = String.Empty
 
@@ -190,21 +188,29 @@ Public Class GUI
         ' Add a separator
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
 
+        ' Add the Manually set Feature ID menu item
+        AppendMenu(hSysMenu, MF_STRING, 2, "Manually Set Feature ID")
+
+        ' Add a separator
+        AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
+
         ' Add the About menu item
-        AppendMenu(hSysMenu, MF_STRING, SYSMENU_ABOUT_ID, "&About…")
+        AppendMenu(hSysMenu, MF_STRING, 1, "&About…")
     End Sub
 
     ''' <summary>
     ''' Overrides WndProc(ByRef m As Message).
-    ''' Checks if the message is SYSMENU_ABOUT_ID, in which case it shows the About Dialog.
+    ''' Checks if the message ID and performs an action depending on the ID. Example: ID 1 Shows the About Dialog.
     ''' </summary>
     ''' <param name="m">Windows Forms Message to be sent.</param>
     Protected Overrides Sub WndProc(ByRef m As Message)
         MyBase.WndProc(m)
 
         ' Test if the About item was selected from the system menu
-        If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = SYSMENU_ABOUT_ID) Then
+        If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 1) Then
             About.ShowDialog()
+        ElseIf (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 2) Then
+            SetManual.ShowDialog()
         End If
     End Sub
 
@@ -462,5 +468,11 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_About_Click(sender As Object, e As EventArgs) Handles RB_About.Click
         About.ShowDialog()
+    End Sub
+
+    Private Sub GUI_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.F12 Then
+            SetManual.ShowDialog()
+        End If
     End Sub
 End Class
