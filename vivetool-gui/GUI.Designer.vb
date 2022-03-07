@@ -87,8 +87,8 @@ Partial Class GUI
         '
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started. Alternatively press F12 " &
-    "to manually chnage a Feature ID."
+        Me.RLE_StatusLabel.Text = "<html>Ready. Select a build from the Combo Box to get started, or alternatively p" &
+    "ress F12 to manually chnage a Feature ID.</html>"
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView

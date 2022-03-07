@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SetManual
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SetManual
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.RTB_FeatureID = New Telerik.WinControls.UI.RadTextBox()
         Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
@@ -34,20 +34,21 @@ Partial Class SetManual
         '
         'RTB_FeatureID
         '
-        Me.RTB_FeatureID.Location = New System.Drawing.Point(12, 12)
+        Me.RTB_FeatureID.Location = New System.Drawing.Point(15, 15)
         Me.RTB_FeatureID.Name = "RTB_FeatureID"
-        Me.RTB_FeatureID.Size = New System.Drawing.Size(220, 28)
-        Me.RTB_FeatureID.TabIndex = 0
+        Me.RTB_FeatureID.NullText = "Enter a Feature ID"
+        Me.RTB_FeatureID.Size = New System.Drawing.Size(237, 28)
+        Me.RTB_FeatureID.TabIndex = 1
         '
         'RDDB_PerformAction
         '
         Me.RDDB_PerformAction.Enabled = False
         Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
-        Me.RDDB_PerformAction.Location = New System.Drawing.Point(255, 12)
+        Me.RDDB_PerformAction.Location = New System.Drawing.Point(258, 15)
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
-        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 28)
-        Me.RDDB_PerformAction.TabIndex = 3
+        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 26)
+        Me.RDDB_PerformAction.TabIndex = 2
         Me.RDDB_PerformAction.Text = "      Perform Action"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
@@ -88,7 +89,7 @@ Partial Class SetManual
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "SetManual"
+        Me.Text = "Enter a Feature ID"
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
