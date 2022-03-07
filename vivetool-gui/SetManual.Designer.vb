@@ -39,7 +39,7 @@ Partial Class SetManual
         Me.RTB_FeatureID.Name = "RTB_FeatureID"
         Me.RTB_FeatureID.NullText = "Enter a Feature ID"
         Me.RTB_FeatureID.Size = New System.Drawing.Size(237, 28)
-        Me.RTB_FeatureID.TabIndex = 1
+        Me.RTB_FeatureID.TabIndex = 0
         '
         'RDDB_PerformAction
         '
@@ -49,7 +49,7 @@ Partial Class SetManual
         Me.RDDB_PerformAction.Location = New System.Drawing.Point(258, 15)
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
         Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 26)
-        Me.RDDB_PerformAction.TabIndex = 2
+        Me.RDDB_PerformAction.TabIndex = 1
         Me.RDDB_PerformAction.Text = "      Perform Action"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '

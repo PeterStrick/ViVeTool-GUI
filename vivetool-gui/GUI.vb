@@ -25,7 +25,6 @@ Public Class GUI
     Private Const WM_SYSCOMMAND As Integer = &H112
     Private Const MF_STRING As Integer = &H0
     Private Const MF_SEPARATOR As Integer = &H800
-    Private Const SYSMENU_ABOUT_ID As Integer = &H1
     Dim TempJSONUsedInDevelopment As String = "{
   ""sha"": ""afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""url"": ""https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
@@ -190,8 +189,14 @@ Public Class GUI
         ' Add a separator
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
 
+        ' Add the Manually set Feature ID menu item
+        AppendMenu(hSysMenu, MF_STRING, 2, "&Manually Set Feature ID")
+
+        ' Add a separator
+        AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
+
         ' Add the About menu item
-        AppendMenu(hSysMenu, MF_STRING, SYSMENU_ABOUT_ID, "&About…")
+        AppendMenu(hSysMenu, MF_STRING, 1, "&About…")
     End Sub
 
     ''' <summary>
@@ -203,8 +208,10 @@ Public Class GUI
         MyBase.WndProc(m)
 
         ' Test if the About item was selected from the system menu
-        If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = SYSMENU_ABOUT_ID) Then
+        If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 1) Then
             About.ShowDialog()
+        ElseIf (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 2) Then
+            SetManual.ShowDialog()
         End If
     End Sub
 
