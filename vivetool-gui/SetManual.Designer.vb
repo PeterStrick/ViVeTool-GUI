@@ -22,6 +22,7 @@ Partial Class SetManual
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SetManual))
         Me.RTB_FeatureID = New Telerik.WinControls.UI.RadTextBox()
         Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
         Me.RMI_ActivateF = New Telerik.WinControls.UI.RadMenuItem()
@@ -81,6 +82,7 @@ Partial Class SetManual
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SetManual"
@@ -88,8 +90,9 @@ Partial Class SetManual
         '
         '
         Me.RootElement.ApplyShapeToControl = True
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Enter a Feature ID"
+        Me.Text = " Enter a Feature ID"
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
