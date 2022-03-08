@@ -81,7 +81,7 @@ Partial Class SetManual
         Me.ClientSize = New System.Drawing.Size(427, 58)
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -90,7 +90,6 @@ Partial Class SetManual
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = " Enter a Feature ID"
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
