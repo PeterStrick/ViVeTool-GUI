@@ -13,8 +13,16 @@ ViVeTool-GUI let´s you easily enable, disable and search for new hidden Feature
 
 ## How to use it?
 Using it is simple, 
+Either:
+
 1. Select the Build for which you want to enable or disable features for.
 2. Wait for it to load in, open one of the Groups by pressing the Arrow, and select the Feature that you are looking for.
+3. Press on Perform Action and perform your desired action for the selected feature.
+
+or
+
+1. Press on "Manually change a Feature" (F12)
+2. Enter a Feature ID
 3. Press on Perform Action and perform your desired action for the selected feature.
 
 ## What are the additional features?
@@ -41,12 +49,3 @@ ViVeTool-GUI uses Icons from [icons8.com](https://icons8.com/)
 ViVeTool-GUI is inspired by [ViVeTool](https://github.com/thebookisclosed/ViVe) and uses the [ViVe API](https://github.com/thebookisclosed/ViVe/tree/master/ViVe)
 
 ViVeTool-GUI uses [files](https://github.com/riverar/mach2/tree/master/features) from [mach2](https://github.com/riverar/mach2) for the Build Combo Box.
-
-# To-Do
-- [x] Add Core Functionality
-- [x] Add Icons and Images
-- [x] Add a better and actually useful README.md
-- [x] Publish and upload release
-- [x] Add About Dialog and Usage Help
-- [x] Fix countless of spelling mistakes and code smells
-- [x] Polish the Source Code and add Updating Functionality incase I ever decide to update the GUI or if ViVe gets updated

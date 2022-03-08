@@ -106,6 +106,9 @@ Public Class GUI
 
         'Populate the Build Combo Box
         PopulateBuildComboBox()
+
+        'Disable the close button in the search row
+        RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
     End Sub
 
     ''' <summary>
@@ -278,9 +281,8 @@ Public Class GUI
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
-        'Disable Combo Box and Enable Search Text Box
+        'Disable Combo Box
         RDDL_Build.Enabled = False
-        RTB_SearchF.Enabled = True
 
         'Run Background Worker
         BGW_PopulateGridView.RunWorkerAsync()
@@ -374,7 +376,7 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Upon Background Worker Completion, stop the Background Worker and re-enable the COmbo Box
+    ''' Upon Background Worker Completion, stop the Background Worker and re-enable the Combo Box
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
@@ -382,22 +384,8 @@ Public Class GUI
         'End BGW
         BGW_PopulateGridView.CancelAsync()
 
-        'Enable Build Combo Box
+        'Enable the Build Combo Box
         RDDL_Build.Enabled = True
-    End Sub
-
-    ''' <summary>
-    ''' Filter the Feature Name Column, with the RTB_SearchF Text on each TextChanged Event
-    ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
-    Private Sub RTB_SearchF_TextChanged(sender As Object, e As EventArgs) Handles RTB_SearchF.TextChanged
-        Dim SearchBoxFilter As New FilterDescriptor With {
-            .Operator = FilterOperator.Contains,
-            .Value = RTB_SearchF.Text,
-            .IsFilterEditor = True
-        }
-        RGV_MainGridView.Columns("FeatureName").FilterDescriptor = SearchBoxFilter
     End Sub
 
     ''' <summary>
@@ -423,7 +411,14 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_ActivateF_Click(sender As Object, e As EventArgs) Handles RMI_ActivateF.Click
+        'Stop Searching temporarily
+        RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Enabled
         SetConfig(FeatureEnabledState.Enabled)
+
+        'Resume Searching
+        RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
     ''' <summary>
@@ -432,16 +427,30 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_DeactivateF_Click(sender As Object, e As EventArgs) Handles RMI_DeactivateF.Click
+        'Stop Searching temporarily
+        RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Disabled
         SetConfig(FeatureEnabledState.Disabled)
+
+        'Resume Searching
+        RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
     ''' <summary>
-    ''' Revert Feature Button, reverts the currently selected Feature back to default settings.
+    ''' Revert Feature Button, reverts the currently selected Feature back to default values.
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_RevertF_Click(sender As Object, e As EventArgs) Handles RMI_RevertF.Click
+        'Stop Searching temporarily
+        RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Default Values
         SetConfig(FeatureEnabledState.Default)
+
+        'Resume Searching
+        RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
     ''' <summary>
@@ -474,29 +483,68 @@ Public Class GUI
             'RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
+                'Set Status Label
                 RLE_StatusLabel.Text = "An error occurred while setting a feature configuration for " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
-            Else
-                RLE_StatusLabel.Text = "Successfully set feature configuration for" & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " with Value " & FeatureEnabledState.ToString
-            End If
 
-            'Set Cell Text
-            RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
+                'Fancy Message Box
+                Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " An Error occurred",
+                    .Heading = "An Error occurred while trying to set Feature " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
+                    .Icon = RadTaskDialogIcon.Error
+                }
+
+                'Add a Close Button instead of a OK Button
+                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+
+                'Show the Message Box
+                RadTaskDialog.ShowDialog(RTD)
+            Else
+                'Set Status Label
+                RLE_StatusLabel.Text = "Successfully set feature configuration for" & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " with Value " & FeatureEnabledState.ToString
+
+                'Set Cell Text
+                RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
+
+                'Fancy Message Box
+                Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " Success",
+                    .Heading = "Successfully set Feature " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
+                    .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
+                }
+
+                'Add a Close Button instead of a OK Button
+                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+
+                'Show the Message Box
+                RadTaskDialog.ShowDialog(RTD)
+            End If
         Catch ex As Exception
             'Catch Any Exception that may occur
+
+            'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
 
+            'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Exception occurred",
                     .Heading = "An unknown Exception occurred.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+
+            'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString
+
+            'Set the Text for the "Collapse Info" and "More Info" Buttons
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
+
+            'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+            'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         End Try
     End Sub
@@ -547,5 +595,14 @@ Public Class GUI
         If e.KeyCode = Keys.F12 Then
             SetManual.ShowDialog()
         End If
+    End Sub
+
+    ''' <summary>
+    ''' Shows the UI to manually set a Feature ID
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub RB_ManuallySetFeature_Click(sender As Object, e As EventArgs) Handles RB_ManuallySetFeature.Click
+        SetManual.ShowDialog()
     End Sub
 End Class

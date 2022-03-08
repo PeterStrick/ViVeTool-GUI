@@ -34,9 +34,9 @@ Partial Class GUI
         Me.RLE_StatusLabel = New Telerik.WinControls.UI.RadLabelElement()
         Me.RGV_MainGridView = New Telerik.WinControls.UI.RadGridView()
         Me.BGW_PopulateGridView = New System.ComponentModel.BackgroundWorker()
-        Me.RTB_SearchF = New Telerik.WinControls.UI.RadTextBox()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
         Me.P_CommandPanel = New System.Windows.Forms.Panel()
+        Me.RB_ManuallySetFeature = New Telerik.WinControls.UI.RadButton()
         Me.RB_About = New Telerik.WinControls.UI.RadButton()
         Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
         Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
@@ -45,26 +45,31 @@ Partial Class GUI
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
+        Me.RL_BuildComboBoxORManaully = New Telerik.WinControls.UI.RadLabel()
+        Me.RS_1 = New Telerik.WinControls.UI.RadSeparator()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RTB_SearchF, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_CommandPanel.SuspendLayout()
+        CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_DataPanel.SuspendLayout()
+        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RDDL_Build
         '
+        Me.RDDL_Build.AutoSize = False
         Me.RDDL_Build.DropDownAnimationEnabled = True
         Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        Me.RDDL_Build.Location = New System.Drawing.Point(3, 7)
+        Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.NullText = "Select Build..."
         Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
@@ -88,14 +93,13 @@ Partial Class GUI
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
         Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F" &
-    "12 to manually change a Feature ID."
+    "12 to manually change a Feature."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
         '
         Me.RGV_MainGridView.BeginEditMode = Telerik.WinControls.RadGridViewBeginEditMode.BeginEditProgrammatically
         Me.RGV_MainGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RGV_MainGridView.EnableGestures = False
         Me.RGV_MainGridView.Location = New System.Drawing.Point(0, 0)
         '
         '
@@ -110,6 +114,7 @@ Partial Class GUI
         Me.RGV_MainGridView.MasterTemplate.AllowEditRow = False
         Me.RGV_MainGridView.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.RGV_MainGridView.MasterTemplate.AllowRowResize = False
+        Me.RGV_MainGridView.MasterTemplate.AllowSearchRow = True
         Me.RGV_MainGridView.MasterTemplate.ClipboardPasteMode = Telerik.WinControls.UI.GridViewClipboardPasteMode.Disable
         GridViewTextBoxColumn1.AllowGroup = False
         GridViewTextBoxColumn1.AllowHide = False
@@ -151,30 +156,30 @@ Partial Class GUI
         '
         Me.BGW_PopulateGridView.WorkerSupportsCancellation = True
         '
-        'RTB_SearchF
-        '
-        Me.RTB_SearchF.AutoSize = False
-        Me.RTB_SearchF.Enabled = False
-        Me.RTB_SearchF.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.RTB_SearchF.Location = New System.Drawing.Point(134, 4)
-        Me.RTB_SearchF.Name = "RTB_SearchF"
-        Me.RTB_SearchF.NullText = "Search for a Feature"
-        Me.RTB_SearchF.Size = New System.Drawing.Size(292, 30)
-        Me.RTB_SearchF.TabIndex = 1
-        Me.RTB_SearchF.ThemeName = "Fluent"
-        '
         'P_CommandPanel
         '
+        Me.P_CommandPanel.Controls.Add(Me.RS_1)
+        Me.P_CommandPanel.Controls.Add(Me.RL_BuildComboBoxORManaully)
+        Me.P_CommandPanel.Controls.Add(Me.RB_ManuallySetFeature)
         Me.P_CommandPanel.Controls.Add(Me.RB_About)
         Me.P_CommandPanel.Controls.Add(Me.RDDL_Build)
         Me.P_CommandPanel.Controls.Add(Me.RTB_ThemeToggle)
-        Me.P_CommandPanel.Controls.Add(Me.RTB_SearchF)
         Me.P_CommandPanel.Controls.Add(Me.RDDB_PerformAction)
         Me.P_CommandPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.P_CommandPanel.Location = New System.Drawing.Point(0, 0)
         Me.P_CommandPanel.Name = "P_CommandPanel"
         Me.P_CommandPanel.Size = New System.Drawing.Size(792, 38)
         Me.P_CommandPanel.TabIndex = 6
+        '
+        'RB_ManuallySetFeature
+        '
+        Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
+        Me.RB_ManuallySetFeature.Location = New System.Drawing.Point(181, 4)
+        Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
+        Me.RB_ManuallySetFeature.Size = New System.Drawing.Size(212, 30)
+        Me.RB_ManuallySetFeature.TabIndex = 8
+        Me.RB_ManuallySetFeature.Text = "Manually change a Feature (F12)"
+        Me.RB_ManuallySetFeature.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RB_About
         '
@@ -223,7 +228,7 @@ Partial Class GUI
         '
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
-        Me.RMI_RevertF.Text = "  Revert Feature to Default Settings"
+        Me.RMI_RevertF.Text = "  Revert Feature to Default Values"
         '
         'P_DataPanel
         '
@@ -233,6 +238,22 @@ Partial Class GUI
         Me.P_DataPanel.Name = "P_DataPanel"
         Me.P_DataPanel.Size = New System.Drawing.Size(792, 505)
         Me.P_DataPanel.TabIndex = 7
+        '
+        'RL_BuildComboBoxORManaully
+        '
+        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(145, 10)
+        Me.RL_BuildComboBoxORManaully.Name = "RL_BuildComboBoxORManaully"
+        Me.RL_BuildComboBoxORManaully.Size = New System.Drawing.Size(17, 18)
+        Me.RL_BuildComboBoxORManaully.TabIndex = 9
+        Me.RL_BuildComboBoxORManaully.Text = "or"
+        '
+        'RS_1
+        '
+        Me.RS_1.Location = New System.Drawing.Point(405, 4)
+        Me.RS_1.Name = "RS_1"
+        Me.RS_1.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.RS_1.Size = New System.Drawing.Size(13, 30)
+        Me.RS_1.TabIndex = 10
         '
         'GUI
         '
@@ -258,13 +279,15 @@ Partial Class GUI
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RTB_SearchF, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_CommandPanel.ResumeLayout(False)
         Me.P_CommandPanel.PerformLayout()
+        CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_DataPanel.ResumeLayout(False)
+        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -278,7 +301,6 @@ Partial Class GUI
     Friend WithEvents FeatureID As Telerik.WinControls.UI.GridViewTextBoxColumn
     Friend WithEvents RLE_StatusLabel As Telerik.WinControls.UI.RadLabelElement
     Friend WithEvents BGW_PopulateGridView As System.ComponentModel.BackgroundWorker
-    Friend WithEvents RTB_SearchF As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RDDB_PerformAction As Telerik.WinControls.UI.RadDropDownButton
     Friend WithEvents RMI_ActivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
@@ -289,4 +311,7 @@ Partial Class GUI
     Friend WithEvents P_DataPanel As Panel
     Friend WithEvents FluentTheme As Telerik.WinControls.Themes.FluentTheme
     Friend WithEvents RB_About As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RB_ManuallySetFeature As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RS_1 As Telerik.WinControls.UI.RadSeparator
+    Friend WithEvents RL_BuildComboBoxORManaully As Telerik.WinControls.UI.RadLabel
 End Class
