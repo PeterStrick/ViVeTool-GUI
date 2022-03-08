@@ -3,6 +3,6 @@
   <version>1.5.0.0</version>
   <url>https://github.com/PeterStrick/ViVeTool-GUI/releases/download/v1.5/ViVeTool.GUI.1.5.Portable.zip</url>
   <changelog>https://github.com/PeterStrick/ViVeTool-GUI/releases/latest</changelog>
-  <mandatory>true</mandatory>
+  <mandatory>false</mandatory>
   <checksum algorithm="SHA256">CA19E6B1EDFBB4FD06F81D537546080E6FE1B98430C40E562235EDEC54BCE049</checksum>
 </item>
