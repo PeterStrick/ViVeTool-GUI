@@ -366,17 +366,17 @@ Public Class GUI
             'Delete Feature List from %TEMP%
             IO.File.Delete(path)
 
-            'Enable Grouping
-            Dim LineGroup As New GroupDescriptor()
-            LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
-            Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+            ''Enable Grouping
+            'Dim LineGroup As New GroupDescriptor()
+            'LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
+            'Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
         Else
             Return
         End If
     End Sub
 
     ''' <summary>
-    ''' Upon Background Worker Completion, stop the Background Worker and re-enable the COmbo Box
+    ''' Upon Background Worker Completion, stop the Background Worker and re-enable the Combo Box
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
@@ -384,7 +384,7 @@ Public Class GUI
         'End BGW
         BGW_PopulateGridView.CancelAsync()
 
-        'Enable Build Combo Box
+        'Enable the Build Combo Box
         RDDL_Build.Enabled = True
     End Sub
 
@@ -411,8 +411,13 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_ActivateF_Click(sender As Object, e As EventArgs) Handles RMI_ActivateF.Click
+        'Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Enabled
         SetConfig(FeatureEnabledState.Enabled)
+
+        'Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
@@ -422,19 +427,29 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_DeactivateF_Click(sender As Object, e As EventArgs) Handles RMI_DeactivateF.Click
+        'Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Disabled
         SetConfig(FeatureEnabledState.Disabled)
+
+        'Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
     ''' <summary>
-    ''' Revert Feature Button, reverts the currently selected Feature back to default settings.
+    ''' Revert Feature Button, reverts the currently selected Feature back to default values.
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_RevertF_Click(sender As Object, e As EventArgs) Handles RMI_RevertF.Click
+        'Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
+
+        'Set Selected Feature to Default Values
         SetConfig(FeatureEnabledState.Default)
+
+        'Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
@@ -477,7 +492,11 @@ Public Class GUI
                     .Heading = "An Error occurred while trying to set Feature " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.Error
                 }
+
+                'Add a Close Button instead of a OK Button
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+
+                'Show the Message Box
                 RadTaskDialog.ShowDialog(RTD)
             Else
                 'Set Status Label
@@ -492,25 +511,40 @@ Public Class GUI
                     .Heading = "Successfully set Feature ID " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
+
+                'Add a Close Button instead of a OK Button
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+
+                'Show the Message Box
                 RadTaskDialog.ShowDialog(RTD)
             End If
         Catch ex As Exception
             'Catch Any Exception that may occur
+
+            'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
 
+            'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Exception occurred",
                     .Heading = "An unknown Exception occurred.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+
+            'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString
+
+            'Set the Text for the "Collapse Info" and "More Info" Buttons
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
+
+            'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+            'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         End Try
     End Sub
@@ -563,6 +597,11 @@ Public Class GUI
         End If
     End Sub
 
+    ''' <summary>
+    ''' Shows the UI to manually set a Feature ID
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub RB_ManuallySetFeature_Click(sender As Object, e As EventArgs) Handles RB_ManuallySetFeature.Click
         SetManual.ShowDialog()
     End Sub

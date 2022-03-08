@@ -68,21 +68,29 @@ Public Class SetManual
         Catch ex As Exception
             'Catch Any Exception that may occur
 
+            'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
 
+            'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Exception occurred",
                     .Heading = "An Exception occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+            'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString
+
+            'Set the Text for the "Collapse Info" and "More Info" Buttons
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
+
+            'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)
 
+            'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         End Try
     End Sub
