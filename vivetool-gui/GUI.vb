@@ -366,10 +366,10 @@ Public Class GUI
             'Delete Feature List from %TEMP%
             IO.File.Delete(path)
 
-            ''Enable Grouping
-            'Dim LineGroup As New GroupDescriptor()
-            'LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
-            'Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+            'Enable Grouping
+            Dim LineGroup As New GroupDescriptor()
+            LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
+            Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
         Else
             Return
         End If
@@ -508,7 +508,7 @@ Public Class GUI
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = " Success",
-                    .Heading = "Successfully set Feature ID " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
+                    .Heading = "Successfully set Feature " & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & " to " & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
 
