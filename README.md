@@ -13,8 +13,16 @@ ViVeTool-GUI let´s you easily enable, disable and search for new hidden Feature
 
 ## How to use it?
 Using it is simple, 
+Either:
+
 1. Select the Build for which you want to enable or disable features for.
 2. Wait for it to load in, open one of the Groups by pressing the Arrow, and select the Feature that you are looking for.
+3. Press on Perform Action and perform your desired action for the selected feature.
+
+or
+
+1. Press on "Manually change a Feature" (F12)
+2. Enter a Feature ID
 3. Press on Perform Action and perform your desired action for the selected feature.
 
 ## What are the additional features?
