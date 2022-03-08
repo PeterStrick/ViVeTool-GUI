@@ -91,7 +91,7 @@ Partial Class SetManual
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = " Enter a Feature ID"
+        Me.Text = "Manually change a Feature - Enter a Feature ID"
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()

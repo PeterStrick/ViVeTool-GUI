@@ -93,7 +93,7 @@ Partial Class GUI
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
         Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F" &
-    "12 to manually change a Feature ID."
+    "12 to manually change a Feature."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
@@ -174,11 +174,11 @@ Partial Class GUI
         'RB_ManuallySetFeature
         '
         Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
-        Me.RB_ManuallySetFeature.Location = New System.Drawing.Point(198, 4)
+        Me.RB_ManuallySetFeature.Location = New System.Drawing.Point(181, 4)
         Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
-        Me.RB_ManuallySetFeature.Size = New System.Drawing.Size(195, 30)
+        Me.RB_ManuallySetFeature.Size = New System.Drawing.Size(212, 30)
         Me.RB_ManuallySetFeature.TabIndex = 8
-        Me.RB_ManuallySetFeature.Text = "Manually change Feature (F12)"
+        Me.RB_ManuallySetFeature.Text = "Manually change a Feature (F12)"
         Me.RB_ManuallySetFeature.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RB_About
@@ -241,7 +241,7 @@ Partial Class GUI
         '
         'RL_BuildComboBoxORManaully
         '
-        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(153, 10)
+        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(145, 10)
         Me.RL_BuildComboBoxORManaully.Name = "RL_BuildComboBoxORManaully"
         Me.RL_BuildComboBoxORManaully.Size = New System.Drawing.Size(17, 18)
         Me.RL_BuildComboBoxORManaully.TabIndex = 9
