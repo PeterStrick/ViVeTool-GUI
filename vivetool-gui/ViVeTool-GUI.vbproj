@@ -72,7 +72,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Albacore.ViVe">
-      <HintPath>..\..\..\..\Files\Portable Apps\ViveTool\Albacore.ViVe.dll</HintPath>
+      <HintPath>..\lib\Albacore.ViVe.dll</HintPath>
     </Reference>
     <Reference Include="AutoUpdater.NET, Version=1.7.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Autoupdater.NET.Official.1.7.0\lib\net45\AutoUpdater.NET.dll</HintPath>
