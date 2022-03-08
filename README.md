@@ -49,12 +49,3 @@ ViVeTool-GUI uses Icons from [icons8.com](https://icons8.com/)
 ViVeTool-GUI is inspired by [ViVeTool](https://github.com/thebookisclosed/ViVe) and uses the [ViVe API](https://github.com/thebookisclosed/ViVe/tree/master/ViVe)
 
 ViVeTool-GUI uses [files](https://github.com/riverar/mach2/tree/master/features) from [mach2](https://github.com/riverar/mach2) for the Build Combo Box.
-
-# To-Do
-- [x] Add Core Functionality
-- [x] Add Icons and Images
-- [x] Add a better and actually useful README.md
-- [x] Publish and upload release
-- [x] Add About Dialog and Usage Help
-- [x] Fix countless of spelling mistakes and code smells
-- [x] Polish the Source Code and add Updating Functionality incase I ever decide to update the GUI or if ViVe gets updated
