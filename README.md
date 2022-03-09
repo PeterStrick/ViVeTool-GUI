@@ -15,7 +15,7 @@ ViVeTool-GUI let´s you easily enable, disable and search for new hidden Feature
 Using it is simple, 
 Either:
 
-1. Select the Build for which you want to enable or disable features for. <img align="right" width="400" height="300" src="/images/Method1.gif" alt="ViVeTool-GUI Logo" />
+1. Select the Build for which you want to enable or disable features for. <img align="right" width="395" height="300" src="/images/Method1.gif" alt="ViVeTool-GUI Logo" />
 2. Wait for it to load in, open one of the Groups by pressing the Arrow, and select the Feature that you are looking for.
 3. Press on Perform Action and perform your desired action for the entered feature ID.
 ---
