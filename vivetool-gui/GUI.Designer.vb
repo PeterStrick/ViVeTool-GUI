@@ -36,6 +36,8 @@ Partial Class GUI
         Me.BGW_PopulateGridView = New System.ComponentModel.BackgroundWorker()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
         Me.P_CommandPanel = New System.Windows.Forms.Panel()
+        Me.RS_1 = New Telerik.WinControls.UI.RadSeparator()
+        Me.RL_BuildComboBoxORManaully = New Telerik.WinControls.UI.RadLabel()
         Me.RB_ManuallySetFeature = New Telerik.WinControls.UI.RadButton()
         Me.RB_About = New Telerik.WinControls.UI.RadButton()
         Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
@@ -45,20 +47,18 @@ Partial Class GUI
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
-        Me.RL_BuildComboBoxORManaully = New Telerik.WinControls.UI.RadLabel()
-        Me.RS_1 = New Telerik.WinControls.UI.RadSeparator()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_CommandPanel.SuspendLayout()
+        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_DataPanel.SuspendLayout()
-        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,8 +92,7 @@ Partial Class GUI
         '
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        Me.RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F" &
-    "12 to manually change a Feature."
+        Me.RLE_StatusLabel.Text = "Populating the Build Combo Box..."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
@@ -171,6 +170,22 @@ Partial Class GUI
         Me.P_CommandPanel.Size = New System.Drawing.Size(792, 38)
         Me.P_CommandPanel.TabIndex = 6
         '
+        'RS_1
+        '
+        Me.RS_1.Location = New System.Drawing.Point(405, 4)
+        Me.RS_1.Name = "RS_1"
+        Me.RS_1.Orientation = System.Windows.Forms.Orientation.Vertical
+        Me.RS_1.Size = New System.Drawing.Size(13, 30)
+        Me.RS_1.TabIndex = 10
+        '
+        'RL_BuildComboBoxORManaully
+        '
+        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(145, 10)
+        Me.RL_BuildComboBoxORManaully.Name = "RL_BuildComboBoxORManaully"
+        Me.RL_BuildComboBoxORManaully.Size = New System.Drawing.Size(17, 18)
+        Me.RL_BuildComboBoxORManaully.TabIndex = 9
+        Me.RL_BuildComboBoxORManaully.Text = "or"
+        '
         'RB_ManuallySetFeature
         '
         Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
@@ -239,22 +254,6 @@ Partial Class GUI
         Me.P_DataPanel.Size = New System.Drawing.Size(792, 505)
         Me.P_DataPanel.TabIndex = 7
         '
-        'RL_BuildComboBoxORManaully
-        '
-        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(145, 10)
-        Me.RL_BuildComboBoxORManaully.Name = "RL_BuildComboBoxORManaully"
-        Me.RL_BuildComboBoxORManaully.Size = New System.Drawing.Size(17, 18)
-        Me.RL_BuildComboBoxORManaully.TabIndex = 9
-        Me.RL_BuildComboBoxORManaully.Text = "or"
-        '
-        'RS_1
-        '
-        Me.RS_1.Location = New System.Drawing.Point(405, 4)
-        Me.RS_1.Name = "RS_1"
-        Me.RS_1.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.RS_1.Size = New System.Drawing.Size(13, 30)
-        Me.RS_1.TabIndex = 10
-        '
         'GUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -281,13 +280,13 @@ Partial Class GUI
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_CommandPanel.ResumeLayout(False)
         Me.P_CommandPanel.PerformLayout()
+        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_DataPanel.ResumeLayout(False)
-        CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RS_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

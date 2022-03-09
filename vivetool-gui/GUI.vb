@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls.Data, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -25,7 +25,7 @@ Public Class GUI
     Private Const WM_SYSCOMMAND As Integer = &H112
     Private Const MF_STRING As Integer = &H0
     Private Const MF_SEPARATOR As Integer = &H800
-    Dim TempJSONUsedInDevelopment As String = "{
+    ReadOnly TempJSONUsedInDevelopment As String = "{
   ""sha"": ""afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""url"": ""https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
   ""tree"": [
@@ -101,14 +101,29 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Make a Background Thread that handles Background Tasks
+        Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {
+            .IsBackground = True
+        }
+        BackgroundThread.SetApartmentState(Threading.ApartmentState.STA)
+        BackgroundThread.Start()
+
+        'Disable the close button in the search row
+        RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
+    End Sub
+
+    ''' <summary>
+    ''' Background Tasks to be executed in a Thread
+    ''' </summary>
+    Private Sub BackgroundTasks()
         'Check for Updates
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
         'Populate the Build Combo Box
         PopulateBuildComboBox()
 
-        'Disable the close button in the search row
-        RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
+        'Set Ready Label
+        Invoke(Sub() RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.")
     End Sub
 
     ''' <summary>
@@ -367,7 +382,7 @@ Public Class GUI
             IO.File.Delete(path)
 
             'Enable Grouping
-            Dim LineGroup As New GroupDescriptor()
+            Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
             LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
             Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
         Else
