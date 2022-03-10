@@ -9,7 +9,7 @@ To fix the Reference Issues for Albacore.ViVe, use the DLL from the `lib` Folder
 To fix the Reference Issues for AutoUpdater.NET or Newtonsft.JSON, open the Package Manager Console.
 You will be asked if you want to restore the NuGet packages, do so by pressing on Restore.
 
-To fix the Reference Issues for the Telerik librarys either use the DLLs from the `lib\RCWF\2021.3.1109.40` Folder or install the [Telerik UI for WinForms](https://www.telerik.com/login/ui-for-winforms) application.
+To fix the Reference Issues for the Telerik librarys either use the DLLs from the `lib\RCWF\2021.3.1109.40` Folder or install the [Telerik UI for WinForms Suite (login required to download installer)](https://www.telerik.com/login/ui-for-winforms).
 
 ### You will not be able to access the designer if you do not have Telerik UI for WinForms installed. 
 
