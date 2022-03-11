@@ -119,11 +119,40 @@ Public Class GUI
         'Check for Updates
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
-        'Populate the Build Combo Box
-        PopulateBuildComboBox()
+        'Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
+        PopulateBuildComboBox_Check()
+    End Sub
 
-        'Set Ready Label
-        Invoke(Sub() RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.")
+    ''' <summary>
+    ''' Check for Internet Connectivity before trying to populate the Build COmbo Box
+    ''' </summary>
+    Private Sub PopulateBuildComboBox_Check()
+        If CheckForInternetConnection() = True Then
+            'Populate the Build Combo Box
+            PopulateBuildComboBox()
+
+            'Set Ready Label
+            Invoke(Sub() RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.")
+        Else
+            Invoke(Sub()
+                       'First, disable the Combo Box
+                       RDDL_Build.Enabled = False
+                       RDDL_Build.Text = "Network Error"
+
+                       'Second, change the Status Label
+                       RLE_StatusLabel.Text = "Network Functions disabled. Press F12 to manually change a Feature."
+
+                       'Third, Show an error message
+                       Dim RTD As New RadTaskDialogPage With {
+                            .Caption = " A Network Exception occurred",
+                            .Heading = "A Network Exception occurred",
+                            .Text = "ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable." & vbNewLine & vbNewLine & "You are still able to manually change a Feature ID by pressing F12.",
+                            .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
+                        }
+                       RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+                       RadTaskDialog.ShowDialog(RTD)
+                   End Sub)
+        End If
     End Sub
 
     ''' <summary>
@@ -620,4 +649,20 @@ Public Class GUI
     Private Sub RB_ManuallySetFeature_Click(sender As Object, e As EventArgs) Handles RB_ManuallySetFeature.Click
         SetManual.ShowDialog()
     End Sub
+
+    ''' <summary>
+    ''' Basic Internet Connectivity Check by trying to check if github.com is accessible
+    ''' </summary>
+    ''' <returns></returns>
+    Public Shared Function CheckForInternetConnection() As Boolean
+        Try
+            Using client = New WebClient()
+                Using stream = client.OpenRead("http://www.github.com")
+                    Return True
+                End Using
+            End Using
+        Catch
+            Return False
+        End Try
+    End Function
 End Class
