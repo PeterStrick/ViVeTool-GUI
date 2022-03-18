@@ -73,6 +73,7 @@ Partial Class GUI
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.NullText = "Select Build..."
         Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
+        Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
         Me.RDDL_Build.TabIndex = 0
         Me.RDDL_Build.Text = "Select Build..."
         Me.RDDL_Build.ThemeName = "Fluent"
