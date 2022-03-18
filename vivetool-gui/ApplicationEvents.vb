@@ -40,15 +40,45 @@ Namespace My
                 Environment.Exit(-1)
             End If
 
-            'Enable Dark Mode if previously turned on
-            If Settings.DarkMode Then
-                Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-                GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                GUI.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+            'Load Settings States from My.Settings
+            'Set ToggleState for RTS_AutoLoad
+            If My.Settings.AutoLoad = True Then
+                AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
             Else
-                Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-                GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                GUI.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
+            End If
+
+            'Set ToggleState for RTB_UseSystemTheme
+            If My.Settings.UseSystemTheme = True Then
+                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+            Else
+                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+            End If
+
+            'Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
+            If My.Settings.UseSystemTheme = True Then
+                'Get Regsitry Key Value
+                Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+                Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+
+                'If the Value is 0 then Light Mode is Disabled, if it is 1 then it is Enabled
+                If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                Else
+                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                End If
+            Else
+                If Settings.DarkMode Then
+                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
+                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                Else
+                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
+                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                End If
             End If
         End Sub
     End Class

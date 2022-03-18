@@ -133,6 +133,11 @@ Public Class GUI
 
             'Set Ready Label
             Invoke(Sub() RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.")
+
+            'Autoload the newest Build if it is Enabled in the Settings
+            If My.Settings.AutoLoad = True Then
+                Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(0))
+            End If
         Else
             Invoke(Sub()
                        'First, disable the Combo Box
@@ -194,7 +199,7 @@ Public Class GUI
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -251,7 +256,7 @@ Public Class GUI
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -310,7 +315,7 @@ Public Class GUI
 
         ' Test if the About item was selected from the system menu
         If (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 1) Then
-            About.ShowDialog()
+            AboutAndSettings.ShowDialog()
         ElseIf (m.Msg = WM_SYSCOMMAND) AndAlso (CInt(m.WParam) = 2) Then
             SetManual.ShowDialog()
         End If
@@ -430,23 +435,6 @@ Public Class GUI
 
         'Enable the Build Combo Box
         RDDL_Build.Enabled = True
-    End Sub
-
-    ''' <summary>
-    ''' Button to toggle between Light and Dark Fluent Themes
-    ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
-    Private Sub RTB_DarkTheme_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
-        If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
-            RTB_ThemeToggle.Text = "Dark Theme"
-            Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-            RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-        Else
-            RTB_ThemeToggle.Text = "Light Theme"
-            Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-            RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-        End If
     End Sub
 
     ''' <summary>
@@ -599,13 +587,13 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
-            My.Settings.DarkMode = True
-            My.Settings.Save()
-        Else
-            My.Settings.DarkMode = False
-            My.Settings.Save()
-        End If
+        'If RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
+        '    My.Settings.DarkMode = True
+        '    My.Settings.Save()
+        'Else
+        '    My.Settings.DarkMode = False
+        '    My.Settings.Save()
+        'End If
     End Sub
 
     ''' <summary>
@@ -627,7 +615,7 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_About_Click(sender As Object, e As EventArgs) Handles RB_About.Click
-        About.ShowDialog()
+        AboutAndSettings.ShowDialog()
     End Sub
 
     ''' <summary>

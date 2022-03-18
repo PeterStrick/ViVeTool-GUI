@@ -83,7 +83,9 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.dll</HintPath>
@@ -112,10 +114,10 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="About.Designer.vb">
-      <DependentUpon>About.vb</DependentUpon>
+    <Compile Include="AboutAndSettings.Designer.vb">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="About.vb">
+    <Compile Include="AboutAndSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
@@ -133,8 +135,8 @@
     <Compile Include="SetManual.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="About.resx">
-      <DependentUpon>About.vb</DependentUpon>
+    <EmbeddedResource Include="AboutAndSettings.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.vb</DependentUpon>
@@ -184,6 +186,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-advertisement-page-96.ico" />
+    <Content Include="Images\icons8_change_theme_24px.png" />
+    <Content Include="Images\icons8_settings_system_daydream_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>

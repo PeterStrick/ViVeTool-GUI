@@ -117,10 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
+        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
+        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
+        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
+        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
+        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
+        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
+        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
+        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
+        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
+        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
+        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
+        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
+        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
+        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
+        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
+        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
+        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
+        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
+        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
