@@ -186,8 +186,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-advertisement-page-96.ico" />
+    <Content Include="Images\about.ico" />
+    <Content Include="Images\icons8_about_24.png" />
+    <Content Include="Images\icons8_about_96.png" />
+    <Content Include="Images\icons8_advertisement_page_24.png" />
+    <Content Include="Images\icons8_advertisement_page_96.png" />
     <Content Include="Images\icons8_change_theme_24px.png" />
+    <Content Include="Images\icons8_moon_and_stars_24.png" />
+    <Content Include="Images\icons8_registration_24px.png" />
+    <Content Include="Images\icons8_rollback_24.png" />
     <Content Include="Images\icons8_settings_system_daydream_24px.png" />
+    <Content Include="Images\icons8_start_24.png" />
+    <Content Include="Images\icons8_sun_24.png" />
+    <Content Include="Images\icons8_toggle_off_24.png" />
+    <Content Include="Images\icons8_toggle_on_24.png" />
+    <Content Include="Images\settings_system_daydream.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>
