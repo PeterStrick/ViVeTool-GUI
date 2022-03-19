@@ -172,9 +172,9 @@ Partial Class AboutAndSettings
         '
         'RB_ViVeTool_GUI_FeatureScanner
         '
-        Me.RB_ViVeTool_GUI_FeatureScanner.Location = New System.Drawing.Point(66, 25)
+        Me.RB_ViVeTool_GUI_FeatureScanner.Location = New System.Drawing.Point(43, 25)
         Me.RB_ViVeTool_GUI_FeatureScanner.Name = "RB_ViVeTool_GUI_FeatureScanner"
-        Me.RB_ViVeTool_GUI_FeatureScanner.Size = New System.Drawing.Size(229, 30)
+        Me.RB_ViVeTool_GUI_FeatureScanner.Size = New System.Drawing.Size(274, 30)
         Me.RB_ViVeTool_GUI_FeatureScanner.TabIndex = 0
         Me.RB_ViVeTool_GUI_FeatureScanner.Text = "[WIP] Scan this Build for Feature IDs"
         '

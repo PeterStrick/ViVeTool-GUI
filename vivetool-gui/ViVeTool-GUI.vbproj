@@ -83,9 +83,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.dll</HintPath>
@@ -201,6 +199,12 @@
     <Content Include="Images\icons8_toggle_off_24.png" />
     <Content Include="Images\icons8_toggle_on_24.png" />
     <Content Include="Images\settings_system_daydream.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ViVeTool-GUI.FeatureScanner\ViVeTool_GUI.FeatureScanner.vbproj">
+      <Project>{89b985fc-8979-4d33-8986-05b03f9d617a}</Project>
+      <Name>ViVeTool_GUI.FeatureScanner</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>

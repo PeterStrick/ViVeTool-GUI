@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Imports Telerik.WinControls.UI
 ''' <summary>
 ''' About & Settings Dialog/Form
 ''' </summary>
@@ -25,8 +26,6 @@ Public NotInheritable Class AboutAndSettings
     Private Sub AboutAndSettings_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         'Load the About Labels
         LoadAboutLabels()
-
-
     End Sub
 
     ''' <summary>
@@ -59,24 +58,42 @@ Public NotInheritable Class AboutAndSettings
         End If
     End Sub
 
+    ''' <summary>
+    ''' Changes the Application theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
     Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
             RTB_ThemeToggle.Text = "Dark Theme"
             RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-            'GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
             My.Settings.DarkMode = True
         Else
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
             RTB_ThemeToggle.Text = "Light Theme"
             RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-            'GUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
             My.Settings.DarkMode = False
         End If
     End Sub
 
+    ''' <summary>
+    ''' Starts ViVeTool GUI - Feature Scanner if it is present in the Application Directory
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub RB_ViVeTool_GUI_FeatureScanner_Click(sender As Object, e As EventArgs) Handles RB_ViVeTool_GUI_FeatureScanner.Click
-        MsgBox("WIP. Will start ViVeTool-GUI.FeatureScanner.exe when done.")
+        If IO.File.Exists(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe") Then
+            Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+        Else
+            Dim RTD As New RadTaskDialogPage With {
+                    .Caption = " An Error occurred",
+                    .Heading = "An Error occurred while trying to start ViVeTool GUI - Feature Scanner." & vbNewLine & vbNewLine & "The File doesn't exist.",
+                    .Icon = RadTaskDialogIcon.Error
+                }
+            RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+            RadTaskDialog.ShowDialog(RTD)
+        End If
     End Sub
 
     Private Sub AboutAndSettings_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
