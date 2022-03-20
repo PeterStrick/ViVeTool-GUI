@@ -67,6 +67,7 @@ Partial Class GUI
         Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RDDL_Build.Enabled = False
         Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.NullText = "Select Build..."

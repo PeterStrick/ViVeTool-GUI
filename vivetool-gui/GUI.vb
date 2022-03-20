@@ -127,21 +127,19 @@ Public Class GUI
     ''' Check for Internet Connectivity before trying to populate the Build COmbo Box
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
+        'Add manual option
+        Invoke(Sub() RDDL_Build.Items.Add("Load manually from file"))
+
         If CheckForInternetConnection() = True Then
             'Populate the Build Combo Box
             PopulateBuildComboBox()
 
             'Set Ready Label
             Invoke(Sub() RLE_StatusLabel.Text = "Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.")
-
-            'Autoload the newest Build if it is Enabled in the Settings
-            If My.Settings.AutoLoad = True Then
-                Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(0))
-            End If
         Else
             Invoke(Sub()
                        'First, disable the Combo Box
-                       RDDL_Build.Enabled = False
+                       RDDL_Build.Enabled = True
                        RDDL_Build.Text = "Network Error"
 
                        'Second, change the Status Label
@@ -151,7 +149,7 @@ Public Class GUI
                        Dim RTD As New RadTaskDialogPage With {
                             .Caption = " A Network Exception occurred",
                             .Heading = "A Network Exception occurred",
-                            .Text = "ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable." & vbNewLine & vbNewLine & "You are still able to manually change a Feature ID by pressing F12.",
+                            .Text = "ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable." & vbNewLine & vbNewLine & "You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List.",
                             .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
                         }
                        RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
@@ -188,6 +186,7 @@ Public Class GUI
                     FeaturesFolderURL = element("url").ToString
                 End If
             Next
+
         Catch ex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
@@ -245,6 +244,14 @@ Public Class GUI
                 Dim Name As String() = element("path").ToString.Split(CChar("."))
                 If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             Next
+
+            'Enable the Combo Box
+            Invoke(Sub() RDDL_Build.Enabled = True)
+
+            'Auto-load the newest Build if it is Enabled in the Settings
+            If My.Settings.AutoLoad = True Then
+                Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
+            End If
         Catch ex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
@@ -333,8 +340,122 @@ Public Class GUI
         'Disable Combo Box
         RDDL_Build.Enabled = False
 
-        'Run Background Worker
-        BGW_PopulateGridView.RunWorkerAsync()
+        'If "Load manually from file" is selected, then load from a TXT File, else load normally
+        If RDDL_Build.Text = "Load manually from file" Then
+            Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
+                .IsBackground = True
+            }
+            TXTThread.SetApartmentState(Threading.ApartmentState.STA)
+            TXTThread.Start()
+        ElseIf RDDL_Build.Text = Nothing Then : Else
+            'Run Background Worker
+            BGW_PopulateGridView.RunWorkerAsync()
+        End If
+    End Sub
+
+    Private Sub LoadFromManualTXT()
+
+        'Make a new OpenFileDialog
+        Dim OFD As New OpenFileDialog With {
+                .InitialDirectory = "C:\",
+                .Title = "Path to a Feature List",
+                .Filter = "Feature List|*.txt"
+            }
+        If OFD.ShowDialog() = DialogResult.OK Then
+            'Remove all Group Descriptors
+            Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
+
+            'Set Status Label
+            Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
+            'Clear Data Grid View
+            Invoke(Sub() RGV_MainGridView.Rows.Clear())
+
+            'For each line add a grid view entry
+            Try
+                For Each Line In IO.File.ReadAllLines(OFD.FileName)
+                    If Line = "## Unknown:" Then
+                        LineStage = "Modifiable"
+                    ElseIf Line = "## Always Enabled:" Then
+                        LineStage = "Always Enabled"
+                    ElseIf Line = "## Enabled By Default:" Then
+                        LineStage = "Enabled By Default"
+                    ElseIf Line = "## Disabled By Default:" Then
+                        LineStage = "Disabled by Default"
+                    ElseIf Line = "## Always Disabled:" Then
+                        LineStage = "Always Disabled"
+                    End If
+                    'Split the Line at the :
+                    Dim Str As String() = Line.Split(CChar(":"))
+
+                    'If the Line is not empty, continue
+                    If Line IsNot "" AndAlso Line.Contains("#") = False Then
+                        'Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
+                        Str(0).Replace(" ", "")
+                        Str(1).Replace(" ", "")
+                        'Get the Feature Enabled State from the currently processing line.
+                        'RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
+                        Try
+                            Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
+                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage))
+                        Catch ex As NullReferenceException
+                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), "Default", LineStage))
+                        End Try
+                    End If
+                Next
+                'Move to the first row, remove the selection and change the Status Label to Done.
+                Invoke(Sub()
+                           RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
+                           RGV_MainGridView.CurrentRow = Nothing
+                           RLE_StatusLabel.Text = "Done."
+                       End Sub)
+
+                'Enable Grouping
+                Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
+                LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
+                Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+            Catch ex As Exception
+                Invoke(Sub()
+                           'Catch Any Exception that may occur
+
+                           'Create a Button that on Click, copies the Exception Text
+                           Dim CopyExAndClose As New RadTaskDialogButton With {
+                                .Text = "Copy Exception and Close"
+                            }
+                           AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+                           'Fancy Message Box
+                           Dim RTD As New RadTaskDialogPage With {
+                                    .Caption = " An Exception occurred",
+                                    .Heading = "An unknown Exception occurred.",
+                                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                                }
+
+                           'Add the Exception Text to the Expander
+                           RTD.Expander.Text = ex.ToString
+
+                           'Set the Text for the "Collapse Info" and "More Info" Buttons
+                           RTD.Expander.ExpandedButtonText = "Collapse Exception"
+                           RTD.Expander.CollapsedButtonText = "Show Exception"
+
+                           'Add the Button to the Message Box
+                           RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+                           'Show the Message Box
+                           RadTaskDialog.ShowDialog(RTD)
+
+                           'Clear the selection
+
+                           RDDL_Build.SelectedIndex = -1
+                           RDDL_Build.Enabled = True
+                       End Sub)
+            End Try
+        Else
+            'Clear the selection
+            Invoke(Sub()
+                       RDDL_Build.SelectedIndex = -1
+                       RDDL_Build.Enabled = True
+                   End Sub)
+        End If
     End Sub
 
     ''' <summary>
@@ -360,8 +481,8 @@ Public Class GUI
 
             'Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {
-                .Encoding = System.Text.Encoding.UTF8
-            }
+                    .Encoding = System.Text.Encoding.UTF8
+                }
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
@@ -579,21 +700,6 @@ Public Class GUI
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         End Try
-    End Sub
-
-    ''' <summary>
-    ''' Form Closing Event. Used to store the My.Settings.DarkMode parameter by determining the Toggle State of RTB_ThemeToggle
-    ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
-    Private Sub GUI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'If RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
-        '    My.Settings.DarkMode = True
-        '    My.Settings.Save()
-        'Else
-        '    My.Settings.DarkMode = False
-        '    My.Settings.Save()
-        'End If
     End Sub
 
     ''' <summary>
