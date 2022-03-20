@@ -6,15 +6,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{7E667325-4E6F-49E0-A7A8-52E4B95FBB4A}</ProjectGuid>
+    <ProjectGuid>{89B985FC-8979-4D33-8986-05B03F9D617A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>ViVeTool_GUI.My.MyApplication</StartupObject>
-    <RootNamespace>ViVeTool_GUI</RootNamespace>
-    <AssemblyName>ViVeTool_GUI</AssemblyName>
+    <StartupObject>ViVeTool_GUI.FeatureScanner.My.MyApplication</StartupObject>
+    <RootNamespace>ViVeTool_GUI.FeatureScanner</RootNamespace>
+    <AssemblyName>ViVeTool_GUI.FeatureScanner</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -23,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>ViVeTool_GUI.xml</DocumentationFile>
+    <DocumentationFile>ViVeTool_GUI.FeatureScanner.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>ViVeTool_GUI.xml</DocumentationFile>
+    <DocumentationFile>ViVeTool_GUI.FeatureScanner.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -51,16 +50,6 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>bin\Debug\</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <OutputPath>bin\Release\</OutputPath>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\Debug\</OutputPath>
@@ -70,37 +59,22 @@
     <OutputPath>bin\x64\Release\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icons8-advertisement-page-96.ico</ApplicationIcon>
+    <ApplicationIcon>icons8_portrait_mode_scanning.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Albacore.ViVe">
-      <HintPath>..\lib\Albacore.ViVe.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoUpdater.NET, Version=1.7.0.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autoupdater.NET.Official.1.7.0\lib\net45\AutoUpdater.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls.GridView, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.GridView.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for WinForms R3 2021\Bin40\TelerikCommon.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -108,36 +82,24 @@
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections.Generic" />
-    <Import Include="System.Net" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutAndSettings.Designer.vb">
-      <DependentUpon>AboutAndSettings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AboutAndSettings.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="GlobalSuppressions.vb" />
-    <Compile Include="GUI.vb">
+    <Compile Include="ScannerUI.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI.Designer.vb">
-      <DependentUpon>GUI.vb</DependentUpon>
+    <Compile Include="ScannerUI.Designer.vb">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SetManual.Designer.vb">
-      <DependentUpon>SetManual.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SetManual.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="AboutAndSettings.resx">
-      <DependentUpon>AboutAndSettings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI.resx">
-      <DependentUpon>GUI.vb</DependentUpon>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="ScannerUI.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
     </EmbeddedResource>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -155,17 +117,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="SetManual.resx">
-      <DependentUpon>SetManual.vb</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -180,34 +138,15 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons8-advertisement-page-96.ico" />
-    <Content Include="Images\about.ico" />
-    <Content Include="Images\icons8_about_24.png" />
-    <Content Include="Images\icons8_about_96.png" />
-    <Content Include="Images\icons8_advertisement_page_24.png" />
-    <Content Include="Images\icons8_advertisement_page_96.png" />
-    <Content Include="Images\icons8_change_theme_24px.png" />
-    <Content Include="Images\icons8_moon_and_stars_24.png" />
-    <Content Include="Images\icons8_portrait_mode_scanning.ico" />
-    <Content Include="Images\icons8_portrait_mode_scanning_24px.png" />
-    <Content Include="Images\icons8_portrait_mode_scanning_96px.png" />
-    <Content Include="Images\icons8_registration_24px.png" />
-    <Content Include="Images\icons8_rollback_24.png" />
-    <Content Include="Images\icons8_settings_system_daydream_24px.png" />
-    <Content Include="Images\icons8_start_24.png" />
-    <Content Include="Images\icons8_sun_24.png" />
-    <Content Include="Images\icons8_toggle_off_24.png" />
-    <Content Include="Images\icons8_toggle_on_24.png" />
-    <Content Include="Images\settings_system_daydream.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ViVeTool-GUI.FeatureScanner\ViVeTool_GUI.FeatureScanner.vbproj">
-      <Project>{89b985fc-8979-4d33-8986-05b03f9d617a}</Project>
-      <Name>ViVeTool_GUI.FeatureScanner</Name>
-    </ProjectReference>
+    <Content Include="icons8_portrait_mode_scanning.ico" />
+    <Content Include="mach2.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="msdia140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions>

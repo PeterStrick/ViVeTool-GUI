@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("ViVeTool GUI")>
-<Assembly: AssemblyDescription("Windows Feature Control GUI for ViVeTool")>
+<Assembly: AssemblyTitle("ViVeTool GUI - FeatureScanner")>
+<Assembly: AssemblyDescription("Allows you to scan and download .pdb files for Feature IDs. Part of ViVeTool-GUI")>
 <Assembly: AssemblyCompany("Peters Software Solutions")>
-<Assembly: AssemblyProduct("ViVeTool GUI")>
+<Assembly: AssemblyProduct("ViVeTool GUI - FeatureScanner")>
 <Assembly: AssemblyCopyright("Copyright © 2022 Peters Software Solutions")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("97ee02d7-401c-4bd1-bc34-88d601a70eb8")>
+<Assembly: Guid("f6234f88-5fdd-460c-9931-d8da423e6b66")>
 
 ' Version information for an assembly consists of the following four values:
 '

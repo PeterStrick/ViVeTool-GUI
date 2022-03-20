@@ -56,37 +56,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property DarkMode() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property SymbolPath() As String
             Get
-                Return CType(Me("DarkMode"),Boolean)
+                Return CType(Me("SymbolPath"),String)
             End Get
             Set
-                Me("DarkMode") = value
+                Me("SymbolPath") = value
             End Set
         End Property
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property AutoLoad() As Boolean
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DebuggerPath() As String
             Get
-                Return CType(Me("AutoLoad"),Boolean)
+                Return CType(Me("DebuggerPath"),String)
             End Get
             Set
-                Me("AutoLoad") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
-        Public Property UseSystemTheme() As Boolean
-            Get
-                Return CType(Me("UseSystemTheme"),Boolean)
-            End Get
-            Set
-                Me("UseSystemTheme") = value
+                Me("DebuggerPath") = value
             End Set
         End Property
     End Class
@@ -100,9 +88,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.ViVeTool_GUI.My.MySettings
+        Friend ReadOnly Property Settings() As Global.ViVeTool_GUI.FeatureScanner.My.MySettings
             Get
-                Return Global.ViVeTool_GUI.My.MySettings.Default
+                Return Global.ViVeTool_GUI.FeatureScanner.My.MySettings.Default
             End Get
         End Property
     End Module

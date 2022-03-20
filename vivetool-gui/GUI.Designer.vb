@@ -40,7 +40,6 @@ Partial Class GUI
         Me.RL_BuildComboBoxORManaully = New Telerik.WinControls.UI.RadLabel()
         Me.RB_ManuallySetFeature = New Telerik.WinControls.UI.RadButton()
         Me.RB_About = New Telerik.WinControls.UI.RadButton()
-        Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
         Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
         Me.RMI_ActivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_DeactivateF = New Telerik.WinControls.UI.RadMenuItem()
@@ -56,7 +55,6 @@ Partial Class GUI
         CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_DataPanel.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,10 +67,12 @@ Partial Class GUI
         Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RDDL_Build.Enabled = False
         Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.NullText = "Select Build..."
         Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
+        Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
         Me.RDDL_Build.TabIndex = 0
         Me.RDDL_Build.Text = "Select Build..."
         Me.RDDL_Build.ThemeName = "Fluent"
@@ -162,7 +162,6 @@ Partial Class GUI
         Me.P_CommandPanel.Controls.Add(Me.RB_ManuallySetFeature)
         Me.P_CommandPanel.Controls.Add(Me.RB_About)
         Me.P_CommandPanel.Controls.Add(Me.RDDL_Build)
-        Me.P_CommandPanel.Controls.Add(Me.RTB_ThemeToggle)
         Me.P_CommandPanel.Controls.Add(Me.RDDB_PerformAction)
         Me.P_CommandPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.P_CommandPanel.Location = New System.Drawing.Point(0, 0)
@@ -199,21 +198,11 @@ Partial Class GUI
         'RB_About
         '
         Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
-        Me.RB_About.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.RB_About.Location = New System.Drawing.Point(756, 4)
+        Me.RB_About.Location = New System.Drawing.Point(610, 4)
         Me.RB_About.Name = "RB_About"
-        Me.RB_About.Size = New System.Drawing.Size(30, 30)
+        Me.RB_About.Size = New System.Drawing.Size(158, 30)
         Me.RB_About.TabIndex = 4
-        '
-        'RTB_ThemeToggle
-        '
-        Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_sun_24
-        Me.RTB_ThemeToggle.Location = New System.Drawing.Point(592, 4)
-        Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
-        Me.RTB_ThemeToggle.Size = New System.Drawing.Size(158, 30)
-        Me.RTB_ThemeToggle.TabIndex = 3
-        Me.RTB_ThemeToggle.Text = "  Light Theme"
-        Me.RTB_ThemeToggle.ThemeName = "Fluent"
+        Me.RB_About.Text = "  About && Settings"
         '
         'RDDB_PerformAction
         '
@@ -284,7 +273,6 @@ Partial Class GUI
         CType(Me.RL_BuildComboBoxORManaully, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_ManuallySetFeature, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_About, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_DataPanel.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -305,7 +293,6 @@ Partial Class GUI
     Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_RevertF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
-    Friend WithEvents RTB_ThemeToggle As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents P_CommandPanel As Panel
     Friend WithEvents P_DataPanel As Panel
     Friend WithEvents FluentTheme As Telerik.WinControls.Themes.FluentTheme
