@@ -5,9 +5,9 @@
 ''' </summary>
 Public Class ScannerUI
     Private WithEvents Proc As Process
-
     Private Delegate Sub AppendStdOutDelegate(ByVal text As String)
     Private Delegate Sub AppendStdErrDelegate(ByVal text As String)
+    Public BuildNumber As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber", Nothing).ToString
 
 
     ''' <summary>
@@ -48,7 +48,7 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
-    Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As Telerik.WinControls.ToolTipTextNeededEventArgs) Handles RTB_DbgPath.ToolTipTextNeeded
+    Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_DbgPath.ToolTipTextNeeded
         e.ToolTip.AutoPopDelay = 15000
         e.ToolTipText = "Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe"
     End Sub
@@ -77,7 +77,7 @@ Public Class ScannerUI
     End Sub
 
     ''' <summary>
-    ''' Checks if the Requirements are met by checking if the path in RTB_DbgPath is valid and that the path in RTB_SymbolPath is writeable
+    ''' Checks if the Requirements are met by checking if the path in RTB_DbgPath is valid and that the path in RTB_SymbolPath is writable
     ''' </summary>
     Private Sub CheckPreReq()
         'First disable the Buttons
@@ -205,6 +205,7 @@ Public Class ScannerUI
         If RTB_SymbolPath.Text = Nothing OrElse RTB_DbgPath.Text = Nothing Then
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 0)
         Else
+            'Disable the current Tab and move to the Download PDB Tab
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 100
                        RPVP_DownloadPDB.Enabled = True
@@ -255,116 +256,121 @@ Public Class ScannerUI
         Proc.CancelOutputRead()
         Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.exe - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.exe - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.dll - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.dll - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\MediaViewer\*.exe - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\MediaViewer\*.exe - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\MediaViewer\*.dll - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\MediaViewer\*.dll - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\System32\*.exe
-        'Proc.StartInfo.Arguments = "C:\Windows\System32\*.exe /oc " & My.Settings.SymbolPath & " /cn"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\System32\*.exe
+        Proc.StartInfo.Arguments = "C:\Windows\System32\*.exe /oc " & My.Settings.SymbolPath & " /cn"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\System32\*.dll
-        'Proc.StartInfo.Arguments = "C:\Windows\System32\*.dll /oc " & My.Settings.SymbolPath & " /cn"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\System32\*.dll
+        Proc.StartInfo.Arguments = "C:\Windows\System32\*.dll /oc " & My.Settings.SymbolPath & " /cn"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\SystemApps\*.exe - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\SystemApps\*.exe - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\SystemApps\*.dll - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\SystemApps\*.dll - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\SystemResources\*.exe - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\SystemResources\*.exe - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Windows\SystemResources\*.dll - Recursively
-        'Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Windows\SystemResources\*.dll - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Program Files\WindowsApps\*.exe - Recursively
-        'Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Program Files\WindowsApps\*.exe - Recursively
+        Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        ''Get the .pdb files of C:\Program Files\WindowsApps\*.dll - Recursively
-        'Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        'Proc.Start()
-        'Proc.BeginErrorReadLine()
-        'Proc.BeginOutputReadLine()
-        'Proc.WaitForExit()
-        'Proc.CancelOutputRead()
-        'Proc.CancelErrorRead()
+        'Get the .pdb files of C:\Program Files\WindowsApps\*.dll - Recursively
+        Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.Start()
+        Proc.BeginErrorReadLine()
+        Proc.BeginOutputReadLine()
+        Proc.WaitForExit()
+        Proc.CancelOutputRead()
+        Proc.CancelErrorRead()
 
-        MsgBox("Done. Downloading more PDB Files and scanning them will be available in Pre-Release Version 3")
-
+        'Disable the current tab and move to the Scan PDB Tab
+        Invoke(Sub()
+                   RPVP_ScanPDB.Enabled = True
+                   RPV_Main.SelectedPage = RPVP_ScanPDB
+                   RPVP_DownloadPDB.Enabled = False
+               End Sub)
+        ScanPDBFiles()
     End Sub
 
     ''' <summary>
@@ -418,5 +424,217 @@ Public Class ScannerUI
     ''' <param name="e">IO.FileSystem EventArgs</param>
     Private Sub FSW_SymbolPath_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FSW_SymbolPath.Created
         RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] Symbol " & e.Name & " downloaded." & vbNewLine)
+    End Sub
+
+    ''' <summary>
+    ''' Scan the PDB Files. Will also create and start a new Thread that calls ScanPDBFiles_Calculation
+    ''' </summary>
+    Private Sub ScanPDBFiles()
+        'Start the calculation of Files/Folders/Folder Size of the Symbol Folder
+        Dim ScanPDBFiles_Calculation_Thread As New Threading.Thread(AddressOf ScanPDBFiles_Calculation) With {
+            .IsBackground = True
+        }
+        ScanPDBFiles_Calculation_Thread.SetApartmentState(Threading.ApartmentState.MTA)
+        ScanPDBFiles_Calculation_Thread.Start()
+
+        'Scan the .pdb files
+        With Proc.StartInfo
+            .FileName = Application.StartupPath & "\mach2.exe" 'Path to mach2.exe
+            .Arguments = "scan " & My.Settings.SymbolPath & " -i " & My.Settings.SymbolPath & " -o " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt -u -s"
+            .WorkingDirectory = Application.StartupPath 'Set the Working Directory to the path of mach2
+            .UseShellExecute = True 'mach2 will crash without this
+            .CreateNoWindow = False 'Create a Window
+            .WindowStyle = ProcessWindowStyle.Minimized 'Minimize the Window
+            .RedirectStandardError = False 'mach2 will crash without this
+            .RedirectStandardOutput = False 'mach2 will crash without this
+        End With
+
+        'Rescan until the Exitcode is 0
+        Do Until Proc.ExitCode = 0
+            Proc.Start()
+            Proc.WaitForExit()
+
+            If Proc.ExitCode >= 1 Then
+                Invoke(Sub()
+                           Dim RTD As New RadTaskDialogPage With {
+                                .Caption = " An Error occurred",
+                                .Heading = "An Error occurred",
+                                .Text = "An Error occurred while scanning the symbol files." & vbNewLine & vbNewLine & "The application will attempt to rescan the symbol folder.",
+                                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                            }
+                           'Show the Message Box
+                           RadTaskDialog.ShowDialog(RTD)
+                       End Sub)
+            End If
+        Loop
+
+        'Disable the current tab and move to the Done Tab
+        Invoke(Sub()
+                   RPVP_Done.Enabled = True
+                   RPV_Main.SelectedPage = RPVP_Done
+                   RPVP_ScanPDB.Enabled = False
+               End Sub)
+        Done()
+    End Sub
+
+    ''' <summary>
+    ''' Calculates the File/Folder Size and the Folder Amount of the Symbol Folder, while the application is scanning the PDB Files
+    ''' </summary>
+    Private Sub ScanPDBFiles_Calculation()
+        'Set Labels
+        Invoke(Sub()
+                   RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & "Calculating..."
+                   RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & "Calculating..."
+                   RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & "Calculating..."
+               End Sub)
+
+        'Calculate Size of the Symbol Folder
+        Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
+        Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+
+        'Calculate amount of Total Files in the Symbol Folder
+        Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
+        Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+
+        'Calculate amount of Total Folders in the Symbol Folder
+        Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
+        Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+    End Sub
+
+    ''' <summary>
+    ''' Variable that stores the Total File Size of the Symbol Folder
+    ''' </summary>
+    Dim TotalSize As Long = 0
+
+    ''' <summary>
+    ''' Functions that get's the total Size of a Folder
+    ''' </summary>
+    ''' <param name="RootFolder">Folder to get the total Size from</param>
+    ''' <returns>Total Folder Size of RootFolder as Long</returns>
+    Public Function GetDirSize(RootFolder As String) As Long
+        Dim FolderInfo = New IO.DirectoryInfo(RootFolder)
+        For Each File In FolderInfo.GetFiles : TotalSize += File.Length
+        Next
+        For Each SubFolderInfo In FolderInfo.GetDirectories : GetDirSize(SubFolderInfo.FullName)
+        Next
+        Return TotalSize
+    End Function
+
+    ''' <summary>
+    ''' Last things to do in the Done Tab.
+    ''' </summary>
+    Private Sub Done()
+        'Replace Labels
+        Invoke(Sub()
+                   RL_OutputFile.Text = "Output File: " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
+                   RB_OA_DeleteSymbolPath.Text = "Delete " & My.Settings.SymbolPath
+                   RL_Done.Text.Replace("Features", BuildNumber)
+                   RB_OA_CopyFeaturesTXT.Text.Replace("Features", BuildNumber)
+               End Sub)
+
+        'Show Notification
+        RDA_DoneNotification.Show()
+    End Sub
+
+    ''' <summary>
+    ''' Copy Features.TXT File to the Desktop
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click
+        Try
+            IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", My.Computer.FileSystem.SpecialDirectories.Desktop & "\" & BuildNumber & ".txt")
+            Dim RTD As New RadTaskDialogPage With {
+                       .Caption = " File Copy successful",
+                       .Heading = BuildNumber & ".txt was successfully copied to your desktop.",
+                       .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
+                   }
+            'Show the Message Box
+            RadTaskDialog.ShowDialog(RTD)
+        Catch ex As Exception
+            'Create a Button that on Click, copies the Exception Text
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                    .Text = "Copy Exception and Close"
+                }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+            Dim RTD As New RadTaskDialogPage With {
+                        .Caption = " An Exception occurred",
+                        .Heading = "An Exception occurred",
+                        .Text = "An Exception occurred while trying to copy " & BuildNumber & ".txt to your desktop.",
+                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                    }
+
+            'Add the Exception Text to the Expander
+            RTD.Expander.Text = ex.Message
+
+            'Set the Text for the "Collapse Info" and "More Info" Buttons
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+
+            'Add the Button to the Message Box
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+            'Show the Message Box
+            RadTaskDialog.ShowDialog(RTD)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Delete the Symbol Folder
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RB_OA_DeleteSymbolPath_Click(sender As Object, e As EventArgs) Handles RB_OA_DeleteSymbolPath.Click
+        Try
+            IO.Directory.Delete(My.Settings.SymbolPath, True)
+            Dim RTD As New RadTaskDialogPage With {
+                       .Caption = " Symbol Folder deleted successfully",
+                       .Heading = My.Settings.SymbolPath & "was successfully deleted.",
+                       .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
+                   }
+            'Show the Message Box
+            RadTaskDialog.ShowDialog(RTD)
+        Catch ex As Exception
+            'Create a Button that on Click, copies the Exception Text
+            Dim CopyExAndClose As New RadTaskDialogButton With {
+                    .Text = "Copy Exception and Close"
+                }
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+            Dim RTD As New RadTaskDialogPage With {
+                        .Caption = " An Exception occurred",
+                        .Heading = "An Exception occurred",
+                        .Text = "An Exception occurred while trying to delete " & My.Settings.SymbolPath,
+                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                    }
+
+            'Add the Exception Text to the Expander
+            RTD.Expander.Text = ex.Message
+
+            'Set the Text for the "Collapse Info" and "More Info" Buttons
+            RTD.Expander.ExpandedButtonText = "Collapse Exception"
+            RTD.Expander.CollapsedButtonText = "Show Exception"
+
+            'Add the Button to the Message Box
+            RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+            'Show the Message Box
+            RadTaskDialog.ShowDialog(RTD)
+        End Try
+    End Sub
+
+    Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Load About Labels
+        Dim ApplicationTitle As String
+        If My.Application.Info.Title <> "" Then
+            ApplicationTitle = My.Application.Info.Title
+        Else
+            ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
+        End If
+        Me.RL_ProductName.Text = My.Application.Info.ProductName
+        Me.RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
+        Me.RL_License.Text = My.Application.Info.Copyright
+        Me.RL_Description.Text = My.Application.Info.Description
     End Sub
 End Class

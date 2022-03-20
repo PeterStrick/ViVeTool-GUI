@@ -12,20 +12,40 @@
     </asmv3:windowsSettings>
   </asmv3:application>
 
-  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+		<security>
+			<requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+				<!-- UAC-Manifestoptionen
+             Wenn Sie die Ebene der Benutzerkontensteuerung für Windows ändern möchten, ersetzen Sie den 
+             Knoten "requestedExecutionLevel" wie folgt.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Durch Angabe des Elements "requestedExecutionLevel" wird die Datei- und Registrierungsvirtualisierung deaktiviert. 
+            Entfernen Sie dieses Element, wenn diese Virtualisierung aus Gründen der Abwärtskompatibilität
+            für die Anwendung erforderlich ist.
+        -->
+				<requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+			</requestedPrivileges>
+		</security>
+	</trustInfo>
+
+	<compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
       <!-- A list of all Windows versions that this application is designed to work with. 
       Windows will automatically select the most compatible environment.-->
       <!-- Windows 10 -->
-      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+		<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
       <!-- Windows 8.1 -->
-      <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+		<!-- <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/> -->
       <!-- Windows Vista -->
-      <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/>
+		<!-- <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/> -->
       <!-- Windows 7 -->
-      <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+		<!-- <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/> -->
       <!-- Windows 8 -->
-      <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+		<!-- <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/> -->
 
     </application>
   </compatibility>

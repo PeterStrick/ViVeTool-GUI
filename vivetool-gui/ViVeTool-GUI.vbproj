@@ -191,6 +191,9 @@
     <Content Include="Images\icons8_advertisement_page_96.png" />
     <Content Include="Images\icons8_change_theme_24px.png" />
     <Content Include="Images\icons8_moon_and_stars_24.png" />
+    <Content Include="Images\icons8_portrait_mode_scanning.ico" />
+    <Content Include="Images\icons8_portrait_mode_scanning_24px.png" />
+    <Content Include="Images\icons8_portrait_mode_scanning_96px.png" />
     <Content Include="Images\icons8_registration_24px.png" />
     <Content Include="Images\icons8_rollback_24.png" />
     <Content Include="Images\icons8_settings_system_daydream_24px.png" />
