@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-  <version>1.5.2.0</version>
-  <url>https://github.com/PeterStrick/ViVeTool-GUI/releases/download/v1.5.2/ViVeTool.GUI.1.5.2.Portable.zip</url>
+  <version>1.6.0.1</version>
+  <url>https://github.com/PeterStrick/ViVeTool-GUI/releases/download/v1.6/ViVeTool.GUI.1.6.Portable.zip</url>
   <changelog>https://github.com/PeterStrick/ViVeTool-GUI/releases/latest</changelog>
-  <mandatory>true</mandatory>
-  <checksum algorithm="SHA256">736030D0AE4143BB1B77B5B9019BEC8FD07E7955DEF3F72F2955C07AABEB8041</checksum>
+  <mandatory>false</mandatory>
+  <checksum algorithm="SHA256">D0D4E7DAA07FFC3EC2BF10D055B59EFDE7D0EB7162218D53A926B4C031704D66</checksum>
 </item>
