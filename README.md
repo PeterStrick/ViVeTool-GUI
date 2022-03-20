@@ -2,11 +2,11 @@
 ![GitHub License](https://img.shields.io/github/license/peterstrick/vivetool-gui)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/peterstrick/vivetool-gui)
 
-# ViVeTool-GUI <img src="/images/icons8-advertisement-page-96.png" alt="ViVeTool-GUI Logo" width="32"/> 
+# ViVeTool GUI <img src="/images/icons8-advertisement-page-96.png" alt="ViVeTool GUI Logo" width="32"/> 
 ### Windows Feature Control GUI based on ViVeTool
 
-## What is ViVeTool-GUI?
-ViVeTool-GUI let´s you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
+## What is ViVeTool GUI?
+ViVeTool GUI let´s you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
 
 ## Disclaimer.
 ### No one, including me / [PeterStrick](https://github.com/PeterStrick), [the creators of ViVe and ViVeTool](https://github.com/thebookisclosed/ViVe) or [the creators of mach2](https://github.com/riverar/mach2) are responsible for any damage or unintended side effects, this program might cause to your computer, by changing the Windows Feature Store. Use this program at your own risk.
@@ -41,7 +41,7 @@ Either:
 ---
 
 ## What are the additional features?
-Apart from being able to manage features, ViVeTool-GUI let´s you also:
+Apart from being able to manage features, ViVeTool GUI let´s you also:
 - Load in a Feature List of other Builds
 - Search for Features <img align="right" width="500" height="228" src="/images/Searching.gif" alt="Image showing you how to search" />
 - Sort Features by Feature Name, Feature ID or Feature State
@@ -51,16 +51,18 @@ Apart from being able to manage features, ViVeTool-GUI let´s you also:
 - and at last, view the About Box by either pressing on the About Icon, or selecting the "About..." Item in the Application System Menu.
 
 ## What are the System Requirements?
-Since ViVeTool-GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and newer is the only OS Requirement.
+Since ViVeTool GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and newer is the only OS Requirement.
 
 Apart from that, the only Requirement is .Net Framework 4.8
 
 ## Why not just use ViVeTool?
-Using ViVeTool-GUI is more easier and user-friendly, besides it let's you also search for features and enable them with a few clicks.
+Using ViVeTool GUI is more easier and user-friendly, besides it let's you also search for features and enable them with a few clicks.
 
 # Licensing
-ViVeTool-GUI uses Icons from [icons8.com](https://icons8.com/)
+ViVeTool GUI uses Icons from [icons8.com](https://icons8.com/)
 
-ViVeTool-GUI is inspired by [ViVeTool](https://github.com/thebookisclosed/ViVe) and uses the [ViVe API](https://github.com/thebookisclosed/ViVe/tree/master/ViVe)
+ViVeTool GUI is inspired by [ViVeTool](https://github.com/thebookisclosed/ViVe) and uses the [ViVe API](https://github.com/thebookisclosed/ViVe/tree/master/ViVe)
 
-ViVeTool-GUI uses [files](https://github.com/riverar/mach2/tree/master/features) from [mach2](https://github.com/riverar/mach2) for the Build Combo Box.
+ViVeTool GUI uses [files](https://github.com/riverar/mach2/tree/master/features) from [mach2](https://github.com/riverar/mach2) for the Build Combo Box.
+
+ViVeTool GUI - Feature Scanner uses [mach2](https://github.com/riverar/mach2) to create it's Feature Lists
