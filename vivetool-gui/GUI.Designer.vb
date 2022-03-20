@@ -261,7 +261,7 @@ Partial Class GUI
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.Text = "[VERSION 1.6 PRE-RELEASE 3] ViVeTool GUI"
+        Me.Text = "ViVeTool GUI"
         Me.ThemeName = "Fluent"
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).EndInit()

@@ -108,7 +108,7 @@ Partial Class ScannerUI
         Me.RPV_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RPV_Main.Location = New System.Drawing.Point(0, 0)
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_About
+        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
         Me.RPV_Main.Size = New System.Drawing.Size(832, 516)
         Me.RPV_Main.TabIndex = 0
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -492,7 +492,7 @@ Partial Class ScannerUI
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.Text = "[VERSION 1.6 PRE-RELEASE 3] ViVeTool GUI - Feature Scanner"
+        Me.Text = "ViVeTool GUI - Feature Scanner"
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RPV_Main.ResumeLayout(False)
         Me.RPVP_Setup.ResumeLayout(False)
