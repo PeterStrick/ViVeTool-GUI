@@ -1,6 +1,6 @@
 # Building ViVeTool-GUI
 ### Build Requirements:
-- ViVeTool-GUI was created in Visual Sttudio 2022. Older Versions may work
+- ViVeTool GUI was created in Visual Studio 2022. Older Versions may not work.
 - Windows 10 Version 2004 / Windows 11
 
 ### The first time you open up the solution, you´ll be met with Reference Issues.
