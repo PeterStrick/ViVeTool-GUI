@@ -128,7 +128,7 @@ Public Class GUI
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
-        Invoke(Sub() RDDL_Build.Items.Add("Load manually from file"))
+        'Invoke(Sub() RDDL_Build.Items.Add("Load manually from file"))
 
         If CheckForInternetConnection() = True Then
             'Populate the Build Combo Box
@@ -187,18 +187,18 @@ Public Class GUI
                 End If
             Next
 
-        Catch ex As WebException
+        Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -252,18 +252,18 @@ Public Class GUI
             If My.Settings.AutoLoad = True Then
                 Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
             End If
-        Catch ex As WebException
+        Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -340,8 +340,8 @@ Public Class GUI
         'Disable Combo Box
         RDDL_Build.Enabled = False
 
-        'If "Load manually from file" is selected, then load from a TXT File, else load normally
-        If RDDL_Build.Text = "Load manually from file" Then
+        'If "Load manually..." is selected, then load from a TXT File, else load normally
+        If RDDL_Build.Text = "Load manually..." Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
             }
