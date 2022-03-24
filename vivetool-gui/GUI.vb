@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Option Strict On
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
 
 ''' <summary>
@@ -101,6 +102,10 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Listen to Application Crashes and show CrashReporter.Net if one occurs.
+        AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
+        AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
+
         'Make a Background Thread that handles Background Tasks
         Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {
             .IsBackground = True
@@ -128,7 +133,7 @@ Public Class GUI
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
-        'Invoke(Sub() RDDL_Build.Items.Add("Load manually from file"))
+        Invoke(Sub() RDDL_Build.Items.Add("Load manually..."))
 
         If CheckForInternetConnection() = True Then
             'Populate the Build Combo Box
