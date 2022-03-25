@@ -244,12 +244,36 @@ Public Class GUI
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
+#Region "Old Code"
             'For each element in the Array, add a Combo Box Item with the name of the path element
+            'For Each element In JSONArrayFeatures
+            '    Dim Name As String() = element("path").ToString.Split(CChar("."))
+            '    If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
+            'Next
+#End Region
+#Region "Collection was modified Hotfix"
+            Dim tempList As New List(Of String)
+
             For Each element In JSONArrayFeatures
-                Dim Name As String() = element("path").ToString.Split(CChar("."))
-                If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
+                If element("path").ToString.Split(CChar("."))(1) = "txt" Then
+                    tempList.Add(element("path").ToString.Split(CChar("."))(0))
+                End If
             Next
 
+            Invoke(Sub()
+                       'Add the Items of tempList to the Combo Box
+                       RDDL_Build.Items.AddRange(tempList)
+
+                       'Deselect any Item
+                       RDDL_Build.SelectedIndex = -1
+
+                       'Set default Text
+                       RDDL_Build.Text = "Select Build..."
+
+                       'Add the Handler
+                       AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
+                   End Sub)
+#End Region
             'Enable the Combo Box
             Invoke(Sub() RDDL_Build.Enabled = True)
 
@@ -338,7 +362,7 @@ Public Class GUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub PopulateDataGridView(sender As Object, e As EventArgs) Handles RDDL_Build.SelectedIndexChanged
+    Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
@@ -346,6 +370,7 @@ Public Class GUI
         RDDL_Build.Enabled = False
 
         'If "Load manually..." is selected, then load from a TXT File, else load normally
+        MsgBox(RDDL_Build.Text)
         If RDDL_Build.Text = "Load manually..." Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
