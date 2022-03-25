@@ -361,6 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/.sonarqube/conf
+
+# SonarCloud / SonarScan
+/.sonarqube/
+/.snoar/
+/.sonarcloud/
 /Scan-SonarCloudProject.ps1
 /Scan-SonarCloudProject.ps1.bak
