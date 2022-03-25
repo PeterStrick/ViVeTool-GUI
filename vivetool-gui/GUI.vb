@@ -135,7 +135,7 @@ Public Class GUI
         'Add manual option
         Invoke(Sub() RDDL_Build.Items.Add("Load manually..."))
 
-        If CheckForInternetConnection() = True Then
+        If CheckForInternetConnection() Then
             'Populate the Build Combo Box
             PopulateBuildComboBox()
 
@@ -278,7 +278,7 @@ Public Class GUI
             Invoke(Sub() RDDL_Build.Enabled = True)
 
             'Auto-load the newest Build if it is Enabled in the Settings
-            If My.Settings.AutoLoad = True Then
+            If My.Settings.AutoLoad Then
                 Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
             End If
         Catch webex As WebException
@@ -377,7 +377,9 @@ Public Class GUI
             }
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
-        ElseIf RDDL_Build.Text = Nothing Then : Else
+        ElseIf RDDL_Build.Text = Nothing Then
+            'Do Nothing
+        Else
             'Run Background Worker
             BGW_PopulateGridView.RunWorkerAsync()
         End If

@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Option Strict On
 Imports Telerik.WinControls, Telerik.WinControls.UI
 
 ''' <summary>
@@ -20,8 +21,8 @@ Imports Telerik.WinControls, Telerik.WinControls.UI
 ''' </summary>
 Public Class ScannerUI
     Private WithEvents Proc As Process
-    Private Delegate Sub AppendStdOutDelegate(ByVal text As String)
-    Private Delegate Sub AppendStdErrDelegate(ByVal text As String)
+    Private Delegate Sub AppendStdOutDelegate(text As String)
+    Private Delegate Sub AppendStdErrDelegate(text As String)
     Public BuildNumber As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber", Nothing).ToString
 
     ''' <summary>
