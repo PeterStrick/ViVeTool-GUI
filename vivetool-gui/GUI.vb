@@ -370,7 +370,6 @@ Public Class GUI
         RDDL_Build.Enabled = False
 
         'If "Load manually..." is selected, then load from a TXT File, else load normally
-        MsgBox(RDDL_Build.Text)
         If RDDL_Build.Text = "Load manually..." Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
