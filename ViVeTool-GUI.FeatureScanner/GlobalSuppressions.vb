@@ -6,3 +6,4 @@
 Imports System.Diagnostics.CodeAnalysis
 
 <Assembly: SuppressMessage("Minor Code Smell", "S1125:Boolean literals should not be redundant", Justification:="<Ausstehend>", Scope:="member", Target:="~M:ViVeTool_GUI.FeatureScanner.My.MyApplication.MyApplication_Startup(System.Object,Microsoft.VisualBasic.ApplicationServices.StartupEventArgs)")>
+<Assembly: SuppressMessage("Minor Code Smell", "S1075:URIs should not be hardcoded", Justification:="<Ausstehend>", Scope:="member", Target:="~M:ViVeTool_GUI.FeatureScanner.ScannerUI.RB_OA_CopyFeaturesTXT_Click(System.Object,System.EventArgs)")>

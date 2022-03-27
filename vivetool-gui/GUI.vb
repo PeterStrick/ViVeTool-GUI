@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Option Strict On
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
 
 ''' <summary>
@@ -101,6 +102,10 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Listen to Application Crashes and show CrashReporter.Net if one occurs.
+        AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
+        AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
+
         'Make a Background Thread that handles Background Tasks
         Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {
             .IsBackground = True
@@ -128,9 +133,9 @@ Public Class GUI
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
-        Invoke(Sub() RDDL_Build.Items.Add("Load manually from file"))
+        Invoke(Sub() RDDL_Build.Items.Add("Load manually..."))
 
-        If CheckForInternetConnection() = True Then
+        If CheckForInternetConnection() Then
             'Populate the Build Combo Box
             PopulateBuildComboBox()
 
@@ -187,18 +192,18 @@ Public Class GUI
                 End If
             Next
 
-        Catch ex As WebException
+        Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -239,31 +244,55 @@ Public Class GUI
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
+#Region "Old Code"
             'For each element in the Array, add a Combo Box Item with the name of the path element
+            'For Each element In JSONArrayFeatures
+            '    Dim Name As String() = element("path").ToString.Split(CChar("."))
+            '    If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
+            'Next
+#End Region
+#Region "Collection was modified Hotfix"
+            Dim tempList As New List(Of String)
+
             For Each element In JSONArrayFeatures
-                Dim Name As String() = element("path").ToString.Split(CChar("."))
-                If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
+                If element("path").ToString.Split(CChar("."))(1) = "txt" Then
+                    tempList.Add(element("path").ToString.Split(CChar("."))(0))
+                End If
             Next
 
+            Invoke(Sub()
+                       'Add the Items of tempList to the Combo Box
+                       RDDL_Build.Items.AddRange(tempList)
+
+                       'Deselect any Item
+                       RDDL_Build.SelectedIndex = -1
+
+                       'Set default Text
+                       RDDL_Build.Text = "Select Build..."
+
+                       'Add the Handler
+                       AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
+                   End Sub)
+#End Region
             'Enable the Combo Box
             Invoke(Sub() RDDL_Build.Enabled = True)
 
             'Auto-load the newest Build if it is Enabled in the Settings
-            If My.Settings.AutoLoad = True Then
+            If My.Settings.AutoLoad Then
                 Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
             End If
-        Catch ex As WebException
+        Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(ex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(ex.Response, HttpWebResponse).StatusDescription
+            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -333,21 +362,23 @@ Public Class GUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub PopulateDataGridView(sender As Object, e As EventArgs) Handles RDDL_Build.SelectedIndexChanged
+    Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
         'Disable Combo Box
         RDDL_Build.Enabled = False
 
-        'If "Load manually from file" is selected, then load from a TXT File, else load normally
-        If RDDL_Build.Text = "Load manually from file" Then
+        'If "Load manually..." is selected, then load from a TXT File, else load normally
+        If RDDL_Build.Text = "Load manually..." Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
             }
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
-        ElseIf RDDL_Build.Text = Nothing Then : Else
+        ElseIf RDDL_Build.Text = Nothing Then
+            'Do Nothing
+        Else
             'Run Background Worker
             BGW_PopulateGridView.RunWorkerAsync()
         End If
