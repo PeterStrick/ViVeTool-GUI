@@ -251,6 +251,7 @@ Public Class GUI
             '    If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             'Next
 #End Region
+
 #Region "Collection was modified Hotfix"
             Dim tempList As New List(Of String)
 
