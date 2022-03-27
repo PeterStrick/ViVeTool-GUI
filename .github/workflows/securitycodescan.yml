@@ -26,10 +26,10 @@ jobs:
         uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
         
       - name: Restore dependencies	
-        run: dotnet restore
+        run: nuget restore
 
       - name: Build
-        run: dotnet build --no-restore
+        run: msbuild
 
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
