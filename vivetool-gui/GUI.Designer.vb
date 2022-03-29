@@ -63,23 +63,6 @@ Partial Class GUI
         '
         'RDDL_Build
         '
-        'Me.RDDL_Build.AutoSize = False
-        'Me.RDDL_Build.DropDownAnimationEnabled = True
-        'Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
-        'Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
-        'Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        'Me.RDDL_Build.Enabled = False
-        'RadListDataItem1.Text = "Load manually..."
-        'Me.RDDL_Build.Items.Add(RadListDataItem1)
-        'Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
-        'Me.RDDL_Build.Name = "RDDL_Build"
-        'Me.RDDL_Build.NullText = "Select Build..."
-        'Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
-        'Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
-        'Me.RDDL_Build.TabIndex = 0
-        'Me.RDDL_Build.ThemeName = "Fluent"
-        'CType(Me.RDDL_Build.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        'CType(Me.RDDL_Build.GetChildAt(0), Telerik.WinControls.UI.RadDropDownListElement).AutoSize = True
         Me.RDDL_Build.AutoSize = False
         Me.RDDL_Build.DropDownAnimationEnabled = True
         Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)

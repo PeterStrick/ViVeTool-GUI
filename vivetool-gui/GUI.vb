@@ -502,6 +502,9 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
+            'Debug
+            Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
+
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
@@ -509,7 +512,12 @@ Public Class GUI
             Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
 
             'Clear Data Grid View
-            Invoke(Sub() RGV_MainGridView.Rows.Clear())
+            'Fix for a weird Bug that happens randomly while clearing the rows if the search row has text in it
+            Try
+                Invoke(Sub() RGV_MainGridView.Rows.Clear())
+            Catch ex As Exception
+                Diagnostics.Debug.WriteLine("Exception while clearing row. Build: " & RDDL_Build.Text & ". " & ex.Message)
+            End Try
 
             'Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {
