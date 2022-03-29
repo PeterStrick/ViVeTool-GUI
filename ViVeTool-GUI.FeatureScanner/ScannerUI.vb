@@ -238,6 +238,9 @@ Public Class ScannerUI
         End If
     End Sub
 
+    ''' <summary>
+    ''' Downloads all the .pdb files of C:\Windows\*.*, C:\Program Files\*.*, C:\Program Files (x86)\*.* to the path specified in My.Settings.SymbolPath
+    ''' </summary>
     Private Sub DownloadPDBFiles()
         'Set up the File System Watcher
         FSW_SymbolPath.SynchronizingObject = Me
@@ -253,8 +256,8 @@ Public Class ScannerUI
             .RedirectStandardOutput = True 'Enables Redirection of Standard Output
         End With
 
-        'Get the .pdb files of C:\Windows\*.exe
-        Proc.StartInfo.Arguments = "C:\Windows\*.exe /oc " & My.Settings.SymbolPath & " /cn"
+        'Get the .pdb files of C:\Windows\*.* - Recursively
+        Proc.StartInfo.Arguments = "C:\Windows\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
@@ -262,8 +265,8 @@ Public Class ScannerUI
         Proc.CancelOutputRead()
         Proc.CancelErrorRead()
 
-        'Get the .pdb files of C:\Windows\*.dll
-        Proc.StartInfo.Arguments = "C:\Windows\*.dll /oc " & My.Settings.SymbolPath & " /cn"
+        'Get the .pdb files of C:\Program Files\*.* - Recursively
+        Proc.StartInfo.Arguments = "C:\Program Files\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
@@ -271,107 +274,8 @@ Public Class ScannerUI
         Proc.CancelOutputRead()
         Proc.CancelErrorRead()
 
-        'Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.exe - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\ImmersiveControlPanel\*.dll - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\ImmersiveControlPanel\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\MediaViewer\*.exe - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\MediaViewer\*.dll - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\MediaViewer\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\System32\*.exe
-        Proc.StartInfo.Arguments = "C:\Windows\System32\*.exe /oc " & My.Settings.SymbolPath & " /cn"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\System32\*.dll
-        Proc.StartInfo.Arguments = "C:\Windows\System32\*.dll /oc " & My.Settings.SymbolPath & " /cn"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\SystemApps\*.exe - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\SystemApps\*.dll - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\SystemApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\SystemResources\*.exe - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Windows\SystemResources\*.dll - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\SystemResources\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Program Files\WindowsApps\*.exe - Recursively
-        Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.exe /oc " & My.Settings.SymbolPath & " /cn /r"
-        Proc.Start()
-        Proc.BeginErrorReadLine()
-        Proc.BeginOutputReadLine()
-        Proc.WaitForExit()
-        Proc.CancelOutputRead()
-        Proc.CancelErrorRead()
-
-        'Get the .pdb files of C:\Program Files\WindowsApps\*.dll - Recursively
-        Proc.StartInfo.Arguments = "C:\Program Files\WindowsApps\*.dll /oc " & My.Settings.SymbolPath & " /cn /r"
+        'Get the .pdb files of C:\Program Files (x86)\*.* - Recursively
+        Proc.StartInfo.Arguments = "C:\Program Files (x86)\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
@@ -548,7 +452,28 @@ Public Class ScannerUI
                End Sub)
 
         'Show Notification
-        RDA_DoneNotification.Show()
+        Invoke(Sub()
+                   Try
+                       Dim RDA_Done As New RadDesktopAlert With {
+                        .CaptionText = "Debug Symbol Scan complete",
+                        .ContentText = "The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.",
+                        .Opacity = 1,
+                        .ShowCloseButton = True,
+                        .ShowPinButton = False,
+                        .ShowOptionsButton = False,
+                        .AutoClose = False,
+                        .AutoSize = True,
+                        .CanMove = False,
+                        .FadeAnimationType = FadeAnimationType.FadeOut,
+                        .IsPinned = True,
+                        .PopupAnimationDirection = RadDirection.Up
+                    }
+                       RDA_Done.Show()
+                   Catch ex As Exception
+                       'Sometimes, again rarely the RadDesktopAlert will fail so we fall back to a god ol' message box
+                       MsgBox("The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.", vbInformation, "Debug Symbol Scan complete")
+                   End Try
+               End Sub)
     End Sub
 
     ''' <summary>
@@ -639,6 +564,11 @@ Public Class ScannerUI
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Form Load Event. Loads the labels and configures CrashReporter.Net
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
@@ -655,5 +585,46 @@ Public Class ScannerUI
         Me.RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.RL_License.Text = My.Application.Info.Copyright
         Me.RL_Description.Text = My.Application.Info.Description
+    End Sub
+
+    ''' <summary>
+    ''' Changes the Application theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="args">StateChanging EventArgs</param>
+    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
+        If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
+            ThemeResolutionService.ApplicationThemeName = "FluentDark"
+            RTB_ThemeToggle.Text = "Dark Theme"
+            RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+            My.Settings.DarkMode = True
+        Else
+            ThemeResolutionService.ApplicationThemeName = "Fluent"
+            RTB_ThemeToggle.Text = "Light Theme"
+            RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+            My.Settings.DarkMode = False
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Changes the Application theme, using the System Theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="args">StateChanged EventArgs</param>
+    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
+        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
+            My.Settings.UseSystemTheme = True
+            Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+            Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+            If CInt(AppsUseLightTheme_CurrentUserDwordValue) = 0 Then
+                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.On
+                RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+            Else
+                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.Off
+                RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+            End If
+        Else
+            My.Settings.UseSystemTheme = False
+        End If
     End Sub
 End Class

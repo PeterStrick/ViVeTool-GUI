@@ -40,6 +40,38 @@ Namespace My
                 RadTaskDialog.ShowDialog(RTD)
                 End
             End If
+
+            'Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
+            If My.Settings.UseSystemTheme = True Then
+                'Set ToggleState for RTB_UseSystemTheme
+                ScannerUI.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+
+                'Get Regsitry Key Value
+                Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+                Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+
+                'If the Value is 0 then Light Mode is Disabled, if it is 1 then it is Enabled
+                If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                    ScannerUI.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                Else
+                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                    ScannerUI.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                End If
+            Else
+                'Set ToggleState for RTB_UseSystemTheme
+                ScannerUI.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+
+                If Settings.DarkMode Then
+                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
+                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                    ScannerUI.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                Else
+                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
+                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                    ScannerUI.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                End If
+            End If
         End Sub
     End Class
 End Namespace

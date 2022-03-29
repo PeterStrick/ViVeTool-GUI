@@ -23,7 +23,7 @@ Public NotInheritable Class AboutAndSettings
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub AboutAndSettings_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub AboutAndSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Load the About Labels
         LoadAboutLabels()
     End Sub
@@ -63,7 +63,7 @@ Public NotInheritable Class AboutAndSettings
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="args"></param>
-    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
+    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
             RTB_ThemeToggle.Text = "Dark Theme"
@@ -96,11 +96,21 @@ Public NotInheritable Class AboutAndSettings
         End If
     End Sub
 
+    ''' <summary>
+    ''' FormClosing Event. Saves My.Settings
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub AboutAndSettings_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.Save()
     End Sub
 
-    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
+    ''' <summary>
+    ''' Changes the Application theme, using the System Theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="args">StateChanged EventArgs</param>
+    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
         If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
             My.Settings.UseSystemTheme = True
             Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
@@ -117,8 +127,13 @@ Public NotInheritable Class AboutAndSettings
         End If
     End Sub
 
+    ''' <summary>
+    ''' Changes if the latest Build should be auto-loaded, depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub RTS_AutoLoad_ValueChanged(sender As Object, e As EventArgs) Handles RTS_AutoLoad.ValueChanged
-        If RTS_AutoLoad.Value = True Then
+        If RTS_AutoLoad.Value Then
             My.Settings.AutoLoad = True
         Else
             My.Settings.AutoLoad = False

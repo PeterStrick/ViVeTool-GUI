@@ -89,10 +89,10 @@ Partial Class AboutAndSettings
         Me.RPVP_About.Controls.Add(Me.RL_Version)
         Me.RPVP_About.Controls.Add(Me.RL_License)
         Me.RPVP_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
-        Me.RPVP_About.ItemSize = New System.Drawing.SizeF(156.0!, 36.0!)
-        Me.RPVP_About.Location = New System.Drawing.Point(6, 42)
+        Me.RPVP_About.ItemSize = New System.Drawing.SizeF(154.0!, 32.0!)
+        Me.RPVP_About.Location = New System.Drawing.Point(6, 38)
         Me.RPVP_About.Name = "RPVP_About"
-        Me.RPVP_About.Size = New System.Drawing.Size(372, 280)
+        Me.RPVP_About.Size = New System.Drawing.Size(372, 284)
         Me.RPVP_About.Text = "  About ViVeTool-GUI"
         '
         'PB_AppImage
@@ -152,10 +152,10 @@ Partial Class AboutAndSettings
         Me.RPVP_Settings.Controls.Add(Me.RGB_Theming)
         Me.RPVP_Settings.Controls.Add(Me.RGB_Behaviour)
         Me.RPVP_Settings.Image = CType(resources.GetObject("RPVP_Settings.Image"), System.Drawing.Image)
-        Me.RPVP_Settings.ItemSize = New System.Drawing.SizeF(89.0!, 36.0!)
-        Me.RPVP_Settings.Location = New System.Drawing.Point(6, 42)
+        Me.RPVP_Settings.ItemSize = New System.Drawing.SizeF(87.0!, 32.0!)
+        Me.RPVP_Settings.Location = New System.Drawing.Point(6, 38)
         Me.RPVP_Settings.Name = "RPVP_Settings"
-        Me.RPVP_Settings.Size = New System.Drawing.Size(372, 280)
+        Me.RPVP_Settings.Size = New System.Drawing.Size(372, 284)
         Me.RPVP_Settings.Text = "  Settings"
         '
         'RadGroupBox1
@@ -242,7 +242,7 @@ Partial Class AboutAndSettings
         '
         'AboutAndSettings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(384, 328)
         Me.Controls.Add(Me.RPV_Main)
