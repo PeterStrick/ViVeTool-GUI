@@ -257,7 +257,7 @@ Public Class ScannerUI
         End With
 
         'Get the .pdb files of C:\Windows\*.* - Recursively
-        Proc.StartInfo.Arguments = "C:\Windows\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.StartInfo.Arguments = "/r ""C:\Windows"" /oc """ & My.Settings.SymbolPath & """ /cn"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
@@ -266,7 +266,7 @@ Public Class ScannerUI
         Proc.CancelErrorRead()
 
         'Get the .pdb files of C:\Program Files\*.* - Recursively
-        Proc.StartInfo.Arguments = "C:\Program Files\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.StartInfo.Arguments = "/r ""C:\Program Files"" /oc """ & My.Settings.SymbolPath & """ /cn"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
@@ -275,7 +275,7 @@ Public Class ScannerUI
         Proc.CancelErrorRead()
 
         'Get the .pdb files of C:\Program Files (x86)\*.* - Recursively
-        Proc.StartInfo.Arguments = "C:\Program Files (x86)\*.* /oc " & My.Settings.SymbolPath & " /cn /r"
+        Proc.StartInfo.Arguments = "/r ""C:\Program Files (x86)"" /oc """ & My.Settings.SymbolPath & """ /cn"
         Proc.Start()
         Proc.BeginErrorReadLine()
         Proc.BeginOutputReadLine()
