@@ -109,31 +109,7 @@ n.png"></p>
 			</div>
 		</div>
 =09
-<div id=3D"volume-booster-visusalizer">
-                    <div class=3D"sound">
-                        <div class=3D"sound-icon"></div>
-                        <div class=3D"sound-wave sound-wave_one"></div>
-                        <div class=3D"sound-wave sound-wave_two"></div>
-                        <div class=3D"sound-wave sound-wave_three"></div>
-                    </div>
-                    <div class=3D"segments-box">
-                        <div data-range=3D"1-20" class=3D"segment"><span></=
-span></div>
-                        <div data-range=3D"21-40" class=3D"segment"><span><=
-/span></div>
-                        <div data-range=3D"41-60" class=3D"segment"><span><=
-/span></div>
-                        <div data-range=3D"61-80" class=3D"segment"><span><=
-/span></div>
-                        <div data-range=3D"81-100" class=3D"segment"><span>=
-</span></div>
-                    </div>
-                </div></body><grammarly-desktop-integration data-grammarly-=
-shadow-root=3D"true"><template shadowmode=3D"open"><div aria-label=3D"gramm=
-arly-integration" role=3D"group" tabindex=3D"-1" class=3D"grammarly-desktop=
--integration" data-content=3D"{&quot;mode&quot;:&quot;full&quot;,&quot;isAc=
-tive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></gramm=
-arly-desktop-integration></html>
+</html>
 ------MultipartBoundary--6n7hEIwXOPW2wheSAQ2Nb3LOYS8sshNnGcLEufCNtl----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
