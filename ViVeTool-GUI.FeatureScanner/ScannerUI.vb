@@ -408,16 +408,29 @@ Public Class ScannerUI
                End Sub)
 
         'Calculate Size of the Symbol Folder
-        Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
-        Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+        Try
+            Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
+            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+        Catch ex As Exception
+            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": IO Error")
+        End Try
 
         'Calculate amount of Total Files in the Symbol Folder
-        Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
-        Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+        Try
+            Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
+            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+        Catch ex As Exception
+            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": IO Error")
+        End Try
 
         'Calculate amount of Total Folders in the Symbol Folder
-        Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
-        Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+        Try
+            Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
+            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+        Catch ex As Exception
+            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": IO Error")
+        End Try
+
     End Sub
 
     ''' <summary>

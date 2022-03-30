@@ -120,6 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.manifest" />
+    <AdditionalFiles Include="C_Please_Change_CrashReporter.vb.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

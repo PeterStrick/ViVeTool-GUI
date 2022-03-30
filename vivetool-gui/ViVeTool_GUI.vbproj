@@ -166,6 +166,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Include="C_Please_Change_CrashReporter.vb.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
     <Content Include="icons8-advertisement-page-96.ico" />
     <Content Include="Images\about.ico" />
     <Content Include="Images\icons8_about_24.png" />
