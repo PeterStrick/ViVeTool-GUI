@@ -359,7 +359,7 @@ Public Class ScannerUI
         'Scan the .pdb files
         With Proc.StartInfo
             .FileName = Application.StartupPath & "\mach2.exe" 'Path to mach2.exe
-            .Arguments = "scan " & My.Settings.SymbolPath & " -i " & My.Settings.SymbolPath & " -o " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt -u -s"
+            .Arguments = "scan """ & My.Settings.SymbolPath & """ -i """ & My.Settings.SymbolPath & """ -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
             .WorkingDirectory = Application.StartupPath 'Set the Working Directory to the path of mach2
             .UseShellExecute = True 'mach2 will crash without this
             .CreateNoWindow = False 'Create a Window
@@ -369,7 +369,8 @@ Public Class ScannerUI
         End With
 
         'Rescan until the Exitcode is 0
-        Do Until Proc.ExitCode = 0
+        Dim mach2_ExitCode As Integer = 1
+        Do Until mach2_ExitCode = 0
             Proc.Start()
             Proc.WaitForExit()
 
@@ -384,6 +385,8 @@ Public Class ScannerUI
                            'Show the Message Box
                            RadTaskDialog.ShowDialog(RTD)
                        End Sub)
+            Else
+                mach2_ExitCode = 0
             End If
         Loop
 
