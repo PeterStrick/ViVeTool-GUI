@@ -93,7 +93,7 @@ Public NotInheritable Class AboutAndSettings
                 Dim CopyExAndClose As New RadTaskDialogButton With {
                     .Text = "Copy Exception and Close"
                 }
-                AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+                AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(wex.ToString))
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
@@ -104,7 +104,7 @@ Public NotInheritable Class AboutAndSettings
                     }
 
                 'Add the Exception Text to the Expander
-                RTD.Expander.Text = ex.ToString
+                RTD.Expander.Text = wex.ToString
 
                 'Set the Text for the "Collapse Info" and "More Info" Buttons
                 RTD.Expander.ExpandedButtonText = "Collapse Exception"
