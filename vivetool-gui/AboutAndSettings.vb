@@ -84,7 +84,38 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="e"></param>
     Private Sub RB_ViVeTool_GUI_FeatureScanner_Click(sender As Object, e As EventArgs) Handles RB_ViVeTool_GUI_FeatureScanner.Click
         If IO.File.Exists(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe") Then
-            Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+            Try
+                Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+            Catch wex As System.ComponentModel.Win32Exception
+                'Catch Any Exception that may occur
+
+                'Create a Button that on Click, copies the Exception Text
+                Dim CopyExAndClose As New RadTaskDialogButton With {
+                    .Text = "Copy Exception and Close"
+                }
+                AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+
+                'Fancy Message Box
+                Dim RTD As New RadTaskDialogPage With {
+                        .Caption = " An Exception occurred",
+                        .Heading = "A generic Win32 Exception occurred.",
+                        .Text = "There could be multiple causes for Win32 Exceptions, but they usually narrow down to Antivirus Software interfering with ViVeTool GUI, or Permission problems.",
+                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                    }
+
+                'Add the Exception Text to the Expander
+                RTD.Expander.Text = ex.ToString
+
+                'Set the Text for the "Collapse Info" and "More Info" Buttons
+                RTD.Expander.ExpandedButtonText = "Collapse Exception"
+                RTD.Expander.CollapsedButtonText = "Show Exception"
+
+                'Add the Button to the Message Box
+                RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+                'Show the Message Box
+                RadTaskDialog.ShowDialog(RTD)
+            End Try
         Else
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Error occurred",

@@ -393,7 +393,7 @@ Public Class GUI
                 .Title = "Path to a Feature List",
                 .Filter = "Feature List|*.txt"
             }
-        If OFD.ShowDialog() = DialogResult.OK Then
+        If OFD.ShowDialog() = DialogResult.OK AndAlso IO.File.Exists(OFD.FileName) Then
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
