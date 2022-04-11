@@ -15,7 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Imports Telerik.WinControls.UI
 ''' <summary>
-''' About & Settings Dialog/Form
+''' About && Settings Dialog/Form
 ''' </summary>
 Public NotInheritable Class AboutAndSettings
     ''' <summary>
@@ -146,7 +146,9 @@ Public NotInheritable Class AboutAndSettings
             My.Settings.UseSystemTheme = True
             Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
             Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+#Disable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
             If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+#Enable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
                 RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
                 RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
             Else
