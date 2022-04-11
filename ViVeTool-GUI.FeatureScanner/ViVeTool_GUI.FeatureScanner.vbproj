@@ -93,6 +93,7 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="ScannerUI.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

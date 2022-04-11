@@ -115,7 +115,7 @@ Partial Class ScannerUI
         Me.RPV_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RPV_Main.Location = New System.Drawing.Point(0, 0)
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
+        Me.RPV_Main.SelectedPage = Me.RPVP_Done
         Me.RPV_Main.Size = New System.Drawing.Size(832, 516)
         Me.RPV_Main.TabIndex = 0
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -231,7 +231,7 @@ Partial Class ScannerUI
         Me.RTB_SymbolPath.NullText = "Path to store the downloaded Debugging Symbols to"
         Me.RTB_SymbolPath.ReadOnly = True
         Me.RTB_SymbolPath.ShowNullText = True
-        Me.RTB_SymbolPath.Size = New System.Drawing.Size(581, 24)
+        Me.RTB_SymbolPath.Size = New System.Drawing.Size(581, 28)
         Me.RTB_SymbolPath.TabIndex = 1
         '
         'RTB_DbgPath
@@ -241,7 +241,7 @@ Partial Class ScannerUI
         Me.RTB_DbgPath.NullText = "Path to symchk.exe from the Windows 10/11 SDK"
         Me.RTB_DbgPath.ReadOnly = True
         Me.RTB_DbgPath.ShowNullText = True
-        Me.RTB_DbgPath.Size = New System.Drawing.Size(581, 24)
+        Me.RTB_DbgPath.Size = New System.Drawing.Size(581, 28)
         Me.RTB_DbgPath.TabIndex = 0
         '
         'RPVP_DownloadPDB
@@ -502,7 +502,7 @@ Partial Class ScannerUI
         '
         'ScannerUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(832, 516)
         Me.Controls.Add(Me.RPV_Main)

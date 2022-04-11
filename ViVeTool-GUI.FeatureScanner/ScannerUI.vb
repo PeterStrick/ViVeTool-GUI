@@ -463,8 +463,8 @@ Public Class ScannerUI
         Invoke(Sub()
                    RL_OutputFile.Text = "Output File: " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
                    RB_OA_DeleteSymbolPath.Text = "Delete " & My.Settings.SymbolPath
-                   RL_Done.Text.Replace("Features", BuildNumber)
-                   RB_OA_CopyFeaturesTXT.Text.Replace("Features", BuildNumber)
+                   RL_Done.Text.Replace("Features.txt", BuildNumber & ".txt")
+                   RB_OA_CopyFeaturesTXT.Text.Replace("Features.txt", BuildNumber & ".txt")
                End Sub)
 
         'Show Notification
@@ -643,4 +643,5 @@ Public Class ScannerUI
             My.Settings.UseSystemTheme = False
         End If
     End Sub
+
 End Class
