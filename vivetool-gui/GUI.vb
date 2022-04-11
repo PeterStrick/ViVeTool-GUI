@@ -97,6 +97,16 @@ Public Class GUI
     End Function
 
     ''' <summary>
+    ''' Set´s the DoubleBuffered Property of a given RadGridView to true. Helps with Flickering.
+    ''' </summary>
+    ''' <param name="dgv">RadGridView to enable Double Buffering on</param>
+    Public Sub EnableDoubleBuffered_RadGridView(dgv As RadGridView)
+        Dim dgvType As Type = dgv.[GetType]()
+        Dim pi As Reflection.PropertyInfo = dgvType.GetProperty("DoubleBuffered", Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
+        pi.SetValue(dgv, True, Nothing)
+    End Sub
+
+    ''' <summary>
     ''' Load Event, Populates the Build Combo Box
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
@@ -115,6 +125,9 @@ Public Class GUI
 
         'Disable the close button in the search row
         RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
+
+        'Remove some if not most of the Flickering on the RadGridView
+        EnableDoubleBuffered_RadGridView(RGV_MainGridView)
     End Sub
 
     ''' <summary>
