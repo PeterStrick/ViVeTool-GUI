@@ -99,11 +99,11 @@ Public Class GUI
     ''' <summary>
     ''' Set´s the DoubleBuffered Property of a given RadGridView to true. Helps with Flickering.
     ''' </summary>
-    ''' <param name="dgv">RadGridView to enable Double Buffering on</param>
-    Public Sub EnableDoubleBuffered_RadGridView(dgv As RadGridView)
-        Dim dgvType As Type = dgv.[GetType]()
-        Dim pi As Reflection.PropertyInfo = dgvType.GetProperty("DoubleBuffered", Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
-        pi.SetValue(dgv, True, Nothing)
+    ''' <param name="RGV">RadGridView to enable Double Buffering on</param>
+    Public Sub EnableDoubleBuffered_RadGridView(RGV As RadGridView)
+        Dim RGVType As Type = RGV.[GetType]()
+        Dim PropertyInfo As Reflection.PropertyInfo = RGVType.GetProperty("DoubleBuffered", Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
+        PropertyInfo.SetValue(RGVType, True, Nothing)
     End Sub
 
     ''' <summary>
@@ -142,7 +142,7 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Check for Internet Connectivity before trying to populate the Build COmbo Box
+    ''' Check for Internet Connectivity before trying to populate the Build Combo Box
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
@@ -399,7 +399,6 @@ Public Class GUI
     End Sub
 
     Private Sub LoadFromManualTXT()
-
         'Make a new OpenFileDialog
         Dim OFD As New OpenFileDialog With {
                 .InitialDirectory = "C:\",
@@ -542,7 +541,7 @@ Public Class GUI
             'For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
 
-                ' Check Line Stage, used for Grouping
+                'Check Line Stage, used for Grouping
                 Try
                     If CInt(RDDL_Build.Text) >= 17704 Then
                         If Line = "## Unknown:" Then
@@ -596,7 +595,7 @@ Public Class GUI
 
             'Enable Grouping
             Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
-            LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
+            LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
             Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
         Else
             Return

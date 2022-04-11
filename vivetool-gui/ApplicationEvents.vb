@@ -16,12 +16,6 @@
 Imports System.Configuration
 
 Namespace My
-    ' Für MyApplication sind folgende Ereignisse verfügbar:
-    ' Startup: Wird beim Starten der Anwendung noch vor dem Erstellen des Startformulars ausgelöst.
-    ' Shutdown: Wird nach dem Schließen aller Anwendungsformulare ausgelöst.  Dieses Ereignis wird nicht ausgelöst, wenn die Anwendung mit einem Fehler beendet wird.
-    ' UnhandledException: Wird bei einem Ausnahmefehler ausgelöst.
-    ' StartupNextInstance: Wird beim Starten einer Einzelinstanzanwendung ausgelöst, wenn die Anwendung bereits aktiv ist. 
-    ' NetworkAvailabilityChanged: Wird beim Herstellen oder Trennen der Netzwerkverbindung ausgelöst.
     ''' <summary>
     ''' .Net Framework Application Framework
     ''' </summary>
@@ -47,7 +41,7 @@ Namespace My
 
             'Load Settings States from My.Settings
             'Set ToggleState for RTS_AutoLoad
-            If My.Settings.AutoLoad Then
+            If Settings.AutoLoad Then
                 AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
             Else
                 AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
@@ -63,9 +57,9 @@ Namespace My
                 Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
 
                 'If the Value is 0 then Light Mode is Disabled, if it is 1 then it is Enabled
-#Disable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
+#Disable Warning BC42018
                 If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
-#Enable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
+#Enable Warning BC42018
                     AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
                     AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else

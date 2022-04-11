@@ -493,7 +493,7 @@ Public Class ScannerUI
     End Sub
 
     ''' <summary>
-    ''' Copy Features.TXT File to the Desktop
+    ''' Copy the Features.txt File to the Desktop
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
@@ -643,5 +643,4 @@ Public Class ScannerUI
             My.Settings.UseSystemTheme = False
         End If
     End Sub
-
 End Class

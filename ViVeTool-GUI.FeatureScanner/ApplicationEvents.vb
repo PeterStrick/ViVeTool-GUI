@@ -16,20 +16,14 @@
 Imports System.Configuration, Telerik.WinControls.UI
 
 Namespace My
-    ' Für MyApplication sind folgende Ereignisse verfügbar:
-    ' Startup: Wird beim Starten der Anwendung noch vor dem Erstellen des Startformulars ausgelöst.
-    ' Shutdown: Wird nach dem Schließen aller Anwendungsformulare ausgelöst.  Dieses Ereignis wird nicht ausgelöst, wenn die Anwendung mit einem Fehler beendet wird.
-    ' UnhandledException: Wird bei einem Ausnahmefehler ausgelöst.
-    ' StartupNextInstance: Wird beim Starten einer Einzelinstanzanwendung ausgelöst, wenn die Anwendung bereits aktiv ist. 
-    ' NetworkAvailabilityChanged: Wird beim Herstellen oder Trennen der Netzwerkverbindung ausgelöst.
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             'Transfers older My.Settings to newer ViVeTool GUI Versions if applicable.
             If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then Settings.Upgrade()
 
             'Load the Text Boxes
-            ScannerUI.RTB_DbgPath.Text = My.Settings.DebuggerPath
-            ScannerUI.RTB_SymbolPath.Text = My.Settings.SymbolPath
+            ScannerUI.RTB_DbgPath.Text = Settings.DebuggerPath
+            ScannerUI.RTB_SymbolPath.Text = Settings.SymbolPath
 
             'Check if mach2.exe and msdia140.dll are present
             If IO.File.Exists(Application.Info.DirectoryPath & "\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\msdia140.dll") = False Then
@@ -49,14 +43,14 @@ Namespace My
                 'Set ToggleState for RTB_UseSystemTheme
                 ScannerUI.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
 
-                'Get Regsitry Key Value
+                'Get Registry Key Value
                 Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
                 Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
 
                 'If the Value is 0 then Light Mode is Disabled, if it is 1 then it is Enabled
-#Disable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
+#Disable Warning BC42018
                 If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
-#Enable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
+#Enable Warning BC42018
                     ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
                     ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
