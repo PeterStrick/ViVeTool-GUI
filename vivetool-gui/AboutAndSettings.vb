@@ -15,7 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Imports Telerik.WinControls.UI
 ''' <summary>
-''' About & Settings Dialog/Form
+''' About && Settings Dialog/Form
 ''' </summary>
 Public NotInheritable Class AboutAndSettings
     ''' <summary>
@@ -23,7 +23,7 @@ Public NotInheritable Class AboutAndSettings
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub AboutAndSettings_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+    Private Sub AboutAndSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Load the About Labels
         LoadAboutLabels()
     End Sub
@@ -63,7 +63,7 @@ Public NotInheritable Class AboutAndSettings
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="args"></param>
-    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
+    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
             RTB_ThemeToggle.Text = "Dark Theme"
@@ -84,7 +84,38 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="e"></param>
     Private Sub RB_ViVeTool_GUI_FeatureScanner_Click(sender As Object, e As EventArgs) Handles RB_ViVeTool_GUI_FeatureScanner.Click
         If IO.File.Exists(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe") Then
-            Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+            Try
+                Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+            Catch wex As System.ComponentModel.Win32Exception
+                'Catch Any Exception that may occur
+
+                'Create a Button that on Click, copies the Exception Text
+                Dim CopyExAndClose As New RadTaskDialogButton With {
+                    .Text = "Copy Exception and Close"
+                }
+                AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(wex.ToString))
+
+                'Fancy Message Box
+                Dim RTD As New RadTaskDialogPage With {
+                        .Caption = " An Exception occurred",
+                        .Heading = "A generic Win32 Exception occurred.",
+                        .Text = "There could be multiple causes for Win32 Exceptions, but they usually narrow down to Antivirus Software interfering with ViVeTool GUI, or Permission problems.",
+                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                    }
+
+                'Add the Exception Text to the Expander
+                RTD.Expander.Text = wex.ToString
+
+                'Set the Text for the "Collapse Info" and "More Info" Buttons
+                RTD.Expander.ExpandedButtonText = "Collapse Exception"
+                RTD.Expander.CollapsedButtonText = "Show Exception"
+
+                'Add the Button to the Message Box
+                RTD.CommandAreaButtons.Add(CopyExAndClose)
+
+                'Show the Message Box
+                RadTaskDialog.ShowDialog(RTD)
+            End Try
         Else
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Error occurred",
@@ -96,16 +127,28 @@ Public NotInheritable Class AboutAndSettings
         End If
     End Sub
 
+    ''' <summary>
+    ''' FormClosing Event. Saves My.Settings
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub AboutAndSettings_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         My.Settings.Save()
     End Sub
 
-    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
+    ''' <summary>
+    ''' Changes the Application theme, using the System Theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="args">StateChanged EventArgs</param>
+    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
         If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
             My.Settings.UseSystemTheme = True
             Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
             Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+#Disable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
             If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+#Enable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
                 RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
                 RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
             Else
@@ -117,8 +160,13 @@ Public NotInheritable Class AboutAndSettings
         End If
     End Sub
 
+    ''' <summary>
+    ''' Changes if the latest Build should be auto-loaded, depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub RTS_AutoLoad_ValueChanged(sender As Object, e As EventArgs) Handles RTS_AutoLoad.ValueChanged
-        If RTS_AutoLoad.Value = True Then
+        If RTS_AutoLoad.Value Then
             My.Settings.AutoLoad = True
         Else
             My.Settings.AutoLoad = False

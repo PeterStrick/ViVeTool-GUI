@@ -118,16 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RL_Introduction.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Welcome to the ViVeTool GUI Feature Scanner&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;This Tool is used to download and scan .pdb (Program Debug Database) Files on newer Windows 10/11 Insider Builds to create your own Feature List.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The ViVeTool GUI Feature Scanner &lt;strong&gt;is not supposed to be used by the average user&lt;/strong&gt;. Downloading PDB Files from the Microsoft Symbol Server usually takes an average of 2 Hours depending on your Internet Speed.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;This Tool requires:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;5~8GB of Disk Space to store the downloaded Debug Symbols into&lt;/li&gt;&lt;li&gt;A installed copy of the Debugging Tools for Windows available from the Windows SDK &lt;a href="https://developer.microsoft.com/windows/downloads/windows-sdk/"&gt;here&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;After making sure that the requirements are met, set the Text Boxes below to their respective values and press on "Continue". Hover over them to for an example.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;After that, the application will automatically start to download PDB Files.&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;Welcome to the ViVeTool GUI Feature Scanner&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;This Tool is used to download and scan .pdb (Program Debug Database) Files on newer Windows 10/11 Insider Builds to create your own Feature List.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The ViVeTool GUI Feature Scanner &lt;strong&gt;is not supposed to be used by the average user&lt;/strong&gt;. Downloading PDB Files from the Microsoft Symbol Server usually takes an average of 2 Hours depending on your Internet Speed.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;This Tool requires:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;5~8GB of Disk Space to store the downloaded Debug Symbols into&lt;/li&gt;&lt;li&gt;A installed copy of the Debugging Tools for Windows available from the Windows SDK &lt;a href="https://developer.microsoft.com/windows/downloads/windows-sdk/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;here&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;After making sure that the requirements are met, set the Text Boxes below to their respective values and press on "Continue". Hover over them to for an example.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;After that, the application will automatically start to download PDB Files.&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows\ImmersiveControlPanel, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows\MediaViewer, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows\System32, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows\SystemApps, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows\SystemResources, C:\Program Files\WindowsApps&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time, depending on the amount of programs and apps that you have currently installed.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;The Feature Scanner will now automatically begin scanning the PDB Files using mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Do &lt;strong&gt;not &lt;/strong&gt;close this Window or mach2, until mach2 is done scanning.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;You will be notified by a desktop notification once the scan completes.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;The scan has completed. You can now either:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Review your Features.txt file&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Upload your Features.txt file to the &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;mach2 Repository&lt;/a&gt; (will appear in the Build Combo Box once uploaded)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;or Import your Features.txt file into ViVeTool-GUI by selecting the "Use Manual" Drop Down at the bottom of the Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;The scan has completed. You can now either:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Review your Features.txt file&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Upload your Features.txt file to the &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2 Repository&lt;/a&gt; (will appear in the Build Combo Box once uploaded)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;or Import your Features.txt file into ViVeTool-GUI by selecting the "Use Manual" Drop Down at the bottom of the Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -153,9 +156,6 @@
         4bPs1YxJnPAHOArIxgifZa9mTOKEPzDCU0AxavidsFfThl+MGn5qZFL+3lBFURRFURRFURRFURTljOjq
         +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <metadata name="FSW_SymbolPath.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -701,22 +701,10 @@
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
   </data>
-  <metadata name="RDA_DoneNotification.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>191, 17</value>
+  <metadata name="FluentLight.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>163, 17</value>
   </metadata>
-  <data name="RDA_DoneNotification.ContentImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAjJJREFUaEPt
-        mcsyA0EUhrOxwYO48xxKFd7ETglvYYcViYVLRIQEGfdc2MltRynlmjKv4OhOnWaanlHT3elk0V/Vt+ma
-        Ouc/MZ1UHRGLxWLpTM5u6o2zmxqcXlOrcFKiVuCkWAGnWH7Hx7SRdq4baacEe7li01SuAKljah52j/Lh
-        +wWEB6dQBnxMGwHhiVfh+wWFzxVuP/AxbZDgrl/45KHUAD/h8cg4LHzy8DJ8Bu8nj0fGYeF3slID/Lw2
-        eMQx/QYTUy9wTwRF7yZfYRzLcrDwO9kLiQH+ubCk8eOvICo+YFkOFl5qABLeDbqwghBKYlkOEtyl4ROZ
-        c+1fGkYGaCms8eTzJ/TMLUPXzGIoe6MrnTNA9+ySMGSQdOiOGECXWNYcohAqYllzsMb2DrR7AF1iWXOI
-        QqiIZc3BGts70O4BdIllzSEKoSKWbQ1jc/VTIox+W4PRaA1GBA5Hq5xD87yD85U/DlAXqOWm/cS+hbKD
-        7dUZi9YvTQ9APMf2rUH0GqiIZc0hCqEiljUHa2x/B9o9gC6xrD48u0rhXlIUQkUsy7GeyDaIEE9kwu9G
-        vbtKPOKYfoEnURBJH7EsB4aH+HYm/F+Ihae7SjziaC62XuFZECaU9IPwW2yx8LHtA7kB2KIVj4zDwse2
-        JAbwbonxyDgsfGxrX2IAwYrbs6vU/g8Oz4X9fm1Y+LVNqQF8wzfFx7QRFH5tMy0xwFHe9Qvfil0lCe/6
-        hV/dSOvfjVosFosGIpEv6ob+oh6V3aIAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 17</value>
+  </metadata>
 </root>

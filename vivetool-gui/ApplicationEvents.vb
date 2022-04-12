@@ -13,13 +13,9 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Imports System.Configuration
+
 Namespace My
-    ' Für MyApplication sind folgende Ereignisse verfügbar:
-    ' Startup: Wird beim Starten der Anwendung noch vor dem Erstellen des Startformulars ausgelöst.
-    ' Shutdown: Wird nach dem Schließen aller Anwendungsformulare ausgelöst.  Dieses Ereignis wird nicht ausgelöst, wenn die Anwendung mit einem Fehler beendet wird.
-    ' UnhandledException: Wird bei einem Ausnahmefehler ausgelöst.
-    ' StartupNextInstance: Wird beim Starten einer Einzelinstanzanwendung ausgelöst, wenn die Anwendung bereits aktiv ist. 
-    ' NetworkAvailabilityChanged: Wird beim Herstellen oder Trennen der Netzwerkverbindung ausgelöst.
     ''' <summary>
     ''' .Net Framework Application Framework
     ''' </summary>
@@ -32,52 +28,56 @@ Namespace My
         ''' <param name="sender">Default sender Object</param>
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
-            ' Check for Build
+            'Check for Build
             If Environment.OSVersion.Version.Build >= 18963 Then
-                ' OS Build Check passed.
+                'OS Build Check passed.
             Else
                 MsgBox("You are running a unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is: " & Environment.OSVersion.Version.Build.ToString, vbCritical, "Unsupported Build")
                 Environment.Exit(-1)
             End If
 
+            'Transfers older My.Settings to newer ViVeTool GUI Versions if applicable.
+            If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then Settings.Upgrade()
+
             'Load Settings States from My.Settings
             'Set ToggleState for RTS_AutoLoad
-            If My.Settings.AutoLoad = True Then
+            If Settings.AutoLoad Then
                 AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
             Else
                 AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
             End If
 
-            'Set ToggleState for RTB_UseSystemTheme
-            If My.Settings.UseSystemTheme = True Then
-                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-            Else
-                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-            End If
-
             'Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
-            If My.Settings.UseSystemTheme = True Then
+            If Settings.UseSystemTheme Then
+                'Set ToggleState for RTB_UseSystemTheme
+                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+
                 'Get Regsitry Key Value
-                Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+                Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
                 Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
 
                 'If the Value is 0 then Light Mode is Disabled, if it is 1 then it is Enabled
+#Disable Warning BC42018
                 If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+#Enable Warning BC42018
                     AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
                     AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             Else
+                'Set ToggleState for RTB_UseSystemTheme
+                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+
                 If Settings.DarkMode Then
                     Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
                     AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
                     Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
                     AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    AboutAndSettings.RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             End If
         End Sub

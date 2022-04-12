@@ -22,7 +22,6 @@ Partial Class ScannerUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScannerUI))
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_Setup = New Telerik.WinControls.UI.RadPageViewPage()
@@ -51,15 +50,19 @@ Partial Class ScannerUI
         Me.RB_OA_CopyFeaturesTXT = New Telerik.WinControls.UI.RadButton()
         Me.RL_Done = New Telerik.WinControls.UI.RadLabel()
         Me.RL_OutputFile = New Telerik.WinControls.UI.RadLabel()
-        Me.RPVP_About = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.PB_AppImage = New System.Windows.Forms.PictureBox()
+        Me.RPVP_AboutAndSettings = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RGB_Theming = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RTB_UseSystemTheme = New Telerik.WinControls.UI.RadToggleButton()
+        Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
         Me.RL_Comments = New Telerik.WinControls.UI.RadLabel()
         Me.RL_ProductName = New Telerik.WinControls.UI.RadLabel()
         Me.RL_Description = New Telerik.WinControls.UI.RadLabel()
         Me.RL_Version = New Telerik.WinControls.UI.RadLabel()
         Me.RL_License = New Telerik.WinControls.UI.RadLabel()
+        Me.PB_AppImage = New System.Windows.Forms.PictureBox()
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
-        Me.RDA_DoneNotification = New Telerik.WinControls.UI.RadDesktopAlert(Me.components)
+        Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
+        Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -86,13 +89,17 @@ Partial Class ScannerUI
         CType(Me.RB_OA_CopyFeaturesTXT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_Done, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_OutputFile, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RPVP_About.SuspendLayout()
-        CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RPVP_AboutAndSettings.SuspendLayout()
+        CType(Me.RGB_Theming, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RGB_Theming.SuspendLayout()
+        CType(Me.RTB_UseSystemTheme, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_Comments, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_ProductName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_Description, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_Version, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -103,12 +110,12 @@ Partial Class ScannerUI
         Me.RPV_Main.Controls.Add(Me.RPVP_DownloadPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_ScanPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_Done)
-        Me.RPV_Main.Controls.Add(Me.RPVP_About)
+        Me.RPV_Main.Controls.Add(Me.RPVP_AboutAndSettings)
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
         Me.RPV_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RPV_Main.Location = New System.Drawing.Point(0, 0)
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
+        Me.RPV_Main.SelectedPage = Me.RPVP_Done
         Me.RPV_Main.Size = New System.Drawing.Size(832, 516)
         Me.RPV_Main.TabIndex = 0
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -315,7 +322,7 @@ Partial Class ScannerUI
         '
         Me.RL_InfoScan.Location = New System.Drawing.Point(6, 3)
         Me.RL_InfoScan.Name = "RL_InfoScan"
-        Me.RL_InfoScan.Size = New System.Drawing.Size(709, 105)
+        Me.RL_InfoScan.Size = New System.Drawing.Size(571, 90)
         Me.RL_InfoScan.TabIndex = 0
         Me.RL_InfoScan.Text = resources.GetString("RL_InfoScan.Text")
         '
@@ -377,29 +384,53 @@ Partial Class ScannerUI
         Me.RL_OutputFile.TabIndex = 5
         Me.RL_OutputFile.Text = "Output File: "
         '
-        'RPVP_About
+        'RPVP_AboutAndSettings
         '
-        Me.RPVP_About.Controls.Add(Me.PB_AppImage)
-        Me.RPVP_About.Controls.Add(Me.RL_Comments)
-        Me.RPVP_About.Controls.Add(Me.RL_ProductName)
-        Me.RPVP_About.Controls.Add(Me.RL_Description)
-        Me.RPVP_About.Controls.Add(Me.RL_Version)
-        Me.RPVP_About.Controls.Add(Me.RL_License)
-        Me.RPVP_About.ItemSize = New System.Drawing.SizeF(48.0!, 29.0!)
-        Me.RPVP_About.Location = New System.Drawing.Point(6, 35)
-        Me.RPVP_About.Name = "RPVP_About"
-        Me.RPVP_About.Size = New System.Drawing.Size(820, 475)
-        Me.RPVP_About.Text = "About"
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RGB_Theming)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Comments)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_ProductName)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Description)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Version)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_License)
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.PB_AppImage)
+        Me.RPVP_AboutAndSettings.ItemSize = New System.Drawing.SizeF(109.0!, 29.0!)
+        Me.RPVP_AboutAndSettings.Location = New System.Drawing.Point(6, 35)
+        Me.RPVP_AboutAndSettings.Name = "RPVP_AboutAndSettings"
+        Me.RPVP_AboutAndSettings.Size = New System.Drawing.Size(820, 475)
+        Me.RPVP_AboutAndSettings.Text = "About & Settings"
         '
-        'PB_AppImage
+        'RGB_Theming
         '
-        Me.PB_AppImage.Image = CType(resources.GetObject("PB_AppImage.Image"), System.Drawing.Image)
-        Me.PB_AppImage.Location = New System.Drawing.Point(6, 3)
-        Me.PB_AppImage.Name = "PB_AppImage"
-        Me.PB_AppImage.Size = New System.Drawing.Size(48, 48)
-        Me.PB_AppImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PB_AppImage.TabIndex = 9
-        Me.PB_AppImage.TabStop = False
+        Me.RGB_Theming.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RGB_Theming.Controls.Add(Me.RTB_UseSystemTheme)
+        Me.RGB_Theming.Controls.Add(Me.RTB_ThemeToggle)
+        Me.RGB_Theming.HeaderMargin = New System.Windows.Forms.Padding(1)
+        Me.RGB_Theming.HeaderText = "Theming"
+        Me.RGB_Theming.Location = New System.Drawing.Point(61, 336)
+        Me.RGB_Theming.Name = "RGB_Theming"
+        Me.RGB_Theming.Size = New System.Drawing.Size(360, 80)
+        Me.RGB_Theming.TabIndex = 2
+        Me.RGB_Theming.Text = "Theming"
+        '
+        'RTB_UseSystemTheme
+        '
+        Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_change_theme_24px
+        Me.RTB_UseSystemTheme.Location = New System.Drawing.Point(180, 23)
+        Me.RTB_UseSystemTheme.Name = "RTB_UseSystemTheme"
+        Me.RTB_UseSystemTheme.Size = New System.Drawing.Size(158, 35)
+        Me.RTB_UseSystemTheme.TabIndex = 5
+        Me.RTB_UseSystemTheme.Text = "  Use System Theme"
+        Me.RTB_UseSystemTheme.ThemeName = "Fluent"
+        '
+        'RTB_ThemeToggle
+        '
+        Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_sun_24
+        Me.RTB_ThemeToggle.Location = New System.Drawing.Point(22, 23)
+        Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
+        Me.RTB_ThemeToggle.Size = New System.Drawing.Size(138, 35)
+        Me.RTB_ThemeToggle.TabIndex = 4
+        Me.RTB_ThemeToggle.Text = "  Light Theme"
+        Me.RTB_ThemeToggle.ThemeName = "Fluent"
         '
         'RL_Comments
         '
@@ -452,31 +483,22 @@ Partial Class ScannerUI
         Me.RL_License.Text = "CHANGED AT RUNTIME - License"
         Me.RL_License.TextAlignment = System.Drawing.ContentAlignment.TopLeft
         '
+        'PB_AppImage
+        '
+        Me.PB_AppImage.Image = CType(resources.GetObject("PB_AppImage.Image"), System.Drawing.Image)
+        Me.PB_AppImage.Location = New System.Drawing.Point(6, 3)
+        Me.PB_AppImage.Name = "PB_AppImage"
+        Me.PB_AppImage.Size = New System.Drawing.Size(48, 48)
+        Me.PB_AppImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PB_AppImage.TabIndex = 9
+        Me.PB_AppImage.TabStop = False
+        '
         'FSW_SymbolPath
         '
         Me.FSW_SymbolPath.EnableRaisingEvents = True
         Me.FSW_SymbolPath.Filter = "*.pdb"
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
-        '
-        'RDA_DoneNotification
-        '
-        Me.RDA_DoneNotification.AutoClose = False
-        Me.RDA_DoneNotification.AutoCloseDelay = 0
-        Me.RDA_DoneNotification.AutoSize = True
-        Me.RDA_DoneNotification.CanMove = False
-        Me.RDA_DoneNotification.CaptionText = "Debug Symbol Scan complete"
-        Me.RDA_DoneNotification.ContentImage = CType(resources.GetObject("RDA_DoneNotification.ContentImage"), System.Drawing.Image)
-        Me.RDA_DoneNotification.ContentText = "The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to " &
-    "find out more."
-        Me.RDA_DoneNotification.FadeAnimationFrames = 50
-        Me.RDA_DoneNotification.FadeAnimationType = Telerik.WinControls.UI.FadeAnimationType.FadeOut
-        Me.RDA_DoneNotification.IsPinned = True
-        Me.RDA_DoneNotification.Opacity = 1.0!
-        Me.RDA_DoneNotification.PopupAnimationDirection = Telerik.WinControls.UI.RadDirection.Up
-        Me.RDA_DoneNotification.ShowOptionsButton = False
-        Me.RDA_DoneNotification.ShowPinButton = False
-        Me.RDA_DoneNotification.ThemeName = ""
         '
         'ScannerUI
         '
@@ -523,14 +545,18 @@ Partial Class ScannerUI
         CType(Me.RB_OA_CopyFeaturesTXT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_Done, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_OutputFile, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RPVP_About.ResumeLayout(False)
-        Me.RPVP_About.PerformLayout()
-        CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RPVP_AboutAndSettings.ResumeLayout(False)
+        Me.RPVP_AboutAndSettings.PerformLayout()
+        CType(Me.RGB_Theming, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RGB_Theming.ResumeLayout(False)
+        CType(Me.RTB_UseSystemTheme, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_Comments, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_ProductName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_Description, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_Version, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -565,12 +591,16 @@ Partial Class ScannerUI
     Friend WithEvents RB_OA_CopyFeaturesTXT As Telerik.WinControls.UI.RadButton
     Friend WithEvents RL_Done As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RL_OutputFile As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RPVP_About As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents RDA_DoneNotification As Telerik.WinControls.UI.RadDesktopAlert
+    Friend WithEvents RPVP_AboutAndSettings As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents PB_AppImage As PictureBox
     Friend WithEvents RL_Comments As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RL_ProductName As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RL_Description As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RL_Version As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RL_License As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RGB_Theming As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RTB_UseSystemTheme As Telerik.WinControls.UI.RadToggleButton
+    Friend WithEvents RTB_ThemeToggle As Telerik.WinControls.UI.RadToggleButton
+    Friend WithEvents FluentLight As Telerik.WinControls.Themes.FluentTheme
+    Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
 End Class

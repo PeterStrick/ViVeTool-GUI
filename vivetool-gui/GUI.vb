@@ -129,7 +129,7 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Check for Internet Connectivity before trying to populate the Build COmbo Box
+    ''' Check for Internet Connectivity before trying to populate the Build Combo Box
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
@@ -251,6 +251,7 @@ Public Class GUI
             '    If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
             'Next
 #End Region
+
 #Region "Collection was modified Hotfix"
             Dim tempList As New List(Of String)
 
@@ -363,6 +364,10 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
+        'Disable Animations and selection. Helps with flickering
+        Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = False
+        RGV_MainGridView.SelectionMode = GridViewSelectionMode.None
+
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
@@ -384,15 +389,18 @@ Public Class GUI
         End If
     End Sub
 
+    ''' <summary>
+    ''' Same code as BGW_PopulateGridView.RunWorkerAsync(), just that it get´s the Feature List locally instead of from GitHub
+    ''' </summary>
     Private Sub LoadFromManualTXT()
-
         'Make a new OpenFileDialog
         Dim OFD As New OpenFileDialog With {
                 .InitialDirectory = "C:\",
                 .Title = "Path to a Feature List",
                 .Filter = "Feature List|*.txt"
             }
-        If OFD.ShowDialog() = DialogResult.OK Then
+
+        If OFD.ShowDialog() = DialogResult.OK AndAlso IO.File.Exists(OFD.FileName) Then
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
@@ -475,7 +483,6 @@ Public Class GUI
                            RadTaskDialog.ShowDialog(RTD)
 
                            'Clear the selection
-
                            RDDL_Build.SelectedIndex = -1
                            RDDL_Build.Enabled = True
                        End Sub)
@@ -501,6 +508,9 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
+            'Debug
+            Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
+
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
@@ -508,7 +518,12 @@ Public Class GUI
             Invoke(Sub() RLE_StatusLabel.Text = "Populating the Data Grid View... This can take a while.")
 
             'Clear Data Grid View
-            Invoke(Sub() RGV_MainGridView.Rows.Clear())
+            'Fix for a weird Bug that happens randomly while clearing the rows if the search row has text in it
+            Try
+                Invoke(Sub() RGV_MainGridView.Rows.Clear())
+            Catch ex As Exception
+                Diagnostics.Debug.WriteLine("Exception while clearing row. Build: " & RDDL_Build.Text & ". " & ex.Message)
+            End Try
 
             'Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {
@@ -520,22 +535,26 @@ Public Class GUI
             'For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
 
-                ' Check Line Stage, used for Grouping
-                If CInt(RDDL_Build.Text) >= 17704 Then
-                    If Line = "## Unknown:" Then
-                        LineStage = "Modifiable"
-                    ElseIf Line = "## Always Enabled:" Then
-                        LineStage = "Always Enabled"
-                    ElseIf Line = "## Enabled By Default:" Then
-                        LineStage = "Enabled By Default"
-                    ElseIf Line = "## Disabled By Default:" Then
-                        LineStage = "Disabled by Default"
-                    ElseIf Line = "## Always Disabled:" Then
-                        LineStage = "Always Disabled"
+                'Check Line Stage, used for Grouping
+                Try
+                    If CInt(RDDL_Build.Text) >= 17704 Then
+                        If Line = "## Unknown:" Then
+                            LineStage = "Modifiable"
+                        ElseIf Line = "## Always Enabled:" Then
+                            LineStage = "Always Enabled"
+                        ElseIf Line = "## Enabled By Default:" Then
+                            LineStage = "Enabled By Default"
+                        ElseIf Line = "## Disabled By Default:" Then
+                            LineStage = "Disabled by Default"
+                        ElseIf Line = "## Always Disabled:" Then
+                            LineStage = "Always Disabled"
+                        End If
+                    Else
+                        LineStage = "Select Build 17704 or higher to use Grouping"
                     End If
-                Else
-                    LineStage = "Select Build 17704 or higher to use Grouping"
-                End If
+                Catch ex As Exception
+                    LineStage = "Error"
+                End Try
 
                 'Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))
@@ -569,8 +588,14 @@ Public Class GUI
 
             'Enable Grouping
             Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
-            LineGroup.GroupNames.Add("FeatureInfo", System.ComponentModel.ListSortDirection.Ascending)
-            Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+            LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
+            Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+
+            'Enable Animations and selection
+            Invoke(Sub()
+                       Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = True
+                       RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
+                   End Sub)
         Else
             Return
         End If
@@ -790,4 +815,14 @@ Public Class GUI
             Return False
         End Try
     End Function
+
+    ''' <summary>
+    ''' Form Closing Event. Used to forcefully close ViVeTool GUI and it's Threads
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">FormClosing EventArgs</param>
+    Private Sub GUI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        'Exit all running Threads forcefully, should fix ObjectDisposed Exceptions
+        Diagnostics.Process.GetCurrentProcess().Kill()
+    End Sub
 End Class
