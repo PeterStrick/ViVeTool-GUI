@@ -399,6 +399,7 @@ Public Class GUI
                 .Title = "Path to a Feature List",
                 .Filter = "Feature List|*.txt"
             }
+
         If OFD.ShowDialog() = DialogResult.OK AndAlso IO.File.Exists(OFD.FileName) Then
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
@@ -482,7 +483,6 @@ Public Class GUI
                            RadTaskDialog.ShowDialog(RTD)
 
                            'Clear the selection
-
                            RDDL_Build.SelectedIndex = -1
                            RDDL_Build.Enabled = True
                        End Sub)
@@ -555,7 +555,6 @@ Public Class GUI
                 Catch ex As Exception
                     LineStage = "Error"
                 End Try
-
 
                 'Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))

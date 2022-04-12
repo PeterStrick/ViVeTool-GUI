@@ -160,7 +160,6 @@ Public Class ScannerUI
                                RB_SymbolPath_Browse.Enabled = True
                            End Sub)
                 End If
-
             Catch ex As Exception
                 'Create a Button that on Click, copies the Exception Text
                 Dim CopyExAndClose As New RadTaskDialogButton With {
@@ -505,6 +504,7 @@ Public Class ScannerUI
                        .Heading = BuildNumber & ".txt was successfully copied to your desktop.",
                        .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                    }
+
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
@@ -549,6 +549,7 @@ Public Class ScannerUI
                        .Heading = My.Settings.SymbolPath & "was successfully deleted.",
                        .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                    }
+
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
@@ -597,10 +598,10 @@ Public Class ScannerUI
         Else
             ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
-        Me.RL_ProductName.Text = My.Application.Info.ProductName
-        Me.RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
-        Me.RL_License.Text = My.Application.Info.Copyright
-        Me.RL_Description.Text = My.Application.Info.Description
+        RL_ProductName.Text = My.Application.Info.ProductName
+        RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
+        RL_License.Text = My.Application.Info.Copyright
+        RL_Description.Text = My.Application.Info.Description
     End Sub
 
     ''' <summary>
