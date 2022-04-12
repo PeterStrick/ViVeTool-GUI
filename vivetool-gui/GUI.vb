@@ -97,16 +97,6 @@ Public Class GUI
     End Function
 
     ''' <summary>
-    ''' Set´s the DoubleBuffered Property of a given RadGridView to true. Helps with Flickering.
-    ''' </summary>
-    ''' <param name="RGV">RadGridView to enable Double Buffering on</param>
-    Public Sub EnableDoubleBuffered_RadGridView(RGV As RadGridView)
-        Dim RGVType As Type = RGV.[GetType]()
-        Dim PropertyInfo As Reflection.PropertyInfo = RGVType.GetProperty("DoubleBuffered", Reflection.BindingFlags.Instance Or Reflection.BindingFlags.NonPublic)
-        PropertyInfo.SetValue(RGVType, True, Nothing)
-    End Sub
-
-    ''' <summary>
     ''' Load Event, Populates the Build Combo Box
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
@@ -125,9 +115,6 @@ Public Class GUI
 
         'Disable the close button in the search row
         RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
-
-        'Remove some if not most of the Flickering on the RadGridView
-        EnableDoubleBuffered_RadGridView(RGV_MainGridView)
     End Sub
 
     ''' <summary>
@@ -377,6 +364,10 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
+        'Disable Animations and selection. Helps with flickering
+        Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = False
+        RGV_MainGridView.SelectionMode = GridViewSelectionMode.None
+
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
@@ -398,6 +389,9 @@ Public Class GUI
         End If
     End Sub
 
+    ''' <summary>
+    ''' Same code as BGW_PopulateGridView.RunWorkerAsync(), just that it get´s the Feature List locally instead of from GitHub
+    ''' </summary>
     Private Sub LoadFromManualTXT()
         'Make a new OpenFileDialog
         Dim OFD As New OpenFileDialog With {
@@ -596,7 +590,13 @@ Public Class GUI
             'Enable Grouping
             Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
             LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
-            Invoke(Sub() Me.RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+            Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+
+            'Enable Animations and selection
+            Invoke(Sub()
+                       Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = True
+                       RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
+                   End Sub)
         Else
             Return
         End If
