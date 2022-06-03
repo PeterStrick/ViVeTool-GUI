@@ -196,14 +196,24 @@ Public Class GUI
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                  Try
+                                                                      My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
+                                                                  Catch clipex As Exception
+                                                                      'Do nothing
+                                                                  End Try
+                                                              End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+            Try
+                RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+            Catch ex As Exception
+                RTD.Expander.Text = webex.ToString
+            End Try
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -212,7 +222,13 @@ Public Class GUI
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                  Try
+                                                                      My.Computer.Clipboard.SetText(ex.ToString)
+                                                                  Catch clipex As Exception
+                                                                      'Do nothing
+                                                                  End Try
+                                                              End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Exception occurred",
@@ -226,9 +242,9 @@ Public Class GUI
             RadTaskDialog.ShowDialog(RTD)
         End Try
 #End Region
-
-        'returns JSON File Contents of riverar/mach2/features
 #Region "2. Get the features folder File Contents"
+        'returns JSON File Contents of riverar/mach2/features
+
         'Required Headers for the GitHub API
         Dim WebClientFeatures As New WebClient With {
             .Encoding = System.Text.Encoding.UTF8
@@ -244,21 +260,25 @@ Public Class GUI
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
-#Region "Old Code"
-            'For each element in the Array, add a Combo Box Item with the name of the path element
-            'For Each element In JSONArrayFeatures
-            '    Dim Name As String() = element("path").ToString.Split(CChar("."))
-            '    If Name(1) = "txt" Then RDDL_Build.Items.Add(Name(0))
-            'Next
-#End Region
-
-#Region "Collection was modified Hotfix"
             Dim tempList As New List(Of String)
 
             For Each element In JSONArrayFeatures
-                If element("path").ToString.Split(CChar("."))(1) = "txt" Then
-                    tempList.Add(element("path").ToString.Split(CChar("."))(0))
-                End If
+                Select Case element("path").ToString.Split(CChar(".")).Length
+                    Case 0 ' No File name or Extension. Not used in the Mach2 repo and impossible
+                        ' Do nothing
+                    Case 1 ' Filename; Not used in the Mach2 repo
+                        ' Do nothing
+                    Case 2 ' Filename.Extension; Ex: 22449.txt
+                        If element("path").ToString.Split(CChar("."))(1) = "txt" Then
+                            tempList.Add(element("path").ToString.Split(CChar("."))(0))
+                        End If
+                    Case 3 ' File.File.Extension; Ex: 22000.1.txt or 22449_22454_diff.patch
+                        If element("path").ToString.Split(CChar("."))(2) = "txt" Then
+                            tempList.Add(element("path").ToString.Split(CChar("."))(0) & "." & element("path").ToString.Split(CChar("."))(1))
+                        End If
+                    Case 4 ' File.File.File.Extension; Ex: 18980.1_18985.1_diff.patch. Usually used for Diffs in the Mach2 Repo
+                        ' Do Nothing
+                End Select
             Next
 
             Invoke(Sub()
@@ -274,7 +294,6 @@ Public Class GUI
                        'Add the Handler
                        AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
                    End Sub)
-#End Region
             'Enable the Combo Box
             Invoke(Sub() RDDL_Build.Enabled = True)
 
@@ -286,14 +305,24 @@ Public Class GUI
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                  Try
+                                                                      My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
+                                                                  Catch clipex As Exception
+                                                                      'Do nothing
+                                                                  End Try
+                                                              End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " A Network Exception occurred",
                     .Heading = "A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.",
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
-            RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+            Try
+                RTD.Expander.Text = "GitHub API Response: " & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+            Catch ex As Exception
+                RTD.Expander.Text = webex.ToString
+            End Try
             RTD.Expander.ExpandedButtonText = "Collapse Exception"
             RTD.Expander.CollapsedButtonText = "Show Exception"
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -302,7 +331,13 @@ Public Class GUI
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                  Try
+                                                                      My.Computer.Clipboard.SetText(ex.ToString)
+                                                                  Catch clipex As Exception
+                                                                      'Do nothing
+                                                                  End Try
+                                                              End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = " An Exception occurred",
@@ -374,6 +409,10 @@ Public Class GUI
         'Disable Combo Box
         RDDL_Build.Enabled = False
 
+        'Remove the Search Row temporarily
+        RGV_MainGridView.MasterView.TableSearchRow.Search("")
+        RGV_MainGridView.MasterView.TableSearchRow.IsVisible = False
+
         'If "Load manually..." is selected, then load from a TXT File, else load normally
         If RDDL_Build.Text = "Load manually..." Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
@@ -390,7 +429,7 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Same code as BGW_PopulateGridView.RunWorkerAsync(), just that it get´s the Feature List locally instead of from GitHub
+    ''' Same code as BGW_PopulateGridView.RunWorkerAsync(), just that it get's the Feature List locally instead of from GitHub
     ''' </summary>
     Private Sub LoadFromManualTXT()
         'Make a new OpenFileDialog
@@ -460,7 +499,13 @@ Public Class GUI
                            Dim CopyExAndClose As New RadTaskDialogButton With {
                                 .Text = "Copy Exception and Close"
                             }
-                           AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+                           AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                                 Try
+                                                                                     My.Computer.Clipboard.SetText(ex.ToString)
+                                                                                 Catch clipex As Exception
+                                                                                     'Do nothing
+                                                                                 End Try
+                                                                             End Sub)
 
                            'Fancy Message Box
                            Dim RTD As New RadTaskDialogPage With {
@@ -485,6 +530,9 @@ Public Class GUI
                            'Clear the selection
                            RDDL_Build.SelectedIndex = -1
                            RDDL_Build.Enabled = True
+
+                           'Make the Search Row Visible
+                           RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True
                        End Sub)
             End Try
         Else
@@ -492,6 +540,12 @@ Public Class GUI
             Invoke(Sub()
                        RDDL_Build.SelectedIndex = -1
                        RDDL_Build.Enabled = True
+                   End Sub)
+
+            'Resume searching
+            Invoke(Sub()
+                       'Make the Search Row Visible
+                       RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True
                    End Sub)
         End If
     End Sub
@@ -570,7 +624,7 @@ Public Class GUI
                     Try
                         Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage))
-                    Catch ex As NullReferenceException
+                    Catch ex As Exception
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), "Default", LineStage))
                     End Try
                 End If
@@ -595,6 +649,11 @@ Public Class GUI
             Invoke(Sub()
                        Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = True
                        RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
+                   End Sub)
+
+            'Make the Search Row Visible
+            Invoke(Sub()
+                       RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True
                    End Sub)
         Else
             Return
@@ -734,7 +793,13 @@ Public Class GUI
             Dim CopyExAndClose As New RadTaskDialogButton With {
                 .Text = "Copy Exception and Close"
             }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub() My.Computer.Clipboard.SetText(ex.ToString))
+            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
+                                                                  Try
+                                                                      My.Computer.Clipboard.SetText(ex.ToString)
+                                                                  Catch clipex As Exception
+                                                                      'Do nothing
+                                                                  End Try
+                                                              End Sub)
 
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
@@ -794,8 +859,8 @@ Public Class GUI
     ''' <summary>
     ''' Shows the UI to manually set a Feature ID
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub RB_ManuallySetFeature_Click(sender As Object, e As EventArgs) Handles RB_ManuallySetFeature.Click
         SetManual.ShowDialog()
     End Sub
@@ -803,7 +868,7 @@ Public Class GUI
     ''' <summary>
     ''' Basic Internet Connectivity Check by trying to check if github.com is accessible
     ''' </summary>
-    ''' <returns></returns>
+    ''' <returns>True if http://www.github.com responds. False if not</returns>
     Public Shared Function CheckForInternetConnection() As Boolean
         Try
             Using client = New WebClient()
