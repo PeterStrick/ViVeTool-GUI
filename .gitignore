@@ -366,5 +366,5 @@ FodyWeavers.xsd
 /.sonarqube/
 /.snoar/
 /.sonarcloud/
-/Scan-SonarCloudProject.ps1
-/Scan-SonarCloudProject.ps1.bak
+/Sonar Cloud Scanning Tool.lnk
+/SonarCloudScannerConfig.json
