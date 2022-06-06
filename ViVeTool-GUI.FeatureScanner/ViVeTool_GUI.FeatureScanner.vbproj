@@ -53,6 +53,10 @@
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RichTextEditor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
       <Private>True</Private>
@@ -63,6 +67,14 @@
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
@@ -91,6 +103,10 @@
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="ScannerUI.de.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScannerUI.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>

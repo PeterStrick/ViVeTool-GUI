@@ -62,21 +62,15 @@
     <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1210.39\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1210.39\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
@@ -101,7 +95,6 @@
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -133,8 +126,14 @@
     <Compile Include="SetManual.vb">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="AboutAndSettings.de.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.de.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.vb</DependentUpon>
@@ -156,6 +155,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="SetManual.de.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SetManual.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
     </EmbeddedResource>

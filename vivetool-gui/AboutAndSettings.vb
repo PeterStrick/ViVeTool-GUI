@@ -15,7 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Imports Telerik.WinControls.UI
 ''' <summary>
-''' About && Settings Dialog/Form
+''' About and Settings Dialog/Form
 ''' </summary>
 Public NotInheritable Class AboutAndSettings
     ''' <summary>

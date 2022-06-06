@@ -23,13 +23,12 @@ Partial Class GUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        'Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI))
+        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn11 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn12 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RDDL_Build = New Telerik.WinControls.UI.RadDropDownList()
         Me.RSS_MainStatusStrip = New Telerik.WinControls.UI.RadStatusStrip()
         Me.RLE_StatusLabel = New Telerik.WinControls.UI.RadLabelElement()
@@ -63,44 +62,35 @@ Partial Class GUI
         '
         'RDDL_Build
         '
-        Me.RDDL_Build.AutoSize = False
+        resources.ApplyResources(Me.RDDL_Build, "RDDL_Build")
         Me.RDDL_Build.DropDownAnimationEnabled = True
         Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        Me.RDDL_Build.Enabled = False
-        Me.RDDL_Build.Location = New System.Drawing.Point(3, 5)
         Me.RDDL_Build.Name = "RDDL_Build"
-        Me.RDDL_Build.NullText = "Select Build..."
-        Me.RDDL_Build.Size = New System.Drawing.Size(125, 28)
         Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
-        Me.RDDL_Build.TabIndex = 0
-        Me.RDDL_Build.Text = "Select Build..."
         Me.RDDL_Build.ThemeName = "Fluent"
         '
         'RSS_MainStatusStrip
         '
+        resources.ApplyResources(Me.RSS_MainStatusStrip, "RSS_MainStatusStrip")
         Me.RSS_MainStatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.RSS_MainStatusStrip.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RLE_StatusLabel})
-        Me.RSS_MainStatusStrip.Location = New System.Drawing.Point(0, 543)
         Me.RSS_MainStatusStrip.Name = "RSS_MainStatusStrip"
-        Me.RSS_MainStatusStrip.Size = New System.Drawing.Size(792, 24)
         Me.RSS_MainStatusStrip.SizingGrip = False
-        Me.RSS_MainStatusStrip.TabIndex = 3
         Me.RSS_MainStatusStrip.ThemeName = "Fluent"
         '
         'RLE_StatusLabel
         '
+        resources.ApplyResources(Me.RLE_StatusLabel, "RLE_StatusLabel")
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        Me.RLE_StatusLabel.Text = "Populating the Build Combo Box..."
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
         '
+        resources.ApplyResources(Me.RGV_MainGridView, "RGV_MainGridView")
         Me.RGV_MainGridView.BeginEditMode = Telerik.WinControls.RadGridViewBeginEditMode.BeginEditProgrammatically
-        Me.RGV_MainGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RGV_MainGridView.Location = New System.Drawing.Point(0, 0)
         '
         '
         '
@@ -115,41 +105,40 @@ Partial Class GUI
         Me.RGV_MainGridView.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.RGV_MainGridView.MasterTemplate.AllowRowResize = False
         Me.RGV_MainGridView.MasterTemplate.AllowSearchRow = True
+        Me.RGV_MainGridView.MasterTemplate.Caption = resources.GetString("RGV_MainGridView.MasterTemplate.Caption")
         Me.RGV_MainGridView.MasterTemplate.ClipboardPasteMode = Telerik.WinControls.UI.GridViewClipboardPasteMode.Disable
-        GridViewTextBoxColumn1.AllowGroup = False
-        GridViewTextBoxColumn1.AllowHide = False
-        GridViewTextBoxColumn1.AllowReorder = False
-        GridViewTextBoxColumn1.HeaderText = "Feature Name"
-        GridViewTextBoxColumn1.MinWidth = 6
-        GridViewTextBoxColumn1.Name = "FeatureName"
-        GridViewTextBoxColumn1.ReadOnly = True
-        GridViewTextBoxColumn1.Width = 535
-        GridViewTextBoxColumn2.AllowGroup = False
-        GridViewTextBoxColumn2.AllowHide = False
-        GridViewTextBoxColumn2.AllowReorder = False
-        GridViewTextBoxColumn2.HeaderText = "Feature ID"
-        GridViewTextBoxColumn2.MinWidth = 6
-        GridViewTextBoxColumn2.Name = "FeatureID"
-        GridViewTextBoxColumn2.ReadOnly = True
-        GridViewTextBoxColumn2.Width = 80
-        GridViewTextBoxColumn3.HeaderText = "Feature State"
-        GridViewTextBoxColumn3.Name = "FeatureState"
-        GridViewTextBoxColumn3.Width = 100
-        GridViewTextBoxColumn4.HeaderText = "Features that are"
-        GridViewTextBoxColumn4.IsVisible = False
-        GridViewTextBoxColumn4.Name = "FeatureInfo"
-        GridViewTextBoxColumn4.VisibleInColumnChooser = False
-        GridViewTextBoxColumn4.Width = 20
-        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
+        GridViewTextBoxColumn9.AllowGroup = False
+        GridViewTextBoxColumn9.AllowHide = False
+        GridViewTextBoxColumn9.AllowReorder = False
+        resources.ApplyResources(GridViewTextBoxColumn9, "GridViewTextBoxColumn9")
+        GridViewTextBoxColumn9.MinWidth = 6
+        GridViewTextBoxColumn9.Name = "FeatureName"
+        GridViewTextBoxColumn9.ReadOnly = True
+        GridViewTextBoxColumn9.Width = 535
+        GridViewTextBoxColumn10.AllowGroup = False
+        GridViewTextBoxColumn10.AllowHide = False
+        GridViewTextBoxColumn10.AllowReorder = False
+        resources.ApplyResources(GridViewTextBoxColumn10, "GridViewTextBoxColumn10")
+        GridViewTextBoxColumn10.MinWidth = 6
+        GridViewTextBoxColumn10.Name = "FeatureID"
+        GridViewTextBoxColumn10.ReadOnly = True
+        GridViewTextBoxColumn10.Width = 80
+        resources.ApplyResources(GridViewTextBoxColumn11, "GridViewTextBoxColumn11")
+        GridViewTextBoxColumn11.Name = "FeatureState"
+        GridViewTextBoxColumn11.Width = 100
+        resources.ApplyResources(GridViewTextBoxColumn12, "GridViewTextBoxColumn12")
+        GridViewTextBoxColumn12.IsVisible = False
+        GridViewTextBoxColumn12.Name = "FeatureInfo"
+        GridViewTextBoxColumn12.VisibleInColumnChooser = False
+        GridViewTextBoxColumn12.Width = 20
+        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12})
         Me.RGV_MainGridView.MasterTemplate.EnableFiltering = True
         Me.RGV_MainGridView.MasterTemplate.ShowFilteringRow = False
-        Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.RGV_MainGridView.Name = "RGV_MainGridView"
         Me.RGV_MainGridView.ReadOnly = True
         Me.RGV_MainGridView.ShowGroupPanel = False
         Me.RGV_MainGridView.ShowGroupPanelScrollbars = False
-        Me.RGV_MainGridView.Size = New System.Drawing.Size(792, 505)
-        Me.RGV_MainGridView.TabIndex = 5
         Me.RGV_MainGridView.ThemeName = "Fluent"
         '
         'BGW_PopulateGridView
@@ -158,103 +147,79 @@ Partial Class GUI
         '
         'P_CommandPanel
         '
+        resources.ApplyResources(Me.P_CommandPanel, "P_CommandPanel")
         Me.P_CommandPanel.Controls.Add(Me.RS_1)
         Me.P_CommandPanel.Controls.Add(Me.RL_BuildComboBoxORManaully)
         Me.P_CommandPanel.Controls.Add(Me.RB_ManuallySetFeature)
         Me.P_CommandPanel.Controls.Add(Me.RB_About)
         Me.P_CommandPanel.Controls.Add(Me.RDDL_Build)
         Me.P_CommandPanel.Controls.Add(Me.RDDB_PerformAction)
-        Me.P_CommandPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.P_CommandPanel.Location = New System.Drawing.Point(0, 0)
         Me.P_CommandPanel.Name = "P_CommandPanel"
-        Me.P_CommandPanel.Size = New System.Drawing.Size(792, 38)
-        Me.P_CommandPanel.TabIndex = 6
         '
         'RS_1
         '
-        Me.RS_1.Location = New System.Drawing.Point(405, 4)
+        resources.ApplyResources(Me.RS_1, "RS_1")
         Me.RS_1.Name = "RS_1"
         Me.RS_1.Orientation = System.Windows.Forms.Orientation.Vertical
-        Me.RS_1.Size = New System.Drawing.Size(13, 30)
-        Me.RS_1.TabIndex = 10
         '
         'RL_BuildComboBoxORManaully
         '
-        Me.RL_BuildComboBoxORManaully.Location = New System.Drawing.Point(145, 10)
+        resources.ApplyResources(Me.RL_BuildComboBoxORManaully, "RL_BuildComboBoxORManaully")
         Me.RL_BuildComboBoxORManaully.Name = "RL_BuildComboBoxORManaully"
-        Me.RL_BuildComboBoxORManaully.Size = New System.Drawing.Size(17, 18)
-        Me.RL_BuildComboBoxORManaully.TabIndex = 9
-        Me.RL_BuildComboBoxORManaully.Text = "or"
         '
         'RB_ManuallySetFeature
         '
+        resources.ApplyResources(Me.RB_ManuallySetFeature, "RB_ManuallySetFeature")
         Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
-        Me.RB_ManuallySetFeature.Location = New System.Drawing.Point(181, 4)
         Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
-        Me.RB_ManuallySetFeature.Size = New System.Drawing.Size(212, 30)
-        Me.RB_ManuallySetFeature.TabIndex = 8
-        Me.RB_ManuallySetFeature.Text = "Manually change a Feature (F12)"
-        Me.RB_ManuallySetFeature.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         '
         'RB_About
         '
+        resources.ApplyResources(Me.RB_About, "RB_About")
         Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
-        Me.RB_About.Location = New System.Drawing.Point(610, 4)
         Me.RB_About.Name = "RB_About"
-        Me.RB_About.Size = New System.Drawing.Size(158, 30)
-        Me.RB_About.TabIndex = 4
-        Me.RB_About.Text = "  About && Settings"
         '
         'RDDB_PerformAction
         '
-        Me.RDDB_PerformAction.Enabled = False
+        resources.ApplyResources(Me.RDDB_PerformAction, "RDDB_PerformAction")
         Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
-        Me.RDDB_PerformAction.Location = New System.Drawing.Point(432, 4)
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
-        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 30)
-        Me.RDDB_PerformAction.TabIndex = 2
-        Me.RDDB_PerformAction.Text = "      Perform Action"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
         'RMI_ActivateF
         '
+        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
-        Me.RMI_ActivateF.Text = "  Activate Feature"
         '
         'RMI_DeactivateF
         '
+        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
-        Me.RMI_DeactivateF.Text = "  Deactivate Feature"
         '
         'RMI_RevertF
         '
+        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
-        Me.RMI_RevertF.Text = "  Revert Feature to Default Values"
         '
         'P_DataPanel
         '
+        resources.ApplyResources(Me.P_DataPanel, "P_DataPanel")
         Me.P_DataPanel.Controls.Add(Me.RGV_MainGridView)
-        Me.P_DataPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.P_DataPanel.Location = New System.Drawing.Point(0, 38)
         Me.P_DataPanel.Name = "P_DataPanel"
-        Me.P_DataPanel.Size = New System.Drawing.Size(792, 505)
-        Me.P_DataPanel.TabIndex = 7
         '
         'GUI
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 567)
         Me.Controls.Add(Me.P_DataPanel)
         Me.Controls.Add(Me.P_CommandPanel)
         Me.Controls.Add(Me.RSS_MainStatusStrip)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "GUI"
@@ -262,7 +227,6 @@ Partial Class GUI
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.Text = "ViVeTool GUI"
         Me.ThemeName = "Fluent"
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).EndInit()
