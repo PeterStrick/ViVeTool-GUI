@@ -118,84 +118,75 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
-  </data>
-  <data name="&gt;&gt;RMI_ActivateF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>427, 58</value>
-  </data>
   <data name="RTB_FeatureID.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SetManual</value>
+  <data name="RTB_FeatureID.NullText" xml:space="preserve">
+    <value>Enter a Feature ID</value>
   </data>
   <data name="RTB_FeatureID.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 24</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Manually change a Feature - Enter a Feature ID</value>
-  </data>
-  <data name="RMI_RevertF.Text" xml:space="preserve">
-    <value>  Revert Feature to Default Settings</value>
-  </data>
-  <data name="RMI_ActivateF.Text" xml:space="preserve">
-    <value>  Activate Feature</value>
-  </data>
-  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 15</value>
-  </data>
-  <data name="&gt;&gt;RTB_FeatureID.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RMI_DeactivateF.Name" xml:space="preserve">
-    <value>RMI_DeactivateF</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
+  <data name="RTB_FeatureID.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;RTB_FeatureID.Name" xml:space="preserve">
     <value>RTB_FeatureID</value>
   </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RMI_RevertF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RDDB_PerformAction.Text" xml:space="preserve">
-    <value>      Perform Action</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="RMI_DeactivateF.Text" xml:space="preserve">
-    <value>  Deactivate Feature</value>
-  </data>
-  <data name="&gt;&gt;RMI_RevertF.Name" xml:space="preserve">
-    <value>RMI_RevertF</value>
+  <data name="&gt;&gt;RTB_FeatureID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RTB_FeatureID.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;RMI_ActivateF.Name" xml:space="preserve">
-    <value>RMI_ActivateF</value>
+  <data name="&gt;&gt;RTB_FeatureID.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;RMI_DeactivateF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Activate Feature</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Deactivate Feature</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Revert Feature to Default Settings</value>
+  </data>
+  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 15</value>
+  </data>
+  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 26</value>
+  </data>
+  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      Perform Action</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
+    <value>RDDB_PerformAction</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>427, 58</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -739,22 +730,31 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
-  <data name="RTB_FeatureID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Manually change a Feature - Enter a Feature ID</value>
   </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;RMI_ActivateF.Name" xml:space="preserve">
+    <value>RMI_ActivateF</value>
   </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
-    <value>RDDB_PerformAction</value>
+  <data name="&gt;&gt;RMI_ActivateF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RTB_FeatureID.NullText" xml:space="preserve">
-    <value>Enter a Feature ID</value>
+  <data name="&gt;&gt;RMI_DeactivateF.Name" xml:space="preserve">
+    <value>RMI_DeactivateF</value>
   </data>
-  <data name="&gt;&gt;RTB_FeatureID.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RMI_DeactivateF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="&gt;&gt;RMI_RevertF.Name" xml:space="preserve">
+    <value>RMI_RevertF</value>
+  </data>
+  <data name="&gt;&gt;RMI_RevertF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SetManual</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
 </root>

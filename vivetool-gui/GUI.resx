@@ -117,76 +117,290 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RGV_MainGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;RMI_ActivateF.Name" xml:space="preserve">
-    <value>RMI_ActivateF</value>
-  </data>
-  <data name="&gt;&gt;P_DataPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="RDDL_Build.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
+  <data name="RDDL_Build.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RDDL_Build.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 5</value>
   </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
+  <data name="RDDL_Build.NullText" xml:space="preserve">
+    <value>Select Build...</value>
   </data>
-  <data name="&gt;&gt;RS_1.Name" xml:space="preserve">
-    <value>RS_1</value>
+  <data name="RDDL_Build.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 28</value>
+  </data>
+  <data name="RDDL_Build.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RDDL_Build.Text" xml:space="preserve">
+    <value>Select Build...</value>
+  </data>
+  <data name="&gt;&gt;RDDL_Build.Name" xml:space="preserve">
+    <value>RDDL_Build</value>
   </data>
   <data name="&gt;&gt;RDDL_Build.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="GridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Feature ID</value>
-  </data>
-  <data name="GridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Features that are</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RDDL_Build.Parent" xml:space="preserve">
     <value>P_CommandPanel</value>
-  </data>
-  <data name="RS_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 30</value>
-  </data>
-  <data name="RMI_DeactivateF.Text" xml:space="preserve">
-    <value>  Deactivate Feature</value>
-  </data>
-  <data name="&gt;&gt;RGV_MainGridView.Parent" xml:space="preserve">
-    <value>P_DataPanel</value>
-  </data>
-  <data name="RL_BuildComboBoxORManaully.Text" xml:space="preserve">
-    <value>or</value>
-  </data>
-  <data name="&gt;&gt;RSS_MainStatusStrip.Name" xml:space="preserve">
-    <value>RSS_MainStatusStrip</value>
   </data>
   <data name="&gt;&gt;RDDL_Build.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;RSS_MainStatusStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="RLE_StatusLabel.Text" xml:space="preserve">
+    <value>Populating the Build Combo Box...</value>
   </data>
-  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 30</value>
+  <data name="RSS_MainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 543</value>
   </data>
-  <data name="&gt;&gt;RS_1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="RSS_MainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 24</value>
+  </data>
+  <data name="RSS_MainStatusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RSS_MainStatusStrip.Name" xml:space="preserve">
+    <value>RSS_MainStatusStrip</value>
   </data>
   <data name="&gt;&gt;RSS_MainStatusStrip.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;FluentTheme.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RSS_MainStatusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RSS_MainStatusStrip.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RGV_MainGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RGV_MainGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 505</value>
+  </data>
+  <data name="RGV_MainGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RGV_MainGridView.Name" xml:space="preserve">
+    <value>RGV_MainGridView</value>
+  </data>
+  <data name="&gt;&gt;RGV_MainGridView.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RGV_MainGridView.Parent" xml:space="preserve">
+    <value>P_DataPanel</value>
+  </data>
+  <data name="&gt;&gt;RGV_MainGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="BGW_PopulateGridView.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>8, 5</value>
+  </metadata>
+  <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>220, 6</value>
+  </metadata>
+  <data name="RS_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 4</value>
+  </data>
+  <data name="RS_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 30</value>
+  </data>
+  <data name="RS_1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;RS_1.Name" xml:space="preserve">
+    <value>RS_1</value>
+  </data>
+  <data name="&gt;&gt;RS_1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RS_1.Parent" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;RS_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 10</value>
+  </data>
+  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 18</value>
+  </data>
+  <data name="RL_BuildComboBoxORManaully.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="RL_BuildComboBoxORManaully.Text" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Name" xml:space="preserve">
+    <value>RL_BuildComboBoxORManaully</value>
+  </data>
+  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Parent" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;RL_BuildComboBoxORManaully.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RB_ManuallySetFeature.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 4</value>
+  </data>
+  <data name="RB_ManuallySetFeature.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 30</value>
+  </data>
+  <data name="RB_ManuallySetFeature.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
+    <value>Manually change a Feature (F12)</value>
+  </data>
+  <data name="RB_ManuallySetFeature.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RB_ManuallySetFeature.Name" xml:space="preserve">
+    <value>RB_ManuallySetFeature</value>
+  </data>
+  <data name="&gt;&gt;RB_ManuallySetFeature.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_ManuallySetFeature.Parent" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;RB_ManuallySetFeature.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RB_About.Location" type="System.Drawing.Point, System.Drawing">
+    <value>610, 4</value>
+  </data>
+  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 30</value>
+  </data>
+  <data name="RB_About.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RB_About.Text" xml:space="preserve">
+    <value>  About &amp;&amp; Settings</value>
+  </data>
+  <data name="&gt;&gt;RB_About.Name" xml:space="preserve">
+    <value>RB_About</value>
+  </data>
+  <data name="&gt;&gt;RB_About.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_About.Parent" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;RB_About.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Activate Feature</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Deactivate Feature</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Revert Feature to Default Values</value>
+  </data>
+  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 4</value>
+  </data>
+  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 30</value>
+  </data>
+  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      Perform Action</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
+    <value>RDDB_PerformAction</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.Parent" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 38</value>
+  </data>
+  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Name" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="P_DataPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="P_DataPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 38</value>
+  </data>
+  <data name="P_DataPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>792, 505</value>
+  </data>
+  <data name="P_DataPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;P_DataPanel.Name" xml:space="preserve">
+    <value>P_DataPanel</value>
+  </data>
+  <data name="&gt;&gt;P_DataPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P_DataPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;P_DataPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="FluentTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>350, 4</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>39</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>792, 567</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1951,284 +2165,55 @@
         gAEAAP//AAD//wAA
 </value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
-    <value>RDDB_PerformAction</value>
-  </data>
-  <data name="RB_ManuallySetFeature.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RL_BuildComboBoxORManaully.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;RMI_DeactivateF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RS_1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;BGW_PopulateGridView.Name" xml:space="preserve">
-    <value>BGW_PopulateGridView</value>
-  </data>
-  <data name="&gt;&gt;RSS_MainStatusStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Name" xml:space="preserve">
-    <value>RL_BuildComboBoxORManaully</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Name" xml:space="preserve">
-    <value>RB_About</value>
-  </data>
-  <data name="RB_ManuallySetFeature.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 30</value>
-  </data>
-  <data name="&gt;&gt;P_DataPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RDDL_Build.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RGV_MainGridView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="P_DataPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 505</value>
-  </data>
-  <data name="&gt;&gt;RMI_RevertF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RMI_ActivateF.Text" xml:space="preserve">
-    <value>  Activate Feature</value>
-  </data>
-  <data name="GridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Feature Name</value>
-  </data>
-  <data name="&gt;&gt;P_DataPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RGV_MainGridView.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RLE_StatusLabel.Text" xml:space="preserve">
-    <value>Populating the Build Combo Box...</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="RDDL_Build.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 38</value>
-  </data>
-  <data name="RSS_MainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 543</value>
-  </data>
-  <data name="RDDL_Build.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 28</value>
-  </data>
-  <data name="&gt;&gt;RMI_ActivateF.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RS_1.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="RGV_MainGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>792, 567</value>
-  </data>
-  <data name="P_DataPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 38</value>
-  </data>
-  <data name="&gt;&gt;RMI_RevertF.Name" xml:space="preserve">
-    <value>RMI_RevertF</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 18</value>
-  </data>
-  <data name="RB_About.Location" type="System.Drawing.Point, System.Drawing">
-    <value>610, 4</value>
-  </data>
-  <data name="&gt;&gt;RDDL_Build.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="RDDL_Build.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Name" xml:space="preserve">
-    <value>RB_ManuallySetFeature</value>
-  </data>
-  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 10</value>
-  </data>
-  <data name="RB_About.Text" xml:space="preserve">
-    <value>  About &amp;&amp; Settings</value>
-  </data>
-  <data name="&gt;&gt;FluentTheme.Name" xml:space="preserve">
-    <value>FluentTheme</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RDDL_Build.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 5</value>
-  </data>
-  <data name="P_DataPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;P_DataPanel.Name" xml:space="preserve">
-    <value>P_DataPanel</value>
-  </data>
-  <data name="&gt;&gt;RMI_DeactivateF.Name" xml:space="preserve">
-    <value>RMI_DeactivateF</value>
-  </data>
-  <data name="RB_ManuallySetFeature.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>GUI</value>
-  </data>
-  <data name="RB_ManuallySetFeature.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 4</value>
-  </data>
-  <data name="&gt;&gt;RDDL_Build.Name" xml:space="preserve">
-    <value>RDDL_Build</value>
-  </data>
-  <data name="RDDL_Build.Text" xml:space="preserve">
-    <value>Select Build...</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 30</value>
-  </data>
-  <data name="RSS_MainStatusStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;BGW_PopulateGridView.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RGV_MainGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RS_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 4</value>
   </data>
   <data name="&gt;&gt;RLE_StatusLabel.Name" xml:space="preserve">
     <value>RLE_StatusLabel</value>
   </data>
-  <data name="&gt;&gt;RGV_MainGridView.Name" xml:space="preserve">
-    <value>RGV_MainGridView</value>
-  </data>
-  <data name="GridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Feature State</value>
-  </data>
-  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RS_1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;RLE_StatusLabel.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RMI_RevertF.Text" xml:space="preserve">
-    <value>  Revert Feature to Default Values</value>
+  <data name="&gt;&gt;BGW_PopulateGridView.Name" xml:space="preserve">
+    <value>BGW_PopulateGridView</value>
   </data>
-  <data name="&gt;&gt;RB_About.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RB_About.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RDDL_Build.NullText" xml:space="preserve">
-    <value>Select Build...</value>
-  </data>
-  <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
-    <value>Manually change a Feature (F12)</value>
-  </data>
-  <data name="RSS_MainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 24</value>
-  </data>
-  <data name="RDDB_PerformAction.Text" xml:space="preserve">
-    <value>      Perform Action</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Name" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 505</value>
-  </data>
-  <data name="RGV_MainGridView.MasterTemplate.Caption" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;BGW_PopulateGridView.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FluentDark.Name" xml:space="preserve">
     <value>FluentDark</value>
   </data>
-  <data name="P_DataPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <metadata name="BGW_PopulateGridView.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>8, 5</value>
-  </metadata>
-  <metadata name="FluentTheme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>350, 4</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>220, 6</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>39</value>
-  </metadata>
+  <data name="&gt;&gt;RMI_ActivateF.Name" xml:space="preserve">
+    <value>RMI_ActivateF</value>
+  </data>
+  <data name="&gt;&gt;RMI_ActivateF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_DeactivateF.Name" xml:space="preserve">
+    <value>RMI_DeactivateF</value>
+  </data>
+  <data name="&gt;&gt;RMI_DeactivateF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_RevertF.Name" xml:space="preserve">
+    <value>RMI_RevertF</value>
+  </data>
+  <data name="&gt;&gt;RMI_RevertF.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;FluentTheme.Name" xml:space="preserve">
+    <value>FluentTheme</value>
+  </data>
+  <data name="&gt;&gt;FluentTheme.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>GUI</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
 </root>

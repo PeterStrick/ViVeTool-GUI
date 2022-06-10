@@ -71,6 +71,312 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Exception while clearing row. Build:  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Debug_ExceptionWhileClearingRow() As String
+            Get
+                Return ResourceManager.GetString("Debug_ExceptionWhileClearingRow", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Loading Build  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Debug_LoadingBuild() As String
+            Get
+                Return ResourceManager.GetString("Debug_LoadingBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A Network Exception occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ANetworkExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_ANetworkExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An unknown Exception occurred. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_AnUnknownExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnUnknownExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Collapse Exception ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CollapseException() As String
+            Get
+                Return ResourceManager.GetString("Error_CollapseException", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Copy Exception and Close ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CopyExceptionAndClose() As String
+            Get
+                Return ResourceManager.GetString("Error_CopyExceptionAndClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Error ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Error() As String
+            Get
+                Return ResourceManager.GetString("Error_Error", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Network Error ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkError() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkException_GithubAPI() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkException_GithubAPI", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die GitHub API Response:  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkException_GithubAPI_Response() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkException_GithubAPI_Response", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn&apos;t connected to the Internet, or if the GitHub API is unreachable. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkExceptionDetail1() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkExceptionDetail1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkExceptionDetail2() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkExceptionDetail2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Network Functions disabled. Press F12 to manually change a Feature. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkFunctionsDisabledF12() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkFunctionsDisabledF12", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Select Build 17704 or higher to use Grouping ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SelectBuild17704OrHigherToUseGrouping() As String
+            Get
+                Return ResourceManager.GetString("Error_SelectBuild17704OrHigherToUseGrouping", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to set Feature  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SettingFeatureConfig_Heading1() As String
+            Get
+                Return ResourceManager.GetString("Error_SettingFeatureConfig_Heading1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SettingFeatureConfig_Heading2() As String
+            Get
+                Return ResourceManager.GetString("Error_SettingFeatureConfig_Heading2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An error occurred while setting a feature configuration for  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SettingFeatureConfig_Status() As String
+            Get
+                Return ResourceManager.GetString("Error_SettingFeatureConfig_Status", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Show Exception ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ShowException() As String
+            Get
+                Return ResourceManager.GetString("Error_ShowException", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  An Error occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_AnErrorOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_AnErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  A Network Exception occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_ANetworkExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_ANetworkExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  An Exception occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_AnExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_AnExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Always Disabled ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_AlwaysDisabled() As String
+            Get
+                Return ResourceManager.GetString("Generic_AlwaysDisabled", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Always Enabled ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_AlwaysEnabled() As String
+            Get
+                Return ResourceManager.GetString("Generic_AlwaysEnabled", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Default ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Default() As String
+            Get
+                Return ResourceManager.GetString("Generic_Default", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Disabled by Default ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_DisabledByDefault() As String
+            Get
+                Return ResourceManager.GetString("Generic_DisabledByDefault", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Done. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Done() As String
+            Get
+                Return ResourceManager.GetString("Generic_Done", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Enabled By Default ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_EnabledByDefault() As String
+            Get
+                Return ResourceManager.GetString("Generic_EnabledByDefault", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Feature ID ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_FeatureID() As String
+            Get
+                Return ResourceManager.GetString("Generic_FeatureID", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Feature Name ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_FeatureName() As String
+            Get
+                Return ResourceManager.GetString("Generic_FeatureName", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Feature State ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_FeatureState() As String
+            Get
+                Return ResourceManager.GetString("Generic_FeatureState", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Load manually... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_LoadManually() As String
+            Get
+                Return ResourceManager.GetString("Generic_LoadManually", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Modifiable ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Modifiable() As String
+            Get
+                Return ResourceManager.GetString("Generic_Modifiable", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Populating the Data Grid View... This can take a while. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_PopulatingTheDataGridView() As String
+            Get
+                Return ResourceManager.GetString("Generic_PopulatingTheDataGridView", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Select Build... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_SelectBuild() As String
+            Get
+                Return ResourceManager.GetString("Generic_SelectBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property icons8_about_24() As System.Drawing.Bitmap
@@ -211,6 +517,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Path to a Feature List ähnelt.
+        '''</summary>
+        Friend ReadOnly Property LoadManually_PathToAFeatureList() As String
+            Get
+                Return ResourceManager.GetString("LoadManually_PathToAFeatureList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         '''</summary>
         Friend ReadOnly Property main_icon() As System.Drawing.Icon
@@ -221,12 +536,93 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Load manually... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property PopulateBuildComboBox_Check_LoadManually() As String
+            Get
+                Return ResourceManager.GetString("PopulateBuildComboBox_Check_LoadManually", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property PopulateBuildComboBox_Check_Ready() As String
+            Get
+                Return ResourceManager.GetString("PopulateBuildComboBox_Check_Ready", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  Success ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_Success() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_Success", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Heading1() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Heading1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Heading2() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Heading2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set feature configuration for ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status1() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  with Value  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status2() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         '''</summary>
         Friend ReadOnly Property settings_system_daydream() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("settings_system_daydream", resourceCulture)
                 Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die &amp;About… ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SystemMenu_About() As String
+            Get
+                Return ResourceManager.GetString("SystemMenu_About", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Manually Set Feature ID ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SystemMenu_ManuallySetFeatureID() As String
+            Get
+                Return ResourceManager.GetString("SystemMenu_ManuallySetFeatureID", resourceCulture)
             End Get
         End Property
     End Module

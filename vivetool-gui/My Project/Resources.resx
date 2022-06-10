@@ -169,4 +169,136 @@
   <data name="icons8_portrait_mode_scanning_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\icons8_portrait_mode_scanning_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PopulateBuildComboBox_Check_LoadManually" xml:space="preserve">
+    <value>Load manually...</value>
+  </data>
+  <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
+    <value>Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.</value>
+  </data>
+  <data name="Generic_LoadManually" xml:space="preserve">
+    <value>Load manually...</value>
+  </data>
+  <data name="Error_NetworkError" xml:space="preserve">
+    <value>Network Error</value>
+  </data>
+  <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
+    <value>Network Functions disabled. Press F12 to manually change a Feature.</value>
+  </data>
+  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
+    <value> A Network Exception occurred</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+    <value>ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable.</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+    <value>You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List.</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose" xml:space="preserve">
+    <value>Copy Exception and Close</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
+    <value>A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
+    <value>GitHub API Response: </value>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Collapse Exception</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Show Exception</value>
+  </data>
+  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
+    <value> An Exception occurred</value>
+  </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>An unknown Exception occurred.</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>A Network Exception occurred</value>
+  </data>
+  <data name="Generic_SelectBuild" xml:space="preserve">
+    <value>Select Build...</value>
+  </data>
+  <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
+    <value>Manually Set Feature ID</value>
+  </data>
+  <data name="SystemMenu_About" xml:space="preserve">
+    <value>&amp;About…</value>
+  </data>
+  <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
+    <value>Path to a Feature List</value>
+  </data>
+  <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
+    <value>Populating the Data Grid View... This can take a while.</value>
+  </data>
+  <data name="Generic_Modifiable" xml:space="preserve">
+    <value>Modifiable</value>
+  </data>
+  <data name="Generic_AlwaysEnabled" xml:space="preserve">
+    <value>Always Enabled</value>
+  </data>
+  <data name="Generic_EnabledByDefault" xml:space="preserve">
+    <value>Enabled By Default</value>
+  </data>
+  <data name="Generic_DisabledByDefault" xml:space="preserve">
+    <value>Disabled by Default</value>
+  </data>
+  <data name="Generic_AlwaysDisabled" xml:space="preserve">
+    <value>Always Disabled</value>
+  </data>
+  <data name="Generic_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Generic_Done" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="Debug_LoadingBuild" xml:space="preserve">
+    <value>Loading Build </value>
+  </data>
+  <data name="Debug_ExceptionWhileClearingRow" xml:space="preserve">
+    <value>Exception while clearing row. Build: </value>
+  </data>
+  <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
+    <value>Select Build 17704 or higher to use Grouping</value>
+  </data>
+  <data name="Error_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Error_SettingFeatureConfig_Status" xml:space="preserve">
+    <value>An error occurred while setting a feature configuration for </value>
+  </data>
+  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
+    <value> An Error occurred</value>
+  </data>
+  <data name="Error_SettingFeatureConfig_Heading1" xml:space="preserve">
+    <value>An Error occurred while trying to set Feature </value>
+  </data>
+  <data name="Error_SettingFeatureConfig_Heading2" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status1" xml:space="preserve">
+    <value>Successfully set feature configuration for</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status2" xml:space="preserve">
+    <value> with Value </value>
+  </data>
+  <data name="SetConfig_Success" xml:space="preserve">
+    <value> Success</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Heading1" xml:space="preserve">
+    <value>Successfully set Feature </value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Heading2" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="Generic_FeatureName" xml:space="preserve">
+    <value>Feature Name</value>
+  </data>
+  <data name="Generic_FeatureID" xml:space="preserve">
+    <value>Feature ID</value>
+  </data>
+  <data name="Generic_FeatureState" xml:space="preserve">
+    <value>Feature State</value>
+  </data>
 </root>

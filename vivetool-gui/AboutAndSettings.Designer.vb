@@ -67,10 +67,10 @@ Partial Class AboutAndSettings
         '
         'RPV_Main
         '
+        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Controls.Add(Me.RPVP_About)
         Me.RPV_Main.Controls.Add(Me.RPVP_Settings)
         Me.RPV_Main.DefaultPage = Me.RPVP_About
-        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
         Me.RPV_Main.SelectedPage = Me.RPVP_Settings
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemPinButton = False
@@ -79,6 +79,7 @@ Partial Class AboutAndSettings
         '
         'RPVP_About
         '
+        resources.ApplyResources(Me.RPVP_About, "RPVP_About")
         Me.RPVP_About.Controls.Add(Me.PB_AppImage)
         Me.RPVP_About.Controls.Add(Me.RL_Comments)
         Me.RPVP_About.Controls.Add(Me.RL_ProductName)
@@ -87,13 +88,12 @@ Partial Class AboutAndSettings
         Me.RPVP_About.Controls.Add(Me.RL_License)
         Me.RPVP_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
         Me.RPVP_About.ItemSize = New System.Drawing.SizeF(156.0!, 36.0!)
-        resources.ApplyResources(Me.RPVP_About, "RPVP_About")
         Me.RPVP_About.Name = "RPVP_About"
         '
         'PB_AppImage
         '
-        Me.PB_AppImage.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_advertisement_page_96
         resources.ApplyResources(Me.PB_AppImage, "PB_AppImage")
+        Me.PB_AppImage.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_advertisement_page_96
         Me.PB_AppImage.Name = "PB_AppImage"
         Me.PB_AppImage.TabStop = False
         '
@@ -124,41 +124,41 @@ Partial Class AboutAndSettings
         '
         'RPVP_Settings
         '
+        resources.ApplyResources(Me.RPVP_Settings, "RPVP_Settings")
         Me.RPVP_Settings.Controls.Add(Me.RadGroupBox1)
         Me.RPVP_Settings.Controls.Add(Me.RGB_Theming)
         Me.RPVP_Settings.Controls.Add(Me.RGB_Behaviour)
         Me.RPVP_Settings.Image = CType(resources.GetObject("RPVP_Settings.Image"), System.Drawing.Image)
         Me.RPVP_Settings.ItemSize = New System.Drawing.SizeF(89.0!, 36.0!)
-        resources.ApplyResources(Me.RPVP_Settings, "RPVP_Settings")
         Me.RPVP_Settings.Name = "RPVP_Settings"
         '
         'RadGroupBox1
         '
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.Controls.Add(Me.RB_ViVeTool_GUI_FeatureScanner)
         Me.RadGroupBox1.HeaderMargin = New System.Windows.Forms.Padding(1)
-        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         'RB_ViVeTool_GUI_FeatureScanner
         '
-        Me.RB_ViVeTool_GUI_FeatureScanner.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_portrait_mode_scanning_24px
         resources.ApplyResources(Me.RB_ViVeTool_GUI_FeatureScanner, "RB_ViVeTool_GUI_FeatureScanner")
+        Me.RB_ViVeTool_GUI_FeatureScanner.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_portrait_mode_scanning_24px
         Me.RB_ViVeTool_GUI_FeatureScanner.Name = "RB_ViVeTool_GUI_FeatureScanner"
         '
         'RGB_Theming
         '
+        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RGB_Theming.Controls.Add(Me.RTB_UseSystemTheme)
         Me.RGB_Theming.Controls.Add(Me.RTB_ThemeToggle)
         Me.RGB_Theming.HeaderMargin = New System.Windows.Forms.Padding(1)
-        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.Name = "RGB_Theming"
         '
         'RTB_UseSystemTheme
         '
-        Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_change_theme_24px
         resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
+        Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_change_theme_24px
         Me.RTB_UseSystemTheme.Name = "RTB_UseSystemTheme"
         Me.RTB_UseSystemTheme.ThemeName = "Fluent"
         '
@@ -171,11 +171,11 @@ Partial Class AboutAndSettings
         '
         'RGB_Behaviour
         '
+        resources.ApplyResources(Me.RGB_Behaviour, "RGB_Behaviour")
         Me.RGB_Behaviour.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RGB_Behaviour.Controls.Add(Me.RL_AutoLoad)
         Me.RGB_Behaviour.Controls.Add(Me.RTS_AutoLoad)
         Me.RGB_Behaviour.HeaderMargin = New System.Windows.Forms.Padding(1)
-        resources.ApplyResources(Me.RGB_Behaviour, "RGB_Behaviour")
         Me.RGB_Behaviour.Name = "RGB_Behaviour"
         '
         'RL_AutoLoad
