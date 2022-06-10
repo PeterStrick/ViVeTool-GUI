@@ -120,18 +120,6 @@
   <data name="RLE_StatusLabel.Text" xml:space="preserve">
     <value>Fülle die Build Combo Box aus...</value>
   </data>
-  <data name="GridViewTextBoxColumn9.HeaderText" xml:space="preserve">
-    <value>Feature Name</value>
-  </data>
-  <data name="GridViewTextBoxColumn10.HeaderText" xml:space="preserve">
-    <value>Feature ID</value>
-  </data>
-  <data name="GridViewTextBoxColumn11.HeaderText" xml:space="preserve">
-    <value>Feature State</value>
-  </data>
-  <data name="GridViewTextBoxColumn12.HeaderText" xml:space="preserve">
-    <value>Features that are</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
     <value>139, 10</value>

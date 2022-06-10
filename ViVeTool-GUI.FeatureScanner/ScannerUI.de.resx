@@ -197,19 +197,19 @@
     <value>325, 22</value>
   </data>
   <data name="RL_SymbolFolders.Text" xml:space="preserve">
-    <value>&lt;html&gt;Anzahl von Ordnern in {My.Settings.SymbolPath}:&lt;/html&gt;</value>
+    <value>Anzahl von Ordnern in {My.Settings.SymbolPath}:</value>
   </data>
   <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>321, 22</value>
   </data>
   <data name="RL_SymbolFiles.Text" xml:space="preserve">
-    <value>&lt;html&gt;Anzahl von Dateien in {My.Settings.SymbolPath}:&lt;/html&gt;</value>
+    <value>Anzahl von Dateien in {My.Settings.SymbolPath}:</value>
   </data>
   <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
   <data name="RL_SymbolSize.Text" xml:space="preserve">
-    <value>&lt;html&gt;Derzeitige Größe von {My.Settings.SymbolPath}:&lt;/html&gt;</value>
+    <value>Derzeitige Größe von {My.Settings.SymbolPath}:</value>
   </data>
   <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
     <value>576, 90</value>

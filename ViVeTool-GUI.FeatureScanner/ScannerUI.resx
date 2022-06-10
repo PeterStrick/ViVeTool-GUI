@@ -137,9 +137,6 @@
   <data name="&gt;&gt;RTB_UseSystemTheme.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadToggleButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -750,9 +747,6 @@
   <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 197</value>
   </data>
-  <data name="RPBE_StatusProgressBar.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RPVP_Setup.Parent" xml:space="preserve">
     <value>RPV_Main</value>
   </data>
@@ -1359,9 +1353,6 @@
   </data>
   <data name="RL_SymbolSize.Text" xml:space="preserve">
     <value>Current size of {My.Settings.SymbolPath}:</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.ImageKey" xml:space="preserve">
-    <value />
   </data>
   <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>

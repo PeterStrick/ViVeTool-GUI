@@ -139,6 +139,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.de.resx">
       <DependentUpon>GUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.vb</DependentUpon>

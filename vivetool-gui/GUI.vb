@@ -303,9 +303,10 @@ Public Class GUI
 
                        'Add the Handler
                        AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
+
+                       'Enable the Combo Box
+                       RDDL_Build.Enabled = True
                    End Sub)
-            'Enable the Combo Box
-            Invoke(Sub() RDDL_Build.Enabled = True)
 
             'Auto-load the newest Build if it is Enabled in the Settings
             If My.Settings.AutoLoad Then
@@ -511,6 +512,15 @@ Public Class GUI
                 Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
                 LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
                 Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+
+                'Clear the selection
+                Invoke(Sub()
+                           RDDL_Build.SelectedIndex = -1
+                           RDDL_Build.Enabled = True
+                       End Sub)
+
+                'Make the Search Row Visible
+                Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
             Catch ex As Exception
                 Invoke(Sub()
                            'Catch Any Exception that may occur
