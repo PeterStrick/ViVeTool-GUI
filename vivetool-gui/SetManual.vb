@@ -50,16 +50,16 @@ Public Class SetManual
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Error occurred",
-                    .Heading = "An Error occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
+                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnErrorOccurred,
+                    .Heading = ViVeTool_GUI.My.Resources.Error_SettingFeatureID1 & RTB_FeatureID.Text & ViVeTool_GUI.My.Resources.Error_SettingFeatureID2 & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.Error
                 }
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
                 RadTaskDialog.ShowDialog(RTD)
             Else
                 Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " Success",
-                    .Heading = "Successfully set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
+                    .Caption = ViVeTool_GUI.My.Resources.SetConfig_Success,
+                    .Heading = ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureID1 & RTB_FeatureID.Text & ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureID2 & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
@@ -70,7 +70,7 @@ Public Class SetManual
 
             'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = "Copy Exception and Close"
+                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -82,16 +82,16 @@ Public Class SetManual
 
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Exception occurred",
-                    .Heading = "An Exception occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
+                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
+                    .Heading = ViVeTool_GUI.My.Resources.Error_ExceptionSettingFeatureID1 & RTB_FeatureID.Text & ViVeTool_GUI.My.Resources.Error_ExceptionSettingFeatureID2 & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
             'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString
 
             'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
 
             'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)

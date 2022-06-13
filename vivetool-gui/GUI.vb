@@ -593,7 +593,7 @@ Public Class GUI
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
             'Debug
-            Diagnostics.Debug.WriteLine(ViVeTool_GUI.My.Resources.Debug_LoadingBuild & RDDL_Build.Text)
+            Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
 
             'Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
@@ -606,7 +606,7 @@ Public Class GUI
             Try
                 Invoke(Sub() RGV_MainGridView.Rows.Clear())
             Catch ex As Exception
-                Diagnostics.Debug.WriteLine(ViVeTool_GUI.My.Resources.Debug_ExceptionWhileClearingRow & RDDL_Build.Text & ". " & ex.Message)
+                Diagnostics.Debug.WriteLine("Exception while clearing row. Build: " & RDDL_Build.Text & ". " & ex.Message)
             End Try
 
             'Prepare Web Client and download Build TXT

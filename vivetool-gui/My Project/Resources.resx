@@ -253,12 +253,6 @@
   <data name="Generic_Done" xml:space="preserve">
     <value>Done.</value>
   </data>
-  <data name="Debug_LoadingBuild" xml:space="preserve">
-    <value>Loading Build </value>
-  </data>
-  <data name="Debug_ExceptionWhileClearingRow" xml:space="preserve">
-    <value>Exception while clearing row. Build: </value>
-  </data>
   <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
     <value>Select Build 17704 or higher to use Grouping</value>
   </data>
@@ -266,7 +260,7 @@
     <value>Error</value>
   </data>
   <data name="Error_SettingFeatureConfig_Status" xml:space="preserve">
-    <value>An error occurred while setting a feature configuration for </value>
+    <value>An Error occurred while setting a feature configuration for </value>
   </data>
   <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
     <value> An Error occurred</value>
@@ -300,5 +294,41 @@
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature State</value>
+  </data>
+  <data name="Error_SettingFeatureID1" xml:space="preserve">
+    <value>An Error occurred while trying to set Feature ID </value>
+  </data>
+  <data name="Error_SettingFeatureID2" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID1" xml:space="preserve">
+    <value>Successfully set Feature ID </value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID2" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="Error_ExceptionSettingFeatureID1" xml:space="preserve">
+    <value>An Exception occurred while trying to set Feature ID </value>
+  </data>
+  <data name="Error_ExceptionSettingFeatureID2" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Dark Theme</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Light Theme</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
+    <value>A generic Win32 Exception occurred.</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
+    <value>There could be multiple causes for Win32 Exceptions, but they usually narrow down to Anti-virus Software interfering with ViVeTool GUI, or Permission problems.</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+    <value>An Error occurred while trying to start the ViVeTool GUI Feature Scanner.</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+    <value>The File doesn't exist.</value>
   </data>
 </root>

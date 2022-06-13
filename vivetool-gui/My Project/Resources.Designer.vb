@@ -71,24 +71,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Exception while clearing row. Build:  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Debug_ExceptionWhileClearingRow() As String
-            Get
-                Return ResourceManager.GetString("Debug_ExceptionWhileClearingRow", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Loading Build  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Debug_LoadingBuild() As String
-            Get
-                Return ResourceManager.GetString("Debug_LoadingBuild", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die A Network Exception occurred ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_ANetworkExceptionOccurred() As String
@@ -130,6 +112,60 @@ Namespace My.Resources
         Friend ReadOnly Property Error_Error() As String
             Get
                 Return ResourceManager.GetString("Error_Error", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to set Feature ID  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ExceptionSettingFeatureID1() As String
+            Get
+                Return ResourceManager.GetString("Error_ExceptionSettingFeatureID1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ExceptionSettingFeatureID2() As String
+            Get
+                Return ResourceManager.GetString("Error_ExceptionSettingFeatureID2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to start the ViVeTool GUI Feature Scanner. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_FeatureScannerNotFound1() As String
+            Get
+                Return ResourceManager.GetString("Error_FeatureScannerNotFound1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The File doesn&apos;t exist. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_FeatureScannerNotFound2() As String
+            Get
+                Return ResourceManager.GetString("Error_FeatureScannerNotFound2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A generic Win32 Exception occurred. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_GenericWin32Exception_Heading() As String
+            Get
+                Return ResourceManager.GetString("Error_GenericWin32Exception_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die There could be multiple causes for Win32 Exceptions, but they usually narrow down to Anti-virus Software interfering with ViVeTool GUI, or Permission problems. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_GenericWin32Exception_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_GenericWin32Exception_Text", resourceCulture)
             End Get
         End Property
         
@@ -215,11 +251,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An error occurred while setting a feature configuration for  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while setting a feature configuration for  ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_SettingFeatureConfig_Status() As String
             Get
                 Return ResourceManager.GetString("Error_SettingFeatureConfig_Status", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to set Feature ID  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SettingFeatureID1() As String
+            Get
+                Return ResourceManager.GetString("Error_SettingFeatureID1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SettingFeatureID2() As String
+            Get
+                Return ResourceManager.GetString("Error_SettingFeatureID2", resourceCulture)
             End Get
         End Property
         
@@ -274,6 +328,15 @@ Namespace My.Resources
         Friend ReadOnly Property Generic_AlwaysEnabled() As String
             Get
                 Return ResourceManager.GetString("Generic_AlwaysEnabled", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Dark Theme ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_DarkTheme() As String
+            Get
+                Return ResourceManager.GetString("Generic_DarkTheme", resourceCulture)
             End Get
         End Property
         
@@ -337,6 +400,15 @@ Namespace My.Resources
         Friend ReadOnly Property Generic_FeatureState() As String
             Get
                 Return ResourceManager.GetString("Generic_FeatureState", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Light Theme ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_LightTheme() As String
+            Get
+                Return ResourceManager.GetString("Generic_LightTheme", resourceCulture)
             End Get
         End Property
         
@@ -595,6 +667,24 @@ Namespace My.Resources
         Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status2() As String
             Get
                 Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature ID  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureID1() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureID1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureID2() As String
+            Get
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureID2", resourceCulture)
             End Get
         End Property
         
