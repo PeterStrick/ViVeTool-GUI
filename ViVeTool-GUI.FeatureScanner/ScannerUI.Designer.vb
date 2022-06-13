@@ -23,8 +23,8 @@ Partial Class ScannerUI
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScannerUI))
-        Dim MentionBox2 As Telerik.WinControls.RichTextEditor.UI.MentionBox = New Telerik.WinControls.RichTextEditor.UI.MentionBox()
-        Dim MentionContext2 As Telerik.WinForms.Documents.UI.Mentions.MentionContext = New Telerik.WinForms.Documents.UI.Mentions.MentionContext()
+        Dim MentionBox1 As Telerik.WinControls.RichTextEditor.UI.MentionBox = New Telerik.WinControls.RichTextEditor.UI.MentionBox()
+        Dim MentionContext1 As Telerik.WinForms.Documents.UI.Mentions.MentionContext = New Telerik.WinForms.Documents.UI.Mentions.MentionContext()
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_Setup = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RRTE_Intro = New Telerik.WinControls.UI.RadRichTextEditor()
@@ -144,10 +144,10 @@ Partial Class ScannerUI
         Me.RRTE_Intro.IsReadOnly = True
         Me.RRTE_Intro.IsSelectionEnabled = False
         Me.RRTE_Intro.IsSelectionMiniToolBarEnabled = False
-        MentionBox2.FocusedItemIndex = -1
-        MentionBox2.PopupSize = New System.Drawing.Size(250, 190)
-        Me.RRTE_Intro.MentionBox = MentionBox2
-        Me.RRTE_Intro.MentionContext = MentionContext2
+        MentionBox1.FocusedItemIndex = -1
+        MentionBox1.PopupSize = New System.Drawing.Size(250, 190)
+        Me.RRTE_Intro.MentionBox = MentionBox1
+        Me.RRTE_Intro.MentionContext = MentionContext1
         Me.RRTE_Intro.Name = "RRTE_Intro"
         Me.RRTE_Intro.SelectionFill = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(248, Byte), Integer))
         Me.RRTE_Intro.SelectionStroke = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(248, Byte), Integer))

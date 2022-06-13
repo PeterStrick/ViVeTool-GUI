@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Configuration
+Imports System.Configuration, Telerik.WinControls.UI
 
 Namespace My
     ''' <summary>
@@ -32,8 +32,15 @@ Namespace My
             If Environment.OSVersion.Version.Build >= 18963 Then
                 'OS Build Check passed.
             Else
-                MsgBox("You are running a unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is: " & Environment.OSVersion.Version.Build.ToString, vbCritical, "Unsupported Build")
-                Environment.Exit(-1)
+                Dim RTD As New RadTaskDialogPage With {
+                       .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_UnsupportedBuild,
+                       .Heading = ViVeTool_GUI.My.Resources.Error_UnsupportedBuild,
+                       .Text = ViVeTool_GUI.My.Resources.Error_UnsupportedBuild_Text & Environment.OSVersion.Version.Build.ToString,
+                       .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                   }
+                'Show the Message Box
+                RadTaskDialog.ShowDialog(RTD)
+                End
             End If
 
             'Transfers older My.Settings to newer ViVeTool GUI Versions if applicable.

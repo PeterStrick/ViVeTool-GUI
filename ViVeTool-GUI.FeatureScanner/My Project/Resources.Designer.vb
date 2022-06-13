@@ -61,6 +61,393 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Path to symchk.exe from the Windows Debugging Tools ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Browse_PathToDebuggingTools() As String
+            Get
+                Return ResourceManager.GetString("Browse_PathToDebuggingTools", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Select a Folder to store the downloaded Debug Symbols into. The downloaded .pdb Files usually take up to 5~8GB of Space. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Browse_SymbolPath_Description() As String
+            Get
+                Return ResourceManager.GetString("Browse_SymbolPath_Description", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Calculating... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Calculation_Calculating() As String
+            Get
+                Return ResourceManager.GetString("Calculation_Calculating", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Current Size of  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Calculation_CurrentSizeOf() As String
+            Get
+                Return ResourceManager.GetString("Calculation_CurrentSizeOf", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Total Files in  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Calculation_TotalFilesIn() As String
+            Get
+                Return ResourceManager.GetString("Calculation_TotalFilesIn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Total Folders in  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Calculation_TotalFoldersIn() As String
+            Get
+                Return ResourceManager.GetString("Calculation_TotalFoldersIn", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Debug Symbol Scan complete ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_Alert_CaptionText() As String
+            Get
+                Return ResourceManager.GetString("Done_Alert_CaptionText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_Alert_ContentText() As String
+            Get
+                Return ResourceManager.GetString("Done_Alert_ContentText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  File Copy successful ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_FileCopySuccessful() As String
+            Get
+                Return ResourceManager.GetString("Done_FileCopySuccessful", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  File Copy successful ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_FileCopySuccessful_Caption() As String
+            Get
+                Return ResourceManager.GetString("Done_FileCopySuccessful_Caption", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die was successfully copied to your desktop. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_FileCopySuccessful_Heading() As String
+            Get
+                Return ResourceManager.GetString("Done_FileCopySuccessful_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Output File:  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_OutputFile() As String
+            Get
+                Return ResourceManager.GetString("Done_OutputFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  Symbol Folder deleted successfully ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_SymbolFolderDeleted_Caption() As String
+            Get
+                Return ResourceManager.GetString("Done_SymbolFolderDeleted_Caption", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die was successfully deleted. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_SymbolFolderDeleted_Heading() As String
+            Get
+                Return ResourceManager.GetString("Done_SymbolFolderDeleted_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_AnErrorOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_AnExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Collapse Exception ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CollapseException() As String
+            Get
+                Return ResourceManager.GetString("Error_CollapseException", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to copy  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CopyException1() As String
+            Get
+                Return ResourceManager.GetString("Error_CopyException1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  to your desktop. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CopyException2() As String
+            Get
+                Return ResourceManager.GetString("Error_CopyException2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Copy Exception and Close ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_CopyExceptionAndClose() As String
+            Get
+                Return ResourceManager.GetString("Error_CopyExceptionAndClose", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die IO Error ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_IOError() As String
+            Get
+                Return ResourceManager.GetString("Error_IOError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while scanning the symbol files. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_mach2Scan_1() As String
+            Get
+                Return ResourceManager.GetString("Error_mach2Scan_1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The application will attempt to rescan the symbol folder. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_mach2Scan_2() As String
+            Get
+                Return ResourceManager.GetString("Error_mach2Scan_2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please check that the following files are present: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_MisingFiles_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_MisingFiles_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_MissingFiles_Heading() As String
+            Get
+                Return ResourceManager.GetString("Error_MissingFiles_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Show Exception ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ShowException() As String
+            Get
+                Return ResourceManager.GetString("Error_ShowException", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  An Error occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_AnErrorOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_AnErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  An Exception occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_AnExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_AnExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while downloading the symbol files. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolDownload1() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolDownload1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Check if yo have access to symchk.exe and that your Anti-virus isn&apos;t blocking it. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolDownload2() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolDownload2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to delete  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolFolderDeleted() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolFolderDeleted", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to write a test file to the symbol folder. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolFolderTestFile1() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolFolderTestFile1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A symbol folder must be specified to download Program Debug Database files into. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolFolderTestFile2() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolFolderTestFile2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to write a test file to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolPath1() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolPath1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please make sure that the application has write access to the folder, and that the folder isn&apos;t write protected. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolPath2() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolPath2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to write a test file to  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolPathException1() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolPathException1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please make sure that the application has write access to the folder, and that the folder isn&apos;t write protected. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolPathException2() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolPathException2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while checking if the specified Path to symchk.exe is valid. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymchkPath1() As String
+            Get
+                Return ResourceManager.GetString("Error_SymchkPath1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please be sure to enter a valid path to symchk.exe. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymchkPath2() As String
+            Get
+                Return ResourceManager.GetString("Error_SymchkPath2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64 ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_SymchkPath3() As String
+            Get
+                Return ResourceManager.GetString("Error_SymchkPath3", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Dark Theme ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_DarkTheme() As String
+            Get
+                Return ResourceManager.GetString("Generic_DarkTheme", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Delete  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Delete() As String
+            Get
+                Return ResourceManager.GetString("Generic_Delete", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Light Theme ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_LightTheme() As String
+            Get
+                Return ResourceManager.GetString("Generic_LightTheme", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property icons8_change_theme_24px() As System.Drawing.Bitmap
@@ -97,6 +484,51 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8_sun_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Current Size of  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Size_CurrentSizeOf() As String
+            Get
+                Return ResourceManager.GetString("Size_CurrentSizeOf", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Symbol  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SymbolDownloaded1() As String
+            Get
+                Return ResourceManager.GetString("SymbolDownloaded1", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  downloaded. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property SymbolDownloaded2() As String
+            Get
+                Return ResourceManager.GetString("SymbolDownloaded2", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ToolTip_RTB_DbgPath() As String
+            Get
+                Return ResourceManager.GetString("ToolTip_RTB_DbgPath", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Downloaded Debug Symbols can be up to 5~8GB in size. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property ToolTip_RTB_SymbolPath() As String
+            Get
+                Return ResourceManager.GetString("ToolTip_RTB_SymbolPath", resourceCulture)
             End Get
         End Property
     End Module

@@ -314,6 +314,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die  Unsupported Build ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_UnsupportedBuild() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_UnsupportedBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Unsupported Build ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_UnsupportedBuild() As String
+            Get
+                Return ResourceManager.GetString("Error_UnsupportedBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You are running an unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is:  ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_UnsupportedBuild_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_UnsupportedBuild_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Always Disabled ähnelt.
         '''</summary>
         Friend ReadOnly Property Generic_AlwaysDisabled() As String

@@ -33,7 +33,7 @@ Public Class ScannerUI
     Private Sub RB_DbgPath_Browse_Click(sender As Object, e As EventArgs) Handles RB_DbgPath_Browse.Click
         Dim OFD As New OpenFileDialog With {
             .InitialDirectory = "C:\",
-            .Title = "Path to symchk.exe from the Windows Debugging Tools",
+            .Title = ViVeTool_GUI.FeatureScanner.My.Resources.Browse_PathToDebuggingTools,
             .Filter = "Symbol Checker|symchk.exe"
         }
 
@@ -50,7 +50,7 @@ Public Class ScannerUI
     Private Sub RB_SymbolPath_Browse_Click(sender As Object, e As EventArgs) Handles RB_SymbolPath_Browse.Click
         Dim FBD As New FolderBrowserDialog With {
             .ShowNewFolderButton = True,
-            .Description = "Select a Folder to store the downloaded Debug Symbols into. The downloaded .pdb Files usually take up to 5~8GB of Space."
+            .Description = ViVeTool_GUI.FeatureScanner.My.Resources.Browse_SymbolPath_Description
         }
 
         If FBD.ShowDialog() = DialogResult.OK Then
@@ -65,7 +65,7 @@ Public Class ScannerUI
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
     Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_DbgPath.ToolTipTextNeeded
         e.ToolTip.AutoPopDelay = 15000
-        e.ToolTipText = "Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe"
+        e.ToolTipText = ViVeTool_GUI.FeatureScanner.My.Resources.ToolTip_RTB_DbgPath
     End Sub
 
     ''' <summary>
@@ -75,7 +75,7 @@ Public Class ScannerUI
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
     Private Sub RTB_SymbolPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_SymbolPath.ToolTipTextNeeded
         e.ToolTip.AutoPopDelay = 15000
-        e.ToolTipText = "The Downloaded Debug Symbols can be up to 5~8GB in size."
+        e.ToolTipText = ViVeTool_GUI.FeatureScanner.My.Resources.ToolTip_RTB_SymbolPath
     End Sub
 
     ''' <summary>
@@ -109,9 +109,9 @@ Public Class ScannerUI
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 50)
         Else
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Error occurred",
-                    .Heading = "An Error occurred",
-                    .Text = "An Error occurred while checking if the specified Path to symchk.exe is valid." & vbNewLine & vbNewLine & "Please be sure to enter a valid path to symchk.exe." & vbNewLine & "If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64",
+                    .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
+                    .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnErrorOccurred,
+                    .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymchkPath1 & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymchkPath2 & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymchkPath3,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
 
@@ -144,9 +144,9 @@ Public Class ScannerUI
                     IO.File.Delete(RTB_SymbolPath.Text & "\Test.txt")
                 Else
                     Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Error occurred",
-                        .Heading = "An Error occurred",
-                        .Text = "An Error occurred while trying to write a test file to " & RTB_SymbolPath.Text & vbNewLine & vbNewLine & "Please make sure that the application has write access to the folder, and that the folder isn't write protected.",
+                        .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
+                        .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnErrorOccurred,
+                        .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolPath1 & RTB_SymbolPath.Text & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolPath2,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
                     'Show the Message Box
@@ -163,7 +163,7 @@ Public Class ScannerUI
             Catch ex As Exception
                 'Create a Button that on Click, copies the Exception Text
                 Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
+                    .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CopyExceptionAndClose
                 }
                 AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                       Try
@@ -174,9 +174,9 @@ Public Class ScannerUI
                                                                   End Sub)
 
                 Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to write a test file to " & RTB_SymbolPath.Text & vbNewLine & vbNewLine & "Please make sure that the application has write access to the folder, and that the folder isn't write protected.",
+                        .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnExceptionOccurred,
+                        .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnExceptionOccurred,
+                        .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolPathException1 & RTB_SymbolPath.Text & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolPathException2,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -184,8 +184,8 @@ Public Class ScannerUI
                 RTD.Expander.Text = ex.Message
 
                 'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = "Collapse Exception"
-                RTD.Expander.CollapsedButtonText = "Show Exception"
+                RTD.Expander.ExpandedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CollapseException
+                RTD.Expander.CollapsedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_ShowException
 
                 'Add the Button to the Message Box
                 RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -203,9 +203,9 @@ Public Class ScannerUI
             End Try
         Else
             Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Error occurred",
-                        .Heading = "An Error occurred",
-                        .Text = "An Error occurred while trying to write a test file to the symbol folder." & vbNewLine & vbNewLine & "A symbol folder must be specified to download Program Debug Database files into.",
+                        .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
+                        .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnErrorOccurred,
+                        .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolFolderTestFile1 & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolFolderTestFile2,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
             'Show the Message Box
@@ -262,9 +262,9 @@ Public Class ScannerUI
         End With
 
         Dim RTD_SymChk As New RadTaskDialogPage With {
-                                .Caption = " An Error occurred",
-                                .Heading = "An Error occurred",
-                                .Text = "An Error occurred while downloading the symbol files." & vbNewLine & vbNewLine & "Check if yo have access to symchk.exe and that your Antivirus isn't blocking it.",
+                                .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
+                                .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnErrorOccurred,
+                                .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolDownload1 & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolDownload2,
                                 .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                             }
 
@@ -369,7 +369,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">IO.FileSystem EventArgs</param>
     Private Sub FSW_SymbolPath_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FSW_SymbolPath.Created
-        RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] Symbol " & e.Name & " downloaded." & vbNewLine)
+        RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] " & ViVeTool_GUI.FeatureScanner.My.Resources.SymbolDownloaded1 & e.Name & ViVeTool_GUI.FeatureScanner.My.Resources.SymbolDownloaded2 & vbNewLine)
     End Sub
 
     ''' <summary>
@@ -404,9 +404,9 @@ Public Class ScannerUI
             If Proc.ExitCode >= 1 Then
                 Invoke(Sub()
                            Dim RTD As New RadTaskDialogPage With {
-                                .Caption = " An Error occurred",
-                                .Heading = "An Error occurred",
-                                .Text = "An Error occurred while scanning the symbol files." & vbNewLine & vbNewLine & "The application will attempt to rescan the symbol folder.",
+                                .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
+                                .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnErrorOccurred,
+                                .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_mach2Scan_1 & vbNewLine & vbNewLine & ViVeTool_GUI.FeatureScanner.My.Resources.Error_mach2Scan_2,
                                 .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                             }
                            'Show the Message Box
@@ -432,33 +432,33 @@ Public Class ScannerUI
     Private Sub ScanPDBFiles_Calculation()
         'Set Labels
         Invoke(Sub()
-                   RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & "Calculating..."
-                   RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & "Calculating..."
-                   RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & "Calculating..."
+                   RL_SymbolSize.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_CurrentSizeOf & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_Calculating
+                   RL_SymbolFiles.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_Calculating
+                   RL_SymbolFolders.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_Calculating
                End Sub)
 
         'Calculate Size of the Symbol Folder
         Try
             Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
-            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+            Invoke(Sub() RL_SymbolSize.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Size_CurrentSizeOf & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolSize.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Size_CurrentSizeOf & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Error_IOError)
         End Try
 
         'Calculate amount of Total Files in the Symbol Folder
         Try
             Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
-            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+            Invoke(Sub() RL_SymbolFiles.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolFiles.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Error_IOError)
         End Try
 
         'Calculate amount of Total Folders in the Symbol Folder
         Try
             Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
-            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+            Invoke(Sub() RL_SymbolFolders.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolFolders.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & ViVeTool_GUI.FeatureScanner.My.Resources.Error_IOError)
         End Try
 
     End Sub
@@ -488,8 +488,8 @@ Public Class ScannerUI
     Private Sub Done()
         'Replace Labels
         Invoke(Sub()
-                   RL_OutputFile.Text = "Output File: " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
-                   RB_OA_DeleteSymbolPath.Text = "Delete " & My.Settings.SymbolPath
+                   RL_OutputFile.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Done_OutputFile & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
+                   RB_OA_DeleteSymbolPath.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Generic_Delete & My.Settings.SymbolPath
                    RL_Done.Text.Replace("Features.txt", BuildNumber & ".txt")
                    RB_OA_CopyFeaturesTXT.Text.Replace("Features.txt", BuildNumber & ".txt")
                End Sub)
@@ -498,8 +498,8 @@ Public Class ScannerUI
         Invoke(Sub()
                    Try
                        Dim RDA_Done As New RadDesktopAlert With {
-                        .CaptionText = "Debug Symbol Scan complete",
-                        .ContentText = "The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.",
+                        .CaptionText = ViVeTool_GUI.FeatureScanner.My.Resources.Done_Alert_CaptionText,
+                        .ContentText = ViVeTool_GUI.FeatureScanner.My.Resources.Done_Alert_ContentText,
                         .Opacity = 1,
                         .ShowCloseButton = True,
                         .ShowPinButton = False,
@@ -514,7 +514,7 @@ Public Class ScannerUI
                        RDA_Done.Show()
                    Catch ex As Exception
                        'Sometimes, again rarely the RadDesktopAlert will fail so we fall back to a god ol' message box
-                       MsgBox("The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.", vbInformation, "Debug Symbol Scan complete")
+                       MsgBox(ViVeTool_GUI.FeatureScanner.My.Resources.Done_Alert_ContentText, vbInformation, ViVeTool_GUI.FeatureScanner.My.Resources.Done_Alert_CaptionText)
                    End Try
                End Sub)
     End Sub
@@ -528,8 +528,8 @@ Public Class ScannerUI
         Try
             IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", My.Computer.FileSystem.SpecialDirectories.Desktop & "\" & BuildNumber & ".txt")
             Dim RTD As New RadTaskDialogPage With {
-                       .Caption = " File Copy successful",
-                       .Heading = BuildNumber & ".txt was successfully copied to your desktop.",
+                       .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Done_FileCopySuccessful_Caption,
+                       .Heading = BuildNumber & ".txt " & ViVeTool_GUI.FeatureScanner.My.Resources.Done_FileCopySuccessful_Heading,
                        .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                    }
 
@@ -538,7 +538,7 @@ Public Class ScannerUI
         Catch ex As Exception
             'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
+                    .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CopyExceptionAndClose
                 }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -549,9 +549,9 @@ Public Class ScannerUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to copy " & BuildNumber & ".txt to your desktop.",
+                        .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnExceptionOccurred,
+                        .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnExceptionOccurred,
+                        .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CopyException1 & BuildNumber & ".txt" & ViVeTool_GUI.FeatureScanner.My.Resources.Error_CopyException2,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -559,8 +559,8 @@ Public Class ScannerUI
             RTD.Expander.Text = ex.Message
 
             'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_ShowException
 
             'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -579,8 +579,8 @@ Public Class ScannerUI
         Try
             IO.Directory.Delete(My.Settings.SymbolPath, True)
             Dim RTD As New RadTaskDialogPage With {
-                       .Caption = " Symbol Folder deleted successfully",
-                       .Heading = My.Settings.SymbolPath & "was successfully deleted.",
+                       .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Done_SymbolFolderDeleted_Caption,
+                       .Heading = My.Settings.SymbolPath & ViVeTool_GUI.FeatureScanner.My.Resources.Done_SymbolFolderDeleted_Heading,
                        .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                    }
 
@@ -589,7 +589,7 @@ Public Class ScannerUI
         Catch ex As Exception
             'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
+                    .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CopyExceptionAndClose
                 }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -600,9 +600,9 @@ Public Class ScannerUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to delete " & My.Settings.SymbolPath,
+                        .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnExceptionOccurred,
+                        .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_AnExceptionOccurred,
+                        .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_SymbolFolderDeleted & My.Settings.SymbolPath,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -610,8 +610,8 @@ Public Class ScannerUI
             RTD.Expander.Text = ex.Message
 
             'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
+            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.FeatureScanner.My.Resources.Error_ShowException
 
             'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -652,12 +652,12 @@ Public Class ScannerUI
     Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             ThemeResolutionService.ApplicationThemeName = "FluentDark"
-            RTB_ThemeToggle.Text = "Dark Theme"
+            RTB_ThemeToggle.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Generic_DarkTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
             My.Settings.DarkMode = True
         Else
             ThemeResolutionService.ApplicationThemeName = "Fluent"
-            RTB_ThemeToggle.Text = "Light Theme"
+            RTB_ThemeToggle.Text = ViVeTool_GUI.FeatureScanner.My.Resources.Generic_LightTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
             My.Settings.DarkMode = False
         End If

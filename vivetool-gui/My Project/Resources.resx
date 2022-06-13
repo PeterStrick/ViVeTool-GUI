@@ -331,4 +331,13 @@
   <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
     <value>The File doesn't exist.</value>
   </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Unsupported Build</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Unsupported Build</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text" xml:space="preserve">
+    <value>You are running an unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is: </value>
+  </data>
 </root>
