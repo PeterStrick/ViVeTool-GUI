@@ -66,12 +66,12 @@ Public NotInheritable Class AboutAndSettings
     Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-            RTB_ThemeToggle.Text = ViVeTool_GUI.My.Resources.Generic_DarkTheme
+            RTB_ThemeToggle.Text = My.Resources.Generic_DarkTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
             My.Settings.DarkMode = True
         Else
             Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-            RTB_ThemeToggle.Text = ViVeTool_GUI.My.Resources.Generic_LightTheme
+            RTB_ThemeToggle.Text = My.Resources.Generic_LightTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
             My.Settings.DarkMode = False
         End If
@@ -91,7 +91,7 @@ Public NotInheritable Class AboutAndSettings
 
                 'Create a Button that on Click, copies the Exception Text
                 Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                    .Text = My.Resources.Error_CopyExceptionAndClose
                 }
                 AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                       Try
@@ -103,9 +103,9 @@ Public NotInheritable Class AboutAndSettings
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
-                        .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
-                        .Heading = ViVeTool_GUI.My.Resources.Error_GenericWin32Exception_Heading,
-                        .Text = ViVeTool_GUI.My.Resources.Error_GenericWin32Exception_Text,
+                        .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                        .Heading = My.Resources.Error_GenericWin32Exception_Heading,
+                        .Text = My.Resources.Error_GenericWin32Exception_Text,
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -113,8 +113,8 @@ Public NotInheritable Class AboutAndSettings
                 RTD.Expander.Text = wex.ToString
 
                 'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-                RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+                RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+                RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
 
                 'Add the Button to the Message Box
                 RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -124,8 +124,8 @@ Public NotInheritable Class AboutAndSettings
             End Try
         Else
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_FeatureScannerNotFound1 & vbNewLine & vbNewLine & ViVeTool_GUI.My.Resources.Error_FeatureScannerNotFound2,
+                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
+                    .Heading = My.Resources.Error_FeatureScannerNotFound1 & vbNewLine & vbNewLine & My.Resources.Error_FeatureScannerNotFound2,
                     .Icon = RadTaskDialogIcon.Error
                 }
             RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)

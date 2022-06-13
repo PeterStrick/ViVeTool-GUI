@@ -86,14 +86,14 @@ Partial Class AboutAndSettings
         Me.RPVP_About.Controls.Add(Me.RL_Description)
         Me.RPVP_About.Controls.Add(Me.RL_Version)
         Me.RPVP_About.Controls.Add(Me.RL_License)
-        Me.RPVP_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
+        Me.RPVP_About.Image = My.Resources.Resources.icons8_about_24
         Me.RPVP_About.ItemSize = New System.Drawing.SizeF(156.0!, 36.0!)
         Me.RPVP_About.Name = "RPVP_About"
         '
         'PB_AppImage
         '
         resources.ApplyResources(Me.PB_AppImage, "PB_AppImage")
-        Me.PB_AppImage.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_advertisement_page_96
+        Me.PB_AppImage.Image = My.Resources.Resources.icons8_advertisement_page_96
         Me.PB_AppImage.Name = "PB_AppImage"
         Me.PB_AppImage.TabStop = False
         '
@@ -143,7 +143,7 @@ Partial Class AboutAndSettings
         'RB_ViVeTool_GUI_FeatureScanner
         '
         resources.ApplyResources(Me.RB_ViVeTool_GUI_FeatureScanner, "RB_ViVeTool_GUI_FeatureScanner")
-        Me.RB_ViVeTool_GUI_FeatureScanner.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_portrait_mode_scanning_24px
+        Me.RB_ViVeTool_GUI_FeatureScanner.Image = My.Resources.Resources.icons8_portrait_mode_scanning_24px
         Me.RB_ViVeTool_GUI_FeatureScanner.Name = "RB_ViVeTool_GUI_FeatureScanner"
         '
         'RGB_Theming
@@ -158,13 +158,13 @@ Partial Class AboutAndSettings
         'RTB_UseSystemTheme
         '
         resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
-        Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_change_theme_24px
+        Me.RTB_UseSystemTheme.Image = My.Resources.Resources.icons8_change_theme_24px
         Me.RTB_UseSystemTheme.Name = "RTB_UseSystemTheme"
         Me.RTB_UseSystemTheme.ThemeName = "Fluent"
         '
         'RTB_ThemeToggle
         '
-        Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_sun_24
+        Me.RTB_ThemeToggle.Image = My.Resources.Resources.icons8_sun_24
         resources.ApplyResources(Me.RTB_ThemeToggle, "RTB_ThemeToggle")
         Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
         Me.RTB_ThemeToggle.ThemeName = "Fluent"

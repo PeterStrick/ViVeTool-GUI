@@ -118,13 +118,13 @@ Public Class GUI
 
         'Fix Header Text
         'Feature Name
-        RGV_MainGridView.MasterTemplate.Columns(0).HeaderText = ViVeTool_GUI.My.Resources.Generic_FeatureName
+        RGV_MainGridView.MasterTemplate.Columns(0).HeaderText = My.Resources.Generic_FeatureName
 
         'Feature ID
-        RGV_MainGridView.MasterTemplate.Columns(1).HeaderText = ViVeTool_GUI.My.Resources.Generic_FeatureID
+        RGV_MainGridView.MasterTemplate.Columns(1).HeaderText = My.Resources.Generic_FeatureID
 
         'Feature State
-        RGV_MainGridView.MasterTemplate.Columns(2).HeaderText = ViVeTool_GUI.My.Resources.Generic_FeatureState
+        RGV_MainGridView.MasterTemplate.Columns(2).HeaderText = My.Resources.Generic_FeatureState
     End Sub
 
     ''' <summary>
@@ -143,28 +143,28 @@ Public Class GUI
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
         'Add manual option
-        Invoke(Sub() RDDL_Build.Items.Add(ViVeTool_GUI.My.Resources.Generic_LoadManually))
+        Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
         If CheckForInternetConnection() Then
             'Populate the Build Combo Box
             PopulateBuildComboBox()
 
             'Set Ready Label
-            Invoke(Sub() RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.PopulateBuildComboBox_Check_Ready)
+            Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Check_Ready)
         Else
             Invoke(Sub()
                        'First, disable the Combo Box
                        RDDL_Build.Enabled = True
-                       RDDL_Build.Text = ViVeTool_GUI.My.Resources.Error_NetworkError
+                       RDDL_Build.Text = My.Resources.Error_NetworkError
 
                        'Second, change the Status Label
-                       RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Error_NetworkFunctionsDisabledF12
+                       RLE_StatusLabel.Text = My.Resources.Error_NetworkFunctionsDisabledF12
 
                        'Third, Show an error message
                        Dim RTD As New RadTaskDialogPage With {
-                            .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_ANetworkExceptionOccurred,
-                            .Heading = ViVeTool_GUI.My.Resources.Error_ANetworkExceptionOccurred,
-                            .Text = ViVeTool_GUI.My.Resources.Error_NetworkExceptionDetail1 & vbNewLine & vbNewLine & ViVeTool_GUI.My.Resources.Error_NetworkExceptionDetail2,
+                            .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
+                            .Heading = My.Resources.Error_ANetworkExceptionOccurred,
+                            .Text = My.Resources.Error_NetworkExceptionDetail1 & vbNewLine & vbNewLine & My.Resources.Error_NetworkExceptionDetail2,
                             .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
                         }
                        RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
@@ -204,7 +204,7 @@ Public Class GUI
 
         Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                .Text = My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -215,22 +215,23 @@ Public Class GUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_ANetworkExceptionOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_NetworkException_GithubAPI,
+                    .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
+                    .Heading = My.Resources.Error_ANetworkExceptionOccurred,
+                    .Text = My.Resources.Error_NetworkException_GithubAPI,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
             Try
-                RTD.Expander.Text = ViVeTool_GUI.My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+                RTD.Expander.Text = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             Catch ex As Exception
                 RTD.Expander.Text = webex.ToString
             End Try
-            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                .Text = My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -241,13 +242,13 @@ Public Class GUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_AnUnknownExceptionOccurred,
+                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                    .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
             RTD.Expander.Text = ex.ToString
-            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
             RadTaskDialog.ShowDialog(RTD)
         End Try
@@ -299,7 +300,7 @@ Public Class GUI
                        RDDL_Build.SelectedIndex = -1
 
                        'Set default Text
-                       RDDL_Build.Text = ViVeTool_GUI.My.Resources.Generic_SelectBuild
+                       RDDL_Build.Text = My.Resources.Generic_SelectBuild
 
                        'Add the Handler
                        AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
@@ -314,7 +315,7 @@ Public Class GUI
             End If
         Catch webex As WebException
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                .Text = My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -325,22 +326,22 @@ Public Class GUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_ANetworkExceptionOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_NetworkException_GithubAPI,
+                    .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
+                    .Heading = My.Resources.Error_NetworkException_GithubAPI,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
             Try
-                RTD.Expander.Text = ViVeTool_GUI.My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+                RTD.Expander.Text = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             Catch ex As Exception
                 RTD.Expander.Text = webex.ToString
             End Try
-            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                .Text = My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -351,13 +352,13 @@ Public Class GUI
                                                               End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_AnUnknownExceptionOccurred,
+                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                    .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
             RTD.Expander.Text = ex.ToString
-            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
             RadTaskDialog.ShowDialog(RTD)
         End Try
@@ -379,13 +380,13 @@ Public Class GUI
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
 
         ' Add the Manually set Feature ID menu item
-        AppendMenu(hSysMenu, MF_STRING, 2, ViVeTool_GUI.My.Resources.SystemMenu_ManuallySetFeatureID)
+        AppendMenu(hSysMenu, MF_STRING, 2, My.Resources.SystemMenu_ManuallySetFeatureID)
 
         ' Add a separator
         AppendMenu(hSysMenu, MF_SEPARATOR, 0, String.Empty)
 
         ' Add the About menu item
-        AppendMenu(hSysMenu, MF_STRING, 1, ViVeTool_GUI.My.Resources.SystemMenu_About)
+        AppendMenu(hSysMenu, MF_STRING, 1, My.Resources.SystemMenu_About)
     End Sub
 
     ''' <summary>
@@ -425,7 +426,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.IsVisible = False
 
         'If "Load manually..." is selected, then load from a TXT File, else load normally
-        If RDDL_Build.Text = ViVeTool_GUI.My.Resources.PopulateBuildComboBox_Check_LoadManually Then
+        If RDDL_Build.Text = My.Resources.PopulateBuildComboBox_Check_LoadManually Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
             }
@@ -446,7 +447,7 @@ Public Class GUI
         'Make a new OpenFileDialog
         Dim OFD As New OpenFileDialog With {
                 .InitialDirectory = "C:\",
-                .Title = ViVeTool_GUI.My.Resources.LoadManually_PathToAFeatureList,
+                .Title = My.Resources.LoadManually_PathToAFeatureList,
                 .Filter = "Feature List|*.txt"
             }
 
@@ -455,7 +456,7 @@ Public Class GUI
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
             'Set Status Label
-            Invoke(Sub() RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Generic_PopulatingTheDataGridView)
+            Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Generic_PopulatingTheDataGridView)
             'Clear Data Grid View
             Invoke(Sub() RGV_MainGridView.Rows.Clear())
 
@@ -463,15 +464,15 @@ Public Class GUI
             Try
                 For Each Line In IO.File.ReadAllLines(OFD.FileName)
                     If Line = "## Unknown:" Then
-                        LineStage = ViVeTool_GUI.My.Resources.Generic_Modifiable
+                        LineStage = My.Resources.Generic_Modifiable
                     ElseIf Line = "## Always Enabled:" Then
-                        LineStage = ViVeTool_GUI.My.Resources.Generic_AlwaysEnabled
+                        LineStage = My.Resources.Generic_AlwaysEnabled
                     ElseIf Line = "## Enabled By Default:" Then
-                        LineStage = ViVeTool_GUI.My.Resources.Generic_EnabledByDefault
+                        LineStage = My.Resources.Generic_EnabledByDefault
                     ElseIf Line = "## Disabled By Default:" Then
-                        LineStage = ViVeTool_GUI.My.Resources.Generic_DisabledByDefault
+                        LineStage = My.Resources.Generic_DisabledByDefault
                     ElseIf Line = "## Always Disabled:" Then
-                        LineStage = ViVeTool_GUI.My.Resources.Generic_AlwaysDisabled
+                        LineStage = My.Resources.Generic_AlwaysDisabled
                     End If
                     'Split the Line at the :
                     Dim Str As String() = Line.Split(CChar(":"))
@@ -497,7 +498,7 @@ Public Class GUI
                             Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                             Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage))
                         Catch ex As NullReferenceException
-                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), ViVeTool_GUI.My.Resources.Generic_Default, LineStage))
+                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
                         End Try
                     End If
                 Next
@@ -505,7 +506,7 @@ Public Class GUI
                 Invoke(Sub()
                            RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
                            RGV_MainGridView.CurrentRow = Nothing
-                           RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Generic_Done
+                           RLE_StatusLabel.Text = My.Resources.Generic_Done
                        End Sub)
 
                 'Enable Grouping
@@ -527,7 +528,7 @@ Public Class GUI
 
                            'Create a Button that on Click, copies the Exception Text
                            Dim CopyExAndClose As New RadTaskDialogButton With {
-                                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                                .Text = My.Resources.Error_CopyExceptionAndClose
                             }
                            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                                  Try
@@ -539,8 +540,8 @@ Public Class GUI
 
                            'Fancy Message Box
                            Dim RTD As New RadTaskDialogPage With {
-                                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
-                                    .Heading = ViVeTool_GUI.My.Resources.Error_AnUnknownExceptionOccurred,
+                                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                                    .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                                 }
 
@@ -548,8 +549,8 @@ Public Class GUI
                            RTD.Expander.Text = ex.ToString
 
                            'Set the Text for the "Collapse Info" and "More Info" Buttons
-                           RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-                           RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+                           RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+                           RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
 
                            'Add the Button to the Message Box
                            RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -599,7 +600,7 @@ Public Class GUI
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
             'Set Status Label
-            Invoke(Sub() RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Generic_PopulatingTheDataGridView)
+            Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Generic_PopulatingTheDataGridView)
 
             'Clear Data Grid View
             'Fix for a weird Bug that happens randomly while clearing the rows if the search row has text in it
@@ -623,21 +624,21 @@ Public Class GUI
                 Try
                     If CInt(RDDL_Build.Text) >= 17704 Then
                         If Line = "## Unknown:" Then
-                            LineStage = ViVeTool_GUI.My.Resources.Generic_Modifiable
+                            LineStage = My.Resources.Generic_Modifiable
                         ElseIf Line = "## Always Enabled:" Then
-                            LineStage = ViVeTool_GUI.My.Resources.Generic_AlwaysEnabled
+                            LineStage = My.Resources.Generic_AlwaysEnabled
                         ElseIf Line = "## Enabled By Default:" Then
-                            LineStage = ViVeTool_GUI.My.Resources.Generic_EnabledByDefault
+                            LineStage = My.Resources.Generic_EnabledByDefault
                         ElseIf Line = "## Disabled By Default:" Then
-                            LineStage = ViVeTool_GUI.My.Resources.Generic_DisabledByDefault
+                            LineStage = My.Resources.Generic_DisabledByDefault
                         ElseIf Line = "## Always Disabled:" Then
-                            LineStage = ViVeTool_GUI.My.Resources.Generic_AlwaysDisabled
+                            LineStage = My.Resources.Generic_AlwaysDisabled
                         End If
                     Else
-                        LineStage = ViVeTool_GUI.My.Resources.Error_SelectBuild17704OrHigherToUseGrouping
+                        LineStage = My.Resources.Error_SelectBuild17704OrHigherToUseGrouping
                     End If
                 Catch ex As Exception
-                    LineStage = ViVeTool_GUI.My.Resources.Error_Error
+                    LineStage = My.Resources.Error_Error
                 End Try
 
                 'Split the Line at the :
@@ -655,7 +656,7 @@ Public Class GUI
                         Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage))
                     Catch ex As Exception
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), ViVeTool_GUI.My.Resources.Generic_Default, LineStage))
+                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
                     End Try
                 End If
             Next
@@ -664,7 +665,7 @@ Public Class GUI
             Invoke(Sub()
                        RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
                        RGV_MainGridView.CurrentRow = Nothing
-                       RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Generic_Done
+                       RLE_StatusLabel.Text = My.Resources.Generic_Done
                    End Sub)
 
             'Delete Feature List from %TEMP%
@@ -782,12 +783,12 @@ Public Class GUI
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 'Set Status Label
-                RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.Error_SettingFeatureConfig_Status & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
+                RLE_StatusLabel.Text = My.Resources.Error_SettingFeatureConfig_Status & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_SettingFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & ViVeTool_GUI.My.Resources.Error_SettingFeatureConfig_Heading2 & FeatureEnabledState.ToString,
+                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
+                    .Heading = My.Resources.Error_SettingFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.Error_SettingFeatureConfig_Heading2 & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.Error
                 }
 
@@ -798,15 +799,15 @@ Public Class GUI
                 RadTaskDialog.ShowDialog(RTD)
             Else
                 'Set Status Label
-                RLE_StatusLabel.Text = ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status2 & FeatureEnabledState.ToString
+                RLE_StatusLabel.Text = My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status2 & FeatureEnabledState.ToString
 
                 'Set Cell Text
                 RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.SetConfig_Success,
-                    .Heading = ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & ViVeTool_GUI.My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading2 & FeatureEnabledState.ToString,
+                    .Caption = My.Resources.SetConfig_Success,
+                    .Heading = My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading2 & FeatureEnabledState.ToString,
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
 
@@ -821,7 +822,7 @@ Public Class GUI
 
             'Create a Button that on Click, copies the Exception Text
             Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = ViVeTool_GUI.My.Resources.Error_CopyExceptionAndClose
+                .Text = My.Resources.Error_CopyExceptionAndClose
             }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
@@ -833,8 +834,8 @@ Public Class GUI
 
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = ViVeTool_GUI.My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = ViVeTool_GUI.My.Resources.Error_AnUnknownExceptionOccurred,
+                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                    .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
 
@@ -842,8 +843,8 @@ Public Class GUI
             RTD.Expander.Text = ex.ToString
 
             'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = ViVeTool_GUI.My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = ViVeTool_GUI.My.Resources.Error_ShowException
+            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
+            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
 
             'Add the Button to the Message Box
             RTD.CommandAreaButtons.Add(CopyExAndClose)

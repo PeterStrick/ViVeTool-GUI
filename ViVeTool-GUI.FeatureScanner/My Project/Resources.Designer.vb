@@ -135,15 +135,6 @@ Namespace My.Resources
         '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die  File Copy successful ähnelt.
         '''</summary>
-        Friend ReadOnly Property Done_FileCopySuccessful() As String
-            Get
-                Return ResourceManager.GetString("Done_FileCopySuccessful", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  File Copy successful ähnelt.
-        '''</summary>
         Friend ReadOnly Property Done_FileCopySuccessful_Caption() As String
             Get
                 Return ResourceManager.GetString("Done_FileCopySuccessful_Caption", resourceCulture)
@@ -268,20 +259,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Please check that the following files are present: ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_MisingFiles_Text() As String
-            Get
-                Return ResourceManager.GetString("Error_MisingFiles_Text", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing. ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_MissingFiles_Heading() As String
             Get
                 Return ResourceManager.GetString("Error_MissingFiles_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please check that the following files are present: ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_MissingFiles_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_MissingFiles_Text", resourceCulture)
             End Get
         End Property
         
@@ -488,15 +479,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Current Size of  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Size_CurrentSizeOf() As String
-            Get
-                Return ResourceManager.GetString("Size_CurrentSizeOf", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Symbol  ähnelt.
         '''</summary>
         Friend ReadOnly Property SymbolDownloaded1() As String
@@ -529,6 +511,21 @@ Namespace My.Resources
         Friend ReadOnly Property ToolTip_RTB_SymbolPath() As String
             Get
                 Return ResourceManager.GetString("ToolTip_RTB_SymbolPath", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die &lt;html&gt;&lt;body&gt;&lt;span style=&quot;font-size: 11pt; font-family: Segoe UI&quot;&gt;&lt;p&gt;
+        '''Welcome to the ViVeTool GUI Feature Scanner
+        '''&lt;/p&gt;&lt;p&gt;
+        '''This Tool is used to download and scan .pdb (Program Debug Database) Files on newer Windows 10/11 Insider Builds to create your own Feature List.
+        '''&lt;/p&gt;&lt;p&gt;
+        '''The ViVeTool GUI Feature Scanner &lt;strong&gt;is not supposed to be used by the average user&lt;/strong&gt;. Downloading PDB Files from the Microsoft Symbol Server usually takes an average of 2 Hours depending on your Internet Speed.
+        '''&lt;/p&gt;&lt;p&gt;        ''' [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        '''</summary>
+        Friend ReadOnly Property WB_HTML_Introduction() As String
+            Get
+                Return ResourceManager.GetString("WB_HTML_Introduction", resourceCulture)
             End Get
         End Property
     End Module

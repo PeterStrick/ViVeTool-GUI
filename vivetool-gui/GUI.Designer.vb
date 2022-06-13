@@ -164,39 +164,39 @@ Partial Class GUI
         '
         'RB_ManuallySetFeature
         '
-        Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
+        Me.RB_ManuallySetFeature.Image = My.Resources.Resources.icons8_registration_24px
         resources.ApplyResources(Me.RB_ManuallySetFeature, "RB_ManuallySetFeature")
         Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
         '
         'RB_About
         '
-        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
+        Me.RB_About.Image = My.Resources.Resources.icons8_about_24
         resources.ApplyResources(Me.RB_About, "RB_About")
         Me.RB_About.Name = "RB_About"
         '
         'RDDB_PerformAction
         '
         resources.ApplyResources(Me.RDDB_PerformAction, "RDDB_PerformAction")
-        Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
+        Me.RDDB_PerformAction.Image = My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
         'RMI_ActivateF
         '
-        Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
+        Me.RMI_ActivateF.Image = My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
         resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         '
         'RMI_DeactivateF
         '
-        Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
+        Me.RMI_DeactivateF.Image = My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
         resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         '
         'RMI_RevertF
         '
-        Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
+        Me.RMI_RevertF.Image = My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
         resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         '

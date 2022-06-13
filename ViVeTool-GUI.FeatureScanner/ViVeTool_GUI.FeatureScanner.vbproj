@@ -103,6 +103,7 @@
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.de.resx" />
     <EmbeddedResource Include="ScannerUI.de.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>

@@ -208,9 +208,6 @@
   <data name="Error_mach2Scan_2" xml:space="preserve">
     <value>The application will attempt to rescan the symbol folder.</value>
   </data>
-  <data name="Size_CurrentSizeOf" xml:space="preserve">
-    <value>Current Size of </value>
-  </data>
   <data name="Calculation_TotalFilesIn" xml:space="preserve">
     <value>Total Files in </value>
   </data>
@@ -237,9 +234,6 @@
   </data>
   <data name="Done_Alert_ContentText" xml:space="preserve">
     <value>The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.</value>
-  </data>
-  <data name="Done_FileCopySuccessful" xml:space="preserve">
-    <value> File Copy successful</value>
   </data>
   <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
     <value> File Copy successful</value>
@@ -271,7 +265,26 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing.</value>
   </data>
-  <data name="Error_MisingFiles_Text" xml:space="preserve">
+  <data name="Error_MissingFiles_Text" xml:space="preserve">
     <value>Please check that the following files are present:</value>
+  </data>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+Welcome to the ViVeTool GUI Feature Scanner
+&lt;/p&gt;&lt;p&gt;
+This Tool is used to download and scan .pdb (Program Debug Database) Files on newer Windows 10/11 Insider Builds to create your own Feature List.
+&lt;/p&gt;&lt;p&gt;
+The ViVeTool GUI Feature Scanner &lt;strong&gt;is not supposed to be used by the average user&lt;/strong&gt;. Downloading PDB Files from the Microsoft Symbol Server usually takes an average of 2 Hours depending on your Internet Speed.
+&lt;/p&gt;&lt;p&gt;
+This Tool requires:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5~30GB of Disk Space to store the downloaded Debug Symbols into
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+A installed copy of the Debugging Tools for Windows available from the Windows SDK
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+After making sure that the requirements are met, set the Text Boxes below to their respective values and press on "Continue". Hover over them to for an example.
+&lt;/p&gt;&lt;p&gt;
+After that, the application will automatically start to download PDB Files.
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
   </data>
 </root>

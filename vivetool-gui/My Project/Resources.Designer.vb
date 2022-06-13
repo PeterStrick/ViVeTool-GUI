@@ -179,7 +179,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Your IP may have been temporarily rate limited by the GitHub API for an hour. ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_NetworkException_GithubAPI() As String
             Get

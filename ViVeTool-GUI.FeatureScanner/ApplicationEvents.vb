@@ -28,9 +28,9 @@ Namespace My
             'Check if mach2.exe and msdia140.dll are present
             If IO.File.Exists(Application.Info.DirectoryPath & "\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\msdia140.dll") = False Then
                 Dim RTD As New RadTaskDialogPage With {
-                       .Caption = ViVeTool_GUI.FeatureScanner.My.Resources.Error_Spaced_AnErrorOccurred,
-                       .Heading = ViVeTool_GUI.FeatureScanner.My.Resources.Error_MissingFiles_Heading,
-                       .Text = ViVeTool_GUI.FeatureScanner.My.Resources.Error_MisingFiles_Text & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
+                       .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
+                       .Heading = My.Resources.Error_MissingFiles_Heading,
+                       .Text = My.Resources.Error_MissingFiles_Text & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                    }
                 'Show the Message Box

@@ -23,11 +23,9 @@ Partial Class ScannerUI
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScannerUI))
-        Dim MentionBox1 As Telerik.WinControls.RichTextEditor.UI.MentionBox = New Telerik.WinControls.RichTextEditor.UI.MentionBox()
-        Dim MentionContext1 As Telerik.WinForms.Documents.UI.Mentions.MentionContext = New Telerik.WinForms.Documents.UI.Mentions.MentionContext()
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_Setup = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RRTE_Intro = New Telerik.WinControls.UI.RadRichTextEditor()
+        Me.WB_Introduction = New System.Windows.Forms.WebBrowser()
         Me.RL_SymbolPath = New Telerik.WinControls.UI.RadLabel()
         Me.RL_DbgPath = New Telerik.WinControls.UI.RadLabel()
         Me.RB_Continue = New Telerik.WinControls.UI.RadButton()
@@ -68,7 +66,6 @@ Partial Class ScannerUI
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
-        CType(Me.RRTE_Intro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_DbgPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_Continue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,13 +105,13 @@ Partial Class ScannerUI
         '
         'RPV_Main
         '
-        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Controls.Add(Me.RPVP_Setup)
         Me.RPV_Main.Controls.Add(Me.RPVP_DownloadPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_ScanPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_Done)
         Me.RPV_Main.Controls.Add(Me.RPVP_AboutAndSettings)
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
+        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
         Me.RPV_Main.SelectedPage = Me.RPVP_Setup
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -122,8 +119,7 @@ Partial Class ScannerUI
         '
         'RPVP_Setup
         '
-        resources.ApplyResources(Me.RPVP_Setup, "RPVP_Setup")
-        Me.RPVP_Setup.Controls.Add(Me.RRTE_Intro)
+        Me.RPVP_Setup.Controls.Add(Me.WB_Introduction)
         Me.RPVP_Setup.Controls.Add(Me.RL_SymbolPath)
         Me.RPVP_Setup.Controls.Add(Me.RL_DbgPath)
         Me.RPVP_Setup.Controls.Add(Me.RB_Continue)
@@ -132,25 +128,20 @@ Partial Class ScannerUI
         Me.RPVP_Setup.Controls.Add(Me.RB_DbgPath_Browse)
         Me.RPVP_Setup.Controls.Add(Me.RTB_SymbolPath)
         Me.RPVP_Setup.Controls.Add(Me.RTB_DbgPath)
-        Me.RPVP_Setup.ItemSize = New System.Drawing.SizeF(164.0!, 29.0!)
+        Me.RPVP_Setup.ItemSize = New System.Drawing.SizeF(141.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_Setup, "RPVP_Setup")
         Me.RPVP_Setup.Name = "RPVP_Setup"
         '
-        'RRTE_Intro
+        'WB_Introduction
         '
-        resources.ApplyResources(Me.RRTE_Intro, "RRTE_Intro")
-        Me.RRTE_Intro.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.RRTE_Intro.IsContextMenuEnabled = False
-        Me.RRTE_Intro.IsPasteOptionsPopupEnabled = False
-        Me.RRTE_Intro.IsReadOnly = True
-        Me.RRTE_Intro.IsSelectionEnabled = False
-        Me.RRTE_Intro.IsSelectionMiniToolBarEnabled = False
-        MentionBox1.FocusedItemIndex = -1
-        MentionBox1.PopupSize = New System.Drawing.Size(250, 190)
-        Me.RRTE_Intro.MentionBox = MentionBox1
-        Me.RRTE_Intro.MentionContext = MentionContext1
-        Me.RRTE_Intro.Name = "RRTE_Intro"
-        Me.RRTE_Intro.SelectionFill = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.RRTE_Intro.SelectionStroke = System.Drawing.Color.FromArgb(CType(CType(179, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(248, Byte), Integer))
+        Me.WB_Introduction.AllowNavigation = False
+        Me.WB_Introduction.AllowWebBrowserDrop = False
+        Me.WB_Introduction.IsWebBrowserContextMenuEnabled = False
+        resources.ApplyResources(Me.WB_Introduction, "WB_Introduction")
+        Me.WB_Introduction.Name = "WB_Introduction"
+        Me.WB_Introduction.TabStop = False
+        Me.WB_Introduction.Url = New System.Uri("", System.UriKind.Relative)
+        Me.WB_Introduction.WebBrowserShortcutsEnabled = False
         '
         'RL_SymbolPath
         '
@@ -169,8 +160,8 @@ Partial Class ScannerUI
         '
         'RSS_Setup
         '
-        resources.ApplyResources(Me.RSS_Setup, "RSS_Setup")
         Me.RSS_Setup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RPBE_StatusProgressBar, Me.RLE_StatusAndInfoLabel})
+        resources.ApplyResources(Me.RSS_Setup, "RSS_Setup")
         Me.RSS_Setup.Name = "RSS_Setup"
         '
         'RPBE_StatusProgressBar
@@ -226,10 +217,10 @@ Partial Class ScannerUI
         '
         'RPVP_DownloadPDB
         '
-        resources.ApplyResources(Me.RPVP_DownloadPDB, "RPVP_DownloadPDB")
         Me.RPVP_DownloadPDB.Controls.Add(Me.RTB_PDBDownloadStatus)
         Me.RPVP_DownloadPDB.Controls.Add(Me.RL_DownloadIntroduction)
-        Me.RPVP_DownloadPDB.ItemSize = New System.Drawing.SizeF(182.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_DownloadPDB, "RPVP_DownloadPDB")
+        Me.RPVP_DownloadPDB.ItemSize = New System.Drawing.SizeF(160.0!, 29.0!)
         Me.RPVP_DownloadPDB.Name = "RPVP_DownloadPDB"
         '
         'RTB_PDBDownloadStatus
@@ -251,12 +242,12 @@ Partial Class ScannerUI
         '
         'RPVP_ScanPDB
         '
-        resources.ApplyResources(Me.RPVP_ScanPDB, "RPVP_ScanPDB")
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolFolders)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolFiles)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolSize)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_InfoScan)
-        Me.RPVP_ScanPDB.ItemSize = New System.Drawing.SizeF(258.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_ScanPDB, "RPVP_ScanPDB")
+        Me.RPVP_ScanPDB.ItemSize = New System.Drawing.SizeF(213.0!, 29.0!)
         Me.RPVP_ScanPDB.Name = "RPVP_ScanPDB"
         '
         'RL_SymbolFolders
@@ -281,13 +272,13 @@ Partial Class ScannerUI
         '
         'RPVP_Done
         '
-        resources.ApplyResources(Me.RPVP_Done, "RPVP_Done")
         Me.RPVP_Done.Controls.Add(Me.RL_OA)
         Me.RPVP_Done.Controls.Add(Me.RB_OA_DeleteSymbolPath)
         Me.RPVP_Done.Controls.Add(Me.RB_OA_CopyFeaturesTXT)
         Me.RPVP_Done.Controls.Add(Me.RL_Done)
         Me.RPVP_Done.Controls.Add(Me.RL_OutputFile)
-        Me.RPVP_Done.ItemSize = New System.Drawing.SizeF(84.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_Done, "RPVP_Done")
+        Me.RPVP_Done.ItemSize = New System.Drawing.SizeF(44.0!, 29.0!)
         Me.RPVP_Done.Name = "RPVP_Done"
         '
         'RL_OA
@@ -317,7 +308,6 @@ Partial Class ScannerUI
         '
         'RPVP_AboutAndSettings
         '
-        resources.ApplyResources(Me.RPVP_AboutAndSettings, "RPVP_AboutAndSettings")
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RGB_Theming)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Comments)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_ProductName)
@@ -325,29 +315,30 @@ Partial Class ScannerUI
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Version)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_License)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.PB_AppImage)
-        Me.RPVP_AboutAndSettings.ItemSize = New System.Drawing.SizeF(125.0!, 29.0!)
+        Me.RPVP_AboutAndSettings.ItemSize = New System.Drawing.SizeF(109.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_AboutAndSettings, "RPVP_AboutAndSettings")
         Me.RPVP_AboutAndSettings.Name = "RPVP_AboutAndSettings"
         '
         'RGB_Theming
         '
-        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RGB_Theming.Controls.Add(Me.RTB_UseSystemTheme)
         Me.RGB_Theming.Controls.Add(Me.RTB_ThemeToggle)
         Me.RGB_Theming.HeaderMargin = New System.Windows.Forms.Padding(1)
+        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.Name = "RGB_Theming"
         '
         'RTB_UseSystemTheme
         '
-        resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
         Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_change_theme_24px
+        resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
         Me.RTB_UseSystemTheme.Name = "RTB_UseSystemTheme"
         Me.RTB_UseSystemTheme.ThemeName = "Fluent"
         '
         'RTB_ThemeToggle
         '
-        resources.ApplyResources(Me.RTB_ThemeToggle, "RTB_ThemeToggle")
         Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_sun_24
+        resources.ApplyResources(Me.RTB_ThemeToggle, "RTB_ThemeToggle")
         Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
         Me.RTB_ThemeToggle.ThemeName = "Fluent"
         '
@@ -405,7 +396,6 @@ Partial Class ScannerUI
         Me.RPV_Main.ResumeLayout(False)
         Me.RPVP_Setup.ResumeLayout(False)
         Me.RPVP_Setup.PerformLayout()
-        CType(Me.RRTE_Intro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_DbgPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_Continue, System.ComponentModel.ISupportInitialize).EndInit()
@@ -488,5 +478,5 @@ Partial Class ScannerUI
     Friend WithEvents RTB_ThemeToggle As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents FluentLight As Telerik.WinControls.Themes.FluentTheme
     Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
-    Friend WithEvents RRTE_Intro As Telerik.WinControls.UI.RadRichTextEditor
+    Friend WithEvents WB_Introduction As WebBrowser
 End Class

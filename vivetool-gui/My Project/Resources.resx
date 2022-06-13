@@ -197,7 +197,7 @@
     <value>Copy Exception and Close</value>
   </data>
   <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
-    <value>A Network Exception occurred. Your IP may have been temporarily rate limited by the GitHub API for an hour.</value>
+    <value>Your IP may have been temporarily rate limited by the GitHub API for an hour.</value>
   </data>
   <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
     <value>GitHub API Response: </value>
