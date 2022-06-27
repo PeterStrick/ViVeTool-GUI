@@ -247,6 +247,10 @@ Public Class ScannerUI
     ''' Downloads all the .pdb files of C:\Windows\*.*, C:\Program Files\*.*, C:\Program Files (x86)\*.* to the path specified in My.Settings.SymbolPath
     ''' </summary>
     Private Sub DownloadPDBFiles()
+        'Create Junctions
+        Junction.FeatureScanner_CreateJunctions()
+        Invoke(Sub() MsgBox("Junctions created."))
+
         'Set up the File System Watcher
         FSW_SymbolPath.SynchronizingObject = Me
         FSW_SymbolPath.Path = My.Settings.SymbolPath
@@ -268,37 +272,9 @@ Public Class ScannerUI
                                 .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                             }
 
-        'Get the .pdb files of C:\Windows\*.* - Recursively
+        'Get the .pdb files of C:\FeatureScanner\*.* - Recursively. Includes C:\Windows, and some Folders from Program Files x64/x86
         Try
-            Proc.StartInfo.Arguments = "/r ""C:\Windows"" /oc """ & My.Settings.SymbolPath & """ /cn"
-            Proc.Start()
-            Proc.BeginErrorReadLine()
-            Proc.BeginOutputReadLine()
-            Proc.WaitForExit()
-            Proc.CancelOutputRead()
-            Proc.CancelErrorRead()
-        Catch ex As Exception
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
-        End Try
-
-        'Get the .pdb files of C:\Program Files\*.* - Recursively
-        Try
-            Proc.StartInfo.Arguments = "/r ""C:\Program Files"" /oc """ & My.Settings.SymbolPath & """ /cn"
-            Proc.Start()
-            Proc.BeginErrorReadLine()
-            Proc.BeginOutputReadLine()
-            Proc.WaitForExit()
-            Proc.CancelOutputRead()
-            Proc.CancelErrorRead()
-        Catch ex As Exception
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
-        End Try
-
-        'Get the .pdb files of C:\Program Files (x86)\*.* - Recursively
-        Try
-            Proc.StartInfo.Arguments = "/r ""C:\Program Files (x86)"" /oc """ & My.Settings.SymbolPath & """ /cn"
+            Proc.StartInfo.Arguments = "/r ""C:\FeatureScanner"" /oc """ & My.Settings.SymbolPath & """ /cn"
             Proc.Start()
             Proc.BeginErrorReadLine()
             Proc.BeginOutputReadLine()
@@ -386,7 +362,7 @@ Public Class ScannerUI
         'Scan the .pdb files
         With Proc.StartInfo
             .FileName = Application.StartupPath & "\mach2.exe" 'Path to mach2.exe
-            .Arguments = "scan """ & My.Settings.SymbolPath & """ -i """ & My.Settings.SymbolPath & """ -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
+            .Arguments = "scan """ & My.Settings.SymbolPath & """ -i ""C:\FeatureScanner"" -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
             .WorkingDirectory = Application.StartupPath 'Set the Working Directory to the path of mach2
             .UseShellExecute = True 'mach2 will crash without this
             .CreateNoWindow = False 'Create a Window
@@ -486,6 +462,10 @@ Public Class ScannerUI
     ''' Last things to do in the Done Tab.
     ''' </summary>
     Private Sub Done()
+        'Delete Junctions
+        Junction.FeatureScanner_DeleteJunctions()
+        Invoke(Sub() MsgBox("Junctions deleted."))
+
         'Replace Labels
         Invoke(Sub()
                    RL_OutputFile.Text = My.Resources.Done_OutputFile & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
@@ -692,5 +672,33 @@ Public Class ScannerUI
         Else
             My.Settings.UseSystemTheme = False
         End If
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        My.Settings.DebuggerPath = RTB_DbgPath.Text
+        My.Settings.SymbolPath = RTB_SymbolPath.Text
+        My.Settings.Save()
+
+        Proc = New Process
+        With Proc.StartInfo
+            .FileName = My.Settings.DebuggerPath 'Path to symchk.exe
+            .UseShellExecute = False 'Required for Output/Error Redirection to work
+            .CreateNoWindow = True 'Required for Output/Error Redirection to work
+            .RedirectStandardError = True 'Enables Redirection of Error Output
+            .RedirectStandardOutput = True 'Enables Redirection of Standard Output
+        End With
+
+        'Create Junctions
+        Junction.FeatureScanner_CreateJunctions()
+        Invoke(Sub() MsgBox("Junctions created."))
+
+        RPVP_ScanPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_ScanPDB
+        ScanPDBFiles()
+    End Sub
+
+    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+        Junction.FeatureScanner_DeleteJunctions()
+        MsgBox("Junctions deleted.")
     End Sub
 End Class

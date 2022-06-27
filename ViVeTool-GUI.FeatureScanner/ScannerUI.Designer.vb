@@ -63,6 +63,8 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -100,6 +102,8 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,6 +123,8 @@ Partial Class ScannerUI
         '
         'RPVP_Setup
         '
+        Me.RPVP_Setup.Controls.Add(Me.RadButton2)
+        Me.RPVP_Setup.Controls.Add(Me.RadButton1)
         Me.RPVP_Setup.Controls.Add(Me.WB_Introduction)
         Me.RPVP_Setup.Controls.Add(Me.RL_SymbolPath)
         Me.RPVP_Setup.Controls.Add(Me.RL_DbgPath)
@@ -380,6 +386,16 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
         '
+        'RadButton1
+        '
+        resources.ApplyResources(Me.RadButton1, "RadButton1")
+        Me.RadButton1.Name = "RadButton1"
+        '
+        'RadButton2
+        '
+        resources.ApplyResources(Me.RadButton2, "RadButton2")
+        Me.RadButton2.Name = "RadButton2"
+        '
         'ScannerUI
         '
         resources.ApplyResources(Me, "$this")
@@ -434,6 +450,8 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -479,4 +497,6 @@ Partial Class ScannerUI
     Friend WithEvents FluentLight As Telerik.WinControls.Themes.FluentTheme
     Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
     Friend WithEvents WB_Introduction As WebBrowser
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
 End Class

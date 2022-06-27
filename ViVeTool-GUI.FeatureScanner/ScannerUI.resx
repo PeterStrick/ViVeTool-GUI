@@ -118,6 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>636, 309</value>
+  </data>
+  <data name="RadButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RadButton2.Text" xml:space="preserve">
+    <value>[DEBUG] Remove Junctions</value>
+  </data>
+  <data name="&gt;&gt;RadButton2.Name" xml:space="preserve">
+    <value>RadButton2</value>
+  </data>
+  <data name="&gt;&gt;RadButton2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButton2.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RadButton2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 312</value>
+  </data>
+  <data name="RadButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 24</value>
+  </data>
+  <data name="RadButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>[DEBUG] Scan for symbols immediately, set text boxes first</value>
+  </data>
+  <data name="&gt;&gt;RadButton1.Name" xml:space="preserve">
+    <value>RadButton1</value>
+  </data>
+  <data name="&gt;&gt;RadButton1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButton1.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RadButton1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -127,7 +176,6 @@
   <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing">
     <value>820, 296</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -141,7 +189,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;WB_Introduction.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 399</value>
@@ -165,7 +213,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RL_SymbolPath.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 356</value>
@@ -189,7 +237,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RL_DbgPath.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
     <value>342, 309</value>
@@ -213,7 +261,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RB_Continue.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -289,7 +337,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RSS_Setup.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
     <value>718, 394</value>
@@ -313,7 +361,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RB_SymbolPath_Browse.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
     <value>718, 351</value>
@@ -337,7 +385,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RB_DbgPath_Browse.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 394</value>
@@ -361,7 +409,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RTB_SymbolPath.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 351</value>
@@ -385,7 +433,7 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 35</value>
@@ -694,7 +742,7 @@
     <value>6, 3</value>
   </data>
   <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 186</value>
+    <value>814, 218</value>
   </data>
   <data name="RL_Done.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
