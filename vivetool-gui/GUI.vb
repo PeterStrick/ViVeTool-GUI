@@ -14,7 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI, Telerik.WinControls
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -95,6 +95,11 @@ Public Class GUI
     <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
     Private Shared Function AppendMenu(hMenu As IntPtr, uFlags As Integer, uIDNewItem As Integer, lpNewItem As String) As Boolean
     End Function
+
+    Public Shared CopyExAndClose As New RadTaskDialogButton With {
+                                .Text = My.Resources.Generic_Close,
+                                .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
+                           }
 
     ''' <summary>
     ''' Load Event, Populates the Build Combo Box
@@ -203,9 +208,6 @@ Public Class GUI
             Next
 
         Catch webex As WebException
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
@@ -225,14 +227,13 @@ Public Class GUI
             Catch ex As Exception
                 RTD.Expander.Text = webex.ToString
             End Try
+
             RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
             RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(ex.ToString)
@@ -314,9 +315,6 @@ Public Class GUI
                 Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
             End If
         Catch webex As WebException
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
@@ -330,19 +328,19 @@ Public Class GUI
                     .Heading = My.Resources.Error_NetworkException_GithubAPI,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+
             Try
                 RTD.Expander.Text = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             Catch ex As Exception
                 RTD.Expander.Text = webex.ToString
             End Try
+
             RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
             RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(ex.ToString)
@@ -356,10 +354,12 @@ Public Class GUI
                     .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+
             RTD.Expander.Text = ex.ToString
             RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
             RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+
             RadTaskDialog.ShowDialog(RTD)
         End Try
 #End Region
@@ -412,7 +412,7 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
         'Disable Animations and selection. Helps with flickering
-        Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = False
+        AnimatedPropertySetting.AnimationsEnabled = False
         RGV_MainGridView.SelectionMode = GridViewSelectionMode.None
 
         'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
@@ -426,7 +426,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.IsVisible = False
 
         'If "Load manually..." is selected, then load from a TXT File, else load normally
-        If RDDL_Build.Text = My.Resources.PopulateBuildComboBox_Check_LoadManually Then
+        If RDDL_Build.Text = My.Resources.Generic_LoadManually Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
                 .IsBackground = True
             }
@@ -510,7 +510,7 @@ Public Class GUI
                        End Sub)
 
                 'Enable Grouping
-                Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
+                Dim LineGroup As New Data.GroupDescriptor()
                 LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
                 Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
 
@@ -527,9 +527,6 @@ Public Class GUI
                            'Catch Any Exception that may occur
 
                            'Create a Button that on Click, copies the Exception Text
-                           Dim CopyExAndClose As New RadTaskDialogButton With {
-                                .Text = My.Resources.Error_CopyExceptionAndClose
-                            }
                            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                                  Try
                                                                                      My.Computer.Clipboard.SetText(ex.ToString)
@@ -672,13 +669,13 @@ Public Class GUI
             IO.File.Delete(path)
 
             'Enable Grouping
-            Dim LineGroup As New Telerik.WinControls.Data.GroupDescriptor()
+            Dim LineGroup As New Data.GroupDescriptor()
             LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
 
             'Enable Animations and selection
             Invoke(Sub()
-                       Telerik.WinControls.AnimatedPropertySetting.AnimationsEnabled = True
+                       AnimatedPropertySetting.AnimationsEnabled = True
                        RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
                    End Sub)
 
@@ -783,12 +780,12 @@ Public Class GUI
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 'Set Status Label
-                RLE_StatusLabel.Text = My.Resources.Error_SettingFeatureConfig_Status & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
+                RLE_StatusLabel.Text = String.Format(My.Resources.Error_SettingFeatureConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString)
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = My.Resources.Error_SettingFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.Error_SettingFeatureConfig_Heading2 & FeatureEnabledState.ToString,
+                    .Heading = String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
                     .Icon = RadTaskDialogIcon.Error
                 }
 
@@ -799,7 +796,7 @@ Public Class GUI
                 RadTaskDialog.ShowDialog(RTD)
             Else
                 'Set Status Label
-                RLE_StatusLabel.Text = My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.SetConfig_SuccessfullySetFeatureConfig_Status2 & FeatureEnabledState.ToString
+                RLE_StatusLabel.Text = String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString)
 
                 'Set Cell Text
                 RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
@@ -807,7 +804,7 @@ Public Class GUI
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.SetConfig_Success,
-                    .Heading = My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading1 & RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString & My.Resources.SetConfig_SuccessfullySetFeatureConfig_Heading2 & FeatureEnabledState.ToString,
+                    .Heading = String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
 
@@ -821,9 +818,6 @@ Public Class GUI
             'Catch Any Exception that may occur
 
             'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(ex.ToString)

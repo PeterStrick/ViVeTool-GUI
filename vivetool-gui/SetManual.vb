@@ -51,7 +51,7 @@ Public Class SetManual
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = My.Resources.Error_SettingFeatureID1 & RTB_FeatureID.Text & My.Resources.Error_SettingFeatureID2 & FeatureEnabledState.ToString,
+                    .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
                     .Icon = RadTaskDialogIcon.Error
                 }
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
@@ -59,7 +59,7 @@ Public Class SetManual
             Else
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.SetConfig_Success,
-                    .Heading = My.Resources.SetConfig_SuccessfullySetFeatureID1 & RTB_FeatureID.Text & My.Resources.SetConfig_SuccessfullySetFeatureID2 & FeatureEnabledState.ToString,
+                    .Heading = String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, RTB_FeatureID.Text, FeatureEnabledState.ToString),
                     .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                 }
                 RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
@@ -69,23 +69,21 @@ Public Class SetManual
             'Catch Any Exception that may occur
 
             'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = My.Resources.Error_CopyExceptionAndClose
-            }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                  Try
-                                                                      My.Computer.Clipboard.SetText(ex.ToString)
-                                                                  Catch clipex As Exception
-                                                                      'Do nothing
-                                                                  End Try
-                                                              End Sub)
+            AddHandler GUI.CopyExAndClose.Click, New EventHandler(Sub()
+                                                                      Try
+                                                                          My.Computer.Clipboard.SetText(ex.ToString)
+                                                                      Catch clipex As Exception
+                                                                          'Do nothing
+                                                                      End Try
+                                                                  End Sub)
 
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = My.Resources.Error_ExceptionSettingFeatureID1 & RTB_FeatureID.Text & My.Resources.Error_ExceptionSettingFeatureID2 & FeatureEnabledState.ToString,
+                    .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
+
             'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString
 
@@ -94,7 +92,7 @@ Public Class SetManual
             RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
 
             'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RTD.CommandAreaButtons.Add(GUI.CopyExAndClose)
 
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)

@@ -834,4 +834,25 @@
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ViVeTool GUI - Feature Scanner</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - Description</value>
+  </data>
+  <data name="RL_License.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - License</value>
+  </data>
+  <data name="RL_ProductName.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - ProductName</value>
+  </data>
+  <data name="RL_Version.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - Version</value>
+  </data>
+  <data name="RadButton2.Text" xml:space="preserve">
+    <value>[DEBUG] Remove Junctions</value>
+  </data>
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>[DEBUG] Scan for symbols immediately, set text boxes first</value>
+  </data>
 </root>

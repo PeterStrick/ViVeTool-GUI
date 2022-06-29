@@ -205,29 +205,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to copy  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to copy {0} to your desktop. ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_CopyException1() As String
+        Friend ReadOnly Property Error_CopyException() As String
             Get
-                Return ResourceManager.GetString("Error_CopyException1", resourceCulture)
+                Return ResourceManager.GetString("Error_CopyException", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to your desktop. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Copies the Exception to the Clipboard and closes the dialog ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_CopyException2() As String
+        Friend ReadOnly Property Error_CopyExceptionAndClose_ToolTip() As String
             Get
-                Return ResourceManager.GetString("Error_CopyException2", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Copy Exception and Close ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_CopyExceptionAndClose() As String
-            Get
-                Return ResourceManager.GetString("Error_CopyExceptionAndClose", resourceCulture)
+                Return ResourceManager.GetString("Error_CopyExceptionAndClose_ToolTip", resourceCulture)
             End Get
         End Property
         
@@ -259,7 +250,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred. Files required for ViVeTool GUI Feature Scanner to work properly are missing. ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_MissingFiles_Heading() As String
             Get
@@ -322,11 +313,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to delete  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to delete {0} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_SymbolFolderDeleted() As String
+        Friend ReadOnly Property Error_SymbolFolderDeleted_N() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolFolderDeleted", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolFolderDeleted_N", resourceCulture)
             End Get
         End Property
         
@@ -412,6 +403,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Close() As String
+            Get
+                Return ResourceManager.GetString("Generic_Close", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Dark Theme ähnelt.
         '''</summary>
         Friend ReadOnly Property Generic_DarkTheme() As String
@@ -479,20 +479,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Symbol  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Symbol {0} downloaded. ähnelt.
         '''</summary>
-        Friend ReadOnly Property SymbolDownloaded1() As String
+        Friend ReadOnly Property SymbolDownloaded() As String
             Get
-                Return ResourceManager.GetString("SymbolDownloaded1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  downloaded. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property SymbolDownloaded2() As String
-            Get
-                Return ResourceManager.GetString("SymbolDownloaded2", resourceCulture)
+                Return ResourceManager.GetString("SymbolDownloaded", resourceCulture)
             End Get
         End Property
         
@@ -506,7 +497,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die The Downloaded Debug Symbols can be up to 5~8GB in size. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Downloaded Debug Symbols can be up to 5~30GB in size. ähnelt.
         '''</summary>
         Friend ReadOnly Property ToolTip_RTB_SymbolPath() As String
             Get

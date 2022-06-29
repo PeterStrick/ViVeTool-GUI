@@ -80,7 +80,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An unknown Exception occurred. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An unknown Exception occurred ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_AnUnknownExceptionOccurred() As String
             Get
@@ -98,11 +98,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Copy Exception and Close ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Copies the Exception to the Clipboard and closes the dialog ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_CopyExceptionAndClose() As String
+        Friend ReadOnly Property Error_CopyExceptionAndClose_ToolTip() As String
             Get
-                Return ResourceManager.GetString("Error_CopyExceptionAndClose", resourceCulture)
+                Return ResourceManager.GetString("Error_CopyExceptionAndClose_ToolTip", resourceCulture)
             End Get
         End Property
         
@@ -116,20 +116,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to set Feature ID  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to set Feature ID {0} to {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_ExceptionSettingFeatureID1() As String
+        Friend ReadOnly Property Error_ExceptionSettingFeatureID() As String
             Get
-                Return ResourceManager.GetString("Error_ExceptionSettingFeatureID1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_ExceptionSettingFeatureID2() As String
-            Get
-                Return ResourceManager.GetString("Error_ExceptionSettingFeatureID2", resourceCulture)
+                Return ResourceManager.GetString("Error_ExceptionSettingFeatureID", resourceCulture)
             End Get
         End Property
         
@@ -233,47 +224,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to set Feature  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to set {0} to {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_SettingFeatureConfig_Heading1() As String
+        Friend ReadOnly Property Error_SetConfig() As String
             Get
-                Return ResourceManager.GetString("Error_SettingFeatureConfig_Heading1", resourceCulture)
+                Return ResourceManager.GetString("Error_SetConfig", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while setting a feature configuration for {0} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_SettingFeatureConfig_Heading2() As String
+        Friend ReadOnly Property Error_SettingFeatureConfig() As String
             Get
-                Return ResourceManager.GetString("Error_SettingFeatureConfig_Heading2", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while setting a feature configuration for  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_SettingFeatureConfig_Status() As String
-            Get
-                Return ResourceManager.GetString("Error_SettingFeatureConfig_Status", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to set Feature ID  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_SettingFeatureID1() As String
-            Get
-                Return ResourceManager.GetString("Error_SettingFeatureID1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_SettingFeatureID2() As String
-            Get
-                Return ResourceManager.GetString("Error_SettingFeatureID2", resourceCulture)
+                Return ResourceManager.GetString("Error_SettingFeatureConfig", resourceCulture)
             End Get
         End Property
         
@@ -355,6 +319,15 @@ Namespace My.Resources
         Friend ReadOnly Property Generic_AlwaysEnabled() As String
             Get
                 Return ResourceManager.GetString("Generic_AlwaysEnabled", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Generic_Close() As String
+            Get
+                Return ResourceManager.GetString("Generic_Close", resourceCulture)
             End Get
         End Property
         
@@ -635,15 +608,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Load manually... ähnelt.
-        '''</summary>
-        Friend ReadOnly Property PopulateBuildComboBox_Check_LoadManually() As String
-            Get
-                Return ResourceManager.GetString("PopulateBuildComboBox_Check_LoadManually", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature. ähnelt.
         '''</summary>
         Friend ReadOnly Property PopulateBuildComboBox_Check_Ready() As String
@@ -662,56 +626,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature {0} to {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Heading1() As String
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeature() As String
             Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Heading1", resourceCulture)
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeature", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature Configuration for {0} with Value {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Heading2() As String
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status() As String
             Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Heading2", resourceCulture)
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set feature configuration for ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature ID {0} to {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status1() As String
+        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureID() As String
             Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  with Value  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureConfig_Status2() As String
-            Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureConfig_Status2", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Successfully set Feature ID  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureID1() As String
-            Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureID1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die  to  ähnelt.
-        '''</summary>
-        Friend ReadOnly Property SetConfig_SuccessfullySetFeatureID2() As String
-            Get
-                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureID2", resourceCulture)
+                Return ResourceManager.GetString("SetConfig_SuccessfullySetFeatureID", resourceCulture)
             End Get
         End Property
         
@@ -726,7 +663,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die &amp;About… ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die &amp;About ähnelt.
         '''</summary>
         Friend ReadOnly Property SystemMenu_About() As String
             Get

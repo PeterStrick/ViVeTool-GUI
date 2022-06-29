@@ -86,20 +86,17 @@ Public NotInheritable Class AboutAndSettings
         If IO.File.Exists(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe") Then
             Try
                 Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
-            Catch wex As System.ComponentModel.Win32Exception
+            Catch wex As ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
 
                 'Create a Button that on Click, copies the Exception Text
-                Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = My.Resources.Error_CopyExceptionAndClose
-                }
-                AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                      Try
-                                                                          My.Computer.Clipboard.SetText(wex.ToString)
-                                                                      Catch clipex As Exception
-                                                                          'Do nothing
-                                                                      End Try
-                                                                  End Sub)
+                AddHandler GUI.CopyExAndClose.Click, New EventHandler(Sub()
+                                                                          Try
+                                                                              My.Computer.Clipboard.SetText(wex.ToString)
+                                                                          Catch clipex As Exception
+                                                                              'Do nothing
+                                                                          End Try
+                                                                      End Sub)
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
@@ -117,7 +114,7 @@ Public NotInheritable Class AboutAndSettings
                 RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
 
                 'Add the Button to the Message Box
-                RTD.CommandAreaButtons.Add(CopyExAndClose)
+                RTD.CommandAreaButtons.Add(GUI.CopyExAndClose)
 
                 'Show the Message Box
                 RadTaskDialog.ShowDialog(RTD)

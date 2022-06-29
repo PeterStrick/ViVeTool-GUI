@@ -25,6 +25,11 @@ Public Class ScannerUI
     Private Delegate Sub AppendStdErrDelegate(text As String)
     Public BuildNumber As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber", Nothing).ToString
 
+    Public Shared CopyExAndClose As New RadTaskDialogButton With {
+                                .Text = My.Resources.Generic_Close,
+                                .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
+                           }
+
     ''' <summary>
     ''' Debugging Tools/symchk.exe Path Browse Button
     ''' </summary>
@@ -162,9 +167,6 @@ Public Class ScannerUI
                 End If
             Catch ex As Exception
                 'Create a Button that on Click, copies the Exception Text
-                Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = My.Resources.Error_CopyExceptionAndClose
-                }
                 AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                       Try
                                                                           My.Computer.Clipboard.SetText(ex.ToString)
@@ -244,12 +246,11 @@ Public Class ScannerUI
     End Sub
 
     ''' <summary>
-    ''' Downloads all the .pdb files of C:\Windows\*.*, C:\Program Files\*.*, C:\Program Files (x86)\*.* to the path specified in My.Settings.SymbolPath
+    ''' Downloads all the .pdb files of every Junction in C:\FeatureScanner recursively to the path specified in My.Settings.SymbolPath
     ''' </summary>
     Private Sub DownloadPDBFiles()
         'Create Junctions
         Junction.FeatureScanner_CreateJunctions()
-        Invoke(Sub() MsgBox("Junctions created."))
 
         'Set up the File System Watcher
         FSW_SymbolPath.SynchronizingObject = Me
@@ -345,7 +346,11 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">IO.FileSystem EventArgs</param>
     Private Sub FSW_SymbolPath_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FSW_SymbolPath.Created
-        RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] " & My.Resources.SymbolDownloaded1 & e.Name & My.Resources.SymbolDownloaded2 & vbNewLine)
+        'RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] " & My.Resources.SymbolDownloaded1 & e.Name & My.Resources.SymbolDownloaded2 & vbNewLine)
+
+        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, e.Name)
+
+        RTB_PDBDownloadStatus.AppendText(String.Format("[{hh\:mm}] " & SymbolString))
     End Sub
 
     ''' <summary>
@@ -371,7 +376,7 @@ Public Class ScannerUI
             .RedirectStandardOutput = False 'mach2 will crash without this
         End With
 
-        'Rescan until the Exitcode is 0
+        'Rescan until the Exit-code is 0
         Dim mach2_ExitCode As Integer = 1
         Do Until mach2_ExitCode = 0
             Proc.Start()
@@ -464,7 +469,6 @@ Public Class ScannerUI
     Private Sub Done()
         'Delete Junctions
         Junction.FeatureScanner_DeleteJunctions()
-        Invoke(Sub() MsgBox("Junctions deleted."))
 
         'Replace Labels
         Invoke(Sub()
@@ -517,9 +521,6 @@ Public Class ScannerUI
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
             'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = My.Resources.Error_CopyExceptionAndClose
-                }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(ex.ToString)
@@ -531,7 +532,7 @@ Public Class ScannerUI
             Dim RTD As New RadTaskDialogPage With {
                         .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                         .Heading = My.Resources.Error_AnExceptionOccurred,
-                        .Text = My.Resources.Error_CopyException1 & BuildNumber & ".txt" & My.Resources.Error_CopyException2,
+                        .Text = String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -568,9 +569,6 @@ Public Class ScannerUI
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
             'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = My.Resources.Error_CopyExceptionAndClose
-                }
             AddHandler CopyExAndClose.Click, New EventHandler(Sub()
                                                                   Try
                                                                       My.Computer.Clipboard.SetText(ex.ToString)
@@ -582,7 +580,7 @@ Public Class ScannerUI
             Dim RTD As New RadTaskDialogPage With {
                         .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                         .Heading = My.Resources.Error_AnExceptionOccurred,
-                        .Text = My.Resources.Error_SymbolFolderDeleted & My.Settings.SymbolPath,
+                        .Text = String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -614,7 +612,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SetWBDocumentText(WB_Introduction, ViVeTool_GUI.FeatureScanner.My.Resources.WB_HTML_Introduction)
+        SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
 
         'Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
@@ -690,7 +688,6 @@ Public Class ScannerUI
 
         'Create Junctions
         Junction.FeatureScanner_CreateJunctions()
-        Invoke(Sub() MsgBox("Junctions created."))
 
         RPVP_ScanPDB.Enabled = True
         RPV_Main.SelectedPage = RPVP_ScanPDB
@@ -699,6 +696,5 @@ Public Class ScannerUI
 
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
         Junction.FeatureScanner_DeleteJunctions()
-        MsgBox("Junctions deleted.")
     End Sub
 End Class

@@ -140,7 +140,7 @@
     <value>Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
   </data>
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
-    <value>The Downloaded Debug Symbols can be up to 5~8GB in size.</value>
+    <value>The Downloaded Debug Symbols can be up to 5~30GB in size.</value>
   </data>
   <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
     <value> An Error occurred</value>
@@ -162,9 +162,6 @@
   </data>
   <data name="Error_SymbolPath2" xml:space="preserve">
     <value>Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
-  </data>
-  <data name="Error_CopyExceptionAndClose" xml:space="preserve">
-    <value>Copy Exception and Close</value>
   </data>
   <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
     <value> An Exception occurred</value>
@@ -196,11 +193,8 @@
   <data name="Error_SymbolDownload2" xml:space="preserve">
     <value>Check if yo have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
   </data>
-  <data name="SymbolDownloaded1" xml:space="preserve">
-    <value>Symbol </value>
-  </data>
-  <data name="SymbolDownloaded2" xml:space="preserve">
-    <value> downloaded.</value>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>Symbol {0} downloaded.</value>
   </data>
   <data name="Error_mach2Scan_1" xml:space="preserve">
     <value>An Error occurred while scanning the symbol files.</value>
@@ -241,11 +235,8 @@
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
     <value>was successfully copied to your desktop.</value>
   </data>
-  <data name="Error_CopyException1" xml:space="preserve">
-    <value>An Exception occurred while trying to copy </value>
-  </data>
-  <data name="Error_CopyException2" xml:space="preserve">
-    <value> to your desktop.</value>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>An Exception occurred while trying to copy {0} to your desktop.</value>
   </data>
   <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
     <value> Symbol Folder deleted successfully</value>
@@ -253,8 +244,8 @@
   <data name="Done_SymbolFolderDeleted_Heading" xml:space="preserve">
     <value>was successfully deleted.</value>
   </data>
-  <data name="Error_SymbolFolderDeleted" xml:space="preserve">
-    <value>An Exception occurred while trying to delete </value>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>An Exception occurred while trying to delete {0}</value>
   </data>
   <data name="Generic_DarkTheme" xml:space="preserve">
     <value>Dark Theme</value>
@@ -263,7 +254,7 @@
     <value>Light Theme</value>
   </data>
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
-    <value>An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing.</value>
+    <value>An Error occurred. Files required for ViVeTool GUI Feature Scanner to work properly are missing.</value>
   </data>
   <data name="Error_MissingFiles_Text" xml:space="preserve">
     <value>Please check that the following files are present:</value>
@@ -286,5 +277,11 @@ After making sure that the requirements are met, set the Text Boxes below to the
 &lt;/p&gt;&lt;p&gt;
 After that, the application will automatically start to download PDB Files.
 &lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copies the Exception to the Clipboard and closes the dialog</value>
   </data>
 </root>

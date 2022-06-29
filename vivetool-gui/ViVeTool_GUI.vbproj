@@ -161,6 +161,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="My Project\Resources.de.resx" />
     <EmbeddedResource Include="SetManual.de.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
     </EmbeddedResource>

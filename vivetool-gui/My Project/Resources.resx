@@ -169,9 +169,6 @@
   <data name="icons8_portrait_mode_scanning_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\icons8_portrait_mode_scanning_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PopulateBuildComboBox_Check_LoadManually" xml:space="preserve">
-    <value>Load manually...</value>
-  </data>
   <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
     <value>Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.</value>
   </data>
@@ -193,9 +190,6 @@
   <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
     <value>You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List.</value>
   </data>
-  <data name="Error_CopyExceptionAndClose" xml:space="preserve">
-    <value>Copy Exception and Close</value>
-  </data>
   <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
     <value>Your IP may have been temporarily rate limited by the GitHub API for an hour.</value>
   </data>
@@ -212,7 +206,7 @@
     <value> An Exception occurred</value>
   </data>
   <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
-    <value>An unknown Exception occurred.</value>
+    <value>An unknown Exception occurred</value>
   </data>
   <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
     <value>A Network Exception occurred</value>
@@ -224,7 +218,7 @@
     <value>Manually Set Feature ID</value>
   </data>
   <data name="SystemMenu_About" xml:space="preserve">
-    <value>&amp;About…</value>
+    <value>&amp;About</value>
   </data>
   <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
     <value>Path to a Feature List</value>
@@ -259,32 +253,14 @@
   <data name="Error_Error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="Error_SettingFeatureConfig_Status" xml:space="preserve">
-    <value>An Error occurred while setting a feature configuration for </value>
-  </data>
   <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
     <value> An Error occurred</value>
   </data>
-  <data name="Error_SettingFeatureConfig_Heading1" xml:space="preserve">
-    <value>An Error occurred while trying to set Feature </value>
-  </data>
-  <data name="Error_SettingFeatureConfig_Heading2" xml:space="preserve">
-    <value> to </value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureConfig_Status1" xml:space="preserve">
-    <value>Successfully set feature configuration for</value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureConfig_Status2" xml:space="preserve">
-    <value> with Value </value>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">
+    <value>Successfully set Feature Configuration for {0} with Value {1}</value>
   </data>
   <data name="SetConfig_Success" xml:space="preserve">
     <value> Success</value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureConfig_Heading1" xml:space="preserve">
-    <value>Successfully set Feature </value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureConfig_Heading2" xml:space="preserve">
-    <value> to </value>
   </data>
   <data name="Generic_FeatureName" xml:space="preserve">
     <value>Feature Name</value>
@@ -295,23 +271,8 @@
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature State</value>
   </data>
-  <data name="Error_SettingFeatureID1" xml:space="preserve">
-    <value>An Error occurred while trying to set Feature ID </value>
-  </data>
-  <data name="Error_SettingFeatureID2" xml:space="preserve">
-    <value> to </value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureID1" xml:space="preserve">
-    <value>Successfully set Feature ID </value>
-  </data>
-  <data name="SetConfig_SuccessfullySetFeatureID2" xml:space="preserve">
-    <value> to </value>
-  </data>
-  <data name="Error_ExceptionSettingFeatureID1" xml:space="preserve">
-    <value>An Exception occurred while trying to set Feature ID </value>
-  </data>
-  <data name="Error_ExceptionSettingFeatureID2" xml:space="preserve">
-    <value> to </value>
+  <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
+    <value>An Exception occurred while trying to set Feature ID {0} to {1}</value>
   </data>
   <data name="Generic_DarkTheme" xml:space="preserve">
     <value>Dark Theme</value>
@@ -339,5 +300,23 @@
   </data>
   <data name="Error_UnsupportedBuild_Text" xml:space="preserve">
     <value>You are running an unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool-GUI require Windows 10 Build 18963 or higher. Your Build is: </value>
+  </data>
+  <data name="Error_SetConfig" xml:space="preserve">
+    <value>An Error occurred while trying to set {0} to {1}</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
+    <value>Successfully set Feature ID {0} to {1}</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeature" xml:space="preserve">
+    <value>Successfully set Feature {0} to {1}</value>
+  </data>
+  <data name="Error_SettingFeatureConfig" xml:space="preserve">
+    <value>An Error occurred while setting a feature configuration for {0}</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copies the Exception to the Clipboard and closes the dialog</value>
   </data>
 </root>

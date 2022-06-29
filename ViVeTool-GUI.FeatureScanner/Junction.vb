@@ -204,10 +204,12 @@ Public Class Junction
     Public Shared Sub FeatureScanner_CreateJunctions()
 #Disable Warning S1075 ' URIs should not be hardcoded
         'Create a new Folder for the Junctions
-        If Not Directory.Exists("C:\FeatureScanner") Then Directory.CreateDirectory("C:\FeatureScanner")
+        If Not Directory.Exists("C:\FeatureScanner") Then
+            Directory.CreateDirectory("C:\FeatureScanner")
+            Debug.WriteLine("Directory C:\FeatureScanner created")
+        End If
 
         'Create Junctions
-        'SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\Windows", "C:\Windows"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\System32", "C:\Windows\System32"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\SysWOW64", "C:\Windows\SysWOW64"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ImmersiveControlPanel", "C:\Windows\ImmersiveControlPanel"))
@@ -219,9 +221,9 @@ Public Class Junction
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\WinSxS", "C:\Windows\WinSxS"))
 
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\CommonFiles64", "C:\Program Files\Common Files"))
-        'SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ModifiableWindowsApps", "C:\Program Files\ModifiableWindowsApps"))
-        'SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\WindowsApps", "C:\Program Files\WindowsApps"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\CommonFiles86", "C:\Program Files (x86)\Common Files"))
+
+        Debug.WriteLine("Junctions created at C:\FeatureScanner")
 #Enable Warning S1075 ' URIs should not be hardcoded
 
     End Sub
@@ -232,7 +234,6 @@ Public Class Junction
     Public Shared Sub FeatureScanner_DeleteJunctions()
 #Disable Warning S1075 ' URIs should not be hardcoded
         'Delete Junctions
-        'SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\Windows"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\System32"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SysWOW64"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ImmersiveControlPanel"))
@@ -244,12 +245,13 @@ Public Class Junction
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\WinSxS"))
 
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\CommonFiles64"))
-        'SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ModifiableWindowsApps"))
-        'SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\WindowsApps"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\CommonFiles86"))
+
+        Debug.WriteLine("Junctions in C:\FeatureScanner deleted")
 
         'Delete the Junctions root Folder
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner"))
+        Debug.WriteLine("Directory C:\FeatureScanner deleted")
 #Enable Warning S1075 ' URIs should not be hardcoded
     End Sub
 
