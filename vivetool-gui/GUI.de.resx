@@ -1917,9 +1917,6 @@
         gAEAAP//AAD//wAA
 </value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ViVeTool GUI</value>
-  </data>
   <data name="RDDL_Build.NullText" xml:space="preserve">
     <value>Build auswählen...</value>
   </data>

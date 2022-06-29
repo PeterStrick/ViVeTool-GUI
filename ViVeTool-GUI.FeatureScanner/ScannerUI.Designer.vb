@@ -25,6 +25,10 @@ Partial Class ScannerUI
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ScannerUI))
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_Setup = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.__DBG_OPTIONS = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.__DBG_RemoveJunctions = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_ScanSymbols = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_TestSymDownloadedText = New Telerik.WinControls.UI.RadMenuItem()
         Me.WB_Introduction = New System.Windows.Forms.WebBrowser()
         Me.RL_SymbolPath = New Telerik.WinControls.UI.RadLabel()
         Me.RL_DbgPath = New Telerik.WinControls.UI.RadLabel()
@@ -63,11 +67,14 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
+        Me.__DBG_UnlockAllTabs = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_AddJunctions = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP1 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_SEP2 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
+        CType(Me.__DBG_OPTIONS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_DbgPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_Continue, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,8 +109,6 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -123,8 +128,7 @@ Partial Class ScannerUI
         '
         'RPVP_Setup
         '
-        Me.RPVP_Setup.Controls.Add(Me.RadButton2)
-        Me.RPVP_Setup.Controls.Add(Me.RadButton1)
+        Me.RPVP_Setup.Controls.Add(Me.__DBG_OPTIONS)
         Me.RPVP_Setup.Controls.Add(Me.WB_Introduction)
         Me.RPVP_Setup.Controls.Add(Me.RL_SymbolPath)
         Me.RPVP_Setup.Controls.Add(Me.RL_DbgPath)
@@ -137,6 +141,28 @@ Partial Class ScannerUI
         Me.RPVP_Setup.ItemSize = New System.Drawing.SizeF(141.0!, 29.0!)
         resources.ApplyResources(Me.RPVP_Setup, "RPVP_Setup")
         Me.RPVP_Setup.Name = "RPVP_Setup"
+        '
+        '__DBG_OPTIONS
+        '
+        resources.ApplyResources(Me.__DBG_OPTIONS, "__DBG_OPTIONS")
+        Me.__DBG_OPTIONS.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_UnlockAllTabs, Me.__DBG_SEP1, Me.__DBG_AddJunctions, Me.__DBG_RemoveJunctions, Me.__DBG_SEP2, Me.__DBG_TestSymDownloadedText, Me.__DBG_ScanSymbols})
+        Me.__DBG_OPTIONS.Name = "__DBG_OPTIONS"
+        Me.__DBG_OPTIONS.TabStop = False
+        '
+        '__DBG_RemoveJunctions
+        '
+        Me.__DBG_RemoveJunctions.Name = "__DBG_RemoveJunctions"
+        resources.ApplyResources(Me.__DBG_RemoveJunctions, "__DBG_RemoveJunctions")
+        '
+        '__DBG_ScanSymbols
+        '
+        Me.__DBG_ScanSymbols.Name = "__DBG_ScanSymbols"
+        resources.ApplyResources(Me.__DBG_ScanSymbols, "__DBG_ScanSymbols")
+        '
+        '__DBG_TestSymDownloadedText
+        '
+        Me.__DBG_TestSymDownloadedText.Name = "__DBG_TestSymDownloadedText"
+        resources.ApplyResources(Me.__DBG_TestSymDownloadedText, "__DBG_TestSymDownloadedText")
         '
         'WB_Introduction
         '
@@ -386,15 +412,25 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
         '
-        'RadButton1
+        '__DBG_UnlockAllTabs
         '
-        resources.ApplyResources(Me.RadButton1, "RadButton1")
-        Me.RadButton1.Name = "RadButton1"
+        Me.__DBG_UnlockAllTabs.Name = "__DBG_UnlockAllTabs"
+        resources.ApplyResources(Me.__DBG_UnlockAllTabs, "__DBG_UnlockAllTabs")
         '
-        'RadButton2
+        '__DBG_AddJunctions
         '
-        resources.ApplyResources(Me.RadButton2, "RadButton2")
-        Me.RadButton2.Name = "RadButton2"
+        Me.__DBG_AddJunctions.Name = "__DBG_AddJunctions"
+        resources.ApplyResources(Me.__DBG_AddJunctions, "__DBG_AddJunctions")
+        '
+        '__DBG_SEP1
+        '
+        Me.__DBG_SEP1.Name = "__DBG_SEP1"
+        resources.ApplyResources(Me.__DBG_SEP1, "__DBG_SEP1")
+        '
+        '__DBG_SEP2
+        '
+        Me.__DBG_SEP2.Name = "__DBG_SEP2"
+        resources.ApplyResources(Me.__DBG_SEP2, "__DBG_SEP2")
         '
         'ScannerUI
         '
@@ -412,6 +448,7 @@ Partial Class ScannerUI
         Me.RPV_Main.ResumeLayout(False)
         Me.RPVP_Setup.ResumeLayout(False)
         Me.RPVP_Setup.PerformLayout()
+        CType(Me.__DBG_OPTIONS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_DbgPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_Continue, System.ComponentModel.ISupportInitialize).EndInit()
@@ -450,8 +487,6 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -497,6 +532,12 @@ Partial Class ScannerUI
     Friend WithEvents FluentLight As Telerik.WinControls.Themes.FluentTheme
     Friend WithEvents FluentDark As Telerik.WinControls.Themes.FluentDarkTheme
     Friend WithEvents WB_Introduction As WebBrowser
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents __DBG_OPTIONS As Telerik.WinControls.UI.RadDropDownButton
+    Friend WithEvents __DBG_RemoveJunctions As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_ScanSymbols As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_TestSymDownloadedText As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_UnlockAllTabs As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SEP1 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_AddJunctions As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SEP2 As Telerik.WinControls.UI.RadMenuSeparatorItem
 End Class

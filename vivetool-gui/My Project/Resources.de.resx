@@ -249,4 +249,22 @@
   <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
     <value>Die Datenrasteransicht wird ausgefüllt... Dies kann eine Weile dauern.</value>
   </data>
+  <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
+    <value>Es kann mehrere Ursachen für Win32-Ausnahmen geben, aber sie beschränken sich normalerweise auf Anti-Viren Software, die ViVeTool GUI stört, oder auf Berichtigungs Probleme.</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
+    <value>Ihre IP-Adresse wurde möglicherweise eine Stunde lang von der GitHub-API blockiert.</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+    <value>ViVeTool Gui kann die Build-Combobox nicht ausfüllen, wenn das Gerät nicht mit dem Internet verbunden ist, oder wenn die GitHub-API nicht erreichbar ist.</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+    <value>Sie können eine Feature ID immer noch manuell ändern, indem Sie F12 drücken, oder sie können manuell eine Feature Liste laden.</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Sie führen ein nicht unterstütztes Windows 10 Build aus. ViVe, ViVeTool und ViVeTool GUI benötigen Windows 10 Build 18963 oder höher, um ordnungsgemäß zu funktionieren. Ihr Build ist: {0}</value>
+  </data>
+  <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
+    <value>Bereit. Wählen Sie einen Build aus der Combobox aus, um zu beginnen, oder alternativ drücken Sie F12, um eine Funktion manuell zu ändern.</value>
+  </data>
 </root>

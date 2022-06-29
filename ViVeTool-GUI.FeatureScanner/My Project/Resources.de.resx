@@ -142,14 +142,14 @@ After that, the application will automatically start to download PDB Files.
   <data name="Calculation_Calculating" xml:space="preserve">
     <value>Berechnet...</value>
   </data>
-  <data name="Calculation_CurrentSizeOf" xml:space="preserve">
-    <value>Derzeitige Größe von </value>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Derzeitige Größe von {0}: {1}</value>
   </data>
-  <data name="Calculation_TotalFilesIn" xml:space="preserve">
-    <value>Gesamtanzahl von Dateien in </value>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>Gesamtanzahl von Dateien in {0}: {1}</value>
   </data>
-  <data name="Calculation_TotalFoldersIn" xml:space="preserve">
-    <value>Gesamtanzahl von Ordnern in </value>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Gesamtanzahl von Ordnern in {0}: {1}</value>
   </data>
   <data name="Done_Alert_CaptionText" xml:space="preserve">
     <value>Debug Symbol durchsuche abgeschlossen</value>
@@ -158,16 +158,16 @@ After that, the application will automatically start to download PDB Files.
     <value> Datei erfolgreich kopiert</value>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
-    <value>wurde erfolgreich zu ihren Desktop kopiert.</value>
+    <value>{0} wurde erfolgreich zu ihren Desktop kopiert.</value>
   </data>
-  <data name="Done_OutputFile" xml:space="preserve">
-    <value>Ausgangs Datei: </value>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>Ausgangs Datei: {0}</value>
   </data>
   <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
     <value> Debug Symbol Ordner erfolgreich gelöscht</value>
   </data>
-  <data name="Done_SymbolFolderDeleted_Heading" xml:space="preserve">
-    <value>wurde erfolgreich gelöscht.</value>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} wurde erfolgreich gelöscht.</value>
   </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten</value>
@@ -209,13 +209,13 @@ After that, the application will automatically start to download PDB Files.
     <value>Während des Symboldateien herunterladen, ist ein Fehler aufgetreten.</value>
   </data>
   <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
-    <value>Beim Versuch {0} zu löschen, ist ein Fehler aufgetreten</value>
+    <value>Eine Ausnahme trat beim Versuch auf, {0} zu löschen</value>
   </data>
   <data name="Generic_DarkTheme" xml:space="preserve">
     <value>Dunkles Thema</value>
   </data>
-  <data name="Generic_Delete" xml:space="preserve">
-    <value>Löschen </value>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>{0} löschen</value>
   </data>
   <data name="Generic_LightTheme" xml:space="preserve">
     <value>Helles Thema</value>
@@ -234,5 +234,41 @@ After that, the application will automatically start to download PDB Files.
   </data>
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
     <value>Die heruntergeladenen Debug Symbole können zwischen 5 und 30 GB in Gesamtgröße variieren.</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>Wählen Sie einen Ordner aus, um die heruntergeladenen Debug Symbole zu speichern. Die heruntergeladenen .PDB Dateien benötigen normalerweise bis zu 5 bis 8 GB Speicherplatz.</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>Der Debug Symbol Scan ist vollständig. Kehren Sie zum ViVeTool GUI Feature Scanner zurück, um mehr zu erfahren.</value>
+  </data>
+  <data name="Error_SymbolDownload2" xml:space="preserve">
+    <value>Überprüfen Sie, ob Sie Zugriff auf symchk.exe haben und dass Ihr Antivirus es nicht blockiert.</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile1" xml:space="preserve">
+    <value>Beim Versuch, eine Testdatei in den Symbolordner zu schreiben, ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>Eine Ausnahme trat beim Versuch auf, eine Testdatei auf {0} zu schreiben</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile2" xml:space="preserve">
+    <value>Ein Symbol Ordner muss angegeben werden, um die Program Debug Datenbankdateien herunterzuladen.</value>
+  </data>
+  <data name="Error_SymbolPath1_N" xml:space="preserve">
+    <value>Beim Versuch, eine Testdatei in {0} zu schreiben, ist ein Fehler aufgetreten</value>
+  </data>
+  <data name="Error_SymbolPath2" xml:space="preserve">
+    <value>Bitte stellen Sie sicher, dass die Anwendung einen Schreibzugriff auf den Ordner hat und dass der Ordner nicht schreibgeschützt ist.</value>
+  </data>
+  <data name="Error_SymchkPath1" xml:space="preserve">
+    <value>Bei der Pfad-Überprüfung trat ein Fehler auf, überprüfen Sie ob der angegebene Pfad zu symchk.exe gültig ist.</value>
+  </data>
+  <data name="Error_SymchkPath2" xml:space="preserve">
+    <value>Bitte geben Sie einen gültigen Pfad zu symchk.exe ein.</value>
+  </data>
+  <data name="Error_SymchkPath3" xml:space="preserve">
+    <value>Wenn Sie symchk.exe nicht finden können, befindet sich dies normalerweise im Installationsverzeichnis des Windows SDK\10\Debuggers\x64</value>
   </data>
 </root>

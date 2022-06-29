@@ -144,6 +144,7 @@
   </data>
   <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
     <value> An Error occurred</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>An Error occurred</value>
@@ -157,23 +158,23 @@
   <data name="Error_SymchkPath3" xml:space="preserve">
     <value>If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64</value>
   </data>
-  <data name="Error_SymbolPath1" xml:space="preserve">
-    <value>An Error occurred while trying to write a test file to </value>
+  <data name="Error_SymbolPath1_N" xml:space="preserve">
+    <value>An Error occurred while trying to write a test file to {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
   </data>
   <data name="Error_SymbolPath2" xml:space="preserve">
     <value>Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
   </data>
   <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
     <value> An Exception occurred</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_AnExceptionOccurred" xml:space="preserve">
     <value>An Exception occurred</value>
   </data>
-  <data name="Error_SymbolPathException1" xml:space="preserve">
-    <value>An Exception occurred while trying to write a test file to </value>
-  </data>
-  <data name="Error_SymbolPathException2" xml:space="preserve">
-    <value>Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>An Exception occurred while trying to write a test file to {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
   </data>
   <data name="Error_CollapseException" xml:space="preserve">
     <value>Collapse Exception</value>
@@ -191,10 +192,11 @@
     <value>An Error occurred while downloading the symbol files.</value>
   </data>
   <data name="Error_SymbolDownload2" xml:space="preserve">
-    <value>Check if yo have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
+    <value>Check if you have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
   </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>Symbol {0} downloaded.</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
   </data>
   <data name="Error_mach2Scan_1" xml:space="preserve">
     <value>An Error occurred while scanning the symbol files.</value>
@@ -202,26 +204,31 @@
   <data name="Error_mach2Scan_2" xml:space="preserve">
     <value>The application will attempt to rescan the symbol folder.</value>
   </data>
-  <data name="Calculation_TotalFilesIn" xml:space="preserve">
-    <value>Total Files in </value>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>Total Files in {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
   </data>
-  <data name="Calculation_CurrentSizeOf" xml:space="preserve">
-    <value>Current Size of </value>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Current Size of {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
   </data>
   <data name="Calculation_Calculating" xml:space="preserve">
     <value>Calculating...</value>
   </data>
-  <data name="Calculation_TotalFoldersIn" xml:space="preserve">
-    <value>Total Folders in </value>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Total Folders in {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
   </data>
   <data name="Error_IOError" xml:space="preserve">
     <value>IO Error</value>
   </data>
-  <data name="Done_OutputFile" xml:space="preserve">
-    <value>Output File: </value>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>Output File: {0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
   </data>
-  <data name="Generic_Delete" xml:space="preserve">
-    <value>Delete </value>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>Delete {0}</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
   </data>
   <data name="Done_Alert_CaptionText" xml:space="preserve">
     <value>Debug Symbol Scan complete</value>
@@ -233,19 +240,24 @@
     <value> File Copy successful</value>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
-    <value>was successfully copied to your desktop.</value>
+    <value>{0} was successfully copied to your desktop.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
   </data>
   <data name="Error_CopyException" xml:space="preserve">
     <value>An Exception occurred while trying to copy {0} to your desktop.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
   </data>
   <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
     <value> Symbol Folder deleted successfully</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="Done_SymbolFolderDeleted_Heading" xml:space="preserve">
-    <value>was successfully deleted.</value>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} was successfully deleted.</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
   </data>
   <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
     <value>An Exception occurred while trying to delete {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
   </data>
   <data name="Generic_DarkTheme" xml:space="preserve">
     <value>Dark Theme</value>
@@ -277,11 +289,15 @@ After making sure that the requirements are met, set the Text Boxes below to the
 &lt;/p&gt;&lt;p&gt;
 After that, the application will automatically start to download PDB Files.
 &lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact. A HTML Editor/manually writing a html file and making sure it renders in IE is recommended.</comment>
   </data>
   <data name="Generic_Close" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
     <value>Copies the Exception to the Clipboard and closes the dialog</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
   </data>
 </root>

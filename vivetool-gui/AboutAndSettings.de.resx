@@ -122,7 +122,7 @@
     <value>405, 280</value>
   </data>
   <data name="RPVP_About.Text" xml:space="preserve">
-    <value>  Über ViVeTool-GUI</value>
+    <value>  Über ViVeTool GUI</value>
   </data>
   <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2006,17 +2006,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Info &amp; Einstellungen</value>
-  </data>
-  <data name="RL_Description.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Description</value>
-  </data>
-  <data name="RL_License.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - License</value>
-  </data>
-  <data name="RL_ProductName.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - ProductName</value>
-  </data>
-  <data name="RL_Version.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Version</value>
   </data>
 </root>

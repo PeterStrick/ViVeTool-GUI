@@ -217,14 +217,8 @@
   <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>293, 316</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
-    <value>&lt;html&gt;{My.Settings.SymbolPath} löschen&lt;/html&gt;</value>
-  </data>
   <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
     <value>281, 39</value>
-  </data>
-  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
-    <value>&lt;html&gt;Die Features.txt Datei auf den Desktop kopieren&lt;/html&gt;</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei zum &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;span style="font-size: 12pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 12pt"&gt; hochladen (Sie wird dann in der Combo Box erscheinen)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
@@ -833,26 +827,5 @@
         //////D//w//////8P//D//////w//8AH///+AD//wAf///4AP//AB////gA//8AH///+AD/////////
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ViVeTool GUI - Feature Scanner</value>
-  </data>
-  <data name="RL_Description.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Description</value>
-  </data>
-  <data name="RL_License.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - License</value>
-  </data>
-  <data name="RL_ProductName.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - ProductName</value>
-  </data>
-  <data name="RL_Version.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Version</value>
-  </data>
-  <data name="RadButton2.Text" xml:space="preserve">
-    <value>[DEBUG] Remove Junctions</value>
-  </data>
-  <data name="RadButton1.Text" xml:space="preserve">
-    <value>[DEBUG] Scan for symbols immediately, set text boxes first</value>
   </data>
 </root>

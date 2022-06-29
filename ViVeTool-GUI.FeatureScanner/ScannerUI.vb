@@ -151,7 +151,7 @@ Public Class ScannerUI
                     Dim RTD As New RadTaskDialogPage With {
                         .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
                         .Heading = My.Resources.Error_AnErrorOccurred,
-                        .Text = My.Resources.Error_SymbolPath1 & RTB_SymbolPath.Text & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2,
+                        .Text = String.Format(My.Resources.Error_SymbolPath1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
                     'Show the Message Box
@@ -178,7 +178,7 @@ Public Class ScannerUI
                 Dim RTD As New RadTaskDialogPage With {
                         .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                         .Heading = My.Resources.Error_AnExceptionOccurred,
-                        .Text = My.Resources.Error_SymbolPathException1 & RTB_SymbolPath.Text & vbNewLine & vbNewLine & My.Resources.Error_SymbolPathException2,
+                        .Text = String.Format(My.Resources.Error_SymbolPathException1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
                         .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                     }
 
@@ -346,11 +346,9 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">IO.FileSystem EventArgs</param>
     Private Sub FSW_SymbolPath_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FSW_SymbolPath.Created
-        'RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] " & My.Resources.SymbolDownloaded1 & e.Name & My.Resources.SymbolDownloaded2 & vbNewLine)
-
         Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, e.Name)
-
-        RTB_PDBDownloadStatus.AppendText(String.Format("[{hh\:mm}] " & SymbolString))
+        Dim Time As DateTime = DateTime.Now
+        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
     End Sub
 
     ''' <summary>
@@ -413,33 +411,33 @@ Public Class ScannerUI
     Private Sub ScanPDBFiles_Calculation()
         'Set Labels
         Invoke(Sub()
-                   RL_SymbolSize.Text = My.Resources.Calculation_CurrentSizeOf & My.Settings.SymbolPath & ": " & My.Resources.Calculation_Calculating
-                   RL_SymbolFiles.Text = My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & My.Resources.Calculation_Calculating
-                   RL_SymbolFolders.Text = My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & My.Resources.Calculation_Calculating
+                   RL_SymbolSize.Text = String.Format(My.Resources.Calculation_CurrentSizeOf_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
+                   RL_SymbolFiles.Text = String.Format(My.Resources.Calculation_TotalFilesIn_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
+                   RL_SymbolFolders.Text = String.Format(My.Resources.Calculation_TotalFoldersIn_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
                End Sub)
 
         'Calculate Size of the Symbol Folder
         Try
             Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
-            Invoke(Sub() RL_SymbolSize.Text = My.Resources.Calculation_CurrentSizeOf & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+            Invoke(Sub() RL_SymbolSize.Text = String.Format(My.Resources.Calculation_CurrentSizeOf_N, My.Settings.SymbolPath, FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " " & My.Resources.Generic_FileSize_Gigabyte))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolSize.Text = My.Resources.Calculation_CurrentSizeOf & My.Settings.SymbolPath & ": " & My.Resources.Error_IOError)
+            Invoke(Sub() RL_SymbolSize.Text = String.Format(My.Resources.Calculation_CurrentSizeOf_N, My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
 
         'Calculate amount of Total Files in the Symbol Folder
         Try
             Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
-            Invoke(Sub() RL_SymbolFiles.Text = My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+            Invoke(Sub() RL_SymbolFiles.Text = String.Format(My.Resources.Calculation_TotalFilesIn_N, My.Settings.SymbolPath, TotalFiles.ToString))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFiles.Text = My.Resources.Calculation_TotalFilesIn & My.Settings.SymbolPath & ": " & My.Resources.Error_IOError)
+            Invoke(Sub() RL_SymbolFiles.Text = String.Format(My.Resources.Calculation_TotalFilesIn_N, My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
 
         'Calculate amount of Total Folders in the Symbol Folder
         Try
             Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
-            Invoke(Sub() RL_SymbolFolders.Text = My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+            Invoke(Sub() RL_SymbolFolders.Text = String.Format(My.Resources.Calculation_TotalFoldersIn_N, My.Settings.SymbolPath, TotalFolders.ToString))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFolders.Text = My.Resources.Calculation_TotalFoldersIn & My.Settings.SymbolPath & ": " & My.Resources.Error_IOError)
+            Invoke(Sub() RL_SymbolFolders.Text = String.Format(My.Resources.Calculation_TotalFoldersIn_N, My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
 
     End Sub
@@ -472,8 +470,8 @@ Public Class ScannerUI
 
         'Replace Labels
         Invoke(Sub()
-                   RL_OutputFile.Text = My.Resources.Done_OutputFile & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
-                   RB_OA_DeleteSymbolPath.Text = My.Resources.Generic_Delete & My.Settings.SymbolPath
+                   RL_OutputFile.Text = String.Format(My.Resources.Done_OutputFile_N, My.Settings.SymbolPath & "\" & BuildNumber & ".txt")
+                   RB_OA_DeleteSymbolPath.Text = String.Format(My.Resources.Done_SymbolDelete, My.Settings.SymbolPath)
                    RL_Done.Text.Replace("Features.txt", BuildNumber & ".txt")
                    RB_OA_CopyFeaturesTXT.Text.Replace("Features.txt", BuildNumber & ".txt")
                End Sub)
@@ -561,7 +559,7 @@ Public Class ScannerUI
             IO.Directory.Delete(My.Settings.SymbolPath, True)
             Dim RTD As New RadTaskDialogPage With {
                        .Caption = My.Resources.Done_SymbolFolderDeleted_Caption,
-                       .Heading = My.Settings.SymbolPath & My.Resources.Done_SymbolFolderDeleted_Heading,
+                       .Heading = String.Format(My.Resources.Done_SymbolFolderDeleted_Heading_N, My.Settings.SymbolPath),
                        .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
                    }
 
@@ -612,6 +610,14 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+#If DEBUG Then
+        If Debugger.IsAttached Then
+            __DBG_OPTIONS.Enabled = True
+            __DBG_OPTIONS.Visible = True
+        End If
+#End If
+
+        'Localise the Introduction Text
         SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
 
         'Listen to Application Crashes and show CrashReporter.Net if one occurs.
@@ -650,29 +656,8 @@ Public Class ScannerUI
         End If
     End Sub
 
-    ''' <summary>
-    ''' Changes the Application theme, using the System Theme depending on the ToggleState
-    ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="args">StateChanged EventArgs</param>
-    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
-        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
-            My.Settings.UseSystemTheme = True
-            Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
-            Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
-            If CInt(AppsUseLightTheme_CurrentUserDwordValue) = 0 Then
-                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.On
-                RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-            Else
-                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.Off
-                RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-            End If
-        Else
-            My.Settings.UseSystemTheme = False
-        End If
-    End Sub
-
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+#Region "Debug Subs"
+    Private Sub __DBG_ScanSymbols_Click(sender As Object, e As EventArgs) Handles __DBG_ScanSymbols.Click
         My.Settings.DebuggerPath = RTB_DbgPath.Text
         My.Settings.SymbolPath = RTB_SymbolPath.Text
         My.Settings.Save()
@@ -694,7 +679,53 @@ Public Class ScannerUI
         ScanPDBFiles()
     End Sub
 
-    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+    Private Sub __DBG_RemoveJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_RemoveJunctions.Click
         Junction.FeatureScanner_DeleteJunctions()
+        MsgBox("Junctions deleted")
+    End Sub
+
+    Private Sub __DBG_TestSymDownloadedText_Click(sender As Object, e As EventArgs) Handles __DBG_TestSymDownloadedText.Click
+        RPVP_DownloadPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_DownloadPDB
+
+        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, "TESTSYMBOL1.PDB")
+        Dim Time As DateTime = DateTime.Now
+        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
+    End Sub
+
+    Private Sub __DBG_UnlockAllTabs_Click(sender As Object, e As EventArgs) Handles __DBG_UnlockAllTabs.Click
+        RPVP_AboutAndSettings.Enabled = True
+        RPVP_Done.Enabled = True
+        RPVP_DownloadPDB.Enabled = True
+        RPVP_ScanPDB.Enabled = True
+        RPVP_Setup.Enabled = True
+    End Sub
+
+    Private Sub __DBG_AddJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_AddJunctions.Click
+        Junction.FeatureScanner_CreateJunctions()
+        MsgBox("Junctions created")
+    End Sub
+#End Region
+
+    ''' <summary>
+    ''' Changes the Application theme, using the System Theme depending on the ToggleState
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="args">StateChanged EventArgs</param>
+    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
+        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
+            My.Settings.UseSystemTheme = True
+            Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+            Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+            If CInt(AppsUseLightTheme_CurrentUserDwordValue) = 0 Then
+                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.On
+                RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+            Else
+                RTB_ThemeToggle.ToggleState = Enumerations.ToggleState.Off
+                RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+            End If
+        Else
+            My.Settings.UseSystemTheme = False
+        End If
     End Sub
 End Class

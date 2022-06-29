@@ -155,6 +155,7 @@
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
     <value>RL_Comments</value>
@@ -179,6 +180,7 @@
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - ProductName</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
     <value>RL_ProductName</value>
@@ -206,6 +208,7 @@
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Description</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
     <value>RL_Description</value>
@@ -230,6 +233,7 @@
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Version</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
     <value>RL_Version</value>
@@ -254,6 +258,7 @@
   </data>
   <data name="RL_License.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - License</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
     <value>RL_License</value>
@@ -274,7 +279,8 @@
     <value>372, 280</value>
   </data>
   <data name="RPVP_About.Text" xml:space="preserve">
-    <value>  About ViVeTool-GUI</value>
+    <value>  About ViVeTool GUI</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RPVP_About.Name" xml:space="preserve">
     <value>RPVP_About</value>
@@ -350,6 +356,7 @@
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Use System Theme</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_UseSystemTheme.Name" xml:space="preserve">
     <value>RTB_UseSystemTheme</value>
@@ -374,6 +381,7 @@
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  Light Theme</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_ThemeToggle.Name" xml:space="preserve">
     <value>RTB_ThemeToggle</value>
@@ -518,6 +526,7 @@
   </data>
   <data name="RPVP_Settings.Text" xml:space="preserve">
     <value>  Settings</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RPVP_Settings.Name" xml:space="preserve">
     <value>RPVP_Settings</value>
@@ -530,6 +539,81 @@
   </data>
   <data name="&gt;&gt;RPVP_Settings.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="RadDropDownList1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 144</value>
+  </data>
+  <data name="RadDropDownList1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="RadDropDownList1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownList1.Name" xml:space="preserve">
+    <value>RadDropDownList1</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownList1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownList1.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownList1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 50</value>
+  </data>
+  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>Select Language:</value>
+  </data>
+  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Name" xml:space="preserve">
+    <value>RL_SelectLangauge</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 280</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Name" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

@@ -88,29 +88,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Current Size of  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Current Size of {0}: {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Calculation_CurrentSizeOf() As String
+        Friend ReadOnly Property Calculation_CurrentSizeOf_N() As String
             Get
-                Return ResourceManager.GetString("Calculation_CurrentSizeOf", resourceCulture)
+                Return ResourceManager.GetString("Calculation_CurrentSizeOf_N", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Total Files in  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Total Files in {0}: {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Calculation_TotalFilesIn() As String
+        Friend ReadOnly Property Calculation_TotalFilesIn_N() As String
             Get
-                Return ResourceManager.GetString("Calculation_TotalFilesIn", resourceCulture)
+                Return ResourceManager.GetString("Calculation_TotalFilesIn_N", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Total Folders in  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Total Folders in {0}: {1} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Calculation_TotalFoldersIn() As String
+        Friend ReadOnly Property Calculation_TotalFoldersIn_N() As String
             Get
-                Return ResourceManager.GetString("Calculation_TotalFoldersIn", resourceCulture)
+                Return ResourceManager.GetString("Calculation_TotalFoldersIn_N", resourceCulture)
             End Get
         End Property
         
@@ -142,7 +142,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die was successfully copied to your desktop. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die {0} was successfully copied to your desktop. ähnelt.
         '''</summary>
         Friend ReadOnly Property Done_FileCopySuccessful_Heading() As String
             Get
@@ -151,11 +151,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Output File:  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Output File: {0} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Done_OutputFile() As String
+        Friend ReadOnly Property Done_OutputFile_N() As String
             Get
-                Return ResourceManager.GetString("Done_OutputFile", resourceCulture)
+                Return ResourceManager.GetString("Done_OutputFile_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Delete {0} ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Done_SymbolDelete() As String
+            Get
+                Return ResourceManager.GetString("Done_SymbolDelete", resourceCulture)
             End Get
         End Property
         
@@ -169,11 +178,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die was successfully deleted. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die {0} was successfully deleted. ähnelt.
         '''</summary>
-        Friend ReadOnly Property Done_SymbolFolderDeleted_Heading() As String
+        Friend ReadOnly Property Done_SymbolFolderDeleted_Heading_N() As String
             Get
-                Return ResourceManager.GetString("Done_SymbolFolderDeleted_Heading", resourceCulture)
+                Return ResourceManager.GetString("Done_SymbolFolderDeleted_Heading_N", resourceCulture)
             End Get
         End Property
         
@@ -304,7 +313,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Check if yo have access to symchk.exe and that your Anti-virus isn&apos;t blocking it. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Check if you have access to symchk.exe and that your Anti-virus isn&apos;t blocking it. ähnelt.
         '''</summary>
         Friend ReadOnly Property Error_SymbolDownload2() As String
             Get
@@ -340,11 +349,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to write a test file to  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while trying to write a test file to {0} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_SymbolPath1() As String
+        Friend ReadOnly Property Error_SymbolPath1_N() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolPath1", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolPath1_N", resourceCulture)
             End Get
         End Property
         
@@ -358,20 +367,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to write a test file to  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Exception occurred while trying to write a test file to {0} ähnelt.
         '''</summary>
-        Friend ReadOnly Property Error_SymbolPathException1() As String
+        Friend ReadOnly Property Error_SymbolPathException1_N() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolPathException1", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Please make sure that the application has write access to the folder, and that the folder isn&apos;t write protected. ähnelt.
-        '''</summary>
-        Friend ReadOnly Property Error_SymbolPathException2() As String
-            Get
-                Return ResourceManager.GetString("Error_SymbolPathException2", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolPathException1_N", resourceCulture)
             End Get
         End Property
         
@@ -421,11 +421,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Delete  ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die GB ähnelt.
         '''</summary>
-        Friend ReadOnly Property Generic_Delete() As String
+        Friend ReadOnly Property Generic_FileSize_Gigabyte() As String
             Get
-                Return ResourceManager.GetString("Generic_Delete", resourceCulture)
+                Return ResourceManager.GetString("Generic_FileSize_Gigabyte", resourceCulture)
             End Get
         End Property
         
