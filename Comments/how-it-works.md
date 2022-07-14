@@ -70,12 +70,12 @@ After that, the following JSON would be sent from the API to a Discord WebHook:
       ],
       "footer": {
         "text": "ViVeTool GUI Comments API - v1.1",
-        "icon_url": "https://cdn.discordapp.com/attachments/992324600182620230/992325669470085190/output-onlinepngtools2.png"
+        "icon_url": "https://cdn.discordapp.com/attachments/992324600182620230/997055897371148298/comment.png"
       }
     }
   ],
   "username": "ViVeTool GUI Comments",
-  "avatar_url": "https://cdn.discordapp.com/attachments/992324600182620230/992325669470085190/output-onlinepngtools2.png",
+  "avatar_url": "https://cdn.discordapp.com/attachments/992324600182620230/997055897371148298/comment.png",
   "attachments": []
 }
 
