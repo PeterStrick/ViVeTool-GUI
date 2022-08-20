@@ -11,8 +11,7 @@ Public Class CommentsClient
         }
 
     Private Shared ReadOnly RTD_next As New RadTaskDialogPage With {
-        .Caption = "Test",
-        .ProgressBar =
+        .Caption = "Test"
     }
 
     Private Sub Comment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
