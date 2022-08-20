@@ -4,13 +4,21 @@ Public Class CommentsClient
     Public Shared FeatureName, Build As String
 
     Private Shared ReadOnly RTD_main As New RadTaskDialogPage With {
-            .Caption = My.Resources.Comments_Spaced_PrivacyInformation,
-            .Heading = My.Resources.Comments_PrivacyInformation,
-            .Text = My.Resources.Comments_PrivacyText,
-            .Icon = New RadTaskDialogIcon(My.Resources.icons8_comments_24px)
-        }
+        .Caption = My.Resources.Comments_Spaced_PrivacyInformation,
+        .Heading = My.Resources.Comments_PrivacyInformation,
+        .Text = My.Resources.Comments_PrivacyText,
+        .Icon = New RadTaskDialogIcon(My.Resources.icons8_comments_24px)
+    }
 
-    Private Shared ReadOnly RTD_next As New RadTaskDialogPage With {
+    Private Shared ReadOnly RTD_loading As New RadTaskDialogPage With {
+        .Caption = "Test"
+    }
+
+    Private Shared ReadOnly RTD_success As New RadTaskDialogPage With {
+        .Caption = "Test"
+    }
+
+    Private Shared ReadOnly RTD_error As New RadTaskDialogPage With {
         .Caption = "Test"
     }
 
