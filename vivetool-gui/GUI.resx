@@ -152,6 +152,79 @@
   <data name="&gt;&gt;RDDL_Build.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="__DBG_MainBtn.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="__DBG_RHI.Text" xml:space="preserve">
+    <value>DEBUG OPTIONS</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_GetComments.Text" xml:space="preserve">
+    <value>Get Comments</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SeeCommentsData.Text" xml:space="preserve">
+    <value>See the Comments Data</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP1.Text" xml:space="preserve">
+    <value />
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_SetRDDL_Build_Text.Text" xml:space="preserve">
+    <value>Set RDDL_Build.Text to 25158</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SetRDDL_Build_Text_ToNothing.Text" xml:space="preserve">
+    <value>Set RDDL_Build.Text to ""</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP2.Text" xml:space="preserve">
+    <value></value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_EnableCommentLoadingFromManualFL.Text" xml:space="preserve">
+    <value>Enable Comment loading when using a manual Feature List</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_DisableCommentLoadingFromManualFL.Text" xml:space="preserve">
+    <value>(DEFAULT) Disable Comment loading when using a manual Feature List</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>546, 0</value>
+  </data>
+  <data name="__DBG_MainBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 24</value>
+  </data>
+  <data name="__DBG_MainBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="__DBG_MainBtn.Text" xml:space="preserve">
+    <value>DEBUG</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_MainBtn.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;__DBG_MainBtn.Name" xml:space="preserve">
+    <value>__DBG_MainBtn</value>
+  </data>
+  <data name="&gt;&gt;__DBG_MainBtn.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_MainBtn.Parent" xml:space="preserve">
+    <value>RSS_MainStatusStrip</value>
+  </data>
+  <data name="&gt;&gt;__DBG_MainBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RLE_StatusLabel.Text" xml:space="preserve">
     <value>Populating the Build Combo Box...</value>
   </data>
@@ -159,7 +232,7 @@
     <value>0, 543</value>
   </data>
   <data name="RSS_MainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 24</value>
+    <value>851, 24</value>
   </data>
   <data name="RSS_MainStatusStrip.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -183,8 +256,12 @@
   <data name="RGV_MainGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="GridViewImageColumn1.HeaderText" xml:space="preserve">
+    <value />
+    <comment>@Invariant</comment>
+  </data>
   <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 505</value>
+    <value>851, 505</value>
   </data>
   <data name="RGV_MainGridView.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -280,7 +357,7 @@
     <value>2</value>
   </data>
   <data name="RB_About.Location" type="System.Drawing.Point, System.Drawing">
-    <value>610, 4</value>
+    <value>625, 4</value>
   </data>
   <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 30</value>
@@ -290,7 +367,6 @@
   </data>
   <data name="RB_About.Text" xml:space="preserve">
     <value>  About &amp;&amp; Settings</value>
-    <comment>The space at the beginning is used to make the text look better, the double &amp;&amp; characters are required to display a single &amp;</comment>
   </data>
   <data name="&gt;&gt;RB_About.Name" xml:space="preserve">
     <value>RB_About</value>
@@ -309,18 +385,15 @@
   </data>
   <data name="RMI_ActivateF.Text" xml:space="preserve">
     <value>  Activate Feature</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RMI_DeactivateF.Text" xml:space="preserve">
     <value>  Deactivate Feature</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RMI_RevertF.Text" xml:space="preserve">
     <value>  Revert Feature to Default Values</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 4</value>
+    <value>447, 4</value>
   </data>
   <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 30</value>
@@ -330,7 +403,6 @@
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      Perform Action</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
     <value>RDDB_PerformAction</value>
@@ -351,7 +423,7 @@
     <value>0, 0</value>
   </data>
   <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 38</value>
+    <value>851, 38</value>
   </data>
   <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -375,7 +447,7 @@
     <value>0, 38</value>
   </data>
   <data name="P_DataPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>792, 505</value>
+    <value>851, 505</value>
   </data>
   <data name="P_DataPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -399,13 +471,13 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>39</value>
+    <value>54</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>792, 567</value>
+    <value>851, 567</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2173,6 +2245,60 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI</value>
     <comment>@Invariant</comment>
+  </data>
+  <data name="&gt;&gt;__DBG_RHI.Name" xml:space="preserve">
+    <value>__DBG_RHI</value>
+  </data>
+  <data name="&gt;&gt;__DBG_RHI.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuHeaderItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_GetComments.Name" xml:space="preserve">
+    <value>__DBG_GetComments</value>
+  </data>
+  <data name="&gt;&gt;__DBG_GetComments.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SeeCommentsData.Name" xml:space="preserve">
+    <value>__DBG_SeeCommentsData</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SeeCommentsData.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Name" xml:space="preserve">
+    <value>__DBG_SEP1</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SetRDDL_Build_Text.Name" xml:space="preserve">
+    <value>__DBG_SetRDDL_Build_Text</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SetRDDL_Build_Text.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SetRDDL_Build_Text_ToNothing.Name" xml:space="preserve">
+    <value>__DBG_SetRDDL_Build_Text_ToNothing</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SetRDDL_Build_Text_ToNothing.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Name" xml:space="preserve">
+    <value>__DBG_SEP2</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_EnableCommentLoadingFromManualFL.Name" xml:space="preserve">
+    <value>__DBG_EnableCommentLoadingFromManualFL</value>
+  </data>
+  <data name="&gt;&gt;__DBG_EnableCommentLoadingFromManualFL.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_DisableCommentLoadingFromManualFL.Name" xml:space="preserve">
+    <value>__DBG_DisableCommentLoadingFromManualFL</value>
+  </data>
+  <data name="&gt;&gt;__DBG_DisableCommentLoadingFromManualFL.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RLE_StatusLabel.Name" xml:space="preserve">
     <value>RLE_StatusLabel</value>

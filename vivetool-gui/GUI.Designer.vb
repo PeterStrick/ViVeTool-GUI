@@ -28,9 +28,20 @@ Partial Class GUI
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewImageColumn1 As Telerik.WinControls.UI.GridViewImageColumn = New Telerik.WinControls.UI.GridViewImageColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RDDL_Build = New Telerik.WinControls.UI.RadDropDownList()
         Me.RSS_MainStatusStrip = New Telerik.WinControls.UI.RadStatusStrip()
+        Me.__DBG_MainBtn = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.__DBG_RHI = New Telerik.WinControls.UI.RadMenuHeaderItem()
+        Me.__DBG_GetComments = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SeeCommentsData = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP1 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_SetRDDL_Build_Text = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SetRDDL_Build_Text_ToNothing = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP2 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_EnableCommentLoadingFromManualFL = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_DisableCommentLoadingFromManualFL = New Telerik.WinControls.UI.RadMenuItem()
         Me.RLE_StatusLabel = New Telerik.WinControls.UI.RadLabelElement()
         Me.RGV_MainGridView = New Telerik.WinControls.UI.RadGridView()
         Me.BGW_PopulateGridView = New System.ComponentModel.BackgroundWorker()
@@ -48,6 +59,8 @@ Partial Class GUI
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RSS_MainStatusStrip.SuspendLayout()
+        CType(Me.__DBG_MainBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.P_CommandPanel.SuspendLayout()
@@ -73,12 +86,65 @@ Partial Class GUI
         '
         'RSS_MainStatusStrip
         '
+        Me.RSS_MainStatusStrip.Controls.Add(Me.__DBG_MainBtn)
         Me.RSS_MainStatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.RSS_MainStatusStrip.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RLE_StatusLabel})
         resources.ApplyResources(Me.RSS_MainStatusStrip, "RSS_MainStatusStrip")
         Me.RSS_MainStatusStrip.Name = "RSS_MainStatusStrip"
         Me.RSS_MainStatusStrip.SizingGrip = False
         Me.RSS_MainStatusStrip.ThemeName = "Fluent"
+        '
+        '__DBG_MainBtn
+        '
+        resources.ApplyResources(Me.__DBG_MainBtn, "__DBG_MainBtn")
+        Me.__DBG_MainBtn.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_RHI, Me.__DBG_GetComments, Me.__DBG_SeeCommentsData, Me.__DBG_SEP1, Me.__DBG_SetRDDL_Build_Text, Me.__DBG_SetRDDL_Build_Text_ToNothing, Me.__DBG_SEP2, Me.__DBG_EnableCommentLoadingFromManualFL, Me.__DBG_DisableCommentLoadingFromManualFL})
+        Me.__DBG_MainBtn.Name = "__DBG_MainBtn"
+        Me.__DBG_MainBtn.TabStop = False
+        '
+        '__DBG_RHI
+        '
+        Me.__DBG_RHI.Name = "__DBG_RHI"
+        resources.ApplyResources(Me.__DBG_RHI, "__DBG_RHI")
+        '
+        '__DBG_GetComments
+        '
+        Me.__DBG_GetComments.Name = "__DBG_GetComments"
+        resources.ApplyResources(Me.__DBG_GetComments, "__DBG_GetComments")
+        '
+        '__DBG_SeeCommentsData
+        '
+        Me.__DBG_SeeCommentsData.Name = "__DBG_SeeCommentsData"
+        resources.ApplyResources(Me.__DBG_SeeCommentsData, "__DBG_SeeCommentsData")
+        '
+        '__DBG_SEP1
+        '
+        Me.__DBG_SEP1.Name = "__DBG_SEP1"
+        resources.ApplyResources(Me.__DBG_SEP1, "__DBG_SEP1")
+        '
+        '__DBG_SetRDDL_Build_Text
+        '
+        Me.__DBG_SetRDDL_Build_Text.Name = "__DBG_SetRDDL_Build_Text"
+        resources.ApplyResources(Me.__DBG_SetRDDL_Build_Text, "__DBG_SetRDDL_Build_Text")
+        '
+        '__DBG_SetRDDL_Build_Text_ToNothing
+        '
+        Me.__DBG_SetRDDL_Build_Text_ToNothing.Name = "__DBG_SetRDDL_Build_Text_ToNothing"
+        resources.ApplyResources(Me.__DBG_SetRDDL_Build_Text_ToNothing, "__DBG_SetRDDL_Build_Text_ToNothing")
+        '
+        '__DBG_SEP2
+        '
+        Me.__DBG_SEP2.Name = "__DBG_SEP2"
+        resources.ApplyResources(Me.__DBG_SEP2, "__DBG_SEP2")
+        '
+        '__DBG_EnableCommentLoadingFromManualFL
+        '
+        Me.__DBG_EnableCommentLoadingFromManualFL.Name = "__DBG_EnableCommentLoadingFromManualFL"
+        resources.ApplyResources(Me.__DBG_EnableCommentLoadingFromManualFL, "__DBG_EnableCommentLoadingFromManualFL")
+        '
+        '__DBG_DisableCommentLoadingFromManualFL
+        '
+        Me.__DBG_DisableCommentLoadingFromManualFL.Name = "__DBG_DisableCommentLoadingFromManualFL"
+        resources.ApplyResources(Me.__DBG_DisableCommentLoadingFromManualFL, "__DBG_DisableCommentLoadingFromManualFL")
         '
         'RLE_StatusLabel
         '
@@ -126,7 +192,10 @@ Partial Class GUI
         GridViewTextBoxColumn4.Name = "FeatureInfo"
         GridViewTextBoxColumn4.VisibleInColumnChooser = False
         GridViewTextBoxColumn4.Width = 20
-        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
+        GridViewImageColumn1.HeaderImage = Global.ViVeTool_GUI.My.Resources.Resources.icons8_comments_24px
+        resources.ApplyResources(GridViewImageColumn1, "GridViewImageColumn1")
+        GridViewImageColumn1.Name = "Comments"
+        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewImageColumn1})
         Me.RGV_MainGridView.MasterTemplate.EnableFiltering = True
         Me.RGV_MainGridView.MasterTemplate.ShowFilteringRow = False
         Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition1
@@ -164,39 +233,39 @@ Partial Class GUI
         '
         'RB_ManuallySetFeature
         '
-        Me.RB_ManuallySetFeature.Image = My.Resources.Resources.icons8_registration_24px
+        Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
         resources.ApplyResources(Me.RB_ManuallySetFeature, "RB_ManuallySetFeature")
         Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
         '
         'RB_About
         '
-        Me.RB_About.Image = My.Resources.Resources.icons8_about_24
+        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
         resources.ApplyResources(Me.RB_About, "RB_About")
         Me.RB_About.Name = "RB_About"
         '
         'RDDB_PerformAction
         '
         resources.ApplyResources(Me.RDDB_PerformAction, "RDDB_PerformAction")
-        Me.RDDB_PerformAction.Image = My.Resources.Resources.icons8_start_24
+        Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
         'RMI_ActivateF
         '
-        Me.RMI_ActivateF.Image = My.Resources.Resources.icons8_toggle_on_24
+        Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
         resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         '
         'RMI_DeactivateF
         '
-        Me.RMI_DeactivateF.Image = My.Resources.Resources.icons8_toggle_off_24
+        Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
         resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         '
         'RMI_RevertF
         '
-        Me.RMI_RevertF.Image = My.Resources.Resources.icons8_rollback_24
+        Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
         resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         '
@@ -225,6 +294,8 @@ Partial Class GUI
         Me.ThemeName = "Fluent"
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RSS_MainStatusStrip.ResumeLayout(False)
+        CType(Me.__DBG_MainBtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGV_MainGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.P_CommandPanel.ResumeLayout(False)
@@ -260,4 +331,14 @@ Partial Class GUI
     Friend WithEvents RB_ManuallySetFeature As Telerik.WinControls.UI.RadButton
     Friend WithEvents RS_1 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RL_BuildComboBoxORManaully As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents __DBG_MainBtn As Telerik.WinControls.UI.RadDropDownButton
+    Friend WithEvents __DBG_GetComments As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SetRDDL_Build_Text As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SeeCommentsData As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SetRDDL_Build_Text_ToNothing As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SEP1 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_RHI As Telerik.WinControls.UI.RadMenuHeaderItem
+    Friend WithEvents __DBG_SEP2 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_EnableCommentLoadingFromManualFL As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_DisableCommentLoadingFromManualFL As Telerik.WinControls.UI.RadMenuItem
 End Class

@@ -67,22 +67,22 @@ Public Class SetManual
             End If
         Catch ex As Exception
             'Catch Any Exception that may occur
-
             'Create a Button that on Click, copies the Exception Text
-            AddHandler GUI.CopyExAndClose.Click, New EventHandler(Sub()
-                                                                      Try
-                                                                          My.Computer.Clipboard.SetText(ex.ToString)
-                                                                      Catch clipex As Exception
-                                                                          'Do nothing
-                                                                      End Try
-                                                                  End Sub)
+            AddHandler GUI.CopyExAndClose.Click, New EventHandler(
+                Sub()
+                    Try
+                        My.Computer.Clipboard.SetText(ex.ToString)
+                    Catch clipex As Exception
+                        'Do nothing
+                    End Try
+                End Sub)
 
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
+                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
+                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+            }
 
             'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.ToString

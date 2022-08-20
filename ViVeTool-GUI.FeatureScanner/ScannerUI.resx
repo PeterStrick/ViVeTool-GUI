@@ -599,6 +599,8 @@
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
     <value>Unlock all Tabs</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -606,10 +608,14 @@
   </data>
   <data name="__DBG_AddJunctions.Text" xml:space="preserve">
     <value>Add Junctions</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
     <value>Remove Junctions</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -617,10 +623,14 @@
   </data>
   <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
     <value>Test Symbol Downloaded Text</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
     <value>Scan for symbols immediately, set text boxes first</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
@@ -634,6 +644,8 @@
   </data>
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
     <value>[DEBUG OPTIONS]</value>
+    
+    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">

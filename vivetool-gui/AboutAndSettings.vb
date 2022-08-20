@@ -88,23 +88,23 @@ Public NotInheritable Class AboutAndSettings
                 Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
-
                 'Create a Button that on Click, copies the Exception Text
-                AddHandler GUI.CopyExAndClose.Click, New EventHandler(Sub()
-                                                                          Try
-                                                                              My.Computer.Clipboard.SetText(wex.ToString)
-                                                                          Catch clipex As Exception
-                                                                              'Do nothing
-                                                                          End Try
-                                                                      End Sub)
+                AddHandler GUI.CopyExAndClose.Click, New EventHandler(
+                    Sub()
+                        Try
+                            My.Computer.Clipboard.SetText(wex.ToString)
+                        Catch clipex As Exception
+                            'Do nothing
+                        End Try
+                    End Sub)
 
                 'Fancy Message Box
                 Dim RTD As New RadTaskDialogPage With {
-                        .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                        .Heading = My.Resources.Error_GenericWin32Exception_Heading,
-                        .Text = My.Resources.Error_GenericWin32Exception_Text,
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
+                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
+                    .Heading = My.Resources.Error_GenericWin32Exception_Heading,
+                    .Text = My.Resources.Error_GenericWin32Exception_Text,
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
 
                 'Add the Exception Text to the Expander
                 RTD.Expander.Text = wex.ToString
@@ -121,10 +121,10 @@ Public NotInheritable Class AboutAndSettings
             End Try
         Else
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = My.Resources.Error_FeatureScannerNotFound1 & vbNewLine & vbNewLine & My.Resources.Error_FeatureScannerNotFound2,
-                    .Icon = RadTaskDialogIcon.Error
-                }
+                .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
+                .Heading = My.Resources.Error_FeatureScannerNotFound1 & vbNewLine & vbNewLine & My.Resources.Error_FeatureScannerNotFound2,
+                .Icon = RadTaskDialogIcon.Error
+            }
             RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
             RadTaskDialog.ShowDialog(RTD)
         End If

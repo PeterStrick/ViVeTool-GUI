@@ -202,7 +202,6 @@ Public Class Junction
     ''' Creates Junctions used in Symbol Downloading and Scanning
     ''' </summary>
     Public Shared Sub FeatureScanner_CreateJunctions()
-#Disable Warning S1075 ' URIs should not be hardcoded
         'Create a new Folder for the Junctions
         If Not Directory.Exists("C:\FeatureScanner") Then
             Directory.CreateDirectory("C:\FeatureScanner")
@@ -224,15 +223,12 @@ Public Class Junction
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\CommonFiles86", "C:\Program Files (x86)\Common Files"))
 
         Debug.WriteLine("Junctions created at C:\FeatureScanner")
-#Enable Warning S1075 ' URIs should not be hardcoded
-
     End Sub
 
     ''' <summary>
     ''' Deletes Junctions that have been used in Symbol Downloading and Scanning
     ''' </summary>
     Public Shared Sub FeatureScanner_DeleteJunctions()
-#Disable Warning S1075 ' URIs should not be hardcoded
         'Delete Junctions
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\System32"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SysWOW64"))
@@ -252,7 +248,6 @@ Public Class Junction
         'Delete the Junctions root Folder
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner"))
         Debug.WriteLine("Directory C:\FeatureScanner deleted")
-#Enable Warning S1075 ' URIs should not be hardcoded
     End Sub
 
     ''' <summary>

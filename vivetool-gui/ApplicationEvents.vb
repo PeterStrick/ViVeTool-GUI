@@ -33,11 +33,11 @@ Namespace My
                 'OS Build Check passed.
             Else
                 Dim RTD As New RadTaskDialogPage With {
-                       .Caption = My.Resources.Error_Spaced_UnsupportedBuild,
-                       .Heading = My.Resources.Error_UnsupportedBuild,
-                       .Text = String.Format(My.Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
-                       .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                   }
+                    .Caption = My.Resources.Error_Spaced_UnsupportedBuild,
+                    .Heading = My.Resources.Error_UnsupportedBuild,
+                    .Text = String.Format(My.Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
+                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
+                }
                 'Show the Message Box
                 RadTaskDialog.ShowDialog(RTD)
                 End
