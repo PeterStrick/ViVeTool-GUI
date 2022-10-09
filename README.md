@@ -1,5 +1,3 @@
-## Sorry for a lack of Updates/Progress. Im currently taking a break because of Family-related issues
-
 ![GitHub all releases](https://img.shields.io/github/downloads/peterstrick/vivetool-gui/total)
 ![GitHub License](https://img.shields.io/github/license/peterstrick/vivetool-gui)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/peterstrick/vivetool-gui)
