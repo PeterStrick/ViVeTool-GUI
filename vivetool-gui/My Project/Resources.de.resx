@@ -267,60 +267,6 @@
   <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
     <value>Bereit. Wählen Sie einen Build aus der Combobox aus, um zu beginnen, oder alternativ drücken Sie F12, um eine Funktion manuell zu ändern.</value>
   </data>
-  <data name="main_icon" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_settings_system_daydream_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_sun_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_change_theme_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_about_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_advertisement_page_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_rollback_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="settings_system_daydream" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_start_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_moon_and_stars_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_about_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_toggle_on_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_toggle_off_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_portrait_mode_scanning_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_registration_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
-  <data name="icons8_comments_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
-    <value></value>
-  </data>
   <data name="Comments_Spaced_PrivacyInformation" xml:space="preserve">
     <value> Privatsphäre Informationen</value>
   </data>
