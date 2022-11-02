@@ -629,4 +629,25 @@ Storing of your IP Address for 24 Hours is a security precaution to prevent Spam
   <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
     <value>Close this Dialog and don't send anything</value>
   </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> Sending your Comment...</value>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>Sending your Comment...</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Closes the Dialog</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Comment Sent</value>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Your Comment was sent successfully.</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>An Error occurred while sending your comment.</value>
+  </data>
 </root>

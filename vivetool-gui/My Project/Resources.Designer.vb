@@ -71,6 +71,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Closes the Dialog.
+        '''</summary>
+        Friend ReadOnly Property Comments_ClosesTheDialog() As String
+            Get
+                Return ResourceManager.GetString("Comments_ClosesTheDialog", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Your Comment was sent successfully..
+        '''</summary>
+        Friend ReadOnly Property Comments_CommentSentSuccessfully() As String
+            Get
+                Return ResourceManager.GetString("Comments_CommentSentSuccessfully", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to I Agree.
         '''</summary>
         Friend ReadOnly Property Comments_I_Agree() As String
@@ -122,6 +140,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Sending your Comment....
+        '''</summary>
+        Friend ReadOnly Property Comments_SendingYourComment() As String
+            Get
+                Return ResourceManager.GetString("Comments_SendingYourComment", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Send my comment.
         '''</summary>
         Friend ReadOnly Property Comments_SendMyComment() As String
@@ -131,11 +158,29 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to  Comment Sent.
+        '''</summary>
+        Friend ReadOnly Property Comments_Spaced_CommentSent() As String
+            Get
+                Return ResourceManager.GetString("Comments_Spaced_CommentSent", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to  Privacy Information.
         '''</summary>
         Friend ReadOnly Property Comments_Spaced_PrivacyInformation() As String
             Get
                 Return ResourceManager.GetString("Comments_Spaced_PrivacyInformation", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to  Sending your Comment....
+        '''</summary>
+        Friend ReadOnly Property Comments_Spaced_SendingYourComment() As String
+            Get
+                Return ResourceManager.GetString("Comments_Spaced_SendingYourComment", resourceCulture)
             End Get
         End Property
         
@@ -293,6 +338,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while sending your comment..
+        '''</summary>
+        Friend ReadOnly Property Error_SendComment() As String
+            Get
+                Return ResourceManager.GetString("Error_SendComment", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while trying to set {0} to {1}.
         '''</summary>
         Friend ReadOnly Property Error_SetConfig() As String
@@ -370,6 +424,15 @@ Namespace My.Resources
         Friend ReadOnly Property Error_UnsupportedBuild_Text_N() As String
             Get
                 Return ResourceManager.GetString("Error_UnsupportedBuild_Text_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Finish.
+        '''</summary>
+        Friend ReadOnly Property General_Finish() As String
+            Get
+                Return ResourceManager.GetString("General_Finish", resourceCulture)
             End Get
         End Property
         
