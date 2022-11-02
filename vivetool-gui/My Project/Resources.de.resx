@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -199,10 +199,10 @@
     <value>Standardmäßig aktiviert</value>
   </data>
   <data name="Generic_FeatureID" xml:space="preserve">
-    <value>Feature ID</value>
+    <value>Funktions ID</value>
   </data>
   <data name="Generic_FeatureName" xml:space="preserve">
-    <value>Feature Name</value>
+    <value>Funktions Name</value>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature Status</value>
@@ -211,13 +211,13 @@
     <value>Helles Thema</value>
   </data>
   <data name="Generic_LoadManually" xml:space="preserve">
-    <value>Manuell laden...</value>
+    <value>Manuell laden…</value>
   </data>
   <data name="Generic_Modifiable" xml:space="preserve">
     <value>Bearbeitbar</value>
   </data>
   <data name="Generic_SelectBuild" xml:space="preserve">
-    <value>Build auswählen...</value>
+    <value>Build auswählen…</value>
   </data>
   <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
     <value>Pfad zu einer Feature Liste</value>
@@ -247,7 +247,7 @@
     <value>Schließen</value>
   </data>
   <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
-    <value>Die Datenrasteransicht wird ausgefüllt... Dies kann eine Weile dauern.</value>
+    <value>Die Datenrasteransicht wird ausgefüllt… Dies kann eine Weile dauern.</value>
   </data>
   <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
     <value>Es kann mehrere Ursachen für Win32-Ausnahmen geben, aber sie beschränken sich normalerweise auf Anti-Viren Software, die ViVeTool GUI stört, oder auf Berichtigungs Probleme.</value>
@@ -266,5 +266,32 @@
   </data>
   <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
     <value>Bereit. Wählen Sie einen Build aus der Combobox aus, um zu beginnen, oder alternativ drücken Sie F12, um eine Funktion manuell zu ändern.</value>
+  </data>
+  <data name="Comments_Spaced_PrivacyInformation" xml:space="preserve">
+    <value> Privatsphäre Informationen</value>
+  </data>
+  <data name="Comments_PrivacyInformation" xml:space="preserve">
+    <value>Privatsphäre Informationen</value>
+  </data>
+  <data name="Comments_PrivacyText" xml:space="preserve">
+    <value>Bevor sie Ihren Kommentar senden können, müssen sie akzeptieren das die folgenden Daten in einer Datenbank abgespeichert werden dürfen:
+
+Das ausgewählte Build und ViVeTool Feature, Ihr Kommentar
+
+Sie müssen auch akzeptieren, das Ihre IP Adresse verschlüsselt für 24 Stunden gespeichert werden darf.
+
+Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderung.</value>
+  </data>
+  <data name="Comments_I_Agree" xml:space="preserve">
+    <value>Ich akzeptiere</value>
+  </data>
+  <data name="Comments_SendMyComment" xml:space="preserve">
+    <value>Sende meinen Kommentar</value>
+  </data>
+  <data name="Comments_I_Dont_Agree" xml:space="preserve">
+    <value>Ich akzeptiere nicht</value>
+  </data>
+  <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
+    <value>Dialog schließen und nichts senden</value>
   </data>
 </root>
