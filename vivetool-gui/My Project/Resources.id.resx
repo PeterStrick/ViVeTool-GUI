@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_NetworkError" xml:space="preserve">
+    <value>Kesalahan Jaringan</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="main_icon" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\icons8-advertisement-page-96.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Generic_Modifiable" xml:space="preserve">
+    <value>Dapat diubah</value>
+  </data>
+  <data name="Generic_DisabledByDefault" xml:space="preserve">
+    <value>Nonaktif secara Default</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Anda menjalankan Windows 10 dengan Build yang tidak didukung. ViVe, ViVeTool dan ViVeTool GUI memerlukan Windows 10 Build 18963 atau lebih tinggi untuk berfungsi dengan baik. Build Anda saat ini adalah: {0}</value>
+    <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="icons8_settings_system_daydream_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
+        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
+        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
+        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
+        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
+        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
+        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
+        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
+        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
+        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
+        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
+        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
+        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
+        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
+        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
+        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
+        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
+        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
+        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
+        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Generic_SelectBuild" xml:space="preserve">
+    <value>Pilih Build…</value>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Tema Gelap</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">
+    <value>Berhasil mengatur Konfigurasi Fitur untuk {0} dengan Nilai {1}</value>
+  </data>
+  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
+    <value> Terjadi Kesalahan</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+    <value>Terjadi kesalahan saat mencoba memulai ViVeTool GUI Feature Scanner.</value>
+  </data>
+  <data name="Generic_FeatureState" xml:space="preserve">
+    <value>Status Fitur</value>
+  </data>
+  <data name="icons8_sun_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAotJREFUSEvF
+        VU1rU0EUnYk7K+imqQjtRiW+Wp4fi4rk74gouHDRhQsVFy5EceHChYqCC0UXFWOoUINJaxahtH6m1SBp
+        bcXv76Qxpr6+HO+9b6KpfTTJy6IHBoY3M2fu3HvPeWrVgbjajYRaL/PkhuM8ZE7fEFO7eB4YSHWuQ6Y7
+        j4eRIrL2NCZ3QgbP+RuvDXd1mO3NA4mOATo8QkSv8XIvqjNRuM9tOE8tOI8tLD6zUc1HwWu0Z0720hlz
+        fGUASmNiaxq5flSn++GMdaJyT+PXkEI5pvBzUKF0U2H+ukZ5KAx3ag94LyY2P+CzhsYfEjmTU2Rurg8L
+        SY3KsFpOfk2heJXGZYXCRdozGvFew2dXegkyPUmOxn1hYeG+akx+QeHHeY3v5+iSkV7vJZnulKFbCiko
+        5ZPT0lTkdeTfzmp8PR2iGlG6uCbEZWg9cLtJR9AznbFw6+SnNL6c1Chc6fJSxVzU3oaec089TW3H3eJb
+        0CbIP5/Q+HQsROml7noUKdS0I5DOydqz3IqByY9qfDxCwaV2cJpmDLUHUSgJyHmyrS3yDwMapTuWJ0aj
+        eMHfC0hE7ZC/P0wX3Pa5gIFJ+xUrtB3yd4dIfAm/FNWKTPJnhQYlf3swhMUpvyKzY5o2Ld8NByM/QOtn
+        Nv5r0/+dll2RRcLeUrikWyZ/sz+E3+MitFnEN601tEvBMme5V9K9rZHv05i/td1YRU/S0C2HZ3bkivTM
+        SrqP5L+mqciLN2pmR2cb2Xa9XbO3sPxZoX4F5ZxLWjjy8S2jDe26BnmJ98OZ48jcXFQUWopbKMUsaUWx
+        BI661R9OPaTw3BHcdlk7LwLiwXP+xmtBfpn1EKc1PS2KNwoV7dQ75upAqT8awsiC7azqWAAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Tampilkan Exception</value>
+  </data>
+  <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
+    <value>Pilih Build 17704 atau lebih tinggi untuk menggunakan Pengelompokan</value>
+  </data>
+  <data name="icons8_change_theme_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAmdJREFUSEvt
+        kltI0wEUxi0rl4lkJRER0XMvQTmLskxZrSltzbC0WdNWLRQdwyyH5b+LD6LRRUwUIy853A23pVgiaTS1
+        MXRta7Xa5tSRmRUxWjDo4Wuj9S9asf+6POUH38uB8/0O55yoOVFXuZk179TYx/liA6JFI4gufogFhYNY
+        eLIfi07cRcyxbtAKNKDxVVh8WIbYQ1Lvkpx2ZrCbgs6YCD8AEQAQl9tKBLvD69yzD0S51YMyy3uIH79F
+        ydgsCg0zEOqnIRh2I183ibwHLuQMOJHdbwe3zwZOr5U6QGL1EJGEs3ufIvOOhTrAH04EwvlDM9ihcWO7
+        egrp2kkyfFvXOJLkTmyUOcDQ2pDR/QRMjYk6QGx8QwQmT1W7kVg/Tvrr5N/XNnQ8B1Nrxq4uI3WAaPQ1
+        EVhLinIKCVedpA/etyOrx4KE6m9e3zSGtM5hMGSPLgTbw6vI8IoI7HyLzIX4GjvpnUol1skEWCM9gtXt
+        PKxqycXK5gNIbNyPFTe4WFbHxtIrmYivZSGuejdiqxjemIvpoe8r1L8kAgfdd28CyVIHNnXYQZe+AF1R
+        h7Xy/EgAoJ1PC12dYMhN/OxbxOYRNHzS45pPhxrvAKo8fah814PyWTVKpxUodkshdLWiwNEMnq0B2dbr
+        4JguhwL4ugmWP9z34yuKTMN/B/Ar3cQoEQBIHApk3C4Ds60UbFUFCWB0lmJrkxCbG4+DPXjp9wFcxVks
+        z6N/MS+JBJA1v5Prj/7PAIldjixVJTjKCnDVBAlgKk8jta0EKS1F2PsnN/hnX3QLRpYf4IsA4OOYa/cE
+        2+cUTlFRnwG+W8hfIeHhwQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="icons8_about_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAo9JREFUSEvt
+        ktlOU1EUhntjvFBwQFo60IogUASRJj6NMfEl9A2MigoUKNBKVcQBBxxBwOmCyo36ANDTFmh7SmmZ3uB3
+        rX326cDGXigmXriSfXFyku//8q9l+T//zvi+bC/4Pu+g69M2zn3YQufcFs7ObqLj/Sbapzdw5t0G2t7m
+        4X2TR+urHFpe5tA8uY7m51mcfpZF09M1ND5Zw6nHGTSMZyISWxwfgbs+EpzAnbMEnyE4gdunGJ5HG4G9
+        r3NoJXALg1+sS3AWjRMS/CiDkw91eB7okNjiFKwZzNYCLK0J7CXrKxEdl+d1Yd1EcAEmawOcgWdch3ss
+        jfr7aTWgtA4BJ7CwJjBbX5xLwZwLM8liHQwnMFu7CVx/Lw3X3ZQa0DFtWpfUwV3LOs5PprGQ3BHPN5Es
+        q8O0ZrAznIJjNKkGqEuUPe+ug6xL6zCsU3AR2Elgx50k7MFVNeDXSzSuo2Esgd7vWfR8y8IdThjWsg5h
+        zeDQKupGVmEbXlEDSusQ1uZ1yCV6wjG5AcAVipXVYQ8lUUfWNoJbh1ZQG1hWA/imGSysCVxYItXBS3SP
+        FgOcI1pZHaa1NUDwwWWcGNgjoNJNcx2uYDHAHogadbA1g6U1g2v6Ezjel1ADKt20i5boGNYkHrANLIk6
+        bAS2ElhYE7jGz/A4jvXE1YBKN811sLU5Vv+iYS3rKIB74zh6O4Yjt2JqQKWbFkscjKL7qy5ebd9isQ6C
+        CzBZM7j6poaqbk0NMMF73bSyxF11mNbVBK66oeHw9agaQPCIYS3BJTddVodcomEtwWwtwYeu0bu6NC+x
+        lUe5Dn9iytKvHZS//3wMa1mHP76/cJ6SOvYfziOX+HfgPHQdlyzBHwfk52+MxfITstBX1Gml4+AAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="icons8_advertisement_page_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAntJREFUSEvt
+        k99LU2EchzeXbmdnRURIDTWsVnoREv2QyBpe1E1dGBSUYWSlpZjVKKWWpAUSIkNNh9lc2iCC6AeamVrz
+        dT+yVuamlrkkdW5nuk1n+gd8OqtFs3VROaELH/jevTwP3/Oel7PAf0S+2ci90A3u+bcIk5kQdu4VeGeM
+        4J3WY1EOQXi2FuFZzxFxsgURmc3gn3gC/vEGCNIfQ3D0Aagj9yFMuwfh4bsQpmr0fmsAeRYcIDOIVgwg
+        rmoQe1snvwXye6aQ3+uFzOxBbpcL2SYnMjrtSDfYkNYxhIPaQexvG0DKs37saerDrkfdoFM18FsDyDNj
+        ZekAhHL2gPwdxCV94OUaIK23IlnzEdK6D9ih7kOSyoJtN7uRWN2FrVUmbKroxMYyAxIUOmwobUdccSvo
+        Q78JLL5qJaKifiIqfE/ogl4iKughoksWQl/sInTeG3ZMhJa9JJTMSOizOkLlthMqR8vOC0JltRHBqRYi
+        yHxK+BmNRHCsgfi1P4nXzGB9/TQkt79gTa0XsbcmEVM9gSilG+JKF1ZUjCOyzInlCgbLSu1YWjKKJddt
+        EBUPg7o2BH7RZ4RfGQSv4BO4cmvwBguBvwpIahnE33FgXZ0DEvUoG7RhlXIEkQp7CALqKWxuciGFQdDE
+        KIdD9Ilq3Ehs9QQFYlUjoQmsrhnH9o7J+QmsVbmRpPMGyUMTUHuw0zg1S+rbZEvz9zuZW6BuAtJf5ewm
+        0ZUOiMsZJDx0IurGvwYAbvLr6bFAeZLey/6arPTHOygf+/N3cNmq85tZWDkrVAbKU5yoLQTC/Cfmxj4G
+        1bPkDFQhk/tghW3zJvexewy0L+LbJORyDofzFfaicb7gPLAwAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="icons8_rollback_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABGtJREFUSEvd
+        lOtP21UYx41mi/+Bb/wLjDPGS9Q3vtfFZFPx8sJkUdY6h46tCGsKo9wKbaHAuJZxExkQGEjGZROWbAzk
+        ss1w653egEJLudPC8NXX5zk90BBZjMZXfpNvenp+z/N5zjm/83ue+39Lq20/mV9S8bmuqKIlt7DckWMs
+        i2YZrke1+lKHVl/SklFg+kyr1Z6U4f9M+SVVn+QXV3ryTBUorqpDR3c/+geH0DfwAG1dvdCXmpGuM0GT
+        V+RW5xR+LNP+Xu3t7S/oS6oKCY6aplbM2p3YiUSxt/cU+/t/4Cl5l8Y8NzlrQ6m5AeocI9KyDUbazfMS
+        82wdwLt67mJ1fQNb2zsCFt3dE2B2NLon5jbp2er6Jjp7fkVqlgE/Zhr0EnO85LGgu38Q4dV1rG1sYmNz
+        m4pEBDAS2aVf8k5UzPGzNSrAsS2dt6G6VgBVuu6MxB0Vv1BdcaW7uvEmloIrCIXXsLq2QUW2BGhza0dA
+        eUc85jkrHV/vnQERG1gOoaCkBpfTdd5jXzzfFn6hE0+mRIHgyipWKDHMRWiV61RofVOaxnbHHJKSVZih
+        98CxnDM0+hjJmjxc0uQmSGxceabK1sLyWvgXl7C4FBIJTyan0X27n8ZhUYh3xLbZXUi6pMI0w0MxOOf4
+        F5agzi3C9+qcZomNK9dU4Wpq64KPguYDyyKhj7b/0dkEfPnVOTS3dtBcEBabQ8CnZqxYDoURkHDO8S0E
+        UFbbjItXsx0SGxd9RJH27jvw+hdjRRaXsUBAp9uLCnMtziZ8gVdePYVTr72OyalZOnMC07lzDMcy3EO5
+        9S23cDEtKyKxcWUZr0fafumD2zcvAn3zAXFcvLKFQBAujx/vvfUm3n/nbQHlOQbzsXAs58x551F7swMX
+        0rTbEhsXff7OenrIIA50+xZiu6Fk3hGDPM3FwgJK9kowx3KOk3KLqxvxbUqmXWLj4t5C1xQ2l4eOxXek
+        kMfPphU2mYR5zHMHYI7lHM69klEAZUrmzxIbFzcu7i33Ho7CToGOOe9hoYNirsZC4UMo2eZ0Y9bmFPC+
+        e0NQqq4hUZX+qcTGpTCbT1Djmissv0H9xwUrJXKSnQpxMeEGY8zy/6zNhdEbVozUW0WORlcMxZUMT8Kz
+        Oix3RW5cfBM4wUIfE5uLiYJ1emEez9Cqhwk+rghiuNJGHbcBX/+gxjfJ6uNbxYG4K3LjMv/URt3SIUAz
+        tFIuODs2IjxlseNhjQVjymVRYFQZwJDCj2HF4v64YmX6kWI14/4534sSeVTcclO0egM3rtyiSvQO3KdC
+        doI6Dv3o9xn8luI7LBBzSHoFE+fDmEgMPx5PXHlJYv8q7oqXNbo57i2p2UaYqhtQ1diKqoZWGCvqkKIy
+        4K4ydkSDCufkmDKYFnM4reeM4wH71oeWbok7XgqF+QQ3Lu4tSVez7fyFXkjVRvie021p1iSVfTemWHaP
+        nw+pZYpQzbsjOLCc+vcaTwy8TEXekH+FOj6w4MBy6r9V52nrBhmdp60bfwJ3wm0J6c28RQAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <data name="settings_system_daydream" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\images\settings_system_daydream.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_start_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAatJREFUSEvt
+        kktLAlEYhv0jlWkXtTtFZpZF0ZXatGgT9COECIyyhkTMblJ0IYh+QQRBtIooolUbIYQSTMKEkMZSs93b
+        WJ+LOV9B4Sx94FkM55znfAdGV+RfNOyPXNXvj6JALynHqdsbgRZSjlO7OwwtpBynZmsQWkg5jmVzAKLm
+        QD+k0wAc2+OwbPD1n6QcxxzoU4Jqq5d78JpO4VlOYP5kHTWrfI8o5TimtV6IVi114zWVQuY9++XV/Q2G
+        diZhWu1he/NSjpObVrTS26W6IGfue+PsAHX+7xeKUo5T5euGaMViJ7sg7+3jHfo3J9gZynEqvQ5lYrVG
+        qQNP8SfEYjFEo1GEw2GEQiEEg0Ecn5+gyz/GzlCOk5tW1OC2Q07KSCaTSCQSiMfjiDxE4Dlch1n6fqEo
+        5ThGya5MrLZ81oaU8hdlMhmk02lc3F6jd2UcxgW+Ny/lOAa3TZlYrd5lRfYji5c3GXOHPlTMtbM9opTj
+        lM+2KROr1c9YIR2twOoZZmu/STmO3tWqTFy4lOOUTbdACynHKZ1qhhZSjlPibLwscTahQC8oV+Qv6HSf
+        Rsq1bDyVzAIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Generic_LoadManually" xml:space="preserve">
+    <value>Muat secara manual…</value>
+  </data>
+  <data name="Generic_AlwaysEnabled" xml:space="preserve">
+    <value>Selalu Aktif</value>
+  </data>
+  <data name="icons8_moon_and_stars_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbZJREFUSEvt
+        kclLQlEUh/2/mkejybQ0rSwzIitogtq1rCCDcBdEi/bNqWWW5kQbg4QWrRpsIGiTPlo0+Uvt9PJ50oxa
+        9sEH755778fjPdk/P0Jr8Abi4ld2eH2U42jaPfgLKcdpanMj3f6RENq6AmyeTcpxVC0upGu23KFvOMTm
+        2aQcp0G7i5+o1rtgMHnZnHKceo0T2dS0+6CO+7FWNDtxHhag7/ZIzlGOU9vkQMLG1n10moLJ5++8unlA
+        4OBWMqMcp1q1jYQdPUGMT9wkn79TEJ4Qi8Vg7PWIM8px5Ao7MqnU7bOZadCHD2YsIXFOOU5FnQ2ZbNC6
+        2WzDfkF5YGHxRJxTjlNWs4lcHRoL4OUlRnnAPHsk7lGOU1q9gVwcGPXjPvJIaST/gc7gFPcpxymuWkeq
+        lfWbkrXR5Maa9QzPz6+UfsfpupScoxynSL6GVJXaLZyeRRC+EhCJfr5xKucXUdQ22iT3KMcprFxFugqN
+        HR7/NV7jnyGVxHJnL4walZXdoRynoHwFmWzWOzA5HcTc/DGmzIdQt25/eS4h5Tj5Zcv4CynHyStZ9uWV
+        LuGXein3Ty7IZG+IvDCPjul3YgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
+    <value>Siap. Pilih build dari Combo Box untuk memulai, atau sebagai alternatif tekan F12 untuk mengubah Fitur secara manual.</value>
+  </data>
+  <data name="icons8_about_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="Generic_FeatureName" xml:space="preserve">
+    <value>Nama Fitur</value>
+  </data>
+  <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
+    <value>Jalur ke Daftar Fitur</value>
+  </data>
+  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
+    <value> Terjadi Exception Jaringan</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
+    <value>Fungsi Jaringan nonaktif. Tekan F12 untuk mengubah Fitur secara manual.</value>
+  </data>
+  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
+    <value> Terjadi Exception</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Generic_Done" xml:space="preserve">
+    <value>Selesai.</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
+    <value>Terjadi Win32 Exception generik.</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
+    <value>Berhasil mengatur ID Fitur {0} ke {1}</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+    <value>Anda masih dapat mengubah ID Fitur secara manual dengan menekan F12, dan dapat memuat Daftar Fitur lokal.</value>
+  </data>
+  <data name="Error_Error" xml:space="preserve">
+    <value>Kesalahan</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
+    <value>Respon GitHub API: </value>
+  </data>
+  <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
+    <value>Terjadi Exception saat mencoba mengatur ID Fitur {0} ke {1}</value>
+    <comment>{0} references to a ID, {1} to a Feature State</comment>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Build Tidak Didukung</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>Terjadi Exception Jaringan</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
+    <value>IP Anda mungkin telah dibatasi sementara oleh GitHub API selama satu jam.</value>
+  </data>
+  <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
+    <value>Sedang mengumpulkan data… Ini dapat memakan waktu cukup lama.</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema Terang</value>
+  </data>
+  <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
+    <value>Atur ID Fitur secara Manual</value>
+  </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Build Tidak Didukung</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="icons8_toggle_on_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbBJREFUSEvt
+        lM8uA1EUxq+Vt0BsscAzYOdPgjcQCyIt1ZmysSCpssGKYFnxGJpI2qSCzkxro2VHV6p0ZlbHOXdum+nM
+        nZqNxKIn+TKd2/P9Zubccy7rxn8M6GFqYZwpxjJTdSWUeC56yNsxVG2OqcYTmuBXxR+ARbPAIrfA1nPO
+        PXkTxVlBcwe9tXYoBXmFoJG9HFxmKlB5r8FXw+TXi0yZr/MHKcaBAItwPlUOdCt2B6tpDRqmBbZt+0Tr
+        K+kCz8MX3hTw0gCaLR/MJw0Wz+6lYLcsy4YFzMN8G/dlkPHPkQLb1RvLwmv1Uwr16qVa4/lM0fdpYzUZ
+        0Kupk7wUFqTJ4zz5Hqn+dTcoSNFrXQoKUgTz0VcP/QAyyEBBWrvSyFf7sxJNHLVKZKS8MJlo02jzZDCv
+        Wpus6knGtov9+CNUm1L7URvKoE3R//OnvE1N7NA+ZxYSelwO9QgHiAYp3KAZGw68GSHngY6C4d0snN+U
+        4fntA+rfJr/S/RCuizMpJaieUIwZhJR8UJkIRIdc22GnF1nCmBa0DrFVHMOyLWEdd9CU7CzM4bnGqHB3
+        418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+    <value>ViVeTool-GUI tidak dapat menerima data Build di Combo Box, jika perangkat tidak terhubung ke Internet, atau jika GitHub API tidak dapat dijangkau.</value>
+  </data>
+  <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        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
+        O84aF5f/A53FcUaHpzpNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\images\about.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_toggle_off_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAapJREFUSEvt
+        lM9OwkAQxuuLqPGmtBX1ILTLGyjqSc/+iQeNmhjhqkYNIL6IGvVVjIkgCIkISOGkBWlP485SNeDUFOOB
+        A1/yZdvN7G+yu7Mj9dV7AkkaqClsylD09arCol6MsbgG1zoYWobMFnhwuihr8OgLwMPYNOT4iP983ovT
+        hhKad3DfwsyGqiURlAovQenyBsznIliNhhhLF9di3nMiVT910C3hNgtyEHKHcbDem2Db9g/jfO4gBhhH
+        Qjut6nsC/uIPDFcU3cruRElwmy0LsttR4PE0tN22obARCbeT8TMwS2Ua2mGzWAKMJ4CEWVziH3eZ1U0S
+        5ubMygYBI32LCcz8yRkJcnP+OEnBKJutBHwBBXJz7ihBwSi//u2Ilrs5IllPiEvml0fBOt3dJWsxqTyq
+        DYky5eWHZUhBv4xluhXxWqbNso8NirfAM0XEQ+MP6d8emsx2BfxT+B5Eq5jlreL8Ct6eCtCs18WI/6mZ
+        Re+tgh+7g21XRdHm+PZTCMIm122z4y3nvqLqYQfnrpoamuTJ1gyV7eNF/Woeg7HV8eCEs7yvnpIkfQAf
+        pahV10KgZwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Error_SetConfig" xml:space="preserve">
+    <value>Terjadi kesalahan saat mencoba mengatur {0} ke {1}</value>
+    <comment>{0} references to a ID/Feature, {1} to a Feature State</comment>
+  </data>
+  <data name="icons8_portrait_mode_scanning_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAYdJREFUSEvt
+        lctOwkAUhudthBhocOsFfABRH4XVAIGEZd9DGhdSClilUFAjU4oXFpRKfAFuuhe7GmdgJCEylMa4MOFP
+        vsU5mf7nTJv8BRt50t3jy+T2wcY3rS6um9YHa7tKrbcmlzUTl/QmLlYN/nPMXCfmUDetGGu7qqSbsVLV
+        gMUK0gsVhFn7p2abdzKsBNE+jp4OsbiK4z4+YseBUmlkFK3BH0A2d2rNToKV4GSAHQJ24ZMdB0oZJRTt
+        3mGlu6hB+GmAfefGUsLPw+kQdty76MOR9ggHlPZSIu3x7wdsbrBSf3KDneRrMJTsiQLhIDfG3+znRlP2
+        5EV2Cf6ULfpTluhLWwFmw1cI2oIQ70EhbsND9R1HOITVtznbKQuSAXAr2Q0ym/X0/74BTUW1bkJW0gGe
+        okLKa1DKl/lpSiO3qBsLYUfCDLowDztJLmey8jX/RrM8R6hQNURFQ2nWdpUka2myvUjMUTZ3xR9AfhYO
+        zXMauV5SkbwWh25Ozc8u1PXTdCMAAPgCoRozzaUth5kAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="icons8_registration_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAA55JREFUSEvl
+        lHtMU2cYxmv2nzov2HPwwmWHizDcDNUoGi/Dy4wxKNO5ZMZtgoIxKt5m/EOdWYwmM2hEI7MqoIB0WFNU
+        CgiD3gC1RaKSIGlLQQtCWbUVGoYgq8++7/BFQ5TN4p/+kjd9+77P95ynX5oj+XgoS/SP0W+UHtYmclma
+        hAlpmp+438p/kMay9fAxpviNubPD32hI4mBI5qAnn7pEDpoNHMrWcylMNjx0SX4B1Vv93dSQmhs2v3lA
+        +XoOpd/yfSWrOBmT+05lEl9h2Myj/kgQjLsmE2Me2gQept0BqPs1GKVreRR/w9Uwue9oN3C99oxw9Ohm
+        o7dyPvqqvxKL9nTWmBYK9UrpSyb3Hf0m3tFdMQO9VQvw8vZS9BuXi0V7OvP8OQMlayY6mdx37u0PqOjR
+        z0HfrUX4x7QCr2rjxaI9ndGdcWeQhsl9o1kpRJjPBT55YZhLEi+B924cXt1bLZa3Jk6c0Z1ZHtjalB8y
+        lR17f2wFobw9P6ilRxdD7j2WpF5OHrJKLNrTGd1RTaMyjGPHfKOrZOqhvzUyvKicR65kMfrvLBOL9nRG
+        d12lEb8wue94ikPiPGVRxGimeB3030OL9nRGd13qkBVM7juAZERnkZDhKY1Ed/l0dFfIBor0dNapFi5Q
+        DZMPwhifuLZu2Y+j2NehgVLyiaNA0D8vEtBVHCYW7dtVgp7umGwQNpvtaL08p7ImPkHHRkMzS+ualq1M
+        VltzBdiVpK4IsFwWkKXYVDjtuiuKyV7jrI7eb7VaOq1Wq7fuePpONn6b6PLnsdFl7trpN134uvA+TDky
+        NGQLYplyorFQWYuwKw6E/OEwCXntC+kZt0ZyxKWVwFEdU29ueHBQNHoXX5a4931R9MwbVfgUn193IrLA
+        iVlXLdiukGNbnhyyvAZ8drkNwTltCLz0BAHnH3nVN+ZUUXOxdJKfmdXbRN1wfhd5zYkI1V8Iv9pBUnbQ
+        lCApEZzbhqBsYnixFVMyWzDpfAsmpjfhhGLdgPFA7WFW7yZc2VEXmk9+uqJ9cMqsVkzOoKZ2+J99DD79
+        MaRpjUjNfWN+IDO5ndkMDUnZT1MGiimJ6QWS8tyAKXfmEaSnm+GX1ozxqRYcy/5eNH6mGYGUszsw8vDD
+        fmYzNCRllZhSbgf/O0lJTCecIoYnmzDuhA1jU2349Fgj9imyXiffK99CzTHqqMXAbD4cs9lc6zYfhEs/
+        eviviv9CpVId93g8//MWlUj+BST0ckPf98ZuAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+    <value>File tidak ada.</value>
+  </data>
+  <data name="Generic_Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Sembunyikan Exception</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Menyalin Exception ke clipboard dan menutup dialog</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
+    <value>Mungkin ada beberapa penyebab Win32 Exception, tetapi biasanya Perangkat Lunak Anti-virus yang mengganggu ViVeTool GUI, atau masalah Izin.</value>
+  </data>
+  <data name="Generic_AlwaysDisabled" xml:space="preserve">
+    <value>Selalu Nonaktif</value>
+  </data>
+  <data name="SetConfig_Success" xml:space="preserve">
+    <value> Sukses</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="SystemMenu_About" xml:space="preserve">
+    <value>&amp;Tentang</value>
+    <comment>The &amp; is used to underline the first character</comment>
+  </data>
+  <data name="Generic_EnabledByDefault" xml:space="preserve">
+    <value>Aktif secara Default</value>
+  </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Terjadi Exception yang tidak diketahui</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeature" xml:space="preserve">
+    <value>Berhasil mengatur Fitur {0} ke {1}</value>
+  </data>
+  <data name="Error_SettingFeatureConfig" xml:space="preserve">
+    <value>Terjadi kesalahan saat mengatur konfigurasi fitur untuk {0}</value>
+    <comment>{0} references to a Feature</comment>
+  </data>
+  <data name="Generic_FeatureID" xml:space="preserve">
+    <value>ID Fitur</value>
+  </data>
+  <data name="icons8_comments_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAsFJREFUSEvt
+        k31PUmEYxtna6qOVlSgqr4K8KvgK4ktoL2trfQ9LBYLSREEJ0QzNsHwpAxUBRa2vcXU/h3Pg4LPRKtv6
+        o3u7/jh7tt997bqvo/g//84M3f++6h3/hsGxC3h853DfK2Fg9BT9IyfoGy6id6iAHu8xugdzcHmO4HQf
+        omsgi87+DOx9X2Hr3Ye15wss3XvocO0kRWx1vOMXBCew74zApUvgPIGPZeADAmfhILCdwDYCW7s/w+La
+        g9m5g46ubYjY6ngIXOu6QPC84NpFrp0E73ITmFw7Kq7l4F0C78DU+QlGx0d+wc/jYK4zFddSHGYXgcm1
+        iVwbCd7u2ILBnuYX9I0QmFz3kOtHTzNYWDzHfIzpDJEoU4l0irkFphO8ZpovYpYpUsDweJrAW9DbPkBn
+        3eQXSHEw17OREn51gi9z0FsJbnkPrXmDXyCP48GTfQTDRQTCBfjDefhDeUyHjjH1IldWMIfJ4BEmA0d4
+        7j8kHcDrIzDBNeZ1qDtS/AKnh3JmRxTaQUfspSPWtIMdcbtyxHaKw2BLk+tNEbxB4HW0md6h1bjGL5B3
+        euzxrpC1kPOCmDNphrKeieTximkuj8HRchwaAqtNKbQZCd7+Fi2GVX6BvNPh2aKYbP0JhA6FOCTXLQRX
+        GVbQrE/yC+Sd9j3cFnKeEnOeFHImTWcFPZvKYILkHknJwKsEXkGTbhlKbYJfUK/TUvW0FopDPGI5DoIT
+        WEXgZl2SwMto1LzBXXWcXyD94tIR5Z2uHvFyHMx1suK6DF/CnbZFfgHfjmqnpSPycTDXEjhO4CXcbo2h
+        oSXKLzDa06naOKqdrrqmONgRCdxEcSg1BK+AFwkcwy1VFDdVkTURW3/4OFaiDQ2xG+Lzn4/UaRaHUpf0
+        q9Wha+LT1YzUaaUucfVwNqwdjdrE9F+Bs1Fq4jaCXxc/f2MUih8GnmMOV3SIQwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Comments_Spaced_PrivacyInformation" xml:space="preserve">
+    <value> Informasi Privasi</value>
+  </data>
+  <data name="Comments_PrivacyInformation" xml:space="preserve">
+    <value>Informasi Privasi</value>
+  </data>
+  <data name="Comments_PrivacyText" xml:space="preserve">
+    <value>Sebelum Anda dapat mengirim komentar Anda, Anda harus setuju, bahwa informasi berikut akan disimpan tanpa batas waktu ke dalam Basis Data:
+
+Build Terpilih, Fitur ViVeTool Terpilih, Komentar Anda
+
+Anda juga harus setuju, bahwa Alamat IP Anda akan dienkripsi dan disimpan selama 24 jam setelah menekan 'Kirim Komentar'.
+
+Menyimpan Alamat IP Anda selama 24 jam adalah tindakan pencegahan keamanan untuk mencegah Spam dan Penyalahgunaan.</value>
+  </data>
+  <data name="Comments_I_Agree" xml:space="preserve">
+    <value>Saya Setuju</value>
+  </data>
+  <data name="Comments_SendMyComment" xml:space="preserve">
+    <value>Kirim komentar saya</value>
+  </data>
+  <data name="Comments_I_Dont_Agree" xml:space="preserve">
+    <value>Saya Tidak Setuju</value>
+  </data>
+  <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
+    <value>Tutup Dialog ini dan jangan kirim apapun</value>
+  </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> Mengirim Komentar Anda...</value>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>Mengirim Komentar Anda...</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>Selesai</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Tutup Dialog</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Komentar Terkirim</value>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Komentar Anda berhasil dikirim.</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>Terjadi kesalahan saat mengirim komentar Anda.</value>
+  </data>
+</root>
