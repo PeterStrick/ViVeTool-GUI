@@ -545,7 +545,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Load manually....
+        '''  Looks up a localized string similar to Load manually….
         '''</summary>
         Friend ReadOnly Property Generic_LoadManually() As String
             Get
@@ -563,7 +563,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Populating the Data Grid View... This can take a while..
+        '''  Looks up a localized string similar to Populating the Data Grid View… This can take a while..
         '''</summary>
         Friend ReadOnly Property Generic_PopulatingTheDataGridView() As String
             Get
@@ -572,7 +572,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Select Build....
+        '''  Looks up a localized string similar to Select Build….
         '''</summary>
         Friend ReadOnly Property Generic_SelectBuild() As String
             Get
