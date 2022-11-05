@@ -1,0 +1,2147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;__DBG_OPTIONS.Name" xml:space="preserve">
+    <value>__DBG_OPTIONS</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Name" xml:space="preserve">
+    <value>WB_Introduction</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Name" xml:space="preserve">
+    <value>RL_SymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Name" xml:space="preserve">
+    <value>RL_DbgPath</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Name" xml:space="preserve">
+    <value>RB_Continue</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Name" xml:space="preserve">
+    <value>RSS_Setup</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Name" xml:space="preserve">
+    <value>RB_SymbolPath_Browse</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Name" xml:space="preserve">
+    <value>RB_DbgPath_Browse</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Name" xml:space="preserve">
+    <value>RTB_SymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Name" xml:space="preserve">
+    <value>RTB_DbgPath</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_Setup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Pengenalan dan Persiapan</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Setup.Name" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Setup.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Setup.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Setup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Name" xml:space="preserve">
+    <value>RTB_PDBDownloadStatus</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Parent" xml:space="preserve">
+    <value>RPVP_DownloadPDB</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
+    <value>RL_DownloadIntroduction</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Parent" xml:space="preserve">
+    <value>RPVP_DownloadPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Unduh Simbol Debug</value>
+  </data>
+  <data name="&gt;&gt;RPVP_DownloadPDB.Name" xml:space="preserve">
+    <value>RPVP_DownloadPDB</value>
+  </data>
+  <data name="&gt;&gt;RPVP_DownloadPDB.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_DownloadPDB.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_DownloadPDB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Name" xml:space="preserve">
+    <value>RL_SymbolFolders</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Name" xml:space="preserve">
+    <value>RL_SymbolFiles</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Name" xml:space="preserve">
+    <value>RL_SymbolSize</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
+    <value>RL_InfoScan</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RPVP_ScanPDB.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPVP_ScanPDB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_ScanPDB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>Pindai Simbol Debug untuk ID Fitur</value>
+  </data>
+  <data name="&gt;&gt;RPVP_ScanPDB.Name" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RPVP_ScanPDB.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_ScanPDB.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_ScanPDB.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Name" xml:space="preserve">
+    <value>RL_OA</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Name" xml:space="preserve">
+    <value>RB_OA_DeleteSymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
+    <value>RB_OA_CopyFeaturesTXT</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.Name" xml:space="preserve">
+    <value>RL_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Name" xml:space="preserve">
+    <value>RL_OutputFile</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RPVP_Done.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPVP_Done.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_Done.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Selesai</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Done.Name" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Done.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Done.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Done.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Name" xml:space="preserve">
+    <value>RGB_Theming</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
+    <value>RL_Comments</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
+    <value>RL_ProductName</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
+    <value>RL_Description</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
+    <value>RL_Version</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
+    <value>RL_License</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
+    <value>PB_AppImage</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Tentang &amp; Pengaturan</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Name" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>832, 516</value>
+  </data>
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="__DBG_OPTIONS.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
+    <value>Buka semua Tab</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_AddJunctions.Text" xml:space="preserve">
+    <value>Tambah Junctions</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
+    <value>Hapus Junctions</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
+    <value>Test Symbol Downloaded Text</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
+    <value>Pindai simbol segera, atur text box terlebih dahulu</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 315</value>
+  </data>
+  <data name="__DBG_OPTIONS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 24</value>
+  </data>
+  <data name="__DBG_OPTIONS.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="__DBG_OPTIONS.Text" xml:space="preserve">
+    <value>[OPSI DEBUG]</value>
+    
+    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.Name" xml:space="preserve">
+    <value>__DBG_OPTIONS</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;__DBG_OPTIONS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="WB_Introduction.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 296</value>
+  </data>
+  <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Name" xml:space="preserve">
+    <value>WB_Introduction</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;WB_Introduction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 399</value>
+  </data>
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 18</value>
+  </data>
+  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>Jalur untuk menyimpan File PDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Name" xml:space="preserve">
+    <value>RL_SymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolPath.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 356</value>
+  </data>
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 18</value>
+  </data>
+  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Jalur ke symchk.exe</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Name" xml:space="preserve">
+    <value>RL_DbgPath</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RL_DbgPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 309</value>
+  </data>
+  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 30</value>
+  </data>
+  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Lanjutkan</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Name" xml:space="preserve">
+    <value>RB_Continue</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_Continue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.TextWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value/>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RSS_Setup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 451</value>
+  </data>
+  <data name="RSS_Setup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 24</value>
+  </data>
+  <data name="RSS_Setup.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Name" xml:space="preserve">
+    <value>RSS_Setup</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RSS_Setup.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>718, 394</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
+    <value>Jelajahi</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Name" xml:space="preserve">
+    <value>RB_SymbolPath_Browse</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_SymbolPath_Browse.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>718, 351</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
+  </data>
+  <data name="RB_DbgPath_Browse.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
+    <value>Jelajahi</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Name" xml:space="preserve">
+    <value>RB_DbgPath_Browse</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RB_DbgPath_Browse.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 394</value>
+  </data>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Jalur untuk menyimpan Simbol Debugging yang diunduh ke</value>
+  </data>
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 24</value>
+  </data>
+  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Name" xml:space="preserve">
+    <value>RTB_SymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RTB_SymbolPath.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 351</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Jalur ke symchk.exe dari Windows 10/11 SDK</value>
+  </data>
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 24</value>
+  </data>
+  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Name" xml:space="preserve">
+    <value>RTB_DbgPath</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.Parent" xml:space="preserve">
+    <value>RPVP_Setup</value>
+  </data>
+  <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 184</value>
+  </data>
+  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>808, 285</value>
+  </data>
+  <data name="RTB_PDBDownloadStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Name" xml:space="preserve">
+    <value>RTB_PDBDownloadStatus</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.Parent" xml:space="preserve">
+    <value>RPVP_DownloadPDB</value>
+  </data>
+  <data name="&gt;&gt;RTB_PDBDownloadStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_DownloadIntroduction.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>808, 175</value>
+  </data>
+  <data name="RL_DownloadIntroduction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Sekarang setelah Anda siap, sekarang saatnya mengunduh Program Debug Databases. Aplikasi akan secara otomatis mengunduh File PDB untuk File .exe dan .dll di Folder berikut ke folder simbol yang Anda tentukan, dan akan menganalisisnya setelahnya:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\File Program, C:\File Program (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Ini akan memakan waktu lama, tergantung pada jumlah program dan aplikasi yang terpasang saat ini.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
+    <value>RL_DownloadIntroduction</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.Parent" xml:space="preserve">
+    <value>RPVP_DownloadPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_DownloadIntroduction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolFolders.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 241</value>
+  </data>
+  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 23</value>
+  </data>
+  <data name="RL_SymbolFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RL_SymbolFolders.Text" xml:space="preserve">
+    <value>Total Folder di {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Name" xml:space="preserve">
+    <value>RL_SymbolFolders</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_SymbolFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 197</value>
+  </data>
+  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 23</value>
+  </data>
+  <data name="RL_SymbolFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RL_SymbolFiles.Text" xml:space="preserve">
+    <value>Total File di {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Name" xml:space="preserve">
+    <value>RL_SymbolFiles</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolFiles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 153</value>
+  </data>
+  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 23</value>
+  </data>
+  <data name="RL_SymbolSize.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolSize.Text" xml:space="preserve">
+    <value>Ukuran saat ini dari {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Name" xml:space="preserve">
+    <value>RL_SymbolSize</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_SymbolSize.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RL_InfoScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>571, 90</value>
+  </data>
+  <data name="RL_InfoScan.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_InfoScan.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Pemindai Fitur sekarang akan secara otomatis mulai memindai File PDB menggunakan mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;strong&gt;Jangan&lt;/strong&gt; tutup jendela ini atau mach2, hingga mach2 selesai memindai.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Anda akan diberi tahu melalui pemberitahuan desktop setelah pemindaian selesai.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
+    <value>RL_InfoScan</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.Parent" xml:space="preserve">
+    <value>RPVP_ScanPDB</value>
+  </data>
+  <data name="&gt;&gt;RL_InfoScan.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RL_OA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_OA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 287</value>
+  </data>
+  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="RL_OA.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="RL_OA.Text" xml:space="preserve">
+    <value>Aksi Opsional:</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Name" xml:space="preserve">
+    <value>RL_OA</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_OA.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 316</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 39</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Hapus {My.Settings.SymbolPath}</value>
+    <comment>@Invariant, they get replaced with proper localized Strings at runtime</comment>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Name" xml:space="preserve">
+    <value>RB_OA_DeleteSymbolPath</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 316</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 39</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Salin File Features.txt ke Desktop Anda</value>
+    <comment>@Invariant, they get replaced with proper localized Strings at runtime</comment>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
+    <value>RB_OA_CopyFeaturesTXT</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RL_Done.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_Done.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_Done.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 218</value>
+  </data>
+  <data name="RL_Done.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;Pemindaian telah selesai. Anda sekarang dapat:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Tinjau file Features.txt Anda&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;Unggah file Features.txt Anda ke &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;Repositori mach2&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (akan muncul di Build Combo Box setelah diunggah)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;atau Impor file Features.txt Anda ke ViVeTool-GUI dengan memilih Drop Down "Gunakan Manual" di bagian bawah Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
+  </data>
+  <data name="&gt;&gt;RL_Done.Name" xml:space="preserve">
+    <value>RL_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_Done.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RL_OutputFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 227</value>
+  </data>
+  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 23</value>
+  </data>
+  <data name="RL_OutputFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RL_OutputFile.Text" xml:space="preserve">
+    <value>File Output: </value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Name" xml:space="preserve">
+    <value>RL_OutputFile</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.Parent" xml:space="preserve">
+    <value>RPVP_Done</value>
+  </data>
+  <data name="&gt;&gt;RL_OutputFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 35</value>
+  </data>
+  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Gunakan Tema Sistem</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="&gt;&gt;RTB_UseSystemTheme.Name" xml:space="preserve">
+    <value>RTB_UseSystemTheme</value>
+  </data>
+  <data name="&gt;&gt;RTB_UseSystemTheme.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadToggleButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_UseSystemTheme.Parent" xml:space="preserve">
+    <value>RGB_Theming</value>
+  </data>
+  <data name="&gt;&gt;RTB_UseSystemTheme.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 23</value>
+  </data>
+  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 35</value>
+  </data>
+  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema Terang</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="&gt;&gt;RTB_ThemeToggle.Name" xml:space="preserve">
+    <value>RTB_ThemeToggle</value>
+  </data>
+  <data name="&gt;&gt;RTB_ThemeToggle.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadToggleButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_ThemeToggle.Parent" xml:space="preserve">
+    <value>RGB_Theming</value>
+  </data>
+  <data name="&gt;&gt;RTB_ThemeToggle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 336</value>
+  </data>
+  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 80</value>
+  </data>
+  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Name" xml:space="preserve">
+    <value>RGB_Theming</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_Comments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 128</value>
+  </data>
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 178</value>
+  </data>
+  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Ikon oleh &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Repositori GitHub PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Terinspirasi dari &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fungsi Pembaruan disediakan oleh &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fungsi Pemindaian Fitur disediakan oleh &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
+  </data>
+  <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
+    <value>RL_Comments</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RL_ProductName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 3</value>
+  </data>
+  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 23</value>
+  </data>
+  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="RL_ProductName.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - ProductName</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
+    <value>RL_ProductName</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_Description.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 75</value>
+  </data>
+  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 47</value>
+  </data>
+  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - Description</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
+    <value>RL_Description</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RL_Version.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 23</value>
+  </data>
+  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="RL_Version.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - Version</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
+    <value>RL_Version</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RL_License.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing">
+    <value>61, 51</value>
+  </data>
+  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing">
+    <value>230, 23</value>
+  </data>
+  <data name="RL_License.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="RL_License.Text" xml:space="preserve">
+    <value>CHANGED AT RUNTIME - License</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
+    <value>RL_License</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABEFJREFUeF7t
+        nc1OU1EUhZn4CGoc6MiB4g/6GkYU44s4RX0BTYwD34ACiRQKRbQFgQJVQGeUH0caw08nRCI6NTmeQ3cL
+        bRe5vfemm91z95esMDhJs9da9MKhyaZLURRFURRFURRFURRFUU5j4etWwcpUtGkWvmyaQk0bprC6YeZr
+        Wq9oZd3MOS2X5uhlxDI1v1qYmls1x1ox72ZPatlMOn2s6vORsjNHar+/yOGvlI5ELyOWGOFbfWq/vzjh
+        23dABxUQPnymAqKH3zkFRAufp4AY4c8ur3VAAdHDn5hmKCBO+FaL9DJisaEXo4bPWEBz+HScGFD4E9NF
+        jgLwdz4dJwYUPk8BIHz32KHjxIDCH88zFIDCd898Ok4MKHzGAurDdz9s6bglesvmSl/ZjFntW5kz1v6j
+        ssk82DFXabyWQOGP55c4CmgOP0wBFP5BQwgSdPBwz1ymMQNB4fMV0BB+mAuWNeq+81EAZy77TkjTmIGg
+        8HkKAOGHLOBPo3FB+k1jBoLCz+QYCkDhh7nhAtOiRGMGgsLP5BZZ3gHFxvDD3HCRaUmiMQOxoRcbw8/k
+        F8Xf9L0poGNBpiWJxvQXZNrpwsu0OffkDYsuvR6HMzjRmP6CTPfu/INBtVNoDica01+QaS2AEWS6b8+Y
+        8y/ewqDaoYuvxppnINGY/oJMSxKN6S/ItCTRmP6CTEsSjekvyLQk0Zj+gkw76T2ACWRafw1lBJnWAhhB
+        pvUewAgyLUk0pr8g05JEY/oLMi1JNKa/INOSRGP6CzLtpPcAJpBp/TWUEWRaC2AEmdZ7ACPItCTRmP6C
+        TEsSjekvyLQk0Zj+gkxLEo3ZefT0f7t/p3/rh5Vx6mnSZkVPj3U7QLdq2jhVN58Fad3cCFD3ST0/qVJN
+        10ndz0rf7dd7ZFsOd/u3tqvh+1xARWs/ybYcbOi7ySmgtE225UCPoL0EFLBrJe8R1CroB58k0Zj+gkxL
+        Eo3pL8i0JNGY/oJMSxKN6S/ItJN+HsAEMq1/jmYEmdYCGEGm9fMARpBpSaIx/QWZliQaUy54r+Zyy/sy
+        kWlJojEDGR7PF4YzeVPVUCbn1P69oc3hV0THgSDTkkRjBgLCN0Njufa/g1D4IQv422hakA5pzEBQ+IwF
+        1IfvtgvScSDW5ESDaTEKs64GhT809oGjgObw3WpHOg7kcdlcs2YlLmz6FWZhEwp/kKMAFL7bqUnHLXFi
+        ZZmE3UGHVqNhwneg8AdHWQs4Dj9sAT6AwmcsoD58t02WjhMDCn9w9D1HAc3hJ7OA5vBZCkDhZ2eSVwAK
+        P8VSAAi/IrxLuW67YG5J/H/QOOWGS897/Niphp9KsxUQIXzar0YvI5Y44afSUxwFRA+/kwqIEj5bAdmI
+        4bPs1YxJnPAHOArIxgifZa9mTOKEPzDCU0AxavidsFfThl+MGn5qZFL+3lBFURRFURRFURRFURTljOjq
+        +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 48</value>
+  </data>
+  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
+    <value>PB_AppImage</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="FSW_SymbolPath.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>33</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>832, 516</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
+        IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAxbqx/MO5sP/Cua+jAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAua6mo7atpP+1q6P8AAAAAAAA
+        AAAAAAAAAAAAAMa8sv8AAAAA/+NVCf/oUUL/5U9E/+VPRP/lT0T/5U9E/+hRQv/fYAgAAAAAtq2k/wAA
+        AAAAAAAAAAAAAAAAAADIvLSwAAAAAP/mUFD/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lBQAAAAALiu
+        p7AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV6MxA/7CPGf+wjxn/sI8Z/7CPGf/ozUD//+dRVQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADWeTCa24o0xuOeOv/jnjr/4p45/+KfOP/inzj/4p84/9qM
+        MMbSeyqZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX23En/4sc8/+LHPP/ixzz/4sc8//bc
+        Sf//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV9NpI/9u+N//bvjf/2743/9u+
+        N//120j//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVejMQP+wjxn/sI8Z/7CP
+        Gf+wjxn/6M1A///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVXpzkH/t5ge/7eY
+        Hv+3mB7/t5ge/+rQQv//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0sW+pAAAAAD/5lBQ/+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQUAAAAADCt7CkAAAAAAAAAAAAAAAAAAAAANPIvv8AAAAA/+NVCf/l
+        Tk7/51FV/+dRVf/nUVX/51FV/+VOTv/fYAgAAAAAw7mw/wAAAAAAAAAAAAAAAAAAAADVyb/708i+/9LH
+        vaMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIvbSjxryy/8W6sfsAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//
+        AADH4wAA3/sAANgbAAD4HwAA4AcAAPgfAAD4HwAA+B8AAPgfAADYGwAA3/sAAMfjAAD//wAA//8AACgA
+        AAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        //////////////B//g/wf/4P8///z/PAA8/zgAHP/4AB//+AAf//gAH//4AB//wAAD//gAH//4AB//+A
+        Af//gAH//4AB//+AAf//gAH//4AB//+AAf/zgAHP88ADz/P//8/wf/4P8H/+D///////////////////
+        //8oAAAAMAAAAGAAAAABACAAAAAAAFAlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAxbqy7cS6sf/EubD/w7mw/8O4r//CuK//wriv/8G3ruwAAAAAAAAAAAAA
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7lT/+adwr/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/m3kL///mUP//5lD//+ZQ/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7l
+        T/+beQv/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/nHoM///m
+        UP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA1noww9Z5MP/WeS//1nkv/9V5L//Vei//1Xou/9V6Lv/Vei7/1Xou/9V6Lv/Uei3/1Hot/9R6
+        Lf/Uei3/1Hss/9R7LP/Ueyz/1Hss/9N7K//Teyv/03sr/9N7K//Teyv/03sq/9N8Kv/SfCr/0nwq/9J8
+        Kf/SfCnBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA1nkwv9Z5MP/WeS//1nkv/9V5L//Vei//1Xou/9V6Lv/Vei7/1Xou/9V6
+        Lv/Uei3/1Hot/9R6Lf/Uei3/1Hss/9R7LP/Ueyz/1Hss/9N7K//Teyv/03sr/9N7K//Teyv/03sq/9N8
+        Kv/SfCr/0nwq/9J8Kf/SfCi9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7lT/+adwr/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/m3kL///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7lT/+beQv/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/nHoM///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/5lD//+ZQ//7lT/+adwr/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/m3kL///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7lT/+beQv/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/nHoM///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lD//+ZQ//7l
+        T/+adwr/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/m3kL///m
+        UP//5lD//+ZQ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/5lD//+ZQ//7lT/+beQv/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        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
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAMm9tOrIvbT/x7yz/8e8s//GvLL/xruy/8W7sv/FurHpAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////////AAD///////8AAP///////wAA////////AAD///////8AAP//
+        /////wAA/AP//8A/AAD8A///wD8AAPwD///APwAA/H////4/AAD8f////j8AAPx+AAB+PwAA/HwAAD4/
+        AAD8fAAAPj8AAP/8AAA//wAA//wAAD//AAD//AAAP/8AAP/8AAA//wAA//wAAD//AAD/gAAAAf8AAP+A
+        AAAB/wAA//wAAD//AAD//AAAP/8AAP/8AAA//wAA//wAAD//AAD//AAAP/8AAP/8AAA//wAA//wAAD//
+        AAD//AAAP/8AAP/8AAA//wAA//wAAD//AAD//AAAP/8AAP/8AAA//wAA//wAAD//AAD8fAAAPj8AAPx8
+        AAA+PwAA/H4AAH4/AAD8f////j8AAPx////+PwAA/AP//8A/AAD8A///wD8AAPwD///APwAA////////
+        AAD///////8AAP///////wAA////////AAD///////8AAP///////wAAKAAAAEAAAACAAAAAAQAgAAAA
+        AAAAQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADFurHixLqx/8S6sf/EubD/w7mw/8O5sP/DuK//wriv/8K4r//Bt67/wbavjAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAt66ljbetpf+3raX/tq2k/7aspP+1rKT/tayj/7Wr
+        o/+0q6P/tKui/7SqouEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAxbuy/8W6sf/EurH/xLqx/8S5sP/DubD/w7mw/8O4r//CuK//wriv/8K3
+        rqoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALmup6q3rqX/t62l/7et
+        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
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP7/41MlAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAuK6m/7eupf+3raX/t62l/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIvbT/yL20/8e9s//HvLP/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+ZRUv/mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZRUgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAALiupv+4rqb/t66l/7etpf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAx7+0k8i+tLvIvrS7x72ykgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4r6eTuK+mu7ivpru3r6SSAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV/+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/m
+        UP//5lD//+ZQ/+TIPf+Ucgb/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5RyBv/myz///+ZQ///mUP//5lD//+dRVQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP/YvDX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/2743///mUP//5lD//+ZQ///n
+        UVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV/+ZQ///mUP//5lD/8dZG/7OUHP+wjxn/sI8Z/7CP
+        Gf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/tJMb//LY
+        SP//5lD//+ZQ///mUP//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/n
+        UVX/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///nUVUAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADXeDFT1nkwqdd6
+        MKrXei+q13ovqtV6L6rbijTG4546/+OeOv/jnjr/4546/+OeOv/jnjr/4546/+OeOf/injn/4p45/+Ke
+        Of/injn/4p45/+KfOP/inzj/4p84/+KfOP/inzj/4p84/+KfOP/inzj/4p84/+KfOP/inzj/4p83/+Kf
+        N//ajDDG1H0qqtJ9KqrSfSqq0n0pqtJ8KanTeylRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA1nkw8NZ5MP/WeTD/1nkv/9Z5L//VeS//1Xkv/9V6L//Vei//1Xou/9V6Lv/Vei7/1Xou/9V6
+        Lv/Vei3/1Hot/9R6Lf/Uei3/1Hot/9R6Lf/Ueyz/1Hss/9R7LP/Ueyz/1Hss/9N7LP/Teyv/03sr/9N7
+        K//Teyv/03sr/9N7Kv/Teyr/03wq/9N8Kv/SfCr/0nwq/9J8Kf/SfCn/0nwp7gAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAANd5MJ7WeTD51nkw/9Z5L//WeS//1Xkv/9V5L//Vei//1Xov/9V6
+        Lv/Vei7/1Xou/9V6Lv/Vei7/1Xot/9R6Lf/Uei3/1Hot/9R6Lf/Uei3/1Hss/9R7LP/Ueyz/1Hss/9R7
+        LP/Teyz/03sr/9N7K//Teyv/03sr/9N7K//Teyr/03sq/9N8Kv/TfCr/0nwq/9J8Kv/SfCn/0nwp+dF8
+        KZwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/51FV/+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//51FVAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP/74U3/48c8/+LH
+        PP/ixzz/4sc8/+LHPP/ixzz/4sc8/+LHPP/ixzz/4sc8/+LHPP/ixzz/4sc8/+LHPP/ixzz/4sc8/+LH
+        PP/jxzz//ONN///mUP//5lD//+ZQ///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV/+ZQ///m
+        UP//5lD/2743/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/93BOf//5lD//+ZQ///mUP//51FVAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+dRVf/mUP//5lD//+ZQ/9u+N/+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf/dwTn//+ZQ///mUP//5lD//+dRVQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP/74U3/3sI6/9u+N//bvjf/2743/9u+
+        N//bvjf/2743/9u+N//bvjf/2743/9u+N//bvjf/2743/9u+N//bvjf/2743/9u+N//ewjr//ONN///m
+        UP//5lD//+ZQ///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV/+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+dRVQAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP/kyD3/lHIG/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+Ucgb/5ss////mUP//5lD//+ZQ///n
+        UVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/51FV/+ZQ///mUP//5lD/2Lw1/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/9u+
+        N///5lD//+ZQ///mUP//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/mUP//5lD//+ZQ//HW
+        Rv+zlBz/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CPGf+wjxn/sI8Z/7CP
+        Gf+wjxn/sI8Z/7STG//y2Ej//+ZQ///mUP//5lD//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/n
+        UVX/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///nUVUAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAD/51FV/+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//51FVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/mUP//5lD//+ZQ//DVRv+4mB//t5ge/7eY
+        Hv+3mB7/t5ge/7eYHv+3mB7/t5ge/7eYHv+3mB7/t5ge/7eYHv+3mB7/t5ge/7eYHv+3mB7/t5ge/7iY
+        H//x10f//+ZQ///mUP//5lD//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX/5lD//+ZQ///m
+        UP/YvDX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/2743///mUP//5lD//+ZQ///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD/51FV/+ZQ///mUP//5lD/5Mg9/5ZzB/+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/k3AF/5Nw
+        Bf+TcAX/k3AF/5NwBf+TcAX/k3AF/5NwBf+TcAX/lnMH/+bLP///5lD//+ZQ///mUP//51FVAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/+dRVf/mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+dRVQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0se9jtLG
+        varSxryq0Ma9jgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/nUVX/5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///nUVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCt66OwrmwqsK3
+        rqrAt66OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAANPHvf/Sx73/0sa9/9LGvP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5lFS/+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lFSAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAw7iv/8K4r//CuK//wbeu/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADTx77/08e9/9LHvf/Sxr3/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+VOJ//mUP7/5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD+/+NTJQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMO5sP/DuK//wriv/8K4r/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA08i+/9PHvv/Tx73/0se9/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/5k+E/+ZQ/v/mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///mUP//5lD//+ZQ///m
+        UP//5lD9/+VPgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADDubD/w7mw/8O4r//CuK//AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANTI
+        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
+        AADHvrWJyL20/8i9tP/HvbP/x7yz/8e8s//GvLL/xruy/8W7sv/Fu7L/xbqx3QAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////////////////////////////////
+        /////////////////////////////////////////wAf///4AP//AB////gA//8AH///+AD//wAf///4
+        AP//D//////w//8P//////D//w//////8P//D+AAAAfw//8P4AAAB/D//w/gAAAH8P//D+AAAAfw////
+        4AAAB//////gAAAH/////+AAAAf/////4AAAB//////gAAAH/////+AAAAf////4AAAAAB////AAAAAA
+        D///8AAAAAAP////4AAAB//////gAAAH/////+AAAAf/////4AAAB//////gAAAH/////+AAAAf/////
+        4AAAB//////gAAAH/////+AAAAf/////4AAAB//////gAAAH/////+AAAAf/////4AAAB//////gAAAH
+        /////+AAAAf/////4AAAB//////gAAAH////D+AAAAfw//8P4AAAB/D//w/gAAAH8P//D+AAAAfw//8P
+        //////D//w//////8P//D//////w//8AH///+AD//wAf///4AP//AB////gA//8AH///+AD/////////
+        /////////////////////////////////////////////////////////////////////////////w==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ViVeTool GUI - Feature Scanner</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="&gt;&gt;__DBG_RemoveJunctions.Name" xml:space="preserve">
+    <value>__DBG_RemoveJunctions</value>
+  </data>
+  <data name="&gt;&gt;__DBG_RemoveJunctions.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_ScanSymbols.Name" xml:space="preserve">
+    <value>__DBG_ScanSymbols</value>
+  </data>
+  <data name="&gt;&gt;__DBG_ScanSymbols.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Name" xml:space="preserve">
+    <value>__DBG_TestSymDownloadedText</value>
+  </data>
+  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPBE_StatusProgressBar.Name" xml:space="preserve">
+    <value>RPBE_StatusProgressBar</value>
+  </data>
+  <data name="&gt;&gt;RPBE_StatusProgressBar.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadProgressBarElement, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RLE_StatusAndInfoLabel.Name" xml:space="preserve">
+    <value>RLE_StatusAndInfoLabel</value>
+  </data>
+  <data name="&gt;&gt;RLE_StatusAndInfoLabel.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabelElement, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;FSW_SymbolPath.Name" xml:space="preserve">
+    <value>FSW_SymbolPath</value>
+  </data>
+  <data name="&gt;&gt;FSW_SymbolPath.Type" xml:space="preserve">
+    <value>System.IO.FileSystemWatcher, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FluentLight.Name" xml:space="preserve">
+    <value>FluentLight</value>
+  </data>
+  <data name="&gt;&gt;FluentLight.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;FluentDark.Name" xml:space="preserve">
+    <value>FluentDark</value>
+  </data>
+  <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">
+    <value>__DBG_UnlockAllTabs</value>
+  </data>
+  <data name="&gt;&gt;__DBG_UnlockAllTabs.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_AddJunctions.Name" xml:space="preserve">
+    <value>__DBG_AddJunctions</value>
+  </data>
+  <data name="&gt;&gt;__DBG_AddJunctions.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Name" xml:space="preserve">
+    <value>__DBG_SEP1</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Name" xml:space="preserve">
+    <value>__DBG_SEP2</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ScannerUI</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <metadata name="FluentLight.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>163, 17</value>
+  </metadata>
+  <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>275, 17</value>
+  </metadata>
+</root>
