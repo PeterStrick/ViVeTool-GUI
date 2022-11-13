@@ -365,7 +365,7 @@ Public Class ScannerUI
 
         'Scan the .pdb files
         With Proc.StartInfo
-            .FileName = Application.StartupPath & "\mach2.exe" 'Path to mach2.exe
+            .FileName = Application.StartupPath & "\mach2\mach2.exe" 'Path to mach2.exe
             .Arguments = "scan """ & My.Settings.SymbolPath & """ -i ""C:\FeatureScanner"" -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
             .WorkingDirectory = Application.StartupPath 'Set the Working Directory to the path of mach2
             .UseShellExecute = True 'mach2 will crash without this

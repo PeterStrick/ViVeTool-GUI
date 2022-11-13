@@ -95,9 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CrashReporter.vb" />
-    <Compile Include="GlobalSuppressions.vb" />
-    <Compile Include="Junction.vb" />
+    <Compile Include="Functions\CrashReporter.vb" />
+    <Compile Include="Functions\GlobalSuppressions.vb" />
+    <Compile Include="Functions\Junction.vb" />
     <Compile Include="ScannerUI.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -159,10 +159,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_portrait_mode_scanning.ico" />
-    <Content Include="mach2.exe">
+    <Content Include="mach2\mach2.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="msdia140.dll">
+    <Content Include="mach2\msdia140.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -137,10 +137,10 @@ Public Class CommentsClient
                     Dim Response = Await CommentsHTTPClient.SendAsync(CommentsHTTPClient_Request)
 
                     'Throw a catch-ed Exception if the Status Code is not a successful one
-                    If Not (Response.IsSuccessStatusCode) Then Throw New HttpRequestExceptionWithStatusCode(Response.StatusCode, Response.ReasonPhrase)
+                    If Not (Response.IsSuccessStatusCode) Then Throw New HttpRequestExceptionPP(Response.StatusCode, Response.ReasonPhrase)
 
                     MsgBox(Response.Content.ToString, vbOKOnly, Response.StatusCode.ToString)
-                Catch HttpEx As HttpRequestExceptionWithStatusCode
+                Catch HttpEx As HttpRequestExceptionPP
                     Select Case HttpEx.StatusCode
                         Case HttpStatusCode.GatewayTimeout 'HTTP 504
                             MsgBox("Gateway timeout")
@@ -160,29 +160,7 @@ Public Class CommentsClient
                             MsgBox(HttpEx.ReasonPhrase, MsgBoxStyle.Critical, HttpEx.StatusCode)
                     End Select
                 End Try
-
-
             End Using
         End Using
     End Sub
-End Class
-
-''' <summary>
-''' Extended HttpRequestException Exception Class that exposes the HTTP Status Code
-''' 
-''' In .Net 5 and above this is not needed because the StatusCode is exposed as a Property within HttpRequestException
-''' </summary>
-Public Class HttpRequestExceptionWithStatusCode : Inherits HttpRequestException
-
-    Public Sub New(HttpStatusCode As HttpStatusCode, HttpReasonPhrase As String)
-        StatusCode = HttpStatusCode
-        ReasonPhrase = HttpReasonPhrase
-    End Sub
-
-    ''' <summary>
-    ''' New StatusCode Property for the custom Exception Class
-    ''' </summary>
-    ''' <returns>HTTP Status Codes as an Integer</returns>
-    Public Property StatusCode As HttpStatusCode
-    Public Property ReasonPhrase As String
 End Class
