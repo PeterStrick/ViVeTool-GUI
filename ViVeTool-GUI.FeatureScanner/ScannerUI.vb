@@ -42,9 +42,7 @@ Public Class ScannerUI
             .Filter = "Symbol Checker|symchk.exe"
         }
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            RTB_DbgPath.Text = OFD.FileName
-        End If
+        If OFD.ShowDialog() = DialogResult.OK Then RTB_DbgPath.Text = OFD.FileName
     End Sub
 
     ''' <summary>
@@ -58,9 +56,7 @@ Public Class ScannerUI
             .Description = My.Resources.Browse_SymbolPath_Description
         }
 
-        If FBD.ShowDialog() = DialogResult.OK Then
-            RTB_SymbolPath.Text = FBD.SelectedPath
-        End If
+        If FBD.ShowDialog() = DialogResult.OK Then RTB_SymbolPath.Text = FBD.SelectedPath
     End Sub
 
     ''' <summary>
@@ -89,9 +85,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_Continue_Click(sender As Object, e As EventArgs) Handles RB_Continue.Click
-        Dim BT As New Threading.Thread(AddressOf CheckPreReq) With {
-            .IsBackground = True
-        }
+        Dim BT As New Threading.Thread(AddressOf CheckPreReq) With {.IsBackground = True}
         BT.SetApartmentState(Threading.ApartmentState.STA)
         BT.Start()
     End Sub
@@ -357,9 +351,7 @@ Public Class ScannerUI
     ''' </summary>
     Private Sub ScanPDBFiles()
         'Start the calculation of Files/Folders/Folder Size of the Symbol Folder
-        Dim ScanPDBFiles_Calculation_Thread As New Threading.Thread(AddressOf ScanPDBFiles_Calculation) With {
-            .IsBackground = True
-        }
+        Dim ScanPDBFiles_Calculation_Thread As New Threading.Thread(AddressOf ScanPDBFiles_Calculation) With {.IsBackground = True}
         ScanPDBFiles_Calculation_Thread.SetApartmentState(Threading.ApartmentState.MTA)
         ScanPDBFiles_Calculation_Thread.Start()
 
@@ -382,19 +374,17 @@ Public Class ScannerUI
             Proc.WaitForExit()
 
             If Proc.ExitCode >= 1 Then
-                Invoke(
-                    Sub()
-                        Dim RTD As New RadTaskDialogPage With {
+                Invoke(Sub()
+                           Dim RTD As New RadTaskDialogPage With {
                             .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
                             .Heading = My.Resources.Error_AnErrorOccurred,
                             .Text = My.Resources.Error_mach2Scan_1 & vbNewLine & vbNewLine & My.Resources.Error_mach2Scan_2,
                             .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                        }
-                        'Show the Message Box
-                        RadTaskDialog.ShowDialog(RTD)
-                    End Sub)
-            Else
-                mach2_ExitCode = 0
+                           }
+                           'Show the Message Box
+                           RadTaskDialog.ShowDialog(RTD)
+                       End Sub)
+            Else mach2_ExitCode = 0
             End If
         Loop
 
@@ -521,18 +511,16 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click
+    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click, __DBG_CopyFeatureList.Click
         Try
-            IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt",
-                         My.Computer.FileSystem.SpecialDirectories.Desktop & "\" & BuildNumber & ".txt")
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Done_FileCopySuccessful_Caption,
-                .Heading = BuildNumber & ".txt " & My.Resources.Done_FileCopySuccessful_Heading,
-                .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-            }
 
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            Dim RSFD As New RadSaveFileDialog With {.DefaultExt = "txt", .Filter = "Text Files (*.txt)|*.txt"}
+            If RSFD.ShowDialog = DialogResult.OK Then
+                'IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", S.FileName & "\" & BuildNumber & ".txt")
+                'MsgBox(RSFD.FileName)
+                IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", RSFD.FileName, True)
+            End If
+
         Catch ex As Exception
             'Create a Button that on Click, copies the Exception Text
             AddHandler CopyExAndClose.Click, New EventHandler(
@@ -635,7 +623,7 @@ Public Class ScannerUI
         End If
 #End If
 
-        'Localise the Introduction Text
+        'Localize the Introduction Text
         SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
 
         'Listen to Application Crashes and show CrashReporter.Net if one occurs.

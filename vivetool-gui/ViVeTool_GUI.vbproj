@@ -142,15 +142,17 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Comment.Designer.vb">
+    <Compile Include="CommentsClient.Designer.vb">
       <DependentUpon>CommentsClient.vb</DependentUpon>
     </Compile>
     <Compile Include="CommentsClient.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Functions\CrashReporter.vb" />
+    <Compile Include="Functions\DatabaseFunctions.vb" />
     <Compile Include="Functions\Extensions.vb" />
     <Compile Include="Functions\GlobalSuppressions.vb" />
+    <Compile Include="Functions\RadTD.vb" />
     <Compile Include="GUI.vb">
       <SubType>Form</SubType>
     </Compile>

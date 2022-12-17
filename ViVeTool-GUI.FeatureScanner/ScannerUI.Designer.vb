@@ -26,9 +26,15 @@ Partial Class ScannerUI
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_Setup = New Telerik.WinControls.UI.RadPageViewPage()
         Me.__DBG_OPTIONS = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.__DBG_UnlockAllTabs = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP1 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_AddJunctions = New Telerik.WinControls.UI.RadMenuItem()
         Me.__DBG_RemoveJunctions = New Telerik.WinControls.UI.RadMenuItem()
-        Me.__DBG_ScanSymbols = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP2 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
         Me.__DBG_TestSymDownloadedText = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_ScanSymbols = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP3 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_CopyFeatureList = New Telerik.WinControls.UI.RadMenuItem()
         Me.WB_Introduction = New System.Windows.Forms.WebBrowser()
         Me.RL_SymbolPath = New Telerik.WinControls.UI.RadLabel()
         Me.RL_DbgPath = New Telerik.WinControls.UI.RadLabel()
@@ -67,10 +73,6 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
-        Me.__DBG_UnlockAllTabs = New Telerik.WinControls.UI.RadMenuItem()
-        Me.__DBG_AddJunctions = New Telerik.WinControls.UI.RadMenuItem()
-        Me.__DBG_SEP1 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
-        Me.__DBG_SEP2 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -122,7 +124,7 @@ Partial Class ScannerUI
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
+        Me.RPV_Main.SelectedPage = Me.RPVP_Done
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
         '
@@ -145,24 +147,54 @@ Partial Class ScannerUI
         '__DBG_OPTIONS
         '
         resources.ApplyResources(Me.__DBG_OPTIONS, "__DBG_OPTIONS")
-        Me.__DBG_OPTIONS.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_UnlockAllTabs, Me.__DBG_SEP1, Me.__DBG_AddJunctions, Me.__DBG_RemoveJunctions, Me.__DBG_SEP2, Me.__DBG_TestSymDownloadedText, Me.__DBG_ScanSymbols})
+        Me.__DBG_OPTIONS.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_UnlockAllTabs, Me.__DBG_SEP1, Me.__DBG_AddJunctions, Me.__DBG_RemoveJunctions, Me.__DBG_SEP2, Me.__DBG_TestSymDownloadedText, Me.__DBG_ScanSymbols, Me.__DBG_SEP3, Me.__DBG_CopyFeatureList})
         Me.__DBG_OPTIONS.Name = "__DBG_OPTIONS"
         Me.__DBG_OPTIONS.TabStop = False
+        '
+        '__DBG_UnlockAllTabs
+        '
+        Me.__DBG_UnlockAllTabs.Name = "__DBG_UnlockAllTabs"
+        resources.ApplyResources(Me.__DBG_UnlockAllTabs, "__DBG_UnlockAllTabs")
+        '
+        '__DBG_SEP1
+        '
+        Me.__DBG_SEP1.Name = "__DBG_SEP1"
+        resources.ApplyResources(Me.__DBG_SEP1, "__DBG_SEP1")
+        '
+        '__DBG_AddJunctions
+        '
+        Me.__DBG_AddJunctions.Name = "__DBG_AddJunctions"
+        resources.ApplyResources(Me.__DBG_AddJunctions, "__DBG_AddJunctions")
         '
         '__DBG_RemoveJunctions
         '
         Me.__DBG_RemoveJunctions.Name = "__DBG_RemoveJunctions"
         resources.ApplyResources(Me.__DBG_RemoveJunctions, "__DBG_RemoveJunctions")
         '
-        '__DBG_ScanSymbols
+        '__DBG_SEP2
         '
-        Me.__DBG_ScanSymbols.Name = "__DBG_ScanSymbols"
-        resources.ApplyResources(Me.__DBG_ScanSymbols, "__DBG_ScanSymbols")
+        Me.__DBG_SEP2.Name = "__DBG_SEP2"
+        resources.ApplyResources(Me.__DBG_SEP2, "__DBG_SEP2")
         '
         '__DBG_TestSymDownloadedText
         '
         Me.__DBG_TestSymDownloadedText.Name = "__DBG_TestSymDownloadedText"
         resources.ApplyResources(Me.__DBG_TestSymDownloadedText, "__DBG_TestSymDownloadedText")
+        '
+        '__DBG_ScanSymbols
+        '
+        Me.__DBG_ScanSymbols.Name = "__DBG_ScanSymbols"
+        resources.ApplyResources(Me.__DBG_ScanSymbols, "__DBG_ScanSymbols")
+        '
+        '__DBG_SEP3
+        '
+        Me.__DBG_SEP3.Name = "__DBG_SEP3"
+        resources.ApplyResources(Me.__DBG_SEP3, "__DBG_SEP3")
+        '
+        '__DBG_CopyFeatureList
+        '
+        Me.__DBG_CopyFeatureList.Name = "__DBG_CopyFeatureList"
+        resources.ApplyResources(Me.__DBG_CopyFeatureList, "__DBG_CopyFeatureList")
         '
         'WB_Introduction
         '
@@ -412,26 +444,6 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
         '
-        '__DBG_UnlockAllTabs
-        '
-        Me.__DBG_UnlockAllTabs.Name = "__DBG_UnlockAllTabs"
-        resources.ApplyResources(Me.__DBG_UnlockAllTabs, "__DBG_UnlockAllTabs")
-        '
-        '__DBG_AddJunctions
-        '
-        Me.__DBG_AddJunctions.Name = "__DBG_AddJunctions"
-        resources.ApplyResources(Me.__DBG_AddJunctions, "__DBG_AddJunctions")
-        '
-        '__DBG_SEP1
-        '
-        Me.__DBG_SEP1.Name = "__DBG_SEP1"
-        resources.ApplyResources(Me.__DBG_SEP1, "__DBG_SEP1")
-        '
-        '__DBG_SEP2
-        '
-        Me.__DBG_SEP2.Name = "__DBG_SEP2"
-        resources.ApplyResources(Me.__DBG_SEP2, "__DBG_SEP2")
-        '
         'ScannerUI
         '
         resources.ApplyResources(Me, "$this")
@@ -540,4 +552,6 @@ Partial Class ScannerUI
     Friend WithEvents __DBG_SEP1 As Telerik.WinControls.UI.RadMenuSeparatorItem
     Friend WithEvents __DBG_AddJunctions As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents __DBG_SEP2 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_SEP3 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_CopyFeatureList As Telerik.WinControls.UI.RadMenuItem
 End Class

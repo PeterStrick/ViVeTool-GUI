@@ -380,6 +380,21 @@
   <data name="&gt;&gt;RPVP_ScanPDB.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="RL_OA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_OA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 287</value>
+  </data>
+  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="RL_OA.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="RL_OA.Text" xml:space="preserve">
+    <value>Optional Actions:</value>
+  </data>
   <data name="&gt;&gt;RL_OA.Name" xml:space="preserve">
     <value>RL_OA</value>
   </data>
@@ -391,6 +406,18 @@
   </data>
   <data name="&gt;&gt;RL_OA.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 316</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 39</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Delete {My.Settings.SymbolPath}</value>
   </data>
   <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Name" xml:space="preserve">
     <value>RB_OA_DeleteSymbolPath</value>
@@ -404,6 +431,18 @@
   <data name="&gt;&gt;RB_OA_DeleteSymbolPath.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RB_OA_CopyFeaturesTXT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 316</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 39</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Save the Features.txt File</value>
+  </data>
   <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
     <value>RB_OA_CopyFeaturesTXT</value>
   </data>
@@ -416,6 +455,24 @@
   <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="RL_Done.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_Done.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_Done.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 218</value>
+  </data>
+  <data name="RL_Done.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;The scan has completed. You can now either:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Review your Features.txt file&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;Upload your Features.txt file to the &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (will appear in the Build Combo Box once uploaded)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;or Import your Features.txt file into ViVeTool-GUI by selecting the "Use Manual" Drop Down at the bottom of the Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
   <data name="&gt;&gt;RL_Done.Name" xml:space="preserve">
     <value>RL_Done</value>
   </data>
@@ -427,6 +484,21 @@
   </data>
   <data name="&gt;&gt;RL_Done.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="RL_OutputFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 227</value>
+  </data>
+  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 23</value>
+  </data>
+  <data name="RL_OutputFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RL_OutputFile.Text" xml:space="preserve">
+    <value>Output File: </value>
   </data>
   <data name="&gt;&gt;RL_OutputFile.Name" xml:space="preserve">
     <value>RL_OutputFile</value>
@@ -599,8 +671,6 @@
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
     <value>Unlock all Tabs</value>
-    
-    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -608,14 +678,10 @@
   </data>
   <data name="__DBG_AddJunctions.Text" xml:space="preserve">
     <value>Add Junctions</value>
-    
-    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
     <value>Remove Junctions</value>
-    
-    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -623,14 +689,21 @@
   </data>
   <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
     <value>Test Symbol Downloaded Text</value>
-    
-    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
     <value>Scan for symbols immediately, set text boxes first</value>
-    
-    
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP3.Text" xml:space="preserve">
+    <value />
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_CopyFeatureList.Text" xml:space="preserve">
+    <value>Copy Feature List</value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
@@ -644,8 +717,6 @@
   </data>
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
     <value>[DEBUG OPTIONS]</value>
-    
-    
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
@@ -965,7 +1036,6 @@
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time, depending on the amount of programs and apps that you have currently installed.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
     <value>RL_DownloadIntroduction</value>
@@ -1071,7 +1141,6 @@
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;The Feature Scanner will now automatically begin scanning the PDB Files using mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Do &lt;strong&gt;not &lt;/strong&gt;close this Window or mach2, until mach2 is done scanning.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;You will be notified by a desktop notification once the scan completes.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
     <value>RL_InfoScan</value>
@@ -1085,141 +1154,6 @@
   <data name="&gt;&gt;RL_InfoScan.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RL_OA.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_OA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 287</value>
-  </data>
-  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 23</value>
-  </data>
-  <data name="RL_OA.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="RL_OA.Text" xml:space="preserve">
-    <value>Optional Actions:</value>
-  </data>
-  <data name="&gt;&gt;RL_OA.Name" xml:space="preserve">
-    <value>RL_OA</value>
-  </data>
-  <data name="&gt;&gt;RL_OA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_OA.Parent" xml:space="preserve">
-    <value>RPVP_Done</value>
-  </data>
-  <data name="&gt;&gt;RL_OA.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 316</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 39</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
-    <value>Delete {My.Settings.SymbolPath}</value>
-    <comment>@Invariant, they get replaced with proper localized Strings at runtime</comment>
-  </data>
-  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Name" xml:space="preserve">
-    <value>RB_OA_DeleteSymbolPath</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.Parent" xml:space="preserve">
-    <value>RPVP_Done</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_DeleteSymbolPath.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RB_OA_CopyFeaturesTXT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 316</value>
-  </data>
-  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 39</value>
-  </data>
-  <data name="RB_OA_CopyFeaturesTXT.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
-    <value>Copy the Features.txt File to your Desktop</value>
-    <comment>@Invariant, they get replaced with proper localized Strings at runtime</comment>
-  </data>
-  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
-    <value>RB_OA_CopyFeaturesTXT</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Parent" xml:space="preserve">
-    <value>RPVP_Done</value>
-  </data>
-  <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RL_Done.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RL_Done.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_Done.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
-  </data>
-  <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing">
-    <value>814, 218</value>
-  </data>
-  <data name="RL_Done.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;The scan has completed. You can now either:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Review your Features.txt file&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;Upload your Features.txt file to the &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (will appear in the Build Combo Box once uploaded)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;or Import your Features.txt file into ViVeTool-GUI by selecting the "Use Manual" Drop Down at the bottom of the Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
-  </data>
-  <data name="&gt;&gt;RL_Done.Name" xml:space="preserve">
-    <value>RL_Done</value>
-  </data>
-  <data name="&gt;&gt;RL_Done.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Done.Parent" xml:space="preserve">
-    <value>RPVP_Done</value>
-  </data>
-  <data name="&gt;&gt;RL_Done.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RL_OutputFile.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 227</value>
-  </data>
-  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 23</value>
-  </data>
-  <data name="RL_OutputFile.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RL_OutputFile.Text" xml:space="preserve">
-    <value>Output File: </value>
-  </data>
-  <data name="&gt;&gt;RL_OutputFile.Name" xml:space="preserve">
-    <value>RL_OutputFile</value>
-  </data>
-  <data name="&gt;&gt;RL_OutputFile.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_OutputFile.Parent" xml:space="preserve">
-    <value>RPVP_Done</value>
-  </data>
-  <data name="&gt;&gt;RL_OutputFile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 23</value>
   </data>
@@ -1231,7 +1165,6 @@
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Use System Theme</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_UseSystemTheme.Name" xml:space="preserve">
     <value>RTB_UseSystemTheme</value>
@@ -1256,7 +1189,6 @@
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  Light Theme</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_ThemeToggle.Name" xml:space="preserve">
     <value>RTB_ThemeToggle</value>
@@ -1311,7 +1243,6 @@
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -2060,10 +1991,40 @@
     <value>ViVeTool GUI - Feature Scanner</value>
     <comment>@Invariant</comment>
   </data>
+  <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">
+    <value>__DBG_UnlockAllTabs</value>
+  </data>
+  <data name="&gt;&gt;__DBG_UnlockAllTabs.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Name" xml:space="preserve">
+    <value>__DBG_SEP1</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_AddJunctions.Name" xml:space="preserve">
+    <value>__DBG_AddJunctions</value>
+  </data>
+  <data name="&gt;&gt;__DBG_AddJunctions.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;__DBG_RemoveJunctions.Name" xml:space="preserve">
     <value>__DBG_RemoveJunctions</value>
   </data>
   <data name="&gt;&gt;__DBG_RemoveJunctions.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Name" xml:space="preserve">
+    <value>__DBG_SEP2</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Name" xml:space="preserve">
+    <value>__DBG_TestSymDownloadedText</value>
+  </data>
+  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;__DBG_ScanSymbols.Name" xml:space="preserve">
@@ -2072,10 +2033,16 @@
   <data name="&gt;&gt;__DBG_ScanSymbols.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Name" xml:space="preserve">
-    <value>__DBG_TestSymDownloadedText</value>
+  <data name="&gt;&gt;__DBG_SEP3.Name" xml:space="preserve">
+    <value>__DBG_SEP3</value>
   </data>
-  <data name="&gt;&gt;__DBG_TestSymDownloadedText.Type" xml:space="preserve">
+  <data name="&gt;&gt;__DBG_SEP3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_CopyFeatureList.Name" xml:space="preserve">
+    <value>__DBG_CopyFeatureList</value>
+  </data>
+  <data name="&gt;&gt;__DBG_CopyFeatureList.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RPBE_StatusProgressBar.Name" xml:space="preserve">
@@ -2107,30 +2074,6 @@
   </data>
   <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">
-    <value>__DBG_UnlockAllTabs</value>
-  </data>
-  <data name="&gt;&gt;__DBG_UnlockAllTabs.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_AddJunctions.Name" xml:space="preserve">
-    <value>__DBG_AddJunctions</value>
-  </data>
-  <data name="&gt;&gt;__DBG_AddJunctions.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_SEP1.Name" xml:space="preserve">
-    <value>__DBG_SEP1</value>
-  </data>
-  <data name="&gt;&gt;__DBG_SEP1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_SEP2.Name" xml:space="preserve">
-    <value>__DBG_SEP2</value>
-  </data>
-  <data name="&gt;&gt;__DBG_SEP2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ScannerUI</value>

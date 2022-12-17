@@ -371,8 +371,8 @@
   <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
     <value>Path to a Feature List</value>
   </data>
-  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
-    <value> A Network Exception occurred</value>
+  <data name="Error_Spaced_ANetworkErrorOccurred" xml:space="preserve">
+    <value> A Network Error occurred</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
@@ -407,8 +407,8 @@
   <data name="Error_UnsupportedBuild" xml:space="preserve">
     <value>Unsupported Build</value>
   </data>
-  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
-    <value>A Network Exception occurred</value>
+  <data name="Error_ANetworkErrorOccurred" xml:space="preserve">
+    <value>A Network Error occurred</value>
   </data>
   <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
     <value>Your IP may have been temporarily rate limited by the GitHub API for an hour.</value>

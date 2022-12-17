@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+  <data name="Error_ANetworkErrorOccurred" xml:space="preserve">
     <value>Ein Netzwerk Fehler ist aufgetreten</value>
   </data>
   <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
@@ -165,7 +165,7 @@
   <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
     <value> Ein Fehler ist aufgetreten</value>
   </data>
-  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
+  <data name="Error_Spaced_ANetworkErrorOccurred" xml:space="preserve">
     <value> Ein Netzwerkfehler ist aufgetreten</value>
   </data>
   <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
@@ -293,5 +293,8 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
   </data>
   <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
     <value>Dialog schließen und nichts senden</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>Fertig</value>
   </data>
 </root>

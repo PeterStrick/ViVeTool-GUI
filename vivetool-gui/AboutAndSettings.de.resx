@@ -2007,4 +2007,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Info &amp; Einstellungen</value>
   </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
 </root>

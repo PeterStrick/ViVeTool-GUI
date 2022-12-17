@@ -73,13 +73,14 @@ Public Class GUI
   ""truncated"": false
 }"
     Dim LineStage As String = String.Empty
-    Private RMI_AddComment As New RadMenuItem("Add a Comment for this Feature")
+    Private ReadOnly RMI_AddComment As New RadMenuItem("Add a Comment for this Feature")
 
     'Variables for the Comments/MySQL System
     Private Build_DT As New DataTable
     Private ReadOnly CommentsImg As Image = My.Resources.icons8_comments_24px
-    Private Shared HasInternetConnection As Boolean = True
-    Private Shared TableDoesNotExist As Boolean = False
+    Private Shared HasInternetConnection As Boolean = False
+    Private Shared HasDBAvailable As Boolean = False
+    Private Shared TableDoesNotExist As Boolean = True
 
 #If DEBUG Then
     Private Shared EnableDBLoadingForManualTXTLoad As Boolean = False
@@ -118,6 +119,9 @@ Public Class GUI
     End Sub
 
     Private Sub __DBG_SeeCommentsData_Click(sender As Object, e As EventArgs) Handles __DBG_SeeCommentsData.Click
+        Diagnostics.Debug.WriteLine($"HasDBAvailable: {HasDBAvailable}")
+        Diagnostics.Debug.WriteLine($"HasInternetConnection: {HasInternetConnection}")
+
         Dim frm1 As New Form With {
             .Size = New Size(640, 480),
             .Text = "DEBUG - Comments Data - Read Only",
@@ -178,9 +182,7 @@ Public Class GUI
         AddHandler RMI_AddComment.Click, AddressOf ShowCommentForm
 
         'Make a Background Thread that handles Background Tasks
-        Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {
-            .IsBackground = True
-        }
+        Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {.IsBackground = True}
         BackgroundThread.SetApartmentState(Threading.ApartmentState.STA)
         BackgroundThread.Start()
 
@@ -205,7 +207,12 @@ Public Class GUI
         'Check for Updates
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
+        ' Check if the Comments DB Server is online
+        Invoke(Sub() RLE_StatusLabel.Text = "Checking if the Comments Database Server is available...")
+        If DatabaseFunctions.ConnectionTest() = True Then HasDBAvailable = True
+
         'Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
+        Invoke(Sub() RLE_StatusLabel.Text = "Populating the Build Combo Box...")
         PopulateBuildComboBox_Check()
     End Sub
 
@@ -216,11 +223,16 @@ Public Class GUI
         'Add manual option
         Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
-        If CheckForInternetConnection() Then
-            'Populate the Build Combo Box
+        If CheckForInternetConnection() = True Then
+            HasInternetConnection = True
+
+            Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
+
+            ' Populate the Build Combo Box
             PopulateBuildComboBox()
 
-            'Set Ready Label
+            Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
+            ' Set Ready Label
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Check_Ready)
         Else
             Invoke(Sub()
@@ -233,11 +245,11 @@ Public Class GUI
 
                        'Third, Show an error message
                        Dim RTD As New RadTaskDialogPage With {
-                            .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
-                            .Heading = My.Resources.Error_ANetworkExceptionOccurred,
-                            .Text = My.Resources.Error_NetworkExceptionDetail1 & vbNewLine & vbNewLine & My.Resources.Error_NetworkExceptionDetail2,
-                            .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
-                        }
+                        .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                        .Heading = My.Resources.Error_ANetworkErrorOccurred,
+                        .Text = My.Resources.Error_NetworkExceptionDetail1 & vbNewLine & vbNewLine & My.Resources.Error_NetworkExceptionDetail2,
+                        .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
+                       }
                        RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
                        RadTaskDialog.ShowDialog(RTD)
                    End Sub)
@@ -254,9 +266,7 @@ Public Class GUI
         'Gets the URL of the features Folder that is used in section 2
 #Region "1. Get the URL of the features folder"
         'Required Headers for the GitHub API
-        Dim WebClientRepo As New WebClient With {
-            .Encoding = System.Text.Encoding.UTF8
-        }
+        Dim WebClientRepo As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
         WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
         WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
@@ -268,9 +278,7 @@ Public Class GUI
 
             'Look in the JSON Array for the element: "path" = "features"
             For Each element In JSONArrayRepo
-                If element("path").ToString = "features" Then
-                    FeaturesFolderURL = element("url").ToString
-                End If
+                If element("path").ToString = "features" Then FeaturesFolderURL = element("url").ToString
             Next
 
         Catch webex As WebException
@@ -284,8 +292,8 @@ Public Class GUI
                 End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
-                    .Heading = My.Resources.Error_ANetworkExceptionOccurred,
+                    .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                    .Heading = My.Resources.Error_ANetworkErrorOccurred,
                     .Text = My.Resources.Error_NetworkException_GithubAPI,
                     .Icon = RadTaskDialogIcon.ShieldErrorRedBar
                 }
@@ -326,9 +334,7 @@ Public Class GUI
         'returns JSON File Contents of riverar/mach2/features
 
         'Required Headers for the GitHub API
-        Dim WebClientFeatures As New WebClient With {
-            .Encoding = System.Text.Encoding.UTF8
-        }
+        Dim WebClientFeatures As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
         WebClientFeatures.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
         WebClientFeatures.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
@@ -379,9 +385,7 @@ Public Class GUI
                    End Sub)
 
             'Auto-load the newest Build if it is Enabled in the Settings
-            If My.Settings.AutoLoad Then
-                Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
-            End If
+            If My.Settings.AutoLoad Then Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
         Catch webex As WebException
             AddHandler CopyExAndClose.Click, New EventHandler(
                 Sub()
@@ -393,7 +397,7 @@ Public Class GUI
                 End Sub)
 
             Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_ANetworkExceptionOccurred,
+                .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
                 .Heading = My.Resources.Error_NetworkException_GithubAPI,
                 .Icon = RadTaskDialogIcon.ShieldErrorRedBar
             }
@@ -498,15 +502,12 @@ Public Class GUI
 
         'If "Load manually..." is selected, then load from a TXT File, else load normally
         If RDDL_Build.Text = My.Resources.Generic_LoadManually Then
-            Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {
-                .IsBackground = True
-            }
+            Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {.IsBackground = True}
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
         ElseIf RDDL_Build.Text = Nothing Then
             'Do Nothing
-        Else
-            'Run Background Worker
+        Else 'Run Background Worker
             BGW_PopulateGridView.RunWorkerAsync()
         End If
     End Sub
@@ -560,9 +561,9 @@ Public Class GUI
                             Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                             Dim Image = Nothing
 
-#Region "DEBUG ONLY CODE. Should be removed in the final Version"
+#Region "DEBUG ONLY CODE."
                             If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
-                                If HasInternetConnection = True AndAlso TableDoesNotExist = False Then
+                                If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                                     Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                                     If rows.Length >= 1 Then
                                         Image = CommentsImg
@@ -575,9 +576,9 @@ Public Class GUI
                         Catch NullEx As NullReferenceException
                             Dim Image = Nothing
 
-#Region "DEBUG ONLY CODE. Should be removed in the final Version"
+#Region "DEBUG ONLY CODE."
                             If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
-                                If HasInternetConnection = True AndAlso TableDoesNotExist = False Then
+                                If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                                     Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                                     If rows.Length >= 1 Then
                                         Image = CommentsImg
@@ -637,7 +638,7 @@ Public Class GUI
                             .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                             .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
                             .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                           }
+                        }
 
                         'Add the Exception Text to the Expander
                         RTD.Expander.Text = ex.ToString
@@ -667,11 +668,8 @@ Public Class GUI
                        RDDL_Build.Enabled = True
                    End Sub)
 
-            'Resume searching
-            Invoke(Sub()
-                       'Make the Search Row Visible
-                       RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True
-                   End Sub)
+            'Resume searching, make the Search Row Visible
+            Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
         End If
     End Sub
 
@@ -694,7 +692,7 @@ Public Class GUI
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
             'Load Comments
-            If HasInternetConnection Then
+            If HasInternetConnection = True Then
                 Invoke(Sub() RLE_StatusLabel.Text = "Getting Feature Comments from the Database")
                 LoadCommentsFromDB(RDDL_Build.Text)
             End If
@@ -712,9 +710,7 @@ Public Class GUI
             End Try
 
             'Prepare Web Client and download Build TXT
-            Dim WebClient As New WebClient With {
-                    .Encoding = System.Text.Encoding.UTF8
-                }
+            Dim WebClient As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" &
                                    RDDL_Build.Text & ".txt", path)
@@ -756,7 +752,7 @@ Public Class GUI
                         Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                         Dim Image = Nothing
 
-                        If HasInternetConnection = True AndAlso TableDoesNotExist = False Then
+                        If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                             If rows.Length >= 1 Then
                                 Image = CommentsImg
@@ -767,7 +763,7 @@ Public Class GUI
                     Catch NullEx As NullReferenceException
                         Dim Image = Nothing
 
-                        If HasInternetConnection = True AndAlso TableDoesNotExist = False Then
+                        If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                             If rows.Length >= 1 Then
                                 Image = CommentsImg
@@ -1020,13 +1016,13 @@ Public Class GUI
         Try
             Using client = New WebClient()
                 Using stream = client.OpenRead("http://www.github.com")
+                    Diagnostics.Debug.WriteLine("Have Internet")
                     Return True
-                    HasInternetConnection = True
                 End Using
             End Using
         Catch
+            Diagnostics.Debug.WriteLine("Don't have Internet")
             Return False
-            HasInternetConnection = False
         End Try
     End Function
 
@@ -1056,12 +1052,12 @@ Public Class GUI
     End Sub
 
     Private Sub LoadCommentsFromDB(Build As String)
+        Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
+
         'Public, Read-Only Access Connection String
         Dim DB_Connection As New MySqlConnectionStringBuilder With {
-            .Server = "direct.rawrr.cf",
-            .UserID = "ViVeTool_GUI",
-            .Password = "ViVeTool_GUI",
-            .Database = "ViVeTool_GUI"
+            .Server = "direct.rawrr.cf", .UserID = "ViVeTool_GUI", .Password = "ViVeTool_GUI",
+            .Database = "ViVeTool_GUI", .ConnectionTimeout = 120
         }
 
         'Clear local DataTable
@@ -1079,10 +1075,11 @@ Public Class GUI
                         sda.Fill(Build_DT)
                     End Using
                 End Using
-
+                Diagnostics.Debug.WriteLine("LoadCommentsFromDB Comments loaded.")
                 con.Close()
             End Using
         Catch notFoundEx As MySqlException
+            Diagnostics.Debug.WriteLine($"LoadCommentsFromDB Error: {notFoundEx.Message}")
             'Fancy Message Box
             Dim RTD As New RadTaskDialogPage With {
                 .Caption = " A Database Error occurred",
@@ -1102,14 +1099,15 @@ Public Class GUI
                     TableDoesNotExist = True
                     Diagnostics.Debug.WriteLine("Table does not exist")
                 Case MySqlErrorCode.ServerShutdown
-                    RTD.Text = "The Database Server is currently shutting down."
+                    RTD.Text = "Comments couldn't be loaded, because the Database Server is currently shutting down."
                     RadTaskDialog.ShowDialog(RTD)
                 Case MySqlErrorCode.UnableToConnectToHost
-                    RTD.Text = "The Database Server is currently unavailable."
+                    RTD.Text = "Comments couldn't be loaded, because the Database Server is currently unavailable."
+                    RTD.Expander.Text = notFoundEx.Message
                     RadTaskDialog.ShowDialog(RTD)
                 Case Else
-                    RTD.Text = notFoundEx.Message
-                    RTD.Expander.Text = notFoundEx.ToString
+                    RTD.Text = "An Error occurred while communicating with the Comments Database Server"
+                    RTD.Expander.Text = notFoundEx.Message
                     RadTaskDialog.ShowDialog(RTD)
             End Select
         Catch ex As Exception

@@ -26,7 +26,7 @@ Namespace My
             ScannerUI.RTB_SymbolPath.Text = Settings.SymbolPath
 
             'Check if mach2.exe and msdia140.dll are present
-            If IO.File.Exists(Application.Info.DirectoryPath & "\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\msdia140.dll") = False Then
+            If IO.File.Exists(Application.Info.DirectoryPath & "\mach2\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\mach2\msdia140.dll") = False Then
                 Dim RTD As New RadTaskDialogPage With {
                     .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
                     .Heading = My.Resources.Error_MissingFiles_Heading,

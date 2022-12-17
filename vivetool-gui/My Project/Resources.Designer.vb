@@ -185,11 +185,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to A Network Exception occurred.
+        '''  Looks up a localized string similar to A Network Error occurred.
         '''</summary>
-        Friend ReadOnly Property Error_ANetworkExceptionOccurred() As String
+        Friend ReadOnly Property Error_ANetworkErrorOccurred() As String
             Get
-                Return ResourceManager.GetString("Error_ANetworkExceptionOccurred", resourceCulture)
+                Return ResourceManager.GetString("Error_ANetworkErrorOccurred", resourceCulture)
             End Get
         End Property
         
@@ -383,11 +383,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to  A Network Exception occurred.
+        '''  Looks up a localized string similar to  A Network Error occurred.
         '''</summary>
-        Friend ReadOnly Property Error_Spaced_ANetworkExceptionOccurred() As String
+        Friend ReadOnly Property Error_Spaced_ANetworkErrorOccurred() As String
             Get
-                Return ResourceManager.GetString("Error_Spaced_ANetworkExceptionOccurred", resourceCulture)
+                Return ResourceManager.GetString("Error_Spaced_ANetworkErrorOccurred", resourceCulture)
             End Get
         End Property
         
