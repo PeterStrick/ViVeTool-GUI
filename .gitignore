@@ -368,3 +368,4 @@ FodyWeavers.xsd
 /.sonarcloud/
 /Sonar Cloud Scanning Tool.lnk
 /SonarCloudScannerConfig.json
+/.vscode
