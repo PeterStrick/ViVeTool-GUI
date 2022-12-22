@@ -107,7 +107,17 @@
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.de.resx" />
+    <EmbeddedResource Include="My Project\Resources.id.resx" />
+    <EmbeddedResource Include="My Project\Resources.zh.resx" />
     <EmbeddedResource Include="ScannerUI.de.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerUI.id.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+		<EmbeddedResource Include="ScannerUI.zh.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
