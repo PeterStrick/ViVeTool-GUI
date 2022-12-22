@@ -117,6 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="__DBG_OPTIONS.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
+    <value>Unlock all Tabs</value>
+    <comment>@Invariant</comment>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_AddJunctions.Text" xml:space="preserve">
+    <value>Add Junctions</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
+    <value>Remove Junctions</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
+    <value>Test Symbol Downloaded Text</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
+    <value>Scan for symbols immediately, set text boxes first</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP3.Text" xml:space="preserve">
+    <value />
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_CopyFeatureList.Text" xml:space="preserve">
+    <value>Copy Feature List</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_SEP4.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="__DBG_SEP4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_SendToastNotification.Text" xml:space="preserve">
+    <value>Send Toast Notification</value>
+  </data>
+  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 315</value>
+  </data>
+  <data name="__DBG_OPTIONS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 24</value>
+  </data>
+  <data name="__DBG_OPTIONS.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="__DBG_OPTIONS.Text" xml:space="preserve">
+    <value>[DEBUG OPTIONS]</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;__DBG_OPTIONS.Name" xml:space="preserve">
     <value>__DBG_OPTIONS</value>
   </data>
@@ -127,6 +194,18 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;__DBG_OPTIONS.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="WB_Introduction.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 296</value>
+  </data>
+  <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;WB_Introduction.Name" xml:space="preserve">
@@ -141,6 +220,18 @@
   <data name="&gt;&gt;WB_Introduction.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 399</value>
+  </data>
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 18</value>
+  </data>
+  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>Path to store PDB Files</value>
+  </data>
   <data name="&gt;&gt;RL_SymbolPath.Name" xml:space="preserve">
     <value>RL_SymbolPath</value>
   </data>
@@ -152,6 +243,18 @@
   </data>
   <data name="&gt;&gt;RL_SymbolPath.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 356</value>
+  </data>
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 18</value>
+  </data>
+  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Path to symchk.exe</value>
   </data>
   <data name="&gt;&gt;RL_DbgPath.Name" xml:space="preserve">
     <value>RL_DbgPath</value>
@@ -165,6 +268,18 @@
   <data name="&gt;&gt;RL_DbgPath.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 309</value>
+  </data>
+  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 30</value>
+  </data>
+  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Continue</value>
+  </data>
   <data name="&gt;&gt;RB_Continue.Name" xml:space="preserve">
     <value>RB_Continue</value>
   </data>
@@ -175,6 +290,70 @@
     <value>RPVP_Setup</value>
   </data>
   <data name="&gt;&gt;RB_Continue.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RPBE_StatusProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RPBE_StatusProgressBar.TextWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="RLE_StatusAndInfoLabel.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RSS_Setup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 451</value>
+  </data>
+  <data name="RSS_Setup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 24</value>
+  </data>
+  <data name="RSS_Setup.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="&gt;&gt;RSS_Setup.Name" xml:space="preserve">
@@ -189,6 +368,18 @@
   <data name="&gt;&gt;RSS_Setup.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>718, 394</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
+    <value>Browse</value>
+  </data>
   <data name="&gt;&gt;RB_SymbolPath_Browse.Name" xml:space="preserve">
     <value>RB_SymbolPath_Browse</value>
   </data>
@@ -200,6 +391,18 @@
   </data>
   <data name="&gt;&gt;RB_SymbolPath_Browse.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>718, 351</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 28</value>
+  </data>
+  <data name="RB_DbgPath_Browse.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
+    <value>Browse</value>
   </data>
   <data name="&gt;&gt;RB_DbgPath_Browse.Name" xml:space="preserve">
     <value>RB_DbgPath_Browse</value>
@@ -213,6 +416,18 @@
   <data name="&gt;&gt;RB_DbgPath_Browse.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 394</value>
+  </data>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Path to store the downloaded Debugging Symbols to</value>
+  </data>
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 28</value>
+  </data>
+  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;RTB_SymbolPath.Name" xml:space="preserve">
     <value>RTB_SymbolPath</value>
   </data>
@@ -224,6 +439,18 @@
   </data>
   <data name="&gt;&gt;RTB_SymbolPath.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 351</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Path to symchk.exe from the Windows 10/11 SDK</value>
+  </data>
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>581, 28</value>
+  </data>
+  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RTB_DbgPath.Name" xml:space="preserve">
     <value>RTB_DbgPath</value>
@@ -237,7 +464,6 @@
   <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 35</value>
   </data>
@@ -259,6 +485,15 @@
   <data name="&gt;&gt;RPVP_Setup.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 184</value>
+  </data>
+  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>808, 285</value>
+  </data>
+  <data name="RTB_PDBDownloadStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;RTB_PDBDownloadStatus.Name" xml:space="preserve">
     <value>RTB_PDBDownloadStatus</value>
   </data>
@@ -270,6 +505,21 @@
   </data>
   <data name="&gt;&gt;RTB_PDBDownloadStatus.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="RL_DownloadIntroduction.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>808, 175</value>
+  </data>
+  <data name="RL_DownloadIntroduction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time, depending on the amount of programs and apps that you have currently installed.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
     <value>RL_DownloadIntroduction</value>
@@ -283,7 +533,6 @@
   <data name="&gt;&gt;RL_DownloadIntroduction.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -308,6 +557,21 @@
   <data name="&gt;&gt;RPVP_DownloadPDB.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RL_SymbolFolders.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 241</value>
+  </data>
+  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 23</value>
+  </data>
+  <data name="RL_SymbolFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RL_SymbolFolders.Text" xml:space="preserve">
+    <value>Total Folders in {My.Settings.SymbolPath}:</value>
+  </data>
   <data name="&gt;&gt;RL_SymbolFolders.Name" xml:space="preserve">
     <value>RL_SymbolFolders</value>
   </data>
@@ -319,6 +583,21 @@
   </data>
   <data name="&gt;&gt;RL_SymbolFolders.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="RL_SymbolFiles.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 197</value>
+  </data>
+  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 23</value>
+  </data>
+  <data name="RL_SymbolFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RL_SymbolFiles.Text" xml:space="preserve">
+    <value>Total Files in {My.Settings.SymbolPath}:</value>
   </data>
   <data name="&gt;&gt;RL_SymbolFiles.Name" xml:space="preserve">
     <value>RL_SymbolFiles</value>
@@ -332,6 +611,21 @@
   <data name="&gt;&gt;RL_SymbolFiles.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RL_SymbolSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SymbolSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 153</value>
+  </data>
+  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 23</value>
+  </data>
+  <data name="RL_SymbolSize.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RL_SymbolSize.Text" xml:space="preserve">
+    <value>Current size of {My.Settings.SymbolPath}:</value>
+  </data>
   <data name="&gt;&gt;RL_SymbolSize.Name" xml:space="preserve">
     <value>RL_SymbolSize</value>
   </data>
@@ -343,6 +637,18 @@
   </data>
   <data name="&gt;&gt;RL_SymbolSize.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="RL_InfoScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
+  </data>
+  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>571, 90</value>
+  </data>
+  <data name="RL_InfoScan.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_InfoScan.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;The Feature Scanner will now automatically begin scanning the PDB Files using mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Do &lt;strong&gt;not &lt;/strong&gt;close this Window or mach2, until mach2 is done scanning.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;You will be notified by a desktop notification once the scan completes.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
     <value>RL_InfoScan</value>
@@ -534,624 +840,6 @@
     <value>RPV_Main</value>
   </data>
   <data name="&gt;&gt;RPVP_Done.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Name" xml:space="preserve">
-    <value>RGB_Theming</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
-    <value>RL_Comments</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
-    <value>RL_ProductName</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
-    <value>RL_Description</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
-    <value>RL_Version</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
-    <value>RL_License</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
-    <value>PB_AppImage</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.Parent" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 35</value>
-  </data>
-  <data name="RPVP_AboutAndSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 475</value>
-  </data>
-  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
-    <value>About &amp; Settings</value>
-  </data>
-  <data name="&gt;&gt;RPVP_AboutAndSettings.Name" xml:space="preserve">
-    <value>RPVP_AboutAndSettings</value>
-  </data>
-  <data name="&gt;&gt;RPVP_AboutAndSettings.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_AboutAndSettings.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_AboutAndSettings.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>832, 516</value>
-  </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="__DBG_OPTIONS.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
-    <value>Unlock all Tabs</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="__DBG_AddJunctions.Text" xml:space="preserve">
-    <value>Add Junctions</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
-    <value>Remove Junctions</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
-    <value>Test Symbol Downloaded Text</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
-    <value>Scan for symbols immediately, set text boxes first</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_SEP3.Text" xml:space="preserve">
-    <value />
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="__DBG_CopyFeatureList.Text" xml:space="preserve">
-    <value>Copy Feature List</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 315</value>
-  </data>
-  <data name="__DBG_OPTIONS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 24</value>
-  </data>
-  <data name="__DBG_OPTIONS.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="__DBG_OPTIONS.Text" xml:space="preserve">
-    <value>[DEBUG OPTIONS]</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;__DBG_OPTIONS.Name" xml:space="preserve">
-    <value>__DBG_OPTIONS</value>
-  </data>
-  <data name="&gt;&gt;__DBG_OPTIONS.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_OPTIONS.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;__DBG_OPTIONS.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="WB_Introduction.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 296</value>
-  </data>
-  <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;WB_Introduction.Name" xml:space="preserve">
-    <value>WB_Introduction</value>
-  </data>
-  <data name="&gt;&gt;WB_Introduction.Type" xml:space="preserve">
-    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WB_Introduction.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;WB_Introduction.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 399</value>
-  </data>
-  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 18</value>
-  </data>
-  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RL_SymbolPath.Text" xml:space="preserve">
-    <value>Path to store PDB Files</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolPath.Name" xml:space="preserve">
-    <value>RL_SymbolPath</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolPath.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolPath.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 356</value>
-  </data>
-  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 18</value>
-  </data>
-  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_DbgPath.Text" xml:space="preserve">
-    <value>Path to symchk.exe</value>
-  </data>
-  <data name="&gt;&gt;RL_DbgPath.Name" xml:space="preserve">
-    <value>RL_DbgPath</value>
-  </data>
-  <data name="&gt;&gt;RL_DbgPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_DbgPath.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RL_DbgPath.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 309</value>
-  </data>
-  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 30</value>
-  </data>
-  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RB_Continue.Text" xml:space="preserve">
-    <value>Continue</value>
-  </data>
-  <data name="&gt;&gt;RB_Continue.Name" xml:space="preserve">
-    <value>RB_Continue</value>
-  </data>
-  <data name="&gt;&gt;RB_Continue.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_Continue.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RB_Continue.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RPBE_StatusProgressBar.TextWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib">
-    <value>-1</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="RLE_StatusAndInfoLabel.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RSS_Setup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 451</value>
-  </data>
-  <data name="RSS_Setup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>820, 24</value>
-  </data>
-  <data name="RSS_Setup.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RSS_Setup.Name" xml:space="preserve">
-    <value>RSS_Setup</value>
-  </data>
-  <data name="&gt;&gt;RSS_Setup.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadStatusStrip, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RSS_Setup.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RSS_Setup.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>718, 394</value>
-  </data>
-  <data name="RB_SymbolPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 28</value>
-  </data>
-  <data name="RB_SymbolPath_Browse.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
-    <value>Browse</value>
-  </data>
-  <data name="&gt;&gt;RB_SymbolPath_Browse.Name" xml:space="preserve">
-    <value>RB_SymbolPath_Browse</value>
-  </data>
-  <data name="&gt;&gt;RB_SymbolPath_Browse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_SymbolPath_Browse.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RB_SymbolPath_Browse.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>718, 351</value>
-  </data>
-  <data name="RB_DbgPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 28</value>
-  </data>
-  <data name="RB_DbgPath_Browse.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
-    <value>Browse</value>
-  </data>
-  <data name="&gt;&gt;RB_DbgPath_Browse.Name" xml:space="preserve">
-    <value>RB_DbgPath_Browse</value>
-  </data>
-  <data name="&gt;&gt;RB_DbgPath_Browse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_DbgPath_Browse.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RB_DbgPath_Browse.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 394</value>
-  </data>
-  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
-    <value>Path to store the downloaded Debugging Symbols to</value>
-  </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 24</value>
-  </data>
-  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RTB_SymbolPath.Name" xml:space="preserve">
-    <value>RTB_SymbolPath</value>
-  </data>
-  <data name="&gt;&gt;RTB_SymbolPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RTB_SymbolPath.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RTB_SymbolPath.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 351</value>
-  </data>
-  <data name="RTB_DbgPath.NullText" xml:space="preserve">
-    <value>Path to symchk.exe from the Windows 10/11 SDK</value>
-  </data>
-  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 24</value>
-  </data>
-  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RTB_DbgPath.Name" xml:space="preserve">
-    <value>RTB_DbgPath</value>
-  </data>
-  <data name="&gt;&gt;RTB_DbgPath.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RTB_DbgPath.Parent" xml:space="preserve">
-    <value>RPVP_Setup</value>
-  </data>
-  <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 184</value>
-  </data>
-  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>808, 285</value>
-  </data>
-  <data name="RTB_PDBDownloadStatus.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RTB_PDBDownloadStatus.Name" xml:space="preserve">
-    <value>RTB_PDBDownloadStatus</value>
-  </data>
-  <data name="&gt;&gt;RTB_PDBDownloadStatus.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RTB_PDBDownloadStatus.Parent" xml:space="preserve">
-    <value>RPVP_DownloadPDB</value>
-  </data>
-  <data name="&gt;&gt;RTB_PDBDownloadStatus.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RL_DownloadIntroduction.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RL_DownloadIntroduction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
-  </data>
-  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>808, 175</value>
-  </data>
-  <data name="RL_DownloadIntroduction.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time, depending on the amount of programs and apps that you have currently installed.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-  </data>
-  <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
-    <value>RL_DownloadIntroduction</value>
-  </data>
-  <data name="&gt;&gt;RL_DownloadIntroduction.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_DownloadIntroduction.Parent" xml:space="preserve">
-    <value>RPVP_DownloadPDB</value>
-  </data>
-  <data name="&gt;&gt;RL_DownloadIntroduction.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RL_SymbolFolders.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_SymbolFolders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 241</value>
-  </data>
-  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 23</value>
-  </data>
-  <data name="RL_SymbolFolders.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RL_SymbolFolders.Text" xml:space="preserve">
-    <value>Total Folders in {My.Settings.SymbolPath}:</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFolders.Name" xml:space="preserve">
-    <value>RL_SymbolFolders</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFolders.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFolders.Parent" xml:space="preserve">
-    <value>RPVP_ScanPDB</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFolders.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RL_SymbolFiles.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 197</value>
-  </data>
-  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 23</value>
-  </data>
-  <data name="RL_SymbolFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RL_SymbolFiles.Text" xml:space="preserve">
-    <value>Total Files in {My.Settings.SymbolPath}:</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFiles.Name" xml:space="preserve">
-    <value>RL_SymbolFiles</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFiles.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFiles.Parent" xml:space="preserve">
-    <value>RPVP_ScanPDB</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolFiles.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RL_SymbolSize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_SymbolSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 153</value>
-  </data>
-  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 23</value>
-  </data>
-  <data name="RL_SymbolSize.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RL_SymbolSize.Text" xml:space="preserve">
-    <value>Current size of {My.Settings.SymbolPath}:</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolSize.Name" xml:space="preserve">
-    <value>RL_SymbolSize</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolSize.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolSize.Parent" xml:space="preserve">
-    <value>RPVP_ScanPDB</value>
-  </data>
-  <data name="&gt;&gt;RL_SymbolSize.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RL_InfoScan.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
-  </data>
-  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>571, 90</value>
-  </data>
-  <data name="RL_InfoScan.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_InfoScan.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;The Feature Scanner will now automatically begin scanning the PDB Files using mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Do &lt;strong&gt;not &lt;/strong&gt;close this Window or mach2, until mach2 is done scanning.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;You will be notified by a desktop notification once the scan completes.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-  </data>
-  <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
-    <value>RL_InfoScan</value>
-  </data>
-  <data name="&gt;&gt;RL_InfoScan.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_InfoScan.Parent" xml:space="preserve">
-    <value>RPVP_ScanPDB</value>
-  </data>
-  <data name="&gt;&gt;RL_InfoScan.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
@@ -1434,6 +1122,51 @@
   <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 35</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 475</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>About &amp; Settings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Name" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_AboutAndSettings.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>832, 516</value>
+  </data>
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="FSW_SymbolPath.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -1441,10 +1174,10 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>33</value>
+    <value>61</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>832, 516</value>
@@ -2074,6 +1807,18 @@
   </data>
   <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP4.Name" xml:space="preserve">
+    <value>__DBG_SEP4</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SendToastNotification.Name" xml:space="preserve">
+    <value>__DBG_SendToastNotification</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SendToastNotification.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ScannerUI</value>

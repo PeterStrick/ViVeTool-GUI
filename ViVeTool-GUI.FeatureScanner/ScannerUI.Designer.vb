@@ -73,6 +73,8 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
+        Me.__DBG_SEP4 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_SendToastNotification = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -124,7 +126,7 @@ Partial Class ScannerUI
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Done
+        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
         '
@@ -147,7 +149,7 @@ Partial Class ScannerUI
         '__DBG_OPTIONS
         '
         resources.ApplyResources(Me.__DBG_OPTIONS, "__DBG_OPTIONS")
-        Me.__DBG_OPTIONS.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_UnlockAllTabs, Me.__DBG_SEP1, Me.__DBG_AddJunctions, Me.__DBG_RemoveJunctions, Me.__DBG_SEP2, Me.__DBG_TestSymDownloadedText, Me.__DBG_ScanSymbols, Me.__DBG_SEP3, Me.__DBG_CopyFeatureList})
+        Me.__DBG_OPTIONS.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_UnlockAllTabs, Me.__DBG_SEP1, Me.__DBG_AddJunctions, Me.__DBG_RemoveJunctions, Me.__DBG_SEP2, Me.__DBG_TestSymDownloadedText, Me.__DBG_ScanSymbols, Me.__DBG_SEP3, Me.__DBG_CopyFeatureList, Me.__DBG_SEP4, Me.__DBG_SendToastNotification})
         Me.__DBG_OPTIONS.Name = "__DBG_OPTIONS"
         Me.__DBG_OPTIONS.TabStop = False
         '
@@ -444,6 +446,16 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
         '
+        '__DBG_SEP4
+        '
+        Me.__DBG_SEP4.Name = "__DBG_SEP4"
+        resources.ApplyResources(Me.__DBG_SEP4, "__DBG_SEP4")
+        '
+        '__DBG_SendToastNotification
+        '
+        Me.__DBG_SendToastNotification.Name = "__DBG_SendToastNotification"
+        resources.ApplyResources(Me.__DBG_SendToastNotification, "__DBG_SendToastNotification")
+        '
         'ScannerUI
         '
         resources.ApplyResources(Me, "$this")
@@ -554,4 +566,6 @@ Partial Class ScannerUI
     Friend WithEvents __DBG_SEP2 As Telerik.WinControls.UI.RadMenuSeparatorItem
     Friend WithEvents __DBG_SEP3 As Telerik.WinControls.UI.RadMenuSeparatorItem
     Friend WithEvents __DBG_CopyFeatureList As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SEP4 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_SendToastNotification As Telerik.WinControls.UI.RadMenuItem
 End Class

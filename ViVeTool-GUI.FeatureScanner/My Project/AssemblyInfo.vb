@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("ViVeTool GUI - FeatureScanner")>
+<Assembly: AssemblyTitle("ViVeTool GUI - Feature Scanner")>
 <Assembly: AssemblyDescription("Allows you to scan and download .pdb files for Feature IDs. Part of ViVeTool-GUI")>
 <Assembly: AssemblyCompany("Peters Software Solutions")>
-<Assembly: AssemblyProduct("ViVeTool GUI - FeatureScanner")>
+<Assembly: AssemblyProduct("ViVeTool GUI - Feature Scanner")>
 <Assembly: AssemblyCopyright("Copyright © 2022 Peters Software Solutions")>
 <Assembly: AssemblyTrademark("")> 
 

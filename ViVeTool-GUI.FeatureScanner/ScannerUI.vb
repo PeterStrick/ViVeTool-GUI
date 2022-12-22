@@ -14,7 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports Telerik.WinControls, Telerik.WinControls.UI
+Imports Telerik.WinControls, Telerik.WinControls.UI, Telerik.RadToastNotificationManager
 
 ''' <summary>
 ''' ViVeTool GUI - Feature Scanner
@@ -27,8 +27,66 @@ Public Class ScannerUI
 
     Public Shared CopyExAndClose As New RadTaskDialogButton With {
         .Text = My.Resources.Generic_Close,
-        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
-    }
+        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip}
+
+    Friend WithEvents RTNM As New RadToastNotificationManager()
+    ReadOnly RTN_FeatureScanComplete As New RadToastNotification(RadToastTemplateType.ToastGeneric, "ToastTest",
+        String.Format("<toast><visual><binding template=""ToastGeneric""><text>{0}</text><text>{1}</text></binding></visual></toast>", My.Resources.Done_Alert_CaptionText, My.Resources.Done_Alert_ContentText))
+
+#Region "Debug Subs"
+    Private Sub __DBG_ScanSymbols_Click(sender As Object, e As EventArgs) Handles __DBG_ScanSymbols.Click
+        My.Settings.DebuggerPath = RTB_DbgPath.Text
+        My.Settings.SymbolPath = RTB_SymbolPath.Text
+        My.Settings.Save()
+
+        Proc = New Process
+        With Proc.StartInfo
+            .FileName = My.Settings.DebuggerPath 'Path to symchk.exe
+            .UseShellExecute = False 'Required for Output/Error Redirection to work
+            .CreateNoWindow = True 'Required for Output/Error Redirection to work
+            .RedirectStandardError = True 'Enables Redirection of Error Output
+            .RedirectStandardOutput = True 'Enables Redirection of Standard Output
+        End With
+
+        'Create Junctions
+        Junction.FeatureScanner_CreateJunctions()
+
+        RPVP_ScanPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_ScanPDB
+        ScanPDBFiles()
+    End Sub
+
+    Private Sub __DBG_RemoveJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_RemoveJunctions.Click
+        Junction.FeatureScanner_DeleteJunctions()
+        MsgBox("Junctions deleted")
+    End Sub
+
+    Private Sub __DBG_TestSymDownloadedText_Click(sender As Object, e As EventArgs) Handles __DBG_TestSymDownloadedText.Click
+        RPVP_DownloadPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_DownloadPDB
+
+        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, "TESTSYMBOL1.PDB")
+        Dim Time As Date = Date.Now
+        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
+    End Sub
+
+    Private Sub __DBG_UnlockAllTabs_Click(sender As Object, e As EventArgs) Handles __DBG_UnlockAllTabs.Click
+        RPVP_AboutAndSettings.Enabled = True
+        RPVP_Done.Enabled = True
+        RPVP_DownloadPDB.Enabled = True
+        RPVP_ScanPDB.Enabled = True
+        RPVP_Setup.Enabled = True
+    End Sub
+
+    Private Sub __DBG_AddJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_AddJunctions.Click
+        Junction.FeatureScanner_CreateJunctions()
+        MsgBox("Junctions created")
+    End Sub
+
+    Private Sub __DBG_SendToastNotification_Click(sender As Object, e As EventArgs) Handles __DBG_SendToastNotification.Click
+        RTNM.ShowNotification(0)
+    End Sub
+#End Region
 
     ''' <summary>
     ''' Debugging Tools/symchk.exe Path Browse Button
@@ -39,8 +97,7 @@ Public Class ScannerUI
         Dim OFD As New OpenFileDialog With {
             .InitialDirectory = "C:\",
             .Title = My.Resources.Browse_PathToDebuggingTools,
-            .Filter = "Symbol Checker|symchk.exe"
-        }
+            .Filter = "Symbol Checker|symchk.exe"}
 
         If OFD.ShowDialog() = DialogResult.OK Then RTB_DbgPath.Text = OFD.FileName
     End Sub
@@ -53,8 +110,7 @@ Public Class ScannerUI
     Private Sub RB_SymbolPath_Browse_Click(sender As Object, e As EventArgs) Handles RB_SymbolPath_Browse.Click
         Dim FBD As New FolderBrowserDialog With {
             .ShowNewFolderButton = True,
-            .Description = My.Resources.Browse_SymbolPath_Description
-        }
+            .Description = My.Resources.Browse_SymbolPath_Description}
 
         If FBD.ShowDialog() = DialogResult.OK Then RTB_SymbolPath.Text = FBD.SelectedPath
     End Sub
@@ -288,6 +344,7 @@ Public Class ScannerUI
                    RPV_Main.SelectedPage = RPVP_ScanPDB
                    RPVP_DownloadPDB.Enabled = False
                End Sub)
+
         ScanPDBFiles()
     End Sub
 
@@ -317,8 +374,7 @@ Public Class ScannerUI
         If RTB_PDBDownloadStatus.InvokeRequired Then
             Dim myDelegate As New AppendStdOutDelegate(AddressOf AppendStdOut)
             Invoke(myDelegate, text)
-        Else
-            RTB_PDBDownloadStatus.AppendText(text)
+        Else RTB_PDBDownloadStatus.AppendText(text)
         End If
     End Sub
 
@@ -330,8 +386,7 @@ Public Class ScannerUI
         If RTB_PDBDownloadStatus.InvokeRequired Then
             Dim myDelegate As New AppendStdErrDelegate(AddressOf AppendStdErr)
             Invoke(myDelegate, text)
-        Else
-            RTB_PDBDownloadStatus.AppendText(text)
+        Else RTB_PDBDownloadStatus.AppendText(text)
         End If
     End Sub
 
@@ -482,28 +537,7 @@ Public Class ScannerUI
                End Sub)
 
         'Show Notification
-        Invoke(Sub()
-                   Try
-                       Dim RDA_Done As New RadDesktopAlert With {
-                        .CaptionText = My.Resources.Done_Alert_CaptionText,
-                        .ContentText = My.Resources.Done_Alert_ContentText,
-                        .Opacity = 1,
-                        .ShowCloseButton = True,
-                        .ShowPinButton = False,
-                        .ShowOptionsButton = False,
-                        .AutoClose = False,
-                        .AutoSize = True,
-                        .CanMove = False,
-                        .FadeAnimationType = FadeAnimationType.FadeOut,
-                        .IsPinned = True,
-                        .PopupAnimationDirection = RadDirection.Up
-                       }
-                       RDA_Done.Show()
-                   Catch ex As Exception
-                       'Sometimes, again rarely the RadDesktopAlert will fail so we fall back to a god ol' message box
-                       MsgBox(My.Resources.Done_Alert_ContentText, vbInformation, My.Resources.Done_Alert_CaptionText)
-                   End Try
-               End Sub)
+        Invoke(Sub() RTNM.ShowNotification(0))
     End Sub
 
     ''' <summary>
@@ -536,8 +570,7 @@ Public Class ScannerUI
                 .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                 .Heading = My.Resources.Error_AnExceptionOccurred,
                 .Text = String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
+                .Icon = RadTaskDialogIcon.ShieldErrorRedBar}
 
             'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.Message
@@ -565,8 +598,7 @@ Public Class ScannerUI
             Dim RTD As New RadTaskDialogPage With {
                 .Caption = My.Resources.Done_SymbolFolderDeleted_Caption,
                 .Heading = String.Format(My.Resources.Done_SymbolFolderDeleted_Heading_N, My.Settings.SymbolPath),
-                .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-            }
+                .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar}
 
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
@@ -585,8 +617,7 @@ Public Class ScannerUI
                 .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
                 .Heading = My.Resources.Error_AnExceptionOccurred,
                 .Text = String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
+                .Icon = RadTaskDialogIcon.ShieldErrorRedBar}
 
             'Add the Exception Text to the Expander
             RTD.Expander.Text = ex.Message
@@ -620,8 +651,12 @@ Public Class ScannerUI
         If Debugger.IsAttached Then
             __DBG_OPTIONS.Enabled = True
             __DBG_OPTIONS.Visible = True
+            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
         End If
 #End If
+
+        'Add Toast to RadToastNotificationManager
+        RTNM.ToastNotifications.Add(RTN_FeatureScanComplete)
 
         'Localize the Introduction Text
         SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
@@ -662,57 +697,6 @@ Public Class ScannerUI
         End If
     End Sub
 
-#Region "Debug Subs"
-    Private Sub __DBG_ScanSymbols_Click(sender As Object, e As EventArgs) Handles __DBG_ScanSymbols.Click
-        My.Settings.DebuggerPath = RTB_DbgPath.Text
-        My.Settings.SymbolPath = RTB_SymbolPath.Text
-        My.Settings.Save()
-
-        Proc = New Process
-        With Proc.StartInfo
-            .FileName = My.Settings.DebuggerPath 'Path to symchk.exe
-            .UseShellExecute = False 'Required for Output/Error Redirection to work
-            .CreateNoWindow = True 'Required for Output/Error Redirection to work
-            .RedirectStandardError = True 'Enables Redirection of Error Output
-            .RedirectStandardOutput = True 'Enables Redirection of Standard Output
-        End With
-
-        'Create Junctions
-        Junction.FeatureScanner_CreateJunctions()
-
-        RPVP_ScanPDB.Enabled = True
-        RPV_Main.SelectedPage = RPVP_ScanPDB
-        ScanPDBFiles()
-    End Sub
-
-    Private Sub __DBG_RemoveJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_RemoveJunctions.Click
-        Junction.FeatureScanner_DeleteJunctions()
-        MsgBox("Junctions deleted")
-    End Sub
-
-    Private Sub __DBG_TestSymDownloadedText_Click(sender As Object, e As EventArgs) Handles __DBG_TestSymDownloadedText.Click
-        RPVP_DownloadPDB.Enabled = True
-        RPV_Main.SelectedPage = RPVP_DownloadPDB
-
-        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, "TESTSYMBOL1.PDB")
-        Dim Time As Date = Date.Now
-        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
-    End Sub
-
-    Private Sub __DBG_UnlockAllTabs_Click(sender As Object, e As EventArgs) Handles __DBG_UnlockAllTabs.Click
-        RPVP_AboutAndSettings.Enabled = True
-        RPVP_Done.Enabled = True
-        RPVP_DownloadPDB.Enabled = True
-        RPVP_ScanPDB.Enabled = True
-        RPVP_Setup.Enabled = True
-    End Sub
-
-    Private Sub __DBG_AddJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_AddJunctions.Click
-        Junction.FeatureScanner_CreateJunctions()
-        MsgBox("Junctions created")
-    End Sub
-#End Region
-
     ''' <summary>
     ''' Changes the Application theme, using the System Theme depending on the ToggleState
     ''' </summary>
@@ -733,5 +717,16 @@ Public Class ScannerUI
         Else
             My.Settings.UseSystemTheme = False
         End If
+    End Sub
+
+    ''' <summary>
+    ''' Changes the Window State to Normal and Brings the Form to the Front, if a Toast Notification is clicked
+    ''' </summary>
+    ''' <param name="e">RadToastOnActivated EventArgs</param>
+    Private Sub RTNM_RadToastOnActivated(e As RadToastOnActivatedEventArgs) Handles RTNM.RadToastOnActivated
+        Invoke(Sub()
+                   WindowState = FormWindowState.Normal
+                   Activate()
+               End Sub)
     End Sub
 End Class
