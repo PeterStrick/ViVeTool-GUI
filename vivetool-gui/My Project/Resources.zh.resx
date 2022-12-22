@@ -311,7 +311,7 @@
 </value>
   </data>
   <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
-    <value>就绪。从组合框中选择一个 build 来开始，或按下 F12 来手动切换一个 Feature。</value>
+    <value>就绪。从组合框中选择一个 Build 来开始，或按下 F12 来手动切换一个 Feature。</value>
   </data>
   <data name="icons8_about_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -627,7 +627,7 @@
     <value>拒绝</value>
   </data>
   <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
-    <value>拒绝且不再提示</value>
+    <value>拒绝，不要发送任何信息</value>
   </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
     <value> 正在发送评论...</value>
