@@ -171,6 +171,10 @@
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutAndSettings.id.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -179,6 +183,10 @@
       <DependentUpon>CommentsClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.de.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.id.resx">
       <DependentUpon>GUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -205,7 +213,13 @@
     <EmbeddedResource Include="My Project\Resources.de.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.id.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="SetManual.de.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetManual.id.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.resx">
