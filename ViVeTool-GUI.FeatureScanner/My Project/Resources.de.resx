@@ -271,4 +271,13 @@ After that, the application will automatically start to download PDB Files.
   <data name="Error_SymchkPath3" xml:space="preserve">
     <value>Wenn Sie symchk.exe nicht finden können, befindet sich dies normalerweise im Installationsverzeichnis des Windows SDK\10\Debuggers\x64</value>
   </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Sie führen ein nicht unterstütztes Windows 10 Build aus. ViVe, ViVeTool und ViVeTool GUI benötigen Windows 10 Build 18963 oder höher, um ordnungsgemäß zu funktionieren. Ihr Build ist: {0}</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Nicht unterstütztes Build</value>
+  </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Nicht unterstütztes Build</value>
+  </data>
 </root>

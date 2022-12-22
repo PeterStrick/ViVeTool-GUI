@@ -650,4 +650,10 @@ Storing of your IP Address for 24 Hours is a security precaution to prevent Spam
   <data name="Error_SendComment" xml:space="preserve">
     <value>An Error occurred while sending your comment.</value>
   </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>A Network Exception occurred</value>
+  </data>
+  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
+    <value> A Network Exception occurred</value>
+  </data>
 </root>

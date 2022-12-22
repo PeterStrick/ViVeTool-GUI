@@ -120,7 +120,7 @@
   <data name="Error_NetworkError" xml:space="preserve">
     <value>Kesalahan Jaringan</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="main_icon" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\icons8-advertisement-page-96.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -134,7 +134,7 @@
     <value>Anda menjalankan Windows 10 dengan Build yang tidak didukung. ViVe, ViVeTool dan ViVeTool GUI memerlukan Windows 10 Build 18963 atau lebih tinggi untuk berfungsi dengan baik. Build Anda saat ini adalah: {0}</value>
     <comment>{0} references to a Build Number, ex: 19041</comment>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="icons8_settings_system_daydream_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
@@ -649,5 +649,8 @@ Menyimpan Alamat IP Anda selama 24 jam adalah tindakan pencegahan keamanan untuk
   </data>
   <data name="Error_SendComment" xml:space="preserve">
     <value>Terjadi kesalahan saat mengirim komentar Anda.</value>
+  </data>
+  <data name="Error_Spaced_ANetworkErrorOccurred" xml:space="preserve">
+    <value> Terjadi Error Jaringan</value>
   </data>
 </root>

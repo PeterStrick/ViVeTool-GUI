@@ -379,7 +379,7 @@
     <value>在线功能已禁用。 按下 F12 来手动切换一个 Feature.</value>
   </data>
   <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value>发生了一个异常</value>
+    <value> 发生了一个异常</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Generic_Done" xml:space="preserve">
@@ -440,7 +440,7 @@
 </value>
   </data>
   <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
-    <value>由于设备没有联网，或 GitHub API 无法访问，ViveTool-GUI 无法填充 Build 组合框</value>
+    <value>由于设备没有联网，或 GitHub API 无法访问，ViveTool-GUI 无法填充 Build 组合框.</value>
   </data>
   <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

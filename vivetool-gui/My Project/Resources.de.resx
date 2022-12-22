@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Error_ANetworkErrorOccurred" xml:space="preserve">
-    <value>Ein Netzwerk Fehler ist aufgetreten</value>
+    <value>Ein Netzwerkfehler ist aufgetreten</value>
   </data>
   <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
     <value>Ein unbekannter Fehler ist aufgetreten</value>
@@ -296,5 +296,11 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
   </data>
   <data name="General_Finish" xml:space="preserve">
     <value>Fertig</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>Ein Netzwerkfehler ist aufgetreten</value>
+  </data>
+  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
+    <value> Ein Netzwerkfehler ist aufgetreten</value>
   </data>
 </root>

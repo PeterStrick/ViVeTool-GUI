@@ -248,7 +248,7 @@
     <comment>{0} references to a TXT File, ex: File1.txt</comment>
   </data>
   <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
-    <value> 成功删除符号文件夹。</value>
+    <value> 成功删除符号文件夹</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
@@ -299,5 +299,14 @@ ViVeTool GUI Feature Scanner &lt;strong&gt;不应被普通用户使用&lt;/stron
   </data>
   <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
     <value>GB</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>你正在运行一个不受支持的 Windows 10 Build。Vive，ViveTool 和 ViveTool GUI 需要 Windows 10 Build 18963 或更高才能正常运行。你的 Build 是：{0}</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>不支持的 Build</value>
+  </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> 不支持的 Build</value>
   </data>
 </root>

@@ -18,6 +18,16 @@ Imports System.Configuration, Telerik.WinControls.UI
 Namespace My
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            'Check for Build
+            If Environment.OSVersion.Version.Build >= 18963 Then
+                'OS Build Check passed.
+            Else
+                RadTD.Show(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
+                           String.Format(Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
+                           RadTaskDialogIcon.ShieldErrorRedBar)
+                End
+            End If
+
             'Transfers older My.Settings to newer ViVeTool GUI Versions if applicable.
             If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then Settings.Upgrade()
 
@@ -27,14 +37,10 @@ Namespace My
 
             'Check if mach2.exe and msdia140.dll are present
             If IO.File.Exists(Application.Info.DirectoryPath & "\mach2\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\mach2\msdia140.dll") = False Then
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = My.Resources.Error_MissingFiles_Heading,
-                    .Text = My.Resources.Error_MissingFiles_Text & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
                 'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                RadTD.Show(Resources.Error_Spaced_AnErrorOccurred, Resources.Error_MissingFiles_Heading,
+                           Resources.Error_MissingFiles_Text & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
+                           RadTaskDialogIcon.ShieldErrorRedBar)
                 End
             End If
 

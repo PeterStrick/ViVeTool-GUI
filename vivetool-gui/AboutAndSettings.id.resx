@@ -117,18 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 12</value>
   </data>
   <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -179,7 +179,7 @@
     <value>5</value>
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - ProductName</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
@@ -207,7 +207,7 @@
     <value>7</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Description</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
@@ -232,7 +232,7 @@
     <value>6</value>
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Version</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
@@ -257,7 +257,7 @@
     <value>8</value>
   </data>
   <data name="RL_License.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - License</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_License.Name" xml:space="preserve">

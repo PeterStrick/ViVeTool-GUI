@@ -237,7 +237,7 @@
   <data name="&gt;&gt;RTB_DbgPath.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 35</value>
   </data>
@@ -283,7 +283,7 @@
   <data name="&gt;&gt;RL_DownloadIntroduction.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -569,7 +569,7 @@
   <data name="&gt;&gt;RPVP_AboutAndSettings.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -598,7 +598,7 @@
     <value>False</value>
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
-    <value>Buka semua Tab</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
@@ -607,13 +607,13 @@
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_AddJunctions.Text" xml:space="preserve">
-    <value>Tambah Junctions</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
-    <value>Hapus Junctions</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
@@ -622,13 +622,13 @@
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
-    <value>Test Symbol Downloaded Text</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
-    <value>Pindai simbol segera, atur text box terlebih dahulu</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
@@ -643,7 +643,7 @@
     <value>0</value>
   </data>
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
-    <value>[OPSI DEBUG]</value>
+    <value></value>
     
     
     <comment>@Invariant</comment>
@@ -793,7 +793,7 @@
     <value>False</value>
   </data>
   <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value/>
+    <value />
   </data>
   <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
@@ -1341,7 +1341,7 @@
     <value>10</value>
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - ProductName</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1375,7 +1375,7 @@
     <value>12</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Description</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1406,7 +1406,7 @@
     <value>11</value>
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Version</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -1437,7 +1437,7 @@
     <value>14</value>
   </data>
   <data name="RL_License.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - License</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -2057,7 +2057,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ViVeTool GUI - Feature Scanner</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_RemoveJunctions.Name" xml:space="preserve">

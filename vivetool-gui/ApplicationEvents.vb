@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Configuration, Telerik.WinControls.UI
+Imports Telerik.WinControls.UI
 
 Namespace My
     ''' <summary>
@@ -32,14 +32,9 @@ Namespace My
             If Environment.OSVersion.Version.Build >= 18963 Then
                 'OS Build Check passed.
             Else
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_UnsupportedBuild,
-                    .Heading = My.Resources.Error_UnsupportedBuild,
-                    .Text = String.Format(My.Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                RadTD.Show(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
+                           String.Format(Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
+                           RadTaskDialogIcon.ShieldErrorRedBar)
                 End
             End If
 

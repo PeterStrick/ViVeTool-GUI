@@ -98,6 +98,7 @@
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\GlobalSuppressions.vb" />
     <Compile Include="Functions\Junction.vb" />
+    <Compile Include="Functions\RadTD.vb" />
     <Compile Include="ScannerUI.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +118,7 @@
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-		<EmbeddedResource Include="ScannerUI.zh.resx">
+    <EmbeddedResource Include="ScannerUI.zh.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

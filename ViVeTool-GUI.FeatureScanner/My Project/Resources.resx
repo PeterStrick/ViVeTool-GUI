@@ -300,4 +300,14 @@ After that, the application will automatically start to download PDB Files.
   <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
     <value>GB</value>
   </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Unsupported Build</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Unsupported Build</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>You are running an unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool GUI require Windows 10 Build 18963 or higher to function properly. Your Build is: {0}</value>
+    <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
 </root>

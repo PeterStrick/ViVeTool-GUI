@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RDDL_Build.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="RDDL_Build.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RDDL_Build.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 5</value>
   </data>
@@ -156,45 +156,45 @@
     <value>False</value>
   </data>
   <data name="__DBG_RHI.Text" xml:space="preserve">
-    <value>OPSI DEBUG</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_GetComments.Text" xml:space="preserve">
-    <value>Dapatkan Komentar</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SeeCommentsData.Text" xml:space="preserve">
-    <value>Lihat Data Komentar</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.Text" xml:space="preserve">
-    <value/>
+    <value />
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SetRDDL_Build_Text.Text" xml:space="preserve">
-    <value>Set RDDL_Build.Text to 25158</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SetRDDL_Build_Text_ToNothing.Text" xml:space="preserve">
-    <value>Set RDDL_Build.Text to ""</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.Text" xml:space="preserve">
-    <value/>
+    <value />
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_EnableCommentLoadingFromManualFL.Text" xml:space="preserve">
-    <value>Aktifkan pemuatan Komentar saat menggunakan Daftar Fitur manual</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_DisableCommentLoadingFromManualFL.Text" xml:space="preserve">
-    <value>(DEFAULT) Nonaktifkan pemuatan Komentar saat menggunakan Daftar Fitur manual</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing">
@@ -207,7 +207,7 @@
     <value>0</value>
   </data>
   <data name="__DBG_MainBtn.Text" xml:space="preserve">
-    <value>DEBUG</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_MainBtn.Visible" type="System.Boolean, mscorlib">
@@ -249,7 +249,7 @@
   <data name="&gt;&gt;RSS_MainStatusStrip.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RGV_MainGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -257,7 +257,7 @@
     <value>0, 0</value>
   </data>
   <data name="GridViewImageColumn1.HeaderText" xml:space="preserve">
-    <value/>
+    <value />
     <comment>@Invariant</comment>
   </data>
   <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing">
@@ -2243,7 +2243,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ViVeTool GUI</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_RHI.Name" xml:space="preserve">
