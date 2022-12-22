@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8_change_theme_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\vivetool-gui\images\icons8_change_theme_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_moon_and_stars_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\vivetool-gui\images\icons8_moon_and_stars_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_portrait_mode_scanning_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\vivetool-gui\images\icons8_portrait_mode_scanning_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_sun_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\vivetool-gui\images\icons8_sun_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>指向 Windows Debugging Tools 中 symchk.exe 的路径</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>选择一个文件夹来存储调试符号。下载的 .pdb 文件一般会占用 5~8 GB 的空间。</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>示例路径：C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>已下载的调试符号的大小可达 5~30GB。</value>
+  </data>
+  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
+    <value> 发生了一个错误</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>发生了一个错误</value>
+  </data>
+  <data name="Error_SymchkPath1" xml:space="preserve">
+    <value>检查指定的 symchk.exe 路径是否有效时发生了错误。</value>
+  </data>
+  <data name="Error_SymchkPath2" xml:space="preserve">
+    <value>请确保输入 symchk.exe 的有效路径。</value>
+  </data>
+  <data name="Error_SymchkPath3" xml:space="preserve">
+    <value>如果你找不到 symchk.exe, 它通常位于 SDK 的安装目录：Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_SymbolPath1_N" xml:space="preserve">
+    <value>在尝试向 {0} 写入测试文件时发生了错误</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Error_SymbolPath2" xml:space="preserve">
+    <value>请确保程序对该文件夹具有写访问权限，并且该文件夹没有写保护。</value>
+  </data>
+  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
+    <value> 发生了一个异常</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>发生了一个异常</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>在尝试向 {0} 写入测试文件时发生了异常</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>发生了崩溃</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>显示异常信息</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile1" xml:space="preserve">
+    <value>在尝试向符号文件夹写入测试文件时发生了错误。</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile2" xml:space="preserve">
+    <value>必须指定一个符号文件夹，以便将程序调试数据库文件下载到其中。</value>
+  </data>
+  <data name="Error_SymbolDownload1" xml:space="preserve">
+    <value>下载符号文件时发生了错误。</value>
+  </data>
+  <data name="Error_SymbolDownload2" xml:space="preserve">
+    <value>检查你是否有权限访问 synchk.exe，并且没有被防病毒软件阻止。</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>符号 {0} 已下载。</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
+  </data>
+  <data name="Error_mach2Scan_1" xml:space="preserve">
+    <value>扫描符号文件时发生了错误。</value>
+  </data>
+  <data name="Error_mach2Scan_2" xml:space="preserve">
+    <value>程序将尝试重新扫描符号文件夹。</value>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>{0} 中的文件数：{1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>{0} 的当前大小：{1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>计算中...</value>
+  </data>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>{0} 中的文件夹数：{1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Error_IOError" xml:space="preserve">
+    <value>IO 错误</value>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>输出文件：{0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>删除 {0}</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>调试符号扫描完成</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>调试符号扫描完成。返回 ViveTool GUI Feature Scanner 查看更多。</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> 文件复制成功</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>成功复制 {0} 到您的桌面。</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>在尝试复制 {0} 到您的桌面是发生了异常。</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
+    <value> 成功删除符号文件夹。</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>成功删除 {0} 。</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>在尝试删除 {0} 时发生了异常</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>深色模式</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>浅色模式</value>
+  </data>
+  <data name="Error_MissingFiles_Heading" xml:space="preserve">
+    <value>发生了错误。用于 ViVeTool GUI Feature Scanner 正常工作的文件丢失。</value>
+  </data>
+  <data name="Error_MissingFiles_Text" xml:space="preserve">
+    <value>请检查以下文件是否存在：</value>
+  </data>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+欢迎使用 ViVeTool GUI Feature Scanner
+&lt;/p&gt;&lt;p&gt;
+此工具用于下载和扫描更新的Windows 10/11内部构建上的.pdb(程序调试数据库)文件，以创建自己的功能列表。
+&lt;/p&gt;&lt;p&gt;
+ViVeTool GUI Feature Scanner &lt;strong&gt;不应被普通用户使用&lt;/strong&gt;。从 Microsoft Symbol Server 下载PDB文件通常需要大约 2 小时，具体取决于您的网速。
+&lt;/p&gt;&lt;p&gt;
+此工具需要：
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5~30GB 的磁盘空间来存储调试符号
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+可从 Windows SDK 获得的 Windows 调试工具的安装副本
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+确保满足要求后，将下面的文本框设置为各自的值，然后按“继续”。将鼠标悬停在文本框上查看示例。
+&lt;/p&gt;&lt;p&gt;
+之后，应用程序将自动开始下载PDB文件。
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact. A HTML Editor/manually writing a html file and making sure it renders in IE is recommended.</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>复制异常信息到剪贴板并关闭</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+</root>
