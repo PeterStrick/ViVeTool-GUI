@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -140,7 +140,7 @@ After that, the application will automatically start to download PDB Files.
     <value>Pfad zu symchk.exe von den Windows Debug Tools</value>
   </data>
   <data name="Calculation_Calculating" xml:space="preserve">
-    <value>Berechnet...</value>
+    <value>Berechnet…</value>
   </data>
   <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
     <value>Derzeitige Größe von {0}: {1}</value>
