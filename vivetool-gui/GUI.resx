@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,27 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RDDL_Build.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RDDL_Build.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RDDL_Build.Enabled" type="System.Boolean, mscorlib">
+  <data name="RDDL_Build.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RDDL_Build.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RDDL_Build.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>3, 5</value>
   </data>
   <data name="RDDL_Build.NullText" xml:space="preserve">
-    <value>Select Build...</value>
+    <value>Select Build…</value>
   </data>
-  <data name="RDDL_Build.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RDDL_Build.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>125, 28</value>
   </data>
-  <data name="RDDL_Build.TabIndex" type="System.Int32, mscorlib">
+  <data name="RDDL_Build.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RDDL_Build.Text" xml:space="preserve">
-    <value>Select Build...</value>
+    <value>Select Build…</value>
   </data>
   <data name="&gt;&gt;RDDL_Build.Name" xml:space="preserve">
     <value>RDDL_Build</value>
@@ -152,7 +152,7 @@
   <data name="&gt;&gt;RDDL_Build.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="__DBG_MainBtn.Enabled" type="System.Boolean, mscorlib">
+  <data name="__DBG_MainBtn.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
   <data name="__DBG_RHI.Text" xml:space="preserve">
@@ -171,7 +171,7 @@
     <value />
     <comment>@Invariant</comment>
   </data>
-  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SetRDDL_Build_Text.Text" xml:space="preserve">
@@ -183,10 +183,10 @@
     <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.Text" xml:space="preserve">
-    <value></value>
+    <value />
     <comment>@Invariant</comment>
   </data>
-  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_EnableCommentLoadingFromManualFL.Text" xml:space="preserve">
@@ -197,20 +197,20 @@
     <value>(DEFAULT) Disable Comment loading when using a manual Feature List</value>
     <comment>@Invariant</comment>
   </data>
-  <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>546, 0</value>
   </data>
-  <data name="__DBG_MainBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="__DBG_MainBtn.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>114, 24</value>
   </data>
-  <data name="__DBG_MainBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="__DBG_MainBtn.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="__DBG_MainBtn.Text" xml:space="preserve">
     <value>DEBUG</value>
     <comment>@Invariant</comment>
   </data>
-  <data name="__DBG_MainBtn.Visible" type="System.Boolean, mscorlib">
+  <data name="__DBG_MainBtn.Visible" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
   <data name="&gt;&gt;__DBG_MainBtn.Name" xml:space="preserve">
@@ -226,15 +226,15 @@
     <value>0</value>
   </data>
   <data name="RLE_StatusLabel.Text" xml:space="preserve">
-    <value>Populating the Build Combo Box...</value>
+    <value>Populating the Build Combo Box…</value>
   </data>
-  <data name="RSS_MainStatusStrip.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RSS_MainStatusStrip.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 543</value>
   </data>
-  <data name="RSS_MainStatusStrip.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RSS_MainStatusStrip.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>851, 24</value>
   </data>
-  <data name="RSS_MainStatusStrip.TabIndex" type="System.Int32, mscorlib">
+  <data name="RSS_MainStatusStrip.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="&gt;&gt;RSS_MainStatusStrip.Name" xml:space="preserve">
@@ -250,20 +250,20 @@
     <value>2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RGV_MainGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="RGV_MainGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
     <value>Fill</value>
   </data>
-  <data name="RGV_MainGridView.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RGV_MainGridView.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 0</value>
   </data>
   <data name="GridViewImageColumn1.HeaderText" xml:space="preserve">
     <value />
     <comment>@Invariant</comment>
   </data>
-  <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGV_MainGridView.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>851, 505</value>
   </data>
-  <data name="RGV_MainGridView.TabIndex" type="System.Int32, mscorlib">
+  <data name="RGV_MainGridView.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="&gt;&gt;RGV_MainGridView.Name" xml:space="preserve">
@@ -284,13 +284,13 @@
   <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>220, 6</value>
   </metadata>
-  <data name="RS_1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RS_1.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>405, 4</value>
   </data>
-  <data name="RS_1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RS_1.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>13, 30</value>
   </data>
-  <data name="RS_1.TabIndex" type="System.Int32, mscorlib">
+  <data name="RS_1.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="&gt;&gt;RS_1.Name" xml:space="preserve">
@@ -305,13 +305,13 @@
   <data name="&gt;&gt;RS_1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>145, 10</value>
   </data>
-  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>17, 18</value>
   </data>
-  <data name="RL_BuildComboBoxORManaully.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_BuildComboBoxORManaully.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="RL_BuildComboBoxORManaully.Text" xml:space="preserve">
@@ -329,19 +329,19 @@
   <data name="&gt;&gt;RL_BuildComboBoxORManaully.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RB_ManuallySetFeature.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_ManuallySetFeature.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>181, 4</value>
   </data>
-  <data name="RB_ManuallySetFeature.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_ManuallySetFeature.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>212, 30</value>
   </data>
-  <data name="RB_ManuallySetFeature.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_ManuallySetFeature.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
     <value>Manually change a Feature (F12)</value>
   </data>
-  <data name="RB_ManuallySetFeature.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="RB_ManuallySetFeature.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms" xml:space="preserve">
     <value>ImageBeforeText</value>
   </data>
   <data name="&gt;&gt;RB_ManuallySetFeature.Name" xml:space="preserve">
@@ -356,13 +356,13 @@
   <data name="&gt;&gt;RB_ManuallySetFeature.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RB_About.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_About.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>625, 4</value>
   </data>
-  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>158, 30</value>
   </data>
-  <data name="RB_About.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_About.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="RB_About.Text" xml:space="preserve">
@@ -380,7 +380,7 @@
   <data name="&gt;&gt;RB_About.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
+  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
   <data name="RMI_ActivateF.Text" xml:space="preserve">
@@ -392,13 +392,13 @@
   <data name="RMI_RevertF.Text" xml:space="preserve">
     <value>  Revert Feature to Default Values</value>
   </data>
-  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>447, 4</value>
   </data>
-  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>154, 30</value>
   </data>
-  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
+  <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
@@ -416,16 +416,16 @@
   <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
     <value>Top</value>
   </data>
-  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 0</value>
   </data>
-  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>851, 38</value>
   </data>
-  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="&gt;&gt;P_CommandPanel.Name" xml:space="preserve">
@@ -440,16 +440,16 @@
   <data name="&gt;&gt;P_CommandPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="P_DataPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="P_DataPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
     <value>Fill</value>
   </data>
-  <data name="P_DataPanel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="P_DataPanel.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 38</value>
   </data>
-  <data name="P_DataPanel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="P_DataPanel.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>851, 505</value>
   </data>
-  <data name="P_DataPanel.TabIndex" type="System.Int32, mscorlib">
+  <data name="P_DataPanel.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="&gt;&gt;P_DataPanel.Name" xml:space="preserve">
@@ -473,13 +473,13 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>54</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing" xml:space="preserve">
     <value>6, 13</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>851, 567</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIACmFgAAZgAAAICAAAABACAAKAgBAAwXAABAQAAAAQAgAChCAAA0HwEAMDAAAAEA
         IACoJQAAXGEBACAgAAABACAAqBAAAASHAQAQEAAAAQAgAGgEAACslwEAiVBORw0KGgoAAAANSUhEUgAA
