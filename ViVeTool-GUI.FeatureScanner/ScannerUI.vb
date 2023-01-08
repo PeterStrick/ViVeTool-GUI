@@ -163,15 +163,10 @@ Public Class ScannerUI
         If RTB_DbgPath.Text.EndsWith("\symchk.exe") AndAlso IO.File.Exists(RTB_DbgPath.Text) Then
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 50)
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                .Heading = My.Resources.Error_AnErrorOccurred,
-                .Text = My.Resources.Error_SymchkPath1 & vbNewLine & vbNewLine & My.Resources.Error_SymchkPath2 & vbNewLine & My.Resources.Error_SymchkPath3,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-
             'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+            My.Resources.Error_SymchkPath1 & vbNewLine & vbNewLine & My.Resources.Error_SymchkPath2 & vbNewLine & My.Resources.Error_SymchkPath3,
+            RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 0
@@ -198,14 +193,10 @@ Public Class ScannerUI
                 If IO.File.ReadAllText(RTB_SymbolPath.Text & "\Test.txt").Contains("Test File") Then
                     IO.File.Delete(RTB_SymbolPath.Text & "\Test.txt")
                 Else
-                    Dim RTD As New RadTaskDialogPage With {
-                        .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                        .Heading = My.Resources.Error_AnErrorOccurred,
-                        .Text = String.Format(My.Resources.Error_SymbolPath1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
                     'Show the Message Box
-                    RadTaskDialog.ShowDialog(RTD)
+                    RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                    String.Format(My.Resources.Error_SymbolPath1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
+                    RadTaskDialogIcon.ShieldErrorRedBar)
 
                     Invoke(Sub()
                                RPBE_StatusProgressBar.Value1 = 0
@@ -216,35 +207,10 @@ Public Class ScannerUI
                            End Sub)
                 End If
             Catch ex As Exception
-                'Create a Button that on Click, copies the Exception Text
-                AddHandler CopyExAndClose.Click, New EventHandler(
-                    Sub()
-                        Try
-                            My.Computer.Clipboard.SetText(ex.ToString)
-                        Catch clipex As Exception
-                            'Do nothing
-                        End Try
-                    End Sub)
-
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = My.Resources.Error_AnExceptionOccurred,
-                    .Text = String.Format(My.Resources.Error_SymbolPathException1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
-
-                'Add the Exception Text to the Expander
-                RTD.Expander.Text = ex.Message
-
-                'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-                RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-                'Add the Button to the Message Box
-                RTD.CommandAreaButtons.Add(CopyExAndClose)
-
                 'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+                    String.Format(My.Resources.Error_SymbolPathException1_N & vbNewLine & vbNewLine & My.Resources.Error_SymbolPath2, RTB_SymbolPath.Text),
+                    RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.Message)
 
                 Invoke(Sub()
                            RPBE_StatusProgressBar.Value1 = 0
@@ -255,14 +221,10 @@ Public Class ScannerUI
                        End Sub)
             End Try
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                .Heading = My.Resources.Error_AnErrorOccurred,
-                .Text = My.Resources.Error_SymbolFolderTestFile1 & vbNewLine & vbNewLine & My.Resources.Error_SymbolFolderTestFile2,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
             'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                    My.Resources.Error_SymbolFolderTestFile1 & vbNewLine & vbNewLine & My.Resources.Error_SymbolFolderTestFile2,
+                    RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 0
@@ -317,13 +279,6 @@ Public Class ScannerUI
             .RedirectStandardOutput = True 'Enables Redirection of Standard Output
         End With
 
-        Dim RTD_SymChk As New RadTaskDialogPage With {
-            .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-            .Heading = My.Resources.Error_AnErrorOccurred,
-            .Text = My.Resources.Error_SymbolDownload1 & vbNewLine & vbNewLine & My.Resources.Error_SymbolDownload2,
-            .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-        }
-
         'Get the .pdb files of C:\FeatureScanner\*.* - Recursively. Includes C:\Windows, and some Folders from Program Files x64/x86
         Try
             Proc.StartInfo.Arguments = "/r ""C:\FeatureScanner"" /oc """ & My.Settings.SymbolPath & """ /cn"
@@ -335,7 +290,9 @@ Public Class ScannerUI
             Proc.CancelErrorRead()
         Catch ex As Exception
             'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
+            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                       My.Resources.Error_SymbolDownload1 & vbNewLine & vbNewLine & My.Resources.Error_SymbolDownload2,
+                       RadTaskDialogIcon.ShieldErrorRedBar)
         End Try
 
         'Disable the current tab and move to the Scan PDB Tab
@@ -430,14 +387,9 @@ Public Class ScannerUI
 
             If Proc.ExitCode >= 1 Then
                 Invoke(Sub()
-                           Dim RTD As New RadTaskDialogPage With {
-                            .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                            .Heading = My.Resources.Error_AnErrorOccurred,
-                            .Text = My.Resources.Error_mach2Scan_1 & vbNewLine & vbNewLine & My.Resources.Error_mach2Scan_2,
-                            .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                           }
-                           'Show the Message Box
-                           RadTaskDialog.ShowDialog(RTD)
+                           RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                            My.Resources.Error_mach2Scan_1 & vbNewLine & vbNewLine & My.Resources.Error_mach2Scan_2,
+                            RadTaskDialogIcon.ShieldErrorRedBar)
                        End Sub)
             Else mach2_ExitCode = 0
             End If
@@ -496,10 +448,9 @@ Public Class ScannerUI
                        My.Settings.SymbolPath, TotalFolders.ToString))
         Catch ex As Exception
             Invoke(Sub() RL_SymbolFolders.Text = String.Format(
-                       My.Resources.Calculation_TotalFoldersIn_N, 
+                       My.Resources.Calculation_TotalFoldersIn_N,
                        My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
-
     End Sub
 
     ''' <summary>
@@ -547,43 +498,16 @@ Public Class ScannerUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click, __DBG_CopyFeatureList.Click
         Try
-
             Dim RSFD As New RadSaveFileDialog With {.DefaultExt = "txt", .Filter = "Text Files (*.txt)|*.txt"}
             If RSFD.ShowDialog = DialogResult.OK Then
                 'IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", S.FileName & "\" & BuildNumber & ".txt")
                 'MsgBox(RSFD.FileName)
                 IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", RSFD.FileName, True)
             End If
-
         Catch ex As Exception
-            'Create a Button that on Click, copies the Exception Text
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = My.Resources.Error_AnExceptionOccurred,
-                .Text = String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar}
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.Message
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
+            RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try
     End Sub
 
@@ -603,42 +527,10 @@ Public Class ScannerUI
             'Show the Message Box
             RadTaskDialog.ShowDialog(RTD)
         Catch ex As Exception
-            'Create a Button that on Click, copies the Exception Text
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = My.Resources.Error_AnExceptionOccurred,
-                .Text = String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar}
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.Message
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
+            RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try
-    End Sub
-
-    Private Sub SetWBDocumentText(Webbrowser As WebBrowser, Text As String)
-        Webbrowser.Navigate("about:blank")
-        Webbrowser.Document.OpenNew(False)
-        Webbrowser.Document.Write(Text)
-        Webbrowser.Refresh()
     End Sub
 
     ''' <summary>
@@ -659,7 +551,7 @@ Public Class ScannerUI
         RTNM.ToastNotifications.Add(RTN_FeatureScanComplete)
 
         'Localize the Introduction Text
-        SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
+        GeneralFunctions.SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
 
         'Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
@@ -672,6 +564,7 @@ Public Class ScannerUI
         Else
             ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
+
         RL_ProductName.Text = My.Application.Info.ProductName
         RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         RL_License.Text = My.Application.Info.Copyright

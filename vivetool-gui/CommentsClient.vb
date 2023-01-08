@@ -80,8 +80,8 @@ Public Class CommentsClient
     ''' <summary>
     ''' Form_Load Event, set's Placeholder Text and Adds Handlers to the Rad TaskDialog Buttons
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub Comment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Display Placeholder Comment Text
         RL_Comments.Text = "<html><p>Press on ""<strong>Edit Text</strong>"" to edit the Comment Text.</p><p></p><p>You can either write a Comment using normal Text, or <strong><em>HTML-like Text Formatting</em></strong></p></html>"
@@ -96,8 +96,8 @@ Public Class CommentsClient
     ''' <summary>
     ''' Send Comment Button. Shows RTD_main
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub RB_SendComment_Click(sender As Object, e As EventArgs) Handles RB_SendComment.Click
         RadTaskDialog.ShowDialog(RTD_main)
     End Sub
@@ -105,8 +105,8 @@ Public Class CommentsClient
     ''' <summary>
     ''' Edit Text Button. Shows a Rad MarkupDialog and set's RL_Comments.Text to it's Value
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub RB_EditText_Click(sender As Object, e As EventArgs) Handles RB_EditText.Click
         Dim r As DialogResult = RMD_CommentEditor.ShowDialog()
         If r = DialogResult.OK Then RL_Comments.Text = RMD_CommentEditor.Value
@@ -124,6 +124,9 @@ Public Class CommentsClient
         BT.Start()
     End Sub
 
+    ''' <summary>
+    ''' Background Thread that handles the sending of the Comment
+    ''' </summary>
     Private Async Sub SendComment_Thread()
         'To fix String Escaping, " will be replaced by ""
         Dim CommentString As String = RL_Comments.Text.Replace(Chr(34), Chr(34) & Chr(34))
