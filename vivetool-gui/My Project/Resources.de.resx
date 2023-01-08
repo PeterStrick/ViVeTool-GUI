@@ -303,4 +303,22 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
   <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
     <value> Ein Netzwerkfehler ist aufgetreten</value>
   </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> Ihr Kommentar wird gesendet…</value>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>Ihr Kommentar wird gesendet…</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Schließt den Dialog</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Kommentar gesendet</value>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Ihr Kommentar wurde erfolgreich gesendet.</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten, beim Versuch ihren Kommentar zu senden.</value>
+  </data>
 </root>
