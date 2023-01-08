@@ -161,12 +161,14 @@
   </data>
   <data name="__DBG_SEP4.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SendToastNotification.Text" xml:space="preserve">
     <value>Send Toast Notification</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
     <value>572, 315</value>
@@ -748,6 +750,7 @@
   </data>
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>Save the Features.txt File</value>
+    
   </data>
   <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
     <value>RB_OA_CopyFeaturesTXT</value>

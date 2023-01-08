@@ -172,7 +172,7 @@
     <value> 发生了一个错误</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
     <value>在启动 ViVeTool GUI Feature Scanner 时发生错误。</value>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
@@ -391,7 +391,7 @@
   <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
     <value>成功将 Feature ID {0} 设定为 {1}</value>
   </data>
-  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
     <value>您仍然可以按下 F12 来手动切换 Feature ID，并能够加载本地 Feature List。</value>
   </data>
   <data name="Error_Error" xml:space="preserve">
@@ -439,7 +439,7 @@
         418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
     <value>由于设备没有联网，或 GitHub API 无法访问，ViveTool-GUI 无法填充 Build 组合框.</value>
   </data>
   <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -543,7 +543,7 @@
         eviviv9CpVId93g8//MWlUj+BST0ckPf98ZuAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
     <value>文件不存在。</value>
   </data>
   <data name="Generic_Default" xml:space="preserve">
@@ -630,10 +630,10 @@
     <value>拒绝，不要发送任何信息</value>
   </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
-    <value> 正在发送评论...</value>
+    <value> 正在发送评论…</value>
   </data>
   <data name="Comments_SendingYourComment" xml:space="preserve">
-    <value>正在发送评论...</value>
+    <value>正在发送评论…</value>
   </data>
   <data name="General_Finish" xml:space="preserve">
     <value>完成</value>

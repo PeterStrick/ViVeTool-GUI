@@ -13,6 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Option Strict On
 Imports Albacore.ViVe, Telerik.WinControls.UI
 
 ''' <summary>
@@ -25,12 +26,12 @@ Public Class SetManual
     ''' <param name="FeatureEnabledState">Specifies what Enabled State the Feature should be in. Can be either Enabled, Disabled or Default</param>
     Private Sub SetConfig_Manual(FeatureEnabledState As FeatureEnabledState)
         Try
-            'Initialize Variables
+            ' Initialize Variables
             Dim _enabledStateOptions, _variant, _variantPayloadKind, _variantPayload, _group As Integer
             _enabledStateOptions = 1
             _group = 4
 
-            'FeatureConfiguration Variable
+            ' FeatureConfiguration Variable
             Dim _configs As New List(Of FeatureConfiguration) From {
                 New FeatureConfiguration() With {
                     .FeatureId = CUInt(RTB_FeatureID.Text),
@@ -44,58 +45,29 @@ Public Class SetManual
                 }
             }
 
-            'Set's the selected Feature to it's specified EnabledState. If anything goes wrong, display a Error Message in the Status Label.
-            'On Successful Operations; 
-            'RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
-            'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
+            ' Set's the selected Feature to it's specified EnabledState. If anything goes wrong, display a Error Message in the Status Label.
+            ' On Successful Operations; 
+            ' RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
+            ' and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
-                    .Icon = RadTaskDialogIcon.Error
-                }
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                RadTaskDialog.ShowDialog(RTD)
+                ' Fancy Message Box
+
+                RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred,
+                String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
+                Nothing, RadTaskDialogIcon.Error)
             Else
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.SetConfig_Success,
-                    .Heading = String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, RTB_FeatureID.Text, FeatureEnabledState.ToString),
-                    .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-                }
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                RadTaskDialog.ShowDialog(RTD)
+                ' Fancy Message Box
+
+                RadTD.Show(My.Resources.SetConfig_Success,
+                String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, RTB_FeatureID.Text, FeatureEnabledState.ToString),
+                Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             End If
         Catch ex As Exception
-            'Catch Any Exception that may occur
-            'Create a Button that on Click, copies the Exception Text
-            AddHandler GUI.CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
+            ' Catch Any Exception that may occur
 
-            'Fancy Message Box
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.ToString
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(GUI.CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred,
+            String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
+            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub
 

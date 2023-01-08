@@ -226,7 +226,7 @@
     <value>0</value>
   </data>
   <data name="RLE_StatusLabel.Text" xml:space="preserve">
-    <value>Mengumpulkan data Build di Combo Box...</value>
+    <value>Mengumpulkan data Build di Combo Box…</value>
   </data>
   <data name="RSS_MainStatusStrip.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 543</value>

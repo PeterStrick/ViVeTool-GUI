@@ -132,13 +132,13 @@
   <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten beim Versuch die Feature ID {0} auf {1} zu setzen</value>
   </data>
-  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
     <value>Beim Versuch, den ViVeTool GUI Feature Scanner zu starten, ist ein Fehler aufgetreten.</value>
   </data>
   <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
     <value>Eine generische Win32 Ausnahme ist aufgetreten.</value>
   </data>
-  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
     <value>Die Datei existiert nicht.</value>
   </data>
   <data name="Error_NetworkError" xml:space="preserve">
@@ -255,10 +255,10 @@
   <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
     <value>Ihre IP-Adresse wurde möglicherweise eine Stunde lang von der GitHub-API blockiert.</value>
   </data>
-  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
     <value>ViVeTool Gui kann die Build-Combobox nicht ausfüllen, wenn das Gerät nicht mit dem Internet verbunden ist, oder wenn die GitHub-API nicht erreichbar ist.</value>
   </data>
-  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
     <value>Sie können eine Feature ID immer noch manuell ändern, indem Sie F12 drücken, oder sie können manuell eine Feature Liste laden.</value>
   </data>
   <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">

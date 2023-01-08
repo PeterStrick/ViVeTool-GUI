@@ -149,21 +149,25 @@
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>An Error occurred</value>
   </data>
-  <data name="Error_SymchkPath1" xml:space="preserve">
+  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while checking if the specified Path to symchk.exe is valid.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymchkPath2" xml:space="preserve">
+  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
     <value>Please be sure to enter a valid path to symchk.exe.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymchkPath3" xml:space="preserve">
+  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
     <value>If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymbolPath1_N" xml:space="preserve">
+  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while trying to write a test file to {0}</value>
-    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder@Invariant</comment>
   </data>
-  <data name="Error_SymbolPath2" xml:space="preserve">
+  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
     <value>Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
     <value> An Exception occurred</value>
@@ -182,27 +186,33 @@
   <data name="Error_ShowException" xml:space="preserve">
     <value>Show Exception</value>
   </data>
-  <data name="Error_SymbolFolderTestFile1" xml:space="preserve">
+  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while trying to write a test file to the symbol folder.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymbolFolderTestFile2" xml:space="preserve">
+  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
     <value>A symbol folder must be specified to download Program Debug Database files into.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymbolDownload1" xml:space="preserve">
+  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while downloading the symbol files.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_SymbolDownload2" xml:space="preserve">
+  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
     <value>Check if you have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>Symbol {0} downloaded.</value>
     <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
   </data>
-  <data name="Error_mach2Scan_1" xml:space="preserve">
+  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while scanning the symbol files.</value>
+    <comment>@Invariant</comment>
   </data>
-  <data name="Error_mach2Scan_2" xml:space="preserve">
+  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
     <value>The application will attempt to rescan the symbol folder.</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
     <value>Total Files in {0}: {1}</value>
@@ -309,5 +319,32 @@ After that, the application will automatically start to download PDB Files.
   <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
     <value>You are running an unsupported Windows 10 Build. ViVe, ViVeTool and ViVeTool GUI require Windows 10 Build 18963 or higher to function properly. Your Build is: {0}</value>
     <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
+  <data name="Error_mach2Scan_N" xml:space="preserve">
+    <value>An Error occurred while scanning the symbol files.
+
+The application will attempt to rescan the symbol folder.</value>
+  </data>
+  <data name="Error_SymbolDownload_N" xml:space="preserve">
+    <value>An Error occurred while downloading the symbol files.
+
+Check if you have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile_N" xml:space="preserve">
+    <value>An Error occurred while trying to write a test file to the symbol folder.
+
+A symbol folder must be specified to download Program Debug Database files into.</value>
+  </data>
+  <data name="Error_SymchkPath_N" xml:space="preserve">
+    <value>An Error occurred while checking if the specified Path to symchk.exe is valid.
+
+Please be sure to enter a valid path to symchk.exe.
+
+If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_SymbolPath_NewN" xml:space="preserve">
+    <value>An Error occurred while trying to write a test file to {0}
+
+Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
   </data>
 </root>

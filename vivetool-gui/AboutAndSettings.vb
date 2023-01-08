@@ -24,7 +24,7 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub AboutAndSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Load the About Labels
+        ' Load the About Labels
         LoadAboutLabels()
     End Sub
 
@@ -33,12 +33,13 @@ Public NotInheritable Class AboutAndSettings
     ''' </summary>
     Private Sub LoadAboutLabels()
         Dim ApplicationTitle As String
+
         If My.Application.Info.Title <> "" Then
             ApplicationTitle = My.Application.Info.Title
         Else
             ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
-        'Me.Text = String.Format("About {0}", ApplicationTitle)
+
         Me.RL_ProductName.Text = My.Application.Info.ProductName
         Me.RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.RL_License.Text = My.Application.Info.Copyright
@@ -88,45 +89,13 @@ Public NotInheritable Class AboutAndSettings
                 Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
-                'Create a Button that on Click, copies the Exception Text
-                AddHandler GUI.CopyExAndClose.Click, New EventHandler(
-                    Sub()
-                        Try
-                            My.Computer.Clipboard.SetText(wex.ToString)
-                        Catch clipex As Exception
-                            'Do nothing
-                        End Try
-                    End Sub)
-
-                'Fancy Message Box
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                    .Heading = My.Resources.Error_GenericWin32Exception_Heading,
-                    .Text = My.Resources.Error_GenericWin32Exception_Text,
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
-
-                'Add the Exception Text to the Expander
-                RTD.Expander.Text = wex.ToString
-
-                'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-                RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-                'Add the Button to the Message Box
-                RTD.CommandAreaButtons.Add(GUI.CopyExAndClose)
-
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_GenericWin32Exception_Heading,
+                My.Resources.Error_GenericWin32Exception_Text, RadTaskDialogIcon.ShieldErrorRedBar,
+                wex, wex.ToString, wex.ToString)
             End Try
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                .Heading = My.Resources.Error_FeatureScannerNotFound1 & vbNewLine & vbNewLine & My.Resources.Error_FeatureScannerNotFound2,
-                .Icon = RadTaskDialogIcon.Error
-            }
-            RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_FeatureScannerNotFound_N,
+            Nothing, RadTaskDialogIcon.Error)
         End If
     End Sub
 
@@ -145,22 +114,27 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="args">StateChanged EventArgs</param>
     Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
-        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
-            My.Settings.UseSystemTheme = True
-            Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
-            Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
-#Disable Warning BC42018
-            If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
-#Enable Warning BC42018
-                RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-            Else
-                RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-            End If
-        Else
+        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off Then
             My.Settings.UseSystemTheme = False
+            Return
         End If
+
+        'If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
+        My.Settings.UseSystemTheme = True
+        Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
+        Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
+#Disable Warning BC42018
+        If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
+#Enable Warning BC42018
+            RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+            RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
+        Else
+            RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+            RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
+        End If
+        'Else
+        '    My.Settings.UseSystemTheme = False
+        'End If
     End Sub
 
     ''' <summary>

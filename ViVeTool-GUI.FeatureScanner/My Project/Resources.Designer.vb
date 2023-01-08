@@ -79,7 +79,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Calculating....
+        '''  Looks up a localized string similar to Calculating….
         '''</summary>
         Friend ReadOnly Property Calculation_Calculating() As String
             Get
@@ -243,18 +243,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to An Error occurred while scanning the symbol files..
         '''</summary>
-        Friend ReadOnly Property Error_mach2Scan_1() As String
+        Friend ReadOnly Property Error_mach2Scan_1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_mach2Scan_1", resourceCulture)
+                Return ResourceManager.GetString("Error_mach2Scan_1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to The application will attempt to rescan the symbol folder..
         '''</summary>
-        Friend ReadOnly Property Error_mach2Scan_2() As String
+        Friend ReadOnly Property Error_mach2Scan_2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_mach2Scan_2", resourceCulture)
+                Return ResourceManager.GetString("Error_mach2Scan_2_ToBeMigrated", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while scanning the symbol files.
+        '''
+        '''The application will attempt to rescan the symbol folder..
+        '''</summary>
+        Friend ReadOnly Property Error_mach2Scan_N() As String
+            Get
+                Return ResourceManager.GetString("Error_mach2Scan_N", resourceCulture)
             End Get
         End Property
         
@@ -313,20 +324,31 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while downloading the symbol files.
+        '''
+        '''Check if you have access to symchk.exe and that your Anti-virus isn&apos;t blocking it..
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolDownload_N() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolDownload_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while downloading the symbol files..
         '''</summary>
-        Friend ReadOnly Property Error_SymbolDownload1() As String
+        Friend ReadOnly Property Error_SymbolDownload1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolDownload1", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolDownload1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to Check if you have access to symchk.exe and that your Anti-virus isn&apos;t blocking it..
         '''</summary>
-        Friend ReadOnly Property Error_SymbolDownload2() As String
+        Friend ReadOnly Property Error_SymbolDownload2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolDownload2", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolDownload2_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
@@ -340,38 +362,60 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while trying to write a test file to the symbol folder.
+        '''
+        '''A symbol folder must be specified to download Program Debug Database files into..
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolFolderTestFile_N() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolFolderTestFile_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while trying to write a test file to the symbol folder..
         '''</summary>
-        Friend ReadOnly Property Error_SymbolFolderTestFile1() As String
+        Friend ReadOnly Property Error_SymbolFolderTestFile1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolFolderTestFile1", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolFolderTestFile1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to A symbol folder must be specified to download Program Debug Database files into..
         '''</summary>
-        Friend ReadOnly Property Error_SymbolFolderTestFile2() As String
+        Friend ReadOnly Property Error_SymbolFolderTestFile2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolFolderTestFile2", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolFolderTestFile2_ToBeMigrated", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while trying to write a test file to {0}
+        '''
+        '''Please make sure that the application has write access to the folder, and that the folder isn&apos;t write protected..
+        '''</summary>
+        Friend ReadOnly Property Error_SymbolPath_NewN() As String
+            Get
+                Return ResourceManager.GetString("Error_SymbolPath_NewN", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to An Error occurred while trying to write a test file to {0}.
         '''</summary>
-        Friend ReadOnly Property Error_SymbolPath1_N() As String
+        Friend ReadOnly Property Error_SymbolPath1_N_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolPath1_N", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolPath1_N_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to Please make sure that the application has write access to the folder, and that the folder isn&apos;t write protected..
         '''</summary>
-        Friend ReadOnly Property Error_SymbolPath2() As String
+        Friend ReadOnly Property Error_SymbolPath2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymbolPath2", resourceCulture)
+                Return ResourceManager.GetString("Error_SymbolPath2_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
@@ -385,29 +429,42 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while checking if the specified Path to symchk.exe is valid.
+        '''
+        '''Please be sure to enter a valid path to symchk.exe.
+        '''
+        '''If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64.
+        '''</summary>
+        Friend ReadOnly Property Error_SymchkPath_N() As String
+            Get
+                Return ResourceManager.GetString("Error_SymchkPath_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while checking if the specified Path to symchk.exe is valid..
         '''</summary>
-        Friend ReadOnly Property Error_SymchkPath1() As String
+        Friend ReadOnly Property Error_SymchkPath1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymchkPath1", resourceCulture)
+                Return ResourceManager.GetString("Error_SymchkPath1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to Please be sure to enter a valid path to symchk.exe..
         '''</summary>
-        Friend ReadOnly Property Error_SymchkPath2() As String
+        Friend ReadOnly Property Error_SymchkPath2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymchkPath2", resourceCulture)
+                Return ResourceManager.GetString("Error_SymchkPath2_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64.
         '''</summary>
-        Friend ReadOnly Property Error_SymchkPath3() As String
+        Friend ReadOnly Property Error_SymchkPath3_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_SymchkPath3", resourceCulture)
+                Return ResourceManager.GetString("Error_SymchkPath3_ToBeMigrated", resourceCulture)
             End Get
         End Property
         

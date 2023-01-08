@@ -140,7 +140,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Sending your Comment....
+        '''  Looks up a localized string similar to Sending your Comment….
         '''</summary>
         Friend ReadOnly Property Comments_SendingYourComment() As String
             Get
@@ -176,7 +176,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to  Sending your Comment....
+        '''  Looks up a localized string similar to  Sending your Comment….
         '''</summary>
         Friend ReadOnly Property Comments_Spaced_SendingYourComment() As String
             Get
@@ -190,6 +190,15 @@ Namespace My.Resources
         Friend ReadOnly Property Error_ANetworkErrorOccurred() As String
             Get
                 Return ResourceManager.GetString("Error_ANetworkErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to A Network Exception occurred.
+        '''</summary>
+        Friend ReadOnly Property Error_ANetworkExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_ANetworkExceptionOccurred", resourceCulture)
             End Get
         End Property
         
@@ -239,20 +248,31 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while trying to start the ViVeTool GUI Feature Scanner.
+        '''
+        '''The File doesn&apos;t exist..
+        '''</summary>
+        Friend ReadOnly Property Error_FeatureScannerNotFound_N() As String
+            Get
+                Return ResourceManager.GetString("Error_FeatureScannerNotFound_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while trying to start the ViVeTool GUI Feature Scanner..
         '''</summary>
-        Friend ReadOnly Property Error_FeatureScannerNotFound1() As String
+        Friend ReadOnly Property Error_FeatureScannerNotFound1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_FeatureScannerNotFound1", resourceCulture)
+                Return ResourceManager.GetString("Error_FeatureScannerNotFound1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to The File doesn&apos;t exist..
         '''</summary>
-        Friend ReadOnly Property Error_FeatureScannerNotFound2() As String
+        Friend ReadOnly Property Error_FeatureScannerNotFound2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_FeatureScannerNotFound2", resourceCulture)
+                Return ResourceManager.GetString("Error_FeatureScannerNotFound2_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
@@ -302,20 +322,31 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn&apos;t connected to the Internet, or if the GitHub API is unreachable.
+        '''
+        '''You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List..
+        '''</summary>
+        Friend ReadOnly Property Error_NetworkExceptionDetail_N() As String
+            Get
+                Return ResourceManager.GetString("Error_NetworkExceptionDetail_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn&apos;t connected to the Internet, or if the GitHub API is unreachable..
         '''</summary>
-        Friend ReadOnly Property Error_NetworkExceptionDetail1() As String
+        Friend ReadOnly Property Error_NetworkExceptionDetail1_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_NetworkExceptionDetail1", resourceCulture)
+                Return ResourceManager.GetString("Error_NetworkExceptionDetail1_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
         '''<summary>
         '''  Looks up a localized string similar to You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List..
         '''</summary>
-        Friend ReadOnly Property Error_NetworkExceptionDetail2() As String
+        Friend ReadOnly Property Error_NetworkExceptionDetail2_ToBeMigrated() As String
             Get
-                Return ResourceManager.GetString("Error_NetworkExceptionDetail2", resourceCulture)
+                Return ResourceManager.GetString("Error_NetworkExceptionDetail2_ToBeMigrated", resourceCulture)
             End Get
         End Property
         
@@ -388,6 +419,15 @@ Namespace My.Resources
         Friend ReadOnly Property Error_Spaced_ANetworkErrorOccurred() As String
             Get
                 Return ResourceManager.GetString("Error_Spaced_ANetworkErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to  A Network Exception occurred.
+        '''</summary>
+        Friend ReadOnly Property Error_Spaced_ANetworkExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_Spaced_ANetworkExceptionOccurred", resourceCulture)
             End Get
         End Property
         

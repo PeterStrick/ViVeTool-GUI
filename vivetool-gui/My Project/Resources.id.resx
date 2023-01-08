@@ -172,7 +172,7 @@
     <value> Terjadi Kesalahan</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
     <value>Terjadi kesalahan saat mencoba memulai ViVeTool GUI Feature Scanner.</value>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
@@ -391,7 +391,7 @@
   <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
     <value>Berhasil mengatur ID Fitur {0} ke {1}</value>
   </data>
-  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
     <value>Anda masih dapat mengubah ID Fitur secara manual dengan menekan F12, dan dapat memuat Daftar Fitur lokal.</value>
   </data>
   <data name="Error_Error" xml:space="preserve">
@@ -439,7 +439,7 @@
         418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
     <value>ViVeTool-GUI tidak dapat menerima data Build di Combo Box, jika perangkat tidak terhubung ke Internet, atau jika GitHub API tidak dapat dijangkau.</value>
   </data>
   <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
@@ -543,7 +543,7 @@
         eviviv9CpVId93g8//MWlUj+BST0ckPf98ZuAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
     <value>File tidak ada.</value>
   </data>
   <data name="Generic_Default" xml:space="preserve">
@@ -630,10 +630,10 @@ Menyimpan Alamat IP Anda selama 24 jam adalah tindakan pencegahan keamanan untuk
     <value>Tutup Dialog ini dan jangan kirim apapun</value>
   </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
-    <value> Mengirim Komentar Anda...</value>
+    <value> Mengirim Komentar Anda…</value>
   </data>
   <data name="Comments_SendingYourComment" xml:space="preserve">
-    <value>Mengirim Komentar Anda...</value>
+    <value>Mengirim Komentar Anda…</value>
   </data>
   <data name="General_Finish" xml:space="preserve">
     <value>Selesai</value>

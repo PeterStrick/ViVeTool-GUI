@@ -172,8 +172,9 @@
     <value> An Error occurred</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="Error_FeatureScannerNotFound1" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
     <value>An Error occurred while trying to start the ViVeTool GUI Feature Scanner.</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature State</value>
@@ -391,7 +392,7 @@
   <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
     <value>Successfully set Feature ID {0} to {1}</value>
   </data>
-  <data name="Error_NetworkExceptionDetail2" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
     <value>You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List.</value>
   </data>
   <data name="Error_Error" xml:space="preserve">
@@ -439,7 +440,7 @@
         418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Error_NetworkExceptionDetail1" xml:space="preserve">
+  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
     <value>ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable.</value>
   </data>
   <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
@@ -543,8 +544,9 @@
         eviviv9CpVId93g8//MWlUj+BST0ckPf98ZuAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Error_FeatureScannerNotFound2" xml:space="preserve">
+  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
     <value>The File doesn't exist.</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="Generic_Default" xml:space="preserve">
     <value>Default</value>
@@ -630,10 +632,10 @@ Storing of your IP Address for 24 Hours is a security precaution to prevent Spam
     <value>Close this Dialog and don't send anything</value>
   </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
-    <value> Sending your Comment...</value>
+    <value> Sending your Comment…</value>
   </data>
   <data name="Comments_SendingYourComment" xml:space="preserve">
-    <value>Sending your Comment...</value>
+    <value>Sending your Comment…</value>
   </data>
   <data name="General_Finish" xml:space="preserve">
     <value>Finish</value>
@@ -655,5 +657,15 @@ Storing of your IP Address for 24 Hours is a security precaution to prevent Spam
   </data>
   <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
     <value> A Network Exception occurred</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>An Error occurred while trying to start the ViVeTool GUI Feature Scanner.
+
+The File doesn't exist.</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn't connected to the Internet, or if the GitHub API is unreachable.
+
+You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List.</value>
   </data>
 </root>

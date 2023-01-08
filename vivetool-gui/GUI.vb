@@ -108,11 +108,6 @@ Public Class GUI
     Private Shared Function AppendMenu(hMenu As IntPtr, uFlags As Integer, uIDNewItem As Integer, lpNewItem As String) As Boolean
     End Function
 
-    Public Shared CopyExAndClose As New RadTaskDialogButton With {
-        .Text = My.Resources.Generic_Close,
-        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
-    }
-
 #Region "DEBUG Subs and Functions"
     Private Sub __DBG_SetRDDL_Build_Text_Click(sender As Object, e As EventArgs) Handles __DBG_SetRDDL_Build_Text.Click
         RDDL_Build.Text = "25158"
@@ -174,29 +169,29 @@ Public Class GUI
         End If
 #End If
 
-        'Listen to Application Crashes and show CrashReporter.Net if one occurs.
+        ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
         AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
 
-        'Comment Code
+        ' Comment Code
         AddHandler RMI_AddComment.Click, AddressOf ShowCommentForm
 
-        'Make a Background Thread that handles Background Tasks
+        ' Make a Background Thread that handles Background Tasks
         Dim BackgroundThread As New Threading.Thread(AddressOf BackgroundTasks) With {.IsBackground = True}
         BackgroundThread.SetApartmentState(Threading.ApartmentState.STA)
         BackgroundThread.Start()
 
-        'Disable the close button in the search row
+        ' Disable the close button in the search row
         RGV_MainGridView.MasterView.TableSearchRow.ShowCloseButton = False
 
-        'Fix Header Text
-        'Feature Name
+        ' Fix Header Text
+        ' Feature Name
         RGV_MainGridView.MasterTemplate.Columns(0).HeaderText = My.Resources.Generic_FeatureName
 
-        'Feature ID
+        ' Feature ID
         RGV_MainGridView.MasterTemplate.Columns(1).HeaderText = My.Resources.Generic_FeatureID
 
-        'Feature State
+        ' Feature State
         RGV_MainGridView.MasterTemplate.Columns(2).HeaderText = My.Resources.Generic_FeatureState
     End Sub
 
@@ -204,14 +199,14 @@ Public Class GUI
     ''' Background Tasks to be executed in a Thread
     ''' </summary>
     Private Sub BackgroundTasks()
-        'Check for Updates
+        ' Check for Updates
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
         ' Check if the Comments DB Server is online
         Invoke(Sub() RLE_StatusLabel.Text = "Checking if the Comments Database Server is available...")
         If DatabaseFunctions.ConnectionTest() = True Then HasDBAvailable = True
 
-        'Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
+        ' Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
         Invoke(Sub() RLE_StatusLabel.Text = "Populating the Build Combo Box...")
         PopulateBuildComboBox_Check()
     End Sub
@@ -220,7 +215,7 @@ Public Class GUI
     ''' Check for Internet Connectivity before trying to populate the Build Combo Box
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
-        'Add manual option
+        ' Add manual option
         Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
         If CheckForInternetConnection() = True Then
@@ -236,22 +231,16 @@ Public Class GUI
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Check_Ready)
         Else
             Invoke(Sub()
-                       'First, disable the Combo Box
+                       ' First, disable the Combo Box
                        RDDL_Build.Enabled = True
                        RDDL_Build.Text = My.Resources.Error_NetworkError
 
-                       'Second, change the Status Label
+                       ' Second, change the Status Label
                        RLE_StatusLabel.Text = My.Resources.Error_NetworkFunctionsDisabledF12
 
-                       'Third, Show an error message
-                       Dim RTD As New RadTaskDialogPage With {
-                        .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
-                        .Heading = My.Resources.Error_ANetworkErrorOccurred,
-                        .Text = My.Resources.Error_NetworkExceptionDetail1 & vbNewLine & vbNewLine & My.Resources.Error_NetworkExceptionDetail2,
-                        .Icon = RadTaskDialogIcon.ShieldWarningYellowBar
-                       }
-                       RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                       RadTaskDialog.ShowDialog(RTD)
+                       ' Third, Show an error message
+                       RadTD.Generate(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+                       My.Resources.Error_NetworkExceptionDetail_N, RadTaskDialogIcon.ShieldWarningYellowBar)
                    End Sub)
         End If
     End Sub
@@ -263,85 +252,51 @@ Public Class GUI
         Dim RepoURL As String = "https://api.github.com/repos/riverar/mach2/git/trees/master"
         Dim FeaturesFolderURL As String = String.Empty
 
-        'Gets the URL of the features Folder that is used in section 2
+        ' Gets the URL of the features Folder that is used in section 2
 #Region "1. Get the URL of the features folder"
-        'Required Headers for the GitHub API
+        ' Required Headers for the GitHub API
         Dim WebClientRepo As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
         WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
         WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
-        'Get the "tree" array from the API JSON Result
+        ' Get the "tree" array from the API JSON Result
         Try
             Dim ContentsJSONRepo As String = WebClientRepo.DownloadString(RepoURL)
             Dim JSONObjectRepo As JObject = JObject.Parse(ContentsJSONRepo)
             Dim JSONArrayRepo As JArray = CType(JSONObjectRepo.SelectToken("tree"), JArray)
 
-            'Look in the JSON Array for the element: "path" = "features"
+            ' Look in the JSON Array for the element: "path" = "features"
             For Each element In JSONArrayRepo
                 If element("path").ToString = "features" Then FeaturesFolderURL = element("url").ToString
             Next
 
         Catch webex As WebException
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
-                    .Heading = My.Resources.Error_ANetworkErrorOccurred,
-                    .Text = My.Resources.Error_NetworkException_GithubAPI,
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
+            Dim webex_Response As String
             Try
-                RTD.Expander.Text = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+                webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             Catch ex As Exception
-                RTD.Expander.Text = webex.ToString
+                webex_Response = webex.ToString
             End Try
 
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-            RTD.Expander.Text = ex.ToString
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
 #Region "2. Get the features folder File Contents"
-        'returns JSON File Contents of riverar/mach2/features
+        ' returns JSON File Contents of riverar/mach2/features
 
-        'Required Headers for the GitHub API
+        ' Required Headers for the GitHub API
         Dim WebClientFeatures As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
         WebClientFeatures.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
         WebClientFeatures.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
-        'Get the "tree" array from the API JSON Result
+        ' Get the "tree" array from the API JSON Result
         Try
-            '[DEV] Use Dev JSON to not get rate limited while Testing/Developing
-            'Dim ContentsJSON As String = TempJSONUsedInDevelopment
+            ' [DEV] Use Dev JSON to not get rate limited while Testing/Developing
+            ' Dim ContentsJSON As String = TempJSONUsedInDevelopment
             Dim ContentsJSONFeatures As String = WebClientFeatures.DownloadString(FeaturesFolderURL)
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
@@ -368,74 +323,37 @@ Public Class GUI
             Next
 
             Invoke(Sub()
-                       'Add the Items of tempList to the Combo Box
+                       ' Add the Items of tempList to the Combo Box
                        RDDL_Build.Items.AddRange(tempList)
 
-                       'De-select any Item
+                       ' De-select any Item
                        RDDL_Build.SelectedIndex = -1
 
-                       'Set default Text
+                       ' Set default Text
                        RDDL_Build.Text = My.Resources.Generic_SelectBuild
 
-                       'Add the Handler
+                       ' Add the Handler
                        AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
 
-                       'Enable the Combo Box
+                       ' Enable the Combo Box
                        RDDL_Build.Enabled = True
                    End Sub)
 
-            'Auto-load the newest Build if it is Enabled in the Settings
+            ' Auto-load the newest Build if it is Enabled in the Settings
             If My.Settings.AutoLoad Then Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
         Catch webex As WebException
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(DirectCast(webex.Response, HttpWebResponse).StatusDescription)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_ANetworkErrorOccurred,
-                .Heading = My.Resources.Error_NetworkException_GithubAPI,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-
+            Dim webex_Response As String
             Try
-                RTD.Expander.Text = My.Resources.Error_NetworkException_GithubAPI_Response &
-                    DirectCast(webex.Response, HttpWebResponse).StatusDescription
+                webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
             Catch ex As Exception
-                RTD.Expander.Text = webex.ToString
+                webex_Response = webex.ToString
             End Try
 
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-
-            RTD.Expander.Text = ex.ToString
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Generate(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
     End Sub
@@ -486,28 +404,28 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub PopulateDataGridView(sender As Object, e As EventArgs) 'Handles RDDL_Build.SelectedIndexChanged
-        'Disable Animations and selection. Helps with flickering
+        ' Disable Animations and selection. Helps with flickering
         AnimatedPropertySetting.AnimationsEnabled = False
         RGV_MainGridView.SelectionMode = GridViewSelectionMode.None
 
-        'Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
+        ' Close Combo Box. This needs to be done, because in some cases the Combo Box is half closed and half opened, allowing the user to change it, while the Background Worker is running, which will result in an exception.
         RDDL_Build.CloseDropDown()
 
-        'Disable Combo Box
+        ' Disable Combo Box
         RDDL_Build.Enabled = False
 
-        'Remove the Search Row temporarily
+        ' Remove the Search Row temporarily
         RGV_MainGridView.MasterView.TableSearchRow.Search("")
         RGV_MainGridView.MasterView.TableSearchRow.IsVisible = False
 
-        'If "Load manually..." is selected, then load from a TXT File, else load normally
+        ' If "Load manually..." is selected, then load from a TXT File, else load normally
         If RDDL_Build.Text = My.Resources.Generic_LoadManually Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {.IsBackground = True}
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
         ElseIf RDDL_Build.Text = Nothing Then
-            'Do Nothing
-        Else 'Run Background Worker
+            ' Do Nothing
+        Else ' Run Background Worker
             BGW_PopulateGridView.RunWorkerAsync()
         End If
     End Sub
@@ -516,7 +434,7 @@ Public Class GUI
     ''' Same code as BGW_PopulateGridView.RunWorkerAsync(), just that it get's the Feature List locally instead of from GitHub
     ''' </summary>
     Private Sub LoadFromManualTXT()
-        'Make a new OpenFileDialog
+        ' Make a new OpenFileDialog
         Dim OFD As New OpenFileDialog With {
             .InitialDirectory = "C:\",
             .Title = My.Resources.LoadManually_PathToAFeatureList,
@@ -524,16 +442,16 @@ Public Class GUI
         }
 
         If OFD.ShowDialog() = DialogResult.OK AndAlso IO.File.Exists(OFD.FileName) Then
-            'Remove all Group Descriptors
+            ' Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
-            'Set Status Label
+            ' Set Status Label
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Generic_PopulatingTheDataGridView)
 
-            'Clear Data Grid View
+            ' Clear Data Grid View
             Invoke(Sub() RGV_MainGridView.Rows.Clear())
 
-            'For each line add a grid view entry
+            ' For each line add a grid view entry
             Try
                 For Each Line In IO.File.ReadAllLines(OFD.FileName)
                     If Line = "## Unknown:" Then
@@ -547,16 +465,17 @@ Public Class GUI
                     ElseIf Line = "## Always Disabled:" Then
                         LineStage = My.Resources.Generic_AlwaysDisabled
                     End If
-                    'Split the Line at the :
+
+                    ' Split the Line at the :
                     Dim Str As String() = Line.Split(CChar(":"))
 
-                    'Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
+                    ' Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
                     Str = Str.Select(Function(s) s.Trim).ToArray()
 
-                    'If the Line is not empty, continue
+                    ' If the Line is not empty, continue
                     If Line IsNot "" AndAlso Line.Contains("#") = False Then
-                        'Get the Feature Enabled State from the currently processing line.
-                        'RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
+                        ' Get the Feature Enabled State from the currently processing line.
+                        ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                         Try
                             Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                             Dim Image = Nothing
@@ -565,9 +484,7 @@ Public Class GUI
                             If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
                                 If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                                     Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                                    If rows.Length >= 1 Then
-                                        Image = CommentsImg
-                                    End If
+                                    If rows.Length >= 1 Then Image = CommentsImg
                                 End If
                             End If
 #End Region
@@ -580,9 +497,7 @@ Public Class GUI
                             If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
                                 If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                                     Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                                    If rows.Length >= 1 Then
-                                        Image = CommentsImg
-                                    End If
+                                    If rows.Length >= 1 Then Image = CommentsImg
                                 End If
                             End If
 #End Region
@@ -593,28 +508,28 @@ Public Class GUI
                         End Try
                     End If
                 Next
-                'Move to the first row, remove the selection and change the Status Label to Done.
+                ' Move to the first row, remove the selection and change the Status Label to Done.
                 Invoke(Sub()
                            RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
                            RGV_MainGridView.CurrentRow = Nothing
                            RLE_StatusLabel.Text = My.Resources.Generic_Done
                        End Sub)
 
-                'Enable Grouping
+                ' Enable Grouping
                 Dim LineGroup As New Data.GroupDescriptor()
                 LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
                 Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
 
-                'Clear the selection
+                ' Clear the selection
                 Invoke(Sub()
                            RDDL_Build.SelectedIndex = -1
                            RDDL_Build.Enabled = True
                        End Sub)
 
-                'Make the Search Row Visible
+                ' Make the Search Row Visible
                 Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
 
-                'Enable Animations and selection
+                ' Enable Animations and selection
                 Invoke(Sub()
                            AnimatedPropertySetting.AnimationsEnabled = True
                            RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
@@ -622,53 +537,27 @@ Public Class GUI
             Catch ex As Exception
                 Invoke(
                     Sub()
-                        'Catch Any Exception that may occur
-                        'Create a Button that on Click, copies the Exception Text
-                        AddHandler CopyExAndClose.Click, New EventHandler(
-                           Sub()
-                               Try
-                                   My.Computer.Clipboard.SetText(ex.ToString)
-                               Catch clipex As Exception
-                                   'Do nothing
-                               End Try
-                           End Sub)
+                        ' Catch Any Exception that may occur
+                        ' Show an Error Dialog
+                        RadTD.Generate(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+                        Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
 
-                        'Fancy Message Box
-                        Dim RTD As New RadTaskDialogPage With {
-                            .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                            .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
-                            .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                        }
-
-                        'Add the Exception Text to the Expander
-                        RTD.Expander.Text = ex.ToString
-
-                        'Set the Text for the "Collapse Info" and "More Info" Buttons
-                        RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-                        RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-                        'Add the Button to the Message Box
-                        RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-                        'Show the Message Box
-                        RadTaskDialog.ShowDialog(RTD)
-
-                        'Clear the selection
+                        ' Clear the selection
                         RDDL_Build.SelectedIndex = -1
                         RDDL_Build.Enabled = True
 
-                        'Make the Search Row Visible
+                        ' Make the Search Row Visible
                         RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True
                     End Sub)
             End Try
         Else
-            'Clear the selection
+            ' Clear the selection
             Invoke(Sub()
                        RDDL_Build.SelectedIndex = -1
                        RDDL_Build.Enabled = True
                    End Sub)
 
-            'Resume searching, make the Search Row Visible
+            ' Resume searching, make the Search Row Visible
             Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
         End If
     End Sub
@@ -685,23 +574,23 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
-            'Debug
+            ' Debug
             Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
 
-            'Remove all Group Descriptors
+            ' Remove all Group Descriptors
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
-            'Load Comments
+            ' Load Comments
             If HasInternetConnection = True Then
                 Invoke(Sub() RLE_StatusLabel.Text = "Getting Feature Comments from the Database")
                 LoadCommentsFromDB(RDDL_Build.Text)
             End If
 
-            'Set Status Label
+            ' Set Status Label
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Generic_PopulatingTheDataGridView)
 
-            'Clear Data Grid View
-            'Fix for a weird Bug that happens randomly while clearing the rows if the search row has text in it
+            ' Clear Data Grid View
+            ' Fix for a weird Bug that happens randomly while clearing the rows if the search row has text in it
             Try
                 Invoke(Sub() RGV_MainGridView.Rows.Clear())
             Catch ex As Exception
@@ -709,15 +598,15 @@ Public Class GUI
                                             RDDL_Build.Text & ". " & ex.Message)
             End Try
 
-            'Prepare Web Client and download Build TXT
+            ' Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" &
                                    RDDL_Build.Text & ".txt", path)
 
-            'For each line add a grid view entry
+            ' For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
-                'Check Line Stage, used for Grouping
+                ' Check Line Stage, used for Grouping
                 Try
                     If CInt(RDDL_Build.Text) >= 17704 Then
                         If Line = "## Unknown:" Then
@@ -738,25 +627,23 @@ Public Class GUI
                     LineStage = My.Resources.Error_Error
                 End Try
 
-                'Split the Line at the :
+                ' Split the Line at the :
                 Dim Str As String() = Line.Split(CChar(":"))
 
-                'Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
+                ' Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
                 Str = Str.Select(Function(s) s.Trim).ToArray()
 
-                'If the Line is not empty, continue
+                ' If the Line is not empty, continue
                 If Line IsNot "" AndAlso Line.Contains("#") = False Then
-                    'Get the Feature Enabled State from the currently processing line.
-                    'RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
+                    ' Get the Feature Enabled State from the currently processing line.
+                    ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
                         Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                         Dim Image = Nothing
 
                         If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                            If rows.Length >= 1 Then
-                                Image = CommentsImg
-                            End If
+                            If rows.Length >= 1 Then Image = CommentsImg
                         End If
 
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage, Image))
@@ -765,9 +652,7 @@ Public Class GUI
 
                         If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                            If rows.Length >= 1 Then
-                                Image = CommentsImg
-                            End If
+                            If rows.Length >= 1 Then Image = CommentsImg
                         End If
 
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage, Image))
@@ -777,28 +662,28 @@ Public Class GUI
                 End If
             Next
 
-            'Move to the first row, remove the selection and change the Status Label to Done.
+            ' Move to the first row, remove the selection and change the Status Label to Done.
             Invoke(Sub()
                        RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
                        RGV_MainGridView.CurrentRow = Nothing
                        RLE_StatusLabel.Text = My.Resources.Generic_Done
                    End Sub)
 
-            'Delete Feature List from %TEMP%
+            ' Delete Feature List from %TEMP%
             IO.File.Delete(path)
 
-            'Enable Grouping
+            ' Enable Grouping
             Dim LineGroup As New Data.GroupDescriptor()
             LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
 
-            'Enable Animations and selection
+            ' Enable Animations and selection
             Invoke(Sub()
                        AnimatedPropertySetting.AnimationsEnabled = True
                        RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
                    End Sub)
 
-            'Make the Search Row Visible
+            ' Make the Search Row Visible
             Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
         Else
             Return
@@ -811,10 +696,10 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BGW_PopulateGridView.RunWorkerCompleted
-        'End BGW
+        ' End BGW
         BGW_PopulateGridView.CancelAsync()
 
-        'Enable the Build Combo Box
+        ' Enable the Build Combo Box
         RDDL_Build.Enabled = True
     End Sub
 
@@ -824,13 +709,13 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_ActivateF_Click(sender As Object, e As EventArgs) Handles RMI_ActivateF.Click
-        'Stop Searching temporarily
+        ' Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
-        'Set Selected Feature to Enabled
+        ' Set Selected Feature to Enabled
         SetConfig(FeatureEnabledState.Enabled)
 
-        'Resume Searching
+        ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
@@ -840,13 +725,13 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_DeactivateF_Click(sender As Object, e As EventArgs) Handles RMI_DeactivateF.Click
-        'Stop Searching temporarily
+        ' Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
-        'Set Selected Feature to Disabled
+        ' Set Selected Feature to Disabled
         SetConfig(FeatureEnabledState.Disabled)
 
-        'Resume Searching
+        ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
@@ -856,13 +741,13 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_RevertF_Click(sender As Object, e As EventArgs) Handles RMI_RevertF.Click
-        'Stop Searching temporarily
+        ' Stop Searching temporarily
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
-        'Set Selected Feature to Default Values
+        ' Set Selected Feature to Default Values
         SetConfig(FeatureEnabledState.Default)
 
-        'Resume Searching
+        ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
 
@@ -872,12 +757,12 @@ Public Class GUI
     ''' <param name="FeatureEnabledState">Specifies what Enabled State the Feature should be in. Can be either Enabled, Disabled or Default</param>
     Private Sub SetConfig(FeatureEnabledState As FeatureEnabledState)
         Try
-            'Initialize Variables
+            ' Initialize Variables
             Dim _enabledStateOptions, _variant, _variantPayloadKind, _variantPayload, _group As Integer
             _enabledStateOptions = 1
             _group = 4
 
-            'FeatureConfiguration Variable
+            ' FeatureConfiguration Variable
             Dim _configs As New List(Of FeatureConfiguration) From {
                 New FeatureConfiguration() With {
                     .FeatureId = CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value),
@@ -891,78 +776,35 @@ Public Class GUI
                 }
             }
 
-            'Set's the selected Feature to it's specified EnabledState. If anything goes wrong, display a Error Message in the Status Label.
-            'On Successful Operations; 
-            'RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
-            'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
+            ' Set's the selected Feature to it's specified EnabledState. If anything goes wrong, display a Error Message in the Status Label.
+            ' On Successful Operations; 
+            ' RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
+            ' and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
-                'Set Status Label
+                ' Set Status Label
                 RLE_StatusLabel.Text = String.Format(My.Resources.Error_SettingFeatureConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString)
 
-                'Fancy Message Box
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
-                    .Heading = String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
-                    .Icon = RadTaskDialogIcon.Error
-                }
-
-                'Add a Close Button instead of a OK Button
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                ' Fancy Message Box
+                RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred,
+                String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
+                Nothing, RadTaskDialogIcon.Error)
             Else
-                'Set Status Label
+                ' Set Status Label
                 RLE_StatusLabel.Text = String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString)
 
-                'Set Cell Text
+                ' Set Cell Text
                 RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
 
-                'Fancy Message Box
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = My.Resources.SetConfig_Success,
-                    .Heading = String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
-                    .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-                }
-
-                'Add a Close Button instead of a OK Button
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                ' Fancy Message Box
+                RadTD.Show(My.Resources.SetConfig_Success,
+                String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
+                Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             End If
         Catch ex As Exception
-            'Catch Any Exception that may occur
+            ' Catch Any Exception that may occur
 
-            'Create a Button that on Click, copies the Exception Text
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        My.Computer.Clipboard.SetText(ex.ToString)
-                    Catch clipex As Exception
-                        'Do nothing
-                    End Try
-                End Sub)
-
-            'Fancy Message Box
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = My.Resources.Error_Spaced_AnExceptionOccurred,
-                .Heading = My.Resources.Error_AnUnknownExceptionOccurred,
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.ToString
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub
 
@@ -994,9 +836,7 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Key EventArgs</param>
     Private Sub GUI_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        If e.KeyCode = Keys.F12 Then
-            SetManual.ShowDialog()
-        End If
+        If e.KeyCode = Keys.F12 Then SetManual.ShowDialog()
     End Sub
 
     ''' <summary>
@@ -1032,7 +872,7 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">FormClosing EventArgs</param>
     Private Sub GUI_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        'Exit all running Threads forcefully, should fix ObjectDisposed Exceptions
+        ' Exit all running Threads forcefully, should fix ObjectDisposed Exceptions
         Diagnostics.Process.GetCurrentProcess().Kill()
     End Sub
 
@@ -1041,8 +881,8 @@ Public Class GUI
     End Sub
 
     Private Sub RGV_MainGridView_ContextMenuOpening(sender As Object, e As ContextMenuOpeningEventArgs) Handles RGV_MainGridView.ContextMenuOpening
-        'DEBUG ONLY
-        'If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True AndAlso RDDL_Build.Text IsNot String.Empty Then
+        ' DEBUG ONLY
+        ' If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True AndAlso RDDL_Build.Text IsNot String.Empty Then
         If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True Then
             e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
             e.ContextMenu.Items.Add(RMI_AddComment)
@@ -1054,20 +894,23 @@ Public Class GUI
     Private Sub LoadCommentsFromDB(Build As String)
         Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
 
-        'Public, Read-Only Access Connection String
+        ' Public, Read-Only Access Connection String
         Dim DB_Connection As New MySqlConnectionStringBuilder With {
-            .Server = "direct.rawrr.cf", .UserID = "ViVeTool_GUI", .Password = "ViVeTool_GUI",
-            .Database = "ViVeTool_GUI", .ConnectionTimeout = 120
+            .Server = "direct.rawrr.cf",
+            .UserID = "ViVeTool_GUI",
+            .Password = "ViVeTool_GUI",
+            .Database = "ViVeTool_GUI",
+            .ConnectionTimeout = 120
         }
 
-        'Clear local DataTable
+        ' Clear local DataTable
         Build_DT.Clear()
 
-        'Reset Variable
+        ' Reset Variable
         TableDoesNotExist = False
 
         Try
-            'Get the latest comments Table for the current Build and store it in a local Data Table
+            ' Get the latest comments Table for the current Build, and store it in a local Data Table
             Using con As New MySqlConnection(DB_Connection.ConnectionString)
                 Using cmd As New MySqlCommand(String.Format("SELECT * FROM ViVeTool_GUI.`{0}`;", Build), con)
                     cmd.CommandType = CommandType.Text
@@ -1080,36 +923,28 @@ Public Class GUI
             End Using
         Catch notFoundEx As MySqlException
             Diagnostics.Debug.WriteLine($"LoadCommentsFromDB Error: {notFoundEx.Message}")
-            'Fancy Message Box
-            Dim RTD As New RadTaskDialogPage With {
-                .Caption = " A Database Error occurred",
-                .Heading = "A Database Error occurred",
-                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-            }
 
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            ' Fancy Message Box
+            Dim Text, Expander As String
 
             Select Case notFoundEx.ErrorCode
                 Case MySqlErrorCode.NoSuchTable
                     TableDoesNotExist = True
                     Diagnostics.Debug.WriteLine("Table does not exist")
+                    Exit Try
                 Case MySqlErrorCode.ServerShutdown
-                    RTD.Text = "Comments couldn't be loaded, because the Database Server is currently shutting down."
-                    RadTaskDialog.ShowDialog(RTD)
+                    Text = "Comments couldn't be loaded, because the Database Server is currently shutting down."
+                    Expander = notFoundEx.Message
                 Case MySqlErrorCode.UnableToConnectToHost
-                    RTD.Text = "Comments couldn't be loaded, because the Database Server is currently unavailable."
-                    RTD.Expander.Text = notFoundEx.Message
-                    RadTaskDialog.ShowDialog(RTD)
+                    Text = "Comments couldn't be loaded, because the Database Server is currently unavailable."
+                    Expander = notFoundEx.Message
                 Case Else
-                    RTD.Text = "An Error occurred while communicating with the Comments Database Server"
-                    RTD.Expander.Text = notFoundEx.Message
-                    RadTaskDialog.ShowDialog(RTD)
+                    Text = "An Error occurred while communicating with the Comments Database Server"
+                    Expander = notFoundEx.Message
             End Select
+
+            RadTD.Show(" A Database Error occurred", "A Database Error occurred", Text, RadTaskDialogIcon.ShieldErrorRedBar,
+            notFoundEx, Expander, Expander)
         Catch ex As Exception
             Invoke(Sub() MsgBox(ex.ToString))
         End Try
@@ -1134,19 +969,14 @@ Public Class GUI
             Dim cRow = RGV_MainGridView.CurrentRow
             Dim cCell = RGV_MainGridView.CurrentCell
 
-            'Check if the Cell Image matches the Comments Image
+            ' Check if the Cell Image matches the Comments Image
             If cCell IsNot Nothing AndAlso cCell.Image Is CommentsImg Then
-                'Display the comment in a message box
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = String.Format(" Comment for {0}", cRow.Cells(0).Value),
-                    .Heading = Build_DT.Rows(0)("Comment").ToString,
-                    .Icon = New RadTaskDialogIcon(My.Resources.icons8_comments_24px)
-                }
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                RadTaskDialog.ShowDialog(RTD)
+                ' Display the comment in a message box
+                RadTD.Show(String.Format(" Comment for {0}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
+                Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
             End If
         Catch ex As NullReferenceException
-            'Do nothing
+            ' Do nothing
         End Try
     End Sub
 End Class
