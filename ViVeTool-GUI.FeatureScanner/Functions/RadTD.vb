@@ -50,7 +50,7 @@ Public Class RadTD
                         If exCustomClipboard IsNot Nothing Then ClipText = exCustomClipboard
                         My.Computer.Clipboard.SetText(ClipText)
                     Catch clipex As Exception
-                        'Do nothing
+                        ' Do nothing
                     End Try
                 End Sub)
             RTD.CommandAreaButtons.Add(CopyExAndClose)
@@ -85,7 +85,8 @@ Public Class RadTD
             .Caption = Caption,
             .Heading = Heading,
             .Text = Text,
-            .Icon = Icon}
+            .Icon = Icon
+        }
 
         ' Add Copy Exception and Close button if ex is specified
         If ex IsNot Nothing Then
@@ -96,7 +97,7 @@ Public Class RadTD
                         If exCustomClipboard IsNot Nothing Then ClipText = exCustomClipboard
                         My.Computer.Clipboard.SetText(ClipText)
                     Catch clipex As Exception
-                        'Do nothing
+                        ' Do nothing
                     End Try
                 End Sub)
             RTD.CommandAreaButtons.Add(CopyExAndClose)

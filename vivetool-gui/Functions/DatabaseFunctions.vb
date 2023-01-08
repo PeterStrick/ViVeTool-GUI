@@ -20,8 +20,12 @@ Public Class DatabaseFunctions
     Public Shared Function ConnectionTest() As Boolean
         ' Public, Read-Only Access Connection String
         Dim DB_Connection As New MySqlConnectionStringBuilder With {
-            .Server = "direct.rawrr.cf", .UserID = "ViVeTool_GUI", .Password = "ViVeTool_GUI",
-            .Database = "ViVeTool_GUI", .ConnectionTimeout = 120}
+            .Server = "direct.rawrr.cf",
+            .UserID = "ViVeTool_GUI",
+            .Password = "ViVeTool_GUI",
+            .Database = "ViVeTool_GUI",
+            .ConnectionTimeout = 120
+        }
 
         Try
             ' Try to connect to the Database Server

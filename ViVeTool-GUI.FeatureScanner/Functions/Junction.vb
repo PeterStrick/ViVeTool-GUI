@@ -149,7 +149,7 @@ Public Class Junction
     Public Shared Sub Create(junctionPath As String, targetDir As String, Optional overwrite As Boolean = False)
         Const IO_REPARSE_TAG_MOUNT_POINT As UInteger = &HA0000003UI
         Const FSCTL_SET_REPARSE_POINT As UInteger = &H900A4
-        'This prefix indicates to NTFS that the path is to be treated as a non-interpreted path in the virtual file system.
+        ' This prefix indicates to NTFS that the path is to be treated as a non-interpreted path in the virtual file system.
         Const NonInterpretedPathPrefix As String = "\??\"
 
         If Path.GetFullPath(junctionPath).Equals(Path.GetFullPath(targetDir)) Then
@@ -158,8 +158,7 @@ Public Class Junction
             If Not overwrite Then Throw New IOException("Junction Class: Directory already exists and overwrite parameter is false.")
         ElseIf Not Directory.Exists(targetDir) Then
             Throw New IOException("Junction Class: Target Directory doesn't exist.")
-        Else
-            Directory.CreateDirectory(junctionPath)
+        Else Directory.CreateDirectory(junctionPath)
         End If
         targetDir = NonInterpretedPathPrefix & Path.GetFullPath(targetDir)
 
@@ -202,13 +201,13 @@ Public Class Junction
     ''' Creates Junctions used in Symbol Downloading and Scanning
     ''' </summary>
     Public Shared Sub FeatureScanner_CreateJunctions()
-        'Create a new Folder for the Junctions
+        ' Create a new Folder for the Junctions
         If Not Directory.Exists("C:\FeatureScanner") Then
             Directory.CreateDirectory("C:\FeatureScanner")
             Debug.WriteLine("Directory C:\FeatureScanner created")
         End If
 
-        'Create Junctions
+        ' Create Junctions
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\System32", "C:\Windows\System32"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\SysWOW64", "C:\Windows\SysWOW64"))
         SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ImmersiveControlPanel", "C:\Windows\ImmersiveControlPanel"))
@@ -229,7 +228,7 @@ Public Class Junction
     ''' Deletes Junctions that have been used in Symbol Downloading and Scanning
     ''' </summary>
     Public Shared Sub FeatureScanner_DeleteJunctions()
-        'Delete Junctions
+        ' Delete Junctions
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\System32"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SysWOW64"))
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ImmersiveControlPanel"))
@@ -245,7 +244,7 @@ Public Class Junction
 
         Debug.WriteLine("Junctions in C:\FeatureScanner deleted")
 
-        'Delete the Junctions root Folder
+        ' Delete the Junctions root Folder
         SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner"))
         Debug.WriteLine("Directory C:\FeatureScanner deleted")
     End Sub
@@ -258,7 +257,7 @@ Public Class Junction
         Try
             Action()
         Catch ex As Exception
-            'Do nothing
+            ' Do nothing
         End Try
     End Sub
 End Class
