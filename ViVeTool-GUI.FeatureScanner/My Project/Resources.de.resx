@@ -193,7 +193,7 @@ After that, the application will automatically start to download PDB Files.
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten. Notwendige Dateien für den ViVeTool GUI Feature Scanner fehlen.</value>
   </data>
-  <data name="Error_MissingFiles_Text" xml:space="preserve">
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
     <value>Bitte überprüfen sie, dass die folgenden Dateien vorhanden sind:</value>
   </data>
   <data name="Error_ShowException" xml:space="preserve">
@@ -279,5 +279,10 @@ After that, the application will automatically start to download PDB Files.
   </data>
   <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
     <value> Nicht unterstütztes Build</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Bitte überprüfen sie, dass die folgenden Dateien vorhanden sind:
+
+{0}</value>
   </data>
 </root>

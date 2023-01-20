@@ -89,12 +89,12 @@ Public NotInheritable Class AboutAndSettings
                 Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
-                RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_GenericWin32Exception_Heading,
+                RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_GenericWin32Exception_Heading,
                 My.Resources.Error_GenericWin32Exception_Text, RadTaskDialogIcon.ShieldErrorRedBar,
                 wex, wex.ToString, wex.ToString)
             End Try
         Else
-            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_FeatureScannerNotFound_N,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_FeatureScannerNotFound_N,
             Nothing, RadTaskDialogIcon.Error)
         End If
     End Sub

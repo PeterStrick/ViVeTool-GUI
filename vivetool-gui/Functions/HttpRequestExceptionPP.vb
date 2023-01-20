@@ -22,6 +22,11 @@ Imports System.Net.Http
 ''' </summary>
 Public Class HttpRequestExceptionPP : Inherits HttpRequestException
 
+    ''' <summary>
+    ''' New Sub(). Initializes the Variables used for the Exception Class
+    ''' </summary>
+    ''' <param name="HttpStatusCode"></param>
+    ''' <param name="HttpReasonPhrase"></param>
     Public Sub New(HttpStatusCode As HttpStatusCode, HttpReasonPhrase As String)
         StatusCode = HttpStatusCode
         ReasonPhrase = HttpReasonPhrase
@@ -32,5 +37,10 @@ Public Class HttpRequestExceptionPP : Inherits HttpRequestException
     ''' </summary>
     ''' <returns>HTTP Status Codes as an Integer</returns>
     Public Property StatusCode As HttpStatusCode
+
+    ''' <summary>
+    ''' New ReasonPhrase Property for the custom Exception Class
+    ''' </summary>
+    ''' <returns>HTTP Reason Phrase as an String</returns>
     Public Property ReasonPhrase As String
 End Class

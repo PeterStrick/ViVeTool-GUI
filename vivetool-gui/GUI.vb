@@ -278,10 +278,10 @@ Public Class GUI
                 webex_Response = webex.ToString
             End Try
 
-            RadTD.Show(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
             My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
@@ -349,7 +349,7 @@ Public Class GUI
                 webex_Response = webex.ToString
             End Try
 
-            RadTD.Show(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
             My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
             RadTD.Generate(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
@@ -785,7 +785,7 @@ Public Class GUI
                 RLE_StatusLabel.Text = String.Format(My.Resources.Error_SettingFeatureConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString)
 
                 ' Fancy Message Box
-                RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred,
+                RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred,
                 String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
                 Nothing, RadTaskDialogIcon.Error)
             Else
@@ -796,14 +796,14 @@ Public Class GUI
                 RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
 
                 ' Fancy Message Box
-                RadTD.Show(My.Resources.SetConfig_Success,
+                RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             End If
         Catch ex As Exception
             ' Catch Any Exception that may occur
 
-            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub
@@ -943,7 +943,7 @@ Public Class GUI
                     Expander = notFoundEx.Message
             End Select
 
-            RadTD.Show(" A Database Error occurred", "A Database Error occurred", Text, RadTaskDialogIcon.ShieldErrorRedBar,
+            RadTD.ShowDialog(" A Database Error occurred", "A Database Error occurred", Text, RadTaskDialogIcon.ShieldErrorRedBar,
             notFoundEx, Expander, Expander)
         Catch ex As Exception
             Invoke(Sub() MsgBox(ex.ToString))
@@ -972,7 +972,7 @@ Public Class GUI
             ' Check if the Cell Image matches the Comments Image
             If cCell IsNot Nothing AndAlso cCell.Image Is CommentsImg Then
                 ' Display the comment in a message box
-                RadTD.Show(String.Format(" Comment for {0}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
+                RadTD.ShowDialog(String.Format(" Comment for {0}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
                 Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
             End If
         Catch ex As NullReferenceException

@@ -268,7 +268,7 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>发生了错误。用于 ViVeTool GUI Feature Scanner 正常工作的文件丢失。</value>
   </data>
-  <data name="Error_MissingFiles_Text" xml:space="preserve">
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
     <value>请检查以下文件是否存在：</value>
   </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
@@ -308,5 +308,10 @@ ViVeTool GUI Feature Scanner &lt;strong&gt;不应被普通用户使用&lt;/stron
   </data>
   <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
     <value> 不支持的 Build</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>请检查以下文件是否存在：
+
+{0}</value>
   </data>
 </root>

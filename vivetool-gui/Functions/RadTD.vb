@@ -23,7 +23,22 @@ Public Class RadTD
     }
 
     ''' <summary>
-    ''' Generates and shows a Rad Task Dialog as an Error Dialog
+    ''' Generates and shows a Rad Task Dialog as an Task Dialog. Uses ShowDialog()
+    ''' </summary>
+    ''' <param name="Caption">Task Dialog Caption</param>
+    ''' <param name="Heading">Task Dialog Heading</param>
+    ''' <param name="Text">Task Dialog Text</param>
+    ''' <param name="Icon">Task Dialog Icon/Shield Bar</param>
+    ''' <param name="ex">Optional: Exception</param>
+    ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
+    ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
+    Public Shared Sub ShowDialog(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
+        ' Show the Dialog
+        RadTaskDialog.ShowDialog(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
+    End Sub
+
+    ''' <summary>
+    ''' Generates and shows a Rad Task Dialog as an Task Dialog. Uses Show()
     ''' </summary>
     ''' <param name="Caption">Task Dialog Caption</param>
     ''' <param name="Heading">Task Dialog Heading</param>
@@ -33,43 +48,12 @@ Public Class RadTD
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
     Public Shared Sub Show(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
-        ' Generate Rad TaskDialog Page
-        Dim RTD As New RadTaskDialogPage With {
-            .Caption = Caption,
-            .Heading = Heading,
-            .Text = Text,
-            .Icon = Icon
-        }
-
-        ' Add Copy Exception and Close button if ex is specified
-        If ex IsNot Nothing Then
-            AddHandler CopyExAndClose.Click, New EventHandler(
-                Sub()
-                    Try
-                        Dim ClipText As String = ex.ToString
-                        If exCustomClipboard IsNot Nothing Then ClipText = exCustomClipboard
-                        My.Computer.Clipboard.SetText(ClipText)
-                    Catch clipex As Exception
-                        ' Do nothing
-                    End Try
-                End Sub)
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-        Else RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-        End If
-
-        ' Add Expander if it is specified
-        If ExpandedText IsNot Nothing Then
-            RTD.Expander.Text = ExpandedText
-            RTD.Expander.ExpandedButtonText = My.Resources.Error_CollapseException
-            RTD.Expander.CollapsedButtonText = My.Resources.Error_ShowException
-        End If
-
         ' Show the Dialog
-        RadTaskDialog.ShowDialog(RTD)
+        RadTaskDialog.Show(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
     End Sub
 
     ''' <summary>
-    ''' Generates and returns a Rad Task Dialog as an Error Dialog
+    ''' Generates and returns a Rad Task Dialog as an Task Dialog
     ''' </summary>
     ''' <param name="Caption">Task Dialog Caption</param>
     ''' <param name="Heading">Task Dialog Heading</param>
