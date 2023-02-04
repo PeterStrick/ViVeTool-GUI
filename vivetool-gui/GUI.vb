@@ -884,10 +884,14 @@ Public Class GUI
         ' DEBUG ONLY
         ' If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True AndAlso RDDL_Build.Text IsNot String.Empty Then
         If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True Then
-            e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
-            e.ContextMenu.Items.Add(RMI_AddComment)
-            CommentsClient.FeatureName = RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
-            CommentsClient.Build = RDDL_Build.Text
+            Try
+                e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
+                e.ContextMenu.Items.Add(RMI_AddComment)
+                CommentsClient.FeatureName = RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
+                CommentsClient.Build = RDDL_Build.Text
+            Catch ex As ArgumentException
+                ' Exception that may occur from whilly-nilly spam opening the context menu and scrolling down
+            End Try
         End If
     End Sub
 
