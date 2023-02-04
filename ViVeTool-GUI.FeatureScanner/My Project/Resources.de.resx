@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+Willkommen bei dem ViVeTool GUI Feature Scanner
+&lt;/p&gt;&lt;p&gt;
+Dieses Tool wird verwendet zum herunterladen und durchsuchen von .pdb (Program Debug Database) Dateien auf neuen Windows 10/11 Insider Builds, um eine Feature Liste zu erstellen.
+&lt;/p&gt;&lt;p&gt;
+Die Verwendung des ViVeTool GUI Feature Scanners, &lt;strong&gt;ist nicht für die Verwendung von normalen Benutzern gedacht&lt;/strong&gt;. Das Herunterladen der PDB Dateien vom Microsoft Symbol Server, kann abhängig ihrer Internetverbindung mehr als 2 Stunden dauern.
+&lt;/p&gt;&lt;p&gt;
+This Tool requires:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5~30GB of Disk Space to store the downloaded Debug Symbols into
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+A installed copy of the Debugging Tools for Windows available from the Windows SDK
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+After making sure that the requirements are met, set the Text Boxes below to their respective values and press on "Continue". Hover over them to for an example.
+&lt;/p&gt;&lt;p&gt;
+After that, the application will automatically start to download PDB Files.
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>Pfad zu symchk.exe von den Windows Debug Tools</value>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>Berechnet…</value>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Derzeitige Größe von {0}: {1}</value>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>Gesamtanzahl von Dateien in {0}: {1}</value>
+  </data>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Gesamtanzahl von Ordnern in {0}: {1}</value>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>Debug Symbol durchsuche abgeschlossen</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> Datei erfolgreich kopiert</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>{0} wurde erfolgreich zu ihren Desktop kopiert.</value>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>Ausgangs Datei: {0}</value>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
+    <value> Debug Symbol Ordner erfolgreich gelöscht</value>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} wurde erfolgreich gelöscht.</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Ein kritischer Fehler ist aufgetreten</value>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Fehlerdetails zuklappen</value>
+  </data>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>Beim Versuch {0} auf Ihren Desktop zu kopieren, ist eine Ausnahme aufgetreten.</value>
+  </data>
+  <data name="Error_IOError" xml:space="preserve">
+    <value>IO Fehler</value>
+  </data>
+  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
+    <value>Beim Versuch die Symbol Dateien zu durchsuchen, ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
+    <value>Die Anwendung wird nun versuchen, den Symbol Ordner erneut zu durchsuchen.</value>
+  </data>
+  <data name="Error_MissingFiles_Heading" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten. Notwendige Dateien für den ViVeTool GUI Feature Scanner fehlen.</value>
+  </data>
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
+    <value>Bitte überprüfen sie, dass die folgenden Dateien vorhanden sind:</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Fehlerdetails aufklappen</value>
+  </data>
+  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
+    <value> Ein Fehler ist aufgetreten</value>
+  </data>
+  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
+    <value> Eine Ausnahme ist aufgetreten</value>
+  </data>
+  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
+    <value>Während des Symboldateien herunterladen, ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>Eine Ausnahme trat beim Versuch auf, {0} zu löschen</value>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Dunkles Thema</value>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>{0} löschen</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Helles Thema</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>Symbol {0} heruntergeladen.</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Kopiert die Fehlerdetails in die Zwischenablage, und schließt den Dialog</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>Beispiel Pfad: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>Die heruntergeladenen Debug Symbole können zwischen 5 und 30 GB in Gesamtgröße variieren.</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>Wählen Sie einen Ordner aus, um die heruntergeladenen Debug Symbole zu speichern. Die heruntergeladenen .PDB Dateien benötigen normalerweise bis zu 5 bis 8 GB Speicherplatz.</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>Der Debug Symbol Scan ist vollständig. Kehren Sie zum ViVeTool GUI Feature Scanner zurück, um mehr zu erfahren.</value>
+  </data>
+  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
+    <value>Überprüfen Sie, ob Sie Zugriff auf symchk.exe haben und dass Ihr Antivirus es nicht blockiert.</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
+    <value>Beim Versuch, eine Testdatei in den Symbolordner zu schreiben, ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>Eine Ausnahme trat beim Versuch auf, eine Testdatei auf {0} zu schreiben</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
+    <value>Ein Symbol Ordner muss angegeben werden, um die Program Debug Datenbankdateien herunterzuladen.</value>
+  </data>
+  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
+    <value>Beim Versuch, eine Testdatei in {0} zu schreiben, ist ein Fehler aufgetreten</value>
+  </data>
+  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
+    <value>Bitte stellen Sie sicher, dass die Anwendung einen Schreibzugriff auf den Ordner hat und dass der Ordner nicht schreibgeschützt ist.</value>
+  </data>
+  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
+    <value>Bei der Pfad-Überprüfung trat ein Fehler auf, überprüfen Sie ob der angegebene Pfad zu symchk.exe gültig ist.</value>
+  </data>
+  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
+    <value>Bitte geben Sie einen gültigen Pfad zu symchk.exe ein.</value>
+  </data>
+  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
+    <value>Wenn Sie symchk.exe nicht finden können, befindet sich dies normalerweise im Installationsverzeichnis des Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Sie führen ein nicht unterstütztes Windows 10 Build aus. ViVe, ViVeTool und ViVeTool GUI benötigen Windows 10 Build 18963 oder höher, um ordnungsgemäß zu funktionieren. Ihr Build ist: {0}</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Nicht unterstütztes Build</value>
+  </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Nicht unterstütztes Build</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Bitte überprüfen sie, dass die folgenden Dateien vorhanden sind:
+
+{0}</value>
+  </data>
+</root>

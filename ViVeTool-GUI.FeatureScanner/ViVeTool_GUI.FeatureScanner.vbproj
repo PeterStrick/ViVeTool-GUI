@@ -36,6 +36,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
     <OutputPath>bin\x64\Debug\</OutputPath>
+    <Optimize>true</Optimize>
+    <DefineDebug>true</DefineDebug>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <PlatformTarget>x64</PlatformTarget>
@@ -45,12 +47,28 @@
     <Reference Include="CrashReporter.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=7828e0fd88cab698, processorArchitecture=MSIL">
       <HintPath>..\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadToastNotification, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadToastNotification.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadToastNotification.Design, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadToastNotification.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RichTextEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
@@ -63,6 +81,14 @@
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
@@ -81,8 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="CrashReporter.vb" />
-    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="Functions\CrashReporter.vb" />
+    <Compile Include="Functions\GeneralFunctions.vb" />
+    <Compile Include="Functions\GlobalSuppressions.vb" />
+    <Compile Include="Functions\Junction.vb" />
+    <Compile Include="Functions\RadTD.vb" />
     <Compile Include="ScannerUI.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +120,21 @@
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.de.resx" />
+    <EmbeddedResource Include="My Project\Resources.id.resx" />
+    <EmbeddedResource Include="My Project\Resources.zh.resx" />
+    <EmbeddedResource Include="ScannerUI.de.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerUI.id.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScannerUI.zh.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScannerUI.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -139,10 +183,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_portrait_mode_scanning.ico" />
-    <Content Include="mach2.exe">
+    <Content Include="mach2\mach2.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="msdia140.dll">
+    <Content Include="mach2\msdia140.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
