@@ -92,7 +92,7 @@ class comments(commands.Cog):
         # Create the MySQL Table if it doesn't exist
         Exists = await MySQL_CheckIfTableExists(build)
         if Exists is False:
-            DB_Cursor.execute(f"CREATE TABLE {DB_Comments_Public}.`{build}` (FeatureName varchar(100) NOT NULL, Comment varchar(100) NOT NULL)")
+            DB_Cursor.execute(f"CREATE TABLE {DB_Comments_Public}.`{build}` (FeatureName varchar(100) NOT NULL COLLATE 'utf8mb4_general_ci', Comment TEXT NOT NULL COLLATE 'utf8mb4_general_ci')")
             await send_embed(ctx, f"Successfully created the Table {build}", discord.Color.green(), UseRespond=True)
             LogAndPrint(f"Created MySQL Table {build}", "info")
 

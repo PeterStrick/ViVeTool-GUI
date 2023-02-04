@@ -278,7 +278,7 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>An Error occurred. Files required for ViVeTool GUI Feature Scanner to work properly are missing.</value>
   </data>
-  <data name="Error_MissingFiles_Text" xml:space="preserve">
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
     <value>Please check that the following files are present:</value>
   </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
@@ -346,5 +346,10 @@ If you can not find symchk.exe, it is usually located at the Installation Direct
     <value>An Error occurred while trying to write a test file to {0}
 
 Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Please check that the following files are present:
+
+{0}</value>
   </data>
 </root>

@@ -168,7 +168,7 @@ Public Class ScannerUI
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 50)
         Else
             ' Show the Message Box
-            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
             My.Resources.Error_SymchkPath_N, RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
@@ -197,7 +197,7 @@ Public Class ScannerUI
                     IO.File.Delete(RTB_SymbolPath.Text & "\Test.txt")
                 Else
                     ' Show the Message Box
-                    RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                    RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
                     String.Format(My.Resources.Error_SymbolPath_NewN, RTB_SymbolPath.Text),
                     RadTaskDialogIcon.ShieldErrorRedBar)
 
@@ -211,7 +211,7 @@ Public Class ScannerUI
                 End If
             Catch ex As Exception
                 ' Show an Error Dialog
-                RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+                RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
                     String.Format(My.Resources.Error_SymbolPath_NewN, RTB_SymbolPath.Text),
                     RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.Message)
 
@@ -225,7 +225,7 @@ Public Class ScannerUI
             End Try
         Else
             'Show an Error Dialog
-            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
                     My.Resources.Error_SymbolFolderTestFile_N, RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
@@ -292,7 +292,7 @@ Public Class ScannerUI
             Proc.CancelErrorRead()
         Catch ex As Exception
             ' Show an Error Dialog
-            RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
                        My.Resources.Error_SymbolDownload_N, RadTaskDialogIcon.ShieldErrorRedBar)
         End Try
 
@@ -387,7 +387,7 @@ Public Class ScannerUI
             Proc.WaitForExit()
 
             If Proc.ExitCode >= 1 Then
-                Invoke(Sub() RadTD.Show(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                Invoke(Sub() RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
                             My.Resources.Error_mach2Scan_N, RadTaskDialogIcon.ShieldErrorRedBar))
             Else mach2_ExitCode = 0
             End If
@@ -503,7 +503,7 @@ Public Class ScannerUI
                 IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", RSFD.FileName, True)
             End If
         Catch ex As Exception
-            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
             String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
             RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try
@@ -519,13 +519,13 @@ Public Class ScannerUI
             IO.Directory.Delete(My.Settings.SymbolPath, True)
 
             ' Show the Task Dialog
-            RadTD.Show(My.Resources.Done_SymbolFolderDeleted_Caption,
+            RadTD.ShowDialog(My.Resources.Done_SymbolFolderDeleted_Caption,
                        String.Format(My.Resources.Done_SymbolFolderDeleted_Heading_N, My.Settings.SymbolPath),
                        Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
         Catch ex As Exception
             ' Show the Error Dialog
 
-            RadTD.Show(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
             String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
             RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try

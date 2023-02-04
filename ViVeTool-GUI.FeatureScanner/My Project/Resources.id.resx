@@ -268,7 +268,7 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>Terjadi kesalahan. File yang diperlukan agar ViVeTool GUI Feature Scanner berfungsi dengan baik tidak ada.</value>
   </data>
-  <data name="Error_MissingFiles_Text" xml:space="preserve">
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
     <value>Harap periksa apakah ada file berikut:</value>
   </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
@@ -308,5 +308,10 @@ Setelah itu, aplikasi akan secara otomatis mulai mengunduh File PDB.
   </data>
   <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
     <value> Build Tidak Didukung</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Harap periksa apakah ada file berikut:
+
+{0}</value>
   </data>
 </root>

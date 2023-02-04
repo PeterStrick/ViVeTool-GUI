@@ -22,7 +22,7 @@ Namespace My
             If Environment.OSVersion.Version.Build >= 18963 Then
                 ' OS Build Check passed.
             Else
-                RadTD.Show(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
+                RadTD.ShowDialog(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
                            String.Format(Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
                            RadTaskDialogIcon.ShieldErrorRedBar)
                 End
@@ -38,8 +38,8 @@ Namespace My
             ' Check if mach2.exe and msdia140.dll are present
             If IO.File.Exists(Application.Info.DirectoryPath & "\mach2\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\mach2\msdia140.dll") = False Then
                 ' Show the Task Dialog
-                RadTD.Show(Resources.Error_Spaced_AnErrorOccurred, Resources.Error_MissingFiles_Heading,
-                           Resources.Error_MissingFiles_Text & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
+                RadTD.ShowDialog(Resources.Error_Spaced_AnErrorOccurred, Resources.Error_MissingFiles_Heading,
+                           String.Format(Resources.Error_MissingFiles_Text_N, "mach2.exe" & vbNewLine & "msdia140.dll"),
                            RadTaskDialogIcon.ShieldErrorRedBar)
                 End
             End If

@@ -32,7 +32,7 @@ Namespace My
             If Environment.OSVersion.Version.Build >= 18963 Then
                 ' OS Build Check passed.
             Else
-                RadTD.Show(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
+                RadTD.ShowDialog(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
                            String.Format(Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
                            RadTaskDialogIcon.ShieldErrorRedBar)
                 End
@@ -45,7 +45,8 @@ Namespace My
             ' Set ToggleState for RTS_AutoLoad
             If Settings.AutoLoad Then
                 AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
-            Else AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
+            Else
+                AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
             End If
 
             ' Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
