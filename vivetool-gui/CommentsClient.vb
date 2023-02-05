@@ -129,7 +129,7 @@ Public Class CommentsClient
     ''' </summary>
     Private Async Sub SendComment_Thread()
         'To fix String Escaping, " will be replaced by ""
-        Dim CommentString As String = RL_Comments.Text.Replace(Chr(34), Chr(34) & Chr(34))
+        Dim CommentString As String = RL_Comments.Text.Replace(Chr(34), Chr(36) & Chr(64) & Chr(36))
 
         'Create a JSON Dictionary
         Dim JSONDict As New Dictionary(Of String, Object) From {
