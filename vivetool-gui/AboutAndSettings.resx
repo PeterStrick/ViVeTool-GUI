@@ -117,302 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
-    <value>PB_AppImage</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
-    <value>RL_Comments</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
-    <value>RL_ProductName</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
-    <value>RL_Description</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
-    <value>RL_Version</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
-    <value>RL_License</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_License.Parent" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
-  </data>
-  <data name="RPVP_About.Text" xml:space="preserve">
-    <value>  About ViVeTool GUI</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Name" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBox1.Name" xml:space="preserve">
-    <value>RadGroupBox1</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBox1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
-    <value>RPVP_Settings</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Name" xml:space="preserve">
-    <value>RGB_Theming</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.Parent" xml:space="preserve">
-    <value>RPVP_Settings</value>
-  </data>
-  <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RGB_Behaviour.Name" xml:space="preserve">
-    <value>RGB_Behaviour</value>
-  </data>
-  <data name="&gt;&gt;RGB_Behaviour.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RGB_Behaviour.Parent" xml:space="preserve">
-    <value>RPVP_Settings</value>
-  </data>
-  <data name="&gt;&gt;RGB_Behaviour.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
-        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
-        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
-        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
-        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
-        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
-        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
-        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
-        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
-        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
-        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
-        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
-        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
-        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
-        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
-        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
-        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
-        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
-        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
-        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
-  </data>
-  <data name="RPVP_Settings.Text" xml:space="preserve">
-    <value>  Settings</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Name" xml:space="preserve">
-    <value>RPVP_Settings</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadMenuItem1.Text" xml:space="preserve">
-    <value>English (Default)</value>
-  </data>
-  <data name="RadMenuItem2.Text" xml:space="preserve">
-    <value>Deutsch</value>
-  </data>
-  <data name="RadDropDownButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 137</value>
-  </data>
-  <data name="RadDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 30</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadDropDownButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropDownButton1.Text" xml:space="preserve">
-    <value>RadDropDownButton1</value>
-  </data>
-  <data name="&gt;&gt;RadDropDownButton1.Name" xml:space="preserve">
-    <value>RadDropDownButton1</value>
-  </data>
-  <data name="&gt;&gt;RadDropDownButton1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadDropDownButton1.Parent" xml:space="preserve">
-    <value>RPVP_Language</value>
-  </data>
-  <data name="&gt;&gt;RadDropDownButton1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
-  </data>
-  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 50</value>
-  </data>
-  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_SelectLangauge.Text" xml:space="preserve">
-    <value>Select Language:</value>
-  </data>
-  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;RL_SelectLangauge.Name" xml:space="preserve">
-    <value>RL_SelectLangauge</value>
-  </data>
-  <data name="&gt;&gt;RL_SelectLangauge.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_SelectLangauge.Parent" xml:space="preserve">
-    <value>RPVP_Language</value>
-  </data>
-  <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
-  </data>
-  <data name="RPVP_Language.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Name" xml:space="preserve">
-    <value>RPVP_Language</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 328</value>
-  </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 12</value>
   </data>
   <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -555,6 +271,28 @@
   </data>
   <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 280</value>
+  </data>
+  <data name="RPVP_About.Text" xml:space="preserve">
+    <value>  About ViVeTool GUI</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Name" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 25</value>
@@ -755,6 +493,160 @@
   </data>
   <data name="&gt;&gt;RGB_Behaviour.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
+        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
+        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
+        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
+        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
+        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
+        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
+        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
+        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
+        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
+        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
+        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
+        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
+        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
+        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
+        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
+        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
+        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
+        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
+        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 280</value>
+  </data>
+  <data name="RPVP_Settings.Text" xml:space="preserve">
+    <value>  Settings</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Name" xml:space="preserve">
+    <value>RPVP_Settings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadMenuItem1.Text" xml:space="preserve">
+    <value>English (Default)</value>
+  </data>
+  <data name="RadMenuItem2.Text" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="RadDropDownButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 137</value>
+  </data>
+  <data name="RadDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 30</value>
+  </data>
+  <data name="RadDropDownButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadDropDownButton1.Text" xml:space="preserve">
+    <value>RadDropDownButton1</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownButton1.Name" xml:space="preserve">
+    <value>RadDropDownButton1</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownButton1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownButton1.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RadDropDownButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 50</value>
+  </data>
+  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>Select Language:</value>
+  </data>
+  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Name" xml:space="preserve">
+    <value>RL_SelectLangauge</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 280</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Name" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 328</value>
+  </data>
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

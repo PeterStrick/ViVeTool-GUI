@@ -183,6 +183,9 @@
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutAndSettings.pl.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.zh.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
