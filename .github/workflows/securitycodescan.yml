@@ -10,6 +10,8 @@ name: SecurityCodeScan
 
 on:
   push:
+    branches-ignore:
+       - 'dependabot/**'
   pull_request:
   schedule:
     - cron: '30 6 * * 3'
