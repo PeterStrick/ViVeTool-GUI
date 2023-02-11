@@ -14,7 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports Telerik.WinControls, Telerik.WinControls.UI
+Imports Telerik.WinControls, Telerik.WinControls.UI, Telerik.RadToastNotificationManager
 
 ''' <summary>
 ''' ViVeTool GUI - Feature Scanner
@@ -25,6 +25,71 @@ Public Class ScannerUI
     Private Delegate Sub AppendStdErrDelegate(text As String)
     Public BuildNumber As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber", Nothing).ToString
 
+    Public Shared CopyExAndClose As New RadTaskDialogButton With {
+        .Text = My.Resources.Generic_Close,
+        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
+    }
+
+    Friend WithEvents RTNM As New RadToastNotificationManager()
+    ReadOnly RTN_FeatureScanComplete As New RadToastNotification(RadToastTemplateType.ToastGeneric, "ToastTest",
+        String.Format("<toast><visual><binding template=""ToastGeneric""><text>{0}</text><text>{1}</text></binding></visual></toast>",
+        My.Resources.Done_Alert_CaptionText, My.Resources.Done_Alert_ContentText))
+
+#Region "Debug Subs"
+    Private Sub __DBG_ScanSymbols_Click(sender As Object, e As EventArgs) Handles __DBG_ScanSymbols.Click
+        My.Settings.DebuggerPath = RTB_DbgPath.Text
+        My.Settings.SymbolPath = RTB_SymbolPath.Text
+        My.Settings.Save()
+
+        Proc = New Process
+        With Proc.StartInfo
+            .FileName = My.Settings.DebuggerPath 'Path to symchk.exe
+            .UseShellExecute = False 'Required for Output/Error Redirection to work
+            .CreateNoWindow = True 'Required for Output/Error Redirection to work
+            .RedirectStandardError = True 'Enables Redirection of Error Output
+            .RedirectStandardOutput = True 'Enables Redirection of Standard Output
+        End With
+
+        ' Create Junctions
+        Junction.FeatureScanner_CreateJunctions()
+
+        RPVP_ScanPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_ScanPDB
+        ScanPDBFiles()
+    End Sub
+
+    Private Sub __DBG_RemoveJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_RemoveJunctions.Click
+        Junction.FeatureScanner_DeleteJunctions()
+        MsgBox("Junctions deleted")
+    End Sub
+
+    Private Sub __DBG_TestSymDownloadedText_Click(sender As Object, e As EventArgs) Handles __DBG_TestSymDownloadedText.Click
+        RPVP_DownloadPDB.Enabled = True
+        RPV_Main.SelectedPage = RPVP_DownloadPDB
+
+        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, "TESTSYMBOL1.PDB")
+        Dim Time As Date = Date.Now
+        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
+    End Sub
+
+    Private Sub __DBG_UnlockAllTabs_Click(sender As Object, e As EventArgs) Handles __DBG_UnlockAllTabs.Click
+        RPVP_AboutAndSettings.Enabled = True
+        RPVP_Done.Enabled = True
+        RPVP_DownloadPDB.Enabled = True
+        RPVP_ScanPDB.Enabled = True
+        RPVP_Setup.Enabled = True
+    End Sub
+
+    Private Sub __DBG_AddJunctions_Click(sender As Object, e As EventArgs) Handles __DBG_AddJunctions.Click
+        Junction.FeatureScanner_CreateJunctions()
+        MsgBox("Junctions created")
+    End Sub
+
+    Private Sub __DBG_SendToastNotification_Click(sender As Object, e As EventArgs) Handles __DBG_SendToastNotification.Click
+        RTNM.ShowNotification(0)
+    End Sub
+#End Region
+
     ''' <summary>
     ''' Debugging Tools/symchk.exe Path Browse Button
     ''' </summary>
@@ -33,13 +98,11 @@ Public Class ScannerUI
     Private Sub RB_DbgPath_Browse_Click(sender As Object, e As EventArgs) Handles RB_DbgPath_Browse.Click
         Dim OFD As New OpenFileDialog With {
             .InitialDirectory = "C:\",
-            .Title = "Path to symchk.exe from the Windows Debugging Tools",
+            .Title = My.Resources.Browse_PathToDebuggingTools,
             .Filter = "Symbol Checker|symchk.exe"
         }
 
-        If OFD.ShowDialog() = DialogResult.OK Then
-            RTB_DbgPath.Text = OFD.FileName
-        End If
+        If OFD.ShowDialog() = DialogResult.OK Then RTB_DbgPath.Text = OFD.FileName
     End Sub
 
     ''' <summary>
@@ -50,12 +113,10 @@ Public Class ScannerUI
     Private Sub RB_SymbolPath_Browse_Click(sender As Object, e As EventArgs) Handles RB_SymbolPath_Browse.Click
         Dim FBD As New FolderBrowserDialog With {
             .ShowNewFolderButton = True,
-            .Description = "Select a Folder to store the downloaded Debug Symbols into. The downloaded .pdb Files usually take up to 5~8GB of Space."
+            .Description = My.Resources.Browse_SymbolPath_Description
         }
 
-        If FBD.ShowDialog() = DialogResult.OK Then
-            RTB_SymbolPath.Text = FBD.SelectedPath
-        End If
+        If FBD.ShowDialog() = DialogResult.OK Then RTB_SymbolPath.Text = FBD.SelectedPath
     End Sub
 
     ''' <summary>
@@ -65,7 +126,7 @@ Public Class ScannerUI
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
     Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_DbgPath.ToolTipTextNeeded
         e.ToolTip.AutoPopDelay = 15000
-        e.ToolTipText = "Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe"
+        e.ToolTipText = My.Resources.ToolTip_RTB_DbgPath
     End Sub
 
     ''' <summary>
@@ -75,7 +136,7 @@ Public Class ScannerUI
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
     Private Sub RTB_SymbolPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_SymbolPath.ToolTipTextNeeded
         e.ToolTip.AutoPopDelay = 15000
-        e.ToolTipText = "The Downloaded Debug Symbols can be up to 5~8GB in size."
+        e.ToolTipText = My.Resources.ToolTip_RTB_SymbolPath
     End Sub
 
     ''' <summary>
@@ -84,9 +145,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RB_Continue_Click(sender As Object, e As EventArgs) Handles RB_Continue.Click
-        Dim BT As New Threading.Thread(AddressOf CheckPreReq) With {
-            .IsBackground = True
-        }
+        Dim BT As New Threading.Thread(AddressOf CheckPreReq) With {.IsBackground = True}
         BT.SetApartmentState(Threading.ApartmentState.STA)
         BT.Start()
     End Sub
@@ -95,7 +154,7 @@ Public Class ScannerUI
     ''' Checks if the Requirements are met by checking if the path in RTB_DbgPath is valid and that the path in RTB_SymbolPath is writable
     ''' </summary>
     Private Sub CheckPreReq()
-        'First disable the Buttons
+        ' First disable the Buttons
         Invoke(Sub()
                    RPBE_StatusProgressBar.Value1 = 10
                    RB_Continue.Enabled = False
@@ -104,19 +163,13 @@ Public Class ScannerUI
                End Sub)
 
 #Region "1. Check RTB_DbgPath"
-        'Check if the Path to symchk.exe is correct and if symchk.exe exists
+        ' Check if the Path to symchk.exe is correct and if symchk.exe exists
         If RTB_DbgPath.Text.EndsWith("\symchk.exe") AndAlso IO.File.Exists(RTB_DbgPath.Text) Then
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 50)
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Error occurred",
-                    .Heading = "An Error occurred",
-                    .Text = "An Error occurred while checking if the specified Path to symchk.exe is valid." & vbNewLine & vbNewLine & "Please be sure to enter a valid path to symchk.exe." & vbNewLine & "If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64",
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            ' Show the Message Box
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+            My.Resources.Error_SymchkPath_N, RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 0
@@ -129,28 +182,24 @@ Public Class ScannerUI
 #End Region
 
 #Region "2. Check RTB_SymbolPath"
-        'Check if the Application has Write Access to the specified symbol path
+        ' Check if the Application has Write Access to the specified symbol path
         Invoke(Sub() RPBE_StatusProgressBar.Value1 = 80)
 
-        'If the Path in RTB_SymbolPath exists, and try to write a Test File to it
+        ' If the Path in RTB_SymbolPath exists, and try to write a Test File to it
         If IO.Directory.Exists(RTB_SymbolPath.Text) Then
             Try
                 Dim WT = IO.File.CreateText(RTB_SymbolPath.Text & "\Test.txt")
                 WT.WriteLine("Test File")
                 WT.Close()
 
-                'Check if the Test File contains "Test File". If it does contain "Test File" then delete it and continue.
+                ' Check if the Test File contains "Test File". If it does contain "Test File" then delete it and continue.
                 If IO.File.ReadAllText(RTB_SymbolPath.Text & "\Test.txt").Contains("Test File") Then
                     IO.File.Delete(RTB_SymbolPath.Text & "\Test.txt")
                 Else
-                    Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Error occurred",
-                        .Heading = "An Error occurred",
-                        .Text = "An Error occurred while trying to write a test file to " & RTB_SymbolPath.Text & vbNewLine & vbNewLine & "Please make sure that the application has write access to the folder, and that the folder isn't write protected.",
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-                    'Show the Message Box
-                    RadTaskDialog.ShowDialog(RTD)
+                    ' Show the Message Box
+                    RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                    String.Format(My.Resources.Error_SymbolPath_NewN, RTB_SymbolPath.Text),
+                    RadTaskDialogIcon.ShieldErrorRedBar)
 
                     Invoke(Sub()
                                RPBE_StatusProgressBar.Value1 = 0
@@ -161,37 +210,10 @@ Public Class ScannerUI
                            End Sub)
                 End If
             Catch ex As Exception
-                'Create a Button that on Click, copies the Exception Text
-                Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
-                }
-                AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                      Try
-                                                                          My.Computer.Clipboard.SetText(ex.ToString)
-                                                                      Catch clipex As Exception
-                                                                          'Do nothing
-                                                                      End Try
-                                                                  End Sub)
-
-                Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to write a test file to " & RTB_SymbolPath.Text & vbNewLine & vbNewLine & "Please make sure that the application has write access to the folder, and that the folder isn't write protected.",
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-
-                'Add the Exception Text to the Expander
-                RTD.Expander.Text = ex.Message
-
-                'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = "Collapse Exception"
-                RTD.Expander.CollapsedButtonText = "Show Exception"
-
-                'Add the Button to the Message Box
-                RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                ' Show an Error Dialog
+                RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+                    String.Format(My.Resources.Error_SymbolPath_NewN, RTB_SymbolPath.Text),
+                    RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.Message)
 
                 Invoke(Sub()
                            RPBE_StatusProgressBar.Value1 = 0
@@ -202,14 +224,9 @@ Public Class ScannerUI
                        End Sub)
             End Try
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Error occurred",
-                        .Heading = "An Error occurred",
-                        .Text = "An Error occurred while trying to write a test file to the symbol folder." & vbNewLine & vbNewLine & "A symbol folder must be specified to download Program Debug Database files into.",
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            'Show an Error Dialog
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                    My.Resources.Error_SymbolFolderTestFile_N, RadTaskDialogIcon.ShieldErrorRedBar)
 
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 0
@@ -221,11 +238,11 @@ Public Class ScannerUI
         End If
 #End Region
 
-        'Now if both Text Boxes aren't empty, enable the Download PDB Tab
+        ' Now if both Text Boxes aren't empty, enable the Download PDB Tab
         If RTB_SymbolPath.Text = Nothing OrElse RTB_DbgPath.Text = Nothing Then
             Invoke(Sub() RPBE_StatusProgressBar.Value1 = 0)
         Else
-            'Disable the current Tab and move to the Download PDB Tab
+            ' Disable the current Tab and move to the Download PDB Tab
             Invoke(Sub()
                        RPBE_StatusProgressBar.Value1 = 100
                        RPVP_DownloadPDB.Enabled = True
@@ -233,25 +250,28 @@ Public Class ScannerUI
                        RPVP_Setup.Enabled = False
                    End Sub)
 
-            'Save the Paths to My.Settings
+            ' Save the Paths to My.Settings
             My.Settings.DebuggerPath = RTB_DbgPath.Text
             My.Settings.SymbolPath = RTB_SymbolPath.Text
             My.Settings.Save()
 
-            'Start the PDB Download automatically
+            ' Start the PDB Download automatically
             DownloadPDBFiles()
         End If
     End Sub
 
     ''' <summary>
-    ''' Downloads all the .pdb files of C:\Windows\*.*, C:\Program Files\*.*, C:\Program Files (x86)\*.* to the path specified in My.Settings.SymbolPath
+    ''' Downloads all the .pdb files of every Junction in C:\FeatureScanner recursively to the path specified in My.Settings.SymbolPath
     ''' </summary>
     Private Sub DownloadPDBFiles()
-        'Set up the File System Watcher
+        ' Create Junctions
+        Junction.FeatureScanner_CreateJunctions()
+
+        ' Set up the File System Watcher
         FSW_SymbolPath.SynchronizingObject = Me
         FSW_SymbolPath.Path = My.Settings.SymbolPath
 
-        'Create a Process with Process StartInfo
+        ' Create a Process with Process StartInfo
         Proc = New Process
         With Proc.StartInfo
             .FileName = My.Settings.DebuggerPath 'Path to symchk.exe
@@ -261,16 +281,9 @@ Public Class ScannerUI
             .RedirectStandardOutput = True 'Enables Redirection of Standard Output
         End With
 
-        Dim RTD_SymChk As New RadTaskDialogPage With {
-                                .Caption = " An Error occurred",
-                                .Heading = "An Error occurred",
-                                .Text = "An Error occurred while downloading the symbol files." & vbNewLine & vbNewLine & "Check if yo have access to symchk.exe and that your Antivirus isn't blocking it.",
-                                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                            }
-
-        'Get the .pdb files of C:\Windows\*.* - Recursively
+        ' Get the .pdb files of C:\FeatureScanner\*.* - Recursively. Includes C:\Windows, and some Folders from Program Files x64/x86
         Try
-            Proc.StartInfo.Arguments = "/r ""C:\Windows"" /oc """ & My.Settings.SymbolPath & """ /cn"
+            Proc.StartInfo.Arguments = "/r ""C:\FeatureScanner"" /oc """ & My.Settings.SymbolPath & """ /cn"
             Proc.Start()
             Proc.BeginErrorReadLine()
             Proc.BeginOutputReadLine()
@@ -278,44 +291,18 @@ Public Class ScannerUI
             Proc.CancelOutputRead()
             Proc.CancelErrorRead()
         Catch ex As Exception
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
+            ' Show an Error Dialog
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                       My.Resources.Error_SymbolDownload_N, RadTaskDialogIcon.ShieldErrorRedBar)
         End Try
 
-        'Get the .pdb files of C:\Program Files\*.* - Recursively
-        Try
-            Proc.StartInfo.Arguments = "/r ""C:\Program Files"" /oc """ & My.Settings.SymbolPath & """ /cn"
-            Proc.Start()
-            Proc.BeginErrorReadLine()
-            Proc.BeginOutputReadLine()
-            Proc.WaitForExit()
-            Proc.CancelOutputRead()
-            Proc.CancelErrorRead()
-        Catch ex As Exception
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
-        End Try
-
-        'Get the .pdb files of C:\Program Files (x86)\*.* - Recursively
-        Try
-            Proc.StartInfo.Arguments = "/r ""C:\Program Files (x86)"" /oc """ & My.Settings.SymbolPath & """ /cn"
-            Proc.Start()
-            Proc.BeginErrorReadLine()
-            Proc.BeginOutputReadLine()
-            Proc.WaitForExit()
-            Proc.CancelOutputRead()
-            Proc.CancelErrorRead()
-        Catch ex As Exception
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD_SymChk)
-        End Try
-
-        'Disable the current tab and move to the Scan PDB Tab
+        ' Disable the current tab and move to the Scan PDB Tab
         Invoke(Sub()
                    RPVP_ScanPDB.Enabled = True
                    RPV_Main.SelectedPage = RPVP_ScanPDB
                    RPVP_DownloadPDB.Enabled = False
                End Sub)
+
         ScanPDBFiles()
     End Sub
 
@@ -345,8 +332,7 @@ Public Class ScannerUI
         If RTB_PDBDownloadStatus.InvokeRequired Then
             Dim myDelegate As New AppendStdOutDelegate(AddressOf AppendStdOut)
             Invoke(myDelegate, text)
-        Else
-            RTB_PDBDownloadStatus.AppendText(text)
+        Else RTB_PDBDownloadStatus.AppendText(text)
         End If
     End Sub
 
@@ -358,8 +344,7 @@ Public Class ScannerUI
         If RTB_PDBDownloadStatus.InvokeRequired Then
             Dim myDelegate As New AppendStdErrDelegate(AddressOf AppendStdErr)
             Invoke(myDelegate, text)
-        Else
-            RTB_PDBDownloadStatus.AppendText(text)
+        Else RTB_PDBDownloadStatus.AppendText(text)
         End If
     End Sub
 
@@ -369,55 +354,46 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">IO.FileSystem EventArgs</param>
     Private Sub FSW_SymbolPath_Created(sender As Object, e As IO.FileSystemEventArgs) Handles FSW_SymbolPath.Created
-        RTB_PDBDownloadStatus.AppendText("[" & Date.Now.TimeOfDay.Hours & ":" & Date.Now.TimeOfDay.Minutes & "] Symbol " & e.Name & " downloaded." & vbNewLine)
+        Dim SymbolString = String.Format(My.Resources.SymbolDownloaded, e.Name)
+        Dim Time As Date = Date.Now
+        RTB_PDBDownloadStatus.AppendText(Time.ToString("[HH:mm] ") & SymbolString & vbNewLine)
     End Sub
 
     ''' <summary>
     ''' Scan the PDB Files. Will also create and start a new Thread that calls ScanPDBFiles_Calculation
     ''' </summary>
     Private Sub ScanPDBFiles()
-        'Start the calculation of Files/Folders/Folder Size of the Symbol Folder
-        Dim ScanPDBFiles_Calculation_Thread As New Threading.Thread(AddressOf ScanPDBFiles_Calculation) With {
-            .IsBackground = True
-        }
+        ' Start the calculation of Files/Folders/Folder Size of the Symbol Folder
+        Dim ScanPDBFiles_Calculation_Thread As New Threading.Thread(AddressOf ScanPDBFiles_Calculation) With {.IsBackground = True}
         ScanPDBFiles_Calculation_Thread.SetApartmentState(Threading.ApartmentState.MTA)
         ScanPDBFiles_Calculation_Thread.Start()
 
-        'Scan the .pdb files
+        ' Scan the .pdb files
         With Proc.StartInfo
-            .FileName = Application.StartupPath & "\mach2.exe" 'Path to mach2.exe
-            .Arguments = "scan """ & My.Settings.SymbolPath & """ -i """ & My.Settings.SymbolPath & """ -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
-            .WorkingDirectory = Application.StartupPath 'Set the Working Directory to the path of mach2
-            .UseShellExecute = True 'mach2 will crash without this
-            .CreateNoWindow = False 'Create a Window
-            .WindowStyle = ProcessWindowStyle.Minimized 'Minimize the Window
-            .RedirectStandardError = False 'mach2 will crash without this
-            .RedirectStandardOutput = False 'mach2 will crash without this
+            .FileName = Application.StartupPath & "\mach2\mach2.exe" ' Path to mach2.exe
+            .Arguments = "scan """ & My.Settings.SymbolPath & """ -i ""C:\FeatureScanner"" -o """ & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"" -u -s"
+            .WorkingDirectory = Application.StartupPath ' Set the Working Directory to the path of mach2
+            .UseShellExecute = True ' mach2 will crash without this
+            .CreateNoWindow = False ' Create a Window
+            .WindowStyle = ProcessWindowStyle.Minimized ' Minimize the Window
+            .RedirectStandardError = False ' mach2 will crash without this
+            .RedirectStandardOutput = False ' mach2 will crash without this
         End With
 
-        'Rescan until the Exitcode is 0
+        ' Rescan until the Exit-code is 0
         Dim mach2_ExitCode As Integer = 1
         Do Until mach2_ExitCode = 0
             Proc.Start()
             Proc.WaitForExit()
 
             If Proc.ExitCode >= 1 Then
-                Invoke(Sub()
-                           Dim RTD As New RadTaskDialogPage With {
-                                .Caption = " An Error occurred",
-                                .Heading = "An Error occurred",
-                                .Text = "An Error occurred while scanning the symbol files." & vbNewLine & vbNewLine & "The application will attempt to rescan the symbol folder.",
-                                .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                            }
-                           'Show the Message Box
-                           RadTaskDialog.ShowDialog(RTD)
-                       End Sub)
-            Else
-                mach2_ExitCode = 0
+                Invoke(Sub() RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_AnErrorOccurred,
+                            My.Resources.Error_mach2Scan_N, RadTaskDialogIcon.ShieldErrorRedBar))
+            Else mach2_ExitCode = 0
             End If
         Loop
 
-        'Disable the current tab and move to the Done Tab
+        ' Disable the current tab and move to the Done Tab
         Invoke(Sub()
                    RPVP_Done.Enabled = True
                    RPV_Main.SelectedPage = RPVP_Done
@@ -430,43 +406,55 @@ Public Class ScannerUI
     ''' Calculates the File/Folder Size and the Folder Amount of the Symbol Folder, while the application is scanning the PDB Files
     ''' </summary>
     Private Sub ScanPDBFiles_Calculation()
-        'Set Labels
+        ' Set Labels
         Invoke(Sub()
-                   RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & "Calculating..."
-                   RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & "Calculating..."
-                   RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & "Calculating..."
+                   RL_SymbolSize.Text = String.Format(My.Resources.Calculation_CurrentSizeOf_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
+                   RL_SymbolFiles.Text = String.Format(My.Resources.Calculation_TotalFilesIn_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
+                   RL_SymbolFolders.Text = String.Format(My.Resources.Calculation_TotalFoldersIn_N, My.Settings.SymbolPath, My.Resources.Calculation_Calculating)
                End Sub)
 
-        'Calculate Size of the Symbol Folder
+        ' Calculate Size of the Symbol Folder
         Try
             Dim SymbolFolderSize As Long = GetDirSize(My.Settings.SymbolPath)
-            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": " & FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) & " GB")
+            Invoke(Sub() RL_SymbolSize.Text = String.Format(
+                       My.Resources.Calculation_CurrentSizeOf_N,
+                       My.Settings.SymbolPath, FormatNumber(SymbolFolderSize / 1024 / 1024 / 1024, 1) &
+                       " " & My.Resources.Generic_FileSize_Gigabyte))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolSize.Text = "Current Size of " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolSize.Text = String.Format(
+                       My.Resources.Calculation_CurrentSizeOf_N,
+                       My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
 
-        'Calculate amount of Total Files in the Symbol Folder
+        ' Calculate amount of Total Files in the Symbol Folder
         Try
             Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
-            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": " & TotalFiles.ToString)
+            Invoke(Sub() RL_SymbolFiles.Text = String.Format(
+                       My.Resources.Calculation_TotalFilesIn_N,
+                       My.Settings.SymbolPath, TotalFiles.ToString))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFiles.Text = "Total Files in " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolFiles.Text = String.Format(
+                       My.Resources.Calculation_TotalFilesIn_N,
+                       My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
 
-        'Calculate amount of Total Folders in the Symbol Folder
+        ' Calculate amount of Total Folders in the Symbol Folder
         Try
             Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
-            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": " & TotalFolders.ToString)
+            Invoke(Sub() RL_SymbolFolders.Text = String.Format(
+                       My.Resources.Calculation_TotalFoldersIn_N,
+                       My.Settings.SymbolPath, TotalFolders.ToString))
         Catch ex As Exception
-            Invoke(Sub() RL_SymbolFolders.Text = "Total Folders in " & My.Settings.SymbolPath & ": IO Error")
+            Invoke(Sub() RL_SymbolFolders.Text = String.Format(
+                       My.Resources.Calculation_TotalFoldersIn_N,
+                       My.Settings.SymbolPath, My.Resources.Error_IOError))
         End Try
-
     End Sub
 
     ''' <summary>
     ''' Variable that stores the Total File Size of the Symbol Folder
     ''' </summary>
-    Dim TotalSize As Long = 0
+    Dim TotalSize As Long
 
     ''' <summary>
     ''' Functions that get's the total Size of a Folder
@@ -486,37 +474,19 @@ Public Class ScannerUI
     ''' Last things to do in the Done Tab.
     ''' </summary>
     Private Sub Done()
-        'Replace Labels
+        ' Delete Junctions
+        Junction.FeatureScanner_DeleteJunctions()
+
+        ' Replace Labels
         Invoke(Sub()
-                   RL_OutputFile.Text = "Output File: " & My.Settings.SymbolPath & "\" & BuildNumber & ".txt"
-                   RB_OA_DeleteSymbolPath.Text = "Delete " & My.Settings.SymbolPath
+                   RL_OutputFile.Text = String.Format(My.Resources.Done_OutputFile_N, My.Settings.SymbolPath & "\" & BuildNumber & ".txt")
+                   RB_OA_DeleteSymbolPath.Text = String.Format(My.Resources.Done_SymbolDelete, My.Settings.SymbolPath)
                    RL_Done.Text.Replace("Features.txt", BuildNumber & ".txt")
                    RB_OA_CopyFeaturesTXT.Text.Replace("Features.txt", BuildNumber & ".txt")
                End Sub)
 
-        'Show Notification
-        Invoke(Sub()
-                   Try
-                       Dim RDA_Done As New RadDesktopAlert With {
-                        .CaptionText = "Debug Symbol Scan complete",
-                        .ContentText = "The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.",
-                        .Opacity = 1,
-                        .ShowCloseButton = True,
-                        .ShowPinButton = False,
-                        .ShowOptionsButton = False,
-                        .AutoClose = False,
-                        .AutoSize = True,
-                        .CanMove = False,
-                        .FadeAnimationType = FadeAnimationType.FadeOut,
-                        .IsPinned = True,
-                        .PopupAnimationDirection = RadDirection.Up
-                    }
-                       RDA_Done.Show()
-                   Catch ex As Exception
-                       'Sometimes, again rarely the RadDesktopAlert will fail so we fall back to a god ol' message box
-                       MsgBox("The Debug Symbol Scan is complete. Return to the ViVeTool GUI Feature Scanner to find out more.", vbInformation, "Debug Symbol Scan complete")
-                   End Try
-               End Sub)
+        ' Show Notification
+        Invoke(Sub() RTNM.ShowNotification(0))
     End Sub
 
     ''' <summary>
@@ -524,49 +494,18 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click
+    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click, __DBG_CopyFeatureList.Click
         Try
-            IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", My.Computer.FileSystem.SpecialDirectories.Desktop & "\" & BuildNumber & ".txt")
-            Dim RTD As New RadTaskDialogPage With {
-                       .Caption = " File Copy successful",
-                       .Heading = BuildNumber & ".txt was successfully copied to your desktop.",
-                       .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-                   }
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            Dim RSFD As New RadSaveFileDialog With {.DefaultExt = "txt", .Filter = "Text Files (*.txt)|*.txt"}
+            If RSFD.ShowDialog = DialogResult.OK Then
+                'IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", S.FileName & "\" & BuildNumber & ".txt")
+                'MsgBox(RSFD.FileName)
+                IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", RSFD.FileName, True)
+            End If
         Catch ex As Exception
-            'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
-                }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                  Try
-                                                                      My.Computer.Clipboard.SetText(ex.ToString)
-                                                                  Catch clipex As Exception
-                                                                      'Do nothing
-                                                                  End Try
-                                                              End Sub)
-
-            Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to copy " & BuildNumber & ".txt to your desktop.",
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.Message
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            String.Format(My.Resources.Error_CopyException, BuildNumber & ".txt"),
+            RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try
     End Sub
 
@@ -578,46 +517,17 @@ Public Class ScannerUI
     Private Sub RB_OA_DeleteSymbolPath_Click(sender As Object, e As EventArgs) Handles RB_OA_DeleteSymbolPath.Click
         Try
             IO.Directory.Delete(My.Settings.SymbolPath, True)
-            Dim RTD As New RadTaskDialogPage With {
-                       .Caption = " Symbol Folder deleted successfully",
-                       .Heading = My.Settings.SymbolPath & "was successfully deleted.",
-                       .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-                   }
 
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            ' Show the Task Dialog
+            RadTD.ShowDialog(My.Resources.Done_SymbolFolderDeleted_Caption,
+                       String.Format(My.Resources.Done_SymbolFolderDeleted_Heading_N, My.Settings.SymbolPath),
+                       Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
         Catch ex As Exception
-            'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
-                }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                  Try
-                                                                      My.Computer.Clipboard.SetText(ex.ToString)
-                                                                  Catch clipex As Exception
-                                                                      'Do nothing
-                                                                  End Try
-                                                              End Sub)
+            ' Show the Error Dialog
 
-            Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "An Exception occurred",
-                        .Text = "An Exception occurred while trying to delete " & My.Settings.SymbolPath,
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.Message
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnExceptionOccurred,
+            String.Format(My.Resources.Error_SymbolFolderDeleted_N, My.Settings.SymbolPath),
+            RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.Message, ex.ToString)
         End Try
     End Sub
 
@@ -627,17 +537,32 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Listen to Application Crashes and show CrashReporter.Net if one occurs.
+#If DEBUG Then
+        If Debugger.IsAttached Then
+            __DBG_OPTIONS.Enabled = True
+            __DBG_OPTIONS.Visible = True
+            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
+        End If
+#End If
+
+        ' Add Toast to RadToastNotificationManager
+        RTNM.ToastNotifications.Add(RTN_FeatureScanComplete)
+
+        ' Localize the Introduction Text
+        GeneralFunctions.SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
+
+        ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
         AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
 
-        'Load About Labels
+        ' Load About Labels
         Dim ApplicationTitle As String
         If My.Application.Info.Title <> "" Then
             ApplicationTitle = My.Application.Info.Title
         Else
             ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
+
         RL_ProductName.Text = My.Application.Info.ProductName
         RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         RL_License.Text = My.Application.Info.Copyright
@@ -652,12 +577,12 @@ Public Class ScannerUI
     Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
         If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
             ThemeResolutionService.ApplicationThemeName = "FluentDark"
-            RTB_ThemeToggle.Text = "Dark Theme"
+            RTB_ThemeToggle.Text = My.Resources.Generic_DarkTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
             My.Settings.DarkMode = True
         Else
             ThemeResolutionService.ApplicationThemeName = "Fluent"
-            RTB_ThemeToggle.Text = "Light Theme"
+            RTB_ThemeToggle.Text = My.Resources.Generic_LightTheme
             RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
             My.Settings.DarkMode = False
         End If
@@ -683,5 +608,16 @@ Public Class ScannerUI
         Else
             My.Settings.UseSystemTheme = False
         End If
+    End Sub
+
+    ''' <summary>
+    ''' Changes the Window State to Normal and Brings the Form to the Front, if a Toast Notification is clicked
+    ''' </summary>
+    ''' <param name="e">RadToastOnActivated EventArgs</param>
+    Private Sub RTNM_RadToastOnActivated(e As RadToastOnActivatedEventArgs) Handles RTNM.RadToastOnActivated
+        Invoke(Sub()
+                   WindowState = FormWindowState.Normal
+                   Activate()
+               End Sub)
     End Sub
 End Class

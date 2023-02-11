@@ -53,7 +53,7 @@ Public Class CrashReporter
             .EmailRequired = False,
             .IncludeScreenshot = True,
             .ShowScreenshotTab = True,
-            .DeveloperMessage = "Application Settings:" & Environment.NewLine & "Debugger Path: " & My.Settings.DebuggerPath & Environment.NewLine & "Symbol Path: " & My.Settings.SymbolPath
+            .DeveloperMessage = "Application Settings:" & Environment.NewLine & "Debugger Path: " & My.Settings.DebuggerPath & Environment.NewLine & "Symbol Path: " & My.Settings.SymbolPath & Environment.NewLine & "User Langauge: " & My.Settings.UserLanguage
         }
         reportCrash.Send(exception)
     End Sub

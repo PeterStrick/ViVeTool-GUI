@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8_change_theme_24px" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\vivetool-gui\images\icons8_change_theme_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_moon_and_stars_24" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\vivetool-gui\images\icons8_moon_and_stars_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_portrait_mode_scanning_96px" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\vivetool-gui\images\icons8_portrait_mode_scanning_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_sun_24" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\vivetool-gui\images\icons8_sun_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>Jalur ke symchk.exe dari Windows Debugging Tools</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>Pilih Folder untuk menyimpan Simbol Debug yang diunduh. File .pdb yang diunduh biasanya memakan ruang hingga 5~8GB.</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>Contoh Jalur: C:\File Program\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>Simbol Debug yang Diunduh dapat berukuran hingga 5~30GB.</value>
+  </data>
+  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
+    <value> Terjadi kesalahan</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Terjadi kesalahan</value>
+  </data>
+  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
+    <value>Terjadi kesalahan saat memeriksa apakah Jalur yang ditentukan ke symchk.exe valid.</value>
+  </data>
+  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
+    <value>Pastikan untuk memasukkan jalur yang valid ke symchk.exe.</value>
+  </data>
+  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
+    <value>Jika Anda tidak dapat menemukan symchk.exe, biasanya terletak di direktori instalasi Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
+    <value>Terjadi kesalahan saat mencoba menulis file uji ke {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
+    <value>Harap pastikan bahwa aplikasi memiliki akses tulis ke folder, dan folder tersebut tidak dilindungi dari penulisan.</value>
+  </data>
+  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
+    <value> Terjadi Exception</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Terjadi Exception</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>Terjadi Exception saat mencoba menulis file uji ke {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Sembunyikan Exception</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Tampilkan Exception</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
+    <value>Terjadi kesalahan saat mencoba menulis file uji ke folder simbol.</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
+    <value>Folder simbol harus ditentukan untuk mengunduh file Program Debug Database.</value>
+  </data>
+  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
+    <value>Terjadi kesalahan saat mengunduh file simbol.</value>
+  </data>
+  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
+    <value>Periksa apakah Anda memiliki akses ke symchk.exe dan Anti-virus Anda tidak memblokirnya.</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>Simbol {0} diunduh.</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
+  </data>
+  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
+    <value>Terjadi kesalahan saat memindai file simbol.</value>
+  </data>
+  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
+    <value>Aplikasi akan mencoba memindai ulang folder simbol.</value>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>Total File di {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Ukuran saat ini dari {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>Menghitung…</value>
+  </data>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Total Folder di {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Error_IOError" xml:space="preserve">
+    <value>Kesalahan IO</value>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>File Output: {0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>Hapus {0}</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>Pemindaian Simbol Debug selesai</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>Pemindaian Simbol Debug selesai. Kembali ke ViVeTool GUI Feature Scanner untuk mengetahui lebih lanjut.</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> Salin File berhasil</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>{0} berhasil disalin ke desktop Anda.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>Terjadi Exception saat mencoba menyalin {0} ke desktop Anda.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
+    <value> Folder Simbol berhasil dihapus</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} berhasil dihapus.</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>Terjadi Exception saat mencoba menghapus {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Tema Gelap</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema Terang</value>
+  </data>
+  <data name="Error_MissingFiles_Heading" xml:space="preserve">
+    <value>Terjadi kesalahan. File yang diperlukan agar ViVeTool GUI Feature Scanner berfungsi dengan baik tidak ada.</value>
+  </data>
+  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
+    <value>Harap periksa apakah ada file berikut:</value>
+  </data>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+Selamat datang di ViVeTool GUI Feature Scanner
+&lt;/p&gt;&lt;p&gt;
+Alat ini digunakan untuk mengunduh dan memindai File .pdb (Program Debug Database) pada Windows 10/11 Insider Builds yang lebih baru untuk membuat Daftar Fitur Anda sendiri.
+&lt;/p&gt;&lt;p&gt;
+ViVeTool GUI Feature Scanner &lt;strong&gt;tidak seharusnya digunakan oleh pengguna umum&lt;/strong&gt;. Mengunduh File PDB dari Server Simbol Microsoft biasanya memakan waktu rata-rata 2 jam tergantung pada kecepatan internet Anda.
+&lt;/p&gt;&lt;p&gt;
+Alat ini membutuhkan:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5~30GB ruang disk untuk menyimpan Simbol Debug yang diunduh
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+Debugging Tools untuk Windows yang terpasang dari Windows SDK
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Setelah memastikan bahwa persyaratan terpenuhi, atur text box di bawah ini ke nilainya masing-masing dan klik "Lanjutkan". Arahkan kursor ke text box sebagai contoh.
+&lt;/p&gt;&lt;p&gt;
+Setelah itu, aplikasi akan secara otomatis mulai mengunduh File PDB.
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact. A HTML Editor/manually writing a html file and making sure it renders in IE is recommended.</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Menyalin Exception ke clipboard dan menutup dialog</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Anda menjalankan Windows 10 dengan Build yang tidak didukung. ViVe, ViVeTool dan ViVeTool GUI memerlukan Windows 10 Build 18963 atau lebih tinggi untuk berfungsi dengan baik. Build Anda saat ini adalah: {0}</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Build Tidak Didukung</value>
+  </data>
+  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
+    <value> Build Tidak Didukung</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Harap periksa apakah ada file berikut:
+
+{0}</value>
+  </data>
+</root>

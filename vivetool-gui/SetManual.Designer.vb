@@ -35,54 +35,45 @@ Partial Class SetManual
         '
         'RTB_FeatureID
         '
-        Me.RTB_FeatureID.Location = New System.Drawing.Point(15, 15)
+        resources.ApplyResources(Me.RTB_FeatureID, "RTB_FeatureID")
         Me.RTB_FeatureID.Name = "RTB_FeatureID"
-        Me.RTB_FeatureID.NullText = "Enter a Feature ID"
-        Me.RTB_FeatureID.Size = New System.Drawing.Size(237, 28)
-        Me.RTB_FeatureID.TabIndex = 0
         '
         'RDDB_PerformAction
         '
-        Me.RDDB_PerformAction.Enabled = False
+        resources.ApplyResources(Me.RDDB_PerformAction, "RDDB_PerformAction")
         Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
-        Me.RDDB_PerformAction.Location = New System.Drawing.Point(258, 15)
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
-        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 26)
-        Me.RDDB_PerformAction.TabIndex = 1
-        Me.RDDB_PerformAction.Text = "      Perform Action"
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
         'RMI_ActivateF
         '
         Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
-        Me.RMI_ActivateF.Text = "  Activate Feature"
+        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         Me.RMI_ActivateF.UseCompatibleTextRendering = False
         '
         'RMI_DeactivateF
         '
         Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
-        Me.RMI_DeactivateF.Text = "  Deactivate Feature"
+        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         Me.RMI_DeactivateF.UseCompatibleTextRendering = False
         '
         'RMI_RevertF
         '
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
-        Me.RMI_RevertF.Text = "  Revert Feature to Default Settings"
+        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.UseCompatibleTextRendering = False
         '
         'SetManual
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 58)
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SetManual"
@@ -90,8 +81,6 @@ Partial Class SetManual
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Manually change a Feature - Enter a Feature ID"
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
