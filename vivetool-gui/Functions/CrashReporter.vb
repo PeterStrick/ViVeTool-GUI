@@ -53,7 +53,7 @@ Public Class CrashReporter
             .EmailRequired = False,
             .IncludeScreenshot = True,
             .ShowScreenshotTab = True,
-            .DeveloperMessage = "Application Settings:" & Environment.NewLine & "AutoLoad: " & My.Settings.AutoLoad & Environment.NewLine & "Dark Mode: " & My.Settings.DarkMode & Environment.NewLine & "Use System Theme: " & My.Settings.UseSystemTheme
+            .DeveloperMessage = "Application Settings:" & Environment.NewLine & "AutoLoad: " & My.Settings.AutoLoad & Environment.NewLine & "Dark Mode: " & My.Settings.DarkMode & Environment.NewLine & "Use System Theme: " & My.Settings.UseSystemTheme & Environment.NewLine & "User Langauge: " & My.Settings.UserLanguage
         }
         reportCrash.Send(exception)
     End Sub
