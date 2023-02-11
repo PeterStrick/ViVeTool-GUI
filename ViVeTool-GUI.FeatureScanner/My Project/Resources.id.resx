@@ -142,32 +142,8 @@
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
     <value>Simbol Debug yang Diunduh dapat berukuran hingga 5~30GB.</value>
   </data>
-  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
-    <value> Terjadi kesalahan</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>Terjadi kesalahan</value>
-  </data>
-  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
-    <value>Terjadi kesalahan saat memeriksa apakah Jalur yang ditentukan ke symchk.exe valid.</value>
-  </data>
-  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
-    <value>Pastikan untuk memasukkan jalur yang valid ke symchk.exe.</value>
-  </data>
-  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
-    <value>Jika Anda tidak dapat menemukan symchk.exe, biasanya terletak di direktori instalasi Windows SDK\10\Debuggers\x64</value>
-  </data>
-  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
-    <value>Terjadi kesalahan saat mencoba menulis file uji ke {0}</value>
-    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
-  </data>
-  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
-    <value>Harap pastikan bahwa aplikasi memiliki akses tulis ke folder, dan folder tersebut tidak dilindungi dari penulisan.</value>
-  </data>
-  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value> Terjadi Exception</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_AnExceptionOccurred" xml:space="preserve">
     <value>Terjadi Exception</value>
@@ -182,27 +158,9 @@
   <data name="Error_ShowException" xml:space="preserve">
     <value>Tampilkan Exception</value>
   </data>
-  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
-    <value>Terjadi kesalahan saat mencoba menulis file uji ke folder simbol.</value>
-  </data>
-  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
-    <value>Folder simbol harus ditentukan untuk mengunduh file Program Debug Database.</value>
-  </data>
-  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
-    <value>Terjadi kesalahan saat mengunduh file simbol.</value>
-  </data>
-  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
-    <value>Periksa apakah Anda memiliki akses ke symchk.exe dan Anti-virus Anda tidak memblokirnya.</value>
-  </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>Simbol {0} diunduh.</value>
     <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
-  </data>
-  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
-    <value>Terjadi kesalahan saat memindai file simbol.</value>
-  </data>
-  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
-    <value>Aplikasi akan mencoba memindai ulang folder simbol.</value>
   </data>
   <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
     <value>Total File di {0}: {1}</value>
@@ -268,9 +226,6 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>Terjadi kesalahan. File yang diperlukan agar ViVeTool GUI Feature Scanner berfungsi dengan baik tidak ada.</value>
   </data>
-  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
-    <value>Harap periksa apakah ada file berikut:</value>
-  </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
     <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
 Selamat datang di ViVeTool GUI Feature Scanner
@@ -305,9 +260,6 @@ Setelah itu, aplikasi akan secara otomatis mulai mengunduh File PDB.
   </data>
   <data name="Error_UnsupportedBuild" xml:space="preserve">
     <value>Build Tidak Didukung</value>
-  </data>
-  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
-    <value> Build Tidak Didukung</value>
   </data>
   <data name="Error_MissingFiles_Text_N" xml:space="preserve">
     <value>Harap periksa apakah ada file berikut:

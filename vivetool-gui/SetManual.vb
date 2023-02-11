@@ -52,7 +52,7 @@ Public Class SetManual
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
                 ' Fancy Message Box
 
-                RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred,
+                RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}",
                 String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
                 Nothing, RadTaskDialogIcon.Error)
             Else
@@ -65,7 +65,7 @@ Public Class SetManual
         Catch ex As Exception
             ' Catch Any Exception that may occur
 
-            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}",
             String.Format(My.Resources.Error_SetConfig, RTB_FeatureID.Text, FeatureEnabledState.ToString),
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try

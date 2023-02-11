@@ -4,7 +4,7 @@ Partial Class AboutAndSettings
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,11 +21,9 @@ Partial Class AboutAndSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutAndSettings))
-        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_About = New Telerik.WinControls.UI.RadPageViewPage()
         Me.PB_AppImage = New System.Windows.Forms.PictureBox()
@@ -44,8 +42,10 @@ Partial Class AboutAndSettings
         Me.RL_AutoLoad = New Telerik.WinControls.UI.RadLabel()
         Me.RTS_AutoLoad = New Telerik.WinControls.UI.RadToggleSwitch()
         Me.RPVP_Language = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadDropDownButton1 = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.RadMenuItem1 = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RadMenuItem2 = New Telerik.WinControls.UI.RadMenuItem()
         Me.RL_SelectLangauge = New Telerik.WinControls.UI.RadLabel()
-        Me.RadDropDownList1 = New Telerik.WinControls.UI.RadDropDownList()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_About.SuspendLayout()
@@ -68,8 +68,8 @@ Partial Class AboutAndSettings
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPVP_Language.SuspendLayout()
+        CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -199,28 +199,32 @@ Partial Class AboutAndSettings
         '
         'RPVP_Language
         '
-        Me.RPVP_Language.Controls.Add(Me.RadDropDownList1)
+        Me.RPVP_Language.Controls.Add(Me.RadDropDownButton1)
         Me.RPVP_Language.Controls.Add(Me.RL_SelectLangauge)
         Me.RPVP_Language.ItemSize = New System.Drawing.SizeF(68.0!, 36.0!)
         resources.ApplyResources(Me.RPVP_Language, "RPVP_Language")
         Me.RPVP_Language.Name = "RPVP_Language"
         '
+        'RadDropDownButton1
+        '
+        Me.RadDropDownButton1.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RadMenuItem1, Me.RadMenuItem2})
+        resources.ApplyResources(Me.RadDropDownButton1, "RadDropDownButton1")
+        Me.RadDropDownButton1.Name = "RadDropDownButton1"
+        '
+        'RadMenuItem1
+        '
+        Me.RadMenuItem1.Name = "RadMenuItem1"
+        resources.ApplyResources(Me.RadMenuItem1, "RadMenuItem1")
+        '
+        'RadMenuItem2
+        '
+        Me.RadMenuItem2.Name = "RadMenuItem2"
+        resources.ApplyResources(Me.RadMenuItem2, "RadMenuItem2")
+        '
         'RL_SelectLangauge
         '
         resources.ApplyResources(Me.RL_SelectLangauge, "RL_SelectLangauge")
         Me.RL_SelectLangauge.Name = "RL_SelectLangauge"
-        '
-        'RadDropDownList1
-        '
-        Me.RadDropDownList1.DropDownAnimationEnabled = True
-        RadListDataItem1.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_moon_and_stars_24
-        RadListDataItem1.Text = "English (Default)"
-        RadListDataItem2.Text = "Deutsch"
-        Me.RadDropDownList1.Items.Add(RadListDataItem1)
-        Me.RadDropDownList1.Items.Add(RadListDataItem2)
-        resources.ApplyResources(Me.RadDropDownList1, "RadDropDownList1")
-        Me.RadDropDownList1.Name = "RadDropDownList1"
-        Me.RadDropDownList1.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
         '
         'AboutAndSettings
         '
@@ -260,9 +264,8 @@ Partial Class AboutAndSettings
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RPVP_Language.ResumeLayout(False)
-        Me.RPVP_Language.PerformLayout()
+        CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -286,6 +289,8 @@ Partial Class AboutAndSettings
     Friend WithEvents RTB_ThemeToggle As WinControls.UI.RadToggleButton
     Friend WithEvents RTB_UseSystemTheme As WinControls.UI.RadToggleButton
     Friend WithEvents RPVP_Language As WinControls.UI.RadPageViewPage
-    Friend WithEvents RadDropDownList1 As WinControls.UI.RadDropDownList
     Friend WithEvents RL_SelectLangauge As WinControls.UI.RadLabel
+    Friend WithEvents RadDropDownButton1 As WinControls.UI.RadDropDownButton
+    Friend WithEvents RadMenuItem1 As WinControls.UI.RadMenuItem
+    Friend WithEvents RadMenuItem2 As WinControls.UI.RadMenuItem
 End Class

@@ -13,7 +13,8 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports Telerik.WinControls.UI
+Imports System.Diagnostics, Telerik.WinControls.UI
+
 ''' <summary>
 ''' About and Settings Dialog/Form
 ''' </summary>
@@ -40,10 +41,10 @@ Public NotInheritable Class AboutAndSettings
             ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
 
-        Me.RL_ProductName.Text = My.Application.Info.ProductName
-        Me.RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
-        Me.RL_License.Text = My.Application.Info.Copyright
-        Me.RL_Description.Text = My.Application.Info.Description
+        RL_ProductName.Text = My.Application.Info.ProductName
+        RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
+        RL_License.Text = My.Application.Info.Copyright
+        RL_Description.Text = My.Application.Info.Description
     End Sub
 
     ''' <summary>
@@ -86,15 +87,15 @@ Public NotInheritable Class AboutAndSettings
     Private Sub RB_ViVeTool_GUI_FeatureScanner_Click(sender As Object, e As EventArgs) Handles RB_ViVeTool_GUI_FeatureScanner.Click
         If IO.File.Exists(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe") Then
             Try
-                Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
+                Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
-                RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_GenericWin32Exception_Heading,
+                RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_GenericWin32Exception_Heading,
                 My.Resources.Error_GenericWin32Exception_Text, RadTaskDialogIcon.ShieldErrorRedBar,
                 wex, wex.ToString, wex.ToString)
             End Try
         Else
-            RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred, My.Resources.Error_FeatureScannerNotFound_N,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_FeatureScannerNotFound_N,
             Nothing, RadTaskDialogIcon.Error)
         End If
     End Sub
@@ -148,5 +149,28 @@ Public NotInheritable Class AboutAndSettings
         Else
             My.Settings.AutoLoad = False
         End If
+    End Sub
+
+    Private Sub ChangeLanguage(TwoCharLang As String)
+        My.Settings.TwoCharLanguageCode = TwoCharLang
+        My.Settings.Save()
+
+        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
+
+        Dim pStart As New ProcessStartInfo With {
+            .WindowStyle = ProcessWindowStyle.Normal,
+            .FileName = Application.ExecutablePath
+        }
+
+        Process.Start(pStart)
+        Application.Exit()
+    End Sub
+
+    Private Sub RadMenuItem1_Click(sender As Object, e As EventArgs) Handles RadMenuItem1.Click
+        ChangeLanguage("en")
+    End Sub
+
+    Private Sub RadMenuItem2_Click(sender As Object, e As EventArgs) Handles RadMenuItem2.Click
+        ChangeLanguage("de")
     End Sub
 End Class

@@ -57,6 +57,8 @@ Partial Class GUI
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
+        Me.__DBG_SEP3 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_ChnageLanguage = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RSS_MainStatusStrip.SuspendLayout()
@@ -97,7 +99,7 @@ Partial Class GUI
         '__DBG_MainBtn
         '
         resources.ApplyResources(Me.__DBG_MainBtn, "__DBG_MainBtn")
-        Me.__DBG_MainBtn.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_RHI, Me.__DBG_GetComments, Me.__DBG_SeeCommentsData, Me.__DBG_SEP1, Me.__DBG_SetRDDL_Build_Text, Me.__DBG_SetRDDL_Build_Text_ToNothing, Me.__DBG_SEP2, Me.__DBG_EnableCommentLoadingFromManualFL, Me.__DBG_DisableCommentLoadingFromManualFL})
+        Me.__DBG_MainBtn.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_RHI, Me.__DBG_GetComments, Me.__DBG_SeeCommentsData, Me.__DBG_SEP1, Me.__DBG_SetRDDL_Build_Text, Me.__DBG_SetRDDL_Build_Text_ToNothing, Me.__DBG_SEP2, Me.__DBG_EnableCommentLoadingFromManualFL, Me.__DBG_DisableCommentLoadingFromManualFL, Me.__DBG_SEP3, Me.__DBG_ChnageLanguage})
         Me.__DBG_MainBtn.Name = "__DBG_MainBtn"
         Me.__DBG_MainBtn.TabStop = False
         '
@@ -275,6 +277,16 @@ Partial Class GUI
         resources.ApplyResources(Me.P_DataPanel, "P_DataPanel")
         Me.P_DataPanel.Name = "P_DataPanel"
         '
+        '__DBG_SEP3
+        '
+        Me.__DBG_SEP3.Name = "__DBG_SEP3"
+        resources.ApplyResources(Me.__DBG_SEP3, "__DBG_SEP3")
+        '
+        '__DBG_ChnageLanguage
+        '
+        Me.__DBG_ChnageLanguage.Name = "__DBG_ChnageLanguage"
+        resources.ApplyResources(Me.__DBG_ChnageLanguage, "__DBG_ChnageLanguage")
+        '
         'GUI
         '
         resources.ApplyResources(Me, "$this")
@@ -341,4 +353,6 @@ Partial Class GUI
     Friend WithEvents __DBG_SEP2 As Telerik.WinControls.UI.RadMenuSeparatorItem
     Friend WithEvents __DBG_EnableCommentLoadingFromManualFL As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents __DBG_DisableCommentLoadingFromManualFL As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents __DBG_SEP3 As Telerik.WinControls.UI.RadMenuSeparatorItem
+    Friend WithEvents __DBG_ChnageLanguage As Telerik.WinControls.UI.RadMenuItem
 End Class

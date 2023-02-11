@@ -142,36 +142,8 @@
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
     <value>The Downloaded Debug Symbols can be up to 5~30GB in size.</value>
   </data>
-  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
-    <value> An Error occurred</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>An Error occurred</value>
-  </data>
-  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
-    <value>An Error occurred while checking if the specified Path to symchk.exe is valid.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
-    <value>Please be sure to enter a valid path to symchk.exe.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
-    <value>If you can not find symchk.exe, it is usually located at the Installation Directory of the Windows SDK\10\Debuggers\x64</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
-    <value>An Error occurred while trying to write a test file to {0}</value>
-    <comment>{0} references to a full Folder Path. Ex: C:\New folder@Invariant</comment>
-  </data>
-  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
-    <value>Please make sure that the application has write access to the folder, and that the folder isn't write protected.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value> An Exception occurred</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_AnExceptionOccurred" xml:space="preserve">
     <value>An Exception occurred</value>
@@ -186,33 +158,9 @@
   <data name="Error_ShowException" xml:space="preserve">
     <value>Show Exception</value>
   </data>
-  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
-    <value>An Error occurred while trying to write a test file to the symbol folder.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
-    <value>A symbol folder must be specified to download Program Debug Database files into.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
-    <value>An Error occurred while downloading the symbol files.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
-    <value>Check if you have access to symchk.exe and that your Anti-virus isn't blocking it.</value>
-    <comment>@Invariant</comment>
-  </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>Symbol {0} downloaded.</value>
     <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
-  </data>
-  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
-    <value>An Error occurred while scanning the symbol files.</value>
-    <comment>@Invariant</comment>
-  </data>
-  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
-    <value>The application will attempt to rescan the symbol folder.</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
     <value>Total Files in {0}: {1}</value>
@@ -248,6 +196,7 @@
   </data>
   <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
     <value> File Copy successful</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
     <value>{0} was successfully copied to your desktop.</value>
@@ -278,9 +227,6 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>An Error occurred. Files required for ViVeTool GUI Feature Scanner to work properly are missing.</value>
   </data>
-  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
-    <value>Please check that the following files are present:</value>
-  </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
     <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
 Welcome to the ViVeTool GUI Feature Scanner
@@ -309,9 +255,6 @@ After that, the application will automatically start to download PDB Files.
   </data>
   <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
     <value>GB</value>
-  </data>
-  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
-    <value> Unsupported Build</value>
   </data>
   <data name="Error_UnsupportedBuild" xml:space="preserve">
     <value>Unsupported Build</value>

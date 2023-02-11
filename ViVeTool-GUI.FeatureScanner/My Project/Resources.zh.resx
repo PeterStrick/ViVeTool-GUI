@@ -142,32 +142,8 @@
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
     <value>已下载的调试符号的大小可达 5~30GB。</value>
   </data>
-  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
-    <value> 发生了一个错误</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>发生了一个错误</value>
-  </data>
-  <data name="Error_SymchkPath1_ToBeMigrated" xml:space="preserve">
-    <value>检查指定的 symchk.exe 路径是否有效时发生了错误。</value>
-  </data>
-  <data name="Error_SymchkPath2_ToBeMigrated" xml:space="preserve">
-    <value>请确保输入 symchk.exe 的有效路径。</value>
-  </data>
-  <data name="Error_SymchkPath3_ToBeMigrated" xml:space="preserve">
-    <value>如果你找不到 symchk.exe, 它通常位于 SDK 的安装目录：Windows SDK\10\Debuggers\x64</value>
-  </data>
-  <data name="Error_SymbolPath1_N_ToBeMigrated" xml:space="preserve">
-    <value>在尝试向 {0} 写入测试文件时发生了错误</value>
-    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
-  </data>
-  <data name="Error_SymbolPath2_ToBeMigrated" xml:space="preserve">
-    <value>请确保程序对该文件夹具有写访问权限，并且该文件夹没有写保护。</value>
-  </data>
-  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value> 发生了一个异常</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Error_AnExceptionOccurred" xml:space="preserve">
     <value>发生了一个异常</value>
@@ -182,27 +158,9 @@
   <data name="Error_ShowException" xml:space="preserve">
     <value>显示异常信息</value>
   </data>
-  <data name="Error_SymbolFolderTestFile1_ToBeMigrated" xml:space="preserve">
-    <value>在尝试向符号文件夹写入测试文件时发生了错误。</value>
-  </data>
-  <data name="Error_SymbolFolderTestFile2_ToBeMigrated" xml:space="preserve">
-    <value>必须指定一个符号文件夹，以便将程序调试数据库文件下载到其中。</value>
-  </data>
-  <data name="Error_SymbolDownload1_ToBeMigrated" xml:space="preserve">
-    <value>下载符号文件时发生了错误。</value>
-  </data>
-  <data name="Error_SymbolDownload2_ToBeMigrated" xml:space="preserve">
-    <value>检查你是否有权限访问 synchk.exe，并且没有被防病毒软件阻止。</value>
-  </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>符号 {0} 已下载。</value>
     <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
-  </data>
-  <data name="Error_mach2Scan_1_ToBeMigrated" xml:space="preserve">
-    <value>扫描符号文件时发生了错误。</value>
-  </data>
-  <data name="Error_mach2Scan_2_ToBeMigrated" xml:space="preserve">
-    <value>程序将尝试重新扫描符号文件夹。</value>
   </data>
   <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
     <value>{0} 中的文件数：{1}</value>
@@ -268,9 +226,6 @@
   <data name="Error_MissingFiles_Heading" xml:space="preserve">
     <value>发生了错误。用于 ViVeTool GUI Feature Scanner 正常工作的文件丢失。</value>
   </data>
-  <data name="Error_MissingFiles_Text_ToBeMigrated" xml:space="preserve">
-    <value>请检查以下文件是否存在：</value>
-  </data>
   <data name="WB_HTML_Introduction" xml:space="preserve">
     <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
 欢迎使用 ViVeTool GUI Feature Scanner
@@ -305,9 +260,6 @@ ViVeTool GUI Feature Scanner &lt;strong&gt;不应被普通用户使用&lt;/stron
   </data>
   <data name="Error_UnsupportedBuild" xml:space="preserve">
     <value>不支持的 Build</value>
-  </data>
-  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
-    <value> 不支持的 Build</value>
   </data>
   <data name="Error_MissingFiles_Text_N" xml:space="preserve">
     <value>请检查以下文件是否存在：

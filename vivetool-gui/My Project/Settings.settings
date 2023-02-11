@@ -11,7 +11,7 @@
     <Setting Name="UseSystemTheme" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="UserLanguage" Type="System.String" Scope="User">
+    <Setting Name="TwoCharLanguageCode" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

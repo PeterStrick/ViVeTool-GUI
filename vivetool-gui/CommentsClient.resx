@@ -119,6 +119,7 @@
   </resheader>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Press on "&lt;strong&gt;Edit Text&lt;/strong&gt;" to edit the Comment Text.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can either write a Comment using normal Text, or &lt;strong&gt;&lt;em&gt;HTML-like Text Formatting&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <metadata name="RMD_CommentEditor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

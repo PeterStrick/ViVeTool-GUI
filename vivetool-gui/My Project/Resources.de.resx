@@ -132,14 +132,8 @@
   <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten beim Versuch die Feature ID {0} auf {1} zu setzen</value>
   </data>
-  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
-    <value>Beim Versuch, den ViVeTool GUI Feature Scanner zu starten, ist ein Fehler aufgetreten.</value>
-  </data>
   <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
     <value>Eine generische Win32 Ausnahme ist aufgetreten.</value>
-  </data>
-  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
-    <value>Die Datei existiert nicht.</value>
   </data>
   <data name="Error_NetworkError" xml:space="preserve">
     <value>Netzwerk Fehler</value>
@@ -161,18 +155,6 @@
   </data>
   <data name="Error_ShowException" xml:space="preserve">
     <value>Fehlerdetails aufklappen</value>
-  </data>
-  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
-    <value> Ein Fehler ist aufgetreten</value>
-  </data>
-  <data name="Error_Spaced_ANetworkErrorOccurred" xml:space="preserve">
-    <value> Ein Netzwerkfehler ist aufgetreten</value>
-  </data>
-  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value> Eine Ausnahme ist aufgetreten</value>
-  </data>
-  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
-    <value> Nicht unterstütztes Build</value>
   </data>
   <data name="Error_UnsupportedBuild" xml:space="preserve">
     <value>Nicht unterstütztes Build</value>
@@ -255,12 +237,6 @@
   <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
     <value>Ihre IP-Adresse wurde möglicherweise eine Stunde lang von der GitHub-API blockiert.</value>
   </data>
-  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
-    <value>ViVeTool Gui kann die Build-Combobox nicht ausfüllen, wenn das Gerät nicht mit dem Internet verbunden ist, oder wenn die GitHub-API nicht erreichbar ist.</value>
-  </data>
-  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
-    <value>Sie können eine Feature ID immer noch manuell ändern, indem Sie F12 drücken, oder sie können manuell eine Feature Liste laden.</value>
-  </data>
   <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
     <value>Sie führen ein nicht unterstütztes Windows 10 Build aus. ViVe, ViVeTool und ViVeTool GUI benötigen Windows 10 Build 18963 oder höher, um ordnungsgemäß zu funktionieren. Ihr Build ist: {0}</value>
   </data>
@@ -300,9 +276,6 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
   <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
     <value>Ein Netzwerkfehler ist aufgetreten</value>
   </data>
-  <data name="Error_Spaced_ANetworkExceptionOccurred" xml:space="preserve">
-    <value> Ein Netzwerkfehler ist aufgetreten</value>
-  </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
     <value> Ihr Kommentar wird gesendet…</value>
   </data>
@@ -320,5 +293,19 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
   </data>
   <data name="Error_SendComment" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten, beim Versuch ihren Kommentar zu senden.</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Sprachen Änderung benötigt einen Neustart</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUI benötigt einen Neustart um die Sprache zu ändern.
+
+Die Anwendung versucht sich neuzustarten nachdem auf Schließen gedrückt wurde.</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Ein kritischer Fehler ist aufgetreten</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten</value>
   </data>
 </root>

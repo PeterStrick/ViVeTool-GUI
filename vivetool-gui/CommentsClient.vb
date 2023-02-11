@@ -68,7 +68,7 @@ Public Class CommentsClient
 
     'Rad TaskDialog Error Page
     Private Shared ReadOnly RTD_error As New RadTaskDialogPage With {
-        .Caption = My.Resources.Error_Spaced_AnErrorOccurred,
+        .Caption = $" {My.Resources.Error_AnErrorOccurred}",
         .Heading = My.Resources.Error_SendComment,
         .Icon = RadTaskDialogIcon.ShieldErrorRedBar,
         .ProgressBar = New RadTaskDialogProgressBar With {
@@ -157,49 +157,49 @@ Public Class CommentsClient
                     Select Case HttpEx.StatusCode
                         Case HttpStatusCode.GatewayTimeout 'HTTP 504
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "The Comments Server is currently unavailable. HTTP 504: Gateway Timeout",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.ServiceUnavailable 'HTTP 503
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               $"The Comments Server is currently unavailable. {HttpEx.ReasonPhrase}",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.BadGateway 'HTTP 502
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "The Comments Server is currently unavailable. HTTP 502: Bad Gateway",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.InternalServerError 'HTTP 500
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "The Comments Server is currently unavailable. HTTP 500: Internal Server Error",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.NotFound 'HTTP 404
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "An error occurred while communicating with the Comments Server. HTTP 404: Not Found",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.Forbidden 'HTTP 403
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "An error occurred while communicating with the Comments Server. HTTP 403: Forbidden",
                                                               RadTaskDialogIcon.Error)))
                         Case HttpStatusCode.BadRequest 'HTTP 400
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               "An error occurred while communicating with the Comments Server. HTTP 400: Bad Request",
                                                               RadTaskDialogIcon.Error)))
                         Case Else
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
-                                                              My.Resources.Error_Spaced_ANetworkErrorOccurred,
+                                                              $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               $"An unknown error occurred while communicating with the Comments Server. {HttpEx.ReasonPhrase}",
                                                               RadTaskDialogIcon.Error)))

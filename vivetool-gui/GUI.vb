@@ -14,7 +14,9 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, System.Runtime.InteropServices, Telerik.WinControls.UI, Telerik.WinControls, MySqlConnector
+Imports System.Globalization, System.Runtime.InteropServices
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, MySqlConnector
+Imports Telerik.WinControls.UI, Telerik.WinControls
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -86,28 +88,6 @@ Public Class GUI
     Private Shared EnableDBLoadingForManualTXTLoad As Boolean = False
 #End If
 
-    ''' <summary>
-    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function get's the System Menu
-    ''' </summary>
-    ''' <param name="hWnd"></param>
-    ''' <param name="bRevert"></param>
-    ''' <returns></returns>
-    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
-    Private Shared Function GetSystemMenu(hWnd As IntPtr, bRevert As Boolean) As IntPtr
-    End Function
-
-    ''' <summary>
-    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function Appends to the System Menu
-    ''' </summary>
-    ''' <param name="hMenu"></param>
-    ''' <param name="uFlags"></param>
-    ''' <param name="uIDNewItem"></param>
-    ''' <param name="lpNewItem"></param>
-    ''' <returns></returns>
-    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
-    Private Shared Function AppendMenu(hMenu As IntPtr, uFlags As Integer, uIDNewItem As Integer, lpNewItem As String) As Boolean
-    End Function
-
 #Region "DEBUG Subs and Functions"
     Private Sub __DBG_SetRDDL_Build_Text_Click(sender As Object, e As EventArgs) Handles __DBG_SetRDDL_Build_Text.Click
         RDDL_Build.Text = "25158"
@@ -153,7 +133,36 @@ Public Class GUI
         EnableDBLoadingForManualTXTLoad = False
         MsgBox("EnableDBLoadingForManualTXTLoad disabled")
     End Sub
+
+    Private Sub __DBG_ChnageLanguage_Click(sender As Object, e As EventArgs) Handles __DBG_ChnageLanguage.Click
+        CultureInfo.DefaultThreadCurrentCulture = New CultureInfo("zh")
+        CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo("zh")
+        MsgBox(CultureInfo.DefaultThreadCurrentCulture.ToString)
+        MsgBox(CultureInfo.DefaultThreadCurrentUICulture.ToString)
+    End Sub
 #End Region
+
+    ''' <summary>
+    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function get's the System Menu
+    ''' </summary>
+    ''' <param name="hWnd"></param>
+    ''' <param name="bRevert"></param>
+    ''' <returns></returns>
+    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
+    Private Shared Function GetSystemMenu(hWnd As IntPtr, bRevert As Boolean) As IntPtr
+    End Function
+
+    ''' <summary>
+    ''' P/Invoke declaration. Used to Insert the About Menu Element, into the System Menu. Function Appends to the System Menu
+    ''' </summary>
+    ''' <param name="hMenu"></param>
+    ''' <param name="uFlags"></param>
+    ''' <param name="uIDNewItem"></param>
+    ''' <param name="lpNewItem"></param>
+    ''' <returns></returns>
+    <DllImport("user32.dll", CharSet:=CharSet.Auto, SetLastError:=True)>
+    Private Shared Function AppendMenu(hMenu As IntPtr, uFlags As Integer, uIDNewItem As Integer, lpNewItem As String) As Boolean
+    End Function
 
     ''' <summary>
     ''' Load Event, Populates the Build Combo Box
@@ -239,7 +248,7 @@ Public Class GUI
                        RLE_StatusLabel.Text = My.Resources.Error_NetworkFunctionsDisabledF12
 
                        ' Third, Show an error message
-                       RadTD.Generate(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+                       RadTD.Generate($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
                        My.Resources.Error_NetworkExceptionDetail_N, RadTaskDialogIcon.ShieldWarningYellowBar)
                    End Sub)
         End If
@@ -278,10 +287,10 @@ Public Class GUI
                 webex_Response = webex.ToString
             End Try
 
-            RadTD.ShowDialog(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
             My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
@@ -349,10 +358,10 @@ Public Class GUI
                 webex_Response = webex.ToString
             End Try
 
-            RadTD.ShowDialog(My.Resources.Error_Spaced_ANetworkErrorOccurred, My.Resources.Error_ANetworkErrorOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
             My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            RadTD.Generate(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
@@ -539,7 +548,7 @@ Public Class GUI
                     Sub()
                         ' Catch Any Exception that may occur
                         ' Show an Error Dialog
-                        RadTD.Generate(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+                        RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
                         Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
 
                         ' Clear the selection
@@ -785,7 +794,7 @@ Public Class GUI
                 RLE_StatusLabel.Text = String.Format(My.Resources.Error_SettingFeatureConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString)
 
                 ' Fancy Message Box
-                RadTD.ShowDialog(My.Resources.Error_Spaced_AnErrorOccurred,
+                RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}",
                 String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
                 Nothing, RadTaskDialogIcon.Error)
             Else
@@ -803,7 +812,7 @@ Public Class GUI
         Catch ex As Exception
             ' Catch Any Exception that may occur
 
-            RadTD.ShowDialog(My.Resources.Error_Spaced_AnExceptionOccurred, My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub

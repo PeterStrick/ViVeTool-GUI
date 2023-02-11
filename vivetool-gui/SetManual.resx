@@ -148,12 +148,15 @@
   </data>
   <data name="RMI_ActivateF.Text" xml:space="preserve">
     <value>  Activate Feature</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RMI_DeactivateF.Text" xml:space="preserve">
     <value>  Deactivate Feature</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RMI_RevertF.Text" xml:space="preserve">
     <value>  Revert Feature to Default Settings</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
     <value>258, 15</value>
@@ -166,6 +169,7 @@
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      Perform Action</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
     <value>RDDB_PerformAction</value>

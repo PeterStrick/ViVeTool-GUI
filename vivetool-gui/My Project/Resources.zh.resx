@@ -168,13 +168,6 @@
   <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">
     <value>成功将 {0} 的配置设定为 {1}</value>
   </data>
-  <data name="Error_Spaced_AnErrorOccurred" xml:space="preserve">
-    <value> 发生了一个错误</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
-  <data name="Error_FeatureScannerNotFound1_ToBeMigrated" xml:space="preserve">
-    <value>在启动 ViVeTool GUI Feature Scanner 时发生错误。</value>
-  </data>
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature 状态</value>
   </data>
@@ -371,16 +364,8 @@
   <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
     <value>指向一个 Feature List 的路径</value>
   </data>
-  <data name="Error_Spaced_ANetworkErrorOccurred" xml:space="preserve">
-    <value> 发生了网络错误</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
   <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
     <value>在线功能已禁用。 按下 F12 来手动切换一个 Feature.</value>
-  </data>
-  <data name="Error_Spaced_AnExceptionOccurred" xml:space="preserve">
-    <value> 发生了一个异常</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Generic_Done" xml:space="preserve">
     <value>完成。</value>
@@ -390,9 +375,6 @@
   </data>
   <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
     <value>成功将 Feature ID {0} 设定为 {1}</value>
-  </data>
-  <data name="Error_NetworkExceptionDetail2_ToBeMigrated" xml:space="preserve">
-    <value>您仍然可以按下 F12 来手动切换 Feature ID，并能够加载本地 Feature List。</value>
   </data>
   <data name="Error_Error" xml:space="preserve">
     <value>错误</value>
@@ -422,10 +404,6 @@
   <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
     <value>手动设定 Feature ID</value>
   </data>
-  <data name="Error_Spaced_UnsupportedBuild" xml:space="preserve">
-    <value> 不支持的 Build</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
   <data name="icons8_toggle_on_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbBJREFUSEvt
@@ -438,9 +416,6 @@
         4fntA+rfJr/S/RCuizMpJaieUIwZhJR8UJkIRIdc22GnF1nCmBa0DrFVHMOyLWEdd9CU7CzM4bnGqHB3
         418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="Error_NetworkExceptionDetail1_ToBeMigrated" xml:space="preserve">
-    <value>由于设备没有联网，或 GitHub API 无法访问，ViveTool-GUI 无法填充 Build 组合框.</value>
   </data>
   <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -542,9 +517,6 @@
         fmYzNCRllZhSbgf/O0lJTCecIoYnmzDuhA1jU2349Fgj9imyXiffK99CzTHqqMXAbD4cs9lc6zYfhEs/
         eviviv9CpVId93g8//MWlUj+BST0ckPf98ZuAAAAAElFTkSuQmCC
 </value>
-  </data>
-  <data name="Error_FeatureScannerNotFound2_ToBeMigrated" xml:space="preserve">
-    <value>文件不存在。</value>
   </data>
   <data name="Generic_Default" xml:space="preserve">
     <value>默认</value>
@@ -649,5 +621,11 @@
   </data>
   <data name="Error_SendComment" xml:space="preserve">
     <value>发送评论时发生了一个错误。</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>发生了一个异常</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>发生了一个错误</value>
   </data>
 </root>

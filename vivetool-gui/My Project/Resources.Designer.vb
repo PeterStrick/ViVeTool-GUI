@@ -185,6 +185,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An Error occurred.
+        '''</summary>
+        Friend ReadOnly Property Error_AnErrorOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnErrorOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to A Network Error occurred.
         '''</summary>
         Friend ReadOnly Property Error_ANetworkErrorOccurred() As String
@@ -199,6 +208,15 @@ Namespace My.Resources
         Friend ReadOnly Property Error_ANetworkExceptionOccurred() As String
             Get
                 Return ResourceManager.GetString("Error_ANetworkExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to An Exception occurred.
+        '''</summary>
+        Friend ReadOnly Property Error_AnExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnExceptionOccurred", resourceCulture)
             End Get
         End Property
         
@@ -259,24 +277,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to An Error occurred while trying to start the ViVeTool GUI Feature Scanner..
-        '''</summary>
-        Friend ReadOnly Property Error_FeatureScannerNotFound1_ToBeMigrated() As String
-            Get
-                Return ResourceManager.GetString("Error_FeatureScannerNotFound1_ToBeMigrated", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to The File doesn&apos;t exist..
-        '''</summary>
-        Friend ReadOnly Property Error_FeatureScannerNotFound2_ToBeMigrated() As String
-            Get
-                Return ResourceManager.GetString("Error_FeatureScannerNotFound2_ToBeMigrated", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to A generic Win32 Exception occurred..
         '''</summary>
         Friend ReadOnly Property Error_GenericWin32Exception_Heading() As String
@@ -333,24 +333,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to ViVeTool-GUI is unable to populate the Build Combo Box, if the Device isn&apos;t connected to the Internet, or if the GitHub API is unreachable..
-        '''</summary>
-        Friend ReadOnly Property Error_NetworkExceptionDetail1_ToBeMigrated() As String
-            Get
-                Return ResourceManager.GetString("Error_NetworkExceptionDetail1_ToBeMigrated", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to You are still able to manually change a Feature ID by pressing F12, and able to load a local Feature List..
-        '''</summary>
-        Friend ReadOnly Property Error_NetworkExceptionDetail2_ToBeMigrated() As String
-            Get
-                Return ResourceManager.GetString("Error_NetworkExceptionDetail2_ToBeMigrated", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to Network Functions disabled. Press F12 to manually change a Feature..
         '''</summary>
         Friend ReadOnly Property Error_NetworkFunctionsDisabledF12() As String
@@ -401,51 +383,6 @@ Namespace My.Resources
         Friend ReadOnly Property Error_ShowException() As String
             Get
                 Return ResourceManager.GetString("Error_ShowException", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to  An Error occurred.
-        '''</summary>
-        Friend ReadOnly Property Error_Spaced_AnErrorOccurred() As String
-            Get
-                Return ResourceManager.GetString("Error_Spaced_AnErrorOccurred", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to  A Network Error occurred.
-        '''</summary>
-        Friend ReadOnly Property Error_Spaced_ANetworkErrorOccurred() As String
-            Get
-                Return ResourceManager.GetString("Error_Spaced_ANetworkErrorOccurred", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to  A Network Exception occurred.
-        '''</summary>
-        Friend ReadOnly Property Error_Spaced_ANetworkExceptionOccurred() As String
-            Get
-                Return ResourceManager.GetString("Error_Spaced_ANetworkExceptionOccurred", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to  An Exception occurred.
-        '''</summary>
-        Friend ReadOnly Property Error_Spaced_AnExceptionOccurred() As String
-            Get
-                Return ResourceManager.GetString("Error_Spaced_AnExceptionOccurred", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to  Unsupported Build.
-        '''</summary>
-        Friend ReadOnly Property Error_Spaced_UnsupportedBuild() As String
-            Get
-                Return ResourceManager.GetString("Error_Spaced_UnsupportedBuild", resourceCulture)
             End Get
         End Property
         
@@ -767,6 +704,26 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("icons8_toggle_on_24", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Language Change requires restart.
+        '''</summary>
+        Friend ReadOnly Property Language_Heading() As String
+            Get
+                Return ResourceManager.GetString("Language_Heading", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to ViVeTool GUI needs to restart to reflect the Language change.
+        '''
+        '''It will try to restart after you press on Close..
+        '''</summary>
+        Friend ReadOnly Property Language_Text() As String
+            Get
+                Return ResourceManager.GetString("Language_Text", resourceCulture)
             End Get
         End Property
         

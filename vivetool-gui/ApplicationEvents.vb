@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports Telerik.WinControls.UI
+Imports System.Globalization, Telerik.WinControls.UI
 
 Namespace My
     ''' <summary>
@@ -28,11 +28,17 @@ Namespace My
         ''' <param name="sender">Default sender Object</param>
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            ' Set Language
+            If Not Settings.TwoCharLanguageCode = "" Then
+                CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
+                CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo(Settings.TwoCharLanguageCode)
+            End If
+
             ' Check for Build
             If Environment.OSVersion.Version.Build >= 18963 Then
                 ' OS Build Check passed.
             Else
-                RadTD.ShowDialog(Resources.Error_Spaced_UnsupportedBuild, Resources.Error_UnsupportedBuild,
+                RadTD.ShowDialog($" {Resources.Error_UnsupportedBuild}", Resources.Error_UnsupportedBuild,
                            String.Format(Resources.Error_UnsupportedBuild_Text_N, Environment.OSVersion.Version.Build.ToString),
                            RadTaskDialogIcon.ShieldErrorRedBar)
                 End
