@@ -10,14 +10,13 @@ name: SecurityCodeScan
 
 on:
   push:
-    branches-ignore:
-       - 'dependabot/**'
   pull_request:
   schedule:
     - cron: '30 6 * * 3'
 
 jobs:
   SCS:
+    if: ${{ github.actor != 'dependabot'}}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
