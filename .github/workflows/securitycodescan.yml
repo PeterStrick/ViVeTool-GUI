@@ -10,15 +10,13 @@ name: SecurityCodeScan
 
 on:
   push:
-    branches-ignore:
-       - 'dependabot/**'
   pull_request:
   schedule:
     - cron: '30 6 * * 3'
 
 jobs:
   SCS:
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ github.actor != 'dependabot'}}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
@@ -26,7 +24,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v1.3.1
       
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@v1.2
+        uses: security-code-scan/security-code-scan-add-action@5f75674efc0abc4d41aa8cf3f1706ed5fe9365dd
         
       - name: Restore dependencies	
         run: nuget restore
@@ -35,10 +33,7 @@ jobs:
         run: msbuild
 
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@main
-
-      - name: Display Sarif Files in the results Folder
-        run: cat D:\a\ViVeTool-GUI\results\*.sarif
+        uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v2
