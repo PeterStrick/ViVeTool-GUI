@@ -13,11 +13,17 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Configuration, Telerik.WinControls.UI
+Imports System.Configuration, System.Globalization, Telerik.WinControls.UI
 
 Namespace My
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            ' Set Language
+            If Not Settings.TwoCharLanguageCode = "" Then
+                CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
+                CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo(Settings.TwoCharLanguageCode)
+            End If
+
             ' Check for Build
             If Environment.OSVersion.Version.Build >= 18963 Then
                 ' OS Build Check passed.

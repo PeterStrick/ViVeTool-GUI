@@ -35,6 +35,8 @@ Partial Class ScannerUI
         Me.__DBG_ScanSymbols = New Telerik.WinControls.UI.RadMenuItem()
         Me.__DBG_SEP3 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
         Me.__DBG_CopyFeatureList = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_SEP4 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
+        Me.__DBG_SendToastNotification = New Telerik.WinControls.UI.RadMenuItem()
         Me.WB_Introduction = New System.Windows.Forms.WebBrowser()
         Me.RL_SymbolPath = New Telerik.WinControls.UI.RadLabel()
         Me.RL_DbgPath = New Telerik.WinControls.UI.RadLabel()
@@ -73,8 +75,13 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
-        Me.__DBG_SEP4 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
-        Me.__DBG_SendToastNotification = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RDDB_Language = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.RMI_L_English = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_German = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Polish = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Chinese = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Indonesian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -113,6 +120,9 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox1.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,7 +136,7 @@ Partial Class ScannerUI
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
+        Me.RPV_Main.SelectedPage = Me.RPVP_AboutAndSettings
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
         '
@@ -197,6 +207,16 @@ Partial Class ScannerUI
         '
         Me.__DBG_CopyFeatureList.Name = "__DBG_CopyFeatureList"
         resources.ApplyResources(Me.__DBG_CopyFeatureList, "__DBG_CopyFeatureList")
+        '
+        '__DBG_SEP4
+        '
+        Me.__DBG_SEP4.Name = "__DBG_SEP4"
+        resources.ApplyResources(Me.__DBG_SEP4, "__DBG_SEP4")
+        '
+        '__DBG_SendToastNotification
+        '
+        Me.__DBG_SendToastNotification.Name = "__DBG_SendToastNotification"
+        resources.ApplyResources(Me.__DBG_SendToastNotification, "__DBG_SendToastNotification")
         '
         'WB_Introduction
         '
@@ -374,6 +394,7 @@ Partial Class ScannerUI
         '
         'RPVP_AboutAndSettings
         '
+        Me.RPVP_AboutAndSettings.Controls.Add(Me.RadGroupBox1)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RGB_Theming)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Comments)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_ProductName)
@@ -446,15 +467,60 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
         '
-        '__DBG_SEP4
+        'RDDB_Language
         '
-        Me.__DBG_SEP4.Name = "__DBG_SEP4"
-        resources.ApplyResources(Me.__DBG_SEP4, "__DBG_SEP4")
+        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian})
+        resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
+        Me.RDDB_Language.Name = "RDDB_Language"
         '
-        '__DBG_SendToastNotification
+        'RMI_L_English
         '
-        Me.__DBG_SendToastNotification.Name = "__DBG_SendToastNotification"
-        resources.ApplyResources(Me.__DBG_SendToastNotification, "__DBG_SendToastNotification")
+        resources.ApplyResources(Me.RMI_L_English, "RMI_L_English")
+        Me.RMI_L_English.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RMI_L_English.Name = "RMI_L_English"
+        Me.RMI_L_English.SvgImageXml = resources.GetString("RMI_L_English.SvgImageXml")
+        Me.RMI_L_English.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RMI_L_English.UseCompatibleTextRendering = False
+        '
+        'RMI_L_German
+        '
+        resources.ApplyResources(Me.RMI_L_German, "RMI_L_German")
+        Me.RMI_L_German.Name = "RMI_L_German"
+        Me.RMI_L_German.SvgImageXml = resources.GetString("RMI_L_German.SvgImageXml")
+        Me.RMI_L_German.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RMI_L_German.UseCompatibleTextRendering = False
+        '
+        'RMI_L_Polish
+        '
+        resources.ApplyResources(Me.RMI_L_Polish, "RMI_L_Polish")
+        Me.RMI_L_Polish.Name = "RMI_L_Polish"
+        Me.RMI_L_Polish.SvgImageXml = resources.GetString("RMI_L_Polish.SvgImageXml")
+        Me.RMI_L_Polish.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RMI_L_Polish.UseCompatibleTextRendering = False
+        '
+        'RMI_L_Chinese
+        '
+        resources.ApplyResources(Me.RMI_L_Chinese, "RMI_L_Chinese")
+        Me.RMI_L_Chinese.Name = "RMI_L_Chinese"
+        Me.RMI_L_Chinese.SvgImageXml = resources.GetString("RMI_L_Chinese.SvgImageXml")
+        Me.RMI_L_Chinese.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RMI_L_Chinese.UseCompatibleTextRendering = False
+        '
+        'RMI_L_Indonesian
+        '
+        resources.ApplyResources(Me.RMI_L_Indonesian, "RMI_L_Indonesian")
+        Me.RMI_L_Indonesian.Name = "RMI_L_Indonesian"
+        Me.RMI_L_Indonesian.SvgImageXml = resources.GetString("RMI_L_Indonesian.SvgImageXml")
+        Me.RMI_L_Indonesian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RMI_L_Indonesian.UseCompatibleTextRendering = False
+        '
+        'RadGroupBox1
+        '
+        Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.RDDB_Language)
+        Me.RadGroupBox1.HeaderMargin = New System.Windows.Forms.Padding(1)
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
+        Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         'ScannerUI
         '
@@ -511,6 +577,9 @@ Partial Class ScannerUI
         CType(Me.RL_License, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PB_AppImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FSW_SymbolPath, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox1.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -568,4 +637,11 @@ Partial Class ScannerUI
     Friend WithEvents __DBG_CopyFeatureList As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents __DBG_SEP4 As Telerik.WinControls.UI.RadMenuSeparatorItem
     Friend WithEvents __DBG_SendToastNotification As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RDDB_Language As Telerik.WinControls.UI.RadDropDownButton
+    Friend WithEvents RMI_L_English As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_German As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Polish As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Chinese As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Indonesian As Telerik.WinControls.UI.RadMenuItem
 End Class

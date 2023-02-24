@@ -123,7 +123,6 @@
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
     <value>Unlock all Tabs</value>
-    <comment>@Invariant</comment>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -131,44 +130,36 @@
   </data>
   <data name="__DBG_AddJunctions.Text" xml:space="preserve">
     <value>Add Junctions</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
     <value>Remove Junctions</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
     <value>Test Symbol Downloaded Text</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
     <value>Scan for symbols immediately, set text boxes first</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.Text" xml:space="preserve">
     <value />
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_CopyFeatureList.Text" xml:space="preserve">
     <value>Copy Feature List</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP4.Text" xml:space="preserve">
     <value />
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SendToastNotification.Text" xml:space="preserve">
     <value>Send Toast Notification</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
     <value>572, 315</value>
@@ -181,7 +172,6 @@
   </data>
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
     <value>[DEBUG OPTIONS]</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -425,7 +415,7 @@
     <value>Path to store the downloaded Debugging Symbols to</value>
   </data>
   <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 28</value>
+    <value>581, 24</value>
   </data>
   <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -449,7 +439,7 @@
     <value>Path to symchk.exe from the Windows 10/11 SDK</value>
   </data>
   <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 28</value>
+    <value>581, 24</value>
   </data>
   <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -522,7 +512,6 @@
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Now that you are all set up, it is time to download the Program Debug Databases. The Application will automatically download PDB Files for .exe and .dll Files in the following Folders to your specified symbol folder, and will analyse them afterwards:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;This will take a long time, depending on the amount of programs and apps that you have currently installed.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_DownloadIntroduction.Name" xml:space="preserve">
     <value>RL_DownloadIntroduction</value>
@@ -652,7 +641,6 @@
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;The Feature Scanner will now automatically begin scanning the PDB Files using mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Do &lt;strong&gt;not &lt;/strong&gt;close this Window or mach2, until mach2 is done scanning.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;You will be notified by a desktop notification once the scan completes.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_InfoScan.Name" xml:space="preserve">
     <value>RL_InfoScan</value>
@@ -752,7 +740,6 @@
   </data>
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>Save the Features.txt File</value>
-    
   </data>
   <data name="&gt;&gt;RB_OA_CopyFeaturesTXT.Name" xml:space="preserve">
     <value>RB_OA_CopyFeaturesTXT</value>
@@ -783,7 +770,6 @@
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;The scan has completed. You can now either:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Review your Features.txt file&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;Upload your Features.txt file to the &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (will appear in the Build Combo Box once uploaded)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;or Import your Features.txt file into ViVeTool-GUI by selecting the "Use Manual" Drop Down at the bottom of the Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="&gt;&gt;RL_Done.Name" xml:space="preserve">
     <value>RL_Done</value>
@@ -848,6 +834,439 @@
   <data name="&gt;&gt;RPVP_Done.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="RMI_L_English.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_English.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RMI_L_English.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_English.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_English.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RMI_L_English.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RMI_L_English.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_English.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_English.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_English.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_English.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M44.064 13.043 C44.064 13.978 46 14.255 46 14.255 C46 16.109 46 17.963 46 19.817 C46 19.817 44.574 22.903 44.574 24.298 C44.574 25.692 46 28.184 46 28.184 C46 30.037 46 31.89 46 33.743 C46 33.743 44.191 34.702 44.191 35.638 C42.551 36.199 41.08 37.712 41.08 37.712 C36.609 38.33 32.138 37.862 27.667 37.161 C27.667 37.161 25.222 35.443 24 35.234 C22.778 35.025 20.334 35.941 20.334 35.941 C15.862 35.239 11.39 34.771 6.918001 35.39 C6.918001 35.39 4.756001 34.843 3.117001 35.404 C3.117 34.468 2 33.743 2 33.743 C2 31.89 2 30.037 2 28.184 C2 28.184 2.957 25.239 2.957 23.745 C2.957 22.45 2 19.817 2 19.817 C2 17.028 2 14.238 2 11.449 C8.111 9.356999 14.222 9.879999 20.333 10.839 C20.333 10.839 22.544 12.493 23.766 12.702 C24.988 12.911 27.666 12.059 27.666 12.059 C32.138 12.761 36.61 13.229 41.082 12.61 C41.082 12.61 42.424 13.604 44.064 13.043 z" style="fill:#012169;" /&gt;
+  &lt;path d="M46 11.449 C46 12.384 46 13.32 46 14.255 C42.751 17.221 39.502 19.447 36.253 21.262 C33.809 22.627 31.364 23.76 28.92 24.799 C31.364 26.549 33.809 28.206 36.253 29.629 C39.502 31.521 42.751 33.002 46 33.743 C46 34.678 46 35.614 46 36.549 C44.36 37.11 42.72 37.483 41.08 37.71 C36.609 35.778 32.137 32.759 27.666 29.506 C26.444 28.617 25.222 27.711 23.999 26.804 C22.777 27.292 21.555 27.78 20.332 28.286 C15.861 30.135 11.389 32.218 6.918003 35.388 C5.278003 35.615 3.638003 35.988 1.998003 36.549 C1.998003 35.614 1.998003 34.678 1.998003 33.743 C5.247003 30.777 8.496003 28.551 11.745 26.736 C14.189 25.371 16.634 24.238 19.078 23.199 C16.634 21.449 14.189 19.792 11.745 18.369 C8.498 16.478 5.249 14.997 2 14.256 C2 13.321 2 12.385 2 11.45 C3.64 10.889 5.28 10.516 6.92 10.289 C11.391 12.221 15.863 15.24 20.334 18.493 C21.556 19.382 22.778 20.288 24.001 21.195 C25.223 20.707 26.445 20.219 27.668 19.713 C32.139 17.864 36.611 15.781 41.082 12.611 C42.72 12.384 44.36 12.011 46 11.449 z" style="fill:white;" /&gt;
+  &lt;path d="M27.279 24.549 C29.723 26.334 32.168 28.057 34.612 29.577 C38.408 31.939 42.203 33.813 45.999 34.68 C45.999 35.304 45.999 35.927 45.999 36.551 C44.906 36.925 43.812 37.216 42.719 37.435 C37.83 35.627 32.941 32.395 28.053 28.854 C27.435 28.406 26.817 27.954 26.199 27.499 C25.466 26.959 24.732 26.415 23.999 25.871 C23.266 26.164 22.532 26.457 21.799 26.753 C21.181 27.003 20.563 27.256 19.945 27.513 C15.056 29.551 10.167 31.897 5.278999 35.666 C4.185999 35.885 3.091999 36.17599 1.998999 36.55 C1.998999 35.92599 1.998999 35.30299 1.998999 34.679 C5.794999 31.214 9.589999 28.758 13.386 26.789 C15.83 25.521 18.275 24.454 20.719 23.45 C18.275 21.665 15.83 19.942 13.386 18.422 C9.591 16.061 5.796 14.186 2 13.32 C2 12.696 2 12.073 2 11.449 C3.093 11.075 4.187 10.784 5.28 10.565 C10.169 12.373 15.058 15.605 19.946 19.146 C20.564 19.594 21.182 20.046 21.8 20.501 C22.533 21.041 23.267 21.585 24 22.129 C24.733 21.836 25.467 21.543 26.2 21.247 C26.818 20.997 27.436 20.744 28.054 20.487 C32.943 18.449 37.832 16.103 42.72 12.334 C43.813 12.115 44.907 11.824 46 11.45 C46 12.074 46 12.697 46 13.321 C42.204 16.786 38.409 19.242 34.613 21.211 C32.168 22.478 29.724 23.545 27.279 24.549 z" style="fill:#C8102E;" /&gt;
+  &lt;path d="M27.667 37.161 C25.223 36.777 22.778 36.324 20.334 35.941 C20.334 33.152 20.334 30.363 20.334 27.574 C14.222 26.615 8.111 26.092 2 28.184 C2 28.184 2 22.606 2 19.817 C8.111 17.725 14.222 18.248 20.333 19.207 C20.333 16.418 20.333 13.629 20.333 10.84 C22.777 11.224 25.222 11.677 27.666 12.06 C27.666 14.849 27.666 17.638 27.666 20.427 C33.777 21.386 39.888 21.909 45.999 19.817 C45.999 22.606 45.999 25.395 45.999 28.184 C39.888 30.276 33.777 29.753 27.666 28.794 C27.667 31.583 27.667 34.372 27.667 37.161 z" style="fill:white;" /&gt;
+  &lt;path d="M26.2 36.924 C24.733 36.68 23.267 36.422 21.8 36.178 C21.8 32.831 21.8 29.484 21.8 26.137 C15.2 25.042 8.6 24.251 2 26.51 C2 24.837 2 23.163 2 21.49 C8.6 19.231 15.2 20.022 21.8 21.117 C21.8 17.77 21.8 14.423 21.8 11.076 C23.267 11.32 24.733 11.578 26.2 11.822 C26.2 15.169 26.2 18.516 26.2 21.863 C32.8 22.959 39.4 23.749 46 21.49 C46 23.163 46 24.837 46 26.51 C39.4 28.769 32.8 27.978 26.2 26.883 C26.2 30.23 26.2 33.577 26.2 36.924 z" style="fill:#C8102E;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="c_xyCDeerQt140JTqCzuqa"&gt;
+    &lt;stop offset="9.8%" stop-color="#D5DFF5" stop-opacity="0.2" /&gt;
+    &lt;stop offset="23%" stop-color="#D5DFF5" stop-opacity="0.7" /&gt;
+    &lt;stop offset="37.2%" stop-color="#D5DFF5" stop-opacity="0.2" /&gt;
+    &lt;stop offset="47.2%" stop-color="#D5DFF5" stop-opacity="0" /&gt;
+    &lt;stop offset="56.3%" stop-color="#EAEBED" stop-opacity="0" /&gt;
+    &lt;stop offset="57%" stop-color="#ECECEC" stop-opacity="0" /&gt;
+    &lt;stop offset="74.6%" stop-color="#EBEBEB" stop-opacity="0.5" /&gt;
+    &lt;stop offset="93.2%" stop-color="#EBEBEB" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.817 2 11.449 C16.667 6.429 31.333 16.47 46 11.449 z" opacity="0.4" style="fill:url(#c_xyCDeerQt140JTqCzuqa);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="c_xyCDeerQt140JTqCzuqb"&gt;
+    &lt;stop offset="0.4%" stop-color="#000B24" /&gt;
+    &lt;stop offset="14.9%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="39.6%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="54.5%" stop-color="#000B24" stop-opacity="0.4" /&gt;
+    &lt;stop offset="71.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="86.4%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="87.3%" stop-color="#000B23" stop-opacity="0.079" /&gt;
+    &lt;stop offset="100%" stop-color="#000512" stop-opacity="0.9" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.817 2 11.449 C16.667 6.429 31.333 16.47 46 11.449 z" opacity="0.7" style="fill:url(#c_xyCDeerQt140JTqCzuqb);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_English.Text" xml:space="preserve">
+    <value> English (Default)</value>
+  </data>
+  <data name="RMI_L_English.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_English.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RMI_L_German.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RMI_L_German.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RMI_L_German.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_German.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_German.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RMI_L_German.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RMI_L_German.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_German.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_German.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_German.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_German.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.4 C16.7 6.4 31.3 16.4 46 11.4 C46 19.8 46 27.1 46 35.5 C31.3 40.5 16.7 30.5 2 35.5 C2 27.2 2 19.8 2 11.4 z" /&gt;
+  &lt;path d="M2 19.8 C16.7 14.8 31.3 24.8 46 19.8 C46 25.4 46 29 46 34.5 C31.3 39.5 16.7 29.5 2 34.5 C2 29 2 25.4 2 19.8 z" style="fill:#DD0000;" /&gt;
+  &lt;path d="M2 28.2 C16.7 23.2 31.3 33.2 46 28.2 C46 31 46 33.8 46 36.6 C31.3 41.6 16.7 31.6 2 36.6 C2 33.8 2 31 2 28.2 z" style="fill:#FFCE00;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="53~3CbndB5gts_PjV~9rDa"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.8" /&gt;
+    &lt;stop offset="1.5%" stop-color="#000103" stop-opacity="0.752" /&gt;
+    &lt;stop offset="12.2%" stop-color="#00081B" stop-opacity="0.286" /&gt;
+    &lt;stop offset="18.8%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="35.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="42.9%" stop-color="#000613" stop-opacity="0.216" /&gt;
+    &lt;stop offset="49.7%" stop-opacity="0.4" /&gt;
+    &lt;stop offset="56.5%" stop-color="#000206" stop-opacity="0.277" /&gt;
+    &lt;stop offset="65.7%" stop-color="#000717" stop-opacity="0.11" /&gt;
+    &lt;stop offset="70.8%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="83%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="88.6%" stop-color="#000A20" stop-opacity="0.242" /&gt;
+    &lt;stop offset="94.4%" stop-color="#000613" stop-opacity="0.476" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.7" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.4 L2 36.5 C16.7 31.5 31.3 41.5 46 36.5 C46 33.7 46 14.2 46 11.4 C31.3 16.5 16.7 6.4 2 11.4 z" opacity="0.7" style="fill:url(#53~3CbndB5gts_PjV~9rDa);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="53~3CbndB5gts_PjV~9rDb"&gt;
+    &lt;stop offset="0%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="20.7%" stop-color="white" stop-opacity="0.8" /&gt;
+    &lt;stop offset="40.8%" stop-color="white" stop-opacity="0.063" /&gt;
+    &lt;stop offset="42.5%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="58.7%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="77.8%" stop-color="white" stop-opacity="0.7" /&gt;
+    &lt;stop offset="99.6%" stop-color="white" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.4 L2 36.5 C16.7 31.5 31.3 41.5 46 36.5 C46 33.7 46 14.2 46 11.4 C31.3 16.5 16.7 6.4 2 11.4 z" opacity="0.25" style="fill:url(#53~3CbndB5gts_PjV~9rDb);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_German.Text" xml:space="preserve">
+    <value> Deutsch - German</value>
+  </data>
+  <data name="RMI_L_German.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_German.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RMI_L_Polish.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RMI_L_Polish.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RMI_L_Polish.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Polish.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Polish.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RMI_L_Polish.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RMI_L_Polish.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Polish.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Polish.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Polish.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Polish.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 27.191 46 35.536 C31.333 40.736 16.667 30.336 2 35.536 C2 27.191 2 19.846 2 11.501 z" style="fill:white;" /&gt;
+  &lt;path d="M2 23.5 C16.667 18.3 31.333 28.7 46 23.5 C46 27.833 46 32.166 46 36.499 C31.333 41.699 16.667 31.299 2 36.499 C2 32.166 2 27.833 2 23.5 z" style="fill:crimson;" /&gt;
+  &lt;linearGradient x1="2" y1="25.982" x2="46" y2="25.982" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="Yw06A1pAkrQF1Q43XtSVza"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.6" /&gt;
+    &lt;stop offset="2.5%" stop-color="#000206" stop-opacity="0.531" /&gt;
+    &lt;stop offset="12.4%" stop-color="#00091C" stop-opacity="0.207" /&gt;
+    &lt;stop offset="18.8%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="35.7%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="38.4%" stop-color="#00081B" stop-opacity="0.053" /&gt;
+    &lt;stop offset="45.8%" stop-color="#000207" stop-opacity="0.2" /&gt;
+    &lt;stop offset="50.8%" stop-opacity="0.3" /&gt;
+    &lt;stop offset="58.5%" stop-color="#00040C" stop-opacity="0.174" /&gt;
+    &lt;stop offset="68.9%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="84.5%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="91.8%" stop-color="#000715" stop-opacity="0.141" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.3" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 28.191 46 36.536 C31.333 41.736 16.667 31.336 2 36.536 C2 28.191 2 19.846 2 11.501 z" style="fill:url(#Yw06A1pAkrQF1Q43XtSVza);" /&gt;
+  &lt;linearGradient x1="24" y1="46.125" x2="24" y2="5.9" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="Yw06A1pAkrQF1Q43XtSVzb"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.4" /&gt;
+    &lt;stop offset="5.2%" stop-color="#000308" stop-opacity="0.364" /&gt;
+    &lt;stop offset="17.5%" stop-color="#000718" stop-opacity="0.272" /&gt;
+    &lt;stop offset="31.6%" stop-color="#000A21" stop-opacity="0.167" /&gt;
+    &lt;stop offset="51.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="67.6%" stop-color="#000A20" stop-opacity="0.145" /&gt;
+    &lt;stop offset="83.9%" stop-color="#000614" stop-opacity="0.273" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.4" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 28.191 46 36.536 C31.333 41.736 16.667 31.336 2 36.536 C2 28.191 2 19.846 2 11.501 z" opacity="0.5" style="fill:url(#Yw06A1pAkrQF1Q43XtSVzb);" /&gt;
+  &lt;linearGradient x1="2" y1="25.982" x2="46" y2="25.982" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="Yw06A1pAkrQF1Q43XtSVzc"&gt;
+    &lt;stop offset="0%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="22.7%" stop-color="white" stop-opacity="0.3" /&gt;
+    &lt;stop offset="40%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="58.7%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="79%" stop-color="white" stop-opacity="0.3" /&gt;
+    &lt;stop offset="99.6%" stop-color="white" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 28.191 46 36.536 C31.333 41.736 16.667 31.336 2 36.536 C2 28.191 2 19.846 2 11.501 z" opacity="0.4" style="fill:url(#Yw06A1pAkrQF1Q43XtSVzc);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_Polish.Text" xml:space="preserve">
+    <value> Polski - Polish</value>
+  </data>
+  <data name="RMI_L_Polish.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_Polish.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RMI_L_Chinese.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RMI_L_Chinese.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RMI_L_Chinese.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Chinese.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Chinese.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RMI_L_Chinese.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RMI_L_Chinese.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Chinese.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Chinese.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Chinese.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Chinese.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.816 2 11.449 z" style="fill:#DC2F27;" /&gt;
+  &lt;path d="M13.558 13.759 C13.714 14.028 13.87 14.298 14.025 14.569 C13.826 14.785 13.627 15.003 13.429 15.222 C13.724 15.169 14.019 15.12 14.314 15.073 C14.47 15.345 14.625 15.617 14.781 15.891 C14.808 15.59 14.834 15.29 14.861 14.989 C15.156 14.945 15.451 14.904 15.746 14.865 C15.467 14.719 15.189 14.574 14.91 14.432 C14.936 14.131 14.963 13.831 14.99 13.53 C14.791 13.742 14.593 13.956 14.394 14.171 C14.115 14.03 13.837 13.893 13.558 13.759 z" style="fill:#FEDC00;" /&gt;
+  &lt;path d="M8.251 14.653 C7.971 15.546 7.690001 16.443 7.41 17.344 C6.501 17.454 5.593 17.607 4.684 17.811 C5.419 18.182 6.154 18.586 6.888 19.02 C6.607 19.926 6.327 20.837 6.046 21.752 C6.781 21.091 7.516 20.46 8.250999 19.857 C8.985999 20.325 9.719999 20.82 10.455 21.339 C10.174 20.479 9.894 19.622 9.613 18.768 C10.348 18.196 11.082 17.649 11.817 17.123 C10.909 17.111 10 17.131 9.092 17.19 C8.812 16.34 8.531 15.495 8.251 14.653 z" style="fill:#FEDC00;" /&gt;
+  &lt;path d="M16.451 16.211 C16.494 16.516 16.537 16.822 16.58 17.128 C16.308 17.231 16.036 17.336 15.765 17.443 C16.063 17.525 16.361 17.609 16.66 17.695 C16.703 18.001 16.746 18.306 16.789 18.612 C16.931 18.36 17.072 18.108 17.214 17.857 C17.512 17.945 17.81 18.036 18.109 18.128 C17.898 17.882 17.687 17.636 17.476 17.392 C17.617 17.141 17.759 16.891 17.9 16.64 C17.628 16.738 17.357 16.838 17.085 16.939 C16.872 16.695 16.662 16.453 16.451 16.211 z" style="fill:#FEDC00;" /&gt;
+  &lt;path d="M14.942 22.291 C14.753 22.513 14.564 22.735 14.375 22.959 C14.092 22.831 13.808 22.706 13.525 22.583 C13.691 22.846 13.858 23.11 14.024 23.375 C13.835 23.6 13.646 23.826 13.457 24.053 C13.749 23.988 14.041 23.926 14.333 23.867 C14.499 24.133 14.666 24.399 14.832 24.667 C14.846 24.365 14.86 24.062 14.874 23.76 C15.166 23.704 15.458 23.65 15.75 23.598 C15.467 23.463 15.184 23.33 14.901 23.199 C14.914 22.896 14.928 22.594 14.942 22.291 z" style="fill:#FEDC00;" /&gt;
+  &lt;path d="M16.956 19.907 C16.873 20.189 16.79 20.472 16.707 20.755 C16.404 20.731 16.102 20.709 15.799 20.69 C16.05 20.885 16.301 21.081 16.553 21.279 C16.47 21.562 16.387 21.845 16.304 22.128 C16.542 21.967 16.781 21.806 17.019 21.647 C17.27 21.847 17.521 22.048 17.772 22.25 C17.668 21.951 17.564 21.652 17.461 21.354 C17.699 21.196 17.938 21.04 18.176 20.885 C17.873 20.855 17.571 20.827 17.268 20.801 C17.164 20.502 17.06 20.204 16.956 19.907 z" style="fill:#FEDC00;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="XrgI7h8OMl8LlqMkWgvJSa"&gt;
+    &lt;stop offset="0.2%" stop-color="#E93B52" stop-opacity="0" /&gt;
+    &lt;stop offset="0.6%" stop-color="#E93C53" stop-opacity="0.02" /&gt;
+    &lt;stop offset="14.9%" stop-color="#F7677A" stop-opacity="0.668" /&gt;
+    &lt;stop offset="22.2%" stop-color="#FC7789" /&gt;
+    &lt;stop offset="32.5%" stop-color="#F7697C" stop-opacity="0.5" /&gt;
+    &lt;stop offset="41.6%" stop-color="#EA3D54" stop-opacity="0.013" /&gt;
+    &lt;stop offset="42%" stop-color="#E93B52" stop-opacity="0" /&gt;
+    &lt;stop offset="61.1%" stop-color="#E98E99" stop-opacity="0" /&gt;
+    &lt;stop offset="78.8%" stop-color="#E96E7C" /&gt;
+    &lt;stop offset="94.8%" stop-color="#E98591" stop-opacity="0.243" /&gt;
+    &lt;stop offset="100%" stop-color="#E98E99" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.816 2 11.449 z" opacity="0.3" style="fill:url(#XrgI7h8OMl8LlqMkWgvJSa);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="XrgI7h8OMl8LlqMkWgvJSb"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.8" /&gt;
+    &lt;stop offset="5.2%" stop-color="#00040E" stop-opacity="0.59" /&gt;
+    &lt;stop offset="12.9%" stop-color="#00091E" stop-opacity="0.256" /&gt;
+    &lt;stop offset="18.8%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="35.9%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="39.6%" stop-color="#000718" stop-opacity="0.105" /&gt;
+    &lt;stop offset="46.9%" stop-color="#000206" stop-opacity="0.276" /&gt;
+    &lt;stop offset="52.2%" stop-opacity="0.4" /&gt;
+    &lt;stop offset="59.7%" stop-color="#00030B" stop-opacity="0.251" /&gt;
+    &lt;stop offset="71.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="84.8%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="89.7%" stop-color="#00091E" stop-opacity="0.205" /&gt;
+    &lt;stop offset="96.3%" stop-color="#00040D" stop-opacity="0.458" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.6" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.816 2 11.449 z" opacity="0.65" style="fill:url(#XrgI7h8OMl8LlqMkWgvJSb);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_Chinese.Text" xml:space="preserve">
+    <value> 简体中文 - Chinese</value>
+  </data>
+  <data name="RMI_L_Chinese.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_Chinese.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RMI_L_Indonesian.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RMI_L_Indonesian.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RMI_L_Indonesian.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Indonesian.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Indonesian.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RMI_L_Indonesian.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="RMI_L_Indonesian.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RMI_L_Indonesian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Indonesian.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RMI_L_Indonesian.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RMI_L_Indonesian.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" style="fill:#F4F4F5;" /&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 15.633 46 19.816 46 24 C31.333 29.02 16.667 18.98 2 24 C2 19.816 2 15.633 2 11.449 z" style="fill:red;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="nt5cM0aRRyCucXnR_sQbta"&gt;
+    &lt;stop offset="3.9%" stop-color="#FFF2F2" stop-opacity="0" /&gt;
+    &lt;stop offset="4.2%" stop-color="#FFF2F2" stop-opacity="0.008" /&gt;
+    &lt;stop offset="11.5%" stop-color="#FFF2F2" stop-opacity="0.2" /&gt;
+    &lt;stop offset="22.4%" stop-color="#FFF2F2" stop-opacity="0.38" /&gt;
+    &lt;stop offset="35.1%" stop-color="#FFF2F2" stop-opacity="0.2" /&gt;
+    &lt;stop offset="46.6%" stop-color="#FFF2F2" stop-opacity="0" /&gt;
+    &lt;stop offset="59.4%" stop-color="#FFF2F2" stop-opacity="0" /&gt;
+    &lt;stop offset="80.5%" stop-color="#FFF2F2" stop-opacity="0.28" /&gt;
+    &lt;stop offset="96.10001%" stop-color="#FFF2F2" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" style="fill:url(#nt5cM0aRRyCucXnR_sQbta);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="nt5cM0aRRyCucXnR_sQbtb"&gt;
+    &lt;stop offset="0%" stop-color="#270000" /&gt;
+    &lt;stop offset="17.7%" stop-color="#270000" stop-opacity="0" /&gt;
+    &lt;stop offset="35.9%" stop-color="#090000" stop-opacity="0.02" /&gt;
+    &lt;stop offset="51.2%" stop-color="#270000" stop-opacity="0.5" /&gt;
+    &lt;stop offset="73.9%" stop-color="#270000" stop-opacity="0.02" /&gt;
+    &lt;stop offset="85%" stop-color="#270000" stop-opacity="0.02" /&gt;
+    &lt;stop offset="100%" stop-color="#270000" stop-opacity="0.6" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.7" style="fill:url(#nt5cM0aRRyCucXnR_sQbtb);" /&gt;
+  &lt;linearGradient x1="24" y1="45.362" x2="24" y2="3.915" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="nt5cM0aRRyCucXnR_sQbtc"&gt;
+    &lt;stop offset="39%" stop-color="#270000" stop-opacity="0" /&gt;
+    &lt;stop offset="58.9%" stop-color="#270000" stop-opacity="0" /&gt;
+    &lt;stop offset="100%" stop-color="#270000" stop-opacity="0.6" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.7" style="fill:url(#nt5cM0aRRyCucXnR_sQbtc);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_Indonesian.Text" xml:space="preserve">
+    <value> Bahasa Indonesia - Indonesian</value>
+  </data>
+  <data name="RMI_L_Indonesian.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="RMI_L_Indonesian.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RDDB_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 23</value>
+  </data>
+  <data name="RDDB_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 37</value>
+  </data>
+  <data name="RDDB_Language.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Select Language:</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Name" xml:space="preserve">
+    <value>RDDB_Language</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Parent" xml:space="preserve">
+    <value>RadGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 336</value>
+  </data>
+  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 80</value>
+  </data>
+  <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Name" xml:space="preserve">
+    <value>RadGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
+    <value>RPVP_AboutAndSettings</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
     <value>180, 23</value>
   </data>
@@ -859,7 +1278,6 @@
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Use System Theme</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_UseSystemTheme.Name" xml:space="preserve">
     <value>RTB_UseSystemTheme</value>
@@ -884,7 +1302,6 @@
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  Light Theme</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="&gt;&gt;RTB_ThemeToggle.Name" xml:space="preserve">
     <value>RTB_ThemeToggle</value>
@@ -923,7 +1340,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RL_Comments.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -939,7 +1356,6 @@
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
   <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -954,7 +1370,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RL_ProductName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -970,7 +1386,6 @@
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - ProductName</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -985,7 +1400,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1004,7 +1419,6 @@
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Description</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1019,7 +1433,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RL_Version.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1035,7 +1449,6 @@
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Version</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1050,7 +1463,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RL_License.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1066,7 +1479,6 @@
   </data>
   <data name="RL_License.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - License</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1081,7 +1493,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1129,7 +1541,7 @@
     <value>RPVP_AboutAndSettings</value>
   </data>
   <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 35</value>
@@ -1186,7 +1598,7 @@
     <value>61</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>832, 516</value>
@@ -1731,7 +2143,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI - Feature Scanner</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">
     <value>__DBG_UnlockAllTabs</value>
@@ -1787,6 +2198,18 @@
   <data name="&gt;&gt;__DBG_CopyFeatureList.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;__DBG_SEP4.Name" xml:space="preserve">
+    <value>__DBG_SEP4</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SendToastNotification.Name" xml:space="preserve">
+    <value>__DBG_SendToastNotification</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SendToastNotification.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="&gt;&gt;RPBE_StatusProgressBar.Name" xml:space="preserve">
     <value>RPBE_StatusProgressBar</value>
   </data>
@@ -1817,16 +2240,34 @@
   <data name="&gt;&gt;FluentDark.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.FluentDarkTheme, Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;__DBG_SEP4.Name" xml:space="preserve">
-    <value>__DBG_SEP4</value>
+  <data name="&gt;&gt;RMI_L_English.Name" xml:space="preserve">
+    <value>RMI_L_English</value>
   </data>
-  <data name="&gt;&gt;__DBG_SEP4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RMI_L_English.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;__DBG_SendToastNotification.Name" xml:space="preserve">
-    <value>__DBG_SendToastNotification</value>
+  <data name="&gt;&gt;RMI_L_German.Name" xml:space="preserve">
+    <value>RMI_L_German</value>
   </data>
-  <data name="&gt;&gt;__DBG_SendToastNotification.Type" xml:space="preserve">
+  <data name="&gt;&gt;RMI_L_German.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Polish.Name" xml:space="preserve">
+    <value>RMI_L_Polish</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Polish.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Chinese.Name" xml:space="preserve">
+    <value>RMI_L_Chinese</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Chinese.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Indonesian.Name" xml:space="preserve">
+    <value>RMI_L_Indonesian</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Indonesian.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -295,4 +295,10 @@ Please make sure that the application has write access to the folder, and that t
 
 {0}</value>
   </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Language Change requires restart</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUI needs to restart to reflect the Language change. It will try to restart after you press on Close.</value>
+  </data>
 </root>

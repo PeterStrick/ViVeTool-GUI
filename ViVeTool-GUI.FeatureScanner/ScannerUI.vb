@@ -620,4 +620,68 @@ Public Class ScannerUI
                    Activate()
                End Sub)
     End Sub
+
+    ''' <summary>
+    ''' Function that saves a Two Character Language Code to Settings while restarting the application afterwards.
+    ''' </summary>
+    ''' <param name="TwoCharLang">Two Character Language Code. For example: de for German, zh for Chinese, ...</param>
+    Private Sub ChangeLanguage(TwoCharLang As String)
+        My.Settings.TwoCharLanguageCode = TwoCharLang
+        My.Settings.Save()
+
+        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
+
+        Dim pStart As New ProcessStartInfo With {
+            .WindowStyle = ProcessWindowStyle.Normal,
+            .FileName = Application.ExecutablePath
+        }
+
+        Process.Start(pStart)
+        Application.Exit()
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to English
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_English_Click(sender As Object, e As EventArgs) Handles RMI_L_English.Click
+        ChangeLanguage("en")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to German
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_German_Click(sender As Object, e As EventArgs) Handles RMI_L_German.Click
+        ChangeLanguage("de")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Chinese
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Chinese_Click(sender As Object, e As EventArgs) Handles RMI_L_Chinese.Click
+        ChangeLanguage("zh")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Polish
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Polish_Click(sender As Object, e As EventArgs) Handles RMI_L_Polish.Click
+        ChangeLanguage("pl")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Indonesian
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Indonesian_Click(sender As Object, e As EventArgs) Handles RMI_L_Indonesian.Click
+        ChangeLanguage("id")
+    End Sub
 End Class

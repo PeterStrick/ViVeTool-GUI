@@ -42,9 +42,12 @@ Partial Class AboutAndSettings
         Me.RL_AutoLoad = New Telerik.WinControls.UI.RadLabel()
         Me.RTS_AutoLoad = New Telerik.WinControls.UI.RadToggleSwitch()
         Me.RPVP_Language = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RadDropDownButton1 = New Telerik.WinControls.UI.RadDropDownButton()
-        Me.RadMenuItem1 = New Telerik.WinControls.UI.RadMenuItem()
-        Me.RadMenuItem2 = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RDDB_Language = New Telerik.WinControls.UI.RadDropDownButton()
+        Me.RMI_L_English = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_German = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Polish = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Chinese = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Indonesian = New Telerik.WinControls.UI.RadMenuItem()
         Me.RL_SelectLangauge = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
@@ -68,7 +71,7 @@ Partial Class AboutAndSettings
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPVP_Language.SuspendLayout()
-        CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -81,7 +84,7 @@ Partial Class AboutAndSettings
         Me.RPV_Main.DefaultPage = Me.RPVP_About
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_About
+        Me.RPV_Main.SelectedPage = Me.RPVP_Language
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemPinButton = False
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
@@ -199,27 +202,48 @@ Partial Class AboutAndSettings
         '
         'RPVP_Language
         '
-        Me.RPVP_Language.Controls.Add(Me.RadDropDownButton1)
+        Me.RPVP_Language.Controls.Add(Me.RDDB_Language)
         Me.RPVP_Language.Controls.Add(Me.RL_SelectLangauge)
-        Me.RPVP_Language.ItemSize = New System.Drawing.SizeF(68.0!, 36.0!)
+        Me.RPVP_Language.ItemSize = New System.Drawing.SizeF(92.0!, 36.0!)
         resources.ApplyResources(Me.RPVP_Language, "RPVP_Language")
         Me.RPVP_Language.Name = "RPVP_Language"
+        Me.RPVP_Language.SvgImageXml = resources.GetString("RPVP_Language.SvgImageXml")
         '
-        'RadDropDownButton1
+        'RDDB_Language
         '
-        Me.RadDropDownButton1.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RadMenuItem1, Me.RadMenuItem2})
-        resources.ApplyResources(Me.RadDropDownButton1, "RadDropDownButton1")
-        Me.RadDropDownButton1.Name = "RadDropDownButton1"
+        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian})
+        resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
+        Me.RDDB_Language.Name = "RDDB_Language"
         '
-        'RadMenuItem1
+        'RMI_L_English
         '
-        Me.RadMenuItem1.Name = "RadMenuItem1"
-        resources.ApplyResources(Me.RadMenuItem1, "RadMenuItem1")
+        Me.RMI_L_English.Name = "RMI_L_English"
+        Me.RMI_L_English.SvgImageXml = resources.GetString("RMI_L_English.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_English, "RMI_L_English")
         '
-        'RadMenuItem2
+        'RMI_L_German
         '
-        Me.RadMenuItem2.Name = "RadMenuItem2"
-        resources.ApplyResources(Me.RadMenuItem2, "RadMenuItem2")
+        Me.RMI_L_German.Name = "RMI_L_German"
+        Me.RMI_L_German.SvgImageXml = resources.GetString("RMI_L_German.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_German, "RMI_L_German")
+        '
+        'RMI_L_Polish
+        '
+        Me.RMI_L_Polish.Name = "RMI_L_Polish"
+        Me.RMI_L_Polish.SvgImageXml = resources.GetString("RMI_L_Polish.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Polish, "RMI_L_Polish")
+        '
+        'RMI_L_Chinese
+        '
+        Me.RMI_L_Chinese.Name = "RMI_L_Chinese"
+        Me.RMI_L_Chinese.SvgImageXml = resources.GetString("RMI_L_Chinese.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Chinese, "RMI_L_Chinese")
+        '
+        'RMI_L_Indonesian
+        '
+        Me.RMI_L_Indonesian.Name = "RMI_L_Indonesian"
+        Me.RMI_L_Indonesian.SvgImageXml = resources.GetString("RMI_L_Indonesian.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Indonesian, "RMI_L_Indonesian")
         '
         'RL_SelectLangauge
         '
@@ -264,7 +288,7 @@ Partial Class AboutAndSettings
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RPVP_Language.ResumeLayout(False)
-        CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -290,7 +314,10 @@ Partial Class AboutAndSettings
     Friend WithEvents RTB_UseSystemTheme As WinControls.UI.RadToggleButton
     Friend WithEvents RPVP_Language As WinControls.UI.RadPageViewPage
     Friend WithEvents RL_SelectLangauge As WinControls.UI.RadLabel
-    Friend WithEvents RadDropDownButton1 As WinControls.UI.RadDropDownButton
-    Friend WithEvents RadMenuItem1 As WinControls.UI.RadMenuItem
-    Friend WithEvents RadMenuItem2 As WinControls.UI.RadMenuItem
+    Friend WithEvents RDDB_Language As WinControls.UI.RadDropDownButton
+    Friend WithEvents RMI_L_English As WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_German As WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Polish As WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Chinese As WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Indonesian As WinControls.UI.RadMenuItem
 End Class

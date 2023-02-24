@@ -213,7 +213,10 @@ Public Class GUI
 
         ' Check if the Comments DB Server is online
         Invoke(Sub() RLE_StatusLabel.Text = "Checking if the Comments Database Server is available...")
-        If DatabaseFunctions.ConnectionTest() = True Then HasDBAvailable = True
+        If DatabaseFunctions.ConnectionTest() = True Then
+            HasDBAvailable = True
+        Else HasDBAvailable = False
+        End If
 
         ' Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
         Invoke(Sub() RLE_StatusLabel.Text = "Populating the Build Combo Box...")
@@ -948,17 +951,21 @@ Public Class GUI
                 Case MySqlErrorCode.ServerShutdown
                     Text = "Comments couldn't be loaded, because the Database Server is currently shutting down."
                     Expander = notFoundEx.Message
+                    HasDBAvailable = False
                 Case MySqlErrorCode.UnableToConnectToHost
                     Text = "Comments couldn't be loaded, because the Database Server is currently unavailable."
                     Expander = notFoundEx.Message
+                    HasDBAvailable = False
                 Case Else
                     Text = "An Error occurred while communicating with the Comments Database Server"
                     Expander = notFoundEx.Message
+                    HasDBAvailable = False
             End Select
 
             RadTD.ShowDialog(" A Database Error occurred", "A Database Error occurred", Text, RadTaskDialogIcon.ShieldErrorRedBar,
             notFoundEx, Expander, Expander)
         Catch ex As Exception
+            HasDBAvailable = False
             Invoke(Sub() MsgBox(ex.ToString))
         End Try
     End Sub
