@@ -185,6 +185,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.pl.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutAndSettings.zh-Hans.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.zh.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
@@ -193,6 +197,9 @@
     <EmbeddedResource Include="AboutAndSettings.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.de.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommentsClient.resx">
       <DependentUpon>CommentsClient.vb</DependentUpon>
@@ -204,6 +211,12 @@
     <EmbeddedResource Include="GUI.id.resx">
       <DependentUpon>GUI.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.pl.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.zh-Hans.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.zh.resx">
       <DependentUpon>GUI.vb</DependentUpon>
@@ -242,6 +255,12 @@
       <DependentUpon>SetManual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.id.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetManual.pl.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetManual.zh-Hans.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.zh.resx">
