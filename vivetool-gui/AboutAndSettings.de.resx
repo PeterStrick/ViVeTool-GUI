@@ -148,14 +148,17 @@
         mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
   <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
     <value>405, 280</value>
   </data>
   <data name="RPVP_Settings.Text" xml:space="preserve">
     <value>  Einstellungen</value>
+  </data>
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 280</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Sprache</value>
   </data>
   <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
     <value>417, 328</value>
@@ -188,7 +191,7 @@
     <value>159, 23</value>
   </data>
   <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 35</value>
+    <value>215, 35</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Das System-Thema verwenden</value>
@@ -2006,8 +2009,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Info &amp; Einstellungen</value>
-  </data>
-  <data name="RPVP_Language.Text" xml:space="preserve">
-    <value>Sprache</value>
   </data>
 </root>

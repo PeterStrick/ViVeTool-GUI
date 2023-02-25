@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RDDL_Build.NullText" xml:space="preserve">
+    <value>Build auswählen…</value>
+  </data>
+  <data name="RDDL_Build.Text" xml:space="preserve">
+    <value>Build auswählen…</value>
+  </data>
   <data name="RLE_StatusLabel.Text" xml:space="preserve">
     <value>Fülle die Build Combo Box aus…</value>
+  </data>
+  <data name="RGV_MainGridView.MasterTemplate.Caption" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
@@ -1916,11 +1925,5 @@
         AAAAAAAAAAAf/wAAD/8AAAABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAA
         gAEAAP//AAD//wAA
 </value>
-  </data>
-  <data name="RDDL_Build.NullText" xml:space="preserve">
-    <value>Build auswählen…</value>
-  </data>
-  <data name="RDDL_Build.Text" xml:space="preserve">
-    <value>Build auswählen…</value>
   </data>
 </root>

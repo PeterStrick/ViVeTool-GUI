@@ -39,47 +39,29 @@ Partial Class CommentsClient
         '
         'RL_AddComment
         '
-        Me.RL_AddComment.AutoSize = False
-        Me.RL_AddComment.Location = New System.Drawing.Point(12, 12)
+        resources.ApplyResources(Me.RL_AddComment, "RL_AddComment")
         Me.RL_AddComment.Name = "RL_AddComment"
-        Me.RL_AddComment.Size = New System.Drawing.Size(413, 39)
-        Me.RL_AddComment.TabIndex = 0
-        Me.RL_AddComment.Text = "Add a comment for the Feature: {0}, Build {1}"
         '
         'RB_SendComment
         '
-        Me.RB_SendComment.Location = New System.Drawing.Point(221, 294)
+        resources.ApplyResources(Me.RB_SendComment, "RB_SendComment")
         Me.RB_SendComment.Name = "RB_SendComment"
-        Me.RB_SendComment.Size = New System.Drawing.Size(204, 30)
-        Me.RB_SendComment.TabIndex = 1
-        Me.RB_SendComment.Text = "Send Comment"
         '
         'RL_CommentInfo
         '
-        Me.RL_CommentInfo.AutoSize = False
-        Me.RL_CommentInfo.Location = New System.Drawing.Point(12, 57)
+        resources.ApplyResources(Me.RL_CommentInfo, "RL_CommentInfo")
         Me.RL_CommentInfo.Name = "RL_CommentInfo"
-        Me.RL_CommentInfo.Size = New System.Drawing.Size(413, 60)
-        Me.RL_CommentInfo.TabIndex = 0
-        Me.RL_CommentInfo.Text = "Once submitted, the comment will be reviewed and edited if needed."
         '
         'RL_Comments
         '
-        Me.RL_Comments.AutoSize = False
+        resources.ApplyResources(Me.RL_Comments, "RL_Comments")
         Me.RL_Comments.BorderVisible = True
-        Me.RL_Comments.Location = New System.Drawing.Point(12, 124)
         Me.RL_Comments.Name = "RL_Comments"
-        Me.RL_Comments.Size = New System.Drawing.Size(413, 161)
-        Me.RL_Comments.TabIndex = 2
-        Me.RL_Comments.Text = resources.GetString("RL_Comments.Text")
         '
         'RB_EditText
         '
-        Me.RB_EditText.Location = New System.Drawing.Point(12, 294)
+        resources.ApplyResources(Me.RB_EditText, "RB_EditText")
         Me.RB_EditText.Name = "RB_EditText"
-        Me.RB_EditText.Size = New System.Drawing.Size(203, 30)
-        Me.RB_EditText.TabIndex = 2
-        Me.RB_EditText.Text = "<html><b>Edit Text</b></html>"
         '
         'RMD_CommentEditor
         '
@@ -87,16 +69,14 @@ Partial Class CommentsClient
         '
         'CommentsClient
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(437, 328)
         Me.Controls.Add(Me.RB_EditText)
         Me.Controls.Add(Me.RL_Comments)
         Me.Controls.Add(Me.RL_CommentInfo)
         Me.Controls.Add(Me.RB_SendComment)
         Me.Controls.Add(Me.RL_AddComment)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "CommentsClient"
@@ -104,8 +84,6 @@ Partial Class CommentsClient
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Add a Comment"
         CType(Me.RL_AddComment, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_SendComment, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_CommentInfo, System.ComponentModel.ISupportInitialize).EndInit()
