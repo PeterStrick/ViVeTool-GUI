@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "ViVeTool_GUI.FeatureScanner_WinUI3 (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "ViVeTool_GUI.FeatureScanner_WinUI3 (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
