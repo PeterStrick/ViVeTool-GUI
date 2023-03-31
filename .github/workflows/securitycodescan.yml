@@ -20,11 +20,11 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: nuget/setup-nuget@fd9fffd6ca4541cf4152a9565835ca1a88a6eb37
+      - uses: nuget/setup-nuget@04b0c2b8d1b97922f67eca497d7cf0bf17b8ffe1
       - uses: microsoft/setup-msbuild@v1.3.1
       
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@5f75674efc0abc4d41aa8cf3f1706ed5fe9365dd
+        uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
         
       - name: Restore dependencies	
         run: nuget restore
