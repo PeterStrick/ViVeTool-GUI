@@ -15,7 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
 Imports System.Globalization, System.Runtime.InteropServices
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Albacore.ViVe, MySqlConnector
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector
 Imports Telerik.WinControls.UI, Telerik.WinControls
 
 ''' <summary>
@@ -489,11 +489,12 @@ Public Class GUI
                         ' Get the Feature Enabled State from the currently processing line.
                         ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                         Try
-                            Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
+                            'Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
+                            Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
                             Dim Image = Nothing
 
 #Region "DEBUG ONLY CODE."
-                            If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
+                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad = True Then
                                 If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
                                     Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                                     If rows.Length >= 1 Then Image = CommentsImg
@@ -650,7 +651,8 @@ Public Class GUI
                     ' Get the Feature Enabled State from the currently processing line.
                     ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
-                        Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
+                        'Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
+                        Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
                         Dim Image = Nothing
 
                         If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
@@ -725,7 +727,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Enabled
-        SetConfig(FeatureEnabledState.Enabled)
+        Functions_ViVe.Enable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
@@ -741,7 +743,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Disabled
-        SetConfig(FeatureEnabledState.Disabled)
+        Functions_ViVe.Disable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
@@ -757,67 +759,10 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Default Values
-        SetConfig(FeatureEnabledState.Default)
+        Functions_ViVe.Reset(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value))
 
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
-    End Sub
-
-    ''' <summary>
-    ''' Set's the Feature Configuration. Uses the FeatureEnabledState parameter to set the EnabledState of the Feature
-    ''' </summary>
-    ''' <param name="FeatureEnabledState">Specifies what Enabled State the Feature should be in. Can be either Enabled, Disabled or Default</param>
-    Private Sub SetConfig(FeatureEnabledState As FeatureEnabledState)
-        Try
-            ' Initialize Variables
-            Dim _enabledStateOptions, _variant, _variantPayloadKind, _variantPayload, _group As Integer
-            _enabledStateOptions = 1
-            _group = 4
-
-            ' FeatureConfiguration Variable
-            Dim _configs As New List(Of FeatureConfiguration) From {
-                New FeatureConfiguration() With {
-                    .FeatureId = CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value),
-                    .EnabledState = FeatureEnabledState,
-                    .EnabledStateOptions = _enabledStateOptions,
-                    .Group = _group,
-                    .[Variant] = _variant,
-                    .VariantPayload = _variantPayload,
-                    .VariantPayloadKind = _variantPayloadKind,
-                    .Action = FeatureConfigurationAction.UpdateEnabledState
-                }
-            }
-
-            ' Set's the selected Feature to it's specified EnabledState. If anything goes wrong, display a Error Message in the Status Label.
-            ' On Successful Operations; 
-            ' RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
-            ' and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
-            If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
-                ' Set Status Label
-                RLE_StatusLabel.Text = String.Format(My.Resources.Error_SettingFeatureConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString)
-
-                ' Fancy Message Box
-                RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}",
-                String.Format(My.Resources.Error_SetConfig, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
-                Nothing, RadTaskDialogIcon.Error)
-            Else
-                ' Set Status Label
-                RLE_StatusLabel.Text = String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString)
-
-                ' Set Cell Text
-                RGV_MainGridView.CurrentRow.Cells.Item(2).Value = FeatureEnabledState.ToString
-
-                ' Fancy Message Box
-                RadTD.ShowDialog(My.Resources.SetConfig_Success,
-                String.Format(My.Resources.SetConfig_SuccessfullySetFeature, RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString, FeatureEnabledState.ToString),
-                Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
-            End If
-        Catch ex As Exception
-            ' Catch Any Exception that may occur
-
-            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
-            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
-        End Try
     End Sub
 
     ''' <summary>
