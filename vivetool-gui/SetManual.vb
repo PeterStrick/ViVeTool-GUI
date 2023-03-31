@@ -1,5 +1,5 @@
-﻿'ViVeTool-GUI - Windows Feature Control GUI for ViVeTool
-'Copyright (C) 2022  Peter Strick / Peters Software Solutions
+﻿'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
+'Copyright (C) 2023 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
 'it under the terms of the GNU General Public License as published by
@@ -60,5 +60,9 @@ Public Class SetManual
         Else
             RDDB_PerformAction.Enabled = False
         End If
+    End Sub
+
+    Private Sub SetManual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

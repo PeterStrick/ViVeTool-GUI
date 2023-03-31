@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Windows Feature Control GUI for ViVeTool")>
 <Assembly: AssemblyCompany("Peters Software Solutions")>
 <Assembly: AssemblyProduct("ViVeTool GUI")>
-<Assembly: AssemblyCopyright("Copyright © 2022 Peters Software Solutions")>
+<Assembly: AssemblyCopyright("Copyright © 2023 Peter Strick")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

@@ -5,6 +5,13 @@
     <Platforms>AnyCPU;x64;x86</Platforms>
     <Platforms>x86;x64;arm64;AnyCPU</Platforms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Title>ViVeTool GUI - Feature Scanner WinUI 3 - Core</Title>
+    <Authors>Peter Strick</Authors>
+    <Copyright>2023 Peter Strick</Copyright>
+    <PackageProjectUrl>https://github.com/PeterStrick/ViVeTool-GUI</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PeterStrick/ViVeTool-GUI</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

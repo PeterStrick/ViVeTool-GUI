@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Allows you to scan and download .pdb files for Feature IDs. Part of ViVeTool-GUI")>
 <Assembly: AssemblyCompany("Peters Software Solutions")>
 <Assembly: AssemblyProduct("ViVeTool GUI - Feature Scanner")>
-<Assembly: AssemblyCopyright("Copyright © 2022 Peters Software Solutions")>
+<Assembly: AssemblyCopyright("Copyright © 2023 Peter Strick")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
