@@ -24,7 +24,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v1.3.1
       
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
+        uses: security-code-scan/security-code-scan-add-action@95291dec3220baeb23648cf09e55e87dcda0d43b
         
       - name: Restore dependencies	
         run: nuget restore
