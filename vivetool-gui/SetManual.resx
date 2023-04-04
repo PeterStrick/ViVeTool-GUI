@@ -125,7 +125,7 @@
     <value>Enter a Feature ID</value>
   </data>
   <data name="RTB_FeatureID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 24</value>
+    <value>240, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RTB_FeatureID.TabIndex" type="System.Int32, mscorlib">
@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RTB_FeatureID.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -156,13 +156,13 @@
     <value>  Revert Feature to Default Settings</value>
   </data>
   <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 15</value>
+    <value>261, 22</value>
   </data>
   <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+    <value>154, 37</value>
   </data>
   <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      Perform Action</value>
@@ -177,6 +177,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RTB_VariantID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 45</value>
+  </data>
+  <data name="RTB_VariantID.NullText" xml:space="preserve">
+    <value>Enter an Optional Variant Number</value>
+  </data>
+  <data name="RTB_VariantID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 24</value>
+  </data>
+  <data name="RTB_VariantID.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RTB_VariantID.Name" xml:space="preserve">
+    <value>RTB_VariantID</value>
+  </data>
+  <data name="&gt;&gt;RTB_VariantID.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RTB_VariantID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RTB_VariantID.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -186,7 +210,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>427, 58</value>
+    <value>427, 75</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

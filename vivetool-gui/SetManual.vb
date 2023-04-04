@@ -26,7 +26,13 @@ Public Class SetManual
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_ActivateF_Click(sender As Object, e As EventArgs) Handles RMI_ActivateF.Click
         RTB_FeatureID.Text = RTB_FeatureID.Text.Trim()
-        Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), 0)
+        RTB_VariantID.Text = RTB_VariantID.Text.Trim()
+
+        If IsNumeric(RTB_VariantID.Text) AndAlso String.IsNullOrWhiteSpace(RTB_VariantID.Text) = False Then
+            Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
+        Else
+            Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), 0)
+        End If
     End Sub
 
     ''' <summary>
@@ -36,7 +42,13 @@ Public Class SetManual
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_DeactivateF_Click(sender As Object, e As EventArgs) Handles RMI_DeactivateF.Click
         RTB_FeatureID.Text = RTB_FeatureID.Text.Trim()
-        Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), 0)
+        RTB_VariantID.Text = RTB_VariantID.Text.Trim()
+
+        If IsNumeric(RTB_VariantID.Text) AndAlso String.IsNullOrWhiteSpace(RTB_VariantID.Text) = False Then
+            Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
+        Else
+            Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), 0)
+        End If
     End Sub
 
     ''' <summary>
@@ -56,13 +68,30 @@ Public Class SetManual
     ''' <param name="e">Default EventArgs</param>
     Private Sub RTB_FeatureID_TextChanged(sender As Object, e As EventArgs) Handles RTB_FeatureID.TextChanged
         If IsNumeric(RTB_FeatureID.Text) Then
+            ' Enable the Button if RTB_FeatureID.Text consists of numbers
             RDDB_PerformAction.Enabled = True
         Else
+            ' Disable the Button if RTB_FeatureID.Text does not consist of numbers
             RDDB_PerformAction.Enabled = False
         End If
     End Sub
 
-    Private Sub SetManual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    ''' <summary>
+    ''' Used to help RTB_VariantID_KeyPress by checking if the last Character in the Text Box is a Number. If yes the Drop Down Button get's enabled.
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RTB_VariantID_TextChanged(sender As Object, e As EventArgs) Handles RTB_VariantID.TextChanged
+        If IsNumeric(RTB_VariantID.Text) AndAlso IsNumeric(RTB_FeatureID.Text) Then
+            ' Enable the Button if RTB_VariantID.Text and RTB_FeatureID.Text consists of numbers
+            RDDB_PerformAction.Enabled = True
+        ElseIf IsNumeric(RTB_FeatureID.Text) AndAlso String.IsNullOrEmpty(RTB_VariantID.Text) Then
+            ' Enable the Button if RTB_FeatureID.Text consists of numbers, while RTB_VariantID.Text contains Nothing
+            ' (No Variant ID entered, Variant ID will be treated as 0)
+            RDDB_PerformAction.Enabled = True
+        Else
+            ' Disable the Button if RTB_VariantID.Text does not consist of numbers
+            RDDB_PerformAction.Enabled = False
+        End If
     End Sub
 End Class

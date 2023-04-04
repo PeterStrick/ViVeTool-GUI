@@ -28,8 +28,10 @@ Partial Class SetManual
         Me.RMI_ActivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_DeactivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RTB_VariantID = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RTB_VariantID, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,6 +39,7 @@ Partial Class SetManual
         '
         resources.ApplyResources(Me.RTB_FeatureID, "RTB_FeatureID")
         Me.RTB_FeatureID.Name = "RTB_FeatureID"
+        Me.RTB_FeatureID.TabStop = False
         '
         'RDDB_PerformAction
         '
@@ -44,6 +47,7 @@ Partial Class SetManual
         Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
         Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
+        Me.RDDB_PerformAction.TabStop = False
         Me.RDDB_PerformAction.ThemeName = "Fluent"
         '
         'RMI_ActivateF
@@ -67,10 +71,17 @@ Partial Class SetManual
         resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.UseCompatibleTextRendering = False
         '
+        'RTB_VariantID
+        '
+        resources.ApplyResources(Me.RTB_VariantID, "RTB_VariantID")
+        Me.RTB_VariantID.Name = "RTB_VariantID"
+        Me.RTB_VariantID.TabStop = False
+        '
         'SetManual
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.RTB_VariantID)
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -83,6 +94,7 @@ Partial Class SetManual
         Me.RootElement.ApplyShapeToControl = True
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RTB_VariantID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -94,5 +106,6 @@ Partial Class SetManual
     Friend WithEvents RMI_ActivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_RevertF As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RTB_VariantID As RadTextBox
 End Class
 
