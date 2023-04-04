@@ -47,9 +47,9 @@
     <ApplicationIcon>icons8-advertisement-page-96.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Albacore.ViVe, Version=2020.8.11.1001, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ViVe\ViVe\bin\Debug\Albacore.ViVe.dll</HintPath>
+    <Reference Include="Albacore.ViVe, Version=2023.2.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+      <HintPath>$(SolutionDir)\lib\Albacore.ViVe.dll</HintPath>
     </Reference>
     <Reference Include="AutoUpdater.NET, Version=1.7.6.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Autoupdater.NET.Official.1.7.6\lib\net45\AutoUpdater.NET.dll</HintPath>
@@ -103,7 +103,7 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
