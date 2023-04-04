@@ -17,6 +17,9 @@ Option Strict On
 Imports Telerik.WinControls.UI
 
 Public Class RadTD
+    ''' <summary>
+    ''' Rad Task Dialog Button for use in Exception Task Dialogs
+    ''' </summary>
     Private Shared ReadOnly CopyExAndClose As New RadTaskDialogButton With {
         .Text = My.Resources.Generic_Close,
         .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip

@@ -142,6 +142,7 @@
     <Import Include="System.Linq" />
     <Import Include="System.Net" />
     <Import Include="System.Windows.Forms" />
+    <Import Include="Telerik.WinControls.UI" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutAndSettings.Designer.vb">

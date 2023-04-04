@@ -15,7 +15,6 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
 Imports Albacore.ViVe, Albacore.ViVe.Exceptions, Albacore.ViVe.NativeStructs, Albacore.ViVe.NativeEnums
-Imports Telerik.WinControls.UI
 
 ''' <summary>
 ''' Class that contains all Functions and Subs to work with the ViVe API
@@ -26,11 +25,14 @@ Public Class Functions_ViVe
     ''' </summary>
     ''' <param name="ID">ViVeTool ID</param>
     ''' <param name="ID_Variant">ViVeTool ID Variant</param>
-    ''' <param name="State">Feature State, either Enabled, Disabled, Default</param>
+    ''' <param name="State">Feature State, can be either Enabled, Disabled or Default</param>
     ''' <param name="Priority">Feature Priority</param>
     ''' <param name="Operation">Feature Operation. Can be either VariantState and FeatureState for Enable/Disable, or alternatively ResetState for Reset</param>
+    ''' <param name="Type">The Feature Configuration Store to choose. Can be either Runtime or Boot. Using both is recommended</param>
     ''' <returns>An Integer corresponding to the Seccess Code of FeatureManager.SetFeatureConfigurations()</returns>
-    Shared Function SetConfig(ID As UInteger, ID_Variant As UInteger, State As RTL_FEATURE_ENABLED_STATE, Priority As RTL_FEATURE_CONFIGURATION_PRIORITY, Operation As RTL_FEATURE_CONFIGURATION_OPERATION) As Integer
+    Shared Function SetConfig(ID As UInteger, ID_Variant As UInteger, State As RTL_FEATURE_ENABLED_STATE,
+                              Priority As RTL_FEATURE_CONFIGURATION_PRIORITY, Operation As RTL_FEATURE_CONFIGURATION_OPERATION,
+                              Type As RTL_FEATURE_CONFIGURATION_TYPE) As Integer
         Dim _configs(0) As RTL_FEATURE_CONFIGURATION_UPDATE
 
         _configs(0) = New RTL_FEATURE_CONFIGURATION_UPDATE() With {
@@ -44,7 +46,7 @@ Public Class Functions_ViVe
            .Operation = Operation
         }
 
-        Return FeatureManager.SetFeatureConfigurations(_configs)
+        Return FeatureManager.SetFeatureConfigurations(_configs, Type)
     End Function
 
     ''' <summary>
@@ -54,19 +56,24 @@ Public Class Functions_ViVe
     ''' <param name="ID_Variant">ViVeTool ID Variant</param>
     Public Shared Sub Enable(ID As UInteger, Optional ID_Variant As UInteger = 0)
         Try
-            Dim result = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.Dynamic,
-                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState)
-            If result = 0 Then
+            Dim result_runtime = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                   RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+            Dim result_boot = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                   RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+            If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Enabled.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             Else
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Enabled.ToString),
-                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Function returned {result}. Expected 0")
+                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
-            MsgBox(fpoe.Message)
+            RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
+                             RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
@@ -80,19 +87,24 @@ Public Class Functions_ViVe
     ''' <param name="ID_Variant">ViVeTool ID Variant</param>
     Public Shared Sub Disable(ID As UInteger, ID_Variant As UInteger)
         Try
-            Dim result = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Disabled, RTL_FEATURE_CONFIGURATION_PRIORITY.Dynamic,
-                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState)
-            If result = 0 Then
+            Dim result_runtime = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Disabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                   RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+            Dim result_boot = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Disabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                   RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+            If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Disabled.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             Else
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Disabled.ToString),
-                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Function returned {result}. Expected 0")
+                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
-            MsgBox(fpoe.Message)
+            RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
+                             RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
@@ -105,19 +117,22 @@ Public Class Functions_ViVe
     ''' <param name="ID">ViVeTool ID</param>
     Public Shared Sub Reset(ID As UInteger)
         Try
-            Dim result = SetConfig(ID, 0, RTL_FEATURE_ENABLED_STATE.Default, RTL_FEATURE_CONFIGURATION_PRIORITY.Dynamic,
-                                   RTL_FEATURE_CONFIGURATION_OPERATION.ResetState)
-            If result = 0 Then
+            Dim result_runtime = SetConfig(ID, 0, RTL_FEATURE_ENABLED_STATE.Default, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.ResetState, RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+            Dim result_boot = SetConfig(ID, 0, RTL_FEATURE_ENABLED_STATE.Default, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                                   RTL_FEATURE_CONFIGURATION_OPERATION.ResetState, RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+            If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Default.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             Else
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Default.ToString),
-                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Function returned {result}. Expected 0")
+                Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
-            MsgBox(fpoe.Message)
+            RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
+                             Telerik.WinControls.UI.RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
