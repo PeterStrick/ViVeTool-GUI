@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>405, 280</value>
   </data>
   <data name="RPVP_About.Text" xml:space="preserve">
     <value>  Über ViVeTool GUI</value>
   </data>
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -148,31 +148,31 @@
         mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>405, 280</value>
   </data>
   <data name="RPVP_Settings.Text" xml:space="preserve">
     <value>  Einstellungen</value>
   </data>
-  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>405, 280</value>
   </data>
   <data name="RPVP_Language.Text" xml:space="preserve">
     <value>Sprache</value>
   </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>417, 328</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>326, 134</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons von &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspiriert von &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Der Combo Box Code verwendet &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Dateien&lt;/a&gt; von &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Aktualisierungs Funktionalität bereitgestellt von &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>40, 25</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>311, 30</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
@@ -181,22 +181,22 @@
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Anderes</value>
   </data>
-  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>393, 80</value>
   </data>
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>Anderes</value>
   </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>159, 23</value>
   </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>215, 35</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Das System-Thema verwenden</value>
   </data>
-  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>15, 23</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
@@ -205,37 +205,37 @@
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
     <value>Anwendungs-Aussehen</value>
   </data>
-  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>393, 80</value>
   </data>
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>Anwendungs-Aussehen</value>
   </data>
-  <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>40, 32</value>
   </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>226, 18</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
     <value>Die neueste Feature Liste automatisch laden</value>
   </data>
-  <data name="RTS_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTS_AutoLoad.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>289, 28</value>
   </data>
   <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
     <value>Verhalten</value>
   </data>
-  <data name="RGB_Behaviour.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Behaviour.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>393, 80</value>
   </data>
   <data name="RGB_Behaviour.Text" xml:space="preserve">
     <value>Verhalten</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>417, 328</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA
@@ -2009,5 +2009,11 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Info &amp; Einstellungen</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Sprache auswählen:</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>Sprache auswählen:</value>
   </data>
 </root>
