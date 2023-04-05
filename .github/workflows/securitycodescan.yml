@@ -35,10 +35,15 @@ jobs:
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@v1.2
 
-      - name: Display Sarif Files
+      - name: Display Sarif Files in the results Folder
+        run: cat D:\a\ViVeTool-GUI\results\*.sarif
+        
+      - name: There are sarif Files in the Project Folders?
         run: |
-            cat D:\a\ViVeTool-GUI\results\*.sarif
-            type D:\a\ViVeTool-GUI\results\*.sarif
+            cat D:\a\ViVeTool-GUI\vivetool-gui\*.sarif
+            cat D:\a\ViVeTool-GUI\ViVeTool-GUI.FeatureScanner\*.sarif
+            cat D:\a\ViVeTool-GUI\ViVeTool_GUI.FeatureScanner_WinUI3\*.sarif
+            cat D:\a\ViVeTool-GUI\ViVeTool_GUI.FeatureScanner_WinUI3.Core\*.sarif
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v2.2.9
