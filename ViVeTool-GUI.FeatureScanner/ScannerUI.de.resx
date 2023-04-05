@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -133,25 +133,25 @@
     <value>Info &amp; Einstellungen</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 401</value>
   </data>
-  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>189, 18</value>
   </data>
   <data name="RL_SymbolPath.Text" xml:space="preserve">
     <value>Pfad zum speichern der PDB Dateien</value>
   </data>
-  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 358</value>
   </data>
-  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>103, 18</value>
   </data>
   <data name="RL_DbgPath.Text" xml:space="preserve">
     <value>Pfad zu symchk.exe</value>
   </data>
-  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>342, 310</value>
   </data>
   <data name="RB_Continue.Text" xml:space="preserve">
@@ -163,85 +163,85 @@
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>Auswählen</value>
   </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>201, 396</value>
   </data>
   <data name="RTB_SymbolPath.NullText" xml:space="preserve">
     <value>Pfad zum Speichern der heruntergeladenen Debug Symbole</value>
   </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>511, 28</value>
   </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>131, 353</value>
   </data>
   <data name="RTB_DbgPath.NullText" xml:space="preserve">
     <value>Pfad zu symchk.exe der Windows 10/11 SDK</value>
   </data>
-  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 142</value>
   </data>
-  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>808, 327</value>
   </data>
-  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>808, 133</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Nun da alles eingerichtet ist, werden die Debug Symbole heruntergeladen. Die Anwendung lädt automatisch PDB Symbole für .exe und .dll Dateien von den folgenden Ordnern herunter:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Dies wird sehr lang dauern, abhängig von wieviele Programme Sie installiert haben.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>335, 23</value>
   </data>
   <data name="RL_SymbolFolders.Text" xml:space="preserve">
     <value>Anzahl von Ordnern in {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>330, 23</value>
   </data>
   <data name="RL_SymbolFiles.Text" xml:space="preserve">
     <value>Anzahl von Dateien in {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>326, 23</value>
   </data>
   <data name="RL_SymbolSize.Text" xml:space="preserve">
     <value>Derzeitige Größe von {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>717, 105</value>
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Der Feature Scanner beginnt nun die PDB Dateien mit mach2 zu durchsuchen&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Dieses Fenster oder mach2 bitte &lt;strong&gt;nicht &lt;/strong&gt;schließen, bis mach2 fertig gescannt hat.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Sie werden eine Desktop Benachrichtigung erhalten, wenn die Suche abgeschlossen ist.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>140, 23</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
     <value>Optionale Aktionen:</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>293, 316</value>
   </data>
-  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>281, 39</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei zum &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;span style="font-size: 12pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 12pt"&gt; hochladen (Sie wird dann in der Combo Box erscheinen)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>107, 23</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>Erstellte Datei: </value>
   </data>
-  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>465, 336</value>
   </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>166, 23</value>
   </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>220, 35</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
@@ -253,19 +253,19 @@
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
     <value>Anwendungs-Aussehen</value>
   </data>
-  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>398, 80</value>
   </data>
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>Anwendungs-Aussehen</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>386, 178</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons von &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspiriert von &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updater Funktionalität bereitgestellt von &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Funktionalität bereitgestellt von &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABEFJREFUeF7t
         nc1OU1EUhZn4CGoc6MiB4g/6GkYU44s4RX0BTYwD34ACiRQKRbQFgQJVQGeUH0caw08nRCI6NTmeQ3cL
@@ -290,10 +290,10 @@
 </value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB_AppImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PB_AppImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms" xml:space="preserve">
     <value>NoControl</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
         IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -830,5 +830,8 @@
         //////D//w//////8P//D//////w//8AH///+AD//wAf///4AP//AB////gA//8AH///+AD/////////
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Sprache auswählen:</value>
   </data>
 </root>
