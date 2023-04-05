@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>ViVeTool_GUI.FeatureScanner_WinUI3.Core</RootNamespace>
-    <Platforms>AnyCPU;x64;x86</Platforms>
+    <Platforms>x64;arm64;AnyCPU</Platforms>
     <Platforms>x86;x64;arm64;AnyCPU</Platforms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>ViVeTool GUI - Feature Scanner WinUI 3 - Core</Title>
