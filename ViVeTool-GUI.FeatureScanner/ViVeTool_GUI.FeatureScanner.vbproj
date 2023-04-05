@@ -135,9 +135,6 @@
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScannerUI.zh-Hans.resx">
-      <DependentUpon>ScannerUI.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ScannerUI.zh.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
