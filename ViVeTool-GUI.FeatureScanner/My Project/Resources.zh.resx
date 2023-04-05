@@ -266,4 +266,7 @@ ViVeTool GUI Feature Scanner &lt;strong&gt;不应被普通用户使用&lt;/stron
 
 {0}</value>
   </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>语言更改需要重新启动</value>
+  </data>
 </root>
