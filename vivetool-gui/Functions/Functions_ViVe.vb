@@ -61,7 +61,7 @@ Public Class Functions_ViVe
                                    RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
             Dim result_boot = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
-                                   RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+                                   RTL_FEATURE_CONFIGURATION_TYPE.Boot)
             If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Enabled.ToString),
