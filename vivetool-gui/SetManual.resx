@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RTB_FeatureID.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="RTB_VariantID.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 45</value>
@@ -201,6 +201,54 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RTB_VariantID.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="__DBG_FixLKG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 77</value>
+  </data>
+  <data name="__DBG_FixLKG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 24</value>
+  </data>
+  <data name="__DBG_FixLKG.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="__DBG_FixLKG.Text" xml:space="preserve">
+    <value>Fix LastKnownGood</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FixLKG.Name" xml:space="preserve">
+    <value>__DBG_FixLKG</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FixLKG.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FixLKG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FixLKG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_DBG_FixPriority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 77</value>
+  </data>
+  <data name="_DBG_FixPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 24</value>
+  </data>
+  <data name="_DBG_FixPriority.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_DBG_FixPriority.Text" xml:space="preserve">
+    <value>Fix Priorities</value>
+  </data>
+  <data name="&gt;&gt;_DBG_FixPriority.Name" xml:space="preserve">
+    <value>_DBG_FixPriority</value>
+  </data>
+  <data name="&gt;&gt;_DBG_FixPriority.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;_DBG_FixPriority.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_DBG_FixPriority.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -210,7 +258,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>427, 75</value>
+    <value>427, 113</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -755,7 +803,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Manually change a Feature - Enter a Feature ID</value>
+    <value>Advanced Options</value>
   </data>
   <data name="&gt;&gt;RMI_ActivateF.Name" xml:space="preserve">
     <value>RMI_ActivateF</value>

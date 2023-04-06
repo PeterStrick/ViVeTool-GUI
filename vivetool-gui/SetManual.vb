@@ -94,4 +94,12 @@ Public Class SetManual
             RDDB_PerformAction.Enabled = False
         End If
     End Sub
+
+    Private Sub __DBG_FixLKG_Click(sender As Object, e As EventArgs) Handles __DBG_FixLKG.Click
+        Functions_ViVe.FixLastKnownGood()
+    End Sub
+
+    Private Sub _DBG_FixPriority_Click(sender As Object, e As EventArgs) Handles _DBG_FixPriority.Click
+        Functions_ViVe.FixPriority()
+    End Sub
 End Class

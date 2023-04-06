@@ -147,4 +147,101 @@ Public Class Functions_ViVe
     Public Shared Function Query(ID As UInteger) As String
         Return FeatureManager.QueryFeatureConfiguration(ID).GetValueOrDefault.ToString
     End Function
+
+    ''' <summary>
+    ''' Windows keeps a Backup of Feature Configurations, known as the LKG Store and rolls back to it, if a Feature causes System instabillity.
+    ''' 
+    ''' The ViVe API has a function to automatically fix the LKG Store, if it has become corrupted due to a use-after-free bug in fcon.dll
+    ''' </summary>
+    ''' <returns>True if the Fix was successful, False if an Error occurred</returns>
+    Public Shared Sub FixLastKnownGood()
+        If FeatureManager.FixLKGStore() = True Then
+            RadTD.ShowDialog(My.Resources.SetConfig_Success, "Last Known Good Store was successfully repaired.",
+                             Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
+        Else
+            RadTD.ShowDialog("Not required", "Fixing of the Last Known Good Store is not required.",
+                             Nothing, RadTaskDialogIcon.Information)
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' This moves ViVeTool Features from the Service Priority to the User Priority. Features in the Service Priority are A/B Tests that can be added and removed remotely by Microsofts A/B Testing Program. Moving them to the User Priority makes them Permanent / not remotely modifiable.
+    ''' </summary>
+    Public Shared Sub FixPriority()
+        Dim FixStatus_Runtime As Integer
+        Dim FixStatus_Boot As Integer
+
+        FixStatus_Runtime = FixPriority_HelperFunction(RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+        FixStatus_Boot = FixPriority_HelperFunction(RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+
+        If FixStatus_Runtime = 0 AndAlso FixStatus_Boot = 0 Then
+            RadTD.ShowDialog(My.Resources.SetConfig_Success, "Feature Priorities were successfully fixed. A reboot is recommended.",
+                             Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
+        ElseIf FixStatus_Runtime = 1 AndAlso FixStatus_Boot = 1 Then
+            RadTD.ShowDialog("Not required", "Fixing of Feature Priorities is not required.",
+                             Nothing, RadTaskDialogIcon.Information)
+        ElseIf FixStatus_Runtime = 2 AndAlso FixStatus_Boot = 2 Then
+            RadTD.ShowDialog(My.Resources.Error_Error, "An Error occurred while trying to fix the Feature Priorities.", Nothing,
+                             RadTaskDialogIcon.Error,
+                             ExpandedText:=$"The Functions returned {FixStatus_Runtime & FixStatus_Boot}. Expected 00")
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Helper Function for FixPriority(). Returns Status Codes depending on the Return of FixPriority_HelperFunction_SetConfig()
+    ''' </summary>
+    ''' <param name="configurationType">Feature Configuration Store to perform the Operation on. Can be either Runtime or Boot</param>
+    ''' <returns>0 for Success, 1 if fixing is not required, 2 for any Errors</returns>
+    Private Shared Function FixPriority_HelperFunction(configurationType As RTL_FEATURE_CONFIGURATION_TYPE) As Integer
+        Dim Features = FeatureManager.QueryAllFeatureConfigurations(configurationType)
+        Dim Fixes = FixPriority_Query(Features)
+
+        If Fixes Is Nothing Then Return 1
+
+        Dim FixStatus As Integer
+        For Each FeatureFix In Fixes
+            FixStatus = SetConfig(FeatureFix.FeatureId, FeatureFix.Variant, FeatureFix.EnabledState, FeatureFix.Priority,
+                                  FeatureFix.Operation, configurationType)
+        Next
+
+        If FixStatus = 0 Then
+            Return 0
+        Else
+            Return 2
+        End If
+    End Function
+
+    ''' <summary>
+    ''' Helper Function that determines if any Features require a Priority Fix
+    ''' </summary>
+    ''' <param name="configurations">A Feature Configuration Array returned from FeatureManager.QueryAllFeatureConfigurations()</param>
+    ''' <returns>A Feature Configuration Update Array, or Nothing if no Features require fixing</returns>
+    Private Shared Function FixPriority_Query(configurations As RTL_FEATURE_CONFIGURATION()) As RTL_FEATURE_CONFIGURATION_UPDATE()
+        Dim configsToFix = configurations.Where(Function(x) x.Priority = RTL_FEATURE_CONFIGURATION_PRIORITY.Service AndAlso Not x.IsWexpConfiguration)
+        If Not configsToFix.Any() Then Return Nothing
+
+        Dim priorityFixUpdates(configsToFix.Count() * 2) As RTL_FEATURE_CONFIGURATION_UPDATE
+        priorityFixUpdates(configsToFix.Count() * 2) = New RTL_FEATURE_CONFIGURATION_UPDATE()
+        Dim updatesCreated = 0
+
+        For Each cfg In configsToFix
+            priorityFixUpdates(updatesCreated) = New RTL_FEATURE_CONFIGURATION_UPDATE() With {
+                .FeatureId = cfg.FeatureId,
+                .Priority = cfg.Priority,
+                .Operation = RTL_FEATURE_CONFIGURATION_OPERATION.ResetState
+            }
+            priorityFixUpdates(updatesCreated + 1) = New RTL_FEATURE_CONFIGURATION_UPDATE() With {
+                .FeatureId = cfg.FeatureId,
+                .Priority = RTL_FEATURE_CONFIGURATION_PRIORITY.User,
+                .EnabledState = cfg.EnabledState,
+                .[Variant] = cfg.[Variant],
+                .VariantPayloadKind = cfg.VariantPayloadKind,
+                .VariantPayload = cfg.VariantPayload,
+                .Operation = RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState
+            }
+            updatesCreated += 2
+        Next
+
+        Return priorityFixUpdates
+    End Function
 End Class
