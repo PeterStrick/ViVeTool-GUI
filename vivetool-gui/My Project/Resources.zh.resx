@@ -380,7 +380,7 @@
     <value>错误</value>
   </data>
   <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
     <value>在尝试将 Feature ID {0} 设定为 {1} 时发生错误</value>
@@ -555,7 +555,7 @@
     <comment>{0} references to a Feature</comment>
   </data>
   <data name="Generic_FeatureID" xml:space="preserve">
-    <value></value>
+    <value />
   </data>
   <data name="icons8_comments_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
@@ -627,5 +627,26 @@
   </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>发生了一个错误</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>发生网络异常</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>尝试启动 ViVeTool GUI 功能扫描程序时出错。
+
+该文件不存在。</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>语言更改需要重新启动</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUI需要重新启动以反映语言更改。
+
+按下“关闭”后，它将尝试重新启动。</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>如果设备未连接到互联网，或者无法访问 GitHub API，ViVeTool-GUI 将无法填充构建组合框。
+
+您仍然可以通过按 F12 手动更改Feature ID，并能够加载本地功能列表。</value>
   </data>
 </root>

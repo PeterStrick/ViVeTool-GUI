@@ -24,7 +24,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v1.3.1
       
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@95291dec3220baeb23648cf09e55e87dcda0d43b
+        uses: security-code-scan/security-code-scan-add-action@v1.2
         
       - name: Restore dependencies	
         run: nuget restore
@@ -33,7 +33,10 @@ jobs:
         run: msbuild
 
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
+        uses: security-code-scan/security-code-scan-results-action@main
+
+      - name: Display Sarif Files in the results Folder
+        run: cat D:\a\ViVeTool-GUI\results\*.sarif
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v2
