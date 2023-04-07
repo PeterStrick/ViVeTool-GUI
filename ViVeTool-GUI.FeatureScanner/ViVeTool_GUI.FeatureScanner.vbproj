@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Functions\CrashReporter.GUID.vb" />
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\GeneralFunctions.vb" />
     <Compile Include="Functions\GlobalSuppressions.vb" />

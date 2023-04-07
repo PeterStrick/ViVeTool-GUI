@@ -18,7 +18,7 @@ Imports System.Threading, CrashReporterDotNET
 ''' <summary>
 ''' CrashReporter.Net Helper Class
 ''' </summary>
-Public Class CrashReporter
+Partial Public Class CrashReporter
 
     ''' <summary>
     ''' Show CrashReporter.Net for unhandled exceptions.
@@ -48,7 +48,7 @@ Public Class CrashReporter
             .AnalyzeWithDoctorDump = True,
             .CaptureScreen = False,
             .DoctorDumpSettings = New DoctorDumpSettings With {
-                .ApplicationID = New Guid("bc23cd2f-ae85-434d-83b0-d98254b1765f")
+                .ApplicationID = New Guid(GUID)
             },
             .EmailRequired = False,
             .IncludeScreenshot = True,

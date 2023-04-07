@@ -152,12 +152,13 @@
     <Compile Include="CommentsClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Functions\CrashReporter.GUID.vb" />
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\DatabaseFunctions.vb" />
     <Compile Include="Functions\Extensions.vb" />
     <Compile Include="Functions\Functions_ViVe.vb" />
-    <Compile Include="Functions\GlobalSuppressions.vb" />
     <Compile Include="Functions\RadTD.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="GUI.vb">
       <SubType>Form</SubType>
     </Compile>
