@@ -227,7 +227,7 @@
     <value>281, 39</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei zum &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;span style="font-size: 12pt"&gt;mach2 Repository&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 12pt"&gt; hochladen (Sie wird dann in der Combo Box erscheinen)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>107, 23</value>
@@ -833,5 +833,17 @@
   </data>
   <data name="RDDB_Language.Text" xml:space="preserve">
     <value>Sprache auswählen:</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>{My.Settings.SymbolPath} Löschen</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Die Features.txt Datei speichern</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Sprache</value>
   </data>
 </root>
