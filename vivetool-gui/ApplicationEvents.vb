@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Globalization, Telerik.WinControls.UI
+Imports System.Globalization
 
 Namespace My
     ''' <summary>
@@ -29,7 +29,7 @@ Namespace My
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             ' Set Language
-            If Not Settings.TwoCharLanguageCode = "" Then
+            If Settings.TwoCharLanguageCode IsNot "" Then
                 CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
                 CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo(Settings.TwoCharLanguageCode)
             End If

@@ -14,7 +14,6 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports Telerik.WinControls.UI
 
 Public Class RadTD
     Private Shared ReadOnly CopyExAndClose As New RadTaskDialogButton With {
@@ -85,7 +84,8 @@ Public Class RadTD
                     End Try
                 End Sub)
             RTD.CommandAreaButtons.Add(CopyExAndClose)
-        Else RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+        Else
+            RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
         End If
 
         ' Add Expander if it is specified

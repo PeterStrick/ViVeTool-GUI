@@ -652,4 +652,56 @@ It will try to restart after you press on Close.</value>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>An Error occurred</value>
   </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>Checking if the Comments Database Server is available...</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>Populating the Build Combo Box...</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>Getting Feature Comments from the Database</value>
+  </data>
+  <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
+    <value>Comments couldn't be loaded, because the Database Server is currently shutting down.</value>
+  </data>
+  <data name="Comments_DBError_Unavailable" xml:space="preserve">
+    <value>Comments couldn't be loaded, because the Database Server is currently unavailable.</value>
+  </data>
+  <data name="Comments_DBError_CommunicationError" xml:space="preserve">
+    <value>An Error occurred while communicating with the Comments Database Server</value>
+  </data>
+  <data name="Error_ADatabaseErrorOccurred" xml:space="preserve">
+    <value>A Database Error occurred</value>
+  </data>
+  <data name="Comments_DialogTitle" xml:space="preserve">
+    <value>Comment for {0}</value>
+  </data>
+  <data name="Comments_Form_EditIntroducionText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Press on ""&lt;strong&gt;Edit Text&lt;/strong&gt;"" to edit the Comment Text.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can either write a Comment using normal Text, or &lt;strong&gt;&lt;em&gt;HTML-like Text Formatting&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Default Text for the Label that shows your own Comment</comment>
+  </data>
+  <data name="Comments_ServerError_HTTP504" xml:space="preserve">
+    <value>The Comments Server is currently unavailable. HTTP 504: Gateway Timeout</value>
+  </data>
+  <data name="Comments_ServerError_HTTP503" xml:space="preserve">
+    <value>The Comments Server is currently unavailable. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP502" xml:space="preserve">
+    <value>The Comments Server is currently unavailable. HTTP 502: Bad Gateway</value>
+  </data>
+  <data name="Comments_ServerError_HTTP500" xml:space="preserve">
+    <value>The Comments Server is currently unavailable. HTTP 500: Internal Server Error</value>
+  </data>
+  <data name="Comments_ServerError_HTTP404" xml:space="preserve">
+    <value>An error occurred while communicating with the Comments Server. HTTP 404: Not Found</value>
+  </data>
+  <data name="Comments_ServerError_HTTP403" xml:space="preserve">
+    <value>An error occurred while communicating with the Comments Server. HTTP 403: Forbidden</value>
+  </data>
+  <data name="Comments_ServerError_HTTP400" xml:space="preserve">
+    <value>An error occurred while communicating with the Comments Server. HTTP 400: Bad Request</value>
+  </data>
+  <data name="Comments_ServerError_Generic" xml:space="preserve">
+    <value>An unknown error occurred while communicating with the Comments Server. {0}</value>
+  </data>
 </root>

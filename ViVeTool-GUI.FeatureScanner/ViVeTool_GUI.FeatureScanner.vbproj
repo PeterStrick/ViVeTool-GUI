@@ -104,15 +104,16 @@
     <Import Include="System.Diagnostics" />
     <Import Include="System.Linq" />
     <Import Include="System.Windows.Forms" />
+    <Import Include="Telerik.WinControls.UI" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Functions\CrashReporter.GUID.vb" />
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\GeneralFunctions.vb" />
-    <Compile Include="Functions\GlobalSuppressions.vb" />
     <Compile Include="Functions\Junction.vb" />
     <Compile Include="Functions\RadTD.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="ScannerUI.vb">
       <SubType>Form</SubType>
     </Compile>

@@ -16,3 +16,4 @@ Imports System.Diagnostics.CodeAnalysis
 <Assembly: SuppressMessage("Style", "IDE1006:Benennungsstile", Justification:="Naming convention for Debug Subs and Functions", Scope:="member", Target:="~M:ViVeTool_GUI.SetManual.__DBG_FixLKG_Click(System.Object,System.EventArgs)")>
 <Assembly: SuppressMessage("Style", "IDE1006:Benennungsstile", Justification:="Naming convention for Debug Subs and Functions", Scope:="member", Target:="~M:ViVeTool_GUI.SetManual._DBG_FixPriority_Click(System.Object,System.EventArgs)")>
 <Assembly: SuppressMessage("Minor Code Smell", "S1075:URIs should not be hardcoded", Justification:="GitHub API URIs don't change much", Scope:="member", Target:="~M:ViVeTool_GUI.GUI.PopulateBuildComboBox")>
+<Assembly: SuppressMessage("Minor Code Smell", "S1075:URIs should not be hardcoded", Justification:="The Comments Server URI shouldn't change much", Scope:="member", Target:="~M:ViVeTool_GUI.CommentsClient.SendComment_Thread")>

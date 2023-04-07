@@ -56,25 +56,32 @@ Public Class Functions_ViVe
     ''' <param name="ID_Variant">ViVeTool ID Variant</param>
     Public Shared Sub Enable(ID As UInteger, Optional ID_Variant As UInteger = 0)
         Try
+            ' Set the Feature to it's corresponding Enabled State in the Runtime Store
             Dim result_runtime = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
                                    RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+
+            ' Set the Feature to it's corresponding Enabled State in the Boot Store (Feature becomes persistent)
             Dim result_boot = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Enabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
                                    RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+
+            ' Check if the Return Code for both is 0, meaning Success
             If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Enabled.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
-            Else
+            Else ' If not then show an Error
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Enabled.ToString),
                 Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
+            ' Used within ViVeTool so also catched here
             RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
                              RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
+            ' Catch any other Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
@@ -87,25 +94,32 @@ Public Class Functions_ViVe
     ''' <param name="ID_Variant">ViVeTool ID Variant</param>
     Public Shared Sub Disable(ID As UInteger, ID_Variant As UInteger)
         Try
+            ' Set the Feature to it's corresponding Enabled State in the Runtime Store
             Dim result_runtime = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Disabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
                                    RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+
+            ' Set the Feature to it's corresponding Enabled State in the Boot Store (Feature becomes persistent)
             Dim result_boot = SetConfig(ID, ID_Variant, RTL_FEATURE_ENABLED_STATE.Disabled, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
                                    RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+
+            ' Check if the Return Code for both is 0, meaning Success
             If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Disabled.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
-            Else
+            Else ' If not then show an Error
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Disabled.ToString),
                 Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
+            ' Used within ViVeTool so also catched here
             RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
                              RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
+            ' Catch any other Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
@@ -117,23 +131,30 @@ Public Class Functions_ViVe
     ''' <param name="ID">ViVeTool ID</param>
     Public Shared Sub Reset(ID As UInteger)
         Try
+            ' Set the Feature to it's corresponding Enabled State in the Runtime Store
             Dim result_runtime = SetConfig(ID, 0, RTL_FEATURE_ENABLED_STATE.Default, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.ResetState, RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+
+            ' Set the Feature to it's corresponding Enabled State in the Boot Store (Feature becomes persistent)
             Dim result_boot = SetConfig(ID, 0, RTL_FEATURE_ENABLED_STATE.Default, RTL_FEATURE_CONFIGURATION_PRIORITY.User,
                                    RTL_FEATURE_CONFIGURATION_OPERATION.ResetState, RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+
+            ' Check if the Return Code for both is 0, meaning Success
             If result_runtime = 0 AndAlso result_boot = 0 Then
                 RadTD.ShowDialog(My.Resources.SetConfig_Success,
                 String.Format(My.Resources.SetConfig_SuccessfullySetFeatureID, ID, RTL_FEATURE_ENABLED_STATE.Default.ToString),
                 Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
-            Else
+            Else ' If not then show an Error
                 RadTD.ShowDialog(My.Resources.Error_Error,
                 String.Format(My.Resources.Error_SetConfig, ID, RTL_FEATURE_ENABLED_STATE.Default.ToString),
                 Nothing, RadTaskDialogIcon.Error, ExpandedText:=$"The Functions returned {result_runtime & result_boot}. Expected 00")
             End If
         Catch fpoe As FeaturePropertyOverflowException
+            ' Used within ViVeTool so also catched here
             RadTD.ShowDialog($" {My.Resources.Error_AnErrorOccurred}", My.Resources.Error_AnErrorOccurred, fpoe.Message,
-                             Telerik.WinControls.UI.RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
+                             RadTaskDialogIcon.Error, fpoe, fpoe.ToString, fpoe.ToString)
         Catch ex As Exception
+            ' Catch any other Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
@@ -155,7 +176,7 @@ Public Class Functions_ViVe
     ''' </summary>
     ''' <returns>True if the Fix was successful, False if an Error occurred</returns>
     Public Shared Sub FixLastKnownGood()
-        If FeatureManager.FixLKGStore() = True Then
+        If FeatureManager.FixLKGStore() Then
             RadTD.ShowDialog(My.Resources.SetConfig_Success, "Last Known Good Store was successfully repaired.",
                              Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
         Else

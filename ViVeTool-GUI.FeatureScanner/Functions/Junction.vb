@@ -21,6 +21,11 @@ Imports System.ComponentModel, System.IO, System.Runtime.InteropServices, Micros
 ''' </summary>
 Public Class Junction
     ''' <summary>
+    ''' Variable for the Folder Name used in the Junction Subs. Important: No leading Backslash
+    ''' </summary>
+    Private Shared ReadOnly FolderName As String = "C:\FeatureScanner"
+
+    ''' <summary>
     ''' Win32FileAccess Enum
     ''' </summary>
     <Flags>
@@ -149,6 +154,7 @@ Public Class Junction
     Public Shared Sub Create(junctionPath As String, targetDir As String, Optional overwrite As Boolean = False)
         Const IO_REPARSE_TAG_MOUNT_POINT As UInteger = &HA0000003UI
         Const FSCTL_SET_REPARSE_POINT As UInteger = &H900A4
+
         ' This prefix indicates to NTFS that the path is to be treated as a non-interpreted path in the virtual file system.
         Const NonInterpretedPathPrefix As String = "\??\"
 
@@ -158,13 +164,17 @@ Public Class Junction
             If Not overwrite Then Throw New IOException("Junction Class: Directory already exists and overwrite parameter is false.")
         ElseIf Not Directory.Exists(targetDir) Then
             Throw New IOException("Junction Class: Target Directory doesn't exist.")
-        Else Directory.CreateDirectory(junctionPath)
+        Else
+            Directory.CreateDirectory(junctionPath)
         End If
+
         targetDir = NonInterpretedPathPrefix & Path.GetFullPath(targetDir)
 
         Using reparsePointHandle As SafeFileHandle = CreateFile(junctionPath, Win32FileAccess.GenericWrite, FileShare.Read Or FileShare.Write Or FileShare.Delete, IntPtr.Zero, FileMode.Open, Win32FileAttribute.FlagBackupSemantics Or Win32FileAttribute.FlagOpenReparsePoint, IntPtr.Zero)
 
-            If reparsePointHandle.IsInvalid OrElse Marshal.GetLastWin32Error() <> 0 Then Throw New IOException("Junction Class: Unable to open re-parse point.", New Win32Exception())
+            If reparsePointHandle.IsInvalid OrElse Marshal.GetLastWin32Error() <> 0 Then
+                Throw New IOException("Junction Class: Unable to open re-parse point.", New Win32Exception())
+            End If
 
             ' Unicode string is 2 bytes per character, so *2 to get byte length
             Dim byteLength As UShort = CType(targetDir.Length * 2, UShort)
@@ -179,7 +189,9 @@ Public Class Junction
             }
 
             Dim result As Boolean = DeviceIoControl(reparsePointHandle, FSCTL_SET_REPARSE_POINT, reparseDataBuffer, byteLength + 20US, IntPtr.Zero, 0, 0, IntPtr.Zero)
-            If Not result Then Throw New IOException("Junction Class: Unable to create junction point.", New Win32Exception())
+            If Not result Then
+                Throw New IOException("Junction Class: Unable to create junction point.", New Win32Exception())
+            End If
         End Using
     End Sub
 
@@ -188,7 +200,9 @@ Public Class Junction
     ''' </summary>
     ''' <param name="junctionPath">The Full Path of the Junction to delete</param>
     Public Shared Sub Delete(junctionPath As String)
-        If Not Directory.Exists(junctionPath) Then Throw New IOException("Junction Class: The Junction Path doesn't exist.")
+        If Not Directory.Exists(junctionPath) Then
+            Throw New IOException("Junction Class: The Junction Path doesn't exist.")
+        End If
 
         Try
             Directory.Delete(junctionPath)
@@ -202,26 +216,26 @@ Public Class Junction
     ''' </summary>
     Public Shared Sub FeatureScanner_CreateJunctions()
         ' Create a new Folder for the Junctions
-        If Not Directory.Exists("C:\FeatureScanner") Then
-            Directory.CreateDirectory("C:\FeatureScanner")
-            Debug.WriteLine("Directory C:\FeatureScanner created")
+        If Not Directory.Exists(FolderName) Then
+            Directory.CreateDirectory(FolderName)
+            Debug.WriteLine($"Directory {FolderName} created")
         End If
 
         ' Create Junctions
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\System32", "C:\Windows\System32"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\SysWOW64", "C:\Windows\SysWOW64"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ImmersiveControlPanel", "C:\Windows\ImmersiveControlPanel"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\PrintDialog", "C:\Windows\PrintDialog"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ShellComponents", "C:\Windows\ShellComponents"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\ShellExperiences", "C:\Windows\ShellExperiences"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\SystemApps", "C:\Windows\SystemApps"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\SystemResources", "C:\Windows\SystemResources"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\WinSxS", "C:\Windows\WinSxS"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32", "C:\Windows\System32"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64", "C:\Windows\SysWOW64"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\ImmersiveControlPanel", "C:\Windows\ImmersiveControlPanel"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\PrintDialog", "C:\Windows\PrintDialog"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\ShellComponents", "C:\Windows\ShellComponents"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\ShellExperiences", "C:\Windows\ShellExperiences"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SystemApps", "C:\Windows\SystemApps"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SystemResources", "C:\Windows\SystemResources"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\WinSxS", "C:\Windows\WinSxS"))
 
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\CommonFiles64", "C:\Program Files\Common Files"))
-        SilentTryCatchHelper(Sub() Create("C:\FeatureScanner\CommonFiles86", "C:\Program Files (x86)\Common Files"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\CommonFiles64", "C:\Program Files\Common Files"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\CommonFiles86", "C:\Program Files (x86)\Common Files"))
 
-        Debug.WriteLine("Junctions created at C:\FeatureScanner")
+        Debug.WriteLine($"Junctions created at {FolderName}")
     End Sub
 
     ''' <summary>
@@ -229,24 +243,24 @@ Public Class Junction
     ''' </summary>
     Public Shared Sub FeatureScanner_DeleteJunctions()
         ' Delete Junctions
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\System32"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SysWOW64"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ImmersiveControlPanel"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\PrintDialog"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ShellComponents"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\ShellExperiences"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SystemApps"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\SystemResources"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\WinSxS"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\ImmersiveControlPanel"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\PrintDialog"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\ShellComponents"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\ShellExperiences"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SystemApps"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SystemResources"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\WinSxS"))
 
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\CommonFiles64"))
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner\CommonFiles86"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\CommonFiles64"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\CommonFiles86"))
 
-        Debug.WriteLine("Junctions in C:\FeatureScanner deleted")
+        Debug.WriteLine($"Junctions in {FolderName} deleted")
 
         ' Delete the Junctions root Folder
-        SilentTryCatchHelper(Sub() Delete("C:\FeatureScanner"))
-        Debug.WriteLine("Directory C:\FeatureScanner deleted")
+        SilentTryCatchHelper(Sub() Delete(FolderName))
+        Debug.WriteLine($"Directory {FolderName} deleted")
     End Sub
 
     ''' <summary>

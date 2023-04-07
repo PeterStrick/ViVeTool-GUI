@@ -14,7 +14,8 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports Telerik.WinControls, Telerik.WinControls.UI, Telerik.RadToastNotificationManager
+Imports System.IO
+Imports Telerik.WinControls, Telerik.RadToastNotificationManager
 
 ''' <summary>
 ''' ViVeTool GUI - Feature Scanner
@@ -479,7 +480,7 @@ Public Class ScannerUI
 
         ' Replace Labels
         Invoke(Sub()
-                   RL_OutputFile.Text = String.Format(My.Resources.Done_OutputFile_N, My.Settings.SymbolPath & "\" & BuildNumber & ".txt")
+                   RL_OutputFile.Text = String.Format(My.Resources.Done_OutputFile_N, Path.Combine(My.Settings.SymbolPath, BuildNumber & ".txt"))
                    RB_OA_DeleteSymbolPath.Text = String.Format(My.Resources.Done_SymbolDelete, My.Settings.SymbolPath)
                    RL_Done.Text.Replace("Features.txt", BuildNumber & ".txt")
                    RB_OA_CopyFeaturesTXT.Text.Replace("Features.txt", BuildNumber & ".txt")
@@ -498,9 +499,7 @@ Public Class ScannerUI
         Try
             Dim RSFD As New RadSaveFileDialog With {.DefaultExt = "txt", .Filter = "Text Files (*.txt)|*.txt"}
             If RSFD.ShowDialog = DialogResult.OK Then
-                'IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", S.FileName & "\" & BuildNumber & ".txt")
-                'MsgBox(RSFD.FileName)
-                IO.File.Copy(My.Settings.SymbolPath & "\" & BuildNumber & ".txt", RSFD.FileName, True)
+                File.Copy(Path.Combine(My.Settings.SymbolPath, BuildNumber & ".txt"), RSFD.FileName, True)
             End If
         Catch ex As Exception
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnExceptionOccurred,

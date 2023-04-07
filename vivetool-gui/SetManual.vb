@@ -28,7 +28,7 @@ Public Class SetManual
         RTB_FeatureID.Text = RTB_FeatureID.Text.Trim()
         RTB_VariantID.Text = RTB_VariantID.Text.Trim()
 
-        If IsNumeric(RTB_VariantID.Text) AndAlso String.IsNullOrWhiteSpace(RTB_VariantID.Text) = False Then
+        If IsNumeric(RTB_VariantID.Text) AndAlso Not String.IsNullOrWhiteSpace(RTB_VariantID.Text) Then
             Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
         Else
             Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), 0)
@@ -44,7 +44,7 @@ Public Class SetManual
         RTB_FeatureID.Text = RTB_FeatureID.Text.Trim()
         RTB_VariantID.Text = RTB_VariantID.Text.Trim()
 
-        If IsNumeric(RTB_VariantID.Text) AndAlso String.IsNullOrWhiteSpace(RTB_VariantID.Text) = False Then
+        If IsNumeric(RTB_VariantID.Text) AndAlso Not String.IsNullOrWhiteSpace(RTB_VariantID.Text) Then
             Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
         Else
             Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), 0)

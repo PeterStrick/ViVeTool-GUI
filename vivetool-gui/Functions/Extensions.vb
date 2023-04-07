@@ -14,6 +14,13 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Module IconExtensions
+    ''' <summary>
+    ''' Extension to the Icon Class allowing the Conversion of Bitmaps to Icons
+    ''' </summary>
+    ''' <param name="img"></param>
+    ''' <param name="makeTransparent"></param>
+    ''' <param name="colorToMakeTransparent"></param>
+    ''' <returns></returns>
     <Runtime.CompilerServices.Extension>
     Public Function ToIcon(img As Bitmap, makeTransparent As Boolean, colorToMakeTransparent As Color) As Icon
         If makeTransparent Then img.MakeTransparent(colorToMakeTransparent)

@@ -19,7 +19,7 @@ Namespace My
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
             ' Set Language
-            If Not Settings.TwoCharLanguageCode = "" Then
+            If Settings.TwoCharLanguageCode IsNot "" Then
                 CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
                 CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo(Settings.TwoCharLanguageCode)
             End If
@@ -35,14 +35,16 @@ Namespace My
             End If
 
             ' Transfers older My.Settings to newer ViVeTool GUI Versions if applicable.
-            If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then Settings.Upgrade()
+            If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then
+                Settings.Upgrade()
+            End If
 
             ' Load the Text Boxes
             ScannerUI.RTB_DbgPath.Text = Settings.DebuggerPath
             ScannerUI.RTB_SymbolPath.Text = Settings.SymbolPath
 
             ' Check if mach2.exe and msdia140.dll are present
-            If IO.File.Exists(Application.Info.DirectoryPath & "\mach2\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\mach2\msdia140.dll") = False Then
+            If Not IO.File.Exists(Application.Info.DirectoryPath & "\mach2\mach2.exe") OrElse Not IO.File.Exists(Application.Info.DirectoryPath & "\mach2\msdia140.dll") Then
                 ' Show the Task Dialog
                 RadTD.ShowDialog($" {Resources.Error_AnErrorOccurred}", Resources.Error_MissingFiles_Heading,
                            String.Format(Resources.Error_MissingFiles_Text_N, "mach2.exe" & vbNewLine & "msdia140.dll"),

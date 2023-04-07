@@ -71,6 +71,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Checking if the Comments Database Server is available... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_CheckingAvailabillity() As String
+            Get
+                Return ResourceManager.GetString("Comments_CheckingAvailabillity", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Closes the Dialog ähnelt.
         '''</summary>
         Friend ReadOnly Property Comments_ClosesTheDialog() As String
@@ -85,6 +94,60 @@ Namespace My.Resources
         Friend ReadOnly Property Comments_CommentSentSuccessfully() As String
             Get
                 Return ResourceManager.GetString("Comments_CommentSentSuccessfully", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An Error occurred while communicating with the Comments Database Server ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_DBError_CommunicationError() As String
+            Get
+                Return ResourceManager.GetString("Comments_DBError_CommunicationError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Comments couldn&apos;t be loaded, because the Database Server is currently shutting down. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_DBError_ShuttingDown() As String
+            Get
+                Return ResourceManager.GetString("Comments_DBError_ShuttingDown", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Comments couldn&apos;t be loaded, because the Database Server is currently unavailable. ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_DBError_Unavailable() As String
+            Get
+                Return ResourceManager.GetString("Comments_DBError_Unavailable", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Comment for {0} ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_DialogTitle() As String
+            Get
+                Return ResourceManager.GetString("Comments_DialogTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die &lt;html&gt;&lt;p&gt;Press on &quot;&quot;&lt;strong&gt;Edit Text&lt;/strong&gt;&quot;&quot; to edit the Comment Text.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can either write a Comment using normal Text, or &lt;strong&gt;&lt;em&gt;HTML-like Text Formatting&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt; ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_Form_EditIntroducionText() As String
+            Get
+                Return ResourceManager.GetString("Comments_Form_EditIntroducionText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Getting Feature Comments from the Database ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_GettingComments() As String
+            Get
+                Return ResourceManager.GetString("Comments_GettingComments", resourceCulture)
             End Get
         End Property
         
@@ -158,6 +221,78 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An unknown error occurred while communicating with the Comments Server. {0} ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_Generic() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_Generic", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An error occurred while communicating with the Comments Server. HTTP 400: Bad Request ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP400() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP400", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An error occurred while communicating with the Comments Server. HTTP 403: Forbidden ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP403() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP403", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die An error occurred while communicating with the Comments Server. HTTP 404: Not Found ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP404() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP404", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Comments Server is currently unavailable. HTTP 500: Internal Server Error ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP500() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP500", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Comments Server is currently unavailable. HTTP 502: Bad Gateway ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP502() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP502", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Comments Server is currently unavailable. {0} ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP503() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP503", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die The Comments Server is currently unavailable. HTTP 504: Gateway Timeout ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Comments_ServerError_HTTP504() As String
+            Get
+                Return ResourceManager.GetString("Comments_ServerError_HTTP504", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die  Comment Sent ähnelt.
         '''</summary>
         Friend ReadOnly Property Comments_Spaced_CommentSent() As String
@@ -181,6 +316,15 @@ Namespace My.Resources
         Friend ReadOnly Property Comments_Spaced_SendingYourComment() As String
             Get
                 Return ResourceManager.GetString("Comments_Spaced_SendingYourComment", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A Database Error occurred ähnelt.
+        '''</summary>
+        Friend ReadOnly Property Error_ADatabaseErrorOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_ADatabaseErrorOccurred", resourceCulture)
             End Get
         End Property
         
@@ -752,6 +896,15 @@ Namespace My.Resources
         Friend ReadOnly Property PopulateBuildComboBox_Check_Ready() As String
             Get
                 Return ResourceManager.GetString("PopulateBuildComboBox_Check_Ready", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Populating the Build Combo Box... ähnelt.
+        '''</summary>
+        Friend ReadOnly Property PopulateBuildComboBox_Populating() As String
+            Get
+                Return ResourceManager.GetString("PopulateBuildComboBox_Populating", resourceCulture)
             End Get
         End Property
         

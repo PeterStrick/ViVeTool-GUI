@@ -15,8 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
 Imports System.Globalization, System.Runtime.InteropServices
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector
-Imports Telerik.WinControls.UI, Telerik.WinControls
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector, Telerik.WinControls
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -212,14 +211,15 @@ Public Class GUI
         AutoUpdater.Start("https://raw.githubusercontent.com/PeterStrick/ViVeTool-GUI/master/UpdaterXML.xml")
 
         ' Check if the Comments DB Server is online
-        Invoke(Sub() RLE_StatusLabel.Text = "Checking if the Comments Database Server is available...")
-        If DatabaseFunctions.ConnectionTest() = True Then
+        Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Comments_CheckingAvailabillity)
+        If DatabaseFunctions.ConnectionTest() Then
             HasDBAvailable = True
-        Else HasDBAvailable = False
+        Else
+            HasDBAvailable = False
         End If
 
         ' Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
-        Invoke(Sub() RLE_StatusLabel.Text = "Populating the Build Combo Box...")
+        Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Populating)
         PopulateBuildComboBox_Check()
     End Sub
 
@@ -230,7 +230,7 @@ Public Class GUI
         ' Add manual option
         Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
-        If CheckForInternetConnection() = True Then
+        If CheckForInternetConnection() Then
             HasInternetConnection = True
 
             Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
@@ -485,20 +485,17 @@ Public Class GUI
                     Str = Str.Select(Function(s) s.Trim).ToArray()
 
                     ' If the Line is not empty, continue
-                    If Line IsNot "" AndAlso Line.Contains("#") = False Then
+                    If Line IsNot "" AndAlso Not Line.Contains("#") Then
                         ' Get the Feature Enabled State from the currently processing line.
                         ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                         Try
-                            'Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                             Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
                             Dim Image = Nothing
 
 #Region "DEBUG ONLY CODE."
-                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad = True Then
-                                If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
-                                    Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                                    If rows.Length >= 1 Then Image = CommentsImg
-                                End If
+                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad AndAlso HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
+                                Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
+                                If rows.Length >= 1 Then Image = CommentsImg
                             End If
 #End Region
 
@@ -507,11 +504,9 @@ Public Class GUI
                             Dim Image = Nothing
 
 #Region "DEBUG ONLY CODE."
-                            If Diagnostics.Debugger.IsAttached And EnableDBLoadingForManualTXTLoad = True Then
-                                If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
-                                    Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                                    If rows.Length >= 1 Then Image = CommentsImg
-                                End If
+                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad AndAlso HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
+                                Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
+                                If rows.Length >= 1 Then Image = CommentsImg
                             End If
 #End Region
 
@@ -548,9 +543,9 @@ Public Class GUI
                            RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
                        End Sub)
             Catch ex As Exception
+                ' Catch Any Exception that may occur
                 Invoke(
                     Sub()
-                        ' Catch Any Exception that may occur
                         ' Show an Error Dialog
                         RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
                         Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
@@ -594,8 +589,8 @@ Public Class GUI
             Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
             ' Load Comments
-            If HasInternetConnection = True Then
-                Invoke(Sub() RLE_StatusLabel.Text = "Getting Feature Comments from the Database")
+            If HasInternetConnection Then
+                Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Comments_GettingComments)
                 LoadCommentsFromDB(RDDL_Build.Text)
             End If
 
@@ -607,15 +602,13 @@ Public Class GUI
             Try
                 Invoke(Sub() RGV_MainGridView.Rows.Clear())
             Catch ex As Exception
-                Diagnostics.Debug.WriteLine("Exception while clearing row. Build: " &
-                                            RDDL_Build.Text & ". " & ex.Message)
+                Diagnostics.Debug.WriteLine("Exception while clearing row. Build: " & RDDL_Build.Text & ". " & ex.Message)
             End Try
 
             ' Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
-            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" &
-                                   RDDL_Build.Text & ".txt", path)
+            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
             ' For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
@@ -647,15 +640,14 @@ Public Class GUI
                 Str = Str.Select(Function(s) s.Trim).ToArray()
 
                 ' If the Line is not empty, continue
-                If Line IsNot "" AndAlso Line.Contains("#") = False Then
+                If Line IsNot "" AndAlso Not Line.Contains("#") Then
                     ' Get the Feature Enabled State from the currently processing line.
                     ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
-                        'Dim State As String = RtlFeatureManager.QueryFeatureConfiguration(CUInt(Str(1)), FeatureConfigurationSection.Runtime).EnabledState.ToString
                         Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
                         Dim Image = Nothing
 
-                        If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
+                        If HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                             If rows.Length >= 1 Then Image = CommentsImg
                         End If
@@ -664,7 +656,7 @@ Public Class GUI
                     Catch NullEx As NullReferenceException
                         Dim Image = Nothing
 
-                        If HasInternetConnection = True AndAlso HasDBAvailable = True AndAlso TableDoesNotExist = False Then
+                        If HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
                             Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                             If rows.Length >= 1 Then Image = CommentsImg
                         End If
@@ -833,25 +825,37 @@ Public Class GUI
         Diagnostics.Process.GetCurrentProcess().Kill()
     End Sub
 
+    ''' <summary>
+    ''' Shows the Send a Comment Form
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
     Private Sub ShowCommentForm(sender As Object, e As EventArgs)
         CommentsClient.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' Adds the Send a Comment Context Menu Item if HasInternetConnection = True
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Context Menu Opening EventArgs</param>
     Private Sub RGV_MainGridView_ContextMenuOpening(sender As Object, e As ContextMenuOpeningEventArgs) Handles RGV_MainGridView.ContextMenuOpening
-        ' DEBUG ONLY
-        ' If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True AndAlso RDDL_Build.Text IsNot String.Empty Then
-        If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection = True Then
+        If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection Then
             Try
                 e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
                 e.ContextMenu.Items.Add(RMI_AddComment)
                 CommentsClient.FeatureName = RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
                 CommentsClient.Build = RDDL_Build.Text
             Catch ex As ArgumentException
-                ' Exception that may occur from whilly-nilly spam opening the context menu and scrolling down
+                ' Exception that may occur from spam opening the context menu while scrolling down
             End Try
         End If
     End Sub
 
+    ''' <summary>
+    ''' Loads the Comments from the DB for the specified Build
+    ''' </summary>
+    ''' <param name="Build">Windows Build Number as a String</param>
     Private Sub LoadCommentsFromDB(Build As String)
         Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
 
@@ -879,6 +883,7 @@ Public Class GUI
                         sda.Fill(Build_DT)
                     End Using
                 End Using
+
                 Diagnostics.Debug.WriteLine("LoadCommentsFromDB Comments loaded.")
                 con.Close()
             End Using
@@ -894,20 +899,20 @@ Public Class GUI
                     Diagnostics.Debug.WriteLine("Table does not exist")
                     Exit Try
                 Case MySqlErrorCode.ServerShutdown
-                    Text = "Comments couldn't be loaded, because the Database Server is currently shutting down."
+                    Text = My.Resources.Comments_DBError_ShuttingDown
                     Expander = notFoundEx.Message
                     HasDBAvailable = False
                 Case MySqlErrorCode.UnableToConnectToHost
-                    Text = "Comments couldn't be loaded, because the Database Server is currently unavailable."
+                    Text = My.Resources.Comments_DBError_Unavailable
                     Expander = notFoundEx.Message
                     HasDBAvailable = False
                 Case Else
-                    Text = "An Error occurred while communicating with the Comments Database Server"
+                    Text = My.Resources.Comments_DBError_CommunicationError
                     Expander = notFoundEx.Message
                     HasDBAvailable = False
             End Select
 
-            RadTD.ShowDialog(" A Database Error occurred", "A Database Error occurred", Text, RadTaskDialogIcon.ShieldErrorRedBar,
+            RadTD.ShowDialog($" {My.Resources.Error_ADatabaseErrorOccurred}", My.Resources.Error_ADatabaseErrorOccurred, Text, RadTaskDialogIcon.ShieldErrorRedBar,
             notFoundEx, Expander, Expander)
         Catch ex As Exception
             HasDBAvailable = False
@@ -937,7 +942,7 @@ Public Class GUI
             ' Check if the Cell Image matches the Comments Image
             If cCell IsNot Nothing AndAlso cCell.Image Is CommentsImg Then
                 ' Display the comment in a message box
-                RadTD.ShowDialog(String.Format(" Comment for {0}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
+                RadTD.ShowDialog(String.Format($" {My.Resources.Comments_DialogTitle}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
                 Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
             End If
         Catch ex As NullReferenceException
