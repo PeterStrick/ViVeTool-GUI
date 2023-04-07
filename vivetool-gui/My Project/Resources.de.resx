@@ -295,7 +295,7 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
     <value>Ein Fehler ist aufgetreten, beim Versuch ihren Kommentar zu senden.</value>
   </data>
   <data name="Language_Heading" xml:space="preserve">
-    <value>Sprachen Änderung benötigt einen Neustart</value>
+    <value>Die Sprachen Änderung benötigt einen Neustart</value>
   </data>
   <data name="Language_Text" xml:space="preserve">
     <value>ViVeTool GUI benötigt einen Neustart um die Sprache zu ändern.
@@ -307,5 +307,67 @@ Die Anwendung versucht sich neuzustarten nachdem auf Schließen gedrückt wurde.
   </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten</value>
+  </data>
+  <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
+    <value>Kommentare konnten nicht geladen werden, da der Datenbank Server gerade herunterfährt.</value>
+  </data>
+  <data name="Comments_DBError_Unavailable" xml:space="preserve">
+    <value>Kommentare konnten nicht geladen werden, da der Datenbank Server zur Zeit nicht Verfügbar ist.</value>
+  </data>
+  <data name="Error_ADatabaseErrorOccurred" xml:space="preserve">
+    <value>Ein Datenbank Fehler ist aufgetreten</value>
+  </data>
+  <data name="Comments_DialogTitle" xml:space="preserve">
+    <value>Kommentar für {0}</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>Befülle die Build Kombo-Box…</value>
+  </data>
+  <data name="Comments_ServerError_HTTP504" xml:space="preserve">
+    <value>Der Kommentar Server ist zur Zeit nicht Verfügbar. HTTP 504: Gateway Timeout</value>
+  </data>
+  <data name="Comments_ServerError_HTTP503" xml:space="preserve">
+    <value>Der Kommentar Server ist zur Zeit nicht Verfügbar. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP502" xml:space="preserve">
+    <value>Der Kommentar Server ist zur Zeit nicht Verfügbar. HTTP 502: Bad Gateway</value>
+  </data>
+  <data name="Comments_ServerError_Generic" xml:space="preserve">
+    <value>Ein Fehler ist während der Kommunikation mit dem Kommentar Server aufgetreten. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP404" xml:space="preserve">
+    <value>Ein Fehler ist während der Kommunikation mit dem Kommentar Server aufgetreten. HTTP 404: Not Found</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>ViVeTool GUI kann die Build Kombo-Box nicht auffüllen, wenn ihr Gerät nicht mit dem Internet verbunden ist, oder wenn die GitHub API nicht erreichbar ist.
+
+Sie können jederzeit manuell ViVeTool Features #ndern indem sie F12 drücken, oder eine lokal gespeicherte Feature Liste laden.</value>
+  </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>Überprüfe ob der Kommentar Datenbank Server erreichbar ist…</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>Ruft Feature Kommentare von der Datenbank ab…</value>
+  </data>
+  <data name="Comments_DBError_CommunicationError" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten bei dem Versuch mit dem Kommentar Datenbank Server zu kommunizieren</value>
+  </data>
+  <data name="Comments_Form_EditIntroducionText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Drücke auf ""&lt;strong&gt;Text ändern&lt;/strong&gt;"" um den Kommentar Text zu ändern.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Sie können als Kommentar entweder normalen Text, oder &lt;strong&gt;&lt;em&gt;HTML-ähnlichen Text&lt;/em&gt;&lt;/strong&gt; schreiben&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Default Text for the Label that shows your own Comment</comment>
+  </data>
+  <data name="Comments_ServerError_HTTP500" xml:space="preserve">
+    <value>Der Kommentar Server ist zur Zeit nicht Verfügbar. HTTP 500: Internal Server Error</value>
+  </data>
+  <data name="Comments_ServerError_HTTP403" xml:space="preserve">
+    <value>Ein Fehler ist während der Kommunikation mit dem Kommentar Server aufgetreten. HTTP 403: Forbidden</value>
+  </data>
+  <data name="Comments_ServerError_HTTP400" xml:space="preserve">
+    <value>Ein Fehler ist während der Kommunikation mit dem Kommentar Server aufgetreten. HTTP 400: Bad Request</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>Ein Fehler ist bei dem starten des ViVeTool GUI Feature Scanners aufgetreten.
+
+Die Datei existiert nicht.</value>
   </data>
 </root>
