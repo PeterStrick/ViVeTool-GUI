@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -121,7 +121,7 @@
     <value>Network Error</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="main_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="main_icon" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\icons8-advertisement-page-96.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Generic_Modifiable" xml:space="preserve">
@@ -135,7 +135,7 @@
     <comment>{0} references to a Build Number, ex: 19041</comment>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="icons8_settings_system_daydream_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_settings_system_daydream_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -171,7 +171,7 @@
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature State</value>
   </data>
-  <data name="icons8_sun_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_sun_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAotJREFUSEvF
         VU1rU0EUnYk7K+imqQjtRiW+Wp4fi4rk74gouHDRhQsVFy5EceHChYqCC0UXFWOoUINJaxahtH6m1SBp
@@ -194,7 +194,7 @@
   <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
     <value>Select Build 17704 or higher to use Grouping</value>
   </data>
-  <data name="icons8_change_theme_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_change_theme_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAmdJREFUSEvt
         kltI0wEUxi0rl4lkJRER0XMvQTmLskxZrSltzbC0WdNWLRQdwyyH5b+LD6LRRUwUIy853A23pVgiaTS1
@@ -210,7 +210,7 @@
         2+cUTlFRnwG+W8hfIeHhwQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="icons8_about_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_about_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAo9JREFUSEvt
         ktlOU1EUhntjvFBwQFo60IogUASRJj6NMfEl9A2MigoUKNBKVcQBBxxBwOmCyo36ANDTFmh7SmmZ3uB3
@@ -227,7 +227,7 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="icons8_advertisement_page_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_advertisement_page_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAntJREFUSEvt
         k99LU2EchzeXbmdnRURIDTWsVnoREv2QyBpe1E1dGBSUYWSlpZjVKKWWpAUSIkNNh9lc2iCC6AeamVrz
@@ -243,7 +243,7 @@
         1bPkDFQhk/tghW3zJvexewy0L+LbJORyDofzFfaicb7gPLAwAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="icons8_rollback_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_rollback_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABGtJREFUSEvd
         lOtP21UYx41mi/+Bb/wLjDPGS9Q3vtfFZFPx8sJkUdY6h46tCGsKo9wKbaHAuJZxExkQGEjGZROWbAzk
@@ -268,10 +268,10 @@
         rkJggg==
 </value>
   </data>
-  <data name="settings_system_daydream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="settings_system_daydream" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\images\settings_system_daydream.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_start_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_start_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAatJREFUSEvt
         kktLAlEYhv0jlWkXtTtFZpZF0ZXatGgT9COECIyyhkTMblJ0IYh+QQRBtIooolUbIYQSTMKEkMZSs93b
@@ -290,7 +290,7 @@
   <data name="Generic_AlwaysEnabled" xml:space="preserve">
     <value>Always Enabled</value>
   </data>
-  <data name="icons8_moon_and_stars_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_moon_and_stars_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbZJREFUSEvt
         kclLQlEUh/2/mkejybQ0rSwzIitogtq1rCCDcBdEi/bNqWWW5kQbg4QWrRpsIGiTPlo0+Uvt9PJ50oxa
@@ -306,7 +306,7 @@
   <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
     <value>Ready. Select a build from the Combo Box to get started, or alternatively press F12 to manually change a Feature.</value>
   </data>
-  <data name="icons8_about_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_about_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAACsJJREFUeF7t
         2ttvHFcdB/C8QqFxLr7Ga3t9LQ20NIgnhOAfACEeeEGo/A0IwRtvSesmcWKnSd04duz47qSkhZaWS8tF
@@ -404,7 +404,7 @@
   <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
     <value>Manually Set Feature ID</value>
   </data>
-  <data name="icons8_toggle_on_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_toggle_on_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAbBJREFUSEvt
         lM8uA1EUxq+Vt0BsscAzYOdPgjcQCyIt1ZmysSCpssGKYFnxGJpI2qSCzkxro2VHV6p0ZlbHOXdum+nM
@@ -417,7 +417,7 @@
         418FYz8xlKPsZ+sAHQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_advertisement_page_96" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAACTJJREFUeF7t
         nHlQlOcdx1EgirbpJfd9KfaYdtJmTKadRp1OUlCrycQmEY1GY2I0SY0XaZIeiaIRAeVWQa2ibQ1NazTx
@@ -462,10 +462,10 @@
         O84aF5f/A53FcUaHpzpNAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="about" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\images\about.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_toggle_off_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_toggle_off_24" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAapJREFUSEvt
         lM9OwkAQxuuLqPGmtBX1ILTLGyjqSc/+iQeNmhjhqkYNIL6IGvVVjIkgCIkISOGkBWlP485SNeDUFOOB
@@ -482,7 +482,7 @@
     <value>An Error occurred while trying to set {0} to {1}</value>
     <comment>{0} references to a ID/Feature, {1} to a Feature State</comment>
   </data>
-  <data name="icons8_portrait_mode_scanning_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_portrait_mode_scanning_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAYdJREFUSEvt
         lctOwkAUhudthBhocOsFfABRH4XVAIGEZd9DGhdSClilUFAjU4oXFpRKfAFuuhe7GmdgJCEylMa4MOFP
@@ -497,7 +497,7 @@
   <data name="Generic_Close" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="icons8_registration_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_registration_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAA55JREFUSEvl
         lHtMU2cYxmv2nzov2HPwwmWHizDcDNUoGi/Dy4wxKNO5ZMZtgoIxKt5m/EOdWYwmM2hEI7MqoIB0WFNU
@@ -557,7 +557,7 @@
   <data name="Generic_FeatureID" xml:space="preserve">
     <value>Feature ID</value>
   </data>
-  <data name="icons8_comments_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="icons8_comments_24px" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAsFJREFUSEvt
         k31PUmEYxtna6qOVlSgqr4K8KvgK4ktoL2trfQ9LBYLSREEJ0QzNsHwpAxUBRa2vcXU/h3Pg4LPRKtv6
@@ -653,13 +653,13 @@ It will try to restart after you press on Close.</value>
     <value>An Error occurred</value>
   </data>
   <data name="Comments_CheckingAvailabillity" xml:space="preserve">
-    <value>Checking if the Comments Database Server is available...</value>
+    <value>Checking if the Comments Database Server is available…</value>
   </data>
   <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
-    <value>Populating the Build Combo Box...</value>
+    <value>Populating the Build Combo Box…</value>
   </data>
   <data name="Comments_GettingComments" xml:space="preserve">
-    <value>Getting Feature Comments from the Database</value>
+    <value>Getting Feature Comments from the Database…</value>
   </data>
   <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
     <value>Comments couldn't be loaded, because the Database Server is currently shutting down.</value>
