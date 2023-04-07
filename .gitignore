@@ -377,3 +377,5 @@ FodyWeavers.xsd
 /lib/RCWF/*/*.*.Designer.*
 /lib/RCWF/*/*.*.*.XML
 /lib/RCWF/*/*.*.*.Designer.*
+/vivetool-gui/Functions/CrashReporter.GUID.vb
+/ViVeTool-GUI.FeatureScanner/Functions/CrashReporter.GUID.vb
