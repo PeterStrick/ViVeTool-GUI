@@ -369,3 +369,11 @@ FodyWeavers.xsd
 /Sonar Cloud Scanning Tool.lnk
 /SonarCloudScannerConfig.json
 /.vscode
+
+# Telerik UI for WinForms
+/lib/RCWF/*/*.XML
+/lib/RCWF/*/*.Designer.*
+/lib/RCWF/*/*.*.XML
+/lib/RCWF/*/*.*.Designer.*
+/lib/RCWF/*/*.*.*.XML
+/lib/RCWF/*/*.*.*.Designer.*
