@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,429 +118,429 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_Setup.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 35</value>
   </data>
-  <data name="RPVP_Setup.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Setup.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 475</value>
   </data>
   <data name="RPVP_Setup.Text" xml:space="preserve">
     <value>简介和设置</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib">
+  <data name="RPVP_DownloadPDB.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RPVP_DownloadPDB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_DownloadPDB.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 35</value>
   </data>
-  <data name="RPVP_DownloadPDB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_DownloadPDB.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 475</value>
   </data>
   <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
     <value>下载调试符号</value>
   </data>
-  <data name="RPVP_ScanPDB.Enabled" type="System.Boolean, mscorlib">
+  <data name="RPVP_ScanPDB.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RPVP_ScanPDB.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_ScanPDB.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 35</value>
   </data>
-  <data name="RPVP_ScanPDB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_ScanPDB.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 475</value>
   </data>
   <data name="RPVP_ScanPDB.Text" xml:space="preserve">
     <value>扫描调试符号以获取 Feature ID</value>
   </data>
-  <data name="RL_OA.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_OA.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_OA.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_OA.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 287</value>
   </data>
-  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>122, 23</value>
   </data>
-  <data name="RL_OA.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_OA.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
     <value>可选操作:</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>275, 316</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>263, 39</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
     <value>删除 {My.Settings.SymbolPath}</value>
   </data>
-  <data name="RB_OA_CopyFeaturesTXT.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_OA_CopyFeaturesTXT.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 316</value>
   </data>
-  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>263, 39</value>
   </data>
-  <data name="RB_OA_CopyFeaturesTXT.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_OA_CopyFeaturesTXT.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>保存 Features.txt</value>
   </data>
-  <data name="RL_Done.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RL_Done.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RL_Done.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_Done.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_Done.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Done.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 3</value>
   </data>
-  <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Done.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>814, 218</value>
   </data>
-  <data name="RL_Done.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Done.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;扫描已完成。您现在可以：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;检查您的 Features.txt&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;上传您的 Features.txt 到 &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;mach2 仓库&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (上传后会出现在 Build 组合框中)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;或选择 Build 组合框底部的“手动加载”来向 ViVeTool-GUI 导入 Feature.txt&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;扫描已完成。您现在可以：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;检查您的 Features.txt&lt;/span&gt;&lt;/li&gt;&lt;span style="font-size: 10pt"&gt;或选择 Build 组合框底部的“手动加载”来向 ViVeTool-GUI 导入 Feature.txt&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_OutputFile.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_OutputFile.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_OutputFile.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_OutputFile.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 227</value>
   </data>
-  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>89, 23</value>
   </data>
-  <data name="RL_OutputFile.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_OutputFile.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>输出文件: </value>
   </data>
-  <data name="RPVP_Done.Enabled" type="System.Boolean, mscorlib">
+  <data name="RPVP_Done.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RPVP_Done.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_Done.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 35</value>
   </data>
-  <data name="RPVP_Done.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Done.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 475</value>
   </data>
   <data name="RPVP_Done.Text" xml:space="preserve">
     <value>完成</value>
   </data>
-  <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_AboutAndSettings.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 35</value>
   </data>
-  <data name="RPVP_AboutAndSettings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_AboutAndSettings.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 475</value>
   </data>
   <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
     <value>关于 &amp; 设置</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
     <value>Fill</value>
   </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 0</value>
   </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>832, 516</value>
   </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="__DBG_OPTIONS.Enabled" type="System.Boolean, mscorlib">
+  <data name="__DBG_OPTIONS.Enabled" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
-  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
-  <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
-  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>572, 315</value>
   </data>
-  <data name="__DBG_OPTIONS.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="__DBG_OPTIONS.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>140, 24</value>
   </data>
-  <data name="__DBG_OPTIONS.TabIndex" type="System.Int32, mscorlib">
+  <data name="__DBG_OPTIONS.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
+  <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="WB_Introduction.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 0</value>
   </data>
-  <data name="WB_Introduction.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="WB_Introduction.MinimumSize" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>20, 20</value>
   </data>
-  <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="WB_Introduction.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 296</value>
   </data>
-  <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib">
+  <data name="WB_Introduction.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 399</value>
   </data>
-  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>119, 18</value>
   </data>
-  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="RL_SymbolPath.Text" xml:space="preserve">
     <value>存储 PDB 文件的目录</value>
   </data>
-  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 356</value>
   </data>
-  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>102, 18</value>
   </data>
-  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RL_DbgPath.Text" xml:space="preserve">
     <value>指向 symchk.exe 的路径</value>
   </data>
-  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>342, 309</value>
   </data>
-  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>137, 30</value>
   </data>
-  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RB_Continue.Text" xml:space="preserve">
     <value>继续</value>
   </data>
-  <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RPBE_StatusProgressBar.Alignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RPBE_StatusProgressBar.AngleTransform" type="System.Single, mscorlib">
+  <data name="RPBE_StatusProgressBar.AngleTransform" type="System.Single, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RPBE_StatusProgressBar.FlipText" type="System.Boolean, mscorlib">
+  <data name="RPBE_StatusProgressBar.FlipText" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RPBE_StatusProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RPBE_StatusProgressBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms" xml:space="preserve">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RPBE_StatusProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RPBE_StatusProgressBar.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms" xml:space="preserve">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RPBE_StatusProgressBar.RightToLeft" type="System.Boolean, mscorlib">
+  <data name="RPBE_StatusProgressBar.RightToLeft" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RPBE_StatusProgressBar.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RPBE_StatusProgressBar.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms" xml:space="preserve">
     <value>Horizontal</value>
   </data>
-  <data name="RPBE_StatusProgressBar.TextWrap" type="System.Boolean, mscorlib">
+  <data name="RPBE_StatusProgressBar.TextWrap" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RLE_StatusAndInfoLabel.Alignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.AngleTransform" type="System.Single, mscorlib">
+  <data name="RLE_StatusAndInfoLabel.AngleTransform" type="System.Single, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.FlipText" type="System.Boolean, mscorlib">
+  <data name="RLE_StatusAndInfoLabel.FlipText" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RLE_StatusAndInfoLabel.Image" type="System.Resources.ResXNullRef, System.Windows.Forms" xml:space="preserve">
     <value />
   </data>
-  <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib">
+  <data name="RLE_StatusAndInfoLabel.ImageIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>-1</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RLE_StatusAndInfoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms" xml:space="preserve">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RLE_StatusAndInfoLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms" xml:space="preserve">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.RightToLeft" type="System.Boolean, mscorlib">
+  <data name="RLE_StatusAndInfoLabel.RightToLeft" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RLE_StatusAndInfoLabel.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleLeft</value>
   </data>
-  <data name="RLE_StatusAndInfoLabel.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RLE_StatusAndInfoLabel.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms" xml:space="preserve">
     <value>Horizontal</value>
   </data>
-  <data name="RSS_Setup.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RSS_Setup.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 451</value>
   </data>
-  <data name="RSS_Setup.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RSS_Setup.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>820, 24</value>
   </data>
-  <data name="RSS_Setup.TabIndex" type="System.Int32, mscorlib">
+  <data name="RSS_Setup.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_SymbolPath_Browse.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>718, 394</value>
   </data>
-  <data name="RB_SymbolPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_SymbolPath_Browse.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>96, 28</value>
   </data>
-  <data name="RB_SymbolPath_Browse.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_SymbolPath_Browse.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
     <value>浏览</value>
   </data>
-  <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_DbgPath_Browse.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>718, 351</value>
   </data>
-  <data name="RB_DbgPath_Browse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_DbgPath_Browse.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>96, 28</value>
   </data>
-  <data name="RB_DbgPath_Browse.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_DbgPath_Browse.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>浏览</value>
   </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>131, 394</value>
   </data>
   <data name="RTB_SymbolPath.NullText" xml:space="preserve">
     <value>选择用于存储调试符号的文件夹</value>
   </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>581, 24</value>
   </data>
-  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>131, 351</value>
   </data>
   <data name="RTB_DbgPath.NullText" xml:space="preserve">
     <value>指向 Windows 10/11 SDK 中 symchk.exe 的路径</value>
   </data>
-  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>581, 24</value>
   </data>
-  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 184</value>
   </data>
-  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_PDBDownloadStatus.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>808, 285</value>
   </data>
-  <data name="RTB_PDBDownloadStatus.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_PDBDownloadStatus.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_DownloadIntroduction.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RL_DownloadIntroduction.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RL_DownloadIntroduction.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_DownloadIntroduction.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 3</value>
   </data>
-  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_DownloadIntroduction.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>808, 175</value>
   </data>
-  <data name="RL_DownloadIntroduction.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_DownloadIntroduction.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;现在您已经全部设置好了，是时候下载程序调试数据库了。应用程序会自动将以下文件夹中的 .exe 和 .dll 文件的 PDB 文件下载到指定的符号文件夹中，然后分析它们：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;这将需要很长时间，取决于您已安装程序的数量。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_SymbolFolders.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_SymbolFolders.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_SymbolFolders.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SymbolFolders.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 241</value>
   </data>
-  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>287, 23</value>
   </data>
-  <data name="RL_SymbolFolders.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_SymbolFolders.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="RL_SymbolFolders.Text" xml:space="preserve">
     <value>{My.Settings.SymbolPath}中的文件夹数：</value>
   </data>
-  <data name="RL_SymbolFiles.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_SymbolFiles.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SymbolFiles.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 197</value>
   </data>
-  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>267, 23</value>
   </data>
-  <data name="RL_SymbolFiles.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_SymbolFiles.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RL_SymbolFiles.Text" xml:space="preserve">
     <value>{My.Settings.SymbolPath} 中的文件数：</value>
   </data>
-  <data name="RL_SymbolSize.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_SymbolSize.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_SymbolSize.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SymbolSize.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 153</value>
   </data>
-  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>281, 23</value>
   </data>
-  <data name="RL_SymbolSize.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_SymbolSize.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="RL_SymbolSize.Text" xml:space="preserve">
     <value>{My.Settings.SymbolPath}的当前大小：</value>
   </data>
-  <data name="RL_InfoScan.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_InfoScan.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 3</value>
   </data>
-  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>571, 90</value>
   </data>
-  <data name="RL_InfoScan.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_InfoScan.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Feature Scanner 现在开始使用 mach2 扫描 PDB 文件&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;mach2 完成扫描前，&lt;strong&gt;不要&lt;/strong&gt;关闭这个窗口或 mach2。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;扫描完成后，您将收到一个通知。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>180, 23</value>
   </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>158, 35</value>
   </data>
-  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  跟随系统</value>
   </data>
-  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>22, 23</value>
   </data>
-  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>138, 35</value>
   </data>
-  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
@@ -549,100 +549,100 @@
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
     <value>主题</value>
   </data>
-  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 336</value>
   </data>
-  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>360, 80</value>
   </data>
-  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib">
+  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>主题</value>
   </data>
-  <data name="RL_Comments.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_Comments.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 128</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>357, 178</value>
   </data>
-  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RL_ProductName.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_ProductName.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>60, 3</value>
   </data>
-  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>273, 23</value>
   </data>
-  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RL_Description.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_Description.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 75</value>
   </data>
-  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>281, 47</value>
   </data>
-  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RL_Version.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_Version.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>60, 27</value>
   </data>
-  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>231, 23</value>
   </data>
-  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="RL_License.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_License.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 51</value>
   </data>
-  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>230, 23</value>
   </data>
-  <data name="RL_License.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_License.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>TopLeft</value>
   </data>
-  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABEFJREFUeF7t
         nc1OU1EUhZn4CGoc6MiB4g/6GkYU44s4RX0BTYwD34ACiRQKRbQFgQJVQGeUH0caw08nRCI6NTmeQ3cL
@@ -666,34 +666,34 @@
         +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 3</value>
   </data>
-  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>48, 48</value>
   </data>
-  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms" xml:space="preserve">
     <value>StretchImage</value>
   </data>
-  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
+  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="FSW_SymbolPath.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <data name="FSW_SymbolPath.TrayLocation" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>17, 17</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>True</value>
   </data>
-  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing" xml:space="preserve">
     <value>6, 13</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>832, 516</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
         IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1231,10 +1231,10 @@
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
   </data>
-  <data name="FluentLight.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <data name="FluentLight.TrayLocation" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>163, 17</value>
   </data>
-  <data name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing">
+  <data name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>275, 17</value>
   </data>
 </root>
