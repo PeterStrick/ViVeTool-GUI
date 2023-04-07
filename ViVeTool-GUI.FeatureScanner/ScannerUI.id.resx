@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -151,13 +151,13 @@
     <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>167, 18</value>
   </data>
   <data name="RL_SymbolPath.Text" xml:space="preserve">
     <value>Jalur untuk menyimpan File PDB</value>
   </data>
-  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>104, 18</value>
   </data>
   <data name="RL_DbgPath.Text" xml:space="preserve">
@@ -172,52 +172,52 @@
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>Jelajahi</value>
   </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>179, 394</value>
   </data>
   <data name="RTB_SymbolPath.NullText" xml:space="preserve">
     <value>Jalur untuk menyimpan Simbol Debugging yang diunduh ke</value>
   </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>533, 28</value>
   </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>179, 351</value>
   </data>
   <data name="RTB_DbgPath.NullText" xml:space="preserve">
     <value>Jalur ke symchk.exe dari Windows 10/11 SDK</value>
   </data>
-  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>533, 28</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Sekarang setelah Anda siap, sekarang saatnya mengunduh Program Debug Databases. Aplikasi akan secara otomatis mengunduh File PDB untuk File .exe dan .dll di Folder berikut ke folder simbol yang Anda tentukan, dan akan menganalisisnya setelahnya:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\File Program, C:\File Program (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Ini akan memakan waktu lama, tergantung pada jumlah program dan aplikasi yang terpasang saat ini.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>281, 23</value>
   </data>
   <data name="RL_SymbolFolders.Text" xml:space="preserve">
     <value>Total Folder di {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolFiles.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>261, 23</value>
   </data>
   <data name="RL_SymbolFiles.Text" xml:space="preserve">
     <value>Total File di {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SymbolSize.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>313, 23</value>
   </data>
   <data name="RL_SymbolSize.Text" xml:space="preserve">
     <value>Ukuran saat ini dari {My.Settings.SymbolPath}:</value>
   </data>
-  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_InfoScan.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>770, 105</value>
   </data>
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Pemindai Fitur sekarang akan secara otomatis mulai memindai File PDB menggunakan mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;strong&gt;Jangan&lt;/strong&gt; tutup jendela ini atau mach2, hingga mach2 selesai memindai.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Anda akan diberi tahu melalui pemberitahuan desktop setelah pemindaian selesai.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>101, 23</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
@@ -230,7 +230,7 @@
     <value>Salin File Features.txt ke Desktop Anda</value>
   </data>
   <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;Pemindaian telah selesai. Anda sekarang dapat:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Tinjau file Features.txt Anda&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;Unggah file Features.txt Anda ke &lt;/span&gt;&lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;&lt;span style="font-size: 10pt"&gt;Repositori mach2&lt;/span&gt;&lt;/a&gt;&lt;span style="font-size: 10pt"&gt; (akan muncul di Build Combo Box setelah diunggah)&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;atau Impor file Features.txt Anda ke ViVeTool-GUI dengan memilih Drop Down "Gunakan Manual" di bagian bawah Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;Pemindaian telah selesai. Anda sekarang dapat:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Tinjau file Features.txt Anda&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;atau Impor file Features.txt Anda ke ViVeTool-GUI dengan memilih Drop Down "Gunakan Manual" di bagian bawah Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>File Output: </value>
@@ -247,13 +247,13 @@
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>Tema</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>350, 178</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Ikon oleh &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Repositori GitHub PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Terinspirasi dari &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fungsi Pembaruan disediakan oleh &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Fungsi Pemindaian Fitur disediakan oleh &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>2, 2</value>
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
@@ -262,19 +262,19 @@
   <data name="RL_Description.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>2, 2</value>
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>2, 2</value>
   </data>
   <data name="RL_License.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PB_AppImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABEFJREFUeF7t
         nc1OU1EUhZn4CGoc6MiB4g/6GkYU44s4RX0BTYwD34ACiRQKRbQFgQJVQGeUH0caw08nRCI6NTmeQ3cL
@@ -298,7 +298,7 @@
         +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
         IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
