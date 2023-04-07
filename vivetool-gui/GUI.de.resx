@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -130,19 +130,19 @@
     <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_BuildComboBoxORManaully.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>139, 10</value>
   </data>
-  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_BuildComboBoxORManaully.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>29, 18</value>
   </data>
   <data name="RL_BuildComboBoxORManaully.Text" xml:space="preserve">
     <value>oder</value>
   </data>
   <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
-    <value>Feature manuell ändern (F12)</value>
+    <value>Erweiterte Optionen (F12)</value>
   </data>
-  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_About.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>170, 30</value>
   </data>
   <data name="RB_About.Text" xml:space="preserve">
@@ -157,13 +157,13 @@
   <data name="RMI_RevertF.Text" xml:space="preserve">
     <value>  Feature zu Standardeinstellungen zurücksetzen</value>
   </data>
-  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>162, 30</value>
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      Aktion ausführen</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIACmFgAAZgAAAICAAAABACAAKAgBAAwXAABAQAAAAQAgAChCAAA0HwEAMDAAAAEA
         IACoJQAAXGEBACAgAAABACAAqBAAAASHAQAQEAAAAQAgAGgEAACslwEAiVBORw0KGgoAAAANSUhEUgAA
