@@ -240,4 +240,10 @@ After that, the application will automatically start to download PDB Files.
 
 {0}</value>
   </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUI muss neugestartet werden, damit die Sprachen Änderung in Kraft nimmt. Es wird automatisch Versucht neuzustarten, nachdem auf Schließen gedrückt wurde.</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Die Sprachen Änderung benötigt einen Neustart</value>
+  </data>
 </root>
