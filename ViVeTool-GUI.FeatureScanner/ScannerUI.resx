@@ -611,42 +611,51 @@
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
     <value>Unlock all Tabs</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_AddJunctions.Text" xml:space="preserve">
     <value>Add Junctions</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_RemoveJunctions.Text" xml:space="preserve">
     <value>Remove Junctions</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_TestSymDownloadedText.Text" xml:space="preserve">
     <value>Test Symbol Downloaded Text</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_ScanSymbols.Text" xml:space="preserve">
     <value>Scan for symbols immediately, set text boxes first</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_CopyFeatureList.Text" xml:space="preserve">
     <value>Copy Feature List</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP4.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP4.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SendToastNotification.Text" xml:space="preserve">
     <value>Send Toast Notification</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
     <value>572, 315</value>
@@ -659,6 +668,7 @@
   </data>
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
     <value>[DEBUG OPTIONS]</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_OPTIONS.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1238,6 +1248,7 @@
   </data>
   <data name="RMI_L_English.HintText" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_English.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1247,6 +1258,7 @@
   </data>
   <data name="RMI_L_English.ImageKey" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_English.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1288,9 +1300,11 @@
   &lt;/linearGradient&gt;
   &lt;path d="M46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.817 2 11.449 C16.667 6.429 31.333 16.47 46 11.449 z" opacity="0.7" style="fill:url(#c_xyCDeerQt140JTqCzuqb);" /&gt;
 &lt;/svg&gt;</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_English.Text" xml:space="preserve">
     <value> English (Default)</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_English.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1309,6 +1323,7 @@
   </data>
   <data name="RMI_L_German.HintText" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1318,6 +1333,7 @@
   </data>
   <data name="RMI_L_German.ImageKey" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1362,9 +1378,11 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.4 L2 36.5 C16.7 31.5 31.3 41.5 46 36.5 C46 33.7 46 14.2 46 11.4 C31.3 16.5 16.7 6.4 2 11.4 z" opacity="0.25" style="fill:url(#53~3CbndB5gts_PjV~9rDb);" /&gt;
 &lt;/svg&gt;</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.Text" xml:space="preserve">
     <value> Deutsch - German</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1383,6 +1401,7 @@
   </data>
   <data name="RMI_L_Polish.HintText" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1392,6 +1411,7 @@
   </data>
   <data name="RMI_L_Polish.ImageKey" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1444,9 +1464,11 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 28.191 46 36.536 C31.333 41.736 16.667 31.336 2 36.536 C2 28.191 2 19.846 2 11.501 z" opacity="0.4" style="fill:url(#Yw06A1pAkrQF1Q43XtSVzc);" /&gt;
 &lt;/svg&gt;</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.Text" xml:space="preserve">
     <value> Polski - Polish</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1465,6 +1487,7 @@
   </data>
   <data name="RMI_L_Chinese.HintText" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1474,6 +1497,7 @@
   </data>
   <data name="RMI_L_Chinese.ImageKey" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1525,9 +1549,11 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.816 2 11.449 z" opacity="0.65" style="fill:url(#XrgI7h8OMl8LlqMkWgvJSb);" /&gt;
 &lt;/svg&gt;</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.Text" xml:space="preserve">
     <value> 简体中文 - Chinese</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1546,6 +1572,7 @@
   </data>
   <data name="RMI_L_Indonesian.HintText" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1555,6 +1582,7 @@
   </data>
   <data name="RMI_L_Indonesian.ImageKey" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1599,9 +1627,11 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.7" style="fill:url(#nt5cM0aRRyCucXnR_sQbtc);" /&gt;
 &lt;/svg&gt;</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.Text" xml:space="preserve">
     <value> Bahasa Indonesia - Indonesian</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1637,7 +1667,7 @@
     <value>Language</value>
   </data>
   <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>441, 336</value>
+    <value>441, 389</value>
   </data>
   <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 80</value>
@@ -1712,7 +1742,7 @@
     <value>Theming</value>
   </data>
   <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 336</value>
+    <value>61, 389</value>
   </data>
   <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
     <value>360, 80</value>
@@ -1735,6 +1765,9 @@
   <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RL_Comments.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RL_Comments.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
@@ -1742,13 +1775,13 @@
     <value>61, 128</value>
   </data>
   <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 178</value>
+    <value>753, 255</value>
   </data>
   <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Feature Scanning Functionallity provided by &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Translated by &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Peter Strick&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_Comments.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1779,6 +1812,7 @@
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - ProductName</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RL_ProductName.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1812,6 +1846,7 @@
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Description</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RL_Description.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1842,6 +1877,7 @@
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Version</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RL_Version.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1872,6 +1908,7 @@
   </data>
   <data name="RL_License.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - License</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="RL_License.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -2491,6 +2528,7 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI - Feature Scanner</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">
     <value>__DBG_UnlockAllTabs</value>

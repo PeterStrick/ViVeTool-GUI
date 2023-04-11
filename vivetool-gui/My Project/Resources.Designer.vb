@@ -71,7 +71,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Checking if the Comments Database Server is available... ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Checking if the Comments Database Server is available… ähnelt.
         '''</summary>
         Friend ReadOnly Property Comments_CheckingAvailabillity() As String
             Get
@@ -143,7 +143,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Getting Feature Comments from the Database ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Getting Feature Comments from the Database… ähnelt.
         '''</summary>
         Friend ReadOnly Property Comments_GettingComments() As String
             Get
@@ -900,7 +900,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Populating the Build Combo Box... ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die Populating the Build Combo Box… ähnelt.
         '''</summary>
         Friend ReadOnly Property PopulateBuildComboBox_Populating() As String
             Get

@@ -157,45 +157,56 @@
   </data>
   <data name="__DBG_RHI.Text" xml:space="preserve">
     <value>DEBUG OPTIONS</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_GetComments.Text" xml:space="preserve">
     <value>Get Comments</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SeeCommentsData.Text" xml:space="preserve">
     <value>See the Comments Data</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_SetRDDL_Build_Text.Text" xml:space="preserve">
     <value>Set RDDL_Build.Text to 25158</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SetRDDL_Build_Text_ToNothing.Text" xml:space="preserve">
     <value>Set RDDL_Build.Text to ""</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_EnableCommentLoadingFromManualFL.Text" xml:space="preserve">
     <value>Enable Comment loading when using a manual Feature List</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_DisableCommentLoadingFromManualFL.Text" xml:space="preserve">
     <value>(DEFAULT) Disable Comment loading when using a manual Feature List</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.Text" xml:space="preserve">
     <value />
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_SEP3.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <data name="__DBG_ChnageLanguage.Text" xml:space="preserve">
     <value>Change Language to zh</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>546, 0</value>
@@ -208,6 +219,7 @@
   </data>
   <data name="__DBG_MainBtn.Text" xml:space="preserve">
     <value>DEBUG</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="__DBG_MainBtn.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -386,6 +398,7 @@
   </data>
   <data name="RMI_RevertF.Text" xml:space="preserve">
     <value>  Revert Feature to Default Values</value>
+    
   </data>
   <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
     <value>447, 4</value>
@@ -2239,6 +2252,7 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI</value>
+    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_RHI.Name" xml:space="preserve">
     <value>__DBG_RHI</value>
@@ -2353,5 +2367,9 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RGV_MainGridView.MasterTemplate.Caption" xml:space="preserve">
+    <value></value>
+    <comment>@Invariant</comment>
   </data>
 </root>

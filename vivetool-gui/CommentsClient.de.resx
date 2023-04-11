@@ -671,4 +671,7 @@
   <data name="RL_CommentInfo.Text" xml:space="preserve">
     <value>Nach dem Abschicken wird der Kommentar überprüft und geändert falls erforderlich.</value>
   </data>
+  <data name="RB_SendComment.Text" xml:space="preserve">
+    <value>Kommentar senden</value>
+  </data>
 </root>

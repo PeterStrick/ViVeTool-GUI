@@ -246,4 +246,31 @@ After that, the application will automatically start to download PDB Files.
   <data name="Language_Heading" xml:space="preserve">
     <value>Die Sprachen Änderung benötigt einen Neustart</value>
   </data>
+  <data name="Error_mach2Scan_N" xml:space="preserve">
+    <value>Ein Fehler ist während dem Scannen der Symbolen aufgetreten.
+
+Die Anwendung wird versuchen den Scan-Vorgang zu wiederholen.</value>
+  </data>
+  <data name="Error_SymbolDownload_N" xml:space="preserve">
+    <value>Ein Fehler ist während dem Scannen der Symbolen aufgetreten.
+
+Überprüfen sie, dass Sie Zugang zu der symchk.exe Datei haben, und dass ihr Antivirus Sie nicht blockiert.</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile_N" xml:space="preserve">
+    <value>Ein Fehler ist beim Erstellen einer Test Datei im Symbol Ordner aufgetreten.
+
+Ein Symbol Ordner muss angegeben sein, um die Program Debug Datenbank-Dateien zu herunterladen.</value>
+  </data>
+  <data name="Error_SymbolPath_NewN" xml:space="preserve">
+    <value>Ein Fehler ist beim Erstellen einer Test Datei in {0} aufgetreten.
+
+Stellen Sie sicher, dass die Anwendung Zugriff zu diesen Ordner hat, und das dieser nicht Schreibgeschützt ist.</value>
+  </data>
+  <data name="Error_SymchkPath_N" xml:space="preserve">
+    <value>Ein Fehler ist während dem Überprüfen des Pfades zu symchk.exe aufgetreten.
+
+Bitte geben sie einen Korrekten Pfad zu symchk.exe an.
+
+Die symchk.exe Datei ist meist unter dem Windows SDK Installations Pfad unter 10\Debuggers\x64 vorhanden</value>
+  </data>
 </root>

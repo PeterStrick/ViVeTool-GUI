@@ -181,10 +181,10 @@
     <value>Standardmäßig aktiviert</value>
   </data>
   <data name="Generic_FeatureID" xml:space="preserve">
-    <value>Funktions ID</value>
+    <value>Feature ID</value>
   </data>
   <data name="Generic_FeatureName" xml:space="preserve">
-    <value>Funktions Name</value>
+    <value>Feature Name</value>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
     <value>Feature Status</value>
