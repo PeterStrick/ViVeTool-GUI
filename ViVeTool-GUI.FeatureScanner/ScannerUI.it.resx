@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Introduzione e Configurazione</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Scarica simboli di debug</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
+    <value>Naviga</value>
+  </data>
+  <data name="RL_SymbolSize.Text" xml:space="preserve">
+    <value>Dimensioni attuali di {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RL_OA.Text" xml:space="preserve">
+    <value>Azioni opzionali:</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Elimina {My.Settings.SymbolPath}</value>
+  </data>
+  <data name="RL_OutputFile.Text" xml:space="preserve">
+    <value>File di destinazione: </value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tematizzazione</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tematizzazione</value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Fine</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Info &amp; Impostazioni</value>
+  </data>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Cartella per symchk.exe</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Continua</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
+    <value>Naviga</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Indirizzo per ymchk.exe da Windows 10/11 SDK</value>
+  </data>
+  <data name="RL_SymbolFiles.Text" xml:space="preserve">
+    <value>File totali in {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Salva il file Features.txt</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Seleziona Lingua:</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Usa il tema di sistema</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema chiaro</value>
+  </data>
 </root>
