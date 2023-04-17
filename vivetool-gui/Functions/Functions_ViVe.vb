@@ -161,12 +161,13 @@ Public Class Functions_ViVe
     End Sub
 
     ''' <summary>
-    ''' Querys ViVeTool Features using a specified ID
+    ''' Querys the Enabled State of a ViVeTool Feature using a specified ID
     ''' </summary>
     ''' <param name="ID">ViVeTool ID</param>
     ''' <returns>ViVeTool ID Enabled State as String</returns>
     Public Shared Function Query(ID As UInteger) As String
-        Return FeatureManager.QueryFeatureConfiguration(ID).GetValueOrDefault.ToString
+        Dim _query = FeatureManager.QueryFeatureConfiguration(ID).GetValueOrDefault
+        Return _query.EnabledState.ToString
     End Function
 
     ''' <summary>

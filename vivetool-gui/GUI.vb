@@ -27,67 +27,32 @@ Public Class GUI
     Private Const WM_SYSCOMMAND As Integer = &H112
     Private Const MF_STRING As Integer = &H0
     Private Const MF_SEPARATOR As Integer = &H800
-    ReadOnly TempJSONUsedInDevelopment As String = "{
-  ""sha"": ""afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
-  ""url"": ""https://api.github.com/repos/riverar/mach2/git/trees/afeb63367f1bd15d63cfe30541a9a6ee51b940dd"",
-  ""tree"": [
-    {
-      ""path"": ""17643.txt"",
-      ""mode"": ""100644"",
-      ""type"": ""blob"",
-      ""sha"": ""ad8db3758b98fe1e6501077a06af93671f82a5d6"",
-      ""size"": 2534810,
-      ""url"": ""https://api.github.com/repos/riverar/mach2/git/blobs/ad8db3758b98fe1e6501077a06af93671f82a5d6""
-    },
-    {
-      ""path"": ""17643_17650_diff.patch"",
-      ""mode"": ""100644"",
-      ""type"": ""blob"",
-      ""sha"": ""d977490592e8ccf31238b08b9c99550c703e5271"",
-      ""size"": 7575,
-      ""url"": ""https://api.github.com/repos/riverar/mach2/git/blobs/d977490592e8ccf31238b08b9c99550c703e5271""
-    },
-    {
-      ""path"": ""17650.txt"",
-      ""mode"": ""100644"",
-      ""type"": ""blob"",
-      ""sha"": ""61f1358312c832eae48d218d0ac86c1b3e576540"",
-      ""size"": 39631,
-      ""url"": ""https://api.github.com/repos/riverar/mach2/git/blobs/61f1358312c832eae48d218d0ac86c1b3e576540""
-    },
-    {
-      ""path"": ""17650_17655_diff.patch"",
-      ""mode"": ""100644"",
-      ""type"": ""blob"",
-      ""sha"": ""428821fa035728c38fc22d681fdc1e9748516bcc"",
-      ""size"": 2496,
-      ""url"": ""https://api.github.com/repos/riverar/mach2/git/blobs/428821fa035728c38fc22d681fdc1e9748516bcc""
-    },
-    {
-      ""path"": ""22543.txt"",
-      ""mode"": ""100644"",
-      ""type"": ""blob"",
-      ""sha"": ""2217ec332eccb0094cfd04cb94e1ff77b636da81"",
-      ""size"": 73548,
-      ""url"": ""https://api.github.com/repos/riverar/mach2/git/blobs/2217ec332eccb0094cfd04cb94e1ff77b636da81""
-    }  ],
-  ""truncated"": false
-}"
-    Dim LineStage As String = String.Empty
-    Private ReadOnly RMI_AddComment As New RadMenuItem("Add a Comment for this Feature")
 
-    'Variables for the Comments/MySQL System
+    ' Variable for the Feature List Grid View
+    Dim LineStage As String = String.Empty
+
+    ' Variables for the Comments/MySQL System
     Private Build_DT As New DataTable
     Private ReadOnly CommentsImg As Image = My.Resources.icons8_comments_24px
     Private Shared HasInternetConnection As Boolean = False
     Private Shared HasDBAvailable As Boolean = False
     Private Shared TableDoesNotExist As Boolean = True
+    Private ReadOnly RMI_AddComment As New RadMenuItem("Add a Comment for this Feature")
+
+#Region "DEBUG Subs, Functions and Checks"
 
 #If DEBUG Then
     Private Shared EnableDBLoadingForManualTXTLoad As Boolean = False
 #End If
 
-#Region "DEBUG Subs and Functions"
+    Private Sub __DBG_Load()
+        If Diagnostics.Debugger.IsAttached Then
+            __DBG_MainBtn.Enabled = True
+            __DBG_MainBtn.Visible = True
+            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
+        End If
+    End Sub
+
     Private Sub __DBG_SetRDDL_Build_Text_Click(sender As Object, e As EventArgs) Handles __DBG_SetRDDL_Build_Text.Click
         RDDL_Build.Text = "25158"
     End Sub
@@ -100,7 +65,7 @@ Public Class GUI
             .Size = New Size(640, 480),
             .Text = "DEBUG - Comments Data - Read Only",
             .MaximizeBox = False,
-            .FormBorderStyle = FormBorderStyle.FixedSingle,
+            .FormBorderStyle = FormBorderStyle.Sizable,
             .Icon = My.Resources.icons8_comments_24px.ToIcon(True, Color.Transparent)
         }
 
@@ -139,6 +104,29 @@ Public Class GUI
         MsgBox(CultureInfo.DefaultThreadCurrentCulture.ToString)
         MsgBox(CultureInfo.DefaultThreadCurrentUICulture.ToString)
     End Sub
+
+    Private Sub __DBG_SetFeaturePriorityToServiceAsTest_Click(sender As Object, e As EventArgs) Handles __DBG_SetFeaturePriorityToServiceAsTest.Click
+        Try
+            Dim Res_Boot = Functions_ViVe.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_PRIORITY.Service,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Boot)
+            Dim Res_Runtime = Functions_ViVe.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_PRIORITY.Service,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
+                                           Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+
+            MsgBox($"Boot: {Res_Boot} {Environment.NewLine}Runtime: {Res_Runtime}")
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub __DBG_QueryEnabledState_401122637_Click(sender As Object, e As EventArgs) Handles __DBG_QueryEnabledState_401122637.Click
+        MsgBox(Functions_ViVe.Query(401122637))
+    End Sub
 #End Region
 
     ''' <summary>
@@ -170,11 +158,7 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub GUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 #If DEBUG Then
-        If Diagnostics.Debugger.IsAttached Then
-            __DBG_MainBtn.Enabled = True
-            __DBG_MainBtn.Visible = True
-            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
-        End If
+        __DBG_Load()
 #End If
 
         ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
@@ -500,17 +484,6 @@ Public Class GUI
 #End Region
 
                             Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage, Image))
-                        Catch NullEx As NullReferenceException
-                            Dim Image = Nothing
-
-#Region "DEBUG ONLY CODE."
-                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad AndAlso HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
-                                Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                                If rows.Length >= 1 Then Image = CommentsImg
-                            End If
-#End Region
-
-                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage, Image))
                         Catch ex As Exception
                             Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
                         End Try
@@ -610,11 +583,22 @@ Public Class GUI
             Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
 
+            ' Fix for _arm64 Feature Lists
+            Dim Build As Integer
+
+            ' Continue if Feature List is normal
+            If IsNumeric(RDDL_Build.Text) Then
+                Build = CInt(RDDL_Build.Text)
+            Else
+                ' Remove everything past the _ Part to get a normal Build Number
+                Build = CInt(RDDL_Build.Text.Split(CChar("_"))(0))
+            End If
+
             ' For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
                 ' Check Line Stage, used for Grouping
                 Try
-                    If CInt(RDDL_Build.Text) >= 17704 Then
+                    If Build >= 17704 Then
                         If Line = "## Unknown:" Then
                             LineStage = My.Resources.Generic_Modifiable
                         ElseIf Line = "## Always Enabled:" Then
@@ -653,15 +637,6 @@ Public Class GUI
                         End If
 
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage, Image))
-                    Catch NullEx As NullReferenceException
-                        Dim Image = Nothing
-
-                        If HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
-                            Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                            If rows.Length >= 1 Then Image = CommentsImg
-                        End If
-
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage, Image))
                     Catch ex As Exception
                         Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
                     End Try
@@ -763,7 +738,7 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RGV_MainGridView_SelectionChanged(sender As Object, e As EventArgs) Handles RGV_MainGridView.SelectionChanged
-        If RGV_MainGridView.CurrentRow Is Nothing Then
+        If RGV_MainGridView.CurrentCell Is Nothing Then
             RDDB_PerformAction.Enabled = False
         Else
             RDDB_PerformAction.Enabled = True
@@ -859,15 +834,6 @@ Public Class GUI
     Private Sub LoadCommentsFromDB(Build As String)
         Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
 
-        ' Public, Read-Only Access Connection String
-        Dim DB_Connection As New MySqlConnectionStringBuilder With {
-            .Server = "direct.rawrr.cf",
-            .UserID = "ViVeTool_GUI",
-            .Password = "ViVeTool_GUI",
-            .Database = "ViVeTool_GUI",
-            .ConnectionTimeout = 120
-        }
-
         ' Clear local DataTable
         Build_DT.Clear()
 
@@ -876,7 +842,7 @@ Public Class GUI
 
         Try
             ' Get the latest comments Table for the current Build, and store it in a local Data Table
-            Using con As New MySqlConnection(DB_Connection.ConnectionString)
+            Using con As New MySqlConnection(DatabaseFunctions.DB_Connection.ConnectionString)
                 Using cmd As New MySqlCommand(String.Format("SELECT * FROM ViVeTool_GUI.`{0}`;", Build), con)
                     cmd.CommandType = CommandType.Text
                     Using sda As New MySqlDataAdapter(cmd)
@@ -941,8 +907,11 @@ Public Class GUI
 
             ' Check if the Cell Image matches the Comments Image
             If cCell IsNot Nothing AndAlso cCell.Image Is CommentsImg Then
+                ' Replace $@$ in the String from the Comments DB with "
+                Dim Comment As String = Build_DT.Rows(0)("Comment").ToString.Replace("$@$", Chr(34))
+
                 ' Display the comment in a message box
-                RadTD.ShowDialog(String.Format($" {My.Resources.Comments_DialogTitle}", cRow.Cells(0).Value), Build_DT.Rows(0)("Comment").ToString,
+                RadTD.ShowDialog(String.Format($" {My.Resources.Comments_DialogTitle}", cRow.Cells(0).Value), Comment,
                 Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
             End If
         Catch ex As NullReferenceException

@@ -16,17 +16,16 @@
 Option Strict On
 Imports MySqlConnector
 
+''' <summary>
+''' Database Functions and Variables
+''' </summary>
 Public Class DatabaseFunctions
-    Public Shared Function ConnectionTest() As Boolean
-        ' Public, Read-Only Access Connection String
-        Dim DB_Connection As New MySqlConnectionStringBuilder With {
-            .Server = "direct.rawrr.cf",
-            .UserID = "ViVeTool_GUI",
-            .Password = "ViVeTool_GUI",
-            .Database = "ViVeTool_GUI",
-            .ConnectionTimeout = 120
-        }
 
+    ''' <summary>
+    ''' Database Conenction Test
+    ''' </summary>
+    ''' <returns>Returns True if the Connection was successful, False if not</returns>
+    Public Shared Function ConnectionTest() As Boolean
         Try
             ' Try to connect to the Database Server
             Using con As New MySqlConnection(DB_Connection.ConnectionString)
@@ -37,4 +36,15 @@ Public Class DatabaseFunctions
             Return False ' Otherwise Return False
         End Try
     End Function
+
+    ''' <summary>
+    ''' Public, Read-Only Database Connection String
+    ''' </summary>
+    Public Shared DB_Connection As New MySqlConnectionStringBuilder With {
+        .Server = "direct.rawrr.cf",
+        .UserID = "ViVeTool_GUI",
+        .Password = "ViVeTool_GUI",
+        .Database = "ViVeTool_GUI",
+        .ConnectionTimeout = 120
+    }
 End Class
