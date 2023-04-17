@@ -45,10 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrashReporter.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=7828e0fd88cab698, processorArchitecture=MSIL">
-      <HintPath>..\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
+      <HintPath>$(SolutionDir)\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
+      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
