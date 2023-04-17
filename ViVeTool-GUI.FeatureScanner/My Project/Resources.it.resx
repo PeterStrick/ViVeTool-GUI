@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>Il downlolad di Debug Symbols può essere grande da 5 a 30 GB.</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>Simbolo {0} scaricato.</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>File totali di {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>Calcolando…</value>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>File di output: {0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>Elimina {0}</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>Debug Symbol Scan completato.</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>{0} è stato copiato correttamente sul tuo desktop.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} è stato correttamente eliminato.</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Tema scuro</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema chiaro</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>Il cambio di lingua richiede il riavvio</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>La GUI di ViVeTool deve essere riavviata per confermare il cambio di lingua. Tenterà di riavviarsi dopo aver premuto Chiudi.</value>
+  </data>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>Naviga a symchk.exe dal Windows Debugging Tools</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>Indirizzo di esempio: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Dimensione corrente {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> File Copiato correttamente</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+</root>

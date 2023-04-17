@@ -381,3 +381,6 @@ FodyWeavers.xsd
 # Crash Reporter GUID
 /vivetool-gui/Functions/CrashReporter.GUID.vb
 /ViVeTool-GUI.FeatureScanner/Functions/CrashReporter.GUID.vb
+
+# Environment Files
+**/*.env
