@@ -22,7 +22,7 @@ Either:
 2. Wait for it to load in, open one of the Groups by pressing the Arrow, and select the Feature that you are looking for.
 3. Press on Perform Action and perform your desired action for the entered feature ID.
 
-<img align="center" width="395" height="300" src="/images/Method1.gif" alt="Image showing you how to perform Method 1" />
+<img width="511" height="355" src="/images/Method1.gif" alt="Image showing you how to perform Method 1" />
 
 
 ---
@@ -32,7 +32,7 @@ Or:
 2. Enter a Feature ID
 3. Press on Perform Action and perform your desired action for the selected feature.
 
-<img width="380" height="300" src="/images/Method2.gif" alt="Image showing you how to perform Method 2" />
+<img width="511" height="355" src="/images/Method2.gif" alt="Image showing you how to perform Method 2" />
 
 ---
 
@@ -50,7 +50,7 @@ Apart from being able to manage features, ViVeTool GUI let´s you also:
 - Fix the LastKnownGood Store, as well as the A/B Testing Priorities for ViVeTool Features
 - and at last, view the About Box by either pressing on the About Icon, or selecting the "About..." Item in the Application System Menu.
 
-<img width="500" height="228" src="/images/Searching.gif" alt="Image showing you how to search" />
+<img width="511" height="175" src="/images/Searching.gif" alt="Image showing you how to search" />
 
 ## What are the System Requirements?
 Since ViVeTool GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and newer is the only OS Requirement.
