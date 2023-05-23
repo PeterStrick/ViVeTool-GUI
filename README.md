@@ -44,6 +44,10 @@ Apart from being able to manage features, ViVeTool GUI let´s you also:
 - Group Features by: Always Enabled, Always Disabled, Enabled by Default, Disabled by Default and Modifiable
 - Copy Feature Names and IDs by right-clicking them
 - Switch between Dark and Light Mode (Setting get´s saved and applied on Start)
+- Automatically load the latest Feature List when starting ViVeTool GUI
+- Scan a Windows Build for Hidden Features to create your own Feature List
+- Use ViVeTool GUI in multiple translated Languages
+- Fix the LastKnownGood Store, as well as the A/B Testing Priorities for ViVeTool Features
 - and at last, view the About Box by either pressing on the About Icon, or selecting the "About..." Item in the Application System Menu.
 
 <img width="500" height="228" src="/images/Searching.gif" alt="Image showing you how to search" />
