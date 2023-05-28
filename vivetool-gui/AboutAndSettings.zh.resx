@@ -117,187 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 137</value>
-  </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 134</value>
-  </data>
-  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
-    <comment>Please be sure to leave the HTML intact.</comment>
-  </data>
-  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 12</value>
-  </data>
-  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 18</value>
-  </data>
-  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 84</value>
-  </data>
-  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 47</value>
-  </data>
-  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 36</value>
-  </data>
-  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 18</value>
-  </data>
-  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 60</value>
-  </data>
-  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 18</value>
-  </data>
-  <data name="RL_License.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
-  </data>
   <data name="RPVP_About.Text" xml:space="preserve">
     <value>  关于 ViVeTool GUI</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 25</value>
-  </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 30</value>
-  </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
-    <value>扫描当前 Build 的 Feature ID</value>
-  </data>
-  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
-    <value>其他</value>
-  </data>
-  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 198</value>
-  </data>
-  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 80</value>
-  </data>
-  <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RadGroupBox1.Text" xml:space="preserve">
-    <value>其他</value>
-  </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 23</value>
-  </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 35</value>
-  </data>
-  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
-    <value>  跟随系统</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
-  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 23</value>
-  </data>
-  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 35</value>
-  </data>
-  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
-    <value>  浅色模式</value>
-    <comment>The space at the beginning is used to make the text look better</comment>
-  </data>
-  <data name="RGB_Theming.HeaderText" xml:space="preserve">
-    <value>主题</value>
-  </data>
-  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 106</value>
-  </data>
-  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 80</value>
-  </data>
-  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RGB_Theming.Text" xml:space="preserve">
-    <value>主题</value>
-  </data>
-  <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 32</value>
-  </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 18</value>
-  </data>
-  <data name="RL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_AutoLoad.Text" xml:space="preserve">
-    <value>自动加载最新的 Build</value>
-  </data>
-  <data name="RTS_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 28</value>
-  </data>
-  <data name="RTS_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 25</value>
-  </data>
-  <data name="RTS_AutoLoad.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
-    <value>行为</value>
-  </data>
-  <data name="RGB_Behaviour.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="RGB_Behaviour.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 80</value>
-  </data>
-  <data name="RGB_Behaviour.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RGB_Behaviour.Text" xml:space="preserve">
-    <value>行为</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
@@ -322,75 +146,87 @@
         mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
-  </data>
   <data name="RPVP_Settings.Text" xml:space="preserve">
     <value>  设置</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="RadDropDownList1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 144</value>
-  </data>
-  <data name="RadDropDownList1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 24</value>
-  </data>
-  <data name="RadDropDownList1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
-  </data>
-  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 50</value>
-  </data>
-  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RL_SelectLangauge.Text" xml:space="preserve">
-    <value>选择语言：</value>
-  </data>
-  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
   <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 280</value>
+    <value>422, 355</value>
   </data>
   <data name="RPVP_Language.Text" xml:space="preserve">
     <value>语言</value>
   </data>
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 134</value>
   </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact.</comment>
   </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 328</value>
+  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 47</value>
   </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 25</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 30</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>扫描当前 Build 的 Feature ID</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>384, 328</value>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>其他</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 35</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  跟随系统</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 23</value>
+  </data>
+  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 35</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  浅色模式</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>主题</value>
+  </data>
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 18</value>
+  </data>
+  <data name="RL_AutoLoad.Text" xml:space="preserve">
+    <value>自动加载最新的 Build</value>
+  </data>
+  <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
+    <value>行为</value>
+  </data>
+  <data name="RGB_Behaviour.Text" xml:space="preserve">
+    <value>行为</value>
+  </data>
+  <data name="RDDB_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 198</value>
+  </data>
+  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 127</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>选择语言：</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

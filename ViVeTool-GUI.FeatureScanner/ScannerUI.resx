@@ -2528,6 +2528,7 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ViVeTool GUI - Feature Scanner</value>
+    
     <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;__DBG_UnlockAllTabs.Name" xml:space="preserve">

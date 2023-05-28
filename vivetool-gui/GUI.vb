@@ -14,6 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
+Imports System.CodeDom
 Imports System.Globalization, System.Runtime.InteropServices
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector, Telerik.WinControls
 
@@ -902,20 +903,35 @@ Public Class GUI
     ''' <param name="e"></param>
     Private Sub RGV_MainGridView_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles RGV_MainGridView.CellDoubleClick
         Try
+            ' Store the Current Row and Cell into local Variables
             Dim cRow = RGV_MainGridView.CurrentRow
             Dim cCell = RGV_MainGridView.CurrentCell
 
             ' Check if the Cell Image matches the Comments Image
             If cCell IsNot Nothing AndAlso cCell.Image Is CommentsImg Then
+                ' Store the Feature Name as a local Variable
+                Dim FeatureName As String = cRow.Cells(0).Value.ToString
+
+                ' Get the Row in the Data Table that has a Comment for the Particular Feature
+                Dim CommentRow As DataRow() = Build_DT.Select($"FeatureName LIKE '{FeatureName}'")
+
                 ' Replace $@$ in the String from the Comments DB with "
-                Dim Comment As String = Build_DT.Rows(0)("Comment").ToString.Replace("$@$", Chr(34))
+                Dim Comment As String = CommentRow(0).Item(1).ToString.Replace("$@$", Chr(34))
+
+                ' Replace %3E in the Comment with a >
+                ' This is due to Discord converting > Characters into %3E, if a URL is right before it
+                Comment = Comment.Replace("%3E", ">")
 
                 ' Display the comment in a message box
-                RadTD.ShowDialog(String.Format($" {My.Resources.Comments_DialogTitle}", cRow.Cells(0).Value), Comment,
-                Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
+                RadTD.ShowDialog(String.Format($" {My.Resources.Comments_DialogTitle}", FeatureName),
+                                 Comment, Nothing, New RadTaskDialogIcon(My.Resources.icons8_comments_24px))
             End If
         Catch ex As NullReferenceException
             ' Do nothing
+        Catch ex As Exception
+            ' Show an Error Dialog
+            RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+                           Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub
 End Class

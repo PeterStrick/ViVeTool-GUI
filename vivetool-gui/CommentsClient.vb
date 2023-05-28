@@ -24,12 +24,12 @@ Public Class CommentsClient
     ''' </summary>
     Public Shared FeatureName, Build As String
 
-    'Rad TaskDialog Buttons
+    ' Rad TaskDialog Buttons
     Private Shared ReadOnly RTDCLB_I_Agree As New RadTaskDialogCommandLinkButton(My.Resources.Comments_I_Agree, My.Resources.Comments_SendMyComment) With {.AllowCloseDialog = False}
     Private Shared ReadOnly RTDCLB_I_Dont_Agree As New RadTaskDialogCommandLinkButton(My.Resources.Comments_I_Dont_Agree, My.Resources.Comments_I_Dont_Agree_Subtext)
     Private Shared ReadOnly RTDCLB_Finish As New RadTaskDialogCommandLinkButton(My.Resources.General_Finish, My.Resources.Comments_ClosesTheDialog)
 
-    'Rad TaskDialog Main Page
+    ' Rad TaskDialog Main Page
     Private Shared ReadOnly RTD_main As New RadTaskDialogPage With {
         .Caption = My.Resources.Comments_Spaced_PrivacyInformation,
         .Heading = My.Resources.Comments_PrivacyInformation,
@@ -40,7 +40,7 @@ Public Class CommentsClient
         }
     }
 
-    'Rad TaskDialog Loading Page
+    ' Rad TaskDialog Loading Page
     Private Shared ReadOnly RTD_loading As New RadTaskDialogPage With {
         .Caption = My.Resources.Comments_Spaced_SendingYourComment,
         .Heading = My.Resources.Comments_SendingYourComment,
@@ -56,7 +56,7 @@ Public Class CommentsClient
         }
     }
 
-    'Rad TaskDialog Success Page
+    ' Rad TaskDialog Success Page
     Private Shared ReadOnly RTD_success As New RadTaskDialogPage With {
         .Caption = My.Resources.Comments_Spaced_CommentSent,
         .Heading = My.Resources.Comments_CommentSentSuccessfully,
@@ -66,7 +66,7 @@ Public Class CommentsClient
         }
     }
 
-    'Rad TaskDialog Error Page
+    ' Rad TaskDialog Error Page
     Private Shared ReadOnly RTD_error As New RadTaskDialogPage With {
         .Caption = $" {My.Resources.Error_AnErrorOccurred}",
         .Heading = My.Resources.Error_SendComment,
@@ -83,11 +83,11 @@ Public Class CommentsClient
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub Comment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Display Placeholder Comment Text
+        ' Display Placeholder Comment Text
         RL_Comments.Text = My.Resources.Comments_Form_EditIntroducionText
         RL_AddComment.Text = String.Format(RL_AddComment.Text, FeatureName, Build)
 
-        'Add Handlers to the Rad TaskDialog Buttons
+        ' Add Handlers to the Rad TaskDialog Buttons
         AddHandler RTDCLB_I_Agree.Click, AddressOf SendComment
         AddHandler RTDCLB_I_Dont_Agree.Click, AddressOf Close
         AddHandler RTDCLB_Finish.Click, AddressOf Close
@@ -116,7 +116,7 @@ Public Class CommentsClient
     ''' Sends the Comment. Used by the 'I Agree' Button
     ''' </summary>
     Private Sub SendComment()
-        'Switch to loading Task Dialog
+        ' Switch to loading Task Dialog
         RTD_main.Navigate(RTD_loading)
 
         Dim BT As New Threading.Thread(AddressOf SendComment_Thread) With {.IsBackground = True}
@@ -128,70 +128,70 @@ Public Class CommentsClient
     ''' Background Thread that handles the sending of the Comment
     ''' </summary>
     Private Async Sub SendComment_Thread()
-        'To fix String Escaping, " will be replaced by $@$
+        ' To fix String Escaping, " will be replaced by $@$
         Dim CommentString As String = RL_Comments.Text.Replace(Chr(34), Chr(36) & Chr(64) & Chr(36))
 
-        'Create a JSON Dictionary
+        ' Create a JSON Dictionary
         Dim JSONDict As New Dictionary(Of String, Object) From {
             {"comment", $"{CommentString}"},
             {"build", $"{Build}"},
             {"featurename", $"{FeatureName}"}
         }
 
-        'Create a new HttpClient to send the Comment
+        ' Create a new HttpClient to send the Comment
         Using CommentsHTTPClient As New HttpClient()
             Using CommentsHTTPClient_Request As New HttpRequestMessage(New HttpMethod("POST"), "https://direct.rawrr.cf/vAPI/send_comment")
-                'Create a new JSON String to be sent using a POST Request
+                ' Create a new JSON String to be sent using a POST Request
                 CommentsHTTPClient_Request.Content = New StringContent(JsonConvert.SerializeObject(JSONDict, Formatting.Indented))
                 CommentsHTTPClient_Request.Content.Headers.ContentType = Headers.MediaTypeHeaderValue.Parse("application/json")
 
-                'Send the Comment
+                ' Send the Comment
                 Try
                     Dim Response = Await CommentsHTTPClient.SendAsync(CommentsHTTPClient_Request)
 
-                    'Throw a catch-ed Exception if the Status Code is not a successful one
+                    ' Throw a catch-ed Exception if the Status Code is not a successful one
                     If Not (Response.IsSuccessStatusCode) Then Throw New HttpRequestExceptionPP(Response.StatusCode, Response.ReasonPhrase)
 
                     Invoke(Sub() RTD_loading.Navigate(RTD_success))
                 Catch HttpEx As HttpRequestExceptionPP
                     Select Case HttpEx.StatusCode
-                        Case HttpStatusCode.GatewayTimeout 'HTTP 504
+                        Case HttpStatusCode.GatewayTimeout ' HTTP 504
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               My.Resources.Comments_ServerError_HTTP504,
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.ServiceUnavailable 'HTTP 503
+                        Case HttpStatusCode.ServiceUnavailable ' HTTP 503
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               String.Format(My.Resources.Comments_ServerError_HTTP503, HttpEx.ReasonPhrase),
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.BadGateway 'HTTP 502
+                        Case HttpStatusCode.BadGateway ' HTTP 502
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               My.Resources.Comments_ServerError_HTTP502,
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.InternalServerError 'HTTP 500
+                        Case HttpStatusCode.InternalServerError ' HTTP 500
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               My.Resources.Comments_ServerError_HTTP500,
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.NotFound 'HTTP 404
+                        Case HttpStatusCode.NotFound ' HTTP 404
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               My.Resources.Comments_ServerError_HTTP404,
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.Forbidden 'HTTP 403
+                        Case HttpStatusCode.Forbidden ' HTTP 403
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
                                                               My.Resources.Comments_ServerError_HTTP403,
                                                               RadTaskDialogIcon.Error)))
-                        Case HttpStatusCode.BadRequest 'HTTP 400
+                        Case HttpStatusCode.BadRequest ' HTTP 400
                             Invoke(Sub() RTD_loading.Navigate(RadTD.Generate(
                                                               $" {My.Resources.Error_ANetworkErrorOccurred}",
                                                               My.Resources.Error_ANetworkErrorOccurred,
