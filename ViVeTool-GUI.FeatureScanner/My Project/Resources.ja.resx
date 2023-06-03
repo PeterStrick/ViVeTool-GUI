@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>Windowsデバッグツールのsymchk.exeのパス</value>
+  </data>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>ダウンロードをしたデバッグシンボルは、最大で5~30GBのサイズになります。</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>シンボル {0} をダウンロードしました。</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>{0} の現在のサイズ: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>計算中です…</value>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>{0} を削除</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>デバッグシンボルのスキャンが完了しました</value>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>{0} は正常にデスクトップにコピーされました。</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} の削除に成功しました。</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>ダークテーマ</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>ライトテーマ</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>言語の変更は再起動が必要です</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUIは言語の変更を反映するために再起動が必要です。閉じるをクリック後に再起動をします。</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>パスの例: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>{0} の合計のファイル数: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>出力ファイル: {0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> ファイルのコピーに成功しました</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
 </root>
