@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="RGB_Behaviour.Text" xml:space="preserve">
+    <value>動作</value>
+  </data>
+  <data name="RPVP_Settings.Text" xml:space="preserve">
+    <value>  設定</value>
+  </data>
+  <data name="RMI_L_English.Text" xml:space="preserve">
+    <value> 英語 (既定)</value>
+    <comment>@Invariant</comment>
+  </data>
+  <data name="RPVP_About.Text" xml:space="preserve">
+    <value>  ViVeTool GUIについて</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  システムテーマを使用する</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  ライトテーマ</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="RL_AutoLoad.Text" xml:space="preserve">
+    <value>最新のビルドを自動で読み込む</value>
+  </data>
+  <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
+    <value>動作</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>言語を選択:</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>言語を選択:</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>バージョン情報と設定</value>
+  </data>
 </root>
