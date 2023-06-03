@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,121 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Generic_Modifiable" xml:space="preserve">
+    <value>変更可能</value>
+  </data>
+  <data name="Generic_DisabledByDefault" xml:space="preserve">
+    <value>既定で無効化</value>
+  </data>
+  <data name="Generic_SelectBuild" xml:space="preserve">
+    <value>ビルドを選択…</value>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>ダークテーマ</value>
+  </data>
+  <data name="Generic_FeatureState" xml:space="preserve">
+    <value>機能の状態</value>
+  </data>
+  <data name="Generic_AlwaysEnabled" xml:space="preserve">
+    <value>常に有効化</value>
+  </data>
+  <data name="Generic_FeatureName" xml:space="preserve">
+    <value>機能の名前</value>
+  </data>
+  <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
+    <value>機能一覧へのパス</value>
+  </data>
+  <data name="Generic_Done" xml:space="preserve">
+    <value>完了。</value>
+  </data>
+  <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
+    <value>データのグリッド表示を入力中です...これは時間がかかる事があります。</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>ライトテーマ</value>
+  </data>
+  <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
+    <value>機能IDを手動で設定</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
+    <value>機能IDを{0}から{1}に設定しました</value>
+  </data>
+  <data name="Generic_AlwaysDisabled" xml:space="preserve">
+    <value>常に無効化</value>
+  </data>
+  <data name="SetConfig_Success" xml:space="preserve">
+    <value> 成功</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="SystemMenu_About" xml:space="preserve">
+    <value>バージョン情報(&amp;A)</value>
+    <comment>The &amp; is used to underline the first character</comment>
+  </data>
+  <data name="Generic_EnabledByDefault" xml:space="preserve">
+    <value>既定で有効化</value>
+  </data>
+  <data name="Generic_FeatureID" xml:space="preserve">
+    <value>機能ID</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeature" xml:space="preserve">
+    <value>機能IDを{0}から{1}に設定しました</value>
+  </data>
+  <data name="Comments_SendMyComment" xml:space="preserve">
+    <value>コメントを送信</value>
+  </data>
+  <data name="Comments_I_Dont_Agree" xml:space="preserve">
+    <value>同意しない</value>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>コメントを送信中です…</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>完了</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>ダイアログを閉じる</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> コメントを送信</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>コメントは正常に送信されました。</value>
+  </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>コメントデータベースサーバーが利用可能か確認…</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>ビルドコンボボックスに入力中…</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>データベースから機能コメントを取得中…</value>
+  </data>
+  <data name="Generic_LoadManually" xml:space="preserve">
+    <value>手動で読み込み…</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Generic_Default" xml:space="preserve">
+    <value>既定</value>
+  </data>
+  <data name="Comments_I_Agree" xml:space="preserve">
+    <value>同意する</value>
+  </data>
+  <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
+    <value>何も送信をしないでダイアログを閉じます</value>
+  </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> コメントを送信する…</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>言語の変更は再起動が必要です</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUIは言語の変更を反映するために再起動が必要です。
+
+閉じるをクリック後に再起動をします。</value>
+  </data>
 </root>
