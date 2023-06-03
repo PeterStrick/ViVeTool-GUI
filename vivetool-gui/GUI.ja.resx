@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RDDL_Build.NullText" xml:space="preserve">
+    <value>ビルドを選択…</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  機能を無効化</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  機能を規定値に戻す</value>
+  </data>
+  <data name="RDDL_Build.Text" xml:space="preserve">
+    <value>ビルドを選択…</value>
+  </data>
+  <data name="RLE_StatusLabel.Text" xml:space="preserve">
+    <value>ビルドコンボボックスに入力中…</value>
+  </data>
+  <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
+    <value>高度なオプション (F12)</value>
+  </data>
+  <data name="RB_About.Text" xml:space="preserve">
+    <value>  バージョン情報と設定</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  機能を有効化</value>
+  </data>
 </root>
