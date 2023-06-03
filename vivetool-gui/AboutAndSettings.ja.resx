@@ -81,7 +81,7 @@
     <value>その他</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
-    <value>  システムテーマを使用する</value>
+    <value>  システムテーマを使用</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  ライトテーマ</value>
