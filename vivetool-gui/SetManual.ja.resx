@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  機能を有効化</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  機能を無効化</value>
+  </data>
+  <data name="RTB_FeatureID.NullText" xml:space="preserve">
+    <value>有効な機能ID</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  機能を既定の設定に戻す</value>
+  </data>
+  <data name="RTB_VariantID.NullText" xml:space="preserve">
+    <value>オプションのバリアント番号を入力</value>
+  </data>
 </root>
