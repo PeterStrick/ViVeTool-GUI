@@ -181,6 +181,14 @@
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="AboutAndSettings.it.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutAndSettings.ja.resx">
+      <DependentUpon>AboutAndSettings.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutAndSettings.pl.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -195,6 +203,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommentsClient.de.resx">
       <DependentUpon>CommentsClient.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.it.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.ja.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CommentsClient.resx">
       <DependentUpon>CommentsClient.vb</DependentUpon>
@@ -205,6 +222,14 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.id.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.it.resx">
+      <DependentUpon>GUI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ja.resx">
       <DependentUpon>GUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -242,13 +267,27 @@
     <EmbeddedResource Include="My Project\Resources.id.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.ja.resx" />
+    <EmbeddedResource Include="My Project\Resources.pl.resx" />
     <EmbeddedResource Include="My Project\Resources.zh.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.de.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.id.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetManual.it.resx">
+      <DependentUpon>SetManual.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetManual.ja.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -258,6 +297,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.zh.resx">
       <DependentUpon>SetManual.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SetManual.resx">
       <DependentUpon>SetManual.vb</DependentUpon>

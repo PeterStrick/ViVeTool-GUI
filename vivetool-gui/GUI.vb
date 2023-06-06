@@ -14,7 +14,6 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports System.CodeDom
 Imports System.Globalization, System.Runtime.InteropServices
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector, Telerik.WinControls
 

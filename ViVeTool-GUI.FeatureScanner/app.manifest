@@ -15,17 +15,17 @@
 	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
 		<security>
 			<requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-				<!-- UAC-Manifestoptionen
-             Wenn Sie die Ebene der Benutzerkontensteuerung für Windows ändern möchten, ersetzen Sie den 
-             Knoten "requestedExecutionLevel" wie folgt.
+				<!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-            Durch Angabe des Elements "requestedExecutionLevel" wird die Datei- und Registrierungsvirtualisierung deaktiviert. 
-            Entfernen Sie dieses Element, wenn diese Virtualisierung aus Gründen der Abwärtskompatibilität
-            für die Anwendung erforderlich ist.
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
         -->
 				<requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
 			</requestedPrivileges>
@@ -34,9 +34,9 @@
 
 	<compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
-		<!-- Eine Liste der Windows-Versionen, unter denen diese Anwendung getestet
-           und für die sie entwickelt wurde. Wenn Sie die Auskommentierung der entsprechenden Elemente aufheben,
-           wird von Windows automatisch die kompatibelste Umgebung ausgewählt. -->
+		<!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
 
 		<!-- Windows Vista -->
 		<!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
