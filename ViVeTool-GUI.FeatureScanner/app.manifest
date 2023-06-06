@@ -3,7 +3,7 @@
                 xmlns:asmv1="urn:schemas-microsoft-com:asm.v1"
                 xmlns:asmv2="urn:schemas-microsoft-com:asm.v2"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" >
+                xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
   <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>
 
   <asmv3:application>
@@ -15,17 +15,18 @@
 	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
 		<security>
 			<requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-				<!-- UAC-Manifestoptionen
-             Wenn Sie die Ebene der Benutzerkontensteuerung für Windows ändern möchten, ersetzen Sie den 
-             Knoten "requestedExecutionLevel" wie folgt.
+				<!-- UAC-Manifestoptionen -->
+        <!--
+        If you want to change the level of User Account Control (UAC) for Windows,
+        replace the "requestedExecutionLevel" node as follows:
 
-        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
-        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
-        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
 
-            Durch Angabe des Elements "requestedExecutionLevel" wird die Datei- und Registrierungsvirtualisierung deaktiviert. 
-            Entfernen Sie dieses Element, wenn diese Virtualisierung aus Gründen der Abwärtskompatibilität
-            für die Anwendung erforderlich ist.
+        Specifying the "requestedExecutionLevel" element disables file and registry virtualization.
+        Remove this element if file and registry virtualization is required for backward compatibility
+        of the application.
         -->
 				<requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
 			</requestedPrivileges>
@@ -34,9 +35,9 @@
 
 	<compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
-		<!-- Eine Liste der Windows-Versionen, unter denen diese Anwendung getestet
-           und für die sie entwickelt wurde. Wenn Sie die Auskommentierung der entsprechenden Elemente aufheben,
-           wird von Windows automatisch die kompatibelste Umgebung ausgewählt. -->
+		<!-- A list of Windows versions under which this application has been tested
+           and designed for. If you uncomment the respective elements, Windows will automatically select
+           the most compatible environment. -->
 
 		<!-- Windows Vista -->
 		<!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
