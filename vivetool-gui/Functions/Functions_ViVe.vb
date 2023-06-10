@@ -266,4 +266,8 @@ Public Class Functions_ViVe
 
         Return priorityFixUpdates
     End Function
+
+    Public Shared Sub FeatureManagement()
+
+    End Sub
 End Class

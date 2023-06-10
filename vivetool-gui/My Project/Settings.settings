@@ -5,8 +5,8 @@
     <Setting Name="DarkMode" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="AutoLoad" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+    <Setting Name="AutoLoad" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nothing</Value>
     </Setting>
     <Setting Name="UseSystemTheme" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

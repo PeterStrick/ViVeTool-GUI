@@ -24,6 +24,9 @@ Partial Class AboutAndSettings
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutAndSettings))
+        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_About = New Telerik.WinControls.UI.RadPageViewPage()
         Me.PB_AppImage = New System.Windows.Forms.PictureBox()
@@ -39,8 +42,8 @@ Partial Class AboutAndSettings
         Me.RTB_UseSystemTheme = New Telerik.WinControls.UI.RadToggleButton()
         Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
         Me.RGB_Behaviour = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RDDL_AutoLoad = New Telerik.WinControls.UI.RadDropDownList()
         Me.RL_AutoLoad = New Telerik.WinControls.UI.RadLabel()
-        Me.RTS_AutoLoad = New Telerik.WinControls.UI.RadToggleSwitch()
         Me.RPVP_Language = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RDDB_Language = New Telerik.WinControls.UI.RadDropDownButton()
         Me.RMI_L_English = New Telerik.WinControls.UI.RadMenuItem()
@@ -68,8 +71,8 @@ Partial Class AboutAndSettings
         CType(Me.RTB_ThemeToggle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_Behaviour, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RGB_Behaviour.SuspendLayout()
+        CType(Me.RDDL_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPVP_Language.SuspendLayout()
         CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,21 +187,30 @@ Partial Class AboutAndSettings
         'RGB_Behaviour
         '
         Me.RGB_Behaviour.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RGB_Behaviour.Controls.Add(Me.RDDL_AutoLoad)
         Me.RGB_Behaviour.Controls.Add(Me.RL_AutoLoad)
-        Me.RGB_Behaviour.Controls.Add(Me.RTS_AutoLoad)
         Me.RGB_Behaviour.HeaderMargin = New System.Windows.Forms.Padding(1)
         resources.ApplyResources(Me.RGB_Behaviour, "RGB_Behaviour")
         Me.RGB_Behaviour.Name = "RGB_Behaviour"
+        '
+        'RDDL_AutoLoad
+        '
+        Me.RDDL_AutoLoad.DefaultItemsCountInDropDown = 3
+        Me.RDDL_AutoLoad.DropDownAnimationEnabled = True
+        Me.RDDL_AutoLoad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        RadListDataItem1.Text = "Nothing"
+        RadListDataItem2.Text = "The latest Build Feature List"
+        RadListDataItem3.Text = "The current Build Feature List"
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem1)
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem2)
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem3)
+        resources.ApplyResources(Me.RDDL_AutoLoad, "RDDL_AutoLoad")
+        Me.RDDL_AutoLoad.Name = "RDDL_AutoLoad"
         '
         'RL_AutoLoad
         '
         resources.ApplyResources(Me.RL_AutoLoad, "RL_AutoLoad")
         Me.RL_AutoLoad.Name = "RL_AutoLoad"
-        '
-        'RTS_AutoLoad
-        '
-        resources.ApplyResources(Me.RTS_AutoLoad, "RTS_AutoLoad")
-        Me.RTS_AutoLoad.Name = "RTS_AutoLoad"
         '
         'RPVP_Language
         '
@@ -285,8 +297,8 @@ Partial Class AboutAndSettings
         CType(Me.RGB_Behaviour, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RGB_Behaviour.ResumeLayout(False)
         Me.RGB_Behaviour.PerformLayout()
+        CType(Me.RDDL_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RTS_AutoLoad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RPVP_Language.ResumeLayout(False)
         CType(Me.RDDB_Language, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RL_SelectLangauge, System.ComponentModel.ISupportInitialize).EndInit()
@@ -307,7 +319,6 @@ Partial Class AboutAndSettings
     Friend WithEvents RGB_Theming As WinControls.UI.RadGroupBox
     Friend WithEvents RGB_Behaviour As WinControls.UI.RadGroupBox
     Friend WithEvents RL_AutoLoad As WinControls.UI.RadLabel
-    Friend WithEvents RTS_AutoLoad As WinControls.UI.RadToggleSwitch
     Friend WithEvents RadGroupBox1 As WinControls.UI.RadGroupBox
     Friend WithEvents RB_ViVeTool_GUI_FeatureScanner As WinControls.UI.RadButton
     Friend WithEvents RTB_ThemeToggle As WinControls.UI.RadToggleButton
@@ -320,4 +331,5 @@ Partial Class AboutAndSettings
     Friend WithEvents RMI_L_Polish As WinControls.UI.RadMenuItem
     Friend WithEvents RMI_L_Chinese As WinControls.UI.RadMenuItem
     Friend WithEvents RMI_L_Indonesian As WinControls.UI.RadMenuItem
+    Friend WithEvents RDDL_AutoLoad As RadDropDownList
 End Class

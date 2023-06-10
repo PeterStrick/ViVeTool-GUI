@@ -704,4 +704,10 @@ It will try to restart after you press on Close.</value>
   <data name="Comments_ServerError_Generic" xml:space="preserve">
     <value>An unknown error occurred while communicating with the Comments Server. {0}</value>
   </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>Feature Mgmt</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>Nothing</value>
+  </data>
 </root>

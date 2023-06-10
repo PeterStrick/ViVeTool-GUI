@@ -49,10 +49,12 @@ Namespace My
 
             ' Load Settings States from My.Settings
             ' Set ToggleState for RTS_AutoLoad
-            If Settings.AutoLoad Then
-                AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
+            If Settings.AutoLoad = "latest" Then
+                AboutAndSettings.RDDL_AutoLoad.SelectedIndex = 1
+            ElseIf Settings.AutoLoad = "current" Then
+                AboutAndSettings.RDDL_AutoLoad.SelectedIndex = 2
             Else
-                AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
+                AboutAndSettings.RDDL_AutoLoad.SelectedIndex = 0
             End If
 
             ' Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on

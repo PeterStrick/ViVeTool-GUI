@@ -211,18 +211,21 @@ Public Class GUI
     ''' Check for Internet Connectivity before trying to populate the Build Combo Box
     ''' </summary>
     Private Sub PopulateBuildComboBox_Check()
+        ' Add Feature Management option
+        Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_FeatureManagement))
+
         ' Add manual option
         Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
         If CheckForInternetConnection() Then
             HasInternetConnection = True
 
-            Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
+            'Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
 
             ' Populate the Build Combo Box
             PopulateBuildComboBox()
 
-            Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
+            'Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
             ' Set Ready Label
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Check_Ready)
         Else
@@ -336,7 +339,23 @@ Public Class GUI
                    End Sub)
 
             ' Auto-load the newest Build if it is Enabled in the Settings
-            If My.Settings.AutoLoad Then Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(1))
+            If My.Settings.AutoLoad = "latest" Then Invoke(Sub() RDDL_Build.SelectedItem = RDDL_Build.Items.Item(2))
+
+            ' Auto-load the current Build if it is Enabled in the Settings, and available
+            If My.Settings.AutoLoad = "current" Then
+                Invoke(Sub()
+                           Dim Index As Integer
+
+                           ' Use the Arm64 Feature List if available, else the Normal Feature List
+                           If RuntimeInformation.ProcessArchitecture = Architecture.Arm64 Then
+                               Index = RDDL_Build.FindString(CStr(Environment.OSVersion.Version.Build) & "_arm64")
+                           Else
+                               Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build))
+                           End If
+
+                           RDDL_Build.SelectedIndex = Index
+                       End Sub)
+            End If
         Catch webex As WebException
             Dim webex_Response As String
             Try
@@ -414,11 +433,17 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.Search("")
         RGV_MainGridView.MasterView.TableSearchRow.IsVisible = False
 
-        ' If "Load manually..." is selected, then load from a TXT File, else load normally
+        ' If "Load manually..." is selected, then load from a TXT File,
+        ' Or If "Featre mgmt" is selected, show disabled/enabled Features
+        ' Else, load normally
         If RDDL_Build.Text = My.Resources.Generic_LoadManually Then
             Dim TXTThread As New Threading.Thread(AddressOf LoadFromManualTXT) With {.IsBackground = True}
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
+        ElseIf RDDL_Build.Text = My.Resources.Generic_FeatureManagement Then
+            Dim MgmtThread As New Threading.Thread(AddressOf Functions_ViVe.FeatureManagement) With {.IsBackground = True}
+            MgmtThread.SetApartmentState(Threading.ApartmentState.STA)
+            MgmtThread.Start()
         ElseIf RDDL_Build.Text = Nothing Then
             ' Do Nothing
         Else ' Run Background Worker

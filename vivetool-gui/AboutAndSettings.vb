@@ -13,8 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Diagnostics, Telerik.WinControls.UI
-
+Imports System.Diagnostics
 ''' <summary>
 ''' About and Settings Dialog/Form
 ''' </summary>
@@ -120,7 +119,6 @@ Public NotInheritable Class AboutAndSettings
             Return
         End If
 
-        'If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
         My.Settings.UseSystemTheme = True
         Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
         Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
@@ -133,22 +131,22 @@ Public NotInheritable Class AboutAndSettings
             RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
             RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
         End If
-        'Else
-        '    My.Settings.UseSystemTheme = False
-        'End If
     End Sub
 
     ''' <summary>
-    ''' Changes if the latest Build should be auto-loaded, depending on the ToggleState
+    ''' Changes if the latest or current Build should be auto-loaded, depending on the Selected Index
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
-    Private Sub RTS_AutoLoad_ValueChanged(sender As Object, e As EventArgs) Handles RTS_AutoLoad.ValueChanged
-        If RTS_AutoLoad.Value Then
-            My.Settings.AutoLoad = True
-        Else
-            My.Settings.AutoLoad = False
-        End If
+    ''' <param name="e">Telerik.WinControls.UI.Data.PositionChanged EventArgs</param>
+    Private Sub RDDL_AutoLoad_SelectedIndexChanged(sender As Object, e As Data.PositionChangedEventArgs) Handles RDDL_AutoLoad.SelectedIndexChanged
+        Select Case RDDL_AutoLoad.SelectedIndex
+            Case 0
+                My.Settings.AutoLoad = "nothing"
+            Case 1
+                My.Settings.AutoLoad = "latest"
+            Case 2
+                My.Settings.AutoLoad = "current"
+        End Select
     End Sub
 
     ''' <summary>

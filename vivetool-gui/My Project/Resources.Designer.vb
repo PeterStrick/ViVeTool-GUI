@@ -639,6 +639,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Feature Mgmt.
+        '''</summary>
+        Friend ReadOnly Property Generic_FeatureManagement() As String
+            Get
+                Return ResourceManager.GetString("Generic_FeatureManagement", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Feature Name.
         '''</summary>
         Friend ReadOnly Property Generic_FeatureName() As String
@@ -680,6 +689,15 @@ Namespace My.Resources
         Friend ReadOnly Property Generic_Modifiable() As String
             Get
                 Return ResourceManager.GetString("Generic_Modifiable", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Nothing.
+        '''</summary>
+        Friend ReadOnly Property Generic_Nothing() As String
+            Get
+                Return ResourceManager.GetString("Generic_Nothing", resourceCulture)
             End Get
         End Property
         

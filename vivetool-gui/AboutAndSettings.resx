@@ -418,17 +418,38 @@
   <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 25</value>
+  </data>
+  <data name="RDDL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 28</value>
+  </data>
+  <data name="RDDL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RDDL_AutoLoad.Name" xml:space="preserve">
+    <value>RDDL_AutoLoad</value>
+  </data>
+  <data name="&gt;&gt;RDDL_AutoLoad.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RDDL_AutoLoad.Parent" xml:space="preserve">
+    <value>RGB_Behaviour</value>
+  </data>
+  <data name="&gt;&gt;RDDL_AutoLoad.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>73, 32</value>
+    <value>26, 35</value>
   </data>
   <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 18</value>
+    <value>102, 18</value>
   </data>
   <data name="RL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
-    <value>Automatically load the latest Build</value>
+    <value>Automatically load:</value>
   </data>
   <data name="&gt;&gt;RL_AutoLoad.Name" xml:space="preserve">
     <value>RL_AutoLoad</value>
@@ -440,27 +461,6 @@
     <value>RGB_Behaviour</value>
   </data>
   <data name="&gt;&gt;RL_AutoLoad.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RTS_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 28</value>
-  </data>
-  <data name="RTS_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 25</value>
-  </data>
-  <data name="RTS_AutoLoad.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RTS_AutoLoad.Name" xml:space="preserve">
-    <value>RTS_AutoLoad</value>
-  </data>
-  <data name="&gt;&gt;RTS_AutoLoad.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadToggleSwitch, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RTS_AutoLoad.Parent" xml:space="preserve">
-    <value>RGB_Behaviour</value>
-  </data>
-  <data name="&gt;&gt;RTS_AutoLoad.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
@@ -887,7 +887,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>434, 403</value>
