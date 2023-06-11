@@ -1,5 +1,6 @@
-﻿'ViVeTool-GUI - Windows Feature Control GUI for ViVeTool
-'Copyright (C) 2022  Peter Strick / Peters Software Solutions
+﻿Option Strict On
+'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
+'Copyright (C) 2023 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
 'it under the terms of the GNU General Public License as published by
@@ -13,16 +14,18 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Option Strict On
 
 Public Class RadTD
+    ''' <summary>
+    ''' Rad Task Dialog Button for use in Exception Task Dialogs
+    ''' </summary>
     Private Shared ReadOnly CopyExAndClose As New RadTaskDialogButton With {
         .Text = My.Resources.Generic_Close,
         .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
     }
 
     ''' <summary>
-    ''' Generates and shows a Rad Task Dialog as an Error Dialog
+    ''' Generates and shows a Rad Task Dialog as an Task Dialog. Uses ShowDialog()
     ''' </summary>
     ''' <param name="Caption">Task Dialog Caption</param>
     ''' <param name="Heading">Task Dialog Heading</param>
@@ -31,9 +34,9 @@ Public Class RadTD
     ''' <param name="ex">Optional: Exception</param>
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
-    Public Shared Sub ShowDialog(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
+    Public Shared Sub ShowDialog(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing)
         ' Show the Dialog
-        RadTaskDialog.ShowDialog(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
+        RadTaskDialog.ShowDialog(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText, CommandAreaButtons))
     End Sub
 
     ''' <summary>
@@ -46,13 +49,13 @@ Public Class RadTD
     ''' <param name="ex">Optional: Exception</param>
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
-    Public Shared Sub Show(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
+    Public Shared Sub Show(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing)
         ' Show the Dialog
-        RadTaskDialog.Show(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
+        RadTaskDialog.Show(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText, CommandAreaButtons))
     End Sub
 
     ''' <summary>
-    ''' Generates and returns a Rad Task Dialog as an Error Dialog
+    ''' Generates and returns a Rad Task Dialog as an Task Dialog
     ''' </summary>
     ''' <param name="Caption">Task Dialog Caption</param>
     ''' <param name="Heading">Task Dialog Heading</param>
@@ -62,7 +65,7 @@ Public Class RadTD
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
     ''' <returns>The generated Error Dialog as RadTaskDialogPageS</returns>
-    Public Shared Function Generate(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing) As RadTaskDialogPage
+    Public Shared Function Generate(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing) As RadTaskDialogPage
         ' Generate Rad TaskDialog Page
         Dim RTD As New RadTaskDialogPage With {
             .Caption = Caption,
@@ -84,6 +87,8 @@ Public Class RadTD
                     End Try
                 End Sub)
             RTD.CommandAreaButtons.Add(CopyExAndClose)
+        ElseIf CommandAreaButtons IsNot Nothing Then
+            RTD.CommandAreaButtons.AddRange(CommandAreaButtons)
         Else
             RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
         End If

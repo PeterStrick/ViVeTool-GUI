@@ -710,4 +710,10 @@ It will try to restart after you press on Close.</value>
   <data name="Generic_Nothing" xml:space="preserve">
     <value>Nothing</value>
   </data>
+  <data name="DictUpdate_DictionaryIsMissing" xml:space="preserve">
+    <value>The Feature Dictionary is missing</value>
+  </data>
+  <data name="DictUpdate_Text" xml:space="preserve">
+    <value>The Feature Dictionary provides a translation between ViVeTool Feature Names and ViVeTool IDs. Although optional, it is recommended to download this Dictionary. Would you like to download it now?</value>
+  </data>
 </root>

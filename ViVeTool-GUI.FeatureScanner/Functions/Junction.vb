@@ -146,6 +146,15 @@ Public Class Junction
     End Function
 
     ''' <summary>
+    ''' Get's the File Name of a Full File Path
+    ''' </summary>
+    ''' <param name="path"></param>
+    ''' <returns>The File Name of a Full File Path</returns>
+    Private Shared Function GetFileName(path As String) As String
+        Return IO.Path.GetFileName(path)
+    End Function
+
+    ''' <summary>
     ''' Creates junctions
     ''' </summary>
     ''' <param name="junctionPath">The Path where the Junction should be created. Ex: C:\Junction1</param>
@@ -199,15 +208,15 @@ Public Class Junction
     ''' Deletes Junctions. Warning!; this uses Directory.Delete to remove Junctions as it treats Junctions as regular folders.
     ''' </summary>
     ''' <param name="junctionPath">The Full Path of the Junction to delete</param>
-    Public Shared Sub Delete(junctionPath As String)
+    Public Shared Sub Delete(junctionPath As String, Optional Recursive As Boolean = False)
         If Not Directory.Exists(junctionPath) Then
             Throw New IOException("Junction Class: The Junction Path doesn't exist.")
         End If
 
         Try
-            Directory.Delete(junctionPath)
+            Directory.Delete(junctionPath, Recursive)
         Catch io As IOException
-            Throw New IOException("Junction Class: Unable to delete the junction. Make sure that the provided path points to a junction/directory.")
+            Throw New IOException("Junction Class: Unable to delete the junction or directory. Make sure that the provided path points to a junction or a directory.")
         End Try
     End Sub
 
@@ -222,8 +231,6 @@ Public Class Junction
         End If
 
         ' Create Junctions
-        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32", "C:\Windows\System32"))
-        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64", "C:\Windows\SysWOW64"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\ImmersiveControlPanel", "C:\Windows\ImmersiveControlPanel"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\PrintDialog", "C:\Windows\PrintDialog"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\ShellComponents", "C:\Windows\ShellComponents"))
@@ -231,9 +238,73 @@ Public Class Junction
         SilentTryCatchHelper(Sub() Create($"{FolderName}\SystemApps", "C:\Windows\SystemApps"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\SystemResources", "C:\Windows\SystemResources"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\WinSxS", "C:\Windows\WinSxS"))
-
         SilentTryCatchHelper(Sub() Create($"{FolderName}\CommonFiles64", "C:\Program Files\Common Files"))
         SilentTryCatchHelper(Sub() Create($"{FolderName}\CommonFiles86", "C:\Program Files (x86)\Common Files"))
+
+
+        ' Further Junctions
+        ' Fix because mach2 tries to scan C:\Windows\System32\config, which it does not have access to, even as an Administrator.
+        ' Instead of doing tricks and hacks to run the Application as TrustedInstaller, which could result in AV detections, 
+        ' we just copy the .exe and .dll files inside the System32 and SysWOW64 and let mach2 scan these instead.
+        ' Hard Links would be more convenient in this scenario, although are not applicable because almost all Files in C:\Windows
+        ' would then need their Ownership changed, to create the Hard Link.
+
+        ' Create a new Folder for the Junctions
+        If Not Directory.Exists($"{FolderName}\System32") Then
+            Directory.CreateDirectory($"{FolderName}\System32")
+            Debug.WriteLine($"Directory {FolderName}\System32 created")
+        End If
+
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\diagsvcs", "C:\Windows\System32\diagsvcs"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\Dism", "C:\Windows\System32\Dism"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\downlevel", "C:\Windows\System32\downlevel"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\dsc", "C:\Windows\System32\dsc"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\F12", "C:\Windows\System32\F12"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\HealthAttestationClient", "C:\Windows\System32\HealthAttestationClient"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\InputMethod", "C:\Windows\System32\InputMethod"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\migration", "C:\Windows\System32\migration"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\migwiz", "C:\Windows\System32\migwiz"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\oobe", "C:\Windows\System32\oobe"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\setup", "C:\Windows\System32\setup"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\ShellExperiences", "C:\Windows\System32\ShellExperiences"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\System32\UNP", "C:\Windows\System32\UNP"))
+
+        ' Create a new Folder for the Junctions
+        If Not Directory.Exists($"{FolderName}\SysWOW64") Then
+            Directory.CreateDirectory($"{FolderName}\SysWOW64")
+            Debug.WriteLine($"Directory {FolderName}\SysWOW64 created")
+        End If
+
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\diagsvcs", "C:\Windows\SysWOW64\diagsvcs"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\Dism", "C:\Windows\SysWOW64\Dism"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\downlevel", "C:\Windows\SysWOW64\downlevel"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\F12", "C:\Windows\SysWOW64\F12"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\InputMethod", "C:\Windows\SysWOW64\InputMethod"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\migration", "C:\Windows\SysWOW64\migration"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\migwiz", "C:\Windows\SysWOW64\migwiz"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\oobe", "C:\Windows\SysWOW64\oobe"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\setup", "C:\Windows\SysWOW64\setup"))
+        SilentTryCatchHelper(Sub() Create($"{FolderName}\SysWOW64\ShellExperiences", "C:\Windows\SysWOW64\ShellExperiences"))
+
+        ' Write the Full path of all *.exe and *.dll Files to an Array
+        Dim AllFiles_System32 As New Collections.ArrayList()
+        AllFiles_System32.AddRange(Directory.GetFiles("C:\Windows\System32", "*.EXE", SearchOption.TopDirectoryOnly))
+        AllFiles_System32.AddRange(Directory.GetFiles("C:\Windows\System32", "*.DLL", SearchOption.TopDirectoryOnly))
+
+        ' Create a Symlink for each File in the Array
+        For Each File As String In AllFiles_System32
+            SilentTryCatchHelper(Sub() IO.File.Copy(File, $"{FolderName}\System32\{GetFileName(File)}"))
+        Next
+
+        ' Write the Full path of all *.exe and *.dll Files to an Array
+        Dim AllFiles_SysWOW64 As New Collections.ArrayList()
+        AllFiles_SysWOW64.AddRange(Directory.GetFiles("C:\Windows\SysWOW64", "*.EXE", SearchOption.TopDirectoryOnly))
+        AllFiles_SysWOW64.AddRange(Directory.GetFiles("C:\Windows\SysWOW64", "*.DLL", SearchOption.TopDirectoryOnly))
+
+        ' Create a Symlink for each File in the Array
+        For Each File As String In AllFiles_SysWOW64
+            SilentTryCatchHelper(Sub() IO.File.Copy(File, $"{FolderName}\SysWOW64\{GetFileName(File)}"))
+        Next
 
         Debug.WriteLine($"Junctions created at {FolderName}")
     End Sub
@@ -243,8 +314,6 @@ Public Class Junction
     ''' </summary>
     Public Shared Sub FeatureScanner_DeleteJunctions()
         ' Delete Junctions
-        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32"))
-        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\ImmersiveControlPanel"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\PrintDialog"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\ShellComponents"))
@@ -252,11 +321,45 @@ Public Class Junction
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\SystemApps"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\SystemResources"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\WinSxS"))
-
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\CommonFiles64"))
         SilentTryCatchHelper(Sub() Delete($"{FolderName}\CommonFiles86"))
 
         Debug.WriteLine($"Junctions in {FolderName} deleted")
+
+        ' Delete Junctions inside System32
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\diagsvcs"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\Dism"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\downlevel"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\dsc"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\F12"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\HealthAttestationClient"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\InputMethod"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\migration"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\migwiz"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\oobe"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\setup"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\ShellExperiences"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32\UNP"))
+
+        ' Delete the Feature Scanner's System32 Directory
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\System32", True))
+        Debug.WriteLine($"Directory {FolderName}\System32 deleted")
+
+        ' Delete Junctions inside SysWOW64
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\diagsvcs"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\Dism"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\downlevel"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\F12"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\InputMethod"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\migration"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\migwiz"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\oobe"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\setup"))
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64\ShellExperiences"))
+
+        ' Delete the Feature Scanner's SysWOW64 Directory
+        SilentTryCatchHelper(Sub() Delete($"{FolderName}\SysWOW64", True))
+        Debug.WriteLine($"Directory {FolderName}\SysWOW64 deleted")
 
         ' Delete the Junctions root Folder
         SilentTryCatchHelper(Sub() Delete(FolderName))

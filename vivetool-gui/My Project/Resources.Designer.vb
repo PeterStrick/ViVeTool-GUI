@@ -320,6 +320,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The Feature Dictionary is missing.
+        '''</summary>
+        Friend ReadOnly Property DictUpdate_DictionaryIsMissing() As String
+            Get
+                Return ResourceManager.GetString("DictUpdate_DictionaryIsMissing", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to The Feature Dictionary provides a translation between ViVeTool Feature Names and ViVeTool IDs. Although optional, it is recommended to download this Dictionary. Would you like to download it now?.
+        '''</summary>
+        Friend ReadOnly Property DictUpdate_Text() As String
+            Get
+                Return ResourceManager.GetString("DictUpdate_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to A Database Error occurred.
         '''</summary>
         Friend ReadOnly Property Error_ADatabaseErrorOccurred() As String

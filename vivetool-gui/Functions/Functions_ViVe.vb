@@ -14,6 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
+Imports System.IO, System.Security.Cryptography, System.Text, Newtonsoft.Json.Linq
 Imports Albacore.ViVe, Albacore.ViVe.Exceptions, Albacore.ViVe.NativeStructs, Albacore.ViVe.NativeEnums
 
 ''' <summary>
@@ -171,6 +172,15 @@ Public Class Functions_ViVe
     End Function
 
     ''' <summary>
+    ''' Returns an Array of Enabled/Disabled Features on the current System
+    ''' </summary>
+    ''' <param name="Store">The Feature Configuration Store to use. Can be either Runtime or Boot</param>
+    ''' <returns>A RTL_FEATURE_CONFIGURATION Array</returns>
+    Public Shared Function QueryAll(Store As RTL_FEATURE_CONFIGURATION_TYPE) As RTL_FEATURE_CONFIGURATION()
+        Return FeatureManager.QueryAllFeatureConfigurations(Store)
+    End Function
+
+    ''' <summary>
     ''' Windows keeps a Backup of Feature Configurations, known as the LKG Store and rolls back to it, if a Feature causes System instabillity.
     ''' 
     ''' The ViVe API has a function to automatically fix the LKG Store, if it has become corrupted due to a use-after-free bug in fcon.dll
@@ -267,7 +277,124 @@ Public Class Functions_ViVe
         Return priorityFixUpdates
     End Function
 
-    Public Shared Sub FeatureManagement()
+    Shared Sub FeatureDictionaryUpdate()
+        ' Required Headers for the GitHub API
+        Dim WebClientRepo As New WebClient With {.Encoding = Encoding.UTF8}
+        WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
+        WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
+        Try
+            ' Check if Dict exists
+            If Not File.Exists(FeatureNaming.DictFilePath) Then
+                Dim Buttons As New RadItemOwnerGenericCollection(Of RadTaskDialogButton) From {
+                    RadTaskDialogButton.Yes,
+                    RadTaskDialogButton.No
+                }
+                Dim Dialog = RadTD.Generate($" {My.Resources.DictUpdate_DictionaryIsMissing}", My.Resources.DictUpdate_DictionaryIsMissing, My.Resources.DictUpdate_Text, RadTaskDialogIcon.ShieldGrayBar, CommandAreaButtons:=Buttons)
+
+
+                If RadTaskDialog.ShowDialog(Dialog) = RadTaskDialogButton.Yes Then
+                    MsgBox("Yes Button")
+                Else
+                    MsgBox("No Button")
+                    Return
+                End If
+            End If
+
+
+            Dim LocalSHA = UpdateCheck.HashUTF8TextFile(FeatureNaming.DictFilePath)
+            Dim RawJSON As String = WebClientRepo.DownloadString("https://api.github.com/repos/thebookisclosed/ViVe/contents/Extra")
+            Dim JSONArray As JArray = JArray.Parse(RawJSON)
+            Dim JSONObject As JObject = CType(JSONArray(0), JObject)
+
+            If LocalSHA = JSONObject("sha").ToString Then
+                MsgBox("same")
+            Else
+                MsgBox($"Online: {JSONObject("sha")} {Environment.NewLine & Environment.NewLine}Local: {LocalSHA}")
+            End If
+        Catch webex As WebException
+            Dim webex_Response As String
+            Try
+                webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+            Catch ex As Exception
+                webex_Response = webex.ToString
+            End Try
+
+            RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
+            My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
+        Catch ex As Exception
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
+        End Try
     End Sub
+End Class
+
+''' <summary>
+''' ViVeTool 0.3.3 CLI Class used for getting Feature Names from ViVeTool IDs. 
+''' 
+''' Copyright (C) 2019-2023  @thebookisclosed.
+''' 
+''' Licensed under GNU General Public License V3
+''' </summary>
+Friend Class FeatureNaming
+    Friend Const DictFileName As String = "FeatureDictionary.pfs"
+    Friend Shared DictFilePath As String = Path.Combine(Path.GetDirectoryName(Reflection.Assembly.GetExecutingAssembly().Location), DictFileName)
+
+    Friend Shared Function FindNamesForFeatures(featureIDs As IEnumerable(Of UInteger)) As Dictionary(Of UInteger, String)
+        Dim result = New Dictionary(Of UInteger, String)()
+        If Not File.Exists(DictFilePath) Then Return Nothing
+        Dim idsCommas = featureIDs.[Select](Function(x) "," & x.ToString()).ToList()
+
+        Using reader As New StreamReader(File.OpenRead(DictFilePath))
+            While Not reader.EndOfStream
+                Dim currentLine = reader.ReadLine()
+
+                For Each ic In idsCommas
+                    If currentLine.EndsWith(ic) Then
+                        result(UInteger.Parse(ic.Substring(1))) = currentLine.Substring(0, currentLine.IndexOf(","c))
+                        idsCommas.Remove(ic)
+                        Exit For
+                    End If
+                Next
+
+                If idsCommas.Count = 0 Then Exit While
+            End While
+        End Using
+
+        Return result
+    End Function
+End Class
+
+''' <summary>
+''' ViVeTool 0.3.3 CLI Class used for hashing a UTF-8 Text File. 
+''' 
+''' Copyright (C) 2019-2023  @thebookisclosed.
+''' 
+''' Licensed under GNU General Public License V3
+''' </summary>
+Friend Class UpdateCheck
+    Friend Shared Function HashUTF8TextFile(filePath As String) As String
+        If Not File.Exists(filePath) Then Return Nothing
+
+        Using sha1Csp = New SHA1CryptoServiceProvider()
+            Dim fileBody = Encoding.UTF8.GetBytes(File.ReadAllText(filePath).Replace(vbCrLf, vbCr))
+            Dim fullLength = fileBody.Length
+            Dim preamble = Encoding.UTF8.GetPreamble()
+            Dim filePortion = New Byte(preamble.Length - 1) {}
+
+            Using fs = New FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+                fs.Read(filePortion, 0, filePortion.Length)
+            End Using
+
+            For i As Integer = 0 To preamble.Length - 1
+                If preamble(i) = filePortion(i) Then fullLength += 1
+            Next
+
+            Dim preface = Encoding.UTF8.GetBytes($"blob {fullLength}{vbNullChar}")
+            sha1Csp.TransformBlock(preface, 0, preface.Length, Nothing, 0)
+            If fullLength > fileBody.Length Then sha1Csp.TransformBlock(preamble, 0, preamble.Length, Nothing, 0)
+            sha1Csp.TransformFinalBlock(fileBody, 0, fileBody.Length)
+            Return BitConverter.ToString(sha1Csp.Hash).Replace("-", "").ToLowerInvariant()
+        End Using
+    End Function
 End Class

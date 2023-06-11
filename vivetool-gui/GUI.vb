@@ -127,6 +127,10 @@ Public Class GUI
     Private Sub __DBG_QueryEnabledState_401122637_Click(sender As Object, e As EventArgs) Handles __DBG_QueryEnabledState_401122637.Click
         MsgBox(Functions_ViVe.Query(401122637))
     End Sub
+
+    Private Sub __DBG_FeatureNaming_DictUpdate_Click(sender As Object, e As EventArgs) Handles __DBG_FeatureNaming_DictUpdate.Click
+        Functions_ViVe.FeatureDictionaryUpdate()
+    End Sub
 #End Region
 
     ''' <summary>
@@ -220,12 +224,9 @@ Public Class GUI
         If CheckForInternetConnection() Then
             HasInternetConnection = True
 
-            'Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
-
             ' Populate the Build Combo Box
             PopulateBuildComboBox()
 
-            'Diagnostics.Debug.WriteLine($"HasInternetConnection is: {HasInternetConnection}")
             ' Set Ready Label
             Invoke(Sub() RLE_StatusLabel.Text = My.Resources.PopulateBuildComboBox_Check_Ready)
         Else
@@ -441,7 +442,7 @@ Public Class GUI
             TXTThread.SetApartmentState(Threading.ApartmentState.STA)
             TXTThread.Start()
         ElseIf RDDL_Build.Text = My.Resources.Generic_FeatureManagement Then
-            Dim MgmtThread As New Threading.Thread(AddressOf Functions_ViVe.FeatureManagement) With {.IsBackground = True}
+            Dim MgmtThread As New Threading.Thread(AddressOf ShowFeatureMgmt) With {.IsBackground = True}
             MgmtThread.SetApartmentState(Threading.ApartmentState.STA)
             MgmtThread.Start()
         ElseIf RDDL_Build.Text = Nothing Then
@@ -449,6 +450,59 @@ Public Class GUI
         Else ' Run Background Worker
             BGW_PopulateGridView.RunWorkerAsync()
         End If
+    End Sub
+
+    ''' <summary>
+    ''' Displays all Enabled/Disabled ViVeTool Features on the current System
+    ''' </summary>
+    Private Sub ShowFeatureMgmt()
+        ' Remove all Group Descriptors
+        Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
+
+        ' Set Status Label
+        Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Generic_PopulatingTheDataGridView)
+
+        ' Clear Data Grid View
+        Invoke(Sub() RGV_MainGridView.Rows.Clear())
+
+        Dim FeatureDict = Functions_ViVe.QueryAll(Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+        Dim NamesDict = FeatureNaming.FindNamesForFeatures(FeatureDict.Select(Function(x) x.FeatureId))
+
+        For Each Feature In FeatureDict
+            Dim Name As String = Nothing
+
+            If NamesDict IsNot Nothing Then
+                Try
+                    Name = NamesDict(Feature.FeatureId)
+                Catch ex As Exception
+                    ' Do nothing
+                End Try
+            End If
+
+            Invoke(Sub() RGV_MainGridView.Rows.Add(Name, Feature.FeatureId, Feature.EnabledState, My.Resources.Generic_Modifiable))
+        Next
+
+        ' Move to the first row, remove the selection and change the Status Label to Done.
+        Invoke(Sub()
+                   RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
+                   RGV_MainGridView.CurrentRow = Nothing
+                   RLE_StatusLabel.Text = My.Resources.Generic_Done
+               End Sub)
+
+        ' Clear the selection
+        Invoke(Sub()
+                   RDDL_Build.SelectedIndex = -1
+                   RDDL_Build.Enabled = True
+               End Sub)
+
+        ' Make the Search Row Visible
+        Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
+
+        ' Enable Animations and selection
+        Invoke(Sub()
+                   AnimatedPropertySetting.AnimationsEnabled = True
+                   RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
+               End Sub)
     End Sub
 
     ''' <summary>
@@ -721,6 +775,9 @@ Public Class GUI
         ' Set Selected Feature to Enabled
         Functions_ViVe.Enable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
+        ' Set EnabledState Text
+        RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Enabled"
+
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
@@ -737,6 +794,9 @@ Public Class GUI
         ' Set Selected Feature to Disabled
         Functions_ViVe.Disable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
+        ' Set EnabledState Text
+        RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Disabled"
+
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
     End Sub
@@ -752,6 +812,9 @@ Public Class GUI
 
         ' Set Selected Feature to Default Values
         Functions_ViVe.Reset(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value))
+
+        ' Set EnabledState Text
+        RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Default"
 
         ' Resume Searching
         RGV_MainGridView.MasterView.TableSearchRow.ResumeSearch()
@@ -848,6 +911,12 @@ Public Class GUI
                 CommentsClient.Build = RDDL_Build.Text
             Catch ex As ArgumentException
                 ' Exception that may occur from spam opening the context menu while scrolling down
+            Catch ex As NullReferenceException
+                ' Remove the Comments Option, if the first Cell is Nothing
+                e.ContextMenu.Items.RemoveAt(1)
+
+                ' Remove the unnecessary Seperator
+                e.ContextMenu.Items.RemoveAt(1)
             End Try
         End If
     End Sub

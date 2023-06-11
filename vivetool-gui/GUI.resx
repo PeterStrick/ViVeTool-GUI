@@ -209,6 +209,15 @@
   <data name="__DBG_QueryEnabledState_401122637.Text" xml:space="preserve">
     <value>Query the Enabled State of ID 401122637</value>
   </data>
+  <data name="__DBG_SEP5.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="__DBG_SEP5.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="__DBG_FeatureNaming_DictUpdate.Text" xml:space="preserve">
+    <value>Check for Feature Dictionary Update</value>
+  </data>
   <data name="__DBG_MainBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>735, 1</value>
   </data>
@@ -2377,6 +2386,18 @@
   </data>
   <data name="&gt;&gt;FluentTheme.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP5.Name" xml:space="preserve">
+    <value>__DBG_SEP5</value>
+  </data>
+  <data name="&gt;&gt;__DBG_SEP5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FeatureNaming_DictUpdate.Name" xml:space="preserve">
+    <value>__DBG_FeatureNaming_DictUpdate</value>
+  </data>
+  <data name="&gt;&gt;__DBG_FeatureNaming_DictUpdate.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>

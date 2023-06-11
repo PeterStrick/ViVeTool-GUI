@@ -1,4 +1,5 @@
-﻿'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
+﻿Option Strict On
+'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
 'Copyright (C) 2023 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
@@ -13,7 +14,6 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Option Strict On
 
 Public Class RadTD
     ''' <summary>
@@ -34,9 +34,9 @@ Public Class RadTD
     ''' <param name="ex">Optional: Exception</param>
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
-    Public Shared Sub ShowDialog(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
+    Public Shared Sub ShowDialog(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing)
         ' Show the Dialog
-        RadTaskDialog.ShowDialog(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
+        RadTaskDialog.ShowDialog(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText, CommandAreaButtons))
     End Sub
 
     ''' <summary>
@@ -49,9 +49,9 @@ Public Class RadTD
     ''' <param name="ex">Optional: Exception</param>
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
-    Public Shared Sub Show(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing)
+    Public Shared Sub Show(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing)
         ' Show the Dialog
-        RadTaskDialog.Show(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText))
+        RadTaskDialog.Show(Generate(Caption, Heading, Text, Icon, ex, exCustomClipboard, ExpandedText, CommandAreaButtons))
     End Sub
 
     ''' <summary>
@@ -65,7 +65,7 @@ Public Class RadTD
     ''' <param name="exCustomClipboard">Optional: Custom Clipboard Text in conjunction with ex</param>
     ''' <param name="ExpandedText">Optional: Text that shows after expanding the Task Dialog</param>
     ''' <returns>The generated Error Dialog as RadTaskDialogPageS</returns>
-    Public Shared Function Generate(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing) As RadTaskDialogPage
+    Public Shared Function Generate(Caption As String, Heading As String, Text As String, Icon As RadTaskDialogIcon, Optional ex As Exception = Nothing, Optional exCustomClipboard As String = Nothing, Optional ExpandedText As String = Nothing, Optional CommandAreaButtons As RadItemOwnerGenericCollection(Of RadTaskDialogButton) = Nothing) As RadTaskDialogPage
         ' Generate Rad TaskDialog Page
         Dim RTD As New RadTaskDialogPage With {
             .Caption = Caption,
@@ -87,7 +87,10 @@ Public Class RadTD
                     End Try
                 End Sub)
             RTD.CommandAreaButtons.Add(CopyExAndClose)
-        Else RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
+        ElseIf CommandAreaButtons IsNot Nothing Then
+            RTD.CommandAreaButtons.AddRange(CommandAreaButtons)
+        Else
+            RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
         End If
 
         ' Add Expander if it is specified
