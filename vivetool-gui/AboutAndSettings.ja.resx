@@ -90,7 +90,7 @@
     <value>テーマ</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
-    <value>最新のビルドを自動で読み込む</value>
+    <value>自動で読み込む:</value>
   </data>
   <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
     <value>動作</value>
