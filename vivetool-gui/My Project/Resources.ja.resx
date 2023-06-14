@@ -175,4 +175,16 @@
 
 閉じるをクリック後に再起動をします。</value>
   </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>機能の管理</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>なし</value>
+  </data>
+  <data name="DictUpdate_DictionaryIsMissing" xml:space="preserve">
+    <value>機能辞書がありません</value>
+  </data>
+  <data name="DictUpdate_Text" xml:space="preserve">
+    <value>機能辞書は ViVeTool機能名とIDの翻訳を提供する物です。任意ですが、この辞書をダウンロードする事を推奨します。今すぐにダウンロードをしますか?</value>
+  </data>
 </root>
