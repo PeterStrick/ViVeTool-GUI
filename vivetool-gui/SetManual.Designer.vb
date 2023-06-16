@@ -29,13 +29,13 @@ Partial Class SetManual
         Me.RMI_DeactivateF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.RTB_VariantID = New Telerik.WinControls.UI.RadTextBox()
-        Me.__DBG_FixLKG = New Telerik.WinControls.UI.RadButton()
-        Me.__DBG_FixPriority = New Telerik.WinControls.UI.RadButton()
+        Me.RB_FixLKG = New Telerik.WinControls.UI.RadButton()
+        Me.RB_FixPriority = New Telerik.WinControls.UI.RadButton()
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RTB_VariantID, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.__DBG_FixLKG, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.__DBG_FixPriority, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RB_FixLKG, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RB_FixPriority, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,22 +81,22 @@ Partial Class SetManual
         Me.RTB_VariantID.Name = "RTB_VariantID"
         Me.RTB_VariantID.TabStop = False
         '
-        '__DBG_FixLKG
+        'RB_FixLKG
         '
-        resources.ApplyResources(Me.__DBG_FixLKG, "__DBG_FixLKG")
-        Me.__DBG_FixLKG.Name = "__DBG_FixLKG"
+        resources.ApplyResources(Me.RB_FixLKG, "RB_FixLKG")
+        Me.RB_FixLKG.Name = "RB_FixLKG"
         '
-        '__DBG_FixPriority
+        'RB_FixPriority
         '
-        resources.ApplyResources(Me.__DBG_FixPriority, "__DBG_FixPriority")
-        Me.__DBG_FixPriority.Name = "__DBG_FixPriority"
+        resources.ApplyResources(Me.RB_FixPriority, "RB_FixPriority")
+        Me.RB_FixPriority.Name = "RB_FixPriority"
         '
         'SetManual
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.__DBG_FixPriority)
-        Me.Controls.Add(Me.__DBG_FixLKG)
+        Me.Controls.Add(Me.RB_FixPriority)
+        Me.Controls.Add(Me.RB_FixLKG)
         Me.Controls.Add(Me.RTB_VariantID)
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
@@ -111,8 +111,8 @@ Partial Class SetManual
         CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RTB_VariantID, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.__DBG_FixLKG, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.__DBG_FixPriority, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RB_FixLKG, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RB_FixPriority, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -125,7 +125,7 @@ Partial Class SetManual
     Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_RevertF As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RTB_VariantID As RadTextBox
-    Friend WithEvents __DBG_FixLKG As RadButton
-    Friend WithEvents __DBG_FixPriority As RadButton
+    Friend WithEvents RB_FixLKG As RadButton
+    Friend WithEvents RB_FixPriority As RadButton
 End Class
 

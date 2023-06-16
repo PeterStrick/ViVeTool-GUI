@@ -110,7 +110,7 @@
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Functions\CrashReporter.GUID.vb" />
     <Compile Include="Functions\CrashReporter.vb" />
-    <Compile Include="Functions\GeneralFunctions.vb" />
+    <Compile Include="Functions\Miscellaneous.vb" />
     <Compile Include="Functions\Junction.vb" />
     <Compile Include="Functions\RadTD.vb" />
     <Compile Include="GlobalSuppressions.vb" />

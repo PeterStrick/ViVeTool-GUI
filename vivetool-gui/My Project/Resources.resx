@@ -710,10 +710,37 @@ It will try to restart after you press on Close.</value>
   <data name="Generic_Nothing" xml:space="preserve">
     <value>Nothing</value>
   </data>
-  <data name="DictUpdate_DictionaryIsMissing" xml:space="preserve">
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
     <value>The Feature Dictionary is missing</value>
   </data>
-  <data name="DictUpdate_Text" xml:space="preserve">
+  <data name="FeatureDictionary_MissingText" xml:space="preserve">
     <value>The Feature Dictionary provides a translation between ViVeTool Feature Names and ViVeTool IDs. Although optional, it is recommended to download this Dictionary. Would you like to download it now?</value>
+  </data>
+  <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
+    <value>A Feature Dictionary Update is available</value>
+  </data>
+  <data name="FeatureDictionary_UpdateText" xml:space="preserve">
+    <value>A newer Version of the Feature Dictionary is available. It contains translations of newer ViVeTool IDs to their corresponding Feature Name. Do you want to update to it now?</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>Download completed</value>
+  </data>
+  <data name="FeatureDictionary_DownloadText" xml:space="preserve">
+    <value>The download of a more recent Feature Dictionary has completed successfully.</value>
+  </data>
+  <data name="FeatureDictionary_UpdateError" xml:space="preserve">
+    <value>An Update Check of the Feature Dictionary could not be performed.</value>
+  </data>
+  <data name="icons8_dictionary_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8_dictionary_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_tick_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8_tick_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_time_machine_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8_time_machine_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_update_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\icons8_update_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

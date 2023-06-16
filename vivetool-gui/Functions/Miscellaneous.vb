@@ -13,18 +13,27 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Module IconExtensions
+Option Strict On
+
+''' <summary>
+''' Miscellaneous Functions
+''' </summary>
+Public Class Functions
     ''' <summary>
-    ''' Extension to the Icon Class allowing the Conversion of Bitmaps to Icons
+    ''' Basic Internet Connectivity Check by trying to check if github.com is accessible
     ''' </summary>
-    ''' <param name="img">Bitmap to convert to an Icon</param>
-    ''' <param name="makeTransparent">If the Icon should be transparent</param>
-    ''' <param name="colorToMakeTransparent">A Color in the Bitmap that should be trated as transparent</param>
-    ''' <returns>An Icon</returns>
-    <Runtime.CompilerServices.Extension>
-    Public Function ToIcon(img As Bitmap, makeTransparent As Boolean, colorToMakeTransparent As Color) As Icon
-        If makeTransparent Then img.MakeTransparent(colorToMakeTransparent)
-        Dim iconHandle = img.GetHicon()
-        Return Icon.FromHandle(iconHandle)
+    ''' <returns>True if http://www.github.com responds. False if not</returns>
+    Public Shared Function CheckForInternetConnection() As Boolean
+        Try
+            Using client = New WebClient()
+                Using stream = client.OpenRead("http://www.github.com")
+                    Diagnostics.Debug.WriteLine("Have Internet")
+                    Return True
+                End Using
+            End Using
+        Catch
+            Diagnostics.Debug.WriteLine("Don't have Internet")
+            Return False
+        End Try
     End Function
-End Module
+End Class

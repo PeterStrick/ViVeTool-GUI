@@ -14,7 +14,11 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Public Class GeneralFunctions
+
+''' <summary>
+''' Miscellaneous Functions
+''' </summary>
+Public Class Functions
     ''' <summary>
     ''' Directly set's HTML/Text on a provided WebBrowser Control
     ''' </summary>
@@ -25,5 +29,24 @@ Public Class GeneralFunctions
         Webbrowser.Document.OpenNew(False)
         Webbrowser.Document.Write(Text)
         Webbrowser.Refresh()
+    End Sub
+
+    ''' <summary>
+    ''' Function that saves a Two Character Language Code to Settings while restarting the application afterwards.
+    ''' </summary>
+    ''' <param name="TwoCharLang">Two Character Language Code. For example: de for German, zh for Chinese, ...</param>
+    Public Shared Sub ChangeLanguage(TwoCharLang As String)
+        My.Settings.TwoCharLanguageCode = TwoCharLang
+        My.Settings.Save()
+
+        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
+
+        Dim pStart As New ProcessStartInfo With {
+            .WindowStyle = ProcessWindowStyle.Normal,
+            .FileName = Application.ExecutablePath
+        }
+
+        Process.Start(pStart)
+        Application.Exit()
     End Sub
 End Class

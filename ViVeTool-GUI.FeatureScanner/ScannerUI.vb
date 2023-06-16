@@ -14,8 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports System.IO
-Imports Telerik.WinControls, Telerik.RadToastNotificationManager
+Imports Telerik.WinControls, Telerik.RadToastNotificationManager, System.IO
 
 ''' <summary>
 ''' ViVeTool GUI - Feature Scanner
@@ -25,11 +24,6 @@ Public Class ScannerUI
     Private Delegate Sub AppendStdOutDelegate(text As String)
     Private Delegate Sub AppendStdErrDelegate(text As String)
     Public BuildNumber As String = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuildNumber", Nothing).ToString
-
-    Public Shared CopyExAndClose As New RadTaskDialogButton With {
-        .Text = My.Resources.Generic_Close,
-        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
-    }
 
     Friend WithEvents RTNM As New RadToastNotificationManager()
     ReadOnly RTN_FeatureScanComplete As New RadToastNotification(RadToastTemplateType.ToastGeneric, "ToastTest",
@@ -429,7 +423,7 @@ Public Class ScannerUI
 
         ' Calculate amount of Total Files in the Symbol Folder
         Try
-            Dim TotalFiles As Integer = IO.Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
+            Dim TotalFiles As Integer = Directory.GetFiles(My.Settings.SymbolPath, "*.*").Count
             Invoke(Sub() RL_SymbolFiles.Text = String.Format(
                        My.Resources.Calculation_TotalFilesIn_N,
                        My.Settings.SymbolPath, TotalFiles.ToString))
@@ -441,7 +435,7 @@ Public Class ScannerUI
 
         ' Calculate amount of Total Folders in the Symbol Folder
         Try
-            Dim TotalFolders As Integer = IO.Directory.GetDirectories(My.Settings.SymbolPath).Count
+            Dim TotalFolders As Integer = Directory.GetDirectories(My.Settings.SymbolPath).Count
             Invoke(Sub() RL_SymbolFolders.Text = String.Format(
                        My.Resources.Calculation_TotalFoldersIn_N,
                        My.Settings.SymbolPath, TotalFolders.ToString))
@@ -463,7 +457,7 @@ Public Class ScannerUI
     ''' <param name="RootFolder">Folder to get the total Size from</param>
     ''' <returns>Total Folder Size of RootFolder as Long</returns>
     Public Function GetDirSize(RootFolder As String) As Long
-        Dim FolderInfo = New IO.DirectoryInfo(RootFolder)
+        Dim FolderInfo = New DirectoryInfo(RootFolder)
         For Each File In FolderInfo.GetFiles : TotalSize += File.Length
         Next
         For Each SubFolderInfo In FolderInfo.GetDirectories : GetDirSize(SubFolderInfo.FullName)
@@ -548,7 +542,7 @@ Public Class ScannerUI
         RTNM.ToastNotifications.Add(RTN_FeatureScanComplete)
 
         ' Localize the Introduction Text
-        GeneralFunctions.SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
+        Functions.SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
 
         ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
         AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
@@ -559,7 +553,7 @@ Public Class ScannerUI
         If My.Application.Info.Title <> "" Then
             ApplicationTitle = My.Application.Info.Title
         Else
-            ApplicationTitle = IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
+            ApplicationTitle = Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
 
         RL_ProductName.Text = My.Application.Info.ProductName
@@ -621,31 +615,12 @@ Public Class ScannerUI
     End Sub
 
     ''' <summary>
-    ''' Function that saves a Two Character Language Code to Settings while restarting the application afterwards.
-    ''' </summary>
-    ''' <param name="TwoCharLang">Two Character Language Code. For example: de for German, zh for Chinese, ...</param>
-    Private Sub ChangeLanguage(TwoCharLang As String)
-        My.Settings.TwoCharLanguageCode = TwoCharLang
-        My.Settings.Save()
-
-        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
-
-        Dim pStart As New ProcessStartInfo With {
-            .WindowStyle = ProcessWindowStyle.Normal,
-            .FileName = Application.ExecutablePath
-        }
-
-        Process.Start(pStart)
-        Application.Exit()
-    End Sub
-
-    ''' <summary>
     ''' Language Button. Changes the Language to English
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_English_Click(sender As Object, e As EventArgs) Handles RMI_L_English.Click
-        ChangeLanguage("en")
+        Functions.ChangeLanguage("en")
     End Sub
 
     ''' <summary>
@@ -654,7 +629,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_German_Click(sender As Object, e As EventArgs) Handles RMI_L_German.Click
-        ChangeLanguage("de")
+        Functions.ChangeLanguage("de")
     End Sub
 
     ''' <summary>
@@ -663,7 +638,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Chinese_Click(sender As Object, e As EventArgs) Handles RMI_L_Chinese.Click
-        ChangeLanguage("zh")
+        Functions.ChangeLanguage("zh")
     End Sub
 
     ''' <summary>
@@ -672,7 +647,7 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Polish_Click(sender As Object, e As EventArgs) Handles RMI_L_Polish.Click
-        ChangeLanguage("pl")
+        Functions.ChangeLanguage("pl")
     End Sub
 
     ''' <summary>
@@ -681,6 +656,6 @@ Public Class ScannerUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Indonesian_Click(sender As Object, e As EventArgs) Handles RMI_L_Indonesian.Click
-        ChangeLanguage("id")
+        Functions.ChangeLanguage("id")
     End Sub
 End Class

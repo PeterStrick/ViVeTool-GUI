@@ -15,7 +15,7 @@
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
 Imports System.Globalization, System.Runtime.InteropServices
-Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, MySqlConnector, Telerik.WinControls
+Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -31,12 +31,9 @@ Public Class GUI
     ' Variable for the Feature List Grid View
     Dim LineStage As String = String.Empty
 
-    ' Variables for the Comments/MySQL System
-    Private Build_DT As New DataTable
-    Private ReadOnly CommentsImg As Image = My.Resources.icons8_comments_24px
-    Private Shared HasInternetConnection As Boolean = False
-    Private Shared HasDBAvailable As Boolean = False
-    Private Shared TableDoesNotExist As Boolean = True
+    ' Variables for the Comments System
+    Public Shared HasInternetConnection As Boolean = False
+    Public Shared ReadOnly CommentsImg As Image = My.Resources.icons8_comments_24px
     Private ReadOnly RMI_AddComment As New RadMenuItem("Add a Comment for this Feature")
 
 #Region "DEBUG Subs, Functions and Checks"
@@ -58,7 +55,7 @@ Public Class GUI
     End Sub
 
     Private Sub __DBG_SeeCommentsData_Click(sender As Object, e As EventArgs) Handles __DBG_SeeCommentsData.Click
-        Diagnostics.Debug.WriteLine($"HasDBAvailable: {HasDBAvailable}")
+        Diagnostics.Debug.WriteLine($"HasDBAvailable: {DatabaseFunctions.HasDBAvailable}")
         Diagnostics.Debug.WriteLine($"HasInternetConnection: {HasInternetConnection}")
 
         Dim frm1 As New Form With {
@@ -71,7 +68,7 @@ Public Class GUI
 
         Dim DGV As New DataGridView With {
             .Dock = DockStyle.Fill,
-            .DataSource = Build_DT,
+            .DataSource = DatabaseFunctions.Build_DT,
             .[ReadOnly] = True
         }
 
@@ -84,7 +81,7 @@ Public Class GUI
     End Sub
 
     Private Sub __DBG_GetComments_Click(sender As Object, e As EventArgs) Handles __DBG_GetComments.Click
-        LoadCommentsFromDB(RDDL_Build.Text)
+        DatabaseFunctions.LoadCommentsFromDB(RDDL_Build.Text)
     End Sub
 
     Private Sub __DBG_EnableCommentLoadingFromManualFL_Click(sender As Object, e As EventArgs) Handles __DBG_EnableCommentLoadingFromManualFL.Click
@@ -107,12 +104,12 @@ Public Class GUI
 
     Private Sub __DBG_SetFeaturePriorityToServiceAsTest_Click(sender As Object, e As EventArgs) Handles __DBG_SetFeaturePriorityToServiceAsTest.Click
         Try
-            Dim Res_Boot = Functions_ViVe.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
+            Dim Res_Boot = ViVe_API.Feature.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_PRIORITY.Service,
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Boot)
-            Dim Res_Runtime = Functions_ViVe.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
+            Dim Res_Runtime = ViVe_API.Feature.SetConfig(40112637, 0, Albacore.ViVe.NativeEnums.RTL_FEATURE_ENABLED_STATE.Enabled,
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_PRIORITY.Service,
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.FeatureState Or
                                            Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_OPERATION.VariantState,
@@ -125,11 +122,11 @@ Public Class GUI
     End Sub
 
     Private Sub __DBG_QueryEnabledState_401122637_Click(sender As Object, e As EventArgs) Handles __DBG_QueryEnabledState_401122637.Click
-        MsgBox(Functions_ViVe.Query(401122637))
+        MsgBox(ViVe_API.Feature.Query(401122637))
     End Sub
 
     Private Sub __DBG_FeatureNaming_DictUpdate_Click(sender As Object, e As EventArgs) Handles __DBG_FeatureNaming_DictUpdate.Click
-        Functions_ViVe.FeatureDictionaryUpdate()
+        ViVe_API.Management.FeatureDictionaryUpdateCheck()
     End Sub
 #End Region
 
@@ -201,9 +198,9 @@ Public Class GUI
         ' Check if the Comments DB Server is online
         Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Comments_CheckingAvailabillity)
         If DatabaseFunctions.ConnectionTest() Then
-            HasDBAvailable = True
+            DatabaseFunctions.HasDBAvailable = True
         Else
-            HasDBAvailable = False
+            DatabaseFunctions.HasDBAvailable = False
         End If
 
         ' Populate the Build Combo Box, but first check if the PC is connected to the Internet, otherwise the GUI will crash without giving any helpful Information on WHY
@@ -221,7 +218,7 @@ Public Class GUI
         ' Add manual option
         Invoke(Sub() RDDL_Build.Items.Add(My.Resources.Generic_LoadManually))
 
-        If CheckForInternetConnection() Then
+        If Functions.CheckForInternetConnection() Then
             HasInternetConnection = True
 
             ' Populate the Build Combo Box
@@ -239,8 +236,11 @@ Public Class GUI
                        RLE_StatusLabel.Text = My.Resources.Error_NetworkFunctionsDisabledF12
 
                        ' Third, Show an error message
-                       RadTD.Generate($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
+                       RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
                        My.Resources.Error_NetworkExceptionDetail_N, RadTaskDialogIcon.ShieldWarningYellowBar)
+
+                       ' Add the Handler
+                       AddHandler RDDL_Build.SelectedIndexChanged, AddressOf PopulateDataGridView
                    End Sub)
         End If
     End Sub
@@ -368,7 +368,7 @@ Public Class GUI
             RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
             My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
         Catch ex As Exception
-            RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
 #End Region
@@ -456,6 +456,9 @@ Public Class GUI
     ''' Displays all Enabled/Disabled ViVeTool Features on the current System
     ''' </summary>
     Private Sub ShowFeatureMgmt()
+        ' Check for Feature Dictionary Updates
+        Invoke(Sub() ViVe_API.Management.FeatureDictionaryUpdateCheck())
+
         ' Remove all Group Descriptors
         Invoke(Sub() RGV_MainGridView.GroupDescriptors.Clear())
 
@@ -465,8 +468,8 @@ Public Class GUI
         ' Clear Data Grid View
         Invoke(Sub() RGV_MainGridView.Rows.Clear())
 
-        Dim FeatureDict = Functions_ViVe.QueryAll(Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
-        Dim NamesDict = FeatureNaming.FindNamesForFeatures(FeatureDict.Select(Function(x) x.FeatureId))
+        Dim FeatureDict = ViVe_API.Feature.QueryAll(Albacore.ViVe.NativeEnums.RTL_FEATURE_CONFIGURATION_TYPE.Runtime)
+        Dim NamesDict = ViVe_API.Management.FeatureNaming.FindNamesForFeatures(FeatureDict.Select(Function(x) x.FeatureId))
 
         For Each Feature In FeatureDict
             Dim Name As String = Nothing
@@ -552,12 +555,12 @@ Public Class GUI
                         ' Get the Feature Enabled State from the currently processing line.
                         ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                         Try
-                            Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
+                            Dim State As String = ViVe_API.Feature.Query(CUInt(Str(1)))
                             Dim Image = Nothing
 
 #Region "DEBUG ONLY CODE."
-                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad AndAlso HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
-                                Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
+                            If Diagnostics.Debugger.IsAttached AndAlso EnableDBLoadingForManualTXTLoad AndAlso HasInternetConnection AndAlso DatabaseFunctions.HasDBAvailable AndAlso Not DatabaseFunctions.TableDoesNotExist Then
+                                Dim rows As DataRow() = DatabaseFunctions.Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                                 If rows.Length >= 1 Then Image = CommentsImg
                             End If
 #End Region
@@ -599,7 +602,7 @@ Public Class GUI
                 Invoke(
                     Sub()
                         ' Show an Error Dialog
-                        RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+                        RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
                         Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
 
                         ' Clear the selection
@@ -642,8 +645,10 @@ Public Class GUI
 
             ' Load Comments
             If HasInternetConnection Then
-                Invoke(Sub() RLE_StatusLabel.Text = My.Resources.Comments_GettingComments)
-                LoadCommentsFromDB(RDDL_Build.Text)
+                Invoke(Sub()
+                           RLE_StatusLabel.Text = My.Resources.Comments_GettingComments
+                           DatabaseFunctions.LoadCommentsFromDB(RDDL_Build.Text)
+                       End Sub)
             End If
 
             ' Set Status Label
@@ -707,11 +712,11 @@ Public Class GUI
                     ' Get the Feature Enabled State from the currently processing line.
                     ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
                     Try
-                        Dim State As String = Functions_ViVe.Query(CUInt(Str(1)))
+                        Dim State As String = ViVe_API.Feature.Query(CUInt(Str(1)))
                         Dim Image = Nothing
 
-                        If HasInternetConnection AndAlso HasDBAvailable AndAlso Not TableDoesNotExist Then
-                            Dim rows As DataRow() = Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
+                        If HasInternetConnection AndAlso DatabaseFunctions.HasDBAvailable AndAlso Not DatabaseFunctions.TableDoesNotExist Then
+                            Dim rows As DataRow() = DatabaseFunctions.Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
                             If rows.Length >= 1 Then Image = CommentsImg
                         End If
 
@@ -773,7 +778,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Enabled
-        Functions_ViVe.Enable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
+        ViVe_API.Feature.Enable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
         ' Set EnabledState Text
         RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Enabled"
@@ -792,7 +797,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Disabled
-        Functions_ViVe.Disable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
+        ViVe_API.Feature.Disable(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value), 0)
 
         ' Set EnabledState Text
         RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Disabled"
@@ -811,7 +816,7 @@ Public Class GUI
         RGV_MainGridView.MasterView.TableSearchRow.SuspendSearch()
 
         ' Set Selected Feature to Default Values
-        Functions_ViVe.Reset(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value))
+        ViVe_API.Feature.Reset(CUInt(RGV_MainGridView.SelectedRows.Item(0).Cells(1).Value))
 
         ' Set EnabledState Text
         RGV_MainGridView.SelectedRows.Item(0).Cells(2).Value = "Default"
@@ -861,24 +866,6 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Basic Internet Connectivity Check by trying to check if github.com is accessible
-    ''' </summary>
-    ''' <returns>True if http://www.github.com responds. False if not</returns>
-    Public Shared Function CheckForInternetConnection() As Boolean
-        Try
-            Using client = New WebClient()
-                Using stream = client.OpenRead("http://www.github.com")
-                    Diagnostics.Debug.WriteLine("Have Internet")
-                    Return True
-                End Using
-            End Using
-        Catch
-            Diagnostics.Debug.WriteLine("Don't have Internet")
-            Return False
-        End Try
-    End Function
-
-    ''' <summary>
     ''' Form Closing Event. Used to forcefully close ViVeTool GUI and it's Threads
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
@@ -922,65 +909,6 @@ Public Class GUI
     End Sub
 
     ''' <summary>
-    ''' Loads the Comments from the DB for the specified Build
-    ''' </summary>
-    ''' <param name="Build">Windows Build Number as a String</param>
-    Private Sub LoadCommentsFromDB(Build As String)
-        Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
-
-        ' Clear local DataTable
-        Build_DT.Clear()
-
-        ' Reset Variable
-        TableDoesNotExist = False
-
-        Try
-            ' Get the latest comments Table for the current Build, and store it in a local Data Table
-            Using con As New MySqlConnection(DatabaseFunctions.DB_Connection.ConnectionString)
-                Using cmd As New MySqlCommand(String.Format("SELECT * FROM ViVeTool_GUI.`{0}`;", Build), con)
-                    cmd.CommandType = CommandType.Text
-                    Using sda As New MySqlDataAdapter(cmd)
-                        sda.Fill(Build_DT)
-                    End Using
-                End Using
-
-                Diagnostics.Debug.WriteLine("LoadCommentsFromDB Comments loaded.")
-                con.Close()
-            End Using
-        Catch notFoundEx As MySqlException
-            Diagnostics.Debug.WriteLine($"LoadCommentsFromDB Error: {notFoundEx.Message}")
-
-            ' Fancy Message Box
-            Dim Text, Expander As String
-
-            Select Case notFoundEx.ErrorCode
-                Case MySqlErrorCode.NoSuchTable
-                    TableDoesNotExist = True
-                    Diagnostics.Debug.WriteLine("Table does not exist")
-                    Exit Try
-                Case MySqlErrorCode.ServerShutdown
-                    Text = My.Resources.Comments_DBError_ShuttingDown
-                    Expander = notFoundEx.Message
-                    HasDBAvailable = False
-                Case MySqlErrorCode.UnableToConnectToHost
-                    Text = My.Resources.Comments_DBError_Unavailable
-                    Expander = notFoundEx.Message
-                    HasDBAvailable = False
-                Case Else
-                    Text = My.Resources.Comments_DBError_CommunicationError
-                    Expander = notFoundEx.Message
-                    HasDBAvailable = False
-            End Select
-
-            RadTD.ShowDialog($" {My.Resources.Error_ADatabaseErrorOccurred}", My.Resources.Error_ADatabaseErrorOccurred, Text, RadTaskDialogIcon.ShieldErrorRedBar,
-            notFoundEx, Expander, Expander)
-        Catch ex As Exception
-            HasDBAvailable = False
-            Invoke(Sub() MsgBox(ex.ToString))
-        End Try
-    End Sub
-
-    ''' <summary>
     ''' Fix the Group Header. This removes the " : " in-front of a Group Name
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
@@ -1006,7 +934,7 @@ Public Class GUI
                 Dim FeatureName As String = cRow.Cells(0).Value.ToString
 
                 ' Get the Row in the Data Table that has a Comment for the Particular Feature
-                Dim CommentRow As DataRow() = Build_DT.Select($"FeatureName LIKE '{FeatureName}'")
+                Dim CommentRow As DataRow() = DatabaseFunctions.Build_DT.Select($"FeatureName LIKE '{FeatureName}'")
 
                 ' Replace $@$ in the String from the Comments DB with "
                 Dim Comment As String = CommentRow(0).Item(1).ToString.Replace("$@$", Chr(34))
@@ -1023,7 +951,7 @@ Public Class GUI
             ' Do nothing
         Catch ex As Exception
             ' Show an Error Dialog
-            RadTD.Generate($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
                            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
     End Sub

@@ -1,5 +1,4 @@
-﻿Option Strict On
-'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
+﻿'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
 'Copyright (C) 2023 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
@@ -14,15 +13,29 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Option Strict On
 
+''' <summary>
+''' RadTaskDialog Helper Class
+''' </summary>
 Public Class RadTD
     ''' <summary>
-    ''' Rad Task Dialog Button for use in Exception Task Dialogs
+    ''' Class containing Task Dialog Buttons
     ''' </summary>
-    Private Shared ReadOnly CopyExAndClose As New RadTaskDialogButton With {
-        .Text = My.Resources.Generic_Close,
-        .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
-    }
+    Public Class Buttons
+        ''' <summary>
+        ''' Rad Task Dialog Button for use in Exception Task Dialogs
+        ''' </summary>
+        Public Shared ReadOnly CopyExAndClose As New RadTaskDialogButton With {
+            .Text = My.Resources.Generic_Close,
+            .ToolTipText = My.Resources.Error_CopyExceptionAndClose_ToolTip
+        }
+
+        ' Create a Collection with two Task Dialog Buttons
+        Public Shared ReadOnly YesNo As New RadItemOwnerGenericCollection(Of RadTaskDialogButton) From {
+            RadTaskDialogButton.Yes, RadTaskDialogButton.No
+        }
+    End Class
 
     ''' <summary>
     ''' Generates and shows a Rad Task Dialog as an Task Dialog. Uses ShowDialog()
@@ -76,7 +89,7 @@ Public Class RadTD
 
         ' Add Copy Exception and Close button if ex is specified
         If ex IsNot Nothing Then
-            AddHandler CopyExAndClose.Click, New EventHandler(
+            AddHandler Buttons.CopyExAndClose.Click, New EventHandler(
                 Sub()
                     Try
                         Dim ClipText As String = ex.ToString
@@ -86,7 +99,7 @@ Public Class RadTD
                         ' Do nothing
                     End Try
                 End Sub)
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
+            RTD.CommandAreaButtons.Add(Buttons.CopyExAndClose)
         ElseIf CommandAreaButtons IsNot Nothing Then
             RTD.CommandAreaButtons.AddRange(CommandAreaButtons)
         Else

@@ -19,8 +19,6 @@ Namespace My
     ''' <summary>
     ''' .Net Framework Application Framework
     ''' </summary>
-    ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">Default EventArgs</param>
     Partial Friend Class MyApplication
         ''' <summary>
         ''' Used to set the Application Theme on Launch by determining, if My.Settings.DarkMode is True

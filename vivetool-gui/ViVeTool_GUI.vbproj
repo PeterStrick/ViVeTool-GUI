@@ -156,7 +156,9 @@
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\DatabaseFunctions.vb" />
     <Compile Include="Functions\Extensions.vb" />
-    <Compile Include="Functions\Functions_ViVe.vb" />
+    <Compile Include="Functions\Miscellaneous.vb" />
+    <Compile Include="Functions\ViVe_API.FeatureDictionary.vb" />
+    <Compile Include="Functions\ViVe_API.vb" />
     <Compile Include="Functions\RadTD.vb" />
     <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="GUI.vb">
@@ -333,6 +335,11 @@
     </AdditionalFiles>
     <Content Include="icons8-advertisement-page-96.ico" />
     <Content Include="Images\about.ico" />
+    <Content Include="Images\icons8_comments_24px.png" />
+    <Content Include="Images\icons8_dictionary_24.png" />
+    <Content Include="Images\icons8_tick_24.png" />
+    <Content Include="Images\icons8_time_machine_24.png" />
+    <Content Include="Images\icons8_update_24.png" />
     <Content Include="Images\icons8_about_24.png" />
     <Content Include="Images\icons8_about_96.png" />
     <Content Include="Images\icons8_advertisement_page_24.png" />

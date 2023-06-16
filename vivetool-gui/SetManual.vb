@@ -29,9 +29,9 @@ Public Class SetManual
         RTB_VariantID.Text = RTB_VariantID.Text.Trim()
 
         If IsNumeric(RTB_VariantID.Text) AndAlso Not String.IsNullOrWhiteSpace(RTB_VariantID.Text) Then
-            Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
+            ViVe_API.Feature.Enable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
         Else
-            Functions_ViVe.Enable(CUInt(RTB_FeatureID.Text), 0)
+            ViVe_API.Feature.Enable(CUInt(RTB_FeatureID.Text), 0)
         End If
     End Sub
 
@@ -45,9 +45,9 @@ Public Class SetManual
         RTB_VariantID.Text = RTB_VariantID.Text.Trim()
 
         If IsNumeric(RTB_VariantID.Text) AndAlso Not String.IsNullOrWhiteSpace(RTB_VariantID.Text) Then
-            Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
+            ViVe_API.Feature.Disable(CUInt(RTB_FeatureID.Text), CUInt(RTB_VariantID.Text))
         Else
-            Functions_ViVe.Disable(CUInt(RTB_FeatureID.Text), 0)
+            ViVe_API.Feature.Disable(CUInt(RTB_FeatureID.Text), 0)
         End If
     End Sub
 
@@ -58,7 +58,7 @@ Public Class SetManual
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_RevertF_Click(sender As Object, e As EventArgs) Handles RMI_RevertF.Click
         RTB_FeatureID.Text = RTB_FeatureID.Text.Trim()
-        Functions_ViVe.Reset(CUInt(RTB_FeatureID.Text))
+        ViVe_API.Feature.Reset(CUInt(RTB_FeatureID.Text))
     End Sub
 
     ''' <summary>
@@ -95,11 +95,21 @@ Public Class SetManual
         End If
     End Sub
 
-    Private Sub __DBG_FixLKG_Click(sender As Object, e As EventArgs) Handles __DBG_FixLKG.Click
-        Functions_ViVe.FixLastKnownGood()
+    ''' <summary>
+    ''' Fix LastKnownGood Store Button
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RB_FixLKG_Click(sender As Object, e As EventArgs) Handles RB_FixLKG.Click
+        ViVe_API.Feature.FixLastKnownGood()
     End Sub
 
-    Private Sub _DBG_FixPriority_Click(sender As Object, e As EventArgs) Handles __DBG_FixPriority.Click
-        Functions_ViVe.FixPriority()
+    ''' <summary>
+    ''' Fix Priorities Button
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RB_FixPriority_Click(sender As Object, e As EventArgs) Handles RB_FixPriority.Click
+        ViVe_API.Feature.FixPriority()
     End Sub
 End Class

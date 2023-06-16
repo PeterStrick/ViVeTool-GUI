@@ -20,6 +20,21 @@ Imports MySqlConnector
 ''' Database Functions and Variables
 ''' </summary>
 Public Class DatabaseFunctions
+    ''' <summary>
+    ''' Public, Read-Only Database Connection String
+    ''' </summary>
+    Public Shared DB_Connection As New MySqlConnectionStringBuilder With {
+        .Server = "direct.rawrr.cf",
+        .UserID = "ViVeTool_GUI",
+        .Password = "ViVeTool_GUI",
+        .Database = "ViVeTool_GUI",
+        .ConnectionTimeout = 120
+    }
+
+    ' Variables for the Comments System
+    Public Shared Build_DT As New DataTable
+    Public Shared HasDBAvailable As Boolean = False
+    Public Shared TableDoesNotExist As Boolean = True
 
     ''' <summary>
     ''' Database Conenction Test
@@ -38,13 +53,64 @@ Public Class DatabaseFunctions
     End Function
 
     ''' <summary>
-    ''' Public, Read-Only Database Connection String
+    ''' Loads the Comments from the DB for the specified Build
     ''' </summary>
-    Public Shared DB_Connection As New MySqlConnectionStringBuilder With {
-        .Server = "direct.rawrr.cf",
-        .UserID = "ViVeTool_GUI",
-        .Password = "ViVeTool_GUI",
-        .Database = "ViVeTool_GUI",
-        .ConnectionTimeout = 120
-    }
+    ''' <param name="Build">Windows Build Number as a String</param>
+    Public Shared Sub LoadCommentsFromDB(Build As String)
+        Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
+
+        ' Clear local DataTable
+        Build_DT.Clear()
+
+        ' Reset Variable
+        TableDoesNotExist = False
+
+        Try
+            ' Get the latest comments Table for the current Build, and store it in a local Data Table
+            Using con As New MySqlConnection(DatabaseFunctions.DB_Connection.ConnectionString)
+                Using cmd As New MySqlCommand(String.Format("SELECT * FROM ViVeTool_GUI.`{0}`;", Build), con)
+                    cmd.CommandType = CommandType.Text
+                    Using sda As New MySqlDataAdapter(cmd)
+                        sda.Fill(Build_DT)
+                    End Using
+                End Using
+
+                Diagnostics.Debug.WriteLine("LoadCommentsFromDB Comments loaded.")
+                con.Close()
+            End Using
+        Catch notFoundEx As MySqlException
+            Diagnostics.Debug.WriteLine($"LoadCommentsFromDB Error: {notFoundEx.Message}")
+
+            ' Fancy Message Box
+            Dim Text, Expander As String
+
+            Select Case notFoundEx.ErrorCode
+                Case MySqlErrorCode.NoSuchTable
+                    TableDoesNotExist = True
+                    Diagnostics.Debug.WriteLine("Table does not exist")
+                    Exit Try
+                Case MySqlErrorCode.ServerShutdown
+                    Text = My.Resources.Comments_DBError_ShuttingDown
+                    Expander = notFoundEx.Message
+                    HasDBAvailable = False
+                Case MySqlErrorCode.UnableToConnectToHost
+                    Text = My.Resources.Comments_DBError_Unavailable
+                    Expander = notFoundEx.Message
+                    HasDBAvailable = False
+                Case Else
+                    Text = My.Resources.Comments_DBError_CommunicationError
+                    Expander = notFoundEx.Message
+                    HasDBAvailable = False
+            End Select
+
+            RadTD.ShowDialog($" {My.Resources.Error_ADatabaseErrorOccurred}", My.Resources.Error_ADatabaseErrorOccurred, Text, RadTaskDialogIcon.ShieldErrorRedBar,
+            notFoundEx, Expander, Expander)
+        Catch ex As Exception
+            HasDBAvailable = False
+
+            ' Show an Error Dialog
+            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+                           Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
+        End Try
+    End Sub
 End Class
