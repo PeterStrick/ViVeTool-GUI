@@ -1,6 +1,6 @@
 # Localization Infos
 
-### With the addition of a Self-Hosted Weblate Instance, Translation of ViVeTool GUI and it's Feature Scanner is now done online, at https://weblate.rawrr.cf
+### With the addition of a Self-Hosted Weblate Instance, Translation of ViVeTool GUI and it's Feature Scanner is now done online, at https://weblate.rawrr.dev
 
 ### Translations can be added by either:
 
