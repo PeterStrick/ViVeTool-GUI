@@ -14,10 +14,8 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
-Imports System.Drawing.Text
 Imports System.Globalization, System.Runtime.InteropServices
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls
-Imports Telerik.Collections.Generic
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -309,38 +307,38 @@ Public Class GUI
 
         ' Gets the URL of the features Folder that is used in section 2
 #Region "1. Get the URL of the features folder"
-        ' Required Headers for the GitHub API
-        Dim WebClientRepo As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
-        WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
-        WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
+        '' Required Headers for the GitHub API
+        'Dim WebClientRepo As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
+        'WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
+        'WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
 
-        ' Get the "tree" array from the API JSON Result
-        Try
-            Dim ContentsJSONRepo As String = WebClientRepo.DownloadString(RepoURL)
-            Dim JSONObjectRepo As JObject = JObject.Parse(ContentsJSONRepo)
-            Dim JSONArrayRepo As JArray = CType(JSONObjectRepo.SelectToken("tree"), JArray)
+        '' Get the "tree" array from the API JSON Result
+        'Try
+        '    Dim ContentsJSONRepo As String = WebClientRepo.DownloadString(RepoURL)
+        '    Dim JSONObjectRepo As JObject = JObject.Parse(ContentsJSONRepo)
+        '    Dim JSONArrayRepo As JArray = CType(JSONObjectRepo.SelectToken("tree"), JArray)
 
-            ' Look in the JSON Array for the element: "path" = "features"
-            For Each element In JSONArrayRepo
-                If element("path").ToString = "features" Then FeaturesFolderURL = element("url").ToString
-            Next
+        '    ' Look in the JSON Array for the element: "path" = "features"
+        '    For Each element In JSONArrayRepo
+        '        If element("path").ToString = "features" Then FeaturesFolderURL = element("url").ToString
+        '    Next
 
-        Catch webex As WebException
-            Dim webex_Response As String
-            Try
-                webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
-            Catch ex As Exception
-                webex_Response = webex.ToString
-            End Try
+        'Catch webex As WebException
+        '    Dim webex_Response As String
+        '    Try
+        '        webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
+        '    Catch ex As Exception
+        '        webex_Response = webex.ToString
+        '    End Try
 
-            RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
-            My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
-        Catch ex As Exception
-            RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
-            Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
-        End Try
+        '    RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
+        '    My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
+        'Catch ex As Exception
+        '    RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
+        '    Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
+        'End Try
 #End Region
-#Region "2. Get the features folder File Contents"
+#Region "Get the features folder File Contents"
         ' returns JSON File Contents of riverar/mach2/features
 
         ' Required Headers for the GitHub API
@@ -352,7 +350,7 @@ Public Class GUI
         Try
             ' [DEV] Use Dev JSON to not get rate limited while Testing/Developing
             ' Dim ContentsJSON As String = TempJSONUsedInDevelopment
-            Dim ContentsJSONFeatures As String = WebClientFeatures.DownloadString(FeaturesFolderURL)
+            Dim ContentsJSONFeatures As String = WebClientFeatures.DownloadString("https://api.github.com/repos/riverar/mach2/git/trees/master?recursive=1")
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
@@ -720,6 +718,14 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
+            If RDDL_Build.Text = "features" Then
+                Invoke(Sub()
+                           MsgBox("Do not load the ""features"" Item inside the Drop Down, this would otherwise create a crash.", MsgBoxStyle.Critical, "debug")
+                           RDDL_Build.SelectedIndex = -1
+                       End Sub)
+                Return
+            End If
+
             ' Debug
             Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
 
@@ -747,8 +753,8 @@ Public Class GUI
 
             ' Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
-            Dim path As String = IO.Path.GetTempPath & RDDL_Build.Text & ".txt"
-            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/features/" & RDDL_Build.Text & ".txt", path)
+            Dim path As String = IO.Path.GetTempPath & "loadedList.txt"
+            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/" & RDDL_Build.Text & ".txt", path)
 
             ' Fix for _arm64 Feature Lists
             Dim Build As Integer
@@ -757,8 +763,11 @@ Public Class GUI
             If IsNumeric(RDDL_Build.Text) Then
                 Build = CInt(RDDL_Build.Text)
             Else
+                ' Remove the /features/*/amd64|arm64 part
+                Dim tempBuild = RDDL_Build.Text.Split(CChar("/"))(3)
+
                 ' Remove everything past the _ Part to get a normal Build Number
-                Build = CInt(RDDL_Build.Text.Split(CChar("_"))(0))
+                Build = CInt(tempBuild.Split(CChar("_"))(0))
             End If
 
             ' For each line add a grid view entry

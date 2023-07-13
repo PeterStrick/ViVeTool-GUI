@@ -24,12 +24,12 @@ Partial Class GUI
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI))
-        Dim GridViewTextBoxColumn13 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn14 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn15 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn16 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewImageColumn4 As Telerik.WinControls.UI.GridViewImageColumn = New Telerik.WinControls.UI.GridViewImageColumn()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewImageColumn1 As Telerik.WinControls.UI.GridViewImageColumn = New Telerik.WinControls.UI.GridViewImageColumn()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RDDL_Build = New Telerik.WinControls.UI.RadDropDownList()
         Me.RSS_MainStatusStrip = New Telerik.WinControls.UI.RadStatusStrip()
         Me.__DBG_MainBtn = New Telerik.WinControls.UI.RadDropDownButton()
@@ -49,6 +49,8 @@ Partial Class GUI
         Me.__DBG_QueryEnabledState_401122637 = New Telerik.WinControls.UI.RadMenuItem()
         Me.__DBG_SEP5 = New Telerik.WinControls.UI.RadMenuSeparatorItem()
         Me.__DBG_FeatureNaming_DictUpdate = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_AutoLoad_Current_Test = New Telerik.WinControls.UI.RadMenuItem()
+        Me.__DBG_RDDL_Build_SelectedIndexTest = New Telerik.WinControls.UI.RadMenuItem()
         Me.RLE_StatusLabel = New Telerik.WinControls.UI.RadLabelElement()
         Me.RGV_MainGridView = New Telerik.WinControls.UI.RadGridView()
         Me.BGW_PopulateGridView = New System.ComponentModel.BackgroundWorker()
@@ -64,8 +66,6 @@ Partial Class GUI
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
-        Me.__DBG_AutoLoad_Current_Test = New Telerik.WinControls.UI.RadMenuItem()
-        Me.__DBG_RDDL_Build_SelectedIndexTest = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RSS_MainStatusStrip.SuspendLayout()
@@ -86,8 +86,8 @@ Partial Class GUI
         '
         resources.ApplyResources(Me.RDDL_Build, "RDDL_Build")
         Me.RDDL_Build.DropDownAnimationEnabled = True
-        Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(125, 455)
-        Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(125, 455)
+        Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(400, 455)
+        Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(400, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending
@@ -190,6 +190,16 @@ Partial Class GUI
         Me.__DBG_FeatureNaming_DictUpdate.Name = "__DBG_FeatureNaming_DictUpdate"
         resources.ApplyResources(Me.__DBG_FeatureNaming_DictUpdate, "__DBG_FeatureNaming_DictUpdate")
         '
+        '__DBG_AutoLoad_Current_Test
+        '
+        Me.__DBG_AutoLoad_Current_Test.Name = "__DBG_AutoLoad_Current_Test"
+        resources.ApplyResources(Me.__DBG_AutoLoad_Current_Test, "__DBG_AutoLoad_Current_Test")
+        '
+        '__DBG_RDDL_Build_SelectedIndexTest
+        '
+        Me.__DBG_RDDL_Build_SelectedIndexTest.Name = "__DBG_RDDL_Build_SelectedIndexTest"
+        resources.ApplyResources(Me.__DBG_RDDL_Build_SelectedIndexTest, "__DBG_RDDL_Build_SelectedIndexTest")
+        '
         'RLE_StatusLabel
         '
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
@@ -216,48 +226,48 @@ Partial Class GUI
         Me.RGV_MainGridView.MasterTemplate.AllowRowResize = False
         Me.RGV_MainGridView.MasterTemplate.AllowSearchRow = True
         Me.RGV_MainGridView.MasterTemplate.ClipboardPasteMode = Telerik.WinControls.UI.GridViewClipboardPasteMode.Disable
-        GridViewTextBoxColumn13.AllowGroup = False
-        GridViewTextBoxColumn13.AllowHide = False
-        GridViewTextBoxColumn13.AllowReorder = False
-        GridViewTextBoxColumn13.MinWidth = 6
-        GridViewTextBoxColumn13.Name = "FeatureName"
-        GridViewTextBoxColumn13.ReadOnly = True
-        GridViewTextBoxColumn13.Width = 535
-        GridViewTextBoxColumn14.AllowGroup = False
-        GridViewTextBoxColumn14.AllowHide = False
-        GridViewTextBoxColumn14.AllowReorder = False
-        GridViewTextBoxColumn14.MinWidth = 6
-        GridViewTextBoxColumn14.Name = "FeatureID"
-        GridViewTextBoxColumn14.ReadOnly = True
-        GridViewTextBoxColumn14.Width = 80
-        GridViewTextBoxColumn15.Name = "FeatureState"
-        GridViewTextBoxColumn15.Width = 100
-        GridViewTextBoxColumn16.AllowFiltering = False
-        GridViewTextBoxColumn16.AllowGroup = False
-        GridViewTextBoxColumn16.AllowHide = False
-        GridViewTextBoxColumn16.AllowNaturalSort = False
-        GridViewTextBoxColumn16.AllowReorder = False
-        GridViewTextBoxColumn16.AllowResize = False
-        GridViewTextBoxColumn16.AllowSearching = False
-        GridViewTextBoxColumn16.AllowSort = False
-        GridViewTextBoxColumn16.IsVisible = False
-        GridViewTextBoxColumn16.Name = "FeatureInfo"
-        GridViewTextBoxColumn16.VisibleInColumnChooser = False
-        GridViewTextBoxColumn16.Width = 20
-        GridViewImageColumn4.AllowFiltering = False
-        GridViewImageColumn4.AllowHide = False
-        GridViewImageColumn4.AllowNaturalSort = False
-        GridViewImageColumn4.AllowReorder = False
-        GridViewImageColumn4.AllowResize = False
-        GridViewImageColumn4.AllowSearching = False
-        GridViewImageColumn4.AllowSort = False
-        GridViewImageColumn4.HeaderImage = Global.ViVeTool_GUI.My.Resources.Resources.icons8_comments_24px
-        GridViewImageColumn4.Name = "Comments"
-        GridViewImageColumn4.VisibleInColumnChooser = False
-        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewImageColumn4})
+        GridViewTextBoxColumn1.AllowGroup = False
+        GridViewTextBoxColumn1.AllowHide = False
+        GridViewTextBoxColumn1.AllowReorder = False
+        GridViewTextBoxColumn1.MinWidth = 6
+        GridViewTextBoxColumn1.Name = "FeatureName"
+        GridViewTextBoxColumn1.ReadOnly = True
+        GridViewTextBoxColumn1.Width = 535
+        GridViewTextBoxColumn2.AllowGroup = False
+        GridViewTextBoxColumn2.AllowHide = False
+        GridViewTextBoxColumn2.AllowReorder = False
+        GridViewTextBoxColumn2.MinWidth = 6
+        GridViewTextBoxColumn2.Name = "FeatureID"
+        GridViewTextBoxColumn2.ReadOnly = True
+        GridViewTextBoxColumn2.Width = 80
+        GridViewTextBoxColumn3.Name = "FeatureState"
+        GridViewTextBoxColumn3.Width = 100
+        GridViewTextBoxColumn4.AllowFiltering = False
+        GridViewTextBoxColumn4.AllowGroup = False
+        GridViewTextBoxColumn4.AllowHide = False
+        GridViewTextBoxColumn4.AllowNaturalSort = False
+        GridViewTextBoxColumn4.AllowReorder = False
+        GridViewTextBoxColumn4.AllowResize = False
+        GridViewTextBoxColumn4.AllowSearching = False
+        GridViewTextBoxColumn4.AllowSort = False
+        GridViewTextBoxColumn4.IsVisible = False
+        GridViewTextBoxColumn4.Name = "FeatureInfo"
+        GridViewTextBoxColumn4.VisibleInColumnChooser = False
+        GridViewTextBoxColumn4.Width = 20
+        GridViewImageColumn1.AllowFiltering = False
+        GridViewImageColumn1.AllowHide = False
+        GridViewImageColumn1.AllowNaturalSort = False
+        GridViewImageColumn1.AllowReorder = False
+        GridViewImageColumn1.AllowResize = False
+        GridViewImageColumn1.AllowSearching = False
+        GridViewImageColumn1.AllowSort = False
+        GridViewImageColumn1.HeaderImage = Global.ViVeTool_GUI.My.Resources.Resources.icons8_comments_24px
+        GridViewImageColumn1.Name = "Comments"
+        GridViewImageColumn1.VisibleInColumnChooser = False
+        Me.RGV_MainGridView.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewImageColumn1})
         Me.RGV_MainGridView.MasterTemplate.EnableFiltering = True
         Me.RGV_MainGridView.MasterTemplate.ShowFilteringRow = False
-        Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.RGV_MainGridView.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RGV_MainGridView.Name = "RGV_MainGridView"
         Me.RGV_MainGridView.ReadOnly = True
         Me.RGV_MainGridView.ShowGroupPanel = False
@@ -333,16 +343,6 @@ Partial Class GUI
         Me.P_DataPanel.Controls.Add(Me.RGV_MainGridView)
         resources.ApplyResources(Me.P_DataPanel, "P_DataPanel")
         Me.P_DataPanel.Name = "P_DataPanel"
-        '
-        '__DBG_AutoLoad_Current_Test
-        '
-        Me.__DBG_AutoLoad_Current_Test.Name = "__DBG_AutoLoad_Current_Test"
-        resources.ApplyResources(Me.__DBG_AutoLoad_Current_Test, "__DBG_AutoLoad_Current_Test")
-        '
-        '__DBG_RDDL_Build_SelectedIndexTest
-        '
-        Me.__DBG_RDDL_Build_SelectedIndexTest.Name = "__DBG_RDDL_Build_SelectedIndexTest"
-        resources.ApplyResources(Me.__DBG_RDDL_Build_SelectedIndexTest, "__DBG_RDDL_Build_SelectedIndexTest")
         '
         'GUI
         '
