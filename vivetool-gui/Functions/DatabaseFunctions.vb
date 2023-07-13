@@ -24,7 +24,7 @@ Public Class DatabaseFunctions
     ''' Public, Read-Only Database Connection String
     ''' </summary>
     Public Shared DB_Connection As New MySqlConnectionStringBuilder With {
-        .Server = "direct.rawrr.cf",
+        .Server = "direct.rawrr.dev",
         .UserID = "ViVeTool_GUI",
         .Password = "ViVeTool_GUI",
         .Database = "ViVeTool_GUI",
@@ -56,7 +56,7 @@ Public Class DatabaseFunctions
     ''' Loads the Comments from the DB for the specified Build
     ''' </summary>
     ''' <param name="Build">Windows Build Number as a String</param>
-    Public Shared Sub LoadCommentsFromDB(Build As String)
+    Public Shared Sub LoadCommentsFromDB()
         Diagnostics.Debug.WriteLine("LoadCommentsFromDB called.")
 
         ' Clear local DataTable
@@ -66,9 +66,9 @@ Public Class DatabaseFunctions
         TableDoesNotExist = False
 
         Try
-            ' Get the latest comments Table for the current Build, and store it in a local Data Table
-            Using con As New MySqlConnection(DatabaseFunctions.DB_Connection.ConnectionString)
-                Using cmd As New MySqlCommand(String.Format("SELECT * FROM ViVeTool_GUI.`{0}`;", Build), con)
+            ' Get the latest comments Table, and store it in a local Data Table
+            Using con As New MySqlConnection(DB_Connection.ConnectionString)
+                Using cmd As New MySqlCommand("SELECT * FROM ViVeTool_GUI.Comments;", con)
                     cmd.CommandType = CommandType.Text
                     Using sda As New MySqlDataAdapter(cmd)
                         sda.Fill(Build_DT)

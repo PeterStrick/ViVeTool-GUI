@@ -14,8 +14,10 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
+Imports System.Drawing.Text
 Imports System.Globalization, System.Runtime.InteropServices
 Imports AutoUpdaterDotNET, Newtonsoft.Json.Linq, Telerik.WinControls
+Imports Telerik.Collections.Generic
 
 ''' <summary>
 ''' ViVeTool GUI
@@ -81,7 +83,7 @@ Public Class GUI
     End Sub
 
     Private Sub __DBG_GetComments_Click(sender As Object, e As EventArgs) Handles __DBG_GetComments.Click
-        DatabaseFunctions.LoadCommentsFromDB(RDDL_Build.Text)
+        DatabaseFunctions.LoadCommentsFromDB()
     End Sub
 
     Private Sub __DBG_EnableCommentLoadingFromManualFL_Click(sender As Object, e As EventArgs) Handles __DBG_EnableCommentLoadingFromManualFL.Click
@@ -127,6 +129,59 @@ Public Class GUI
 
     Private Sub __DBG_FeatureNaming_DictUpdate_Click(sender As Object, e As EventArgs) Handles __DBG_FeatureNaming_DictUpdate.Click
         ViVe_API.Management.FeatureDictionaryUpdateCheck()
+    End Sub
+
+    Private Sub __DBG_AutoLoad_Current_Test_Click(sender As Object, e As EventArgs) Handles __DBG_AutoLoad_Current_Test.Click
+        Dim Build = InputBox("Enter a Build Number to override Environment.OSVersion.Version.Build during debugging purposes", "Enter a Build")
+        Dim Arch = InputBox("Enter Architecture: A for Arm64, X for x86 / x64", "Enter Architecture").ToLower
+
+        Dim Index As Integer
+        ' Use the Arm64 Feature List if available, else the Normal Feature List
+        Select Case Arch
+            Case "a"
+                ' Look if a Build with Subbuild for Arm64 exists
+                Index = RDDL_Build.FindStringExact(CStr(Build) & "_arm64")
+
+                ' Fallback to a Build without a Subbuild for Arm64
+                If Index = -1 Then
+                    Index = RDDL_Build.FindStringExact(CStr(Build).Split(CChar("."))(0) & "_arm64")
+                End If
+
+                ' Fallback to a Build with a Subbuild for x86_64
+                If Index = -1 Then
+                    Index = RDDL_Build.FindStringExact(CStr(Build))
+                End If
+
+                ' Fallback to a Build withot a Subbuild for x86_64
+                If Index = -1 Then
+                    Index = RDDL_Build.FindString(CStr(Build).Split(CChar("."))(0))
+                End If
+            Case "x"
+                ' Look if a Build with Subbuild for x86_64 exists
+                Index = RDDL_Build.FindStringExact(CStr(Build))
+
+                ' Fallback to an exact Build without a Subbuild for x86_64
+                If Index = -1 Then
+                    Index = RDDL_Build.FindStringExact(CStr(Build).Split(CChar("."))(0))
+                End If
+
+                ' Fallback to a Build without a Subbuild
+                If Index = -1 Then
+                    Index = RDDL_Build.FindString(CStr(Build).Split(CChar("."))(0))
+                End If
+            Case Else
+                MsgBox("Invalid Architecture")
+                Return
+        End Select
+        'RDDL_Build.SelectedIndex = Index
+
+        Dim RDDL_String As Object = "Not found"
+        If Not Index = -1 Then RDDL_String = RDDL_Build.Items(Index)
+        MsgBox($"Entered Build: {Build}{Environment.NewLine}Selected Index: {Index}{Environment.NewLine}Build with Index {Index}: {RDDL_String}")
+    End Sub
+
+    Private Sub __DBG_RDDL_Build_SelectedIndexTest_Click(sender As Object, e As EventArgs) Handles __DBG_RDDL_Build_SelectedIndexTest.Click
+        RDDL_Build.SelectedIndex = -1
     End Sub
 #End Region
 
@@ -348,11 +403,39 @@ Public Class GUI
                            Dim Index As Integer
 
                            ' Use the Arm64 Feature List if available, else the Normal Feature List
-                           If RuntimeInformation.ProcessArchitecture = Architecture.Arm64 Then
-                               Index = RDDL_Build.FindString(CStr(Environment.OSVersion.Version.Build) & "_arm64")
-                           Else
-                               Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build))
-                           End If
+                           Select Case RuntimeInformation.ProcessArchitecture
+                               Case Architecture.Arm64
+                                   ' Look if a Build with Subbuild for Arm64 exists
+                                   Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build) & "_arm64")
+
+                                   ' Fallback to a Build without a Subbuild for Arm64
+                                   If Index = -1 Then
+                                       Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build).Split(CChar("."))(0) & "_arm64")
+                                   End If
+
+                                   ' Fallback to a Build with a Subbuild for x86_64
+                                   If Index = -1 Then
+                                       Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build))
+                                   End If
+
+                                   ' Fallback to a Build withot a Subbuild for x86_64
+                                   If Index = -1 Then
+                                       Index = RDDL_Build.FindString(CStr(Environment.OSVersion.Version.Build).Split(CChar("."))(0))
+                                   End If
+                               Case Architecture.X64 Or Architecture.X86
+                                   ' Look if a Build with Subbuild for x86_64 exists
+                                   Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build))
+
+                                   ' Fallback to an exact Build without a Subbuild for x86_64
+                                   If Index = -1 Then
+                                       Index = RDDL_Build.FindStringExact(CStr(Environment.OSVersion.Version.Build).Split(CChar("."))(0))
+                                   End If
+
+                                   ' Fallback to a Build without a Subbuild
+                                   If Index = -1 Then
+                                       Index = RDDL_Build.FindString(CStr(Environment.OSVersion.Version.Build).Split(CChar("."))(0))
+                                   End If
+                           End Select
 
                            RDDL_Build.SelectedIndex = Index
                        End Sub)
@@ -647,7 +730,7 @@ Public Class GUI
             If HasInternetConnection Then
                 Invoke(Sub()
                            RLE_StatusLabel.Text = My.Resources.Comments_GettingComments
-                           DatabaseFunctions.LoadCommentsFromDB(RDDL_Build.Text)
+                           DatabaseFunctions.LoadCommentsFromDB()
                        End Sub)
             End If
 
@@ -890,6 +973,9 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Context Menu Opening EventArgs</param>
     Private Sub RGV_MainGridView_ContextMenuOpening(sender As Object, e As ContextMenuOpeningEventArgs) Handles RGV_MainGridView.ContextMenuOpening
+        ' Skip if the Context Menu is from the Search Bar
+        If e.ContextMenuProvider.GetType = GetType(GridSearchCellElement) Then Return
+
         If RGV_MainGridView.SelectedRows.Count >= 1 AndAlso HasInternetConnection Then
             Try
                 e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
@@ -912,7 +998,7 @@ Public Class GUI
     ''' Fix the Group Header. This removes the " : " in-front of a Group Name
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
-    ''' <param name="e">FormClosing EventArgs</param>
+    ''' <param name="e">Group Summary Evaluation EventArgs</param>
     Private Sub RGV_MainGridView_GroupSummaryEvaluate(sender As Object, e As GroupSummaryEvaluationEventArgs) Handles RGV_MainGridView.GroupSummaryEvaluate
         If e.SummaryItem.Name = "FeatureInfo" Then e.FormatString = String.Format("{0}", e.Value)
     End Sub
