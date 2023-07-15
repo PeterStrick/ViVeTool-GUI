@@ -115,6 +115,26 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The mismatch of an Assembly Dependency Version has occurred.
+        '''
+        '''Running ViVeTool GUI directly from a ZIP file without extracting it first or missing/replacing a ViVeTool GUI DLL file can cause this issue..
+        '''</summary>
+        Friend ReadOnly Property Check_AssemblyVersions_Text() As String
+            Get
+                Return ResourceManager.GetString("Check_AssemblyVersions_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Dependency Version mismatch.
+        '''</summary>
+        Friend ReadOnly Property Check_AssemblyVersions_Title() As String
+            Get
+                Return ResourceManager.GetString("Check_AssemblyVersions_Title", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Debug Symbol Scan complete.
         '''</summary>
         Friend ReadOnly Property Done_Alert_CaptionText() As String

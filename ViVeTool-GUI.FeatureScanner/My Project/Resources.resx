@@ -301,4 +301,12 @@ Please make sure that the application has write access to the folder, and that t
   <data name="Language_Text" xml:space="preserve">
     <value>ViVeTool GUI needs to restart to reflect the Language change. It will try to restart after you press on Close.</value>
   </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>The mismatch of an Assembly Dependency Version has occurred.
+
+Running ViVeTool GUI directly from a ZIP file without extracting it first or missing/replacing a ViVeTool GUI DLL file can cause this issue.</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Dependency Version mismatch</value>
+  </data>
 </root>

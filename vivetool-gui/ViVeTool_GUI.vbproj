@@ -152,6 +152,7 @@
     <Compile Include="CommentsClient.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Functions\AssemblyVersionCheck.vb" />
     <Compile Include="Functions\CrashReporter.GUID.vb" />
     <Compile Include="Functions\CrashReporter.vb" />
     <Compile Include="Functions\DatabaseFunctions.vb" />

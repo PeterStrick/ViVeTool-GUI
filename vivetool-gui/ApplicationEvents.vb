@@ -14,6 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Imports System.Globalization
+Imports System.Reflection
 
 Namespace My
     ''' <summary>
@@ -26,6 +27,10 @@ Namespace My
         ''' <param name="sender">Default sender Object</param>
         ''' <param name="e">Default EventArgs</param>
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            ' Check for Assembly Reference Version differences, used to compat Crashes if a Reference has been replaced by another Version,
+            ' without updating the Reference in Visual Studio. (For example replacing the DLL File)
+            CheckAssemblyVersion()
+
             ' Set Language
             If Settings.TwoCharLanguageCode IsNot "" Then
                 CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)

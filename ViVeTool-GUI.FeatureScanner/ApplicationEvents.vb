@@ -18,6 +18,10 @@ Imports System.Configuration, System.Globalization, Telerik.WinControls.UI
 Namespace My
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+            ' Check for Assembly Reference Version differences, used to compat Crashes if a Reference has been replaced by another Version,
+            ' without updating the Reference in Visual Studio. (For example replacing the DLL File)
+            CheckAssemblyVersion()
+
             ' Set Language
             If Settings.TwoCharLanguageCode IsNot "" Then
                 CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
