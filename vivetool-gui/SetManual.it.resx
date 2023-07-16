@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RB_FixLKG.Text" xml:space="preserve">
+    <value>Correggi LastKnownGood</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Disattiva funzionalità</value>
+  </data>
+  <data name="RTB_FeatureID.NullText" xml:space="preserve">
+    <value>Inserisci ID funzionalità</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Ripristina funzionalità alle impostazioni predefinite</value>
+  </data>
+  <data name="RTB_VariantID.NullText" xml:space="preserve">
+    <value>Inserisci numero variante facoltativo</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Attiva funzionalità</value>
+  </data>
 </root>

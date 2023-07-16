@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RB_ManuallySetFeature.Text" xml:space="preserve">
+    <value>Opzioni avanzate (F12)</value>
+  </data>
+  <data name="RB_About.Text" xml:space="preserve">
+    <value>  Info programma e impostazioni</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Attiva funzionalità</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Disattiva funzionalità</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Ripristina funzionalità ai valori predefiniti</value>
+  </data>
+  <data name="RLE_StatusLabel.Text" xml:space="preserve">
+    <value>Popolamento casella combinata build…</value>
+  </data>
+  <data name="RDDL_Build.NullText" xml:space="preserve">
+    <value>Seleziona build…</value>
+  </data>
+  <data name="RDDL_Build.Text" xml:space="preserve">
+    <value>Seleziona build…</value>
+  </data>
 </root>
