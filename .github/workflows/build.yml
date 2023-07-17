@@ -1,0 +1,25 @@
+name: Build
+
+on:
+    push:
+
+jobs:
+    Build:
+        if: ${{ github.actor != 'dependabot[bot]' || 'weblate' }}
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: nuget/setup-nuget@fd9fffd6ca4541cf4152a9565835ca1a88a6eb37
+            - uses: microsoft/setup-msbuild@v1.3.1
+        
+            - name: Restore dependencies
+              run: nuget restore
+
+            - name: Build
+              run: msbuild "D:\a\ViVeTool-GUI\vivetool-gui\ViVeTool_GUI.vbproj" -t:Build -p:Configuration=Debug -p:Platform=x64
+
+            - name: Release Artifact
+              uses: actions/upload-artifact@v3
+              with:
+                name: Build
+                path: D:\a\ViVeTool-GUI\vivetool-gui\bin\x64\Debug\

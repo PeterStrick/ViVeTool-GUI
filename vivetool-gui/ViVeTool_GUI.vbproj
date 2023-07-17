@@ -49,13 +49,13 @@
   <ItemGroup>
     <Reference Include="Albacore.ViVe, Version=2023.2.28.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>True</SpecificVersion>
-      <HintPath>$(SolutionDir)\lib\Albacore.ViVe.dll</HintPath>
+      <HintPath>..\lib\Albacore.ViVe.dll</HintPath>
     </Reference>
     <Reference Include="AutoUpdater.NET, Version=1.8.3.0, Culture=neutral, PublicKeyToken=501435c91b35f4bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Autoupdater.NET.Official.1.8.3\lib\net45\AutoUpdater.NET.dll</HintPath>
     </Reference>
     <Reference Include="CrashReporter.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=7828e0fd88cab698, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
+      <HintPath>..\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1823.32, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.1823.32\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -80,49 +80,49 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.GridView, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.GridView.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.GridView.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
