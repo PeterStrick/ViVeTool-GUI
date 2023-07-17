@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -272,5 +272,13 @@ Stellen Sie sicher, dass die Anwendung Zugriff zu diesen Ordner hat, und das die
 Bitte geben sie einen Korrekten Pfad zu symchk.exe an.
 
 Die symchk.exe Datei ist meist unter dem Windows SDK Installations Pfad unter 10\Debuggers\x64 vorhanden</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Nichtübereinstimmung einer Abhängigkeitsversion</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Es ist eine Nichtübereinstimmung einer Assembly-Abhängigkeitsversion aufgetreten.
+
+Das direkte Ausführen von ViVeTool GUI aus einer ZIP-Datei ohne vorheriges Extrahieren oder das Fehlen/Ersetzen einer ViVeTool GUI-DLL-Datei kann dieses Problem verursachen.</value>
   </data>
 </root>

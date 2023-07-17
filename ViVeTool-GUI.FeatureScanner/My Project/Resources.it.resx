@@ -101,7 +101,7 @@
     <value>Chiudi</value>
   </data>
   <data name="Language_Heading" xml:space="preserve">
-    <value>Il cambio di lingua richiede il riavvio</value>
+    <value>La modifica della lingua richiede il riavvio</value>
   </data>
   <data name="Language_Text" xml:space="preserve">
     <value>La GUI di ViVeTool deve essere riavviata per confermare il cambio di lingua. Tenterà di riavviarsi dopo aver premuto Chiudi.</value>
@@ -122,5 +122,13 @@
   </data>
   <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
     <value>GB</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Mancata corrispondenza versione dipendenza</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Si è verificata una mancata corrispondenza di versione dipendenza dell'assembly.
+
+L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estrarlo o la mancanza/sostituzione di un file DLL della GUI di ViVeTool può causare questo problema.</value>
   </data>
 </root>

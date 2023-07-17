@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,147 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
+    <value>Il dizionario funzionalità non è presente</value>
+  </data>
+  <data name="FeatureDictionary_MissingText" xml:space="preserve">
+    <value>Il dizionario funzionalità fornisce una traduzione tra i nomi delle funzioni ViVeTool e gli ID ViVeTool. Sebbene facoltativo, ti consigliamo di scaricare questo dizionario. Vuoi scaricarlo ora?</value>
+  </data>
+  <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
+    <value>È disponibile un aggiornamento del dizionario funzionalità</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>Download completato</value>
+  </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>Gestione funzionalità</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>Nessuna</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Mancata corrispondenza versione dipendenza</value>
+  </data>
+  <data name="Generic_Modifiable" xml:space="preserve">
+    <value>Modificabile</value>
+  </data>
+  <data name="Generic_DisabledByDefault" xml:space="preserve">
+    <value>Disabilitata in modo predefinito</value>
+  </data>
+  <data name="Generic_SelectBuild" xml:space="preserve">
+    <value>Seleziona build…</value>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Tema scuro</value>
+  </data>
+  <data name="Generic_FeatureState" xml:space="preserve">
+    <value>Stato funzionalità</value>
+  </data>
+  <data name="Generic_LoadManually" xml:space="preserve">
+    <value>Carica manualmente…</value>
+  </data>
+  <data name="Generic_AlwaysEnabled" xml:space="preserve">
+    <value>Sempre abilitato</value>
+  </data>
+  <data name="Generic_FeatureName" xml:space="preserve">
+    <value>Nome funzionalità</value>
+  </data>
+  <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
+    <value>Percorso elenco funzionalità</value>
+  </data>
+  <data name="Generic_Done" xml:space="preserve">
+    <value>Fatto.</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
+    <value>Imposta correttamente ID funzione {0} su {1}</value>
+  </data>
+  <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
+    <value>Popolamento vista griglia dati. L'operazione può richiedere del tempo.</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema chiaro</value>
+  </data>
+  <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
+    <value>Imposta manualmente ID funzione</value>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="Generic_Default" xml:space="preserve">
+    <value>Predefinito</value>
+  </data>
+  <data name="Generic_AlwaysDisabled" xml:space="preserve">
+    <value>Sempre disabilitato</value>
+  </data>
+  <data name="SetConfig_Success" xml:space="preserve">
+    <value> Completato</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="SystemMenu_About" xml:space="preserve">
+    <value>&amp;Info</value>
+    <comment>The &amp; is used to underline the first character</comment>
+  </data>
+  <data name="Generic_EnabledByDefault" xml:space="preserve">
+    <value>Abilitato in modo predefinito</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeature" xml:space="preserve">
+    <value>Impostata correttamente funzione {0} a {1}</value>
+  </data>
+  <data name="Generic_FeatureID" xml:space="preserve">
+    <value>ID funzionalità</value>
+  </data>
+  <data name="Comments_I_Agree" xml:space="preserve">
+    <value>Sono d'accordo</value>
+  </data>
+  <data name="Comments_SendMyComment" xml:space="preserve">
+    <value>Invia il mio commento</value>
+  </data>
+  <data name="Comments_I_Dont_Agree" xml:space="preserve">
+    <value>Non sono d'accordo</value>
+  </data>
+  <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
+    <value>Chiudi questa finestra di dialogo e non inviare nulla</value>
+  </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> Invio commento…</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>Invio commento…</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>Completato</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Chiudi questa finestra</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Commento inviato</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Il commento è stato inviato correttamente.</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>La modifica della lingua richiede il riavvio</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>Per applicare il cambio della lingua la GUI di ViVeTool deve essere riavviata.
+
+La GUI di ViveTool si riavvierà dopo aver selezionato 'Chiudi'.</value>
+  </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>Controllo disponibilità server database commenti…</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>Popolamento casella combinata build…</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>Recupero commenti funzioni dal database…</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Si è verificata una mancata corrispondenza di versione dipendenza dell'assembly.
+
+L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estrarlo o la mancanza/sostituzione di un file DLL della GUI di ViVeTool può causare questo problema.</value>
+  </data>
 </root>

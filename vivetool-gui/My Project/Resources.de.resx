@@ -370,4 +370,30 @@ Sie können jederzeit manuell ViVeTool Features #ndern indem sie F12 drücken, o
 
 Die Datei existiert nicht.</value>
   </data>
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
+    <value>Das Feature Lexikon fehlt</value>
+  </data>
+  <data name="FeatureDictionary_MissingText" xml:space="preserve">
+    <value>Das Feature-Lexikon bietet eine Übersetzung zwischen ViVeTool Feature Namen und ViVeTool IDs. Obwohl optional, es wird empfohlen, dieses Wörterbuch herunterzuladen. Möchten Sie es jetzt herunterladen?</value>
+  </data>
+  <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
+    <value>Eine Feature Lexikon Aktualisierung ist verfügbar</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>Download fertiggestellt</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>Nichts</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Nichtübereinstimmung einer Abhängigkeitsversion</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Es ist eine Nichtübereinstimmung einer Assembly-Abhängigkeitsversion aufgetreten.
+
+Das direkte Ausführen von ViVeTool GUI aus einer ZIP-Datei ohne vorheriges Extrahieren oder das Fehlen/Ersetzen einer ViVeTool GUI-DLL-Datei kann dieses Problem verursachen.</value>
+  </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>Feature Verwaltung</value>
+  </data>
 </root>

@@ -113,13 +113,13 @@
     <value>Salva il file Features.txt</value>
   </data>
   <data name="RDDB_Language.Text" xml:space="preserve">
-    <value>Seleziona Lingua:</value>
+    <value>Seleziona lingua:</value>
   </data>
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>Lingua</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
-    <value>  Usa il tema di sistema</value>
+    <value>  Usa tema di sistema</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  Tema chiaro</value>

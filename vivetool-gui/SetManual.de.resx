@@ -677,4 +677,7 @@
   <data name="RTB_VariantID.NullText" xml:space="preserve">
     <value>Eine Optionale Feature Variant Nummer eingeben</value>
   </data>
+  <data name="RB_FixLKG.Text" xml:space="preserve">
+    <value>LastKnownGood reparieren</value>
+  </data>
 </root>
