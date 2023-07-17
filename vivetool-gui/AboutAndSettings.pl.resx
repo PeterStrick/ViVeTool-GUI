@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>274, 134</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Ikony stworzone przez &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspiracja &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Kod Combo Box używa &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; z &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Funkcjonalność aktualizacji dostarcza &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -148,10 +148,10 @@
         mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>422, 355</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA
@@ -1922,5 +1922,8 @@
         AAAAAAAAAAAAAAAAAAAAAPP/AADx/wAA8P8AAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAA
         gAEAAIABAACAAQAA//8AAP//AAA=
 </value>
+  </data>
+  <data name="RL_AutoLoad.Text" xml:space="preserve">
+    <value>Załaduj automatycznie:</value>
   </data>
 </root>

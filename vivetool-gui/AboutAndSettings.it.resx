@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -121,7 +121,7 @@
     <value>  Info su GUI ViVeTool</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -169,7 +169,7 @@
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>Tematizzazione</value>
   </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>140, 18</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
@@ -187,7 +187,7 @@
   <data name="RL_SelectLangauge.Text" xml:space="preserve">
     <value>Seleziona lingua:</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA
@@ -1961,5 +1961,11 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Info e impostazioni</value>
+  </data>
+  <data name="RMI_L_Italian.Text" xml:space="preserve">
+    <value> Italian - Italiano</value>
+  </data>
+  <data name="RMI_L_Japanese.Text" xml:space="preserve">
+    <value> 日本語 - Giappnese</value>
   </data>
 </root>

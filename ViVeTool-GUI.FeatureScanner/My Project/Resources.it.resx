@@ -131,4 +131,55 @@
 
 L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estrarlo o la mancanza/sostituzione di un file DLL della GUI di ViVeTool può causare questo problema.</value>
   </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>Tutti</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Inserisci testo da cercare</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Continua</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Aiuto</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Cerca dalla posizione attuale</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Modello principale</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>di</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Corrispondenza maiuscole/minuscole</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Nascondi dettagli</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Riprova</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>Cerca nelle colonne</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>Vedi dettagli</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Riprova</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Sì</value>
+  </data>
 </root>

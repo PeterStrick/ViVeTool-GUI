@@ -124,4 +124,10 @@
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
     <value>  Tema chiaro</value>
   </data>
+  <data name="RMI_L_Italian.Text" xml:space="preserve">
+    <value> Italian - Italiano</value>
+  </data>
+  <data name="RMI_L_Japanese.Text" xml:space="preserve">
+    <value> 日本語 - Giappnese</value>
+  </data>
 </root>
