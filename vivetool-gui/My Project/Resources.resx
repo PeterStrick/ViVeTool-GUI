@@ -751,4 +751,94 @@ Running ViVeTool GUI directly from a ZIP file without extracting it first or mis
   <data name="Check_AssemblyVersions_Title" xml:space="preserve">
     <value>Dependency Version mismatch</value>
   </data>
+  <data name="Generic_Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Generic_FeatureList" xml:space="preserve">
+    <value>Feature List</value>
+  </data>
+  <data name="ViVe_LKGStore_Repaired" xml:space="preserve">
+    <value>Last Known Good Store was successfully repaired.</value>
+  </data>
+  <data name="Generic_NotRequired" xml:space="preserve">
+    <value>Not required</value>
+  </data>
+  <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
+    <value>Fixing of the Last Known Good Store is not required.</value>
+  </data>
+  <data name="ViVe_Priorities_Fixed" xml:space="preserve">
+    <value>Feature Priorities were successfully fixed. A reboot is recommended.</value>
+  </data>
+  <data name="ViVe_Priorities_NotRequired" xml:space="preserve">
+    <value>Fixing of Feature Priorities is not required.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Text" xml:space="preserve">
+    <value>An Error occurred while trying to fix the Feature Priorities.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Expanded" xml:space="preserve">
+    <value>The Functions returned {0}. Expected 00</value>
+  </data>
+  <data name="Settings_TheLatestBuildFeatureList" xml:space="preserve">
+    <value>The latest Build Feature List</value>
+  </data>
+  <data name="Settings_TheCurrentBuildFeatureList" xml:space="preserve">
+    <value>The current Build Feature List</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>Search in columns</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Search from current position</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Master template</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Enter text to search</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>See details</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Hide details</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
 </root>

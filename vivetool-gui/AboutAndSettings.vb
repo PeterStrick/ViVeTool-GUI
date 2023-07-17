@@ -26,6 +26,9 @@ Public NotInheritable Class AboutAndSettings
     Private Sub AboutAndSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Load the About Labels
         LoadAboutLabels()
+
+        ' Localize the Auto Load Drop Down Menu
+        LoadLocalization()
     End Sub
 
     ''' <summary>
@@ -41,9 +44,18 @@ Public NotInheritable Class AboutAndSettings
         End If
 
         RL_ProductName.Text = My.Application.Info.ProductName
-        RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
+        RL_Version.Text = String.Format(My.Resources.Generic_Version, My.Application.Info.Version.ToString)
         RL_License.Text = My.Application.Info.Copyright
         RL_Description.Text = My.Application.Info.Description
+    End Sub
+
+    ''' <summary>
+    ''' Set's the Drop Down Text to localized Strings
+    ''' </summary>
+    Private Sub LoadLocalization()
+        RDDL_AutoLoad.Items.Item(0).Text = My.Resources.Generic_Nothing
+        RDDL_AutoLoad.Items.Item(1).Text = My.Resources.Settings_TheLatestBuildFeatureList
+        RDDL_AutoLoad.Items.Item(2).Text = My.Resources.Settings_TheCurrentBuildFeatureList
     End Sub
 
     ''' <summary>
@@ -88,7 +100,7 @@ Public NotInheritable Class AboutAndSettings
             Try
                 Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As ComponentModel.Win32Exception
-                'Catch Any Exception that may occur
+                ' Catch Any Exception that may occur
                 RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_GenericWin32Exception_Heading,
                 My.Resources.Error_GenericWin32Exception_Text, RadTaskDialogIcon.ShieldErrorRedBar,
                 wex, wex.ToString, wex.ToString)
@@ -150,31 +162,12 @@ Public NotInheritable Class AboutAndSettings
     End Sub
 
     ''' <summary>
-    ''' Function that saves a Two Character Language Code to Settings while restarting the application afterwards.
-    ''' </summary>
-    ''' <param name="TwoCharLang">Two Character Language Code. For example: de for German, zh for Chinese, ...</param>
-    Private Sub ChangeLanguage(TwoCharLang As String)
-        My.Settings.TwoCharLanguageCode = TwoCharLang
-        My.Settings.Save()
-
-        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
-
-        Dim pStart As New ProcessStartInfo With {
-            .WindowStyle = ProcessWindowStyle.Normal,
-            .FileName = Application.ExecutablePath
-        }
-
-        Process.Start(pStart)
-        Application.Exit()
-    End Sub
-
-    ''' <summary>
     ''' Language Button. Changes the Language to English
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_English_Click(sender As Object, e As EventArgs) Handles RMI_L_English.Click
-        ChangeLanguage("en")
+        Functions.ChangeLanguage("en")
     End Sub
 
     ''' <summary>
@@ -183,7 +176,7 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_German_Click(sender As Object, e As EventArgs) Handles RMI_L_German.Click
-        ChangeLanguage("de")
+        Functions.ChangeLanguage("de")
     End Sub
 
     ''' <summary>
@@ -192,7 +185,7 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Chinese_Click(sender As Object, e As EventArgs) Handles RMI_L_Chinese.Click
-        ChangeLanguage("zh")
+        Functions.ChangeLanguage("zh")
     End Sub
 
     ''' <summary>
@@ -201,7 +194,7 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Polish_Click(sender As Object, e As EventArgs) Handles RMI_L_Polish.Click
-        ChangeLanguage("pl")
+        Functions.ChangeLanguage("pl")
     End Sub
 
     ''' <summary>
@@ -210,6 +203,24 @@ Public NotInheritable Class AboutAndSettings
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
     Private Sub RMI_L_Indonesian_Click(sender As Object, e As EventArgs) Handles RMI_L_Indonesian.Click
-        ChangeLanguage("id")
+        Functions.ChangeLanguage("id")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Italian
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Italian_Click(sender As Object, e As EventArgs) Handles RMI_L_Italian.Click
+        Functions.ChangeLanguage("it")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Japanese
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Japanese_Click(sender As Object, e As EventArgs) Handles RMI_L_Japanese.Click
+        Functions.ChangeLanguage("jp")
     End Sub
 End Class

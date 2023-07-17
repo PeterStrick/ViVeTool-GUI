@@ -658,4 +658,22 @@ Public Class ScannerUI
     Private Sub RMI_L_Indonesian_Click(sender As Object, e As EventArgs) Handles RMI_L_Indonesian.Click
         Functions.ChangeLanguage("id")
     End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Italian
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Italian_Click(sender As Object, e As EventArgs) Handles RMI_L_Italian.Click
+        Functions.ChangeLanguage("it")
+    End Sub
+
+    ''' <summary>
+    ''' Language Button. Changes the Language to Japanese
+    ''' </summary>
+    ''' <param name="sender">Default sender Object</param>
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub RMI_L_Japanese_Click(sender As Object, e As EventArgs) Handles RMI_L_Japanese.Click
+        Functions.ChangeLanguage("jp")
+    End Sub
 End Class

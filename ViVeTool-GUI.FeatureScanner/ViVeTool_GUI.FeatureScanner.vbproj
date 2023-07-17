@@ -122,6 +122,7 @@
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TelerikLocalization.vb" />
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.de.resx">
       <SubType>Designer</SubType>

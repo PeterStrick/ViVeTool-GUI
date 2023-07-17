@@ -179,7 +179,6 @@
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - ProductName</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
     <value>RL_ProductName</value>
@@ -206,8 +205,7 @@
     <value>7</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
-    <value>CHANGED AT RUNTIME - Description</value>
-    <comment>@Invariant</comment>
+    <value>Windows Feature Control GUI for ViVeTool</value>
   </data>
   <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
     <value>RL_Description</value>
@@ -232,7 +230,6 @@
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - Version</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
     <value>RL_Version</value>
@@ -257,7 +254,6 @@
   </data>
   <data name="RL_License.Text" xml:space="preserve">
     <value>CHANGED AT RUNTIME - License</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
     <value>RL_License</value>
@@ -422,7 +418,7 @@
     <value>201, 25</value>
   </data>
   <data name="RDDL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 28</value>
+    <value>193, 24</value>
   </data>
   <data name="RDDL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -566,11 +562,9 @@
   &lt;/linearGradient&gt;
   &lt;path d="M46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.817 2 11.449 C16.667 6.429 31.333 16.47 46 11.449 z" opacity="0.7" style="fill:url(#c_xyCDeerQt140JTqCzuqb);" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_English.Text" xml:space="preserve">
     <value> English (Default)</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -606,11 +600,9 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.4 L2 36.5 C16.7 31.5 31.3 41.5 46 36.5 C46 33.7 46 14.2 46 11.4 C31.3 16.5 16.7 6.4 2 11.4 z" opacity="0.25" style="fill:url(#53~3CbndB5gts_PjV~9rDb);" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_German.Text" xml:space="preserve">
     <value> Deutsch - German</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -654,11 +646,9 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.501 C16.667 6.301001 31.333 16.701 46 11.501 C46 19.846 46 28.191 46 36.536 C31.333 41.736 16.667 31.336 2 36.536 C2 28.191 2 19.846 2 11.501 z" opacity="0.4" style="fill:url(#Yw06A1pAkrQF1Q43XtSVzc);" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Polish.Text" xml:space="preserve">
     <value> Polski - Polish</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -701,11 +691,9 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.551 C31.333 41.571 16.667 31.531 2 36.551 C2 28.184 2 19.816 2 11.449 z" opacity="0.65" style="fill:url(#XrgI7h8OMl8LlqMkWgvJSb);" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Chinese.Text" xml:space="preserve">
     <value> 简体中文 - Chinese</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -741,11 +729,97 @@
   &lt;/linearGradient&gt;
   &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.7" style="fill:url(#nt5cM0aRRyCucXnR_sQbtc);" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RMI_L_Indonesian.Text" xml:space="preserve">
     <value> Bahasa Indonesia - Indonesian</value>
-    <comment>@Invariant</comment>
+  </data>
+  <data name="RMI_L_Italian.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.449 C6.889 9.776 11.778 9.776 16.667 10.333 C16.667 18.7 16.667 27.067 16.667 35.435 C11.778 34.877 6.889 34.877 2 36.551 C2 28.184 2 19.816 2 11.449 z" style="fill:#009246;" /&gt;
+  &lt;path d="M16.667 10.334 C21.556 10.892 26.445 12.007 31.334 12.565 C31.334 20.932 31.334 29.299 31.334 37.667 C26.445 37.109 21.556 35.994 16.667 35.436 C16.667 27.068 16.667 18.701 16.667 10.334 z" style="fill:#F3F3F4;" /&gt;
+  &lt;path d="M31.333 12.565 C36.222 13.123 41.111 13.123 46 11.449 C46 19.816 46 28.183 46 36.551 C41.111 38.224 36.222 38.224 31.333 37.667 C31.333 29.299 31.333 20.932 31.333 12.565 z" style="fill:#CE2B37;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46.001" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="YcXPpNa~UkCBa19LOVaYBa"&gt;
+    &lt;stop offset="0%" stop-color="#32A678" stop-opacity="0" /&gt;
+    &lt;stop offset="5.1%" stop-color="#37B784" stop-opacity="0.21" /&gt;
+    &lt;stop offset="11%" stop-color="#3BC38D" stop-opacity="0.458" /&gt;
+    &lt;stop offset="16.8%" stop-color="#3CC790" stop-opacity="0.7" /&gt;
+    &lt;stop offset="25.5%" stop-color="#3BB987" stop-opacity="0.326" /&gt;
+    &lt;stop offset="33.1%" stop-color="#39A97C" stop-opacity="0" /&gt;
+    &lt;stop offset="37%" stop-color="#579372" stop-opacity="0" /&gt;
+    &lt;stop offset="43.7%" stop-color="#837164" stop-opacity="0" /&gt;
+    &lt;stop offset="50.1%" stop-color="#A65758" stop-opacity="0" /&gt;
+    &lt;stop offset="56.1%" stop-color="#BF4450" stop-opacity="0" /&gt;
+    &lt;stop offset="61.7%" stop-color="#CE394B" stop-opacity="0" /&gt;
+    &lt;stop offset="66.1%" stop-color="#D33549" stop-opacity="0" /&gt;
+    &lt;stop offset="82.7%" stop-color="#D33B4E" stop-opacity="0.7" /&gt;
+    &lt;stop offset="98.2%" stop-color="#D3364A" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M31.333 12.565 C26.444 12.007 21.555 10.892 16.666 10.334 C11.778 9.776 6.889 9.776 2 11.449 C2 19.816 2 28.183 2 36.551 C6.889 34.878 11.778 34.878 16.667 35.435 C21.556 35.993 26.445 37.108 31.334 37.666 C36.223 38.224 41.112 38.224 46.001 36.55 C46.001 28.18299 46.001 19.816 46.001 11.448 C41.111 13.123 36.222 13.123 31.333 12.565 z" style="fill:url(#YcXPpNa~UkCBa19LOVaYBa);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46.001" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="YcXPpNa~UkCBa19LOVaYBb"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.7" /&gt;
+    &lt;stop offset="10%" stop-color="#000715" stop-opacity="0.399" /&gt;
+    &lt;stop offset="18.8%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="35.9%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="55.3%" stop-opacity="0.5" /&gt;
+    &lt;stop offset="60.6%" stop-color="#000104" stop-opacity="0.344" /&gt;
+    &lt;stop offset="66.3%" stop-color="#000512" stop-opacity="0.171" /&gt;
+    &lt;stop offset="71.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="81.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="88.6%" stop-color="#00081A" stop-opacity="0.319" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.7" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M31.333 12.565 C26.444 12.007 21.555 10.892 16.666 10.334 C11.778 9.776 6.889 9.776 2 11.449 C2 19.816 2 28.183 2 36.551 C6.889 34.878 11.778 34.878 16.667 35.435 C21.556 35.993 26.445 37.108 31.334 37.666 C36.223 38.224 41.112 38.224 46.001 36.55 C46.001 28.18299 46.001 19.816 46.001 11.448 C41.111 13.123 36.222 13.123 31.333 12.565 z" opacity="0.88" style="fill:url(#YcXPpNa~UkCBa19LOVaYBb);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_Italian.Text" xml:space="preserve">
+    <value> Italiano - Italian</value>
+  </data>
+  <data name="RMI_L_Japanese.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="32px" height="32px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" style="fill:#F4F4F5;" /&gt;
+  &lt;path d="M24 16.276 C28.418 17.075 32 20.942 32 25.188 C32 29.474 28.418 32.522 24 31.723 C19.582 30.924 16 27.056 16 22.811 C16 18.526 19.582 15.478 24 16.276 z" style="fill:#BC002D;" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="HXoG~hU9UKZHLlXytbgD~a"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.5" /&gt;
+    &lt;stop offset="5.3%" stop-color="#000511" stop-opacity="0.35" /&gt;
+    &lt;stop offset="11.5%" stop-color="#00091F" stop-opacity="0.16" /&gt;
+    &lt;stop offset="16.8%" stop-color="#000B24" stop-opacity="0" /&gt;
+    &lt;stop offset="35.9%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="42%" stop-color="#000718" stop-opacity="0.135" /&gt;
+    &lt;stop offset="55.8%" stop-opacity="0.4" /&gt;
+    &lt;stop offset="60.8%" stop-color="#000205" stop-opacity="0.278" /&gt;
+    &lt;stop offset="67%" stop-color="#000614" stop-opacity="0.128" /&gt;
+    &lt;stop offset="71.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="83%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="88.5%" stop-color="#000A1F" stop-opacity="0.173" /&gt;
+    &lt;stop offset="94.7%" stop-color="#000511" stop-opacity="0.35" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.5" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.7" style="fill:url(#HXoG~hU9UKZHLlXytbgD~a);" /&gt;
+  &lt;linearGradient x1="2" y1="26" x2="46" y2="26" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="HXoG~hU9UKZHLlXytbgD~b"&gt;
+    &lt;stop offset="5.5%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="22.4%" stop-color="white" stop-opacity="0.7" /&gt;
+    &lt;stop offset="44.2%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="57.2%" stop-color="white" stop-opacity="0" /&gt;
+    &lt;stop offset="80.5%" stop-color="white" stop-opacity="0.7" /&gt;
+    &lt;stop offset="99.3%" stop-color="white" stop-opacity="0" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.6" style="fill:url(#HXoG~hU9UKZHLlXytbgD~b);" /&gt;
+  &lt;linearGradient x1="24" y1="46.117" x2="24" y2="5.945" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, 50)" id="HXoG~hU9UKZHLlXytbgD~c"&gt;
+    &lt;stop offset="0.4%" stop-opacity="0.4" /&gt;
+    &lt;stop offset="16.9%" stop-color="#000613" stop-opacity="0.277" /&gt;
+    &lt;stop offset="34.8%" stop-color="#000A20" stop-opacity="0.142" /&gt;
+    &lt;stop offset="51.5%" stop-color="#000B24" stop-opacity="0.018" /&gt;
+    &lt;stop offset="67.3%" stop-color="#00091E" stop-opacity="0.142" /&gt;
+    &lt;stop offset="89.3%" stop-color="#00030B" stop-opacity="0.316" /&gt;
+    &lt;stop offset="100%" stop-opacity="0.4" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M2 11.449 C16.667 6.429 31.333 16.469 46 11.449 C46 19.816 46 28.183 46 36.55 C31.333 41.57 16.667 31.53 2 36.55 C2 28.184 2 19.816 2 11.449 z" opacity="0.5" style="fill:url(#HXoG~hU9UKZHLlXytbgD~c);" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RMI_L_Japanese.Text" xml:space="preserve">
+    <value> 日本語 - Japanese</value>
   </data>
   <data name="RDDB_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>122, 198</value>
@@ -842,7 +916,6 @@
   &lt;path d="M38 23 L26 23 C25.448 23 25 23.448 25 24 L25 34.398 C25 34.893 25.656 35.068 25.903 34.64 L28 31 L38 31 C38.552 31 39 30.552 39 30 L39 24 C39 23.448 38.552 23 38 23 z" style="fill:#FF8F6B;" /&gt;
   &lt;path d="M38 22.5 L26 22.5 C25.173 22.5 24.5 23.173 24.5 24 L24.5 34.398 C24.5 34.849 24.793 35.231 25.23 35.348 C25.317 35.37 25.405 35.382 25.491 35.382 C25.835 35.382 26.156 35.201 26.336 34.889 L28.289 31.499 L38 31.499 C38.827 31.499 39.5 30.826 39.5 29.999 L39.5 23.999 C39.5 23.173 38.827 22.5 38 22.5 z" opacity="0.07" /&gt;
 &lt;/svg&gt;</value>
-    <comment>@Invariant</comment>
   </data>
   <data name="RPVP_Language.Text" xml:space="preserve">
     <value>Language</value>
@@ -887,7 +960,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>434, 403</value>
@@ -2695,6 +2768,18 @@
     <value>RMI_L_Indonesian</value>
   </data>
   <data name="&gt;&gt;RMI_L_Indonesian.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Italian.Name" xml:space="preserve">
+    <value>RMI_L_Italian</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Italian.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Japanese.Name" xml:space="preserve">
+    <value>RMI_L_Japanese</value>
+  </data>
+  <data name="&gt;&gt;RMI_L_Japanese.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

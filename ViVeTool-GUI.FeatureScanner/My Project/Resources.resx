@@ -309,4 +309,67 @@ Running ViVeTool GUI directly from a ZIP file without extracting it first or mis
   <data name="Check_AssemblyVersions_Title" xml:space="preserve">
     <value>Dependency Version mismatch</value>
   </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSelectValidCellValue" xml:space="preserve">
+    <value>Please select valid cell value</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSetValidCellValue" xml:space="preserve">
+    <value>Please set a valid cell value</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Enter text to search</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Hide details</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Master template</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Search from current position</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>Search in columns</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>See details</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Try Again</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
 </root>

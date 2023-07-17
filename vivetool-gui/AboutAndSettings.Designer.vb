@@ -51,6 +51,8 @@ Partial Class AboutAndSettings
         Me.RMI_L_Polish = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_L_Chinese = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_L_Indonesian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Italian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Japanese = New Telerik.WinControls.UI.RadMenuItem()
         Me.RL_SelectLangauge = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
@@ -223,7 +225,7 @@ Partial Class AboutAndSettings
         '
         'RDDB_Language
         '
-        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian})
+        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian, Me.RMI_L_Italian, Me.RMI_L_Japanese})
         resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
         Me.RDDB_Language.Name = "RDDB_Language"
         '
@@ -256,6 +258,18 @@ Partial Class AboutAndSettings
         Me.RMI_L_Indonesian.Name = "RMI_L_Indonesian"
         Me.RMI_L_Indonesian.SvgImageXml = resources.GetString("RMI_L_Indonesian.SvgImageXml")
         resources.ApplyResources(Me.RMI_L_Indonesian, "RMI_L_Indonesian")
+        '
+        'RMI_L_Italian
+        '
+        Me.RMI_L_Italian.Name = "RMI_L_Italian"
+        Me.RMI_L_Italian.SvgImageXml = resources.GetString("RMI_L_Italian.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
+        '
+        'RMI_L_Japanese
+        '
+        Me.RMI_L_Japanese.Name = "RMI_L_Japanese"
+        Me.RMI_L_Japanese.SvgImageXml = resources.GetString("RMI_L_Japanese.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
         '
         'RL_SelectLangauge
         '
@@ -332,4 +346,6 @@ Partial Class AboutAndSettings
     Friend WithEvents RMI_L_Chinese As WinControls.UI.RadMenuItem
     Friend WithEvents RMI_L_Indonesian As WinControls.UI.RadMenuItem
     Friend WithEvents RDDL_AutoLoad As RadDropDownList
+    Friend WithEvents RMI_L_Italian As RadMenuItem
+    Friend WithEvents RMI_L_Japanese As RadMenuItem
 End Class

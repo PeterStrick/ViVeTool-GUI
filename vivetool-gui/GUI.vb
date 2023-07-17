@@ -597,7 +597,7 @@ Public Class GUI
         Dim OFD As New OpenFileDialog With {
             .InitialDirectory = "C:\",
             .Title = My.Resources.LoadManually_PathToAFeatureList,
-            .Filter = "Feature List|*.txt"
+            .Filter = String.Format("{0}|*.txt", My.Resources.Generic_FeatureList)
         }
 
         If OFD.ShowDialog() = DialogResult.OK AndAlso IO.File.Exists(OFD.FileName) Then

@@ -82,6 +82,8 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
+        Me.RMI_L_Italian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Japanese = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -136,7 +138,7 @@ Partial Class ScannerUI
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Setup
+        Me.RPV_Main.SelectedPage = Me.RPVP_AboutAndSettings
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
         '
@@ -416,7 +418,7 @@ Partial Class ScannerUI
         '
         'RDDB_Language
         '
-        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian})
+        Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian, Me.RMI_L_Italian, Me.RMI_L_Japanese})
         resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
         Me.RDDB_Language.Name = "RDDB_Language"
         '
@@ -521,6 +523,18 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.Filter = "*.pdb"
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
+        '
+        'RMI_L_Italian
+        '
+        Me.RMI_L_Italian.Name = "RMI_L_Italian"
+        Me.RMI_L_Italian.SvgImageXml = resources.GetString("RMI_L_Italian.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
+        '
+        'RMI_L_Japanese
+        '
+        Me.RMI_L_Japanese.Name = "RMI_L_Japanese"
+        Me.RMI_L_Japanese.SvgImageXml = resources.GetString("RMI_L_Japanese.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
         '
         'ScannerUI
         '
@@ -644,4 +658,6 @@ Partial Class ScannerUI
     Friend WithEvents RMI_L_Polish As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_L_Chinese As Telerik.WinControls.UI.RadMenuItem
     Friend WithEvents RMI_L_Indonesian As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RMI_L_Italian As RadMenuItem
+    Friend WithEvents RMI_L_Japanese As RadMenuItem
 End Class

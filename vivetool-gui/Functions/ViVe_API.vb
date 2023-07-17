@@ -192,10 +192,10 @@ Partial Class ViVe_API
         ''' <returns>True if the Fix was successful, False if an Error occurred</returns>
         Public Shared Sub FixLastKnownGood()
             If FeatureManager.FixLKGStore() Then
-                RadTD.ShowDialog(My.Resources.SetConfig_Success, "Last Known Good Store was successfully repaired.",
+                RadTD.ShowDialog(My.Resources.SetConfig_Success, My.Resources.ViVe_LKGStore_Repaired,
                                  Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             Else
-                RadTD.ShowDialog("Not required", "Fixing of the Last Known Good Store is not required.",
+                RadTD.ShowDialog(My.Resources.Generic_NotRequired, My.Resources.ViVe_LKGStore_NotRequired,
                                  Nothing, RadTaskDialogIcon.Information)
             End If
         End Sub
@@ -211,15 +211,14 @@ Partial Class ViVe_API
             FixStatus_Boot = FixPriority_HelperFunction(RTL_FEATURE_CONFIGURATION_TYPE.Boot)
 
             If FixStatus_Runtime = 0 AndAlso FixStatus_Boot = 0 Then
-                RadTD.ShowDialog(My.Resources.SetConfig_Success, "Feature Priorities were successfully fixed. A reboot is recommended.",
+                RadTD.ShowDialog(My.Resources.SetConfig_Success, My.Resources.ViVe_Priorities_Fixed,
                                  Nothing, RadTaskDialogIcon.ShieldSuccessGreenBar)
             ElseIf FixStatus_Runtime = 1 AndAlso FixStatus_Boot = 1 Then
-                RadTD.ShowDialog("Not required", "Fixing of Feature Priorities is not required.",
+                RadTD.ShowDialog(My.Resources.Generic_NotRequired, My.Resources.ViVe_Priorities_NotRequired,
                                  Nothing, RadTaskDialogIcon.Information)
             ElseIf FixStatus_Runtime = 2 AndAlso FixStatus_Boot = 2 Then
-                RadTD.ShowDialog(My.Resources.Error_Error, "An Error occurred while trying to fix the Feature Priorities.", Nothing,
-                                 RadTaskDialogIcon.Error,
-                                 ExpandedText:=$"The Functions returned {FixStatus_Runtime & FixStatus_Boot}. Expected 00")
+                RadTD.ShowDialog(My.Resources.Error_Error, My.Resources.ViVe_Priorities_Error_Text, Nothing, RadTaskDialogIcon.Error,
+                                 ExpandedText:=String.Format(My.Resources.ViVe_Priorities_Error_Expanded, FixStatus_Runtime & FixStatus_Boot))
             End If
         End Sub
 

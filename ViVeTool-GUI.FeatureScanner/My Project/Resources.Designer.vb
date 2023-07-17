@@ -486,6 +486,195 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Abort.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Abort() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Abort", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to All.
+        '''</summary>
+        Friend ReadOnly Property Telerik_All() As String
+            Get
+                Return ResourceManager.GetString("Telerik_All", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cancel.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Cancel() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Cancel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Please select valid cell value.
+        '''</summary>
+        Friend ReadOnly Property Telerik_ConditionalFormattingPleaseSelectValidCellValue() As String
+            Get
+                Return ResourceManager.GetString("Telerik_ConditionalFormattingPleaseSelectValidCellValue", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Please set a valid cell value.
+        '''</summary>
+        Friend ReadOnly Property Telerik_ConditionalFormattingPleaseSetValidCellValue() As String
+            Get
+                Return ResourceManager.GetString("Telerik_ConditionalFormattingPleaseSetValidCellValue", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Continue.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Continue() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Continue", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Enter text to search.
+        '''</summary>
+        Friend ReadOnly Property Telerik_EnterTextToSearch() As String
+            Get
+                Return ResourceManager.GetString("Telerik_EnterTextToSearch", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Help.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Help() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Help", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Hide details.
+        '''</summary>
+        Friend ReadOnly Property Telerik_HideDetails() As String
+            Get
+                Return ResourceManager.GetString("Telerik_HideDetails", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ignore.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Ignore() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Ignore", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Master template.
+        '''</summary>
+        Friend ReadOnly Property Telerik_MasterTemplate() As String
+            Get
+                Return ResourceManager.GetString("Telerik_MasterTemplate", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Match case.
+        '''</summary>
+        Friend ReadOnly Property Telerik_MatchCase() As String
+            Get
+                Return ResourceManager.GetString("Telerik_MatchCase", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No.
+        '''</summary>
+        Friend ReadOnly Property Telerik_No() As String
+            Get
+                Return ResourceManager.GetString("Telerik_No", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to of.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Of() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Of", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to OK.
+        '''</summary>
+        Friend ReadOnly Property Telerik_OK() As String
+            Get
+                Return ResourceManager.GetString("Telerik_OK", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Retry.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Retry() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Retry", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Search from current position.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SearchFromCurrentPosition() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SearchFromCurrentPosition", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Search in columns.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SearchInColumns() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SearchInColumns", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to See details.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SeeDetails() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SeeDetails", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Try Again.
+        '''</summary>
+        Friend ReadOnly Property Telerik_TryAgain() As String
+            Get
+                Return ResourceManager.GetString("Telerik_TryAgain", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Yes.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Yes() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Yes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Example Path: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe.
         '''</summary>
         Friend ReadOnly Property ToolTip_RTB_DbgPath() As String

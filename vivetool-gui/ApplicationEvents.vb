@@ -35,6 +35,7 @@ Namespace My
             If Settings.TwoCharLanguageCode IsNot "" Then
                 CultureInfo.DefaultThreadCurrentCulture = New CultureInfo(Settings.TwoCharLanguageCode)
                 CultureInfo.DefaultThreadCurrentUICulture = New CultureInfo(Settings.TwoCharLanguageCode)
+                TelerikLocalization.SetProviders()
             End If
 
             ' Check for Build

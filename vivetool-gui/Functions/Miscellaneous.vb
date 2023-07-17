@@ -14,6 +14,7 @@
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
 Option Strict On
+Imports System.Diagnostics
 
 ''' <summary>
 ''' Miscellaneous Functions
@@ -27,13 +28,32 @@ Public Class Functions
         Try
             Using client = New WebClient()
                 Using stream = client.OpenRead("http://www.github.com")
-                    Diagnostics.Debug.WriteLine("Have Internet")
+                    Debug.WriteLine("Have Internet")
                     Return True
                 End Using
             End Using
         Catch
-            Diagnostics.Debug.WriteLine("Don't have Internet")
+            Debug.WriteLine("Don't have Internet")
             Return False
         End Try
     End Function
+
+    ''' <summary>
+    ''' Function that saves a Two Character Language Code to Settings while restarting the application afterwards.
+    ''' </summary>
+    ''' <param name="TwoCharLang">Two Character Language Code. For example: de for German, zh for Chinese, ...</param>
+    Public Shared Sub ChangeLanguage(TwoCharLang As String)
+        My.Settings.TwoCharLanguageCode = TwoCharLang
+        My.Settings.Save()
+
+        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
+
+        Dim pStart As New ProcessStartInfo With {
+            .WindowStyle = ProcessWindowStyle.Normal,
+            .FileName = Application.ExecutablePath
+        }
+
+        Process.Start(pStart)
+        Application.Exit()
+    End Sub
 End Class

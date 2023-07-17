@@ -722,6 +722,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Feature List.
+        '''</summary>
+        Friend ReadOnly Property Generic_FeatureList() As String
+            Get
+                Return ResourceManager.GetString("Generic_FeatureList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Feature Mgmt.
         '''</summary>
         Friend ReadOnly Property Generic_FeatureManagement() As String
@@ -785,6 +794,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Not required.
+        '''</summary>
+        Friend ReadOnly Property Generic_NotRequired() As String
+            Get
+                Return ResourceManager.GetString("Generic_NotRequired", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Populating the Data Grid View… This can take a while..
         '''</summary>
         Friend ReadOnly Property Generic_PopulatingTheDataGridView() As String
@@ -799,6 +817,15 @@ Namespace My.Resources
         Friend ReadOnly Property Generic_SelectBuild() As String
             Get
                 Return ResourceManager.GetString("Generic_SelectBuild", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Version {0}.
+        '''</summary>
+        Friend ReadOnly Property Generic_Version() As String
+            Get
+                Return ResourceManager.GetString("Generic_Version", resourceCulture)
             End Get
         End Property
         
@@ -1096,6 +1123,24 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to The current Build Feature List.
+        '''</summary>
+        Friend ReadOnly Property Settings_TheCurrentBuildFeatureList() As String
+            Get
+                Return ResourceManager.GetString("Settings_TheCurrentBuildFeatureList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to The latest Build Feature List.
+        '''</summary>
+        Friend ReadOnly Property Settings_TheLatestBuildFeatureList() As String
+            Get
+                Return ResourceManager.GetString("Settings_TheLatestBuildFeatureList", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to &amp;About.
         '''</summary>
         Friend ReadOnly Property SystemMenu_About() As String
@@ -1110,6 +1155,231 @@ Namespace My.Resources
         Friend ReadOnly Property SystemMenu_ManuallySetFeatureID() As String
             Get
                 Return ResourceManager.GetString("SystemMenu_ManuallySetFeatureID", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Abort.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Abort() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Abort", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to All.
+        '''</summary>
+        Friend ReadOnly Property Telerik_All() As String
+            Get
+                Return ResourceManager.GetString("Telerik_All", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Cancel.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Cancel() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Cancel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Continue.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Continue() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Continue", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Enter text to search.
+        '''</summary>
+        Friend ReadOnly Property Telerik_EnterTextToSearch() As String
+            Get
+                Return ResourceManager.GetString("Telerik_EnterTextToSearch", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Help.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Help() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Help", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Hide details.
+        '''</summary>
+        Friend ReadOnly Property Telerik_HideDetails() As String
+            Get
+                Return ResourceManager.GetString("Telerik_HideDetails", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Ignore.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Ignore() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Ignore", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Master template.
+        '''</summary>
+        Friend ReadOnly Property Telerik_MasterTemplate() As String
+            Get
+                Return ResourceManager.GetString("Telerik_MasterTemplate", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Match case.
+        '''</summary>
+        Friend ReadOnly Property Telerik_MatchCase() As String
+            Get
+                Return ResourceManager.GetString("Telerik_MatchCase", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to No.
+        '''</summary>
+        Friend ReadOnly Property Telerik_No() As String
+            Get
+                Return ResourceManager.GetString("Telerik_No", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to of.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Of() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Of", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to OK.
+        '''</summary>
+        Friend ReadOnly Property Telerik_OK() As String
+            Get
+                Return ResourceManager.GetString("Telerik_OK", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Retry.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Retry() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Retry", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Search from current position.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SearchFromCurrentPosition() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SearchFromCurrentPosition", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Search in columns.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SearchInColumns() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SearchInColumns", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to See details.
+        '''</summary>
+        Friend ReadOnly Property Telerik_SeeDetails() As String
+            Get
+                Return ResourceManager.GetString("Telerik_SeeDetails", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Try Again.
+        '''</summary>
+        Friend ReadOnly Property Telerik_TryAgain() As String
+            Get
+                Return ResourceManager.GetString("Telerik_TryAgain", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Yes.
+        '''</summary>
+        Friend ReadOnly Property Telerik_Yes() As String
+            Get
+                Return ResourceManager.GetString("Telerik_Yes", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Fixing of the Last Known Good Store is not required..
+        '''</summary>
+        Friend ReadOnly Property ViVe_LKGStore_NotRequired() As String
+            Get
+                Return ResourceManager.GetString("ViVe_LKGStore_NotRequired", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Last Known Good Store was successfully repaired..
+        '''</summary>
+        Friend ReadOnly Property ViVe_LKGStore_Repaired() As String
+            Get
+                Return ResourceManager.GetString("ViVe_LKGStore_Repaired", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to The Functions returned {0}. Expected 00.
+        '''</summary>
+        Friend ReadOnly Property ViVe_Priorities_Error_Expanded() As String
+            Get
+                Return ResourceManager.GetString("ViVe_Priorities_Error_Expanded", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to An Error occurred while trying to fix the Feature Priorities..
+        '''</summary>
+        Friend ReadOnly Property ViVe_Priorities_Error_Text() As String
+            Get
+                Return ResourceManager.GetString("ViVe_Priorities_Error_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Feature Priorities were successfully fixed. A reboot is recommended..
+        '''</summary>
+        Friend ReadOnly Property ViVe_Priorities_Fixed() As String
+            Get
+                Return ResourceManager.GetString("ViVe_Priorities_Fixed", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Fixing of Feature Priorities is not required..
+        '''</summary>
+        Friend ReadOnly Property ViVe_Priorities_NotRequired() As String
+            Get
+                Return ResourceManager.GetString("ViVe_Priorities_NotRequired", resourceCulture)
             End Get
         End Property
     End Module

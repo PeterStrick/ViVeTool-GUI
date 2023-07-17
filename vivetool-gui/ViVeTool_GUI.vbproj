@@ -176,6 +176,7 @@
     <Compile Include="SetManual.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TelerikLocalization.vb" />
     <EmbeddedResource Include="AboutAndSettings.de.resx">
       <DependentUpon>AboutAndSettings.vb</DependentUpon>
       <SubType>Designer</SubType>
