@@ -104,7 +104,7 @@
     <value>La modifica della lingua richiede il riavvio</value>
   </data>
   <data name="Language_Text" xml:space="preserve">
-    <value>La GUI di ViVeTool deve essere riavviata per confermare il cambio di lingua. Tenterà di riavviarsi dopo aver premuto Chiudi.</value>
+    <value>La GUI di ViVeTool deve essere riavviata per confermare il cambio di lingua. Tenterà di riavviarsi dopo aver selezionato 'Chiudi'.</value>
   </data>
   <data name="Browse_PathToDebuggingTools" xml:space="preserve">
     <value>Naviga a symchk.exe dal Windows Debugging Tools</value>
@@ -132,7 +132,7 @@
 L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estrarlo o la mancanza/sostituzione di un file DLL della GUI di ViVeTool può causare questo problema.</value>
   </data>
   <data name="Telerik_All" xml:space="preserve">
-    <value>Tutti</value>
+    <value>In tutte le colonne</value>
   </data>
   <data name="Telerik_EnterTextToSearch" xml:space="preserve">
     <value>Inserisci testo da cercare</value>

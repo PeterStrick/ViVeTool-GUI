@@ -226,7 +226,7 @@ L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estra
     <value>Modello principale</value>
   </data>
   <data name="Telerik_All" xml:space="preserve">
-    <value>Tutti</value>
+    <value>In tutte le colonne</value>
   </data>
   <data name="Telerik_EnterTextToSearch" xml:space="preserve">
     <value>Inserisci testo da cercare</value>
@@ -266,5 +266,183 @@ L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estra
   </data>
   <data name="Telerik_Cancel" xml:space="preserve">
     <value>Annulla</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Interrompi</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignora</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>Se il dispositivo non è connesso ad Internet o se l'API GitHub non è raggiungibile, ViVeTool-GUI non è in grado di popolare la casella combinata Build.
+
+È ancora possibile modificare manualmente un ID funzione selezioando 'F12' e caricare un elenco di funzioni locale.</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Visualizza eccezione</value>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Comprimi eccezione</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
+    <value>Potrebbero esserci più cause per le eccezioni Win32, ma di solito si restringono al software antivirus che interferisce con la GUI di ViVeTool o problemi di autorizzazione.</value>
+  </data>
+  <data name="Comments_PrivacyText" xml:space="preserve">
+    <value>Prima di poter inviare il tuo commento, devi accettare che le seguenti informazioni vengano salvate a tempo indeterminato in un database:
+
+Build selezionata, funzionalità ViVeTool selezionata, il tuo commento
+
+Devi anche accettare che il tuo indirizzo IP verrà crittografato e archiviato per 24 ore dopo aver selezionato "nvia commento".
+
+La memorizzazione del tuo indirizzo IP per 24 ore è una precauzione di sicurezza per prevenire spam e abusi.</value>
+  </data>
+  <data name="Comments_Form_EditIntroducionText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Seleziona ""&lt;strong&gt;Modifica testo&lt;/strong&gt;"" per modificare il testo del commento.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puoi scrivere un commento usando il testo normale o &lt;strong&gt;&lt;em&gt;Formattazione testo tipo HTML&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Default Text for the Label that shows your own Comment</comment>
+  </data>
+  <data name="Comments_ServerError_HTTP400" xml:space="preserve">
+    <value>Si è verificato un errore durante la comunicazione con il server dei commenti. HTTP 400: richiesta errata</value>
+  </data>
+  <data name="FeatureDictionary_UpdateText" xml:space="preserve">
+    <value>È disponibile una versione più recente del dizionario funzioni. Contiene le traduzioni degli ID ViVeTool più recenti nel corrispondente nome funzione. Vuoi aggiornarlo adesso?</value>
+  </data>
+  <data name="FeatureDictionary_DownloadText" xml:space="preserve">
+    <value>Il download del dizionario delle funzioni recente è stato completato correttamente.</value>
+  </data>
+  <data name="FeatureDictionary_UpdateError" xml:space="preserve">
+    <value>Non è stato possibile eseguire un controllo aggiornamento del dizionario funzioni.</value>
+  </data>
+  <data name="Error_NetworkError" xml:space="preserve">
+    <value>Errore rete</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Stai eseguendo una build di Windows 10 non supportata. Per funzionare correttamenteViVe, ViVeTool e ViVeTool GUI richiedono Windows 10 Build 18963 o superiore. Questa è la build: {0}</value>
+    <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">
+    <value>Impostazione completat configurazione funzione per {0} con valore {1}</value>
+  </data>
+  <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
+    <value>Per usare il raggruppamento seleziona Build 17704 o successiva</value>
+  </data>
+  <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
+    <value>Funzioni di rete disabilitate. Prem' 'F12' per modificare manualmente una funzione.</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
+    <value>Si è verificata un'eccezione Win32 generica.</value>
+  </data>
+  <data name="Error_Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
+    <value>Risposta API GitHub: </value>
+  </data>
+  <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
+    <value>Pronto. Per iniziare seleziona una build dalla casella combinata o, in alternativa, premi 'F12' per modificare manualmente una funzione.</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Build non supportata</value>
+  </data>
+  <data name="Error_ANetworkErrorOccurred" xml:space="preserve">
+    <value>Si è verificato un errore di rete</value>
+  </data>
+  <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
+    <value>Si è verificata un'eccezione durante il tentativo di impostare l'ID funzione {0} a {1}</value>
+    <comment>{0} references to a ID, {1} to a Feature State</comment>
+  </data>
+  <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
+    <value>Il tuo IP potrebbe essere stato temporaneamente limitato per un'ora dalla velocità dell'API GitHub.</value>
+  </data>
+  <data name="Error_SetConfig" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di impostare {0} a {1}</value>
+    <comment>{0} references to a ID/Feature, {1} to a Feature State</comment>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copia l'eccezione negli Appunti e chiudi la finestra di dialogo</value>
+  </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Si è verificata un'eccezione sconosciuta</value>
+  </data>
+  <data name="Error_SettingFeatureConfig" xml:space="preserve">
+    <value>Si è verificato un errore durante l'impostazione di una configurazione della funzione per {0}</value>
+    <comment>{0} references to a Feature</comment>
+  </data>
+  <data name="Comments_Spaced_PrivacyInformation" xml:space="preserve">
+    <value> Informativa privacy</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_PrivacyInformation" xml:space="preserve">
+    <value>Informativa privacy</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>Si è verificata un'eccezione di rete</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di avviare la funzioen scansioen di ViVeTool GUI.
+
+Il file non esiste.</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Si è verificata un'eccezione</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Si è verificato un errore</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>Si è verificato un errore durante l'invio del tuo commento.</value>
+  </data>
+  <data name="Comments_ServerError_Generic" xml:space="preserve">
+    <value>Si è verificato un errore sconosciuto durante la comunicazione con il server dei commenti. {0}</value>
+  </data>
+  <data name="Comments_DBError_Unavailable" xml:space="preserve">
+    <value>Non è stato possibile caricare i commenti perché il server database non è attualmente disponibile.</value>
+  </data>
+  <data name="Comments_DBError_CommunicationError" xml:space="preserve">
+    <value>Si è verificato un errore durante la comunicazione con il server database commenti</value>
+  </data>
+  <data name="Error_ADatabaseErrorOccurred" xml:space="preserve">
+    <value>Si è verificato un errore nel database</value>
+  </data>
+  <data name="Comments_DialogTitle" xml:space="preserve">
+    <value>Commento per {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP504" xml:space="preserve">
+    <value>Il server dei commenti non è attualmente disponibile. HTTP 504: timeout gateway</value>
+  </data>
+  <data name="Comments_ServerError_HTTP503" xml:space="preserve">
+    <value>Il server dei commenti non è attualmente disponibile. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP502" xml:space="preserve">
+    <value>Il server dei commenti non è attualmente disponibile. HTTP 502: gateway errato</value>
+  </data>
+  <data name="Comments_ServerError_HTTP500" xml:space="preserve">
+    <value>Il server dei commenti non è attualmente disponibile. HTTP 500: errore interno del server</value>
+  </data>
+  <data name="Comments_ServerError_HTTP404" xml:space="preserve">
+    <value>Si è verificato un errore durante la comunicazione con il server dei commenti. HTTP 404: non trovato</value>
+  </data>
+  <data name="Comments_ServerError_HTTP403" xml:space="preserve">
+    <value>Si è verificato un errore durante la comunicazione con il server dei commenti. HTTP 403: Vietato</value>
+  </data>
+  <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
+    <value>Non è stato possibile caricare i commenti perché il server database è attualmente in fase di chiusura.</value>
+  </data>
+  <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
+    <value>Non è richiesta la correzione dell'archiovio Last Known Good.</value>
+  </data>
+  <data name="ViVe_Priorities_Fixed" xml:space="preserve">
+    <value>Sono state corrette correttamente le priorità delle funzioni. Ti consigliamo un riavvio.</value>
+  </data>
+  <data name="ViVe_LKGStore_Repaired" xml:space="preserve">
+    <value>L'archivio Last Known Good è stato correttamente riparato.</value>
+  </data>
+  <data name="ViVe_Priorities_NotRequired" xml:space="preserve">
+    <value>Non è richiesta la correzione delle priorità delle funzioni.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Text" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di correggere le priorità delle funzioni.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Expanded" xml:space="preserve">
+    <value>Le funzioni hanno restituito {0}. Previsto 00</value>
   </data>
 </root>
