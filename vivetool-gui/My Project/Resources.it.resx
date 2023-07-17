@@ -59,19 +59,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
-    <value>Il dizionario funzionalità non è presente</value>
+    <value>Il dizionario funzioni non è presente</value>
   </data>
   <data name="FeatureDictionary_MissingText" xml:space="preserve">
-    <value>Il dizionario funzionalità fornisce una traduzione tra i nomi delle funzioni ViVeTool e gli ID ViVeTool. Sebbene facoltativo, ti consigliamo di scaricare questo dizionario. Vuoi scaricarlo ora?</value>
+    <value>Il dizionario funzioni fornisce una traduzione tra i nomi delle funzioni ViVeTool e gli ID ViVeTool. Sebbene facoltativo, ti consigliamo di scaricare questo dizionario. Vuoi scaricarlo ora?</value>
   </data>
   <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
-    <value>È disponibile un aggiornamento del dizionario funzionalità</value>
+    <value>È disponibile un aggiornamento del dizionario funzioni</value>
   </data>
   <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
     <value>Download completato</value>
   </data>
   <data name="Generic_FeatureManagement" xml:space="preserve">
-    <value>Gestione funzionalità</value>
+    <value>Gestione funzioni</value>
   </data>
   <data name="Generic_Nothing" xml:space="preserve">
     <value>Nessuna</value>
@@ -92,7 +92,7 @@
     <value>Tema scuro</value>
   </data>
   <data name="Generic_FeatureState" xml:space="preserve">
-    <value>Stato funzionalità</value>
+    <value>Stato funzione</value>
   </data>
   <data name="Generic_LoadManually" xml:space="preserve">
     <value>Carica manualmente…</value>
@@ -101,10 +101,10 @@
     <value>Sempre abilitato</value>
   </data>
   <data name="Generic_FeatureName" xml:space="preserve">
-    <value>Nome funzionalità</value>
+    <value>Nome funzione</value>
   </data>
   <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
-    <value>Percorso elenco funzionalità</value>
+    <value>Percorso elenco funzioni</value>
   </data>
   <data name="Generic_Done" xml:space="preserve">
     <value>Fatto.</value>
@@ -145,7 +145,7 @@
     <value>Impostata correttamente funzione {0} a {1}</value>
   </data>
   <data name="Generic_FeatureID" xml:space="preserve">
-    <value>ID funzionalità</value>
+    <value>ID funzione</value>
   </data>
   <data name="Comments_I_Agree" xml:space="preserve">
     <value>Sono d'accordo</value>
