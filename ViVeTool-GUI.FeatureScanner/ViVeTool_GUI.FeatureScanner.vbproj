@@ -45,10 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrashReporter.NET, Version=1.6.0.0, Culture=neutral, PublicKeyToken=7828e0fd88cab698, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
+      <HintPath>..\packages\CrashReporter.NET.Official.1.6.0\lib\net462\CrashReporter.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Toolkit.Uwp.Notifications, Version=7.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Microsoft.Toolkit.Uwp.Notifications.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -56,43 +56,43 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.RadToastNotification, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadToastNotification.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RadToastNotification.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.RichTextEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RichTextEditor.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.RichTextEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.SyntaxEditor, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.SyntaxEditor.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.SyntaxEditor.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Fluent.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Windows.Documents.Core, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Documents.Core.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.Windows.Documents.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Windows.Zip, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\Telerik.Windows.Zip.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.Windows.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
+      <HintPath>..\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
