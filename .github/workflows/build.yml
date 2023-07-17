@@ -16,10 +16,10 @@ jobs:
               run: nuget restore
 
             - name: Build
-              run: msbuild "D:\a\ViVeTool-GUI\vivetool-gui\ViVeTool_GUI.vbproj" -t:Build -p:Configuration=Debug -p:Platform=x64
+              run: msbuild "D:\a\ViVeTool-GUI\ViVeTool-GUI\vivetool-gui\ViVeTool_GUI.vbproj" -t:Build -p:Configuration=Debug -p:Platform=x64
 
             - name: Release Artifact
               uses: actions/upload-artifact@v3
               with:
                 name: Build
-                path: D:\a\ViVeTool-GUI\vivetool-gui\bin\x64\Debug\
+                path: D:\a\ViVeTool-GUI\ViVeTool-GUI\vivetool-gui\bin\x64\Debug\
