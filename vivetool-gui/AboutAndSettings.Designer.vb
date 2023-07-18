@@ -89,7 +89,7 @@ Partial Class AboutAndSettings
         Me.RPV_Main.DefaultPage = Me.RPVP_About
         resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
-        Me.RPV_Main.SelectedPage = Me.RPVP_Settings
+        Me.RPV_Main.SelectedPage = Me.RPVP_Language
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemPinButton = False
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False

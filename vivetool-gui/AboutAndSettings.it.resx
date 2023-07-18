@@ -1963,28 +1963,28 @@
     <value>Info e impostazioni</value>
   </data>
   <data name="RMI_L_Italian.Text" xml:space="preserve">
-    <value></value>
+    <value> Italiano - Italian</value>
   </data>
   <data name="RMI_L_Japanese.Text" xml:space="preserve">
-    <value></value>
+    <value> 日本語 - Japanese</value>
   </data>
   <data name="RMI_L_English.Text" xml:space="preserve">
-    <value></value>
+    <value> English</value>
   </data>
   <data name="RMI_L_German.Text" xml:space="preserve">
-    <value></value>
+    <value> Deutsch - German</value>
   </data>
   <data name="RMI_L_Chinese.Text" xml:space="preserve">
-    <value></value>
+    <value> 简体中文 - Chinese</value>
   </data>
   <data name="RMI_L_Indonesian.Text" xml:space="preserve">
-    <value></value>
+    <value> Bahasa Indonesia - Indonesian</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
     <value>Scansiona questa build per ID funzioni</value>
   </data>
   <data name="RMI_L_Polish.Text" xml:space="preserve">
-    <value></value>
+    <value> Polski - Polish</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
     <value>GUI ViveTool controllo funzioni di Windows</value>

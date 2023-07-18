@@ -2003,4 +2003,25 @@
   <data name="$this.Text" xml:space="preserve">
     <value>关于 &amp; 设置</value>
   </data>
+  <data name="RMI_L_Chinese.Text" xml:space="preserve">
+    <value> 简体中文 - Chinese</value>
+  </data>
+  <data name="RMI_L_English.Text" xml:space="preserve">
+    <value> English</value>
+  </data>
+  <data name="RMI_L_German.Text" xml:space="preserve">
+    <value> Deutsch - German</value>
+  </data>
+  <data name="RMI_L_Indonesian.Text" xml:space="preserve">
+    <value> Bahasa Indonesia - Indonesian</value>
+  </data>
+  <data name="RMI_L_Italian.Text" xml:space="preserve">
+    <value> Italiano - Italian</value>
+  </data>
+  <data name="RMI_L_Japanese.Text" xml:space="preserve">
+    <value> 日本語 - Japanese</value>
+  </data>
+  <data name="RMI_L_Polish.Text" xml:space="preserve">
+    <value> Polski - Polish</value>
+  </data>
 </root>

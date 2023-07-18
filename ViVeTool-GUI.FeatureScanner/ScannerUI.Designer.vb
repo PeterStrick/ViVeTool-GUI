@@ -70,6 +70,8 @@ Partial Class ScannerUI
         Me.RMI_L_Polish = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_L_Chinese = New Telerik.WinControls.UI.RadMenuItem()
         Me.RMI_L_Indonesian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Italian = New Telerik.WinControls.UI.RadMenuItem()
+        Me.RMI_L_Japanese = New Telerik.WinControls.UI.RadMenuItem()
         Me.RGB_Theming = New Telerik.WinControls.UI.RadGroupBox()
         Me.RTB_UseSystemTheme = New Telerik.WinControls.UI.RadToggleButton()
         Me.RTB_ThemeToggle = New Telerik.WinControls.UI.RadToggleButton()
@@ -82,8 +84,6 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath = New System.IO.FileSystemWatcher()
         Me.FluentLight = New Telerik.WinControls.Themes.FluentTheme()
         Me.FluentDark = New Telerik.WinControls.Themes.FluentDarkTheme()
-        Me.RMI_L_Italian = New Telerik.WinControls.UI.RadMenuItem()
-        Me.RMI_L_Japanese = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RPV_Main, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RPV_Main.SuspendLayout()
         Me.RPVP_Setup.SuspendLayout()
@@ -463,6 +463,18 @@ Partial Class ScannerUI
         Me.RMI_L_Indonesian.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.RMI_L_Indonesian.UseCompatibleTextRendering = False
         '
+        'RMI_L_Italian
+        '
+        Me.RMI_L_Italian.Name = "RMI_L_Italian"
+        Me.RMI_L_Italian.SvgImageXml = resources.GetString("RMI_L_Italian.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
+        '
+        'RMI_L_Japanese
+        '
+        Me.RMI_L_Japanese.Name = "RMI_L_Japanese"
+        Me.RMI_L_Japanese.SvgImageXml = resources.GetString("RMI_L_Japanese.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
+        '
         'RGB_Theming
         '
         Me.RGB_Theming.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -523,18 +535,6 @@ Partial Class ScannerUI
         Me.FSW_SymbolPath.Filter = "*.pdb"
         Me.FSW_SymbolPath.IncludeSubdirectories = True
         Me.FSW_SymbolPath.SynchronizingObject = Me
-        '
-        'RMI_L_Italian
-        '
-        Me.RMI_L_Italian.Name = "RMI_L_Italian"
-        Me.RMI_L_Italian.SvgImageXml = resources.GetString("RMI_L_Italian.SvgImageXml")
-        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
-        '
-        'RMI_L_Japanese
-        '
-        Me.RMI_L_Japanese.Name = "RMI_L_Japanese"
-        Me.RMI_L_Japanese.SvgImageXml = resources.GetString("RMI_L_Japanese.SvgImageXml")
-        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
         '
         'ScannerUI
         '

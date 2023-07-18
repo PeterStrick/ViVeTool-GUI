@@ -560,6 +560,31 @@ Public Class ScannerUI
         RL_Version.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         RL_License.Text = My.Application.Info.Copyright
         RL_Description.Text = My.Application.Info.Description
+
+        ' Set the Language Drop Down Button Text to the current Language
+        LocalizeLanguageDropDown()
+    End Sub
+
+    ''' <summary>
+    ''' Set's the Language Drop Down Button Text to the current Language
+    ''' </summary>
+    Private Sub LocalizeLanguageDropDown()
+        Select Case My.Settings.TwoCharLanguageCode
+            Case "en"
+                RDDB_Language.Text = RMI_L_English.Text
+            Case "de"
+                RDDB_Language.Text = RMI_L_German.Text
+            Case "zh"
+                RDDB_Language.Text = RMI_L_Chinese.Text
+            Case "pl"
+                RDDB_Language.Text = RMI_L_Polish.Text
+            Case "id"
+                RDDB_Language.Text = RMI_L_Indonesian.Text
+            Case "it"
+                RDDB_Language.Text = RMI_L_Italian.Text
+            Case "jp"
+                RDDB_Language.Text = RMI_L_Japanese.Text
+        End Select
     End Sub
 
     ''' <summary>

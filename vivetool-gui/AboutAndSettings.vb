@@ -29,6 +29,9 @@ Public NotInheritable Class AboutAndSettings
 
         ' Localize the Auto Load Drop Down Menu
         LoadLocalization()
+
+        ' Set the Language Drop Down Button Text to the current Language
+        LocalizeLanguageDropDown()
     End Sub
 
     ''' <summary>
@@ -56,6 +59,28 @@ Public NotInheritable Class AboutAndSettings
         RDDL_AutoLoad.Items.Item(0).Text = My.Resources.Generic_Nothing
         RDDL_AutoLoad.Items.Item(1).Text = My.Resources.Settings_TheLatestBuildFeatureList
         RDDL_AutoLoad.Items.Item(2).Text = My.Resources.Settings_TheCurrentBuildFeatureList
+    End Sub
+
+    ''' <summary>
+    ''' Set's the Language Drop Down Button Text to the current Language
+    ''' </summary>
+    Private Sub LocalizeLanguageDropDown()
+        Select Case My.Settings.TwoCharLanguageCode
+            Case "en"
+                RDDB_Language.Text = RMI_L_English.Text
+            Case "de"
+                RDDB_Language.Text = RMI_L_German.Text
+            Case "zh"
+                RDDB_Language.Text = RMI_L_Chinese.Text
+            Case "pl"
+                RDDB_Language.Text = RMI_L_Polish.Text
+            Case "id"
+                RDDB_Language.Text = RMI_L_Indonesian.Text
+            Case "it"
+                RDDB_Language.Text = RMI_L_Italian.Text
+            Case "jp"
+                RDDB_Language.Text = RMI_L_Japanese.Text
+        End Select
     End Sub
 
     ''' <summary>

@@ -46,7 +46,7 @@ Public Class Functions
         My.Settings.TwoCharLanguageCode = TwoCharLang
         My.Settings.Save()
 
-        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Heading, My.Resources.Language_Text, RadTaskDialogIcon.Information)
+        RadTD.ShowDialog($" {My.Resources.Language_Heading}", My.Resources.Language_Text, Nothing, RadTaskDialogIcon.Information)
 
         Dim pStart As New ProcessStartInfo With {
             .WindowStyle = ProcessWindowStyle.Normal,
