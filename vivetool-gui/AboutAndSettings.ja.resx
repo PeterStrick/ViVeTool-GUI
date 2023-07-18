@@ -71,7 +71,7 @@
     <value>  設定</value>
   </data>
   <data name="RMI_L_English.Text" xml:space="preserve">
-    <value> 英語 (既定)</value>
+    <value></value>
     <comment>@Invariant</comment>
   </data>
   <data name="RPVP_About.Text" xml:space="preserve">

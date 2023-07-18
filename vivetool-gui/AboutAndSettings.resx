@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 12</value>
   </data>
-  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>48, 48</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms" xml:space="preserve">
     <value>StretchImage</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
+  <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
@@ -144,13 +144,13 @@
   <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Comments.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 137</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>269, 163</value>
   </data>
-  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Comments.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
@@ -168,13 +168,13 @@
   <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_ProductName.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>60, 12</value>
   </data>
-  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_ProductName.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>206, 18</value>
   </data>
-  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_ProductName.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RL_ProductName.Text" xml:space="preserve">
@@ -192,16 +192,16 @@
   <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RL_Description.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Description.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 84</value>
   </data>
-  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>355, 47</value>
   </data>
-  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Description.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
@@ -219,13 +219,13 @@
   <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_Version.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>60, 36</value>
   </data>
-  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Version.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>174, 18</value>
   </data>
-  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_Version.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="RL_Version.Text" xml:space="preserve">
@@ -243,13 +243,13 @@
   <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_License.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>61, 60</value>
   </data>
-  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_License.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>173, 18</value>
   </data>
-  <data name="RL_License.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_License.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="RL_License.Text" xml:space="preserve">
@@ -267,10 +267,10 @@
   <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 42</value>
   </data>
-  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>422, 355</value>
   </data>
   <data name="RPVP_About.Text" xml:space="preserve">
@@ -288,13 +288,13 @@
   <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>48, 25</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>315, 30</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.TabIndex" type="System.Int32, mscorlib">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
@@ -315,13 +315,13 @@
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Other</value>
   </data>
-  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 234</value>
   </data>
-  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>410, 80</value>
   </data>
-  <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RadGroupBox1.Text" xml:space="preserve">
@@ -339,13 +339,13 @@
   <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>201, 23</value>
   </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>183, 35</value>
   </data>
-  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_UseSystemTheme.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
@@ -363,13 +363,13 @@
   <data name="&gt;&gt;RTB_UseSystemTheme.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>26, 23</value>
   </data>
-  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>155, 35</value>
   </data>
-  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib">
+  <data name="RTB_ThemeToggle.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
@@ -390,13 +390,13 @@
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
     <value>Theming</value>
   </data>
-  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RGB_Theming.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 124</value>
   </data>
-  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Theming.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>410, 80</value>
   </data>
-  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib">
+  <data name="RGB_Theming.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="RGB_Theming.Text" xml:space="preserve">
@@ -414,13 +414,13 @@
   <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>201, 25</value>
   </data>
-  <data name="RDDL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RDDL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>193, 24</value>
   </data>
-  <data name="RDDL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
+  <data name="RDDL_AutoLoad.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;RDDL_AutoLoad.Name" xml:space="preserve">
@@ -435,13 +435,13 @@
   <data name="&gt;&gt;RDDL_AutoLoad.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>26, 35</value>
   </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>102, 18</value>
   </data>
-  <data name="RL_AutoLoad.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_AutoLoad.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
@@ -462,13 +462,13 @@
   <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
     <value>Behaviour</value>
   </data>
-  <data name="RGB_Behaviour.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RGB_Behaviour.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 12</value>
   </data>
-  <data name="RGB_Behaviour.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RGB_Behaviour.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>410, 80</value>
   </data>
-  <data name="RGB_Behaviour.TabIndex" type="System.Int32, mscorlib">
+  <data name="RGB_Behaviour.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RGB_Behaviour.Text" xml:space="preserve">
@@ -486,7 +486,7 @@
   <data name="&gt;&gt;RGB_Behaviour.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -510,10 +510,10 @@
         mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 42</value>
   </data>
-  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>422, 355</value>
   </data>
   <data name="RPVP_Settings.Text" xml:space="preserve">
@@ -564,7 +564,7 @@
 &lt;/svg&gt;</value>
   </data>
   <data name="RMI_L_English.Text" xml:space="preserve">
-    <value> English (Default)</value>
+    <value> English</value>
   </data>
   <data name="RMI_L_German.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -821,13 +821,13 @@
   <data name="RMI_L_Japanese.Text" xml:space="preserve">
     <value> 日本語 - Japanese</value>
   </data>
-  <data name="RDDB_Language.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RDDB_Language.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>122, 198</value>
   </data>
-  <data name="RDDB_Language.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RDDB_Language.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>175, 30</value>
   </data>
-  <data name="RDDB_Language.TabIndex" type="System.Int32, mscorlib">
+  <data name="RDDB_Language.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RDDB_Language.Text" xml:space="preserve">
@@ -845,25 +845,25 @@
   <data name="&gt;&gt;RDDB_Language.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib">
+  <data name="RL_SelectLangauge.AutoSize" type="System.Boolean, mscorlib" xml:space="preserve">
     <value>False</value>
   </data>
-  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="RL_SelectLangauge.Font" type="System.Drawing.Font, System.Drawing" xml:space="preserve">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RL_SelectLangauge.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>31, 127</value>
   </data>
-  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_SelectLangauge.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>360, 50</value>
   </data>
-  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib">
+  <data name="RL_SelectLangauge.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RL_SelectLangauge.Text" xml:space="preserve">
     <value>Select Language:</value>
   </data>
-  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RL_SelectLangauge.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing" xml:space="preserve">
     <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;RL_SelectLangauge.Name" xml:space="preserve">
@@ -878,10 +878,10 @@
   <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>6, 42</value>
   </data>
-  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>422, 355</value>
   </data>
   <data name="RPVP_Language.SvgImageXml" xml:space="preserve">
@@ -932,16 +932,16 @@
   <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms" xml:space="preserve">
     <value>Fill</value>
   </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>0, 0</value>
   </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>434, 403</value>
   </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
@@ -959,13 +959,13 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing" xml:space="preserve">
     <value>6, 13</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>434, 403</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA

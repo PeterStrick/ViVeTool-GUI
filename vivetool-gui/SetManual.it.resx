@@ -76,4 +76,7 @@
   <data name="RMI_ActivateF.Text" xml:space="preserve">
     <value>  Attiva funzionalità</value>
   </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      Esegui azione</value>
+  </data>
 </root>
