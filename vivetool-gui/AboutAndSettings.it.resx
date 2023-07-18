@@ -1968,4 +1968,28 @@
   <data name="RMI_L_Japanese.Text" xml:space="preserve">
     <value> 日本語 - Giappnese</value>
   </data>
+  <data name="RMI_L_English.Text" xml:space="preserve">
+    <value> English - Inglese (predefinito)</value>
+  </data>
+  <data name="RMI_L_German.Text" xml:space="preserve">
+    <value> Deutsch - Tedesco</value>
+  </data>
+  <data name="RMI_L_Chinese.Text" xml:space="preserve">
+    <value> 简体中文 - Cinese</value>
+  </data>
+  <data name="RMI_L_Indonesian.Text" xml:space="preserve">
+    <value> Bahasa Indonesia - indonesiano</value>
+  </data>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>Scansiona questa build per ID funzioni</value>
+  </data>
+  <data name="RMI_L_Polish.Text" xml:space="preserve">
+    <value> Polski - Polacco</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>GUI ViveTool controllo funzioni di Windows</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Icone di &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt; /p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0, 0&gt;Repository Github PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Ispirato da &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color =186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Il codice della casella combinata usa &lt;a href="https: //github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;file&lt;/a&gt; da &lt;a href="https:/ /github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Funzionalità aggiornamento fornita da &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt; &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Tradotto da &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186 ,0,0&gt;Peter Strick&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>
