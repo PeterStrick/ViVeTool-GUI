@@ -81,7 +81,7 @@
     <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
   </data>
   <data name="Done_Alert_CaptionText" xml:space="preserve">
-    <value>Debug Symbol Scan completato.</value>
+    <value>Scansione simboli debug completata.</value>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
     <value>{0} è stato copiato correttamente sul tuo desktop.</value>
@@ -181,5 +181,123 @@ L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estra
   </data>
   <data name="Telerik_Yes" xml:space="preserve">
     <value>Sì</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Si è verificata un'eccezione</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Si è verificato un errore</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>Si è verificata un'eccezione durante il tentativo di scrivere un file di prova in {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Comprimi eccezione</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Visualizza eccezione</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>Seleziona una cartella in cui archiviare i simboli di debug scaricati. I file .pdb scaricati in genere occupano fino a 5~8 GB di spazio.</value>
+  </data>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>Si è verificata un'eccezione durante il tentativo di copiare {0} sul desktop.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
+    <value> Cartella simboli eliminata correttamente</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Totale cartelle in {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Error_IOError" xml:space="preserve">
+    <value>Errore I/O</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>La scansione dei simboli debug è stata completa. Per maggiori info torna alla scansione funzioni ViVeTool GUI.</value>
+  </data>
+  <data name="Error_MissingFiles_Heading" xml:space="preserve">
+    <value>Si è verificato un errore. Mancano i file necessari per il corretto funzionamento della scansione funzioni ViVeTool GUI.</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copia l'eccezione negli Appunti e chiudi la finestra di dialogo</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Build non supportata</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Stai eseguendo una build di Windows 10 non supportata. Per funzionare correttamente ViVe, ViVeTool e ViVeTool GUI richiedono Windows 10 Build 18963 o superiore. Questa è la build: {0}</value>
+    <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
+  <data name="Error_mach2Scan_N" xml:space="preserve">
+    <value>Si è verificato un errore durante la scansione dei file dei simboli.
+
+L'applicazione tenterà di ripetere la scansione della cartella dei simboli.</value>
+  </data>
+  <data name="Error_SymchkPath_N" xml:space="preserve">
+    <value>Si è verificato un errore durante il controllo della validità del percorso specificato per symchk.exe.
+
+Assicurati di inserire un percorso valido per symchk.exe.
+
+Se non riesci a trovare symchk.exe, di solito si trova nella cartella di installazione di Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile_N" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di scrivere un file di prova nella cartella dei simboli.
+
+È necessario specificare una cartella dei simboli in cui scaricare i file del database di debug del programma.</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Verifica che siano presenti i seguenti file:
+
+{0}</value>
+  </data>
+  <data name="Error_SymbolDownload_N" xml:space="preserve">
+    <value>Si è verificato un errore durante il download dei file dei simboli.
+
+Controlla se hai accesso a symchk.exe e che l'antivirus non lo stia bloccando.</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Interrompi</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSetValidCellValue" xml:space="preserve">
+    <value>Imposta un valore cella valido</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSelectValidCellValue" xml:space="preserve">
+    <value>Seleziona un valore cella valido</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignora</value>
+  </data>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>Si è verificata un'eccezione durante il tentativo di eliminare {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+Benvenuti nello scanner funzionalità della GUI di ViVeTool
+&lt;/p&gt;&lt;p&gt;
+Questo strumento viene usaato per scaricare ed eseguire la scansione di file .pdb (database debug programma) per build Insider di Windows 10/11 più recenti per creare il proprio elenco di funzionalità.
+&lt;/p&gt;&lt;p&gt;
+Lo scanner funzionalità della GUI di ViVeTool &lt;strong&gt;non dovrebbe essere usato dall'utente medio&lt;/strong&gt;. Il download di file PDB da Microsoft Symbol Server richiede, a seconda della velocità della connessione internet, in genere una media di 2 ore.
+&lt;/p&gt;&lt;p&gt;
+Questo strumento richiede:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5 ~ 30 GB di spazio su disco per archiviare i simboli di debug scaricati
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+Una copia installata degli strumenti di debug per Windows disponibile in Windows SDK
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Dopo esserti assicurato che i requisiti siano soddisfatti, imposta le caselle di testo sottostanti ai rispettivi valori e seleziona "Continua". Passa il mouse su di essi per un esempio.
+&lt;/p&gt;&lt;p&gt;
+Successivamente, l'applicazione inizierà automaticamente a scaricare i file PDB.
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact. A HTML Editor/manually writing a html file and making sure it renders in IE is recommended.</comment>
+  </data>
+  <data name="Error_SymbolPath_NewN" xml:space="preserve">
+    <value>Si è verificato un errore durante il tentativo di scrivere un file di prova in {0}
+
+Assicurati che l'applicazione abbia accesso in scrittura alla cartella e che la cartella non sia protetta da scrittura.</value>
   </data>
 </root>

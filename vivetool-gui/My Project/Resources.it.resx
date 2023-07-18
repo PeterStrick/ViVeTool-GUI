@@ -316,7 +316,7 @@ La memorizzazione del tuo indirizzo IP per 24 ore è una precauzione di sicurezz
     <value>Errore rete</value>
   </data>
   <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
-    <value>Stai eseguendo una build di Windows 10 non supportata. Per funzionare correttamenteViVe, ViVeTool e ViVeTool GUI richiedono Windows 10 Build 18963 o superiore. Questa è la build: {0}</value>
+    <value>Stai eseguendo una build di Windows 10 non supportata. Per funzionare correttamente ViVe, ViVeTool e ViVeTool GUI richiedono Windows 10 Build 18963 o superiore. Questa è la build: {0}</value>
     <comment>{0} references to a Build Number, ex: 19041</comment>
   </data>
   <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">

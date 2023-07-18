@@ -64,4 +64,7 @@
   <data name="RB_EditText.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;b&gt;Modifica testo&lt;/b&gt;&lt;/html&gt;</value>
   </data>
+  <data name="RB_SendComment.Text" xml:space="preserve">
+    <value>Invia commento</value>
+  </data>
 </root>
