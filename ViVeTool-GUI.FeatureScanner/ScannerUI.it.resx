@@ -83,10 +83,10 @@
     <value>Língua</value>
   </data>
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
-    <value>Tematizzazione</value>
+    <value>Impostazione tema</value>
   </data>
   <data name="RGB_Theming.Text" xml:space="preserve">
-    <value>Tematizzazione</value>
+    <value>Impostazione tema</value>
   </data>
   <data name="RPVP_Done.Text" xml:space="preserve">
     <value>Fine</value>
