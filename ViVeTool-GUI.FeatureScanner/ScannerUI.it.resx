@@ -59,7 +59,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RPVP_Setup.Text" xml:space="preserve">
-    <value>Introduzione e Configurazione</value>
+    <value>Introduzione e impostazioni</value>
   </data>
   <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
     <value>Scarica simboli di debug</value>
@@ -77,7 +77,7 @@
     <value>Elimina {My.Settings.SymbolPath}</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
-    <value>File di destinazione: </value>
+    <value>File destinazione: </value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Língua</value>
@@ -92,7 +92,7 @@
     <value>Fine</value>
   </data>
   <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
-    <value>Info &amp; Impostazioni</value>
+    <value>Info e Impostazioni</value>
   </data>
   <data name="RL_DbgPath.Text" xml:space="preserve">
     <value>Cartella per symchk.exe</value>
@@ -104,7 +104,7 @@
     <value>Naviga</value>
   </data>
   <data name="RTB_DbgPath.NullText" xml:space="preserve">
-    <value>Indirizzo per ymchk.exe da Windows 10/11 SDK</value>
+    <value>Percorso file symchk.exe SDK di Windows 10/11</value>
   </data>
   <data name="RL_SymbolFiles.Text" xml:space="preserve">
     <value>File totali in {My.Settings.SymbolPath}:</value>

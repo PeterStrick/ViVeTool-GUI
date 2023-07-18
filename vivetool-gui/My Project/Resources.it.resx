@@ -208,7 +208,7 @@ L'esecuzione della GUI di ViVeTool direttamente da un file ZIP senza prima estra
     <value>Elenco funzioni</value>
   </data>
   <data name="Generic_NotRequired" xml:space="preserve">
-    <value>Non richiesto</value>
+    <value>Operazione non necessaria</value>
   </data>
   <data name="Settings_TheLatestBuildFeatureList" xml:space="preserve">
     <value>Elenco aggiornato funzioni build</value>
@@ -326,7 +326,7 @@ La memorizzazione del tuo indirizzo IP per 24 ore è una precauzione di sicurezz
     <value>Per usare il raggruppamento seleziona Build 17704 o successiva</value>
   </data>
   <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
-    <value>Funzioni di rete disabilitate. Prem' 'F12' per modificare manualmente una funzione.</value>
+    <value>Funzioni di rete disabilitate. Premi 'F12' per modificare manualmente una funzione.</value>
   </data>
   <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
     <value>Si è verificata un'eccezione Win32 generica.</value>
@@ -428,7 +428,7 @@ Il file non esiste.</value>
     <value>Non è stato possibile caricare i commenti perché il server database è attualmente in fase di chiusura.</value>
   </data>
   <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
-    <value>Non è richiesta la correzione dell'archiovio Last Known Good.</value>
+    <value>Non è richiesta la correzione dell'archivio Last Known Good.</value>
   </data>
   <data name="ViVe_Priorities_Fixed" xml:space="preserve">
     <value>Sono state corrette correttamente le priorità delle funzioni. Ti consigliamo un riavvio.</value>

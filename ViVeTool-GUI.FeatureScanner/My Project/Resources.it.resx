@@ -59,21 +59,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
-    <value>Il downlolad di Debug Symbols può essere grande da 5 a 30 GB.</value>
+    <value>Il file da scaricare dei simboli debug può essere grande da 5 a 30 GB.</value>
   </data>
   <data name="SymbolDownloaded" xml:space="preserve">
     <value>Simbolo {0} scaricato.</value>
     <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
   </data>
   <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
-    <value>File totali di {0}: {1}</value>
+    <value>Totale file in {0}: {1}</value>
     <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
   </data>
   <data name="Calculation_Calculating" xml:space="preserve">
-    <value>Calcolando…</value>
+    <value>Calcolo…</value>
   </data>
   <data name="Done_OutputFile_N" xml:space="preserve">
-    <value>File di output: {0}</value>
+    <value>File destinazione: {0}</value>
     <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
   </data>
   <data name="Done_SymbolDelete" xml:space="preserve">
@@ -84,7 +84,7 @@
     <value>Scansione simboli debug completata</value>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
-    <value>{0} è stato copiato correttamente sul tuo desktop.</value>
+    <value>{0} è stato copiato correttamente sul desktop.</value>
     <comment>{0} references to a TXT File, ex: File1.txt</comment>
   </data>
   <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
@@ -104,20 +104,20 @@
     <value>La modifica della lingua richiede il riavvio</value>
   </data>
   <data name="Language_Text" xml:space="preserve">
-    <value>La GUI di ViVeTool deve essere riavviata per confermare il cambio di lingua. Tenterà di riavviarsi dopo aver selezionato 'Chiudi'.</value>
+    <value>Per confermare il cambio della lingua La GUI di ViVeTool deve essere riavviata. La GUI tenterà di riavviarsi dopo aver selezionato 'Chiudi'.</value>
   </data>
   <data name="Browse_PathToDebuggingTools" xml:space="preserve">
     <value>Naviga a symchk.exe dal Windows Debugging Tools</value>
   </data>
   <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
-    <value>Indirizzo di esempio: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+    <value>Esempio percorso: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
   </data>
   <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
-    <value>Dimensione corrente {0}: {1}</value>
+    <value>Dimensione attuale di {0}: {1}</value>
     <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
   </data>
   <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
-    <value> File Copiato correttamente</value>
+    <value> File copiato correttamente</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
