@@ -1237,4 +1237,7 @@
   <data name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>275, 17</value>
   </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>语言</value>
+  </data>
 </root>

@@ -81,7 +81,7 @@
     <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
   </data>
   <data name="Done_Alert_CaptionText" xml:space="preserve">
-    <value>Scansione simboli debug completata.</value>
+    <value>Scansione simboli debug completata</value>
   </data>
   <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
     <value>{0} è stato copiato correttamente sul tuo desktop.</value>

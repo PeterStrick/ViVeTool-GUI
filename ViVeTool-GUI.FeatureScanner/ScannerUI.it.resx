@@ -80,7 +80,7 @@
     <value>File di destinazione: </value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
-    <value>Lingua</value>
+    <value>Língua</value>
   </data>
   <data name="RGB_Theming.HeaderText" xml:space="preserve">
     <value>Tematizzazione</value>
@@ -116,7 +116,7 @@
     <value>Seleziona lingua:</value>
   </data>
   <data name="RadGroupBox1.Text" xml:space="preserve">
-    <value>Lingua</value>
+    <value>Língua</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Usa tema di sistema</value>

@@ -839,4 +839,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value />
   </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Bahasa</value>
+  </data>
 </root>
