@@ -82,4 +82,10 @@
   <data name="RMI_ActivateF.Text" xml:space="preserve">
     <value>  機能を有効化</value>
   </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      アクションを実行</value>
+  </data>
+  <data name="RL_BuildComboBoxORManaully.Text" xml:space="preserve">
+    <value>または</value>
+  </data>
 </root>

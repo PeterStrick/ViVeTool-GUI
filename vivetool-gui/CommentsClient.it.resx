@@ -67,4 +67,13 @@
   <data name="RB_SendComment.Text" xml:space="preserve">
     <value>Invia commento</value>
   </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Seleziona "&lt;strong&gt;Modifica testo&lt;/strong&gt;" per modificare il testo del commento.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puoi scrivere un commento usando un testo normale oppure &lt;strong&gt;&lt;em&gt;Formattazione testo simile HTML&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_AddComment.Text" xml:space="preserve">
+    <value>Aggiungi un commento per la funzione: {0}, build {1}</value>
+  </data>
+  <data name="RL_CommentInfo.Text" xml:space="preserve">
+    <value>Una volta inviato, se necessario, il commento verrà rivisto e modificato.</value>
+  </data>
 </root>

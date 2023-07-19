@@ -79,4 +79,10 @@
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      Esegui azione</value>
   </data>
+  <data name="RB_FixPriority.Text" xml:space="preserve">
+    <value>Correggi priorità</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opzioni avanzate funzioni ViVeTool</value>
+  </data>
 </root>

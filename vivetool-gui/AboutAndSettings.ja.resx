@@ -125,4 +125,13 @@
   <data name="RMI_L_Polish.Text" xml:space="preserve">
     <value> Polski - Polish</value>
   </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Translated by &lt;a href="https://github.com/reindex-ot"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Re*Index.(ot_inc)&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>Windows Feature Control GUI for ViVeTool</value>
+  </data>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>このビルドをスキャンして機能IDを調べる</value>
+  </data>
 </root>

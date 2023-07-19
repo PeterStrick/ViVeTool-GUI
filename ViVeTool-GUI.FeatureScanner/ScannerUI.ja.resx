@@ -142,4 +142,7 @@
   <data name="RMI_L_Japanese.Text" xml:space="preserve">
     <value> 日本語 - Japanese</value>
   </data>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>PDBファイルの保存先</value>
+  </data>
 </root>
