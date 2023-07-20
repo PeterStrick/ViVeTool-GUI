@@ -123,4 +123,52 @@
   <data name="Generic_Close" xml:space="preserve">
     <value>閉じる</value>
   </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>カラムで検索</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>テキストを入力して検索</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>続行</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>現在の位置から検索</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>マスターテンプレート</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>を</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>詳細を隠す</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
 </root>

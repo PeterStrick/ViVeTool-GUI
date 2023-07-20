@@ -64,4 +64,16 @@
   <data name="RB_EditText.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;b&gt;テキストを編集&lt;/b&gt;&lt;/html&gt;</value>
   </data>
+  <data name="RB_SendComment.Text" xml:space="preserve">
+    <value>コメントを送信</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;コメントテキストを編集するには、&lt;strong&gt;テキストを編集&lt;/strong&gt;をクリックしてください。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;通常のテキストを使用してコメントを書くこと以外に&lt;strong&gt;&lt;em&gt;HTMLライクなテキストフォーマットを使用してコメントを書くことができます。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_AddComment.Text" xml:space="preserve">
+    <value>機能のコメントを追加: {0}、ビルド {1}</value>
+  </data>
+  <data name="RL_CommentInfo.Text" xml:space="preserve">
+    <value>送信をしたコメントは確認され、必要に応じて編集されます。</value>
+  </data>
 </root>

@@ -145,4 +145,19 @@
   <data name="RL_SymbolPath.Text" xml:space="preserve">
     <value>PDBファイルの保存先</value>
   </data>
+  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;すべてのセットアップが完了をしたらプログラムデバッグデータベースをダウンロードします。このアプリケーションは、以下のフォルダーにある「.exe」と「.dll」ファイルのPDBファイルを指定したシンボルフォルダーに自動的にダウンロードをし、その後解析をします:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows、&lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;現在インストールされているプログラムやアプリケーションの量によって時間がかかる場合があります。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>デバッグシンボルをスキャンして機能IDを調べる</value>
+  </data>
+  <data name="RL_SymbolFolders.Text" xml:space="preserve">
+    <value>{My.Settings.SymbolPath}のすべてのフォルダー数:</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;スキャンが完了しました。次のいずれかを実行できます:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Features.txtファイルを確認する&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;またはビルドコンボボックスの下にある「手動を使用する」を選択しFeatures.txtファイルをViVeTool-GUIにインポートします&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_InfoScan.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;機能スキャナーは自動的にmach2を使用してPDBファイルのスキャンを開始します。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;mach2のスキャンが完了するまで&lt;strong&gt;このウィンドウやmach2を閉じないでください。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;スキャンの完了後にデスクトップ通知を表示します。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>

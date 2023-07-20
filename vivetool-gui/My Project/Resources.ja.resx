@@ -187,4 +187,70 @@
   <data name="DictUpdate_Text" xml:space="preserve">
     <value>機能辞書は ViVeTool機能名とIDの翻訳を提供する物です。任意ですが、この辞書をダウンロードする事を推奨します。今すぐにダウンロードをしますか?</value>
   </data>
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
+    <value>機能辞書がありません</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>ダウンロード完了</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>マスターテンプレート</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>テキストを入力して検索</value>
+  </data>
+  <data name="Generic_Version" xml:space="preserve">
+    <value>バージョン {0}</value>
+  </data>
+  <data name="Generic_FeatureList" xml:space="preserve">
+    <value>機能リスト</value>
+  </data>
+  <data name="Generic_NotRequired" xml:space="preserve">
+    <value>不要</value>
+  </data>
+  <data name="Settings_TheCurrentBuildFeatureList" xml:space="preserve">
+    <value>現在のビルドの機能一覧</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>カラムで検索</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>現在の位置から検索</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>を</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>詳細を隠す</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>続行</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>再試行</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
 </root>

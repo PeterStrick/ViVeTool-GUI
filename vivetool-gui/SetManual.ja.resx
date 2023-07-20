@@ -76,4 +76,13 @@
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      アクションを実行</value>
   </data>
+  <data name="RB_FixLKG.Text" xml:space="preserve">
+    <value>LastKnownGoodの修正</value>
+  </data>
+  <data name="RB_FixPriority.Text" xml:space="preserve">
+    <value>優先度の修正</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ViVeTool Featuresの高度なオプション</value>
+  </data>
 </root>
