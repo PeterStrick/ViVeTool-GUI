@@ -372,4 +372,7 @@ Running ViVeTool GUI directly from a ZIP file without extracting it first or mis
   <data name="Telerik_Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="TelerikLocalization_MissingID" xml:space="preserve">
+    <value>ID is missing. Create an Issue and include the following Text: {0}</value>
+  </data>
 </root>

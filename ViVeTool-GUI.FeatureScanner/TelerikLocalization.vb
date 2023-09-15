@@ -59,7 +59,8 @@ Public Class CustomRadTaskDialogLocalizationProvider
             Case RadTaskDialogStringId.CancelButtonText
                 Return My.Resources.Telerik_Cancel
             Case Else
-                Return MyBase.GetLocalizedString(id)
+                'Return MyBase.GetLocalizedString(id)
+                Return String.Format(My.Resources.TelerikLocalization_MissingID, id)
         End Select
     End Function
 End Class

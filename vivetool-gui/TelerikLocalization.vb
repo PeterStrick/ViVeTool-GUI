@@ -47,14 +47,16 @@ Public Class CustomRadGridLocalizationProvider
                 Return My.Resources.Telerik_Of
             Case RadGridStringId.SearchRowMatchCase
                 Return My.Resources.Telerik_MatchCase
+            Case RadGridStringId.CopyMenuItem
+                Return My.Resources.Generic_Copy
         End Select
-        Return String.Empty
+        Return String.Format(My.Resources.TelerikLocalization_MissingID, id)
     End Function
 End Class
 
 Public Class CustomRadTaskDialogLocalizationProvider
     Inherits RadTaskDialogLocalizationProvider
-    Public Overrides Function GetLocalizedString(ByVal id As String) As String
+    Public Overrides Function GetLocalizedString(id As String) As String
         Select Case id
             Case RadTaskDialogStringId.ExpanderCollapsedButtonText
                 Return My.Resources.Telerik_SeeDetails
@@ -83,7 +85,8 @@ Public Class CustomRadTaskDialogLocalizationProvider
             Case RadTaskDialogStringId.CancelButtonText
                 Return My.Resources.Telerik_Cancel
             Case Else
-                Return MyBase.GetLocalizedString(id)
+                'Return MyBase.GetLocalizedString(id)
+                Return String.Format(My.Resources.TelerikLocalization_MissingID, id)
         End Select
     End Function
 End Class

@@ -302,45 +302,6 @@ Public Class GUI
     ''' Populates the Build Combo Box. Used at the Form_Load Event
     ''' </summary>
     Private Sub PopulateBuildComboBox()
-        Dim RepoURL As String = "https://api.github.com/repos/riverar/mach2/git/trees/master"
-        Dim FeaturesFolderURL As String = String.Empty
-
-        ' Gets the URL of the features Folder that is used in section 2
-#Region "1. Get the URL of the features folder"
-        '' Required Headers for the GitHub API
-        'Dim WebClientRepo As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
-        'WebClientRepo.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
-        'WebClientRepo.Headers.Add(HttpRequestHeader.UserAgent, "PeterStrick/vivetool-gui")
-
-        '' Get the "tree" array from the API JSON Result
-        'Try
-        '    Dim ContentsJSONRepo As String = WebClientRepo.DownloadString(RepoURL)
-        '    Dim JSONObjectRepo As JObject = JObject.Parse(ContentsJSONRepo)
-        '    Dim JSONArrayRepo As JArray = CType(JSONObjectRepo.SelectToken("tree"), JArray)
-
-        '    ' Look in the JSON Array for the element: "path" = "features"
-        '    For Each element In JSONArrayRepo
-        '        If element("path").ToString = "features" Then FeaturesFolderURL = element("url").ToString
-        '    Next
-
-        'Catch webex As WebException
-        '    Dim webex_Response As String
-        '    Try
-        '        webex_Response = My.Resources.Error_NetworkException_GithubAPI_Response & DirectCast(webex.Response, HttpWebResponse).StatusDescription
-        '    Catch ex As Exception
-        '        webex_Response = webex.ToString
-        '    End Try
-
-        '    RadTD.ShowDialog($" {My.Resources.Error_ANetworkErrorOccurred}", My.Resources.Error_ANetworkErrorOccurred,
-        '    My.Resources.Error_NetworkException_GithubAPI, RadTaskDialogIcon.ShieldErrorRedBar, webex, webex_Response, webex_Response)
-        'Catch ex As Exception
-        '    RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
-        '    Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
-        'End Try
-#End Region
-#Region "Get the features folder File Contents"
-        ' returns JSON File Contents of riverar/mach2/features
-
         ' Required Headers for the GitHub API
         Dim WebClientFeatures As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
         WebClientFeatures.Headers.Add(HttpRequestHeader.ContentType, "application/json; charset=utf-8")
@@ -348,8 +309,6 @@ Public Class GUI
 
         ' Get the "tree" array from the API JSON Result
         Try
-            ' [DEV] Use Dev JSON to not get rate limited while Testing/Developing
-            ' Dim ContentsJSON As String = TempJSONUsedInDevelopment
             Dim ContentsJSONFeatures As String = WebClientFeatures.DownloadString("https://api.github.com/repos/riverar/mach2/git/trees/master?recursive=1")
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
@@ -452,7 +411,6 @@ Public Class GUI
             RadTD.ShowDialog($" {My.Resources.Error_AnExceptionOccurred}", My.Resources.Error_AnUnknownExceptionOccurred,
             Nothing, RadTaskDialogIcon.ShieldErrorRedBar, ex, ex.ToString, ex.ToString)
         End Try
-#End Region
     End Sub
 
     ''' <summary>
@@ -982,6 +940,9 @@ Public Class GUI
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Context Menu Opening EventArgs</param>
     Private Sub RGV_MainGridView_ContextMenuOpening(sender As Object, e As ContextMenuOpeningEventArgs) Handles RGV_MainGridView.ContextMenuOpening
+        ' Skip adding the Comment Option if a Internet Connection is missing
+        If Not HasInternetConnection Then Return
+
         ' Skip if the Context Menu is from the Search Bar
         If e.ContextMenuProvider.GetType = GetType(GridSearchCellElement) Then Return
 
