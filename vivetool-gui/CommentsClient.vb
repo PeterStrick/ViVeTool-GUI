@@ -134,7 +134,6 @@ Public Class CommentsClient
         ' Create a JSON Dictionary
         Dim JSONDict As New Dictionary(Of String, Object) From {
             {"comment", $"{CommentString}"},
-            {"build", $"{Build}"},
             {"featurename", $"{FeatureName}"}
         }
 
