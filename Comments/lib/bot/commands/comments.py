@@ -32,10 +32,10 @@ class comments(commands.Cog):
     # Create "/comments" Slash Command Group
     commentsgrp = SlashCommandGroup("comments", "Manage ViVeTool Comments")
 
-    # Bot /comments get command. Returns a Table of Comments for a specified Build
-    @commentsgrp.command(name="get", description="Returns a Table of every Feature Name and Comment of a desired Build")
+    # Bot /comments get command. Returns a Table of all Comments
+    @commentsgrp.command(name="get", description="Returns a Table of every Feature Name and it's corresponding Comment")
     @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def get(self, ctx: discord.ApplicationContext, build: Option(int, "Enter a Build Number", required=True)):
+    async def get(self, ctx: discord.ApplicationContext):
         # Defer Interaction because DB Interactions take a while
         await ctx.defer()
 
@@ -43,16 +43,8 @@ class comments(commands.Cog):
         DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
         DB_Cursor = DB_Connection.cursor()
 
-        # Check if a Table for the specified Build exists
-        Exists = await MySQL_CheckIfTableExists(build)
-        if Exists is False:
-            await send_embed_error(ctx, f"No comment for Build {build} currently exists",
-                                   "Use /comments add to add a comment", UseFollowUpSend=True)
-            LogAndPrint("Tried to get a comment list for a Build that doesn't exist", "warning")
-            return
-
         # Get all Comments
-        DB_Cursor.execute(f"SELECT * FROM {DB_Comments_Public}.`{build}`")
+        DB_Cursor.execute(f"SELECT * FROM {DB_Comments_Public}.`Comments`")
         DB_comments = DB_Cursor.fetchall()
 
         # Create a List
@@ -79,7 +71,7 @@ class comments(commands.Cog):
     # Bot /comments add command. Adds a ViVeTool Comment to the Database
     @commentsgrp.command(name="add", description="Adds a ViVeTool Comment to the Database")
     @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def add(self, ctx: discord.ApplicationContext, build: Option(int, "Enter a Build Number", required=True),
+    async def add(self, ctx: discord.ApplicationContext,
                   featurename: Option(str, "Enter a ViVeTool Feature Name that you want to add", required=True),
                   comment: Option(str, "Enter a ViVeTool Comment", required=True)):
         # Defer Interaction because DB Interactions take a while
@@ -89,29 +81,21 @@ class comments(commands.Cog):
         DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
         DB_Cursor = DB_Connection.cursor()
 
-        # Create the MySQL Table if it doesn't exist
-        Exists = await MySQL_CheckIfTableExists(build)
-        if Exists is False:
-            DB_Cursor.execute(
-                f"CREATE TABLE {DB_Comments_Public}.`{build}` (FeatureName varchar(100) NOT NULL COLLATE 'utf8mb4_general_ci', Comment TEXT NOT NULL COLLATE 'utf8mb4_general_ci')")
-            await send_embed(ctx, f"Successfully created a Database Table for Build {build}", discord.Color.green(), UseRespond=True)
-            LogAndPrint(f"Created MySQL Table {build}", "info")
-
         # Check if a comment already exists for the specified Feature
-        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`{build}`", "FeatureName", f'"{featurename}"') is True:
-            await send_embed_error(ctx, f"A comment for {featurename} in {build} already exists",
+        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`Comments`", "FeatureName", f'"{featurename}"') is True:
+            await send_embed_error(ctx, f"A comment for {featurename} already exists",
                                    "Use /comments edit to edit a comment", UseRespond=True)
             LogAndPrint("Tried to add a comment to a Feature that already has one", "warning")
             return
 
         # Insert Values in the Table
         DB_Cursor.execute(
-            f'INSERT INTO {{}}.`{{}}` (FeatureName, Comment) VALUES ("{{}}", "{{}}");'.format(DB_Comments_Public, build,
+            f'INSERT INTO {{}}.`{{}}` (FeatureName, Comment) VALUES ("{{}}", "{{}}");'.format(DB_Comments_Public, "Comments",
                                                                                               featurename, comment))
         DB_Cursor.close()
-        await send_embed(ctx, f'The following comment was successfully added to {featurename} in Build {build}:',
+        await send_embed(ctx, f'The following comment was successfully added to {featurename}:',
                          discord.Color.green(), f"{comment}", UseRespond=True)
-        LogAndPrint(f"A comment for {featurename} in {build} was added to the DB.", "info")
+        LogAndPrint(f"A comment for {featurename} was added to the DB.", "info")
 
         # Commit to the Database and close the connection
         DB_Connection.commit()
@@ -120,8 +104,7 @@ class comments(commands.Cog):
     # Bot /comments edit command. Edits a ViVeTool Comment on the Database
     @commentsgrp.command(name="edit", description="Edits an existing ViVeTool Comment in the Database")
     @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def edit(self, ctx, build: Option(int, "Enter a Build Number", required=True),
-                   featurename: Option(str, "Enter a ViVeTool Feature Name that you want to edit", required=True),
+    async def edit(self, ctx, featurename: Option(str, "Enter a ViVeTool Feature Name that you want to edit", required=True),
                    comment: Option(str, "Enter a new ViVeTool Comment", required=True)):
         # Defer Interaction because DB Interactions take a while
         await ctx.defer()
@@ -130,173 +113,30 @@ class comments(commands.Cog):
         DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
         DB_Cursor = DB_Connection.cursor()
 
-        # Create the MySQL Table if it doesn't exist
-        Exists = await MySQL_CheckIfTableExists(build)
-        if Exists is False:
-            await send_embed_error(ctx, f"No comment for Build {build} was ever created", UseRespond=True)
-            LogAndPrint(f"Tried to edit a comment for Build {build} but the MySQL Table doesn't exist", "warning")
-            return
-
         # Check if no comment exists for the specified Feature
-        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`{build}`", "FeatureName", f'"{featurename}"') is False:
-            await send_embed_error(ctx, f"A comment for {featurename} in {build} doesn't exist.",
+        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`Comments`", "FeatureName", f'"{featurename}"') is False:
+            await send_embed_error(ctx, f"A comment for {featurename} doesn't exist.",
                                    "Use /comments add to add a comment", UseRespond=True)
             LogAndPrint("Tried to edit a comment for a Feature that doesn't exist in the DB", "warning")
             return
 
         # Update Values in the Table
         DB_Cursor.execute(
-            f'UPDATE {DB_Comments_Public}.`{build}` SET Comment = "{comment}" WHERE FeatureName = "{featurename}";')
+            f'UPDATE {DB_Comments_Public}.`Comments` SET Comment = "{comment}" WHERE FeatureName = "{featurename}";')
         DB_Cursor.close()
-        await send_embed(ctx, f'The comment for {featurename} in Build {build} was successfully updated to:',
+        await send_embed(ctx, f'The comment for {featurename} was successfully updated to:',
                          discord.Color.green(), f"{comment}", UseRespond=True)
-        LogAndPrint(f"A comment for {featurename} in {build} was updated in the DB.", "info")
+        LogAndPrint(f"A comment for {featurename} was updated in the DB.", "info")
 
         # Commit to the Database and close the connection
         DB_Connection.commit()
         DB_Connection.close()
 
-    # Bot /comments copy command. Copies a ViVeTool Comment on the Database to a new Build
-    @commentsgrp.command(name="copy", description="Copies an existing ViVeTool Comment in the Database to a new Build")
-    @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def copy(self, ctx, oldbuild: Option(int, "Enter the Build Number you want to copy from", required=True),
-                   featurename: Option(str, "Enter a ViVeTool Feature Name that you want to copy", required=True),
-                   newbuild: Option(int, "Enter the Build Number you want to copy to", required=True)):
-
-        # Defer Interaction because DB Interactions take a while
-        await ctx.defer()
-
-        # Check if oldbuild and newbuild are the same
-        if oldbuild == newbuild:
-            await send_embed_error(ctx, f"Incorrect Parameters. Both oldbuild and newbuild are {newbuild}", UseRespond=True)
-            LogAndPrint(f"Tried to copy Data from Table {oldbuild} to {newbuild}", "warning")
-            return
-
-        # Establish DB Connection
-        DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
-        DB_Cursor = DB_Connection.cursor()
-
-        # Check if the Old Table Exists
-        Exists_oldTable = await MySQL_CheckIfTableExists(oldbuild)
-        if Exists_oldTable is False:
-            await send_embed_error(ctx, f"No comment for Build {oldbuild} was ever created", UseRespond=True)
-            LogAndPrint(f"Tried to copy a comment from Build {oldbuild} but the MySQL Table doesn't exist", "warning")
-            return
-
-        # Check if no comment exists for the specified Feature
-        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`{oldbuild}`", "FeatureName",
-                                        f'"{featurename}"') is False:
-            await send_embed_error(ctx, f"A comment for {featurename} in {oldbuild} doesn't exist.",
-                                   "Use /comments add to add a comment", UseRespond=True)
-            LogAndPrint("Tried to copy a comment for a Feature that doesn't exist in the DB", "warning")
-            return
-
-        # Check if the New Table Exists
-        Exists_newTable = await MySQL_CheckIfTableExists(newbuild)
-        if Exists_newTable is False:
-            # Create a New Table if it doesn't
-            DB_Cursor.execute(
-                f"CREATE TABLE {DB_Comments_Public}.`{newbuild}` (FeatureName varchar(100) NOT NULL COLLATE 'utf8mb4_general_ci', Comment TEXT NOT NULL COLLATE 'utf8mb4_general_ci')")
-            await send_embed(ctx, f"Successfully created a Database Table for Build {newbuild}", discord.Color.green(), UseRespond=True)
-            LogAndPrint(f"Created MySQL Table {newbuild}", "info")
-
-            # Add Values into the new Table
-            DB_Cursor.execute(
-                f"INSERT INTO {{}}.`{{}}` SELECT * FROM {{}}.`{{}}` WHERE {{}}.`{{}}`.FeatureName='{{}}';".format(DB_Comments_Public, newbuild, DB_Comments_Public, oldbuild,
-                                                                                                                  DB_Comments_Public, oldbuild, featurename))
-            DB_Cursor.close()
-
-            await send_embed(ctx, f"Successfully copied {featurename} to Build {newbuild}", discord.Color.green(),
-                             UseRespond=True)
-            LogAndPrint(f"Copied {featurename} to MySQL Table {newbuild}", "info")
-
-            # Commit to the Database and close the connection
-            DB_Connection.commit()
-            DB_Connection.close()
-            return
-        else:
-            # Add Values into the Table
-            DB_Cursor.execute(
-                f"INSERT INTO {DB_Comments_Public}.`{newbuild}` SELECT * FROM {DB_Comments_Public}.`{oldbuild}` WHERE {DB_Comments_Public}.`{oldbuild}`.FeatureName='{featurename}';")
-            DB_Cursor.close()
-
-            await send_embed(ctx, f"Successfully copied {featurename} to Build {newbuild}", discord.Color.green(),
-                             UseRespond=True)
-            LogAndPrint(f"Copied {featurename} to MySQL Table {newbuild}", "info")
-
-            # Commit to the Database and close the connection
-            DB_Connection.commit()
-            DB_Connection.close()
-            return
-
-    # Bot /comments copyall command. Copies all ViVeTool Comments on the Database to a new Build
-    @commentsgrp.command(name="copyall", description="Copies all existing ViVeTool Comments in the Database to a new Build")
-    @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def copyall(self, ctx, oldbuild: Option(int, "Enter the Build Number you want to copy from", required=True),
-                      newbuild: Option(int, "Enter the Build Number you want to copy to", required=True)):
-        # Defer Interaction because DB Interactions take a while
-        await ctx.defer()
-
-        # Check if oldbuild and newbuild are the same
-        if oldbuild == newbuild:
-            await send_embed_error(ctx, f"Incorrect Parameters. Both oldbuild and newbuild are {newbuild}",
-                                   UseRespond=True)
-            LogAndPrint(f"Tried to copy Data from Table {oldbuild} to {newbuild}", "warning")
-            return
-
-        # Establish DB Connection
-        DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
-        DB_Cursor = DB_Connection.cursor()
-
-        # Check if the Old Table Exists
-        Exists_oldTable = await MySQL_CheckIfTableExists(oldbuild)
-        if Exists_oldTable is False:
-            await send_embed_error(ctx, f"No comment for Build {oldbuild} was ever created", UseRespond=True)
-            LogAndPrint(f"Tried to copy a comment from Build {oldbuild} but the MySQL Table doesn't exist",
-                        "warning")
-            return
-
-        # Check if the New Table Exists
-        Exists_newTable = await MySQL_CheckIfTableExists(newbuild)
-        if Exists_newTable is False:
-            # Create a Table if it doesn't exist
-            DB_Cursor.execute(
-                f"CREATE TABLE {DB_Comments_Public}.`{newbuild}` AS (SELECT * FROM {DB_Comments_Public}.`{oldbuild}`);")
-            DB_Cursor.close()
-
-            await send_embed(ctx, f"Successfully created a Database Table for Build {newbuild}", discord.Color.green(),
-                             UseRespond=True)
-            LogAndPrint(f"Created MySQL Table {newbuild}", "info")
-
-            await send_embed(ctx, f"Successfully copied all Comments from Build {oldbuild} to Build {newbuild}", discord.Color.green(),
-                             UseRespond=True)
-            LogAndPrint(f"Copied all Data from MySQL Table {oldbuild} to {newbuild}", "info")
-
-            # Commit to the Database and close the connection
-            DB_Connection.commit()
-            DB_Connection.close()
-            return
-        else:
-            # Add Values into the Table
-            DB_Cursor.execute(
-                f"INSERT INTO {DB_Comments_Public}.`{newbuild}` SELECT * FROM {DB_Comments_Public}.`{oldbuild}`;")
-            DB_Cursor.close()
-
-            await send_embed(ctx, f"Successfully copied all Comments from {oldbuild} to {newbuild}",
-                             discord.Color.green(), UseRespond=True)
-            LogAndPrint(f"Copied all Data from MySQL Table {oldbuild} to {newbuild}", "info")
-
-            # Commit to the Database and close the connection
-            DB_Connection.commit()
-            DB_Connection.close()
-            return
-
     # Bot /comments remove command. Removes a ViveTool GUI Comment from the Database
     @commentsgrp.command(name="remove", description="Removes an existing ViVeTool Comment in the Database")
     @commands.has_role(DISCORD_ROLE_CommentsRW)
-    async def remove(self, ctx, build: Option(int, "Enter a Build Number", required=True),
-                     featurename: Option(str, "Enter a ViVeTool Name that you want to remove the Comment from",
-                                         required=True)):
+    async def remove(self, ctx, featurename: Option(str, "Enter a ViVeTool Name that you want to remove the Comment from",
+                                                    required=True)):
         # Defer Interaction because DB Interactions take a while
         await ctx.defer()
 
@@ -304,25 +144,18 @@ class comments(commands.Cog):
         DB_Connection = mysql.connector.connect(**sql_config, database=DB_Comments_Public)
         DB_Cursor = DB_Connection.cursor()
 
-        # Check if the MySQL Table exists
-        Exists = await MySQL_CheckIfTableExists(build)
-        if Exists is False:
-            await send_embed_error(ctx, f"No comment for Build {build} exists", UseRespond=True)
-            LogAndPrint("Tried to remove a comment that doesn't exist", "info")
-            return
-
         # Check if the specified Feature exists
-        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`{build}`", "FeatureName", f'"{featurename}"') is False:
-            await send_embed_error(ctx, f"A comment for {featurename} in {build} doesn't exist.",
+        if await MySQL_CheckIfRowExists(f"{DB_Comments_Public}.`Comments`", "FeatureName", f'"{featurename}"') is False:
+            await send_embed_error(ctx, f"A comment for {featurename} doesn't exist.",
                                    "Use /comments add to add a comment", UseRespond=True)
             LogAndPrint("Tried to remove a Feature that doesn't exist in the DB", "warning")
             return
 
         # Delete the ViVeTool GUI Comment from the Database
-        DB_Cursor.execute(f"DELETE FROM {DB_Comments_Public}.`{build}` WHERE FeatureName='{featurename}';")
-        await send_embed(ctx, f"The comment for {featurename} in Build {build} was deleted successfully",
+        DB_Cursor.execute(f"DELETE FROM {DB_Comments_Public}.`Comments` WHERE FeatureName='{featurename}';")
+        await send_embed(ctx, f"The comment for {featurename} was deleted successfully",
                          discord.Color.green(), UseRespond=True)
-        LogAndPrint(f"A comment for {featurename} in {build} was deleted", "info")
+        LogAndPrint(f"A comment for {featurename} was deleted", "info")
         DB_Cursor.close()
 
         # Commit to the Database and close the connection

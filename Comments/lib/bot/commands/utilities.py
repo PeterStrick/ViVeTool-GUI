@@ -27,6 +27,7 @@ embed_general.add_field(name="1. Be polite and use common sense", value="This sh
                         inline=False)
 embed_general.add_field(name="2. No Homophobic, Racist, Horrifying or Sexual content.",
                         value="This includes Racial/Homophobic Slurs, Gore, NSFW, etc", inline=False)
+embed_general.add_field(name="3. Follow Discord's ToS.", value="[Link to the ToS](https://discord.com/terms)", inline=False)
 embed_general.set_footer(text=EMBED_FOOTER_TEXT, icon_url=ICON_LOGO)
 
 

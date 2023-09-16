@@ -43,11 +43,10 @@ class WebhookForward(Resource):
 
         # Check if the JSON sent with the POST request includes the required JSON elements
         comment = "comment" in json
-        build = "build" in json
         featurename = "featurename" in json
 
-        if comment is False or build is False or featurename is False:
-            # Either comment, build or featurename JSON elements are missing
+        if comment is False or featurename is False:
+            # Either comment or featurename JSON elements are missing
             return {"message": "Invalid JSON. This API should only be used internally by ViVeTool GUI"}, 400
         else:
             try:
@@ -68,11 +67,6 @@ class WebhookForward(Resource):
       "description": "Use /help for Bot Information",
       "color": 60415,
       "fields": [
-        {{
-          "name": "Build",
-          "value": "{}",
-          "inline": true
-        }},
         {{
           "name": "Feature Name",
           "value": "{}",
@@ -98,8 +92,8 @@ class WebhookForward(Resource):
   "avatar_url": "{}",
   "attachments": []
 }}'''
-                webhook = webhook_template_string.format(json["build"], json["featurename"], MessageID[0],
-                                                         json["comment"], Version, ICON_LOGO, ICON_LOGO)
+                webhook = webhook_template_string.format(json["featurename"], MessageID[0], json["comment"], 
+                                                         Version, ICON_LOGO, ICON_LOGO)
 
                 # Send the Webhook
                 header = {"Content-type": "application/json"}
