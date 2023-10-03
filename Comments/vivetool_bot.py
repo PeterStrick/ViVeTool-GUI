@@ -9,11 +9,12 @@ load_dotenv()
 
 # Variables
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+LOG_FILE = os.getenv("LOG_FILE")
 intents = discord.Intents.default()
 bot = discord.Bot(intents=intents)
 
 # Set Up Logging:
-logging.basicConfig(filename='bot.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
                     datefmt='%d.%m.%Y %H:%M')
 
 
