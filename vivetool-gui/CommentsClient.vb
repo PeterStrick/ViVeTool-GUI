@@ -84,6 +84,7 @@ Public Class CommentsClient
     ''' <param name="e">Default EventArgs</param>
     Private Sub Comment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Display Placeholder Comment Text
+        Build = "null"
         RL_Comments.Text = My.Resources.Comments_Form_EditIntroducionText
         RL_AddComment.Text = String.Format(RL_AddComment.Text, FeatureName, Build)
 
@@ -139,7 +140,7 @@ Public Class CommentsClient
 
         ' Create a new HttpClient to send the Comment
         Using CommentsHTTPClient As New HttpClient()
-            Using CommentsHTTPClient_Request As New HttpRequestMessage(New HttpMethod("POST"), "https://direct.rawrr.cf/vAPI/send_comment")
+            Using CommentsHTTPClient_Request As New HttpRequestMessage(New HttpMethod("POST"), "https://direct.rawrr.dev/vAPI/send_comment")
                 ' Create a new JSON String to be sent using a POST Request
                 CommentsHTTPClient_Request.Content = New StringContent(JsonConvert.SerializeObject(JSONDict, Formatting.Indented))
                 CommentsHTTPClient_Request.Content.Headers.ContentType = Headers.MediaTypeHeaderValue.Parse("application/json")

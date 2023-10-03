@@ -313,8 +313,6 @@ Public Class GUI
             Dim JSONObjectFeatures As JObject = JObject.Parse(ContentsJSONFeatures)
             Dim JSONArrayFeatures As JArray = CType(JSONObjectFeatures.SelectToken("tree"), JArray)
 
-            Dim tempList As New List(Of String)
-
             For Each element In JSONArrayFeatures
                 Select Case element("path").ToString.Split(CChar(".")).Length
                     Case 0 ' No File name or Extension. Not used in the Mach2 repo and impossible
@@ -322,12 +320,23 @@ Public Class GUI
                     Case 1 ' Filename; Not used in the Mach2 repo
                         ' Do nothing
                     Case 2 ' Filename.Extension; Ex: 22449.txt
-                        If element("path").ToString.Split(CChar("."))(1) = "txt" Then
-                            tempList.Add(element("path").ToString.Split(CChar("."))(0))
+                        If element("path").ToString.Split(CChar("."))(1) = "txt" AndAlso Not element("path").ToString = "features.txt" Then
+                            ' Second If statement checks for features.txt and ignores it
+                            ' The Tag element holds the absolute part, eg: features/rs_prelease/amd64/12345
+                            ' The Text element holds the friendly name, eg: 12345
+                            Dim item As New RadListDataItem With {
+                                .Tag = element("path").ToString.Split(CChar("."))(0),
+                                .Text = element("path").ToString.Split(CChar("/"))(3).ToString.Split(CChar("."))(0)
+                            }
+                            Invoke(Sub() RDDL_Build.Items.Add(item))
                         End If
                     Case 3 ' File.File.Extension; Ex: 22000.1.txt or 22449_22454_diff.patch
                         If element("path").ToString.Split(CChar("."))(2) = "txt" Then
-                            tempList.Add(element("path").ToString.Split(CChar("."))(0) & "." & element("path").ToString.Split(CChar("."))(1))
+                            Dim item As New RadListDataItem With {
+                                .Tag = element("path").ToString.Split(CChar("."))(0) & "." & element("path").ToString.Split(CChar("."))(1),
+                                .Text = element("path").ToString.Split(CChar("/"))(3).Split(CChar("."))(0) & "." & element("path").ToString.Split(CChar("."))(1)
+                            }
+                            Invoke(Sub() RDDL_Build.Items.Add(item))
                         End If
                     Case 4 ' File.File.File.Extension; Ex: 18980.1_18985.1_diff.patch. Usually used for Diffs in the Mach2 Repo
                         ' Do Nothing
@@ -335,9 +344,6 @@ Public Class GUI
             Next
 
             Invoke(Sub()
-                       ' Add the Items of tempList to the Combo Box
-                       RDDL_Build.Items.AddRange(tempList)
-
                        ' De-select any Item
                        RDDL_Build.SelectedIndex = -1
 
@@ -676,13 +682,13 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
-            If RDDL_Build.Text = "features" Then
-                Invoke(Sub()
-                           MsgBox("Do not load the ""features"" Item inside the Drop Down, this would otherwise create a crash.", MsgBoxStyle.Critical, "debug")
-                           RDDL_Build.SelectedIndex = -1
-                       End Sub)
-                Return
-            End If
+            'If RDDL_Build.Text = "features" Then
+            '    Invoke(Sub()
+            '               MsgBox("Do not load the ""features"" Item inside the Drop Down, this would otherwise create a crash.", MsgBoxStyle.Critical, "debug")
+            '               RDDL_Build.SelectedIndex = -1
+            '           End Sub)
+            '    Return
+            'End If
 
             ' Debug
             Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
@@ -712,7 +718,7 @@ Public Class GUI
             ' Prepare Web Client and download Build TXT
             Dim WebClient As New WebClient With {.Encoding = System.Text.Encoding.UTF8}
             Dim path As String = IO.Path.GetTempPath & "loadedList.txt"
-            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/" & RDDL_Build.Text & ".txt", path)
+            WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/" & RDDL_Build.SelectedItem.Tag.ToString & ".txt", path)
 
             ' Fix for _arm64 Feature Lists
             Dim Build As Integer
@@ -951,7 +957,6 @@ Public Class GUI
                 e.ContextMenu.Items.Add(New RadMenuSeparatorItem())
                 e.ContextMenu.Items.Add(RMI_AddComment)
                 CommentsClient.FeatureName = RGV_MainGridView.SelectedRows.Item(0).Cells(0).Value.ToString
-                CommentsClient.Build = RDDL_Build.Text
             Catch ex As ArgumentException
                 ' Exception that may occur from spam opening the context menu while scrolling down
             Catch ex As NullReferenceException

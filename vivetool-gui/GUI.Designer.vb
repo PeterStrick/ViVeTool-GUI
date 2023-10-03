@@ -86,8 +86,8 @@ Partial Class GUI
         '
         resources.ApplyResources(Me.RDDL_Build, "RDDL_Build")
         Me.RDDL_Build.DropDownAnimationEnabled = True
-        Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(400, 455)
-        Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(400, 455)
+        Me.RDDL_Build.DropDownMaxSize = New System.Drawing.Size(175, 455)
+        Me.RDDL_Build.DropDownMinSize = New System.Drawing.Size(175, 455)
         Me.RDDL_Build.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         Me.RDDL_Build.Name = "RDDL_Build"
         Me.RDDL_Build.SortStyle = Telerik.WinControls.Enumerations.SortStyle.Descending

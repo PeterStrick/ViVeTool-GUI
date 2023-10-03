@@ -137,9 +137,6 @@
   <data name="RDDL_Build.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RDDL_Build.Text" xml:space="preserve">
-    <value>Select Build…</value>
-  </data>
   <data name="&gt;&gt;RDDL_Build.Name" xml:space="preserve">
     <value>RDDL_Build</value>
   </data>
