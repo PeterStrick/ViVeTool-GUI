@@ -3,8 +3,8 @@ VERSION_API=v1.7
 VERSION_BOT=v1.7
 
 # Discord Token and Webhook
-DISCORD_TOKEN=Your Bot Token here
-WEBHOOK_URL="https://discord.com/api/webhooks/YOUR WebHook URL Here"
+DISCORD_TOKEN=Your_Bot_Token_here
+WEBHOOK_URL="https://discord.com/api/webhooks/Your_Webhook_URL_Here"
 
 # Discord Roles
 DISCORD_ROLE_OWNER=123456789
@@ -14,12 +14,12 @@ DISCORD_ROLE_COMMENTSRW=123456789
 ICON_LOGO="https://cdn.discordapp.com/attachments/992324600182620230/997055897371148298/comment.png"
 ICON_CROSS="https://cdn.discordapp.com/attachments/992324600182620230/994861540442394644/cross.png"
 
-# Databse Auth
+# Database Auth
 MYSQL_DB_USER=DB User with Write Privileges here
 MYSQL_DB_PSWD=Password here
 ENC_PSWD=Encryption Password here, recommended to be very long and complex
 
-# Databases
+# Database Names
 DB_COMMENTS_PUBLIC=ViVeTool_GUI
 DB_COMMENTS_API=ViVeTool_GUI_API
 
