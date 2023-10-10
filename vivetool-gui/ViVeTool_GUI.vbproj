@@ -209,6 +209,9 @@
       <DependentUpon>CommentsClient.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.id.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommentsClient.it.resx">
       <DependentUpon>CommentsClient.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -217,9 +220,15 @@
       <DependentUpon>CommentsClient.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.pl.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommentsClient.resx">
       <DependentUpon>CommentsClient.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentsClient.zh.resx">
+      <DependentUpon>CommentsClient.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.de.resx">
       <DependentUpon>GUI.vb</DependentUpon>

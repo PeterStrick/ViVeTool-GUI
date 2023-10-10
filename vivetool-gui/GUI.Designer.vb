@@ -95,10 +95,10 @@ Partial Class GUI
         '
         'RSS_MainStatusStrip
         '
+        resources.ApplyResources(Me.RSS_MainStatusStrip, "RSS_MainStatusStrip")
         Me.RSS_MainStatusStrip.Controls.Add(Me.__DBG_MainBtn)
         Me.RSS_MainStatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.RSS_MainStatusStrip.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RLE_StatusLabel})
-        resources.ApplyResources(Me.RSS_MainStatusStrip, "RSS_MainStatusStrip")
         Me.RSS_MainStatusStrip.Name = "RSS_MainStatusStrip"
         Me.RSS_MainStatusStrip.SizingGrip = False
         Me.RSS_MainStatusStrip.ThemeName = "Fluent"
@@ -112,105 +112,105 @@ Partial Class GUI
         '
         '__DBG_RHI
         '
-        Me.__DBG_RHI.Name = "__DBG_RHI"
         resources.ApplyResources(Me.__DBG_RHI, "__DBG_RHI")
+        Me.__DBG_RHI.Name = "__DBG_RHI"
         '
         '__DBG_GetComments
         '
-        Me.__DBG_GetComments.Name = "__DBG_GetComments"
         resources.ApplyResources(Me.__DBG_GetComments, "__DBG_GetComments")
+        Me.__DBG_GetComments.Name = "__DBG_GetComments"
         '
         '__DBG_SeeCommentsData
         '
-        Me.__DBG_SeeCommentsData.Name = "__DBG_SeeCommentsData"
         resources.ApplyResources(Me.__DBG_SeeCommentsData, "__DBG_SeeCommentsData")
+        Me.__DBG_SeeCommentsData.Name = "__DBG_SeeCommentsData"
         '
         '__DBG_SEP1
         '
-        Me.__DBG_SEP1.Name = "__DBG_SEP1"
         resources.ApplyResources(Me.__DBG_SEP1, "__DBG_SEP1")
+        Me.__DBG_SEP1.Name = "__DBG_SEP1"
         '
         '__DBG_SetRDDL_Build_Text
         '
-        Me.__DBG_SetRDDL_Build_Text.Name = "__DBG_SetRDDL_Build_Text"
         resources.ApplyResources(Me.__DBG_SetRDDL_Build_Text, "__DBG_SetRDDL_Build_Text")
+        Me.__DBG_SetRDDL_Build_Text.Name = "__DBG_SetRDDL_Build_Text"
         '
         '__DBG_SetRDDL_Build_Text_ToNothing
         '
-        Me.__DBG_SetRDDL_Build_Text_ToNothing.Name = "__DBG_SetRDDL_Build_Text_ToNothing"
         resources.ApplyResources(Me.__DBG_SetRDDL_Build_Text_ToNothing, "__DBG_SetRDDL_Build_Text_ToNothing")
+        Me.__DBG_SetRDDL_Build_Text_ToNothing.Name = "__DBG_SetRDDL_Build_Text_ToNothing"
         '
         '__DBG_SEP2
         '
-        Me.__DBG_SEP2.Name = "__DBG_SEP2"
         resources.ApplyResources(Me.__DBG_SEP2, "__DBG_SEP2")
+        Me.__DBG_SEP2.Name = "__DBG_SEP2"
         '
         '__DBG_EnableCommentLoadingFromManualFL
         '
-        Me.__DBG_EnableCommentLoadingFromManualFL.Name = "__DBG_EnableCommentLoadingFromManualFL"
         resources.ApplyResources(Me.__DBG_EnableCommentLoadingFromManualFL, "__DBG_EnableCommentLoadingFromManualFL")
+        Me.__DBG_EnableCommentLoadingFromManualFL.Name = "__DBG_EnableCommentLoadingFromManualFL"
         '
         '__DBG_DisableCommentLoadingFromManualFL
         '
-        Me.__DBG_DisableCommentLoadingFromManualFL.Name = "__DBG_DisableCommentLoadingFromManualFL"
         resources.ApplyResources(Me.__DBG_DisableCommentLoadingFromManualFL, "__DBG_DisableCommentLoadingFromManualFL")
+        Me.__DBG_DisableCommentLoadingFromManualFL.Name = "__DBG_DisableCommentLoadingFromManualFL"
         '
         '__DBG_SEP3
         '
-        Me.__DBG_SEP3.Name = "__DBG_SEP3"
         resources.ApplyResources(Me.__DBG_SEP3, "__DBG_SEP3")
+        Me.__DBG_SEP3.Name = "__DBG_SEP3"
         '
         '__DBG_ChnageLanguage
         '
-        Me.__DBG_ChnageLanguage.Name = "__DBG_ChnageLanguage"
         resources.ApplyResources(Me.__DBG_ChnageLanguage, "__DBG_ChnageLanguage")
+        Me.__DBG_ChnageLanguage.Name = "__DBG_ChnageLanguage"
         '
         '__DBG_SEP4
         '
-        Me.__DBG_SEP4.Name = "__DBG_SEP4"
         resources.ApplyResources(Me.__DBG_SEP4, "__DBG_SEP4")
+        Me.__DBG_SEP4.Name = "__DBG_SEP4"
         '
         '__DBG_SetFeaturePriorityToServiceAsTest
         '
-        Me.__DBG_SetFeaturePriorityToServiceAsTest.Name = "__DBG_SetFeaturePriorityToServiceAsTest"
         resources.ApplyResources(Me.__DBG_SetFeaturePriorityToServiceAsTest, "__DBG_SetFeaturePriorityToServiceAsTest")
+        Me.__DBG_SetFeaturePriorityToServiceAsTest.Name = "__DBG_SetFeaturePriorityToServiceAsTest"
         '
         '__DBG_QueryEnabledState_401122637
         '
-        Me.__DBG_QueryEnabledState_401122637.Name = "__DBG_QueryEnabledState_401122637"
         resources.ApplyResources(Me.__DBG_QueryEnabledState_401122637, "__DBG_QueryEnabledState_401122637")
+        Me.__DBG_QueryEnabledState_401122637.Name = "__DBG_QueryEnabledState_401122637"
         '
         '__DBG_SEP5
         '
-        Me.__DBG_SEP5.Name = "__DBG_SEP5"
         resources.ApplyResources(Me.__DBG_SEP5, "__DBG_SEP5")
+        Me.__DBG_SEP5.Name = "__DBG_SEP5"
         '
         '__DBG_FeatureNaming_DictUpdate
         '
-        Me.__DBG_FeatureNaming_DictUpdate.Name = "__DBG_FeatureNaming_DictUpdate"
         resources.ApplyResources(Me.__DBG_FeatureNaming_DictUpdate, "__DBG_FeatureNaming_DictUpdate")
+        Me.__DBG_FeatureNaming_DictUpdate.Name = "__DBG_FeatureNaming_DictUpdate"
         '
         '__DBG_AutoLoad_Current_Test
         '
-        Me.__DBG_AutoLoad_Current_Test.Name = "__DBG_AutoLoad_Current_Test"
         resources.ApplyResources(Me.__DBG_AutoLoad_Current_Test, "__DBG_AutoLoad_Current_Test")
+        Me.__DBG_AutoLoad_Current_Test.Name = "__DBG_AutoLoad_Current_Test"
         '
         '__DBG_RDDL_Build_SelectedIndexTest
         '
-        Me.__DBG_RDDL_Build_SelectedIndexTest.Name = "__DBG_RDDL_Build_SelectedIndexTest"
         resources.ApplyResources(Me.__DBG_RDDL_Build_SelectedIndexTest, "__DBG_RDDL_Build_SelectedIndexTest")
+        Me.__DBG_RDDL_Build_SelectedIndexTest.Name = "__DBG_RDDL_Build_SelectedIndexTest"
         '
         'RLE_StatusLabel
         '
+        resources.ApplyResources(Me.RLE_StatusLabel, "RLE_StatusLabel")
         Me.RLE_StatusLabel.Name = "RLE_StatusLabel"
         Me.RSS_MainStatusStrip.SetSpring(Me.RLE_StatusLabel, False)
-        resources.ApplyResources(Me.RLE_StatusLabel, "RLE_StatusLabel")
         Me.RLE_StatusLabel.TextWrap = True
         '
         'RGV_MainGridView
         '
-        Me.RGV_MainGridView.BeginEditMode = Telerik.WinControls.RadGridViewBeginEditMode.BeginEditProgrammatically
         resources.ApplyResources(Me.RGV_MainGridView, "RGV_MainGridView")
+        Me.RGV_MainGridView.BeginEditMode = Telerik.WinControls.RadGridViewBeginEditMode.BeginEditProgrammatically
         '
         '
         '
@@ -225,10 +225,12 @@ Partial Class GUI
         Me.RGV_MainGridView.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.RGV_MainGridView.MasterTemplate.AllowRowResize = False
         Me.RGV_MainGridView.MasterTemplate.AllowSearchRow = True
+        Me.RGV_MainGridView.MasterTemplate.Caption = resources.GetString("RGV_MainGridView.MasterTemplate.Caption")
         Me.RGV_MainGridView.MasterTemplate.ClipboardPasteMode = Telerik.WinControls.UI.GridViewClipboardPasteMode.Disable
         GridViewTextBoxColumn1.AllowGroup = False
         GridViewTextBoxColumn1.AllowHide = False
         GridViewTextBoxColumn1.AllowReorder = False
+        resources.ApplyResources(GridViewTextBoxColumn1, "GridViewTextBoxColumn1")
         GridViewTextBoxColumn1.MinWidth = 6
         GridViewTextBoxColumn1.Name = "FeatureName"
         GridViewTextBoxColumn1.ReadOnly = True
@@ -236,10 +238,12 @@ Partial Class GUI
         GridViewTextBoxColumn2.AllowGroup = False
         GridViewTextBoxColumn2.AllowHide = False
         GridViewTextBoxColumn2.AllowReorder = False
+        resources.ApplyResources(GridViewTextBoxColumn2, "GridViewTextBoxColumn2")
         GridViewTextBoxColumn2.MinWidth = 6
         GridViewTextBoxColumn2.Name = "FeatureID"
         GridViewTextBoxColumn2.ReadOnly = True
         GridViewTextBoxColumn2.Width = 100
+        resources.ApplyResources(GridViewTextBoxColumn3, "GridViewTextBoxColumn3")
         GridViewTextBoxColumn3.Name = "FeatureState"
         GridViewTextBoxColumn3.Width = 110
         GridViewTextBoxColumn4.AllowFiltering = False
@@ -250,6 +254,7 @@ Partial Class GUI
         GridViewTextBoxColumn4.AllowResize = False
         GridViewTextBoxColumn4.AllowSearching = False
         GridViewTextBoxColumn4.AllowSort = False
+        resources.ApplyResources(GridViewTextBoxColumn4, "GridViewTextBoxColumn4")
         GridViewTextBoxColumn4.IsVisible = False
         GridViewTextBoxColumn4.Name = "FeatureInfo"
         GridViewTextBoxColumn4.VisibleInColumnChooser = False
@@ -261,6 +266,7 @@ Partial Class GUI
         GridViewImageColumn1.AllowResize = False
         GridViewImageColumn1.AllowSearching = False
         GridViewImageColumn1.AllowSort = False
+        resources.ApplyResources(GridViewImageColumn1, "GridViewImageColumn1")
         GridViewImageColumn1.HeaderImage = Global.ViVeTool_GUI.My.Resources.Resources.icons8_comments_24px
         GridViewImageColumn1.Name = "Comments"
         GridViewImageColumn1.VisibleInColumnChooser = False
@@ -280,13 +286,13 @@ Partial Class GUI
         '
         'P_CommandPanel
         '
+        resources.ApplyResources(Me.P_CommandPanel, "P_CommandPanel")
         Me.P_CommandPanel.Controls.Add(Me.RS_1)
         Me.P_CommandPanel.Controls.Add(Me.RL_BuildComboBoxORManaully)
         Me.P_CommandPanel.Controls.Add(Me.RB_ManuallySetFeature)
         Me.P_CommandPanel.Controls.Add(Me.RB_About)
         Me.P_CommandPanel.Controls.Add(Me.RDDL_Build)
         Me.P_CommandPanel.Controls.Add(Me.RDDB_PerformAction)
-        resources.ApplyResources(Me.P_CommandPanel, "P_CommandPanel")
         Me.P_CommandPanel.Name = "P_CommandPanel"
         '
         'RS_1
@@ -302,14 +308,14 @@ Partial Class GUI
         '
         'RB_ManuallySetFeature
         '
-        Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
         resources.ApplyResources(Me.RB_ManuallySetFeature, "RB_ManuallySetFeature")
+        Me.RB_ManuallySetFeature.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_registration_24px
         Me.RB_ManuallySetFeature.Name = "RB_ManuallySetFeature"
         '
         'RB_About
         '
-        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
         resources.ApplyResources(Me.RB_About, "RB_About")
+        Me.RB_About.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_about_24
         Me.RB_About.Name = "RB_About"
         '
         'RDDB_PerformAction
@@ -322,26 +328,26 @@ Partial Class GUI
         '
         'RMI_ActivateF
         '
+        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
-        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         '
         'RMI_DeactivateF
         '
+        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
-        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         '
         'RMI_RevertF
         '
+        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
-        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         '
         'P_DataPanel
         '
-        Me.P_DataPanel.Controls.Add(Me.RGV_MainGridView)
         resources.ApplyResources(Me.P_DataPanel, "P_DataPanel")
+        Me.P_DataPanel.Controls.Add(Me.RGV_MainGridView)
         Me.P_DataPanel.Name = "P_DataPanel"
         '
         'GUI

@@ -117,22 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RTB_FeatureID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 15</value>
-  </data>
   <data name="RTB_FeatureID.NullText" xml:space="preserve">
     <value>输入 Feature ID</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RTB_FeatureID.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RTB_FeatureID.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RDDB_PerformAction.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="RMI_ActivateF.Text" xml:space="preserve">
     <value>  启用 Feature</value>
@@ -144,25 +134,52 @@
     <value>  将 Feature 还原到默认状态</value>
   </data>
   <data name="RDDB_PerformAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 15</value>
+    <value>258, 26</value>
   </data>
   <data name="RDDB_PerformAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 26</value>
+    <value>154, 33</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RDDB_PerformAction.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="RDDB_PerformAction.Text" xml:space="preserve">
     <value>      执行操作</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RTB_VariantID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 24</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="RB_FixLKG.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAshJREFUSEvdVU1oE0EUXkUlq1fBg6igt0JRaIOIFz3pbhG1mtaEotiD4A/FRtFj
+        DnpoGyW7/bNNxb9UKdb602K0SSrUVKuHouTgpomJQdTUmuanejGX57zNrNukk6TnfvDB8OZ935uZnXnL
+        LT8YZMFqkMRODrgVnM20xuAQ6nlJeMDLYpDwD2UQYwZZrMMcKl0aiPguIRBjHy8LERxvcVrAMnIVmn1d
+        cN7XqY4xhnO8JH7m28VaKi8P3iH4VSHhxp56eKb4IZ3JwPz8fB4xNqxMgNF1hhYS7JzNtpLaFMeG7iN/
+        tQLIsx55kflCpjJpuPSqR8tvpTZsdEwNXVvfVQtb+xpg74AVTjxvAfvkANO4kOfIQtQiDuEQtcvHhdF7
+        6wLfw9lEOsk0YDEUCoPXN6aOk+kUGPvJcUlClPnhpXeD7T/mfkKSbLnQiMVIJApNzRfVIlrsqfI6twup
+        xkRtddwPeGLhma95JooSBPeLUUgmU3lxljkSP7x6uySxn9rqcIfeZpX4lzzBuH8CDhw2geX4SXj46DEk
+        Eomi5hqPDV/BXQSprY5h5Q18/Da9SBCPx+HmrTtQW2eGispKqNy+o6g50jrWjTv4TW11OKdGYDz6gSlC
+        zs7+gt3GatizaydzXiM+RlIgQ211WL1dWVfAwxRpnBm6oZI1p1E9IklQqK2OfYOXY43uNsgwXq3GcgX+
+        f2RZcFFbHdv6GqSK243gnp5kipHlCjz5NJ67pvL+o9R2AXqr1pLJLPYWfDQsg1IFUFPtOo2rjxTtsGSy
+        DVfQ5O1gmpQqgD0rt3rxILVjg/T495h46uV1mCtoG6lYSGVebGGzk4QWalMCNtsq3lFjRwH2Fnz+xdo1
+        nnnuWNSVty6pXWvArkhEYRRvdprBTH4y+LNB4lXc1GvWjDGn9LEURW/Vamxc2FvwbuMLzVEd96u3heTQ
+        7GUJjvsH6YcYZvQWV0UAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>427, 58</value>
+  <data name="RB_FixPriority.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DQAACw0B7QfALAAAAcZJREFUSEvtkstKAlEYx30AF1pO5EI0HWd0Fr2N4GXfTjQJcrwr+ADmbKRHKEIK
+        gvI+3ghazUADPYcYrU7nG87kyUvhhVb+4c8Zzxx+Pz+Ppn3+Ndxr3iaMiwlYydbuwsplxj8sKMKoiPzj
+        kia85I/Jq+2jwwcF1T/EcCwAiTAuqTuZhJVFhu/nVN+ggPAEuDOJb1SMk2ObBeCcjOH9PPINoD8k201A
+        4Aov5xAPAloyKCzegbkWslmroQSsZGtlAO7tZRW+l0W6gJb0c5rQmYdXAoxVCilWKYwsUlhjpMDKf4AO
+        76QVrptFHAhoibwMjr+xpRpSAW4UPoOUHPkOwNl2SvF2MojrQmlJdhEOgZ+Fhq+S6PAWhrfTCE+AO5N4
+        e5nlcMiyCeYl7CPARQULEAsCSuLt/gI3Qt/BfA+kyLu7kXxjmyLSBZQEr5rzL7iRZZJDKYJcDwnkaYjI
+        AwJK4mmtATdCSwDuvD9H7uckFkBnEk8zheEX68GNgMRSCaqOehy5ny6xAEpLkircCTm+WczlAOO4i01P
+        QEBJXPXYdGu4EXvtzIclH4bEWY99Hl0HT8nr3cR+hSU30YnjNjqBZ7K9zy5jMn0BBmF3k5eLA0cAAAAA
+        SUVORK5CYII=
+</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -701,10 +718,6 @@
         4AAAB//////wAAAP//////gAAA///////AAAH//////+AAA///////+AAH///////8AAf///////8AB/
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>手动切换 Feature - 输入 Feature ID</value>

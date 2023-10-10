@@ -56,23 +56,23 @@ Partial Class SetManual
         '
         'RMI_ActivateF
         '
+        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
-        resources.ApplyResources(Me.RMI_ActivateF, "RMI_ActivateF")
         Me.RMI_ActivateF.UseCompatibleTextRendering = False
         '
         'RMI_DeactivateF
         '
+        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
-        resources.ApplyResources(Me.RMI_DeactivateF, "RMI_DeactivateF")
         Me.RMI_DeactivateF.UseCompatibleTextRendering = False
         '
         'RMI_RevertF
         '
+        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
-        resources.ApplyResources(Me.RMI_RevertF, "RMI_RevertF")
         Me.RMI_RevertF.UseCompatibleTextRendering = False
         '
         'RTB_VariantID

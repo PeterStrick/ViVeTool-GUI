@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -121,7 +121,7 @@
     <value>  Info su GUI ViVeTool</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -151,6 +151,18 @@
   <data name="RPVP_Language.Text" xml:space="preserve">
     <value>Lingua</value>
   </data>
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 163</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Icone di &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0, 0&gt;Repository Github PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Ispirato da &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color =186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Il codice della casella combinata usa &lt;a href="https: //github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;file&lt;/a&gt; da &lt;a href="https:/ /github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Funzionalità aggiornamento fornita da &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt; &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Tradotto da &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186 ,0,0&gt;Roberto Boriotti&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>GUI ViveTool controllo funzioni di Windows</value>
+  </data>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>Scansiona questa build per ID funzioni</value>
+  </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Altro</value>
   </data>
@@ -169,7 +181,10 @@
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>Impostazione tema</value>
   </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
+  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 30</value>
+  </data>
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 18</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
@@ -187,7 +202,7 @@
   <data name="RL_SelectLangauge.Text" xml:space="preserve">
     <value>Seleziona lingua:</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA
@@ -1961,35 +1976,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Info e impostazioni</value>
-  </data>
-  <data name="RMI_L_Italian.Text" xml:space="preserve">
-    <value> Italiano - Italian</value>
-  </data>
-  <data name="RMI_L_Japanese.Text" xml:space="preserve">
-    <value> 日本語 - Japanese</value>
-  </data>
-  <data name="RMI_L_English.Text" xml:space="preserve">
-    <value> English</value>
-  </data>
-  <data name="RMI_L_German.Text" xml:space="preserve">
-    <value> Deutsch - German</value>
-  </data>
-  <data name="RMI_L_Chinese.Text" xml:space="preserve">
-    <value> 简体中文 - Chinese</value>
-  </data>
-  <data name="RMI_L_Indonesian.Text" xml:space="preserve">
-    <value> Bahasa Indonesia - Indonesian</value>
-  </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
-    <value>Scansiona questa build per ID funzioni</value>
-  </data>
-  <data name="RMI_L_Polish.Text" xml:space="preserve">
-    <value> Polski - Polish</value>
-  </data>
-  <data name="RL_Description.Text" xml:space="preserve">
-    <value>GUI ViveTool controllo funzioni di Windows</value>
-  </data>
-  <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Icone di &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0, 0&gt;Repository Github PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Ispirato da &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color =186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Il codice della casella combinata usa &lt;a href="https: //github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;file&lt;/a&gt; da &lt;a href="https:/ /github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Funzionalità aggiornamento fornita da &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt; &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Tradotto da &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186 ,0,0&gt;Roberto Boriotti&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
 </root>

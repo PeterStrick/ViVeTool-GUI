@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RL_AddComment.Text" xml:space="preserve">
+    <value>Einen Kommentar für das Feature {0}, Build {1} hinzufügen</value>
+  </data>
+  <data name="RB_SendComment.Text" xml:space="preserve">
+    <value>Kommentar senden</value>
+  </data>
+  <data name="RL_CommentInfo.Text" xml:space="preserve">
+    <value>Nach dem Abschicken wird der Kommentar überprüft und geändert falls erforderlich.</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Drücken Sie auf "&lt;strong&gt;Text ändern&lt;/strong&gt;" um den Kommentar Text zu ändern.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Sie können als Kommentar entweder normalen Text, oder &lt;strong&gt;&lt;em&gt;HTML-ähnlichen Text&lt;/em&gt;&lt;/strong&gt; schreiben.&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_EditText.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;b&gt;Text ändern&lt;/b&gt;&lt;/html&gt;</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAQAEBAAAAEAIABoBAAARgAAACAgAAABACAAqBAAAK4EAAAwMAAAAQAgAKglAABWFQAAQEAAAAEA
         IAAoQgAA/joAACgAAAAQAAAAIAAAAAEAIAAAAAAAMAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -656,22 +671,7 @@
         /////////////////////////////////////////////////////////////////////////////w==
 </value>
   </data>
-  <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Drücken Sie auf "&lt;strong&gt;Text ändern&lt;/strong&gt;" um den Kommentar Text zu ändern.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Sie können als Kommentar entweder normalen Text, oder &lt;strong&gt;&lt;em&gt;HTML-ähnlichen Text&lt;/em&gt;&lt;/strong&gt; schreiben.&lt;/p&gt;&lt;/html&gt;</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Einen Kommentar hinzufügen</value>
-  </data>
-  <data name="RL_AddComment.Text" xml:space="preserve">
-    <value>Einen Kommentar für das Feature {0}, Build {1} hinzufügen</value>
-  </data>
-  <data name="RB_EditText.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;b&gt;Text ändern&lt;/b&gt;&lt;/html&gt;</value>
-  </data>
-  <data name="RL_CommentInfo.Text" xml:space="preserve">
-    <value>Nach dem Abschicken wird der Kommentar überprüft und geändert falls erforderlich.</value>
-  </data>
-  <data name="RB_SendComment.Text" xml:space="preserve">
-    <value>Kommentar senden</value>
   </data>
 </root>
