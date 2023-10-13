@@ -582,13 +582,7 @@
     <value>Privacy Information</value>
   </data>
   <data name="Comments_PrivacyText" xml:space="preserve">
-    <value>Before you can send your comment, you have to agree, that the following Information will be saved indefinitely in a Database:
-
-Selected Build, Selected ViVeTool Feature, Your Comment
-
-You also have to agree, that your IP Address will be encrypted and stored for 24 Hours after pressing on 'Send Comment'.
-
-Storing of your IP Address for 24 Hours is a security precaution to prevent Spam and Abuse.</value>
+    <value>&lt;html&gt;&lt;p&gt;Before you can send your comment, you have to agree that your encrypted IP Address will be stored for a week as part of our &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI/blob/v1.7-Testing/Comments/privacy.md"&gt;Privacy Policy&lt;/a&gt;, after pressing on 'I agree'.&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Comments_I_Agree" xml:space="preserve">
     <value>I Agree</value>

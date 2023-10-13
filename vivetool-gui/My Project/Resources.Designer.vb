@@ -208,13 +208,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Before you can send your comment, you have to agree, that the following Information will be saved indefinitely in a Database:
-        '''
-        '''Selected Build, Selected ViVeTool Feature, Your Comment
-        '''
-        '''You also have to agree, that your IP Address will be encrypted and stored for 24 Hours after pressing on &apos;Send Comment&apos;.
-        '''
-        '''Storing of your IP Address for 24 Hours is a security precaution to prevent Spam and Abuse. ähnelt.
+        '''  Sucht eine lokalisierte Zeichenfolge, die &lt;html&gt;&lt;p&gt;Before you can send your comment, you have to agree that your encrypted IP Address will be stored for a week as part of our &lt;a href=&quot;https://github.com/PeterStrick/ViVeTool-GUI/blob/v1.7-Testing/Comments/privacy.md&quot;&gt;Privacy Policy&lt;/a&gt;, after pressing on &apos;I agree&apos;.&lt;/p&gt;&lt;/html&gt; ähnelt.
         '''</summary>
         Friend ReadOnly Property Comments_PrivacyText() As String
             Get
