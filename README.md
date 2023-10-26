@@ -9,7 +9,7 @@
 ### Windows Feature Control GUI based on ViVeTool
 
 ## What is ViVeTool GUI?
-ViVeTool GUI let´s you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
+ViVeTool GUI lets you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
 
 ## Disclaimer.
 ### No one, including me / [PeterStrick](https://github.com/PeterStrick), [the creators of ViVe and ViVeTool](https://github.com/thebookisclosed/ViVe) or [the creators of mach2](https://github.com/riverar/mach2) are responsible for any damage or unintended side effects, this program might cause to your computer, by changing the Windows Feature Store. Use this program at your own risk.
@@ -58,7 +58,7 @@ Since ViVeTool GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and 
 Apart from that, the only Requirement is .Net Framework 4.8
 
 ## Why not just use ViVeTool?
-Using ViVeTool GUI is more easier and user-friendly, besides it let's you also search for features and enable them with a few clicks.
+Using ViVeTool GUI is more easier and user-friendly, besides it lets you also search for features and enable them with a few clicks.
 
 # Licensing
 ViVeTool GUI uses Icons from [icons8.com](https://icons8.com/)
