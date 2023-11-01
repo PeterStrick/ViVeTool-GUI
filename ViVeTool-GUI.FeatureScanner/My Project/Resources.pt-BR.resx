@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Browse_PathToDebuggingTools" xml:space="preserve">
+    <value>Caminho para symchk.exe nas Ferramentas de Depuração do Windows</value>
+  </data>
+  <data name="Browse_SymbolPath_Description" xml:space="preserve">
+    <value>Selecione uma Pasta para armazenar os Símbolos de Depuração baixados. Os Arquivos .pdb baixados geralmente ocupam de 5 a 8 GB de Espaço.</value>
+  </data>
+  <data name="ToolTip_RTB_DbgPath" xml:space="preserve">
+    <value>Exemplo de Caminho: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
+  </data>
+  <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
+    <value>Os Símbolos de Depuração Baixados podem ter de 5 à 30 GB de tamanho.</value>
+  </data>
+  <data name="Error_UnsupportedBuild_Text_N" xml:space="preserve">
+    <value>Você está executando uma versão não suportada do Windows 10. ViVe, ViVeTool e ViVeTool GUI requerem o Windows 10 Versão 18963 ou superior para funcionar corretamente. Sua Versão é: {0}</value>
+    <comment>{0} references to a Build Number, ex: 19041</comment>
+  </data>
+  <data name="Generic_DarkTheme" xml:space="preserve">
+    <value>Tema Escuro</value>
+  </data>
+  <data name="Error_AnErrorOccurred" xml:space="preserve">
+    <value>Houve um Erro</value>
+  </data>
 </root>
