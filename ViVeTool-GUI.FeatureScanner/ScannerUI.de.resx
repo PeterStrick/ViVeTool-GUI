@@ -117,45 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RPVP_Setup.Text" xml:space="preserve">
-    <value>Einführung und Einrichtung</value>
-  </data>
-  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
-    <value>Debug Symbole herunterladen</value>
-  </data>
-  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
-    <value>Debug Symbole für Feature IDs durchsuchen</value>
-  </data>
-  <data name="RPVP_Done.Text" xml:space="preserve">
-    <value>Fertig stellen</value>
-  </data>
-  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
-    <value>Info &amp; Einstellungen</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RL_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 401</value>
+    <value>3, 116</value>
   </data>
   <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 18</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RL_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="RL_SymbolPath.Text" xml:space="preserve">
     <value>Pfad zum speichern der PDB Dateien</value>
   </data>
   <data name="RL_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 358</value>
+    <value>6, 71</value>
   </data>
   <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 18</value>
   </data>
+  <data name="RL_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="RL_DbgPath.Text" xml:space="preserve">
     <value>Pfad zu symchk.exe</value>
   </data>
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 113</value>
+  </data>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Pfad zum Speichern der heruntergeladenen Debug Symbole</value>
+  </data>
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>512, 24</value>
+  </data>
+  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 70</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Pfad zu symchk.exe der Windows 10/11 SDK</value>
+  </data>
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>511, 24</value>
+  </data>
+  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="RB_Continue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 310</value>
+    <value>362, 26</value>
+  </data>
+  <data name="RB_Continue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 30</value>
+  </data>
+  <data name="RB_Continue.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="RB_Continue.Text" xml:space="preserve">
     <value>Weiter</value>
+  </data>
+  <data name="__DBG_OPTIONS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>570, 32</value>
   </data>
   <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
     <value>Auswählen</value>
@@ -163,20 +188,8 @@
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>Auswählen</value>
   </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 396</value>
-  </data>
-  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
-    <value>Pfad zum Speichern der heruntergeladenen Debug Symbole</value>
-  </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 24</value>
-  </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 353</value>
-  </data>
-  <data name="RTB_DbgPath.NullText" xml:space="preserve">
-    <value>Pfad zu symchk.exe der Windows 10/11 SDK</value>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Einführung und Einrichtung</value>
   </data>
   <data name="RTB_PDBDownloadStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 142</value>
@@ -189,6 +202,9 @@
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Nun da alles eingerichtet ist, werden die Debug Symbole heruntergeladen. Die Anwendung lädt automatisch PDB Symbole für .exe und .dll Dateien von den folgenden Ordnern herunter:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Dies wird sehr lang dauern, abhängig von wieviele Programme Sie installiert haben.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Debug Symbole herunterladen</value>
   </data>
   <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
     <value>335, 23</value>
@@ -214,17 +230,29 @@
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Der Feature Scanner beginnt nun die PDB Dateien mit mach2 zu durchsuchen&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Dieses Fenster oder mach2 bitte &lt;strong&gt;nicht &lt;/strong&gt;schließen, bis mach2 fertig gescannt hat.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Sie werden eine Desktop Benachrichtigung erhalten, wenn die Suche abgeschlossen ist.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>Debug Symbole für Feature IDs durchsuchen</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 92</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 39</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>{My.Settings.SymbolPath} Löschen</value>
+  </data>
   <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 23</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
     <value>Optionale Aktionen:</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 316</value>
-  </data>
-  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
-    <value>{My.Settings.SymbolPath} Löschen</value>
   </data>
   <data name="RB_OA_CopyFeaturesTXT.Size" type="System.Drawing.Size, System.Drawing">
     <value>281, 39</value>
@@ -232,14 +260,14 @@
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>Die Features.txt Datei speichern</value>
   </data>
-  <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 16px"&gt;Der Scan ist abgeschlossen. Sie können nun:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 12pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;Die Features.txt Datei begutachten&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 12pt"&gt;oder die Features.txt Datei manuell Laden indem sie "Use Manual" in der Build Combo Box auswählen&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
-  </data>
   <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 23</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>Erstellte Datei: </value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Fertig stellen</value>
   </data>
   <data name="RDDB_Language.Text" xml:space="preserve">
     <value>Sprache auswählen:</value>
@@ -307,6 +335,9 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Info &amp; Einstellungen</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

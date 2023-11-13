@@ -117,20 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RPVP_Setup.Text" xml:space="preserve">
-    <value>Pengenalan dan Persiapan</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 18</value>
   </data>
-  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
-    <value>Unduh Simbol Debug</value>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>Jalur untuk menyimpan File PDB</value>
   </data>
-  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
-    <value>Pindai Simbol Debug untuk ID Fitur</value>
+  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 18</value>
   </data>
-  <data name="RPVP_Done.Text" xml:space="preserve">
-    <value>Selesai</value>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Jalur ke symchk.exe</value>
   </data>
-  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
-    <value>Tentang &amp; Pengaturan</value>
+  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 112</value>
+  </data>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Jalur untuk menyimpan Simbol Debugging yang diunduh ke</value>
+  </data>
+  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RTB_SymbolPath.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 70</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Jalur ke symchk.exe dari Windows 10/11 SDK</value>
+  </data>
+  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 24</value>
+  </data>
+  <data name="RTB_DbgPath.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Lanjutkan</value>
   </data>
   <data name="__DBG_UnlockAllTabs.Text" xml:space="preserve">
     <value />
@@ -150,48 +176,20 @@
   <data name="__DBG_OPTIONS.Text" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 18</value>
-  </data>
-  <data name="RL_SymbolPath.Text" xml:space="preserve">
-    <value>Jalur untuk menyimpan File PDB</value>
-  </data>
-  <data name="RL_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 18</value>
-  </data>
-  <data name="RL_DbgPath.Text" xml:space="preserve">
-    <value>Jalur ke symchk.exe</value>
-  </data>
-  <data name="RB_Continue.Text" xml:space="preserve">
-    <value>Lanjutkan</value>
-  </data>
   <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
     <value>Jelajahi</value>
   </data>
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>Jelajahi</value>
   </data>
-  <data name="RTB_SymbolPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 394</value>
-  </data>
-  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
-    <value>Jalur untuk menyimpan Simbol Debugging yang diunduh ke</value>
-  </data>
-  <data name="RTB_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 24</value>
-  </data>
-  <data name="RTB_DbgPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 351</value>
-  </data>
-  <data name="RTB_DbgPath.NullText" xml:space="preserve">
-    <value>Jalur ke symchk.exe dari Windows 10/11 SDK</value>
-  </data>
-  <data name="RTB_DbgPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>533, 24</value>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Pengenalan dan Persiapan</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Sekarang setelah Anda siap, sekarang saatnya mengunduh Program Debug Databases. Aplikasi akan secara otomatis mengunduh File PDB untuk File .exe dan .dll di Folder berikut ke folder simbol yang Anda tentukan, dan akan menganalisisnya setelahnya:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\File Program, C:\File Program (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Ini akan memakan waktu lama, tergantung pada jumlah program dan aplikasi yang terpasang saat ini.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Unduh Simbol Debug</value>
   </data>
   <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
     <value>281, 23</value>
@@ -217,23 +215,29 @@
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Pemindai Fitur sekarang akan secara otomatis mulai memindai File PDB menggunakan mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;strong&gt;Jangan&lt;/strong&gt; tutup jendela ini atau mach2, hingga mach2 selesai memindai.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Anda akan diberi tahu melalui pemberitahuan desktop setelah pemindaian selesai.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>Pindai Simbol Debug untuk ID Fitur</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;Pemindaian telah selesai. Anda sekarang dapat:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Tinjau file Features.txt Anda&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;atau Impor file Features.txt Anda ke ViVeTool-GUI dengan memilih Drop Down "Gunakan Manual" di bagian bawah Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Hapus {My.Settings.SymbolPath}</value>
+  </data>
   <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 23</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
     <value>Aksi Opsional:</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
-    <value>Hapus {My.Settings.SymbolPath}</value>
-  </data>
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>Salin File Features.txt ke Desktop Anda</value>
   </data>
-  <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;Pemindaian telah selesai. Anda sekarang dapat:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Tinjau file Features.txt Anda&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;atau Impor file Features.txt Anda ke ViVeTool-GUI dengan memilih Drop Down "Gunakan Manual" di bagian bawah Build Combo Box&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
-  </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>File Output: </value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Selesai</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  Gunakan Tema Sistem</value>
@@ -297,6 +301,9 @@
         4bPs1YxJnPAHOArIxgifZa9mTOKEPzDCU0AxavidsFfThl+MGn5qZFL+3lBFURRFURRFURRFURTljOjq
         +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Tentang &amp; Pengaturan</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

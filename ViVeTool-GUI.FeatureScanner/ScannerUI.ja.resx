@@ -117,21 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RPVP_Setup.Text" xml:space="preserve">
-    <value>導入とセットアップ</value>
-  </data>
-  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
-    <value>デバッグシンボルをダウンロード</value>
-  </data>
-  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
-    <value>デバッグシンボルをスキャンして機能IDを調べる</value>
-  </data>
-  <data name="RPVP_Done.Text" xml:space="preserve">
-    <value>完了しました</value>
-  </data>
-  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
-    <value>バージョン情報と設定</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RL_SymbolPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 18</value>
@@ -145,6 +130,9 @@
   <data name="RL_DbgPath.Text" xml:space="preserve">
     <value>symchk.exeのパス</value>
   </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Windows 10/11 SDKのsymchk.exeのパス</value>
+  </data>
   <data name="RB_Continue.Text" xml:space="preserve">
     <value>続行</value>
   </data>
@@ -154,11 +142,14 @@
   <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
     <value>参照</value>
   </data>
-  <data name="RTB_DbgPath.NullText" xml:space="preserve">
-    <value>Windows 10/11 SDKのsymchk.exeのパス</value>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>導入とセットアップ</value>
   </data>
   <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;すべてのセットアップが完了をしたらプログラムデバッグデータベースをダウンロードします。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;このアプリケーションは、「.exe」および「.dll」ファイルの PDB ファイルを自動的にダウンロードし、以下のフォルダーに保存して分析します。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows, &lt;/span&gt;&lt;span style="font-size: 9pt"&gt;C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;現在インストールされているプログラムやアプリケーションの量によって時間がかかる場合があります。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>デバッグシンボルをダウンロード</value>
   </data>
   <data name="RL_SymbolFolders.Size" type="System.Drawing.Size, System.Drawing">
     <value>325, 23</value>
@@ -184,26 +175,32 @@
   <data name="RL_InfoScan.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;機能スキャナーは自動的にmach2を使用してPDBファイルのスキャンを開始します。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;mach2のスキャンが完了するまで&lt;strong&gt;このウィンドウやmach2を閉じないでください。&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;スキャンの完了後にデスクトップ通知を表示します。&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>デバッグシンボルをスキャンして機能IDを調べる</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;スキャンが完了しました。次のいずれかを実行できます:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Features.txtファイルを確認する&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;またはビルドコンボボックスの下にある「手動を使用する」を選択しFeatures.txtファイルをViVeTool-GUIにインポートします&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>{My.Settings.SymbolPath} を削除</value>
+  </data>
   <data name="RL_OA.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 23</value>
   </data>
   <data name="RL_OA.Text" xml:space="preserve">
     <value>アクションのオプション:</value>
   </data>
-  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
-    <value>{My.Settings.SymbolPath} を削除</value>
-  </data>
   <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
     <value>Features.txtファイルを保存</value>
-  </data>
-  <data name="RL_Done.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;スキャンが完了しました。次のいずれかを実行できます:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Features.txtファイルを確認する&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;またはビルドコンボボックスの下にある「手動を使用する」を選択しFeatures.txtファイルをViVeTool-GUIにインポートします&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
   </data>
   <data name="RL_OutputFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 23</value>
   </data>
   <data name="RL_OutputFile.Text" xml:space="preserve">
     <value>出力ファイル: </value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>完了しました</value>
   </data>
   <data name="RDDB_Language.Text" xml:space="preserve">
     <value>言語を選択:</value>
@@ -249,6 +246,9 @@
         4bPs1YxJnPAHOArIxgifZa9mTOKEPzDCU0AxavidsFfThl+MGn5qZFL+3lBFURRFURRFURRFURTljOjq
         +g+8ovKw+DOuXgAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>バージョン情報と設定</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

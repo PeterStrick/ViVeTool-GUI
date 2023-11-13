@@ -119,7 +119,7 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
-    Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_DbgPath.ToolTipTextNeeded
+    Private Sub RTB_DbgPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs)
         e.ToolTip.AutoPopDelay = 15000
         e.ToolTipText = My.Resources.ToolTip_RTB_DbgPath
     End Sub
@@ -129,7 +129,7 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">ToolTipTextNeeded EventArgs</param>
-    Private Sub RTB_SymbolPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs) Handles RTB_SymbolPath.ToolTipTextNeeded
+    Private Sub RTB_SymbolPath_ToolTipTextNeeded(sender As Object, e As ToolTipTextNeededEventArgs)
         e.ToolTip.AutoPopDelay = 15000
         e.ToolTipText = My.Resources.ToolTip_RTB_SymbolPath
     End Sub
@@ -489,7 +489,7 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles RB_OA_CopyFeaturesTXT.Click, __DBG_CopyFeatureList.Click
+    Private Sub RB_OA_CopyFeaturesTXT_Click(sender As Object, e As EventArgs) Handles __DBG_CopyFeatureList.Click, RB_OA_CopyFeaturesTXT.Click
         Try
             Dim RSFD As New RadSaveFileDialog With {.DefaultExt = "txt", .Filter = "Text Files (*.txt)|*.txt"}
             If RSFD.ShowDialog = DialogResult.OK Then
@@ -507,7 +507,7 @@ Public Class ScannerUI
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RB_OA_DeleteSymbolPath_Click(sender As Object, e As EventArgs) Handles RB_OA_DeleteSymbolPath.Click
+    Private Sub RB_OA_DeleteSymbolPath_Click(sender As Object, e As EventArgs)
         Try
             IO.Directory.Delete(My.Settings.SymbolPath, True)
 
