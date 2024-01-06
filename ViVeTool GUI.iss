@@ -40,74 +40,77 @@ UninstallDisplayIcon={app}\ViVeTool_GUI.exe
 AlwaysShowComponentsList=False
 ShowComponentSizes=False
 InternalCompressLevel=ultra64
+UsePreviousSetupType=False
+FlatComponentsList=False
+UsePreviousTasks=False
+DisableDirPage=yes
+AlwaysShowDirOnReadyPage=yes
 
 [Files]
 ;Telerik Libraries
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.GridView.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.RadMarkupEditor.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.RadToastNotification.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.Themes.Fluent.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.Themes.FluentDark.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.UI.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\TelerikCommon.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.GridView.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.RadMarkupEditor.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.RadToastNotification.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.Themes.Fluent.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.Themes.FluentDark.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Telerik.WinControls.UI.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\TelerikCommon.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;System Libraries
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.mshtml.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Toolkit.Uwp.Notifications.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Extensions.Logging.Abstractions.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.mshtml.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Toolkit.Uwp.Notifications.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Extensions.Logging.Abstractions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;Microsoft Edge WebView2 Files
-Source: "vivetool-gui\bin\x64\Debug\runtimes\*"; DestDir: "{app}\runtimes"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Web.WebView2.Core.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Microsoft.Web.WebView2.WinForms.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\runtimes\*"; DestDir: "{app}\runtimes"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Web.WebView2.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Microsoft.Web.WebView2.WinForms.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;3rd-Party Libraries
-Source: "vivetool-gui\bin\x64\Debug\Albacore.ViVe.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\AutoUpdater.NET.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\MySqlConnector.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\Albacore.ViVe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\AutoUpdater.NET.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Newtonsoft.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\MySqlConnector.dll"; DestDir: "{app}"; Flags: ignoreversion
 ;Program Debug Databases
-Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\AutoUpdater.NET.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\Albacore.ViVe.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\AutoUpdater.NET.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\Albacore.ViVe.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.pdb"; DestDir: "{app}"; Flags: ignoreversion
 ;Feature Scanner Files
-Source: "vivetool-gui\bin\x64\Debug\mach2\*"; DestDir: "{app}\mach2"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\mach2\*"; DestDir: "{app}\mach2"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.exe"; DestDir: "{app}"; Flags: ignoreversion
 ;Language Files
-Source: "vivetool-gui\bin\x64\Debug\zh\*"; DestDir: "{app}\zh"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\pl\*"; DestDir: "{app}\pl"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ja\*"; DestDir: "{app}\ja"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\it\*"; DestDir: "{app}\it"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\id\*"; DestDir: "{app}\id"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\de\*"; DestDir: "{app}\de"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\pt-BR\*"; DestDir: "{app}\pt-BR"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\zh\*"; DestDir: "{app}\zh"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\pl\*"; DestDir: "{app}\pl"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\ja\*"; DestDir: "{app}\ja"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\it\*"; DestDir: "{app}\it"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\id\*"; DestDir: "{app}\id"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\de\*"; DestDir: "{app}\de"; Flags: ignoreversion createallsubdirs recursesubdirs
+Source: "vivetool-gui\bin\x64\Debug\pt-BR\*"; DestDir: "{app}\pt-BR"; Flags: ignoreversion createallsubdirs recursesubdirs
 ;GUI Files
-Source: "vivetool-gui\bin\x64\Debug\FeatureDictionary.pfs"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\FeatureDictionary.pfs"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.exe"; DestDir: "{app}"; Flags: ignoreversion
 ;Configs
-Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.dll.config"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
-Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\CrashReporter.NET.dll.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.FeatureScanner.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 
 [Tasks]
-Name: "dicons_main"; Description: "Create desktop shortcuts for ViVeTool GUI"; GroupDescription: "{cm:AdditionalIcons}"; Components: ViVeTool_GUI
+Name: "dicons_main"; Description: "Create desktop shortcuts for ViVeTool GUI"; GroupDescription: "{cm:AdditionalIcons}"
 
 [Icons]
-Name: "{group}\ViVeTool GUI"; Filename: "{app}\ViVeTool_GUI.exe"; Components: ViVeTool_GUI
+Name: "{group}\ViVeTool GUI"; Filename: "{app}\ViVeTool_GUI.exe"
 Name: "{commondesktop}\ViVeTool GUI"; Filename: "{app}\ViVeTool_GUI.exe"; Tasks: dicons_main
 
 [Run]
 Filename: "{app}\ViVeTool_GUI.exe"; Flags: nowait postinstall skipifsilent runascurrentuser 64bit; Description: "{cm:LaunchProgram,ViVeTool GUI}"
 
-[Components]
-Name: "ViVeTool_GUI"; Description: "Core Files of ViVeTool GUI"; Types: custom full compact; Flags: fixed; MinVersion: 0,10.0.18963
