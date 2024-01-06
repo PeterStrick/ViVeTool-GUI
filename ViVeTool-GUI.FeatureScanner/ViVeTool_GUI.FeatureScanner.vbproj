@@ -181,6 +181,9 @@
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScannerUI.pt-BR.resx">
+      <DependentUpon>ScannerUI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ScannerUI.zh.resx">
       <DependentUpon>ScannerUI.vb</DependentUpon>
       <SubType>Designer</SubType>

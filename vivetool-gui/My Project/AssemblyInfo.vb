@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ViVeTool GUI")>
 <Assembly: AssemblyDescription("Windows Feature Control GUI for ViVeTool")>
-<Assembly: AssemblyCompany("Peters Software Solutions")>
+<Assembly: AssemblyCompany("Peter Strick")>
 <Assembly: AssemblyProduct("ViVeTool GUI")>
-<Assembly: AssemblyCopyright("Copyright © 2023 Peter Strick")>
+<Assembly: AssemblyCopyright("Copyright © 2024 Peter Strick")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.6.999.5")>
-<Assembly: AssemblyFileVersion("1.6.999.5")>
+<Assembly: AssemblyVersion("1.7.0.0")>
+<Assembly: AssemblyFileVersion("1.7.0.0")>

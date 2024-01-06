@@ -7,7 +7,7 @@
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{C6BF5A05-B2DE-447A-ADA4-1F6F2E8ADC97}
 AppName=ViVeTool GUI
-AppVersion=1.6.999.5
+AppVersion=1.7.0.0
 ;AppVerName=ViveTool GUI 1.6
 AppPublisher=Peter Strick
 AppPublisherURL=https://www.github.com/peterstrick/vivetool-gui
@@ -27,12 +27,12 @@ ArchitecturesAllowed=x64
 AppCopyright=Copyright ©️ 2024 Peter Strick
 UsePreviousPrivileges=False
 AppReadmeFile=https://www.github.com/peterstrick/vivetool-gui
-VersionInfoVersion=1.6.999.5
+VersionInfoVersion=1.7.0.0
 VersionInfoCompany=Peter Strick
 VersionInfoDescription=ViVeTool GUI Setup
 VersionInfoCopyright=Copyright ©️ 2024 Peter Strick
 VersionInfoProductName=ViVeTool GUI
-VersionInfoProductVersion=1.6.999.5
+VersionInfoProductVersion=1.7.0.0
 VersionInfoOriginalFileName=ViVeTool GUI Setup.exe
 MinVersion=0,10.0.18963
 UninstallDisplayName=ViVeTool GUI
@@ -90,6 +90,7 @@ Source: "vivetool-gui\bin\x64\Debug\ja\*"; DestDir: "{app}\ja"; Flags: ignorever
 Source: "vivetool-gui\bin\x64\Debug\it\*"; DestDir: "{app}\it"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
 Source: "vivetool-gui\bin\x64\Debug\id\*"; DestDir: "{app}\id"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
 Source: "vivetool-gui\bin\x64\Debug\de\*"; DestDir: "{app}\de"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
+Source: "vivetool-gui\bin\x64\Debug\pt-BR\*"; DestDir: "{app}\pt-BR"; Flags: ignoreversion createallsubdirs recursesubdirs; Components: ViVeTool_GUI
 ;GUI Files
 Source: "vivetool-gui\bin\x64\Debug\FeatureDictionary.pfs"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI
 Source: "vivetool-gui\bin\x64\Debug\ViVeTool_GUI.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: ViVeTool_GUI

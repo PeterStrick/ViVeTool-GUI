@@ -1,5 +1,5 @@
 ﻿'ViVeTool-GUI - Windows Feature Control GUI for ViVeTool
-'Copyright (C) 2022  Peter Strick / Peters Software Solutions
+'Copyright (C) 2024 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
 'it under the terms of the GNU General Public License as published by
