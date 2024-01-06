@@ -37,6 +37,7 @@ Partial Class AboutAndSettings
         Me.RL_License = New Telerik.WinControls.UI.RadLabel()
         Me.RPVP_Settings = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RL_FeatureScanner_Info = New Telerik.WinControls.UI.RadLabel()
         Me.RB_ViVeTool_GUI_FeatureScanner = New Telerik.WinControls.UI.RadButton()
         Me.RGB_Theming = New Telerik.WinControls.UI.RadGroupBox()
         Me.RTB_UseSystemTheme = New Telerik.WinControls.UI.RadToggleButton()
@@ -66,6 +67,7 @@ Partial Class AboutAndSettings
         Me.RPVP_Settings.SuspendLayout()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
+        CType(Me.RL_FeatureScanner_Info, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RB_ViVeTool_GUI_FeatureScanner, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RGB_Theming, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RGB_Theming.SuspendLayout()
@@ -152,10 +154,16 @@ Partial Class AboutAndSettings
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.RL_FeatureScanner_Info)
         Me.RadGroupBox1.Controls.Add(Me.RB_ViVeTool_GUI_FeatureScanner)
         Me.RadGroupBox1.HeaderMargin = New System.Windows.Forms.Padding(1)
         resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
+        '
+        'RL_FeatureScanner_Info
+        '
+        resources.ApplyResources(Me.RL_FeatureScanner_Info, "RL_FeatureScanner_Info")
+        Me.RL_FeatureScanner_Info.Name = "RL_FeatureScanner_Info"
         '
         'RB_ViVeTool_GUI_FeatureScanner
         '
@@ -303,6 +311,8 @@ Partial Class AboutAndSettings
         Me.RPVP_Settings.ResumeLayout(False)
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
+        Me.RadGroupBox1.PerformLayout()
+        CType(Me.RL_FeatureScanner_Info, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RB_ViVeTool_GUI_FeatureScanner, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RGB_Theming, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RGB_Theming.ResumeLayout(False)
@@ -348,4 +358,5 @@ Partial Class AboutAndSettings
     Friend WithEvents RDDL_AutoLoad As RadDropDownList
     Friend WithEvents RMI_L_Italian As RadMenuItem
     Friend WithEvents RMI_L_Japanese As RadMenuItem
+    Friend WithEvents RL_FeatureScanner_Info As RadLabel
 End Class

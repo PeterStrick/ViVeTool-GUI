@@ -384,3 +384,4 @@ FodyWeavers.xsd
 
 # Environment Files
 **/*.env
+/Output

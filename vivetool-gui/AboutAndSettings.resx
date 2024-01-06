@@ -288,6 +288,30 @@
   <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RL_FeatureScanner_Info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 62</value>
+  </data>
+  <data name="RL_FeatureScanner_Info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 18</value>
+  </data>
+  <data name="RL_FeatureScanner_Info.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RL_FeatureScanner_Info.Text" xml:space="preserve">
+    <value>This is only recommended for advanced Users.</value>
+  </data>
+  <data name="&gt;&gt;RL_FeatureScanner_Info.Name" xml:space="preserve">
+    <value>RL_FeatureScanner_Info</value>
+  </data>
+  <data name="&gt;&gt;RL_FeatureScanner_Info.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_FeatureScanner_Info.Parent" xml:space="preserve">
+    <value>RadGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RL_FeatureScanner_Info.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 25</value>
   </data>
@@ -310,7 +334,7 @@
     <value>RadGroupBox1</value>
   </data>
   <data name="&gt;&gt;RB_ViVeTool_GUI_FeatureScanner.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Other</value>
@@ -319,7 +343,7 @@
     <value>6, 234</value>
   </data>
   <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 80</value>
+    <value>410, 101</value>
   </data>
   <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -415,7 +439,7 @@
     <value>1</value>
   </data>
   <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 25</value>
+    <value>201, 33</value>
   </data>
   <data name="RDDL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 24</value>

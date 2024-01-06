@@ -312,90 +312,6 @@
   <metadata name="FluentDark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>220, 6</value>
   </metadata>
-  <data name="&gt;&gt;RS_1.Name" xml:space="preserve">
-    <value>RS_1</value>
-  </data>
-  <data name="&gt;&gt;RS_1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RS_1.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;RS_1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Name" xml:space="preserve">
-    <value>RL_BuildComboBoxORManaully</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;RL_BuildComboBoxORManaully.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Name" xml:space="preserve">
-    <value>RB_ManuallySetFeature</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;RB_ManuallySetFeature.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Name" xml:space="preserve">
-    <value>RB_About</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RB_About.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;RB_About.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Name" xml:space="preserve">
-    <value>RDDB_PerformAction</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.Parent" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>851, 38</value>
-  </data>
-  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Name" xml:space="preserve">
-    <value>P_CommandPanel</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;P_CommandPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="RS_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>414, 4</value>
   </data>
@@ -527,6 +443,30 @@
   </data>
   <data name="&gt;&gt;RDDB_PerformAction.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="P_CommandPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="P_CommandPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="P_CommandPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>851, 38</value>
+  </data>
+  <data name="P_CommandPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Name" xml:space="preserve">
+    <value>P_CommandPanel</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;P_CommandPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="P_DataPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2334,7 +2274,7 @@
     <value>859, 600</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ViVeTool GUI (v1.7 PRE-RELEASE 3)</value>
+    <value>ViVeTool GUI (v1.7 PRE-RELEASE 4)</value>
   </data>
   <data name="&gt;&gt;__DBG_RHI.Name" xml:space="preserve">
     <value>__DBG_RHI</value>

@@ -2010,4 +2010,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Info &amp; Einstellungen</value>
   </data>
+  <data name="RL_FeatureScanner_Info.Text" xml:space="preserve">
+    <value>Dies ist nur für erfahrene Benutzer empfohlen.</value>
+  </data>
 </root>

@@ -142,13 +142,13 @@ Partial Class ScannerUI
         '
         'RPV_Main
         '
-        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Controls.Add(Me.RPVP_Setup)
         Me.RPV_Main.Controls.Add(Me.RPVP_DownloadPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_ScanPDB)
         Me.RPV_Main.Controls.Add(Me.RPVP_Done)
         Me.RPV_Main.Controls.Add(Me.RPVP_AboutAndSettings)
         Me.RPV_Main.DefaultPage = Me.RPVP_Setup
+        resources.ApplyResources(Me.RPV_Main, "RPV_Main")
         Me.RPV_Main.Name = "RPV_Main"
         Me.RPV_Main.SelectedPage = Me.RPVP_Setup
         CType(Me.RPV_Main.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -156,24 +156,24 @@ Partial Class ScannerUI
         '
         'RPVP_Setup
         '
-        resources.ApplyResources(Me.RPVP_Setup, "RPVP_Setup")
         Me.RPVP_Setup.Controls.Add(Me.RP_Setup_Text)
         Me.RPVP_Setup.Controls.Add(Me.RP_Setup_Buttons)
         Me.RPVP_Setup.Controls.Add(Me.RSS_Setup)
-        Me.RPVP_Setup.ItemSize = New System.Drawing.SizeF(81.0!, 29.0!)
+        Me.RPVP_Setup.ItemSize = New System.Drawing.SizeF(141.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_Setup, "RPVP_Setup")
         Me.RPVP_Setup.Name = "RPVP_Setup"
         '
         'RP_Setup_Text
         '
-        resources.ApplyResources(Me.RP_Setup_Text, "RP_Setup_Text")
         Me.RP_Setup_Text.Controls.Add(Me.WB_Introduction)
+        resources.ApplyResources(Me.RP_Setup_Text, "RP_Setup_Text")
         Me.RP_Setup_Text.Name = "RP_Setup_Text"
         '
         'WB_Introduction
         '
-        resources.ApplyResources(Me.WB_Introduction, "WB_Introduction")
         Me.WB_Introduction.AllowNavigation = False
         Me.WB_Introduction.AllowWebBrowserDrop = False
+        resources.ApplyResources(Me.WB_Introduction, "WB_Introduction")
         Me.WB_Introduction.IsWebBrowserContextMenuEnabled = False
         Me.WB_Introduction.Name = "WB_Introduction"
         Me.WB_Introduction.TabStop = False
@@ -182,7 +182,6 @@ Partial Class ScannerUI
         '
         'RP_Setup_Buttons
         '
-        resources.ApplyResources(Me.RP_Setup_Buttons, "RP_Setup_Buttons")
         Me.RP_Setup_Buttons.Controls.Add(Me.RL_SymbolPath)
         Me.RP_Setup_Buttons.Controls.Add(Me.RL_DbgPath)
         Me.RP_Setup_Buttons.Controls.Add(Me.RTB_SymbolPath)
@@ -191,6 +190,7 @@ Partial Class ScannerUI
         Me.RP_Setup_Buttons.Controls.Add(Me.__DBG_OPTIONS)
         Me.RP_Setup_Buttons.Controls.Add(Me.RB_SymbolPath_Browse)
         Me.RP_Setup_Buttons.Controls.Add(Me.RB_DbgPath_Browse)
+        resources.ApplyResources(Me.RP_Setup_Buttons, "RP_Setup_Buttons")
         Me.RP_Setup_Buttons.Name = "RP_Setup_Buttons"
         '
         'RL_SymbolPath
@@ -307,8 +307,8 @@ Partial Class ScannerUI
         '
         'RSS_Setup
         '
-        resources.ApplyResources(Me.RSS_Setup, "RSS_Setup")
         Me.RSS_Setup.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RPBE_StatusProgressBar, Me.RLE_StatusAndInfoLabel})
+        resources.ApplyResources(Me.RSS_Setup, "RSS_Setup")
         Me.RSS_Setup.Name = "RSS_Setup"
         '
         'RPBE_StatusProgressBar
@@ -340,10 +340,10 @@ Partial Class ScannerUI
         '
         'RPVP_DownloadPDB
         '
-        resources.ApplyResources(Me.RPVP_DownloadPDB, "RPVP_DownloadPDB")
         Me.RPVP_DownloadPDB.Controls.Add(Me.RTB_PDBDownloadStatus)
         Me.RPVP_DownloadPDB.Controls.Add(Me.RL_DownloadIntroduction)
-        Me.RPVP_DownloadPDB.ItemSize = New System.Drawing.SizeF(94.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_DownloadPDB, "RPVP_DownloadPDB")
+        Me.RPVP_DownloadPDB.ItemSize = New System.Drawing.SizeF(160.0!, 29.0!)
         Me.RPVP_DownloadPDB.Name = "RPVP_DownloadPDB"
         '
         'RTB_PDBDownloadStatus
@@ -365,12 +365,12 @@ Partial Class ScannerUI
         '
         'RPVP_ScanPDB
         '
-        resources.ApplyResources(Me.RPVP_ScanPDB, "RPVP_ScanPDB")
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolFolders)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolFiles)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_SymbolSize)
         Me.RPVP_ScanPDB.Controls.Add(Me.RL_InfoScan)
-        Me.RPVP_ScanPDB.ItemSize = New System.Drawing.SizeF(194.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_ScanPDB, "RPVP_ScanPDB")
+        Me.RPVP_ScanPDB.ItemSize = New System.Drawing.SizeF(213.0!, 29.0!)
         Me.RPVP_ScanPDB.Name = "RPVP_ScanPDB"
         '
         'RL_SymbolFolders
@@ -395,16 +395,16 @@ Partial Class ScannerUI
         '
         'RPVP_Done
         '
-        resources.ApplyResources(Me.RPVP_Done, "RPVP_Done")
         Me.RPVP_Done.Controls.Add(Me.RP_Done_Text)
         Me.RPVP_Done.Controls.Add(Me.RP_Done_Buttons)
-        Me.RPVP_Done.ItemSize = New System.Drawing.SizeF(42.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_Done, "RPVP_Done")
+        Me.RPVP_Done.ItemSize = New System.Drawing.SizeF(44.0!, 29.0!)
         Me.RPVP_Done.Name = "RPVP_Done"
         '
         'RP_Done_Text
         '
-        resources.ApplyResources(Me.RP_Done_Text, "RP_Done_Text")
         Me.RP_Done_Text.Controls.Add(Me.RL_Done)
+        resources.ApplyResources(Me.RP_Done_Text, "RP_Done_Text")
         Me.RP_Done_Text.Name = "RP_Done_Text"
         '
         'RL_Done
@@ -414,11 +414,11 @@ Partial Class ScannerUI
         '
         'RP_Done_Buttons
         '
-        resources.ApplyResources(Me.RP_Done_Buttons, "RP_Done_Buttons")
         Me.RP_Done_Buttons.Controls.Add(Me.RB_OA_DeleteSymbolPath)
         Me.RP_Done_Buttons.Controls.Add(Me.RL_OA)
         Me.RP_Done_Buttons.Controls.Add(Me.RB_OA_CopyFeaturesTXT)
         Me.RP_Done_Buttons.Controls.Add(Me.RL_OutputFile)
+        resources.ApplyResources(Me.RP_Done_Buttons, "RP_Done_Buttons")
         Me.RP_Done_Buttons.Name = "RP_Done_Buttons"
         '
         'RB_OA_DeleteSymbolPath
@@ -443,7 +443,6 @@ Partial Class ScannerUI
         '
         'RPVP_AboutAndSettings
         '
-        resources.ApplyResources(Me.RPVP_AboutAndSettings, "RPVP_AboutAndSettings")
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RadGroupBox1)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RGB_Theming)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Comments)
@@ -452,21 +451,22 @@ Partial Class ScannerUI
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_Version)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.RL_License)
         Me.RPVP_AboutAndSettings.Controls.Add(Me.PB_AppImage)
-        Me.RPVP_AboutAndSettings.ItemSize = New System.Drawing.SizeF(85.0!, 29.0!)
+        Me.RPVP_AboutAndSettings.ItemSize = New System.Drawing.SizeF(109.0!, 29.0!)
+        resources.ApplyResources(Me.RPVP_AboutAndSettings, "RPVP_AboutAndSettings")
         Me.RPVP_AboutAndSettings.Name = "RPVP_AboutAndSettings"
         '
         'RadGroupBox1
         '
-        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.Controls.Add(Me.RDDB_Language)
         Me.RadGroupBox1.HeaderMargin = New System.Windows.Forms.Padding(1)
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         'RDDB_Language
         '
-        resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
         Me.RDDB_Language.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_L_English, Me.RMI_L_German, Me.RMI_L_Polish, Me.RMI_L_Chinese, Me.RMI_L_Indonesian, Me.RMI_L_Italian, Me.RMI_L_Japanese})
+        resources.ApplyResources(Me.RDDB_Language, "RDDB_Language")
         Me.RDDB_Language.Name = "RDDB_Language"
         '
         'RMI_L_English
@@ -512,36 +512,36 @@ Partial Class ScannerUI
         '
         'RMI_L_Italian
         '
-        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
         Me.RMI_L_Italian.Name = "RMI_L_Italian"
         Me.RMI_L_Italian.SvgImageXml = resources.GetString("RMI_L_Italian.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Italian, "RMI_L_Italian")
         '
         'RMI_L_Japanese
         '
-        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
         Me.RMI_L_Japanese.Name = "RMI_L_Japanese"
         Me.RMI_L_Japanese.SvgImageXml = resources.GetString("RMI_L_Japanese.SvgImageXml")
+        resources.ApplyResources(Me.RMI_L_Japanese, "RMI_L_Japanese")
         '
         'RGB_Theming
         '
-        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RGB_Theming.Controls.Add(Me.RTB_UseSystemTheme)
         Me.RGB_Theming.Controls.Add(Me.RTB_ThemeToggle)
         Me.RGB_Theming.HeaderMargin = New System.Windows.Forms.Padding(1)
+        resources.ApplyResources(Me.RGB_Theming, "RGB_Theming")
         Me.RGB_Theming.Name = "RGB_Theming"
         '
         'RTB_UseSystemTheme
         '
-        resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
         Me.RTB_UseSystemTheme.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_change_theme_24px
+        resources.ApplyResources(Me.RTB_UseSystemTheme, "RTB_UseSystemTheme")
         Me.RTB_UseSystemTheme.Name = "RTB_UseSystemTheme"
         Me.RTB_UseSystemTheme.ThemeName = "Fluent"
         '
         'RTB_ThemeToggle
         '
-        resources.ApplyResources(Me.RTB_ThemeToggle, "RTB_ThemeToggle")
         Me.RTB_ThemeToggle.Image = Global.ViVeTool_GUI.FeatureScanner.My.Resources.Resources.icons8_sun_24
+        resources.ApplyResources(Me.RTB_ThemeToggle, "RTB_ThemeToggle")
         Me.RTB_ThemeToggle.Name = "RTB_ThemeToggle"
         Me.RTB_ThemeToggle.ThemeName = "Fluent"
         '
