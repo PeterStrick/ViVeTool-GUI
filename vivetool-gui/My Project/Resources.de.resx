@@ -250,13 +250,7 @@
     <value>Privatsphäre Informationen</value>
   </data>
   <data name="Comments_PrivacyText" xml:space="preserve">
-    <value>Bevor sie Ihren Kommentar senden können, müssen sie akzeptieren das die folgenden Daten in einer Datenbank abgespeichert werden dürfen:
-
-Das ausgewählte Build und ViVeTool Feature, Ihr Kommentar
-
-Sie müssen auch akzeptieren, das Ihre IP Adresse verschlüsselt für 24 Stunden gespeichert werden darf.
-
-Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderung.</value>
+    <value>&lt;html&gt;&lt;p&gt;Bevor sie Ihren Kommentar senden können, müssen sie akzeptieren, dass Ihre verschlüsselte IP-Adresse gemäß unserer &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI/blob/v1.7-Testing/Comments/privacy.md"&gt;Datenschutzrichtlinie&lt;/a&gt; gespeichert wird, nachdem Sie auf 'Ich akzeptiere' drücken.&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Comments_I_Agree" xml:space="preserve">
     <value>Ich akzeptiere</value>
@@ -274,7 +268,7 @@ Das speichern Ihrer verschlüsselten IP Adresse dient zur Missbrauchs Verhinderu
     <value>Fertig</value>
   </data>
   <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
-    <value>Ein Netzwerkfehler ist aufgetreten</value>
+    <value>Eine Netzwerkausnahme ist aufgetreten</value>
   </data>
   <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
     <value> Ihr Kommentar wird gesendet…</value>
@@ -395,5 +389,110 @@ Das direkte Ausführen von ViVeTool GUI aus einer ZIP-Datei ohne vorheriges Extr
   </data>
   <data name="Generic_FeatureManagement" xml:space="preserve">
     <value>Feature Verwaltung</value>
+  </data>
+  <data name="FeatureDictionary_UpdateText" xml:space="preserve">
+    <value>Eine neuere Version des Feature Wörterbuches ist vorhanden. Sie beinhaltet Übersetzungen von neueren ViVeTool IDs zu deren dazugehörigen Feature Namen. Möchten Sie das Update jetzt starten?</value>
+  </data>
+  <data name="TelerikLocalization_MissingID" xml:space="preserve">
+    <value>Die ID fehlt. Erstellen Sie ein GitHub Issue, der den folgenden Text beinhaltet: {0}</value>
+  </data>
+  <data name="Generic_Copy" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="FeatureDictionary_UpdateError" xml:space="preserve">
+    <value>Eine Überprüfung auf neue Versionen des Feature Wörterbuches konnte nicht durchgeführt werden.</value>
+  </data>
+  <data name="Generic_NotRequired" xml:space="preserve">
+    <value>Nicht benötigt</value>
+  </data>
+  <data name="ViVe_Priorities_Fixed" xml:space="preserve">
+    <value>Feature Prioritäten wurden erfolgreich repariert. Ein Neustart ist empfohlen.</value>
+  </data>
+  <data name="Generic_Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Generic_FeatureList" xml:space="preserve">
+    <value>Feature Liste</value>
+  </data>
+  <data name="ViVe_LKGStore_Repaired" xml:space="preserve">
+    <value>Der Last Known Good Store wurde erfolgreich repariert.</value>
+  </data>
+  <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
+    <value>Das reparieren des Last Known Good Stores ist nicht benötigt.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Expanded" xml:space="preserve">
+    <value>Die Funktion gab den Wert {0} zurück, aber erwartet war der Wert 00</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>Alles</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Geben Sie den zu suchenden Text ein</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Haupt-Vorlage</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Von der aktuellen Position aus suchen</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>In Spalten suchen</value>
+  </data>
+  <data name="ViVe_Priorities_NotRequired" xml:space="preserve">
+    <value>Das reparieren von Feature Prioritäten ist nicht erforderlich.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Text" xml:space="preserve">
+    <value>Beim Versuch die Feature Prioritäten zu reparieren ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="Settings_TheLatestBuildFeatureList" xml:space="preserve">
+    <value>Die neueste Build Feature Liste</value>
+  </data>
+  <data name="Settings_TheCurrentBuildFeatureList" xml:space="preserve">
+    <value>Die jetzige Build Feature Liste</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Stornieren</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Fortsetzen</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Details verstecken</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>Details anzeigen</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Versuchen Sie es erneut</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="FeatureDictionary_DownloadText" xml:space="preserve">
+    <value>Der Download von einer neuen Version des Feature Wörterbuches ist erfolgreich abgeschlossen.</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Groß- und Kleinschreibung beachten</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignorieren</value>
   </data>
 </root>

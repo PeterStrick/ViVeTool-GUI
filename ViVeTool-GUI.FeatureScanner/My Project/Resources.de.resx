@@ -281,4 +281,70 @@ Die symchk.exe Datei ist meist unter dem Windows SDK Installations Pfad unter 10
 
 Das direkte Ausführen von ViVeTool GUI aus einer ZIP-Datei ohne vorheriges Extrahieren oder das Fehlen/Ersetzen einer ViVeTool GUI-DLL-Datei kann dieses Problem verursachen.</value>
   </data>
+  <data name="TelerikLocalization_MissingID" xml:space="preserve">
+    <value>Die ID fehlt. Erstellen Sie ein GitHub Issue, der den folgenden Text beinhaltet: {0}</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSelectValidCellValue" xml:space="preserve">
+    <value>Bitte wählen Sie einen gültigen Zellenwert aus</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>Alles</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Stornieren</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSetValidCellValue" xml:space="preserve">
+    <value>Bitte legen Sie einen gültigen Zellenwert fest</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Fortsetzen</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Geben Sie den zu suchenden Text ein</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Details verstecken</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Haupt-Vorlage</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Groß- und Kleinschreibung beachten</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Von der aktuellen Position aus suchen</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>In Spalten suchen</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>Details anzeigen</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Versuchen Sie es erneut</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignorieren</value>
+  </data>
 </root>

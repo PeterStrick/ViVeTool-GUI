@@ -680,4 +680,7 @@
   <data name="RB_FixLKG.Text" xml:space="preserve">
     <value>LastKnownGood reparieren</value>
   </data>
+  <data name="RB_FixPriority.Text" xml:space="preserve">
+    <value>Prioritäten reparieren</value>
+  </data>
 </root>

@@ -59,7 +59,7 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -122,7 +122,7 @@
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
         lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
@@ -153,20 +153,20 @@
   <data name="RPVP_Language.Text" xml:space="preserve">
     <value>语言</value>
   </data>
-  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Comments.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>269, 134</value>
   </data>
   <data name="RL_Comments.Text" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Icons by &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;PeterStrick/ViVeTool-GUI Github Repository&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspired by &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Combo Box code is using &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;files&lt;/a&gt; from &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Updating Functionallity provided by &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <value></value>
     <comment>Please be sure to leave the HTML intact.</comment>
   </data>
-  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_Description.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>281, 47</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>68, 25</value>
   </data>
-  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>274, 30</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
@@ -178,20 +178,20 @@
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>其他</value>
   </data>
-  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_UseSystemTheme.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>205, 23</value>
   </data>
-  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_UseSystemTheme.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>158, 35</value>
   </data>
   <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
     <value>  跟随系统</value>
     <comment>The space at the beginning is used to make the text look better</comment>
   </data>
-  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RTB_ThemeToggle.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>47, 23</value>
   </data>
-  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RTB_ThemeToggle.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>138, 35</value>
   </data>
   <data name="RTB_ThemeToggle.Text" xml:space="preserve">
@@ -204,10 +204,10 @@
   <data name="RGB_Theming.Text" xml:space="preserve">
     <value>主题</value>
   </data>
-  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RDDL_AutoLoad.Location" type="System.Drawing.Point, System.Drawing" xml:space="preserve">
     <value>201, 30</value>
   </data>
-  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RL_AutoLoad.Size" type="System.Drawing.Size, System.Drawing" xml:space="preserve">
     <value>57, 18</value>
   </data>
   <data name="RL_AutoLoad.Text" xml:space="preserve">
@@ -222,7 +222,7 @@
   <data name="RL_SelectLangauge.Text" xml:space="preserve">
     <value>选择语言：</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64" xml:space="preserve">
     <value>
         AAABAAYAAAAAAAEAIADKGAAAZgAAAICAAAABACAAKAgBADAZAABAQAAAAQAgAChCAABYIQEAMDAAAAEA
         IACoJQAAgGMBACAgAAABACAAqBAAACiJAQAQEAAAAQAgAGgEAADQmQEAiVBORw0KGgoAAAANSUhEUgAA
