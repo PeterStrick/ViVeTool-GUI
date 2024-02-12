@@ -181,6 +181,16 @@ Public Class GUI
     Private Sub __DBG_RDDL_Build_SelectedIndexTest_Click(sender As Object, e As EventArgs) Handles __DBG_RDDL_Build_SelectedIndexTest.Click
         RDDL_Build.SelectedIndex = -1
     End Sub
+
+    Private Sub __DBG_CustomDebug_Click(sender As Object, e As EventArgs) Handles __DBG_CustomDebug.Click
+        Dim Build = "17643.1000"
+
+        If CInt(Build) >= 17704 Then
+            MsgBox($"Got {CInt(Build)}, is higher than 17704")
+        Else
+            MsgBox($"Got {CInt(Build)}, {My.Resources.Error_SelectBuild17704OrHigherToUseGrouping}")
+        End If
+    End Sub
 #End Region
 
     ''' <summary>
@@ -682,14 +692,6 @@ Public Class GUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub BGW_PopulateGridView_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGW_PopulateGridView.DoWork
         If Not BGW_PopulateGridView.CancellationPending Then
-            'If RDDL_Build.Text = "features" Then
-            '    Invoke(Sub()
-            '               MsgBox("Do not load the ""features"" Item inside the Drop Down, this would otherwise create a crash.", MsgBoxStyle.Critical, "debug")
-            '               RDDL_Build.SelectedIndex = -1
-            '           End Sub)
-            '    Return
-            'End If
-
             ' Debug
             Diagnostics.Debug.WriteLine("Loading Build " & RDDL_Build.Text)
 
@@ -720,94 +722,97 @@ Public Class GUI
             Dim path As String = IO.Path.GetTempPath & "loadedList.txt"
             WebClient.DownloadFile("https://raw.githubusercontent.com/riverar/mach2/master/" & RDDL_Build.SelectedItem.Tag.ToString & ".txt", path)
 
-            ' Fix for _arm64 Feature Lists
+            ' Fix for _arm64 Feature Lists and Builds that end in .1xxx
+            Dim tmpBuild As String = RDDL_Build.Text
             Dim Build As Integer
 
-            ' Continue if Feature List is normal
-            If IsNumeric(RDDL_Build.Text) Then
-                Build = CInt(RDDL_Build.Text)
-            Else
-                ' Remove the /features/*/amd64|arm64 part
-                Dim tempBuild = RDDL_Build.Text.Split(CChar("/"))(3)
-
-                ' Remove everything past the _ Part to get a normal Build Number
-                Build = CInt(tempBuild.Split(CChar("_"))(0))
+            ' Remove .1xxx if it exists, example .1001
+            If tmpBuild.Contains(".") Then
+                tmpBuild = tmpBuild.Split(CChar("."))(0)
             End If
+
+            ' Remove _XXXX if it exists, example _arm64
+            If tmpBuild.Contains("_") Then
+                tmpBuild = tmpBuild.Split(CChar("_"))(0)
+            End If
+
+            ' Convert the now Split String to an Integer
+            Build = CInt(tmpBuild)
 
             ' For each line add a grid view entry
             For Each Line In IO.File.ReadAllLines(path)
-                ' Check Line Stage, used for Grouping
-                Try
-                    If Build >= 17704 Then
-                        If Line = "## Unknown:" Then
-                            LineStage = My.Resources.Generic_Modifiable
-                        ElseIf Line = "## Always Enabled:" Then
-                            LineStage = My.Resources.Generic_AlwaysEnabled
-                        ElseIf Line = "## Enabled By Default:" Then
-                            LineStage = My.Resources.Generic_EnabledByDefault
-                        ElseIf Line = "## Disabled By Default:" Then
-                            LineStage = My.Resources.Generic_DisabledByDefault
-                        ElseIf Line = "## Always Disabled:" Then
-                            LineStage = My.Resources.Generic_AlwaysDisabled
-                        End If
-                    Else
-                        LineStage = My.Resources.Error_SelectBuild17704OrHigherToUseGrouping
-                    End If
-                Catch ex As Exception
-                    LineStage = My.Resources.Error_Error
-                End Try
-
-                ' Split the Line at the :
-                Dim Str As String() = Line.Split(CChar(":"))
-
-                ' Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
-                Str = Str.Select(Function(s) s.Trim).ToArray()
-
-                ' If the Line is not empty, continue
-                If Line IsNot "" AndAlso Not Line.Contains("#") Then
-                    ' Get the Feature Enabled State from the currently processing line.
-                    ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
+                    ' Check Line Stage, used for Grouping
                     Try
-                        Dim State As String = ViVe_API.Feature.Query(CUInt(Str(1)))
-                        Dim Image = Nothing
-
-                        If HasInternetConnection AndAlso DatabaseFunctions.HasDBAvailable AndAlso Not DatabaseFunctions.TableDoesNotExist Then
-                            Dim rows As DataRow() = DatabaseFunctions.Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
-                            If rows.Length >= 1 Then Image = CommentsImg
+                        If Build >= 17704 Then
+                            If Line = "## Unknown:" Then
+                                LineStage = My.Resources.Generic_Modifiable
+                            ElseIf Line = "## Always Enabled:" Then
+                                LineStage = My.Resources.Generic_AlwaysEnabled
+                            ElseIf Line = "## Enabled By Default:" Then
+                                LineStage = My.Resources.Generic_EnabledByDefault
+                            ElseIf Line = "## Disabled By Default:" Then
+                                LineStage = My.Resources.Generic_DisabledByDefault
+                            ElseIf Line = "## Always Disabled:" Then
+                                LineStage = My.Resources.Generic_AlwaysDisabled
+                            End If
+                        Else
+                            LineStage = My.Resources.Error_SelectBuild17704OrHigherToUseGrouping
                         End If
-
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage, Image))
                     Catch ex As Exception
-                        Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
+                        LineStage = My.Resources.Error_Error
                     End Try
-                End If
-            Next
 
-            ' Move to the first row, remove the selection and change the Status Label to Done.
-            Invoke(Sub()
-                       RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
-                       RGV_MainGridView.CurrentRow = Nothing
-                       RLE_StatusLabel.Text = My.Resources.Generic_Done
-                   End Sub)
+                    ' Split the Line at the :
+                    Dim Str As String() = Line.Split(CChar(":"))
 
-            ' Delete Feature List from %TEMP%
-            IO.File.Delete(path)
+                    ' Remove any Spaces from the first Str Array (Feature Name) and second Str Array (Feature ID)
+                    Str = Str.Select(Function(s) s.Trim).ToArray()
 
-            ' Enable Grouping
-            Dim LineGroup As New Data.GroupDescriptor()
-            LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
-            Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+                    ' If the Line is not empty, continue
+                    If Line IsNot "" AndAlso Not Line.Contains("#") Then
+                        ' Get the Feature Enabled State from the currently processing line.
+                        ' RtlFeatureManager.QueryFeatureConfiguration will return Enabled, Disabled or throw a NullReferenceException for Default
+                        Try
+                            Dim State As String = ViVe_API.Feature.Query(CUInt(Str(1)))
+                            Dim Image = Nothing
 
-            ' Enable Animations and selection
-            Invoke(Sub()
-                       AnimatedPropertySetting.AnimationsEnabled = True
-                       RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
-                   End Sub)
+                            If HasInternetConnection AndAlso DatabaseFunctions.HasDBAvailable AndAlso Not DatabaseFunctions.TableDoesNotExist Then
+                                Dim rows As DataRow() = DatabaseFunctions.Build_DT.Select(String.Format("FeatureName = '{0}'", Str(0)))
+                                If rows.Length >= 1 Then Image = CommentsImg
+                            End If
 
-            ' Make the Search Row Visible
-            Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
-        Else
-            Return
+                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), State, LineStage, Image))
+                        Catch ex As Exception
+                            Invoke(Sub() RGV_MainGridView.Rows.Add(Str(0), Str(1), My.Resources.Generic_Default, LineStage))
+                        End Try
+                    End If
+                Next
+
+                ' Move to the first row, remove the selection and change the Status Label to Done.
+                Invoke(Sub()
+                           RGV_MainGridView.CurrentRow = RGV_MainGridView.Rows.Item(0)
+                           RGV_MainGridView.CurrentRow = Nothing
+                           RLE_StatusLabel.Text = My.Resources.Generic_Done
+                       End Sub)
+
+                ' Delete Feature List from %TEMP%
+                IO.File.Delete(path)
+
+                ' Enable Grouping
+                Dim LineGroup As New Data.GroupDescriptor()
+                LineGroup.GroupNames.Add("FeatureInfo", ComponentModel.ListSortDirection.Ascending)
+                Invoke(Sub() RGV_MainGridView.GroupDescriptors.Add(LineGroup))
+
+                ' Enable Animations and selection
+                Invoke(Sub()
+                           AnimatedPropertySetting.AnimationsEnabled = True
+                           RGV_MainGridView.SelectionMode = GridViewSelectionMode.FullRowSelect
+                       End Sub)
+
+                ' Make the Search Row Visible
+                Invoke(Sub() RGV_MainGridView.MasterView.TableSearchRow.IsVisible = True)
+            Else
+                Return
         End If
     End Sub
 

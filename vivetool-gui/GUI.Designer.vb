@@ -68,6 +68,7 @@ Partial Class GUI
         Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
         Me.P_DataPanel = New System.Windows.Forms.Panel()
         Me.FluentTheme = New Telerik.WinControls.Themes.FluentTheme()
+        Me.__DBG_CustomDebug = New Telerik.WinControls.UI.RadMenuItem()
         CType(Me.RDDL_Build, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RSS_MainStatusStrip, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RSS_MainStatusStrip.SuspendLayout()
@@ -108,7 +109,7 @@ Partial Class GUI
         '__DBG_MainBtn
         '
         resources.ApplyResources(Me.__DBG_MainBtn, "__DBG_MainBtn")
-        Me.__DBG_MainBtn.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_RHI, Me.__DBG_GetComments, Me.__DBG_SeeCommentsData, Me.__DBG_SEP1, Me.__DBG_SetRDDL_Build_Text, Me.__DBG_SetRDDL_Build_Text_ToNothing, Me.__DBG_SEP2, Me.__DBG_EnableCommentLoadingFromManualFL, Me.__DBG_DisableCommentLoadingFromManualFL, Me.__DBG_SEP3, Me.__DBG_ChnageLanguage, Me.__DBG_SEP4, Me.__DBG_SetFeaturePriorityToServiceAsTest, Me.__DBG_QueryEnabledState_401122637, Me.__DBG_SEP5, Me.__DBG_FeatureNaming_DictUpdate, Me.__DBG_AutoLoad_Current_Test, Me.__DBG_RDDL_Build_SelectedIndexTest, Me.__DBG_SEP6, Me.__DBG_SentryCrashTest_DivideBy0})
+        Me.__DBG_MainBtn.Items.AddRange(New Telerik.WinControls.RadItem() {Me.__DBG_RHI, Me.__DBG_GetComments, Me.__DBG_SeeCommentsData, Me.__DBG_SEP1, Me.__DBG_SetRDDL_Build_Text, Me.__DBG_SetRDDL_Build_Text_ToNothing, Me.__DBG_SEP2, Me.__DBG_EnableCommentLoadingFromManualFL, Me.__DBG_DisableCommentLoadingFromManualFL, Me.__DBG_SEP3, Me.__DBG_ChnageLanguage, Me.__DBG_SEP4, Me.__DBG_SetFeaturePriorityToServiceAsTest, Me.__DBG_QueryEnabledState_401122637, Me.__DBG_SEP5, Me.__DBG_FeatureNaming_DictUpdate, Me.__DBG_AutoLoad_Current_Test, Me.__DBG_RDDL_Build_SelectedIndexTest, Me.__DBG_SEP6, Me.__DBG_SentryCrashTest_DivideBy0, Me.__DBG_CustomDebug})
         Me.__DBG_MainBtn.Name = "__DBG_MainBtn"
         Me.__DBG_MainBtn.TabStop = False
         '
@@ -356,6 +357,11 @@ Partial Class GUI
         resources.ApplyResources(Me.P_DataPanel, "P_DataPanel")
         Me.P_DataPanel.Name = "P_DataPanel"
         '
+        '__DBG_CustomDebug
+        '
+        Me.__DBG_CustomDebug.Name = "__DBG_CustomDebug"
+        resources.ApplyResources(Me.__DBG_CustomDebug, "__DBG_CustomDebug")
+        '
         'GUI
         '
         resources.ApplyResources(Me, "$this")
@@ -431,4 +437,5 @@ Partial Class GUI
     Friend WithEvents __DBG_RDDL_Build_SelectedIndexTest As RadMenuItem
     Friend WithEvents __DBG_SEP6 As RadMenuSeparatorItem
     Friend WithEvents __DBG_SentryCrashTest_DivideBy0 As RadMenuItem
+    Friend WithEvents __DBG_CustomDebug As RadMenuItem
 End Class

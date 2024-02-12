@@ -24,9 +24,9 @@ Partial Class AboutAndSettings
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutAndSettings))
-        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.RPV_Main = New Telerik.WinControls.UI.RadPageView()
         Me.RPVP_About = New Telerik.WinControls.UI.RadPageViewPage()
         Me.PB_AppImage = New System.Windows.Forms.PictureBox()
@@ -208,12 +208,12 @@ Partial Class AboutAndSettings
         Me.RDDL_AutoLoad.DefaultItemsCountInDropDown = 3
         Me.RDDL_AutoLoad.DropDownAnimationEnabled = True
         Me.RDDL_AutoLoad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
-        RadListDataItem1.Text = "Nothing"
-        RadListDataItem2.Text = "The latest Build Feature List"
-        RadListDataItem3.Text = "The current Build Feature List"
-        Me.RDDL_AutoLoad.Items.Add(RadListDataItem1)
-        Me.RDDL_AutoLoad.Items.Add(RadListDataItem2)
-        Me.RDDL_AutoLoad.Items.Add(RadListDataItem3)
+        RadListDataItem4.Text = "Nothing"
+        RadListDataItem5.Text = "The latest Build Feature List"
+        RadListDataItem6.Text = "The current Build Feature List"
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem4)
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem5)
+        Me.RDDL_AutoLoad.Items.Add(RadListDataItem6)
         resources.ApplyResources(Me.RDDL_AutoLoad, "RDDL_AutoLoad")
         Me.RDDL_AutoLoad.Name = "RDDL_AutoLoad"
         '

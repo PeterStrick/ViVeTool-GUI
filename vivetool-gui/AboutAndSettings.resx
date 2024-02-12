@@ -117,18 +117,294 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;PB_AppImage.Name" xml:space="preserve">
+    <value>PB_AppImage</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;PB_AppImage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Name" xml:space="preserve">
+    <value>RL_Comments</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RL_Comments.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Name" xml:space="preserve">
+    <value>RL_ProductName</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RL_ProductName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Name" xml:space="preserve">
+    <value>RL_Description</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RL_Description.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Name" xml:space="preserve">
+    <value>RL_Version</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RL_Version.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Name" xml:space="preserve">
+    <value>RL_License</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_License.Parent" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 355</value>
+  </data>
+  <data name="RPVP_About.Text" xml:space="preserve">
+    <value>  About ViVeTool GUI</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Name" xml:space="preserve">
+    <value>RPVP_About</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Name" xml:space="preserve">
+    <value>RadGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
+    <value>RPVP_Settings</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Name" xml:space="preserve">
+    <value>RGB_Theming</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.Parent" xml:space="preserve">
+    <value>RPVP_Settings</value>
+  </data>
+  <data name="&gt;&gt;RGB_Theming.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RGB_Behaviour.Name" xml:space="preserve">
+    <value>RGB_Behaviour</value>
+  </data>
+  <data name="&gt;&gt;RGB_Behaviour.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RGB_Behaviour.Parent" xml:space="preserve">
+    <value>RPVP_Settings</value>
+  </data>
+  <data name="&gt;&gt;RGB_Behaviour.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
+        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
+        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
+        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
+        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
+        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
+        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
+        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
+        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
+        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
+        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
+        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
+        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
+        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
+        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
+        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
+        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
+        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
+        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
+        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 355</value>
+  </data>
+  <data name="RPVP_Settings.Text" xml:space="preserve">
+    <value>  Settings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Name" xml:space="preserve">
+    <value>RPVP_Settings</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Settings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Name" xml:space="preserve">
+    <value>RDDB_Language</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RDDB_Language.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Name" xml:space="preserve">
+    <value>RL_SelectLangauge</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.Parent" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>422, 355</value>
+  </data>
+  <data name="RPVP_Language.SvgImageXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;svg width="24px" height="24px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
+  &lt;radialGradient cx="10.062" cy="-27.438" r="40.916" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, -18)" id="cgu3er~siUc7hjzfogmV3a"&gt;
+    &lt;stop offset="0%" stop-color="#6FCEFC" /&gt;
+    &lt;stop offset="100%" stop-color="#167CF7" /&gt;
+  &lt;/radialGradient&gt;
+  &lt;path d="M44 24 C44 35.045 35.045 44 24 44 C12.955 44 4 35.045 4 24 C4 12.955 12.955 4 24 4 C35.045 4 44 12.955 44 24 z" style="fill:url(#cgu3er~siUc7hjzfogmV3a);" /&gt;
+  &lt;radialGradient cx="10.696" cy="-26.05" r="40.918" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, -18)" id="cgu3er~siUc7hjzfogmV3b"&gt;
+    &lt;stop offset="0.1%" stop-color="#54C0F5" /&gt;
+    &lt;stop offset="99.8%" stop-color="#0B69DB" /&gt;
+  &lt;/radialGradient&gt;
+  &lt;path d="M41 24 C41 21.535 40.601 19.182 39.904 17 L42.715 17 C42.459 16.315 42.169 15.647 41.842 15 L39.16 15 C36.355 8.485 30.621 4 24 4 C17.379 4 11.645 8.485 8.839 15 L6.157 15 C5.83 15.647 5.541 16.315 5.284 17 L8.095 17 C7.399 19.182 7 21.535 7 24 C7 26.465 7.399 28.818 8.096 31 L5.285 31 C5.541 31.685 5.831 32.353 6.158 33 L8.84 33 C11.646 39.515 17.38 44 24.001 44 C30.622 44 36.356 39.515 39.162 33 L41.844 33 C42.171 32.353 42.46 31.685 42.717 31 L39.906 31 C40.601 28.818 41 26.465 41 24 z M39 24 C39 26.481 38.579 28.847 37.819 31 L31.51 31 C31.833 28.734 32 26.35 32 24 C32 21.65 31.834 19.266 31.51 17 L37.819 17 C38.579 19.153 39 21.519 39 24 z M24 42 C22.064 42 19.979 38.555 18.848 33 L29.152 33 C28.021 38.555 25.936 42 24 42 z M18.5 31 C18.185 28.887 18 26.539 18 24 C18 21.461 18.185 19.113 18.5 17 L29.5 17 C29.815 19.113 30 21.461 30 24 C30 26.539 29.815 28.887 29.5 31 L18.5 31 z M24 6 C25.936 6 28.021 9.445 29.152 15 L18.848 15 C19.979 9.445 22.064 6 24 6 z M36.97 15 L31.178 15 C30.539 11.67 29.535 8.728001 28.184 6.727 C31.922 8.033 35.054 11.038 36.97 15 z M19.816 6.727 C18.466 8.729 17.461 11.67 16.822 15 L11.03 15 C12.946 11.038 16.078 8.033 19.816 6.727 z M9 24 C9 21.519 9.421 19.153 10.181 17 L16.49 17 C16.166 19.266 16 21.65 16 24 C16 26.35 16.166 28.734 16.49 31 L10.181 31 C9.421 28.847 9 26.481 9 24 z M11.03 33 L16.822 33 C17.461 36.33 18.465 39.272 19.816 41.273 C16.078 39.967 12.946 36.962 11.03 33 z M28.184 41.273 C29.534 39.271 30.539 36.33 31.178 33 L36.97 33 C35.054 36.962 31.922 39.967 28.184 41.273 z" style="fill:url(#cgu3er~siUc7hjzfogmV3b);" /&gt;
+  &lt;path d="M30.5 8 L30.5 18.398 C30.5 18.849 30.793 19.231 31.23 19.348 C31.317 19.37 31.405 19.382 31.491 19.382 C31.835 19.382 32.156 19.201 32.336 18.889 L34.289 15.499 L42.083 15.499 C40.288 11.689 37.342 8.532 33.674 6.499 L32 6.499 C31.173 6.5 30.5 7.173 30.5 8 z" opacity="0.07" /&gt;
+  &lt;path d="M17 14.5 L6.398 14.5 C4.997 17.089 4.175 20.028 4.043 23.145 C4.304 23.363 4.635 23.5 5 23.5 L14.711 23.5 L16.664 26.889 C16.844 27.202 17.165 27.383 17.51 27.383 C17.596 27.383 17.683 27.371 17.771 27.349 C18.208 27.232 18.501 26.85 18.501 26.399 L18.501 16 C18.5 15.173 17.827 14.5 17 14.5 z" opacity="0.07" /&gt;
+  &lt;path d="M30 8 L30 18.398 C30 19.079 30.442 19.655 31.101 19.831 C31.233 19.866 31.365 19.884 31.495 19.884 C32.015 19.884 32.498 19.611 32.77 19.139 L34.578 16 L42.324 16 C40.408 11.62 36.966 8.073 32.673 6 L32 6 C30.897 6 30 6.897 30 8 z" opacity="0.05" /&gt;
+  &lt;path d="M38 22 L26 22 C24.897 22 24 22.897 24 24 L24 34.398 C24 35.079 24.442 35.655 25.101 35.831 C25.233 35.866 25.365 35.884 25.495 35.884 C26.015 35.884 26.498 35.611 26.77 35.139 L28.578 32 L38 32 C39.103 32 40 31.103 40 30 L40 24 C40 22.897 39.103 22 38 22 z" opacity="0.05" /&gt;
+  &lt;path d="M17 14 L6.698 14 C5.035 16.87 4.061 20.185 4.014 23.729 C4.306 23.897 4.64 24 5 24 L14.422 24 L16.231 27.139 C16.502 27.611 16.986 27.884 17.506 27.884 C17.636 27.884 17.768 27.866 17.9 27.831 C18.558 27.655 19 27.079 19 26.398 L19 16 C19 14.897 18.103 14 17 14 z" opacity="0.05" /&gt;
+  &lt;linearGradient x1="8.916" y1="626.093" x2="16.671" y2="636.912" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, -610)" id="cgu3er~siUc7hjzfogmV3c"&gt;
+    &lt;stop offset="0%" stop-color="#F44F5A" /&gt;
+    &lt;stop offset="44.3%" stop-color="#EE3D4A" /&gt;
+    &lt;stop offset="100%" stop-color="#E52030" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M5 15 L17 15 C17.552 15 18 15.448 18 16 L18 26.398 C18 26.893 17.344 27.068 17.097 26.64 L15 23 L5 23 C4.448 23 4 22.552 4 22 L4 16 C4 15.448 4.448 15 5 15 z" style="fill:url(#cgu3er~siUc7hjzfogmV3c);" /&gt;
+  &lt;linearGradient x1="35.373" y1="618.276" x2="40.872" y2="628.449" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, -610)" id="cgu3er~siUc7hjzfogmV3d"&gt;
+    &lt;stop offset="0%" stop-color="#FFDA1C" /&gt;
+    &lt;stop offset="100%" stop-color="#FEB705" /&gt;
+  &lt;/linearGradient&gt;
+  &lt;path d="M44 7 L32 7 C31.448 7 31 7.448 31 8 L31 18.398 C31 18.893 31.656 19.068 31.903 18.64 L34 15 L44 15 C44.552 15 45 14.552 45 14 L45 8 C45 7.448 44.552 7 44 7 z" style="fill:url(#cgu3er~siUc7hjzfogmV3d);" /&gt;
+  &lt;path d="M38 23 L26 23 C25.448 23 25 23.448 25 24 L25 34.398 C25 34.893 25.656 35.068 25.903 34.64 L28 31 L38 31 C38.552 31 39 30.552 39 30 L39 24 C39 23.448 38.552 23 38 23 z" style="fill:#FF8F6B;" /&gt;
+  &lt;path d="M38 22.5 L26 22.5 C25.173 22.5 24.5 23.173 24.5 24 L24.5 34.398 C24.5 34.849 24.793 35.231 25.23 35.348 C25.317 35.37 25.405 35.382 25.491 35.382 C25.835 35.382 26.156 35.201 26.336 34.889 L28.289 31.499 L38 31.499 C38.827 31.499 39.5 30.826 39.5 29.999 L39.5 23.999 C39.5 23.173 38.827 22.5 38 22.5 z" opacity="0.07" /&gt;
+&lt;/svg&gt;</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Name" xml:space="preserve">
+    <value>RPVP_Language</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.Parent" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 403</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
+    <value>RPV_Main</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="PB_AppImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 12</value>
   </data>
   <data name="PB_AppImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PB_AppImage.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -266,27 +542,6 @@
   </data>
   <data name="&gt;&gt;RL_License.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="RPVP_About.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 355</value>
-  </data>
-  <data name="RPVP_About.Text" xml:space="preserve">
-    <value>  About ViVeTool GUI</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Name" xml:space="preserve">
-    <value>RPVP_About</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_About.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="RL_FeatureScanner_Info.Location" type="System.Drawing.Point, System.Drawing">
     <value>48, 62</value>
@@ -509,51 +764,6 @@
   </data>
   <data name="&gt;&gt;RGB_Behaviour.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="RPVP_Settings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABEZJREFUSEvd
-        lXtPmmcYxv0GW5b1IzRp0u2jbEuTtmkzY5yzVqla4izioe6lFJWCgtRCVdSi1ilUq2XVearVOWvXKB7x
-        gKLiAc/gAdT9c+1+HkBb336B7Ul+CUS4DvdzvxL1/zl5BsOFAr0xN19nLFBxSkIUhlByDCE0hgLFKXqO
-        oA6hUBffF7Tar8OyZ0dVaMysaWhCz5+DxDu8YfRFGCD+Qjej94wuorO3H51vQ3QQ5up6ZOdp5WHZs6PU
-        FAtM6OTkn89yfJ7jExFHRPubPmQpNUJY9uwIap3AUn1OzL9/gB2f/1Roe8cPn/+AC57nj663kCvUYoNc
-        VaHQ0dMvSmR71YZ8vQn6p5XwLK9xiowVoHtBQ5MdwaPjT3jd2QOZoBIb5FAtVu/jNH0DfyNfZyKMyCsy
-        kugTzkNtCZSax1CoDeimuwoEj3AYYARhb+9GWo5SbMBqsXofp1laWT0V11Hq2oZGPLe+5K+Z+K8FeriX
-        VnBwGMD+AeMQLW2dkGYpxAYyIV9g9ViaCM2tHVzcUmeDwzECp9MJl8sFt9uN3xpf4X6eDtaXrdijO/Lv
-        hWh63Y5UuSA2SM9VCazewWEQjjEnTJU1p8kdDgfK7IO4JH2By3etqO8ehdfrxSNDGTKVWhQYStH/fhi7
-        vj28sLdBIssVG0hpbqze3v4h6ildZOY19Y08+cVUG76IqcaXP1bgm6Rq+Hw+2FpaIVM8wi+5+TBV1dF2
-        +WBtbkVieo7YIFWuEFg9n38fdWQQudDn9PCxsVxMbuDiX914im8TzAgEAmTQxsWl2SqUVNRiY3OHRmdH
-        gjRLbJBMtVi9nV0/hkcmYaQvsG1hI2Izr+sawaXbFly+ZcbvA1MIBoNQ0YYx8QeaEvS++4A17yZqbc2I
-        o0sIy54dCdVi9ba2dzmbWzuw0Xu2LWxkbOZsLCx58OgIVhoPEzfXWrG8to7lVS88K15YaKSxyTKxQUJa
-        lsDqrW9sw7uxBe/6FsYnZ/gqsm3RPi7nM2djyaMHj4mnyB/gw+gkFpdXseBZ5StbSRsXI0kTG8RL5QKr
-        t7K2QbBE62hp7eLi2Q8L+bZELjQiniQTaCR2zC16MLfggcu9hLLqBkQnSsUGcakygdVbon8FLNEiJZr3
-        rKDcUo8sMhA0BlrFIfQPDiGDjCQZCmjpfqZcbszML2B6boG/Ztt0Iz5VbBAjSRdYvfnFZQ5PFE41Me2C
-        Y3KKhBa50NC4k95Pwzk7j8mZOfr7HMbpM2NTsygx1+B6XLLYIDoxTWD1ZkkkIhRJFRKaxwSJMaFxEhpz
-        zmKU7miEjBwTUxgeJ+gB1Zc+w9VYidjg5i1pZqZSzSuaqmrxpJKgVWWJGAazBYZyosyC4rJnKCYhXWkV
-        dKZKTpGpAoU0sruZClyJSRD/4Fz7KeXCtbiUe9d/vpPBib2TcTU26ROuxJwj+nbGD+f4Pjr+3nc3E8Q/
-        mf/RExX1L23SpiPPZEDdAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="RPVP_Settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 355</value>
-  </data>
-  <data name="RPVP_Settings.Text" xml:space="preserve">
-    <value>  Settings</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Name" xml:space="preserve">
-    <value>RPVP_Settings</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Settings.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="RMI_L_English.SvgImageXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -901,84 +1111,6 @@
   </data>
   <data name="&gt;&gt;RL_SelectLangauge.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="RPVP_Language.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="RPVP_Language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>422, 355</value>
-  </data>
-  <data name="RPVP_Language.SvgImageXml" xml:space="preserve">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;svg width="24px" height="24px" viewBox="0, 0, 48, 48" xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xml="http://www.w3.org/XML/1998/namespace" version="1.1"&gt;
-  &lt;radialGradient cx="10.062" cy="-27.438" r="40.916" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, -18)" id="cgu3er~siUc7hjzfogmV3a"&gt;
-    &lt;stop offset="0%" stop-color="#6FCEFC" /&gt;
-    &lt;stop offset="100%" stop-color="#167CF7" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;path d="M44 24 C44 35.045 35.045 44 24 44 C12.955 44 4 35.045 4 24 C4 12.955 12.955 4 24 4 C35.045 4 44 12.955 44 24 z" style="fill:url(#cgu3er~siUc7hjzfogmV3a);" /&gt;
-  &lt;radialGradient cx="10.696" cy="-26.05" r="40.918" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1, 0, 0, -1, 0, -18)" id="cgu3er~siUc7hjzfogmV3b"&gt;
-    &lt;stop offset="0.1%" stop-color="#54C0F5" /&gt;
-    &lt;stop offset="99.8%" stop-color="#0B69DB" /&gt;
-  &lt;/radialGradient&gt;
-  &lt;path d="M41 24 C41 21.535 40.601 19.182 39.904 17 L42.715 17 C42.459 16.315 42.169 15.647 41.842 15 L39.16 15 C36.355 8.485 30.621 4 24 4 C17.379 4 11.645 8.485 8.839 15 L6.157 15 C5.83 15.647 5.541 16.315 5.284 17 L8.095 17 C7.399 19.182 7 21.535 7 24 C7 26.465 7.399 28.818 8.096 31 L5.285 31 C5.541 31.685 5.831 32.353 6.158 33 L8.84 33 C11.646 39.515 17.38 44 24.001 44 C30.622 44 36.356 39.515 39.162 33 L41.844 33 C42.171 32.353 42.46 31.685 42.717 31 L39.906 31 C40.601 28.818 41 26.465 41 24 z M39 24 C39 26.481 38.579 28.847 37.819 31 L31.51 31 C31.833 28.734 32 26.35 32 24 C32 21.65 31.834 19.266 31.51 17 L37.819 17 C38.579 19.153 39 21.519 39 24 z M24 42 C22.064 42 19.979 38.555 18.848 33 L29.152 33 C28.021 38.555 25.936 42 24 42 z M18.5 31 C18.185 28.887 18 26.539 18 24 C18 21.461 18.185 19.113 18.5 17 L29.5 17 C29.815 19.113 30 21.461 30 24 C30 26.539 29.815 28.887 29.5 31 L18.5 31 z M24 6 C25.936 6 28.021 9.445 29.152 15 L18.848 15 C19.979 9.445 22.064 6 24 6 z M36.97 15 L31.178 15 C30.539 11.67 29.535 8.728001 28.184 6.727 C31.922 8.033 35.054 11.038 36.97 15 z M19.816 6.727 C18.466 8.729 17.461 11.67 16.822 15 L11.03 15 C12.946 11.038 16.078 8.033 19.816 6.727 z M9 24 C9 21.519 9.421 19.153 10.181 17 L16.49 17 C16.166 19.266 16 21.65 16 24 C16 26.35 16.166 28.734 16.49 31 L10.181 31 C9.421 28.847 9 26.481 9 24 z M11.03 33 L16.822 33 C17.461 36.33 18.465 39.272 19.816 41.273 C16.078 39.967 12.946 36.962 11.03 33 z M28.184 41.273 C29.534 39.271 30.539 36.33 31.178 33 L36.97 33 C35.054 36.962 31.922 39.967 28.184 41.273 z" style="fill:url(#cgu3er~siUc7hjzfogmV3b);" /&gt;
-  &lt;path d="M30.5 8 L30.5 18.398 C30.5 18.849 30.793 19.231 31.23 19.348 C31.317 19.37 31.405 19.382 31.491 19.382 C31.835 19.382 32.156 19.201 32.336 18.889 L34.289 15.499 L42.083 15.499 C40.288 11.689 37.342 8.532 33.674 6.499 L32 6.499 C31.173 6.5 30.5 7.173 30.5 8 z" opacity="0.07" /&gt;
-  &lt;path d="M17 14.5 L6.398 14.5 C4.997 17.089 4.175 20.028 4.043 23.145 C4.304 23.363 4.635 23.5 5 23.5 L14.711 23.5 L16.664 26.889 C16.844 27.202 17.165 27.383 17.51 27.383 C17.596 27.383 17.683 27.371 17.771 27.349 C18.208 27.232 18.501 26.85 18.501 26.399 L18.501 16 C18.5 15.173 17.827 14.5 17 14.5 z" opacity="0.07" /&gt;
-  &lt;path d="M30 8 L30 18.398 C30 19.079 30.442 19.655 31.101 19.831 C31.233 19.866 31.365 19.884 31.495 19.884 C32.015 19.884 32.498 19.611 32.77 19.139 L34.578 16 L42.324 16 C40.408 11.62 36.966 8.073 32.673 6 L32 6 C30.897 6 30 6.897 30 8 z" opacity="0.05" /&gt;
-  &lt;path d="M38 22 L26 22 C24.897 22 24 22.897 24 24 L24 34.398 C24 35.079 24.442 35.655 25.101 35.831 C25.233 35.866 25.365 35.884 25.495 35.884 C26.015 35.884 26.498 35.611 26.77 35.139 L28.578 32 L38 32 C39.103 32 40 31.103 40 30 L40 24 C40 22.897 39.103 22 38 22 z" opacity="0.05" /&gt;
-  &lt;path d="M17 14 L6.698 14 C5.035 16.87 4.061 20.185 4.014 23.729 C4.306 23.897 4.64 24 5 24 L14.422 24 L16.231 27.139 C16.502 27.611 16.986 27.884 17.506 27.884 C17.636 27.884 17.768 27.866 17.9 27.831 C18.558 27.655 19 27.079 19 26.398 L19 16 C19 14.897 18.103 14 17 14 z" opacity="0.05" /&gt;
-  &lt;linearGradient x1="8.916" y1="626.093" x2="16.671" y2="636.912" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, -610)" id="cgu3er~siUc7hjzfogmV3c"&gt;
-    &lt;stop offset="0%" stop-color="#F44F5A" /&gt;
-    &lt;stop offset="44.3%" stop-color="#EE3D4A" /&gt;
-    &lt;stop offset="100%" stop-color="#E52030" /&gt;
-  &lt;/linearGradient&gt;
-  &lt;path d="M5 15 L17 15 C17.552 15 18 15.448 18 16 L18 26.398 C18 26.893 17.344 27.068 17.097 26.64 L15 23 L5 23 C4.448 23 4 22.552 4 22 L4 16 C4 15.448 4.448 15 5 15 z" style="fill:url(#cgu3er~siUc7hjzfogmV3c);" /&gt;
-  &lt;linearGradient x1="35.373" y1="618.276" x2="40.872" y2="628.449" gradientUnits="userSpaceOnUse" gradientTransform="translate(0, -610)" id="cgu3er~siUc7hjzfogmV3d"&gt;
-    &lt;stop offset="0%" stop-color="#FFDA1C" /&gt;
-    &lt;stop offset="100%" stop-color="#FEB705" /&gt;
-  &lt;/linearGradient&gt;
-  &lt;path d="M44 7 L32 7 C31.448 7 31 7.448 31 8 L31 18.398 C31 18.893 31.656 19.068 31.903 18.64 L34 15 L44 15 C44.552 15 45 14.552 45 14 L45 8 C45 7.448 44.552 7 44 7 z" style="fill:url(#cgu3er~siUc7hjzfogmV3d);" /&gt;
-  &lt;path d="M38 23 L26 23 C25.448 23 25 23.448 25 24 L25 34.398 C25 34.893 25.656 35.068 25.903 34.64 L28 31 L38 31 C38.552 31 39 30.552 39 30 L39 24 C39 23.448 38.552 23 38 23 z" style="fill:#FF8F6B;" /&gt;
-  &lt;path d="M38 22.5 L26 22.5 C25.173 22.5 24.5 23.173 24.5 24 L24.5 34.398 C24.5 34.849 24.793 35.231 25.23 35.348 C25.317 35.37 25.405 35.382 25.491 35.382 C25.835 35.382 26.156 35.201 26.336 34.889 L28.289 31.499 L38 31.499 C38.827 31.499 39.5 30.826 39.5 29.999 L39.5 23.999 C39.5 23.173 38.827 22.5 38 22.5 z" opacity="0.07" /&gt;
-&lt;/svg&gt;</value>
-  </data>
-  <data name="RPVP_Language.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Name" xml:space="preserve">
-    <value>RPVP_Language</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.Parent" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPVP_Language.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RPV_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RPV_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="RPV_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 403</value>
-  </data>
-  <data name="RPV_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Name" xml:space="preserve">
-    <value>RPV_Main</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RPV_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
