@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RPVP_About.Text" xml:space="preserve">
+    <value>  Sobre ViVeTool GUI</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>Interfaz gráfica de usuario de Control de Características de Windows para ViVeTool</value>
+  </data>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>Explorar esta compilación en busca de identificadores de características</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Otras</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Usar Tema del Sistema</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema Claro</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tematización</value>
+  </data>
+  <data name="RL_AutoLoad.Text" xml:space="preserve">
+    <value>Cargar automáticamente:</value>
+  </data>
+  <data name="RGB_Behaviour.Text" xml:space="preserve">
+    <value>Comportamiento</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sobre y Configuración</value>
+  </data>
+  <data name="RPVP_Settings.Text" xml:space="preserve">
+    <value>  Configuración</value>
+  </data>
+  <data name="RL_FeatureScanner_Info.Text" xml:space="preserve">
+    <value>Esto solo se recomienda para usuarios avanzados.</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Otras</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tematización</value>
+  </data>
+  <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
+    <value>Comportamiento</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Seleccionar Idioma:</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>Seleccionar Idioma:</value>
+  </data>
 </root>

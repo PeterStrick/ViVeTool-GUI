@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Ruta para almacenar los símbolos de depuración descargados</value>
+  </data>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Introducción y Configuración</value>
+  </data>
+  <data name="RL_SymbolFiles.Text" xml:space="preserve">
+    <value>Total de archivos en {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>Escanear Símbolos de Depuración para IDs de Características</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;El escaneo ha completado. Ahora puedes:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Revisar tu archivo Features.txt&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;o Importar tu archivo Features.txt en ViVeTool-GUI seleccionando la opción "Usar Manual" en el menú desplegable en la parte inferior del menú de compilación&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_OA.Text" xml:space="preserve">
+    <value>Acciones Opcionales:</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Guardar el archivo Features.txt</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Acerca de y Configuración</value>
+  </data>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>Ruta para almacenar archivos PDB</value>
+  </data>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Ruta a symchk.exe</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Ruta a symchk.exe del SDK de Windows 10/11</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
+    <value>Examinar</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
+    <value>Examinar</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Ahora que todo está configurado, es hora de descargar las bases de datos de depuración del programa. La aplicación descargará automáticamente archivos PDB para archivos .exe y .dll en las siguientes carpetas hacia la carpeta de símbolos especificada, y los analizará después:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Esto llevará mucho tiempo, dependiendo de la cantidad de programas y aplicaciones que tengas instaladas actualmente.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Descargar Símbolos de Depuración</value>
+  </data>
+  <data name="RL_SymbolFolders.Text" xml:space="preserve">
+    <value>Total de carpetas en {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RL_SymbolSize.Text" xml:space="preserve">
+    <value>Tamaño actual de {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RL_InfoScan.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;El Escáner de Características comenzará automáticamente a escanear los archivos PDB usando mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;strong&gt;No cierres&lt;/strong&gt; esta ventana ni mach2, hasta que mach2 haya terminado de escanear.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Se te notificará con una notificación en el escritorio una vez que se complete el escaneo.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Eliminar {My.Settings.SymbolPath}</value>
+  </data>
+  <data name="RL_OutputFile.Text" xml:space="preserve">
+    <value>Archivo de salida: </value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Hecho</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tematización</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tematización</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Usar Tema del Sistema</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema Claro</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Seleccionar Idioma:</value>
+  </data>
 </root>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RB_FixPriority.Text" xml:space="preserve">
+    <value>Corregir Prioridades</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opciones Avanzadas para las Características de ViVeTool</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Activar Característica</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Revertir Característica a Configuración Predeterminada</value>
+  </data>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Desactivar Característica</value>
+  </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      Realizar Acción</value>
+  </data>
+  <data name="RTB_VariantID.NullText" xml:space="preserve">
+    <value>Introduce un número de variante opcional</value>
+  </data>
+  <data name="RB_FixLKG.Text" xml:space="preserve">
+    <value>Corregir Última Configuración Válida</value>
+  </data>
+  <data name="RTB_FeatureID.NullText" xml:space="preserve">
+    <value>Introduce un ID de Característica</value>
+  </data>
 </root>

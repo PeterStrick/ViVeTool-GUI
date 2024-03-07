@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RB_SendComment.Text" xml:space="preserve">
+    <value>Enviar comentario</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Añadir un comentario</value>
+  </data>
+  <data name="RL_AddComment.Text" xml:space="preserve">
+    <value>Añade un comentario para la característica: {0}, compilación {1}</value>
+  </data>
+  <data name="RB_EditText.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;b&gt;Editar Texto&lt;/b&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_CommentInfo.Text" xml:space="preserve">
+    <value>Una vez enviado, el comentario será revisado y editado si es necesario.</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Pulsa en "&lt;strong&gt;Editar Texto&lt;/strong&gt;" para editar el texto del comentario.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puedes escribir un comentario usando texto normal o &lt;strong&gt;&lt;em&gt;formato de texto similar a HTML&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>
