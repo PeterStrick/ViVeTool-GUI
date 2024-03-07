@@ -299,4 +299,150 @@ Ejecutar ViVeTool GUI directamente desde un archivo ZIP sin extraerlo primero o 
   <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
     <value>Pueden haber múltiples causas para las excepciones de Win32, pero generalmente se reducen a que el software antivirus interfiera con ViVeTool GUI, o problemas de permisos.</value>
   </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>Se produjo una excepción de red</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>ViVeTool-GUI no puede rellenar el menú desplegable de compilaciones si el dispositivo no está conectado a Internet o si la API de GitHub no está disponible.
+
+Aún puedes cambiar manualmente un ID de característica presionando F12, y cargar una lista de características local.</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>Obteniendo comentarios de características de la base de datos…</value>
+  </data>
+  <data name="Comments_DBError_Unavailable" xml:space="preserve">
+    <value>Los comentarios no se pudieron cargar porque el servidor de la base de datos no está disponible actualmente.</value>
+  </data>
+  <data name="Comments_Form_EditIntroducionText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Pulsa en ""&lt;strong&gt;Editar Texto&lt;/strong&gt;"" para editar el texto del comentario.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Puedes escribir un comentario usando texto normal o &lt;strong&gt;&lt;em&gt;formato de texto similar a HTML&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Default Text for the Label that shows your own Comment</comment>
+  </data>
+  <data name="Comments_ServerError_HTTP502" xml:space="preserve">
+    <value>El servidor de comentarios no está disponible en este momento. HTTP 502: Puerta de enlace incorrecta</value>
+  </data>
+  <data name="Comments_ServerError_HTTP403" xml:space="preserve">
+    <value>Se ha producido un error al comunicarse con el servidor de comentarios. HTTP 403: Prohibido</value>
+  </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>Gestión de características</value>
+  </data>
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
+    <value>Falta el diccionario de características</value>
+  </data>
+  <data name="FeatureDictionary_MissingText" xml:space="preserve">
+    <value>El Diccionario de Características proporciona una traducción entre los Nombres de Características de ViVeTool y los IDs de ViVeTool. Aunque es opcional, se recomienda descargar este Diccionario. ¿Te gustaría descargarlo ahora?</value>
+  </data>
+  <data name="FeatureDictionary_UpdateText" xml:space="preserve">
+    <value>Hay una versión más nueva del Diccionario de Características disponible. Contiene traducciones de IDs de ViVeTool más recientes a sus correspondientes Nombres de Características. ¿Quieres actualizarlo ahora?</value>
+  </data>
+  <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
+    <value>No es necesario reparar la Última Configuración Válida Conocida.</value>
+  </data>
+  <data name="ViVe_Priorities_NotRequired" xml:space="preserve">
+    <value>No es necesario reparar las prioridades de las características.</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Cerrar el diálogo</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Comentario enviado</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Tu comentario se envió correctamente.</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>Se produjo un error al enviar tu comentario.</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>Se produjo un error al intentar iniciar el Escáner de Características de ViVeTool GUI.
+
+El archivo no existe.</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>ViVeTool GUI necesita reiniciarse para reflejar el cambio de idioma.
+
+Intentará reiniciarse después de que presiones en Cerrar.</value>
+  </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>Comprobando si el servidor de la base de datos de comentarios está disponible…</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>Rellenando el menú desplegable de compilaciones…</value>
+  </data>
+  <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
+    <value>Los comentarios no se pudieron cargar porque el servidor de la base de datos se está cerrando actualmente.</value>
+  </data>
+  <data name="Comments_DBError_CommunicationError" xml:space="preserve">
+    <value>Se produjo un error al comunicarse con el servidor de la base de datos de comentarios</value>
+  </data>
+  <data name="Error_ADatabaseErrorOccurred" xml:space="preserve">
+    <value>Se produjo un error de base de datos</value>
+  </data>
+  <data name="Comments_DialogTitle" xml:space="preserve">
+    <value>Comentario para {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP504" xml:space="preserve">
+    <value>El servidor de comentarios no está disponible en este momento. HTTP 504: Tiempo de espera de la puerta de enlace</value>
+  </data>
+  <data name="Comments_ServerError_HTTP503" xml:space="preserve">
+    <value>El servidor de comentarios no está disponible en este momento. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP500" xml:space="preserve">
+    <value>El servidor de comentarios no está disponible en este momento. HTTP 500: Error interno del servidor</value>
+  </data>
+  <data name="Comments_ServerError_HTTP404" xml:space="preserve">
+    <value>Se ha producido un error al comunicarse con el servidor de comentarios. HTTP 404: No encontrado</value>
+  </data>
+  <data name="Comments_ServerError_HTTP400" xml:space="preserve">
+    <value>Se ha producido un error al comunicarse con el servidor de comentarios. HTTP 400: Solicitud incorrecta</value>
+  </data>
+  <data name="Comments_ServerError_Generic" xml:space="preserve">
+    <value>Se ha producido un error desconocido en la comunicación con el servidor de comentarios. {0}</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>Nada</value>
+  </data>
+  <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
+    <value>Hay una actualización disponible para el Diccionario de Características</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>Descarga completa</value>
+  </data>
+  <data name="FeatureDictionary_DownloadText" xml:space="preserve">
+    <value>La descarga de un diccionario de características más reciente ha finalizado correctamente.</value>
+  </data>
+  <data name="FeatureDictionary_UpdateError" xml:space="preserve">
+    <value>No se pudo realizar una comprobación de actualización del Diccionario de Características.</value>
+  </data>
+  <data name="Generic_Version" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Generic_FeatureList" xml:space="preserve">
+    <value>Lista de características</value>
+  </data>
+  <data name="ViVe_LKGStore_Repaired" xml:space="preserve">
+    <value>La última configuración válida conocida se reparó correctamente.</value>
+  </data>
+  <data name="Generic_NotRequired" xml:space="preserve">
+    <value>No es necesario</value>
+  </data>
+  <data name="ViVe_Priorities_Fixed" xml:space="preserve">
+    <value>Las prioridades de las características se repararon correctamente. Se recomienda reiniciar el sistema.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Text" xml:space="preserve">
+    <value>Se produjo un error al intentar reparar las prioridades de las características.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Expanded" xml:space="preserve">
+    <value>Las funciones devolvieron {0}. Se esperaba 00</value>
+  </data>
+  <data name="Settings_TheLatestBuildFeatureList" xml:space="preserve">
+    <value>La lista de características de la compilación más reciente</value>
+  </data>
+  <data name="Settings_TheCurrentBuildFeatureList" xml:space="preserve">
+    <value>La lista de características de la compilación actual</value>
+  </data>
+  <data name="Generic_Copy" xml:space="preserve">
+    <value>Copia</value>
+  </data>
 </root>
