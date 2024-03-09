@@ -68,7 +68,7 @@
     <value>  Activar Característica</value>
   </data>
   <data name="RMI_RevertF.Text" xml:space="preserve">
-    <value>  Revertir Característica a Configuración Predeterminada</value>
+    <value>  Revertir Característica a Valores Predeterminados</value>
   </data>
   <data name="RMI_DeactivateF.Text" xml:space="preserve">
     <value>  Desactivar Característica</value>

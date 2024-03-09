@@ -112,4 +112,7 @@
   <data name="RL_SelectLangauge.Text" xml:space="preserve">
     <value>Seleccionar Idioma:</value>
   </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Iconos de &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Repositorio Github de PeterStrick/ViVeTool-GUI&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspirado en &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;El código de la caja de combos utiliza &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;files&lt;/a&gt; de &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Funcionalidad de actualización proporcionada por &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Traducido por &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Peter Strick&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>

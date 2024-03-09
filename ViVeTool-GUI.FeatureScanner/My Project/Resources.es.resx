@@ -62,7 +62,7 @@
     <value>Ejemplo de ruta: C:\Program Files\Windows Kits\10\Debuggers\x64\symchk.exe</value>
   </data>
   <data name="ToolTip_RTB_SymbolPath" xml:space="preserve">
-    <value>Los símbolos de depuración descargados pueden tener un tamaño de hasta 5 a 30 GB.</value>
+    <value>Los símbolos de depuración descargados pueden tener un tamaño de hasta 5~30GB.</value>
   </data>
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>Ha ocurrido un error</value>
@@ -263,7 +263,7 @@ Ejecutar ViVeTool GUI directamente desde un archivo ZIP sin extraerlo primero o 
     <value>Falta el ID. Crea un problema en GitHub e incluye el siguiente texto: {0}</value>
   </data>
   <data name="Browse_PathToDebuggingTools" xml:space="preserve">
-    <value>"Ruta a symchk.exe de las Herramientas de Depuración de Windows"</value>
+    <value>Ruta a symchk.exe de las Herramientas de Depuración de Windows</value>
   </data>
   <data name="Browse_SymbolPath_Description" xml:space="preserve">
     <value>Selecciona una carpeta para almacenar los símbolos de depuración descargados. Los archivos .pdb descargados suelen ocupar entre 5 y 8 GB de espacio.</value>
