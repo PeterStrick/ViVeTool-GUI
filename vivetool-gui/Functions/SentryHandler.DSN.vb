@@ -13,6 +13,6 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Partial Public Class CrashReporter
-    Private Shared ReadOnly GUID As String = "YOUR GUID HERE"
+Partial Public Class SentryHandler
+    Private Shared ReadOnly _DSN As String = "YOUR DSN HERE"
 End Class
