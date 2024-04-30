@@ -266,4 +266,7 @@ Setelah itu, aplikasi akan secara otomatis mulai mengunduh File PDB.
 
 {0}</value>
   </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Terjadi Exception yang tidak diketahui</value>
+  </data>
 </root>

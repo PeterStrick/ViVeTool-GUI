@@ -13,14 +13,25 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Configuration, System.Globalization, Telerik.WinControls.UI
+Imports System.Configuration, System.Globalization, Microsoft.VisualBasic.ApplicationServices
 
 Namespace My
+    ''' <summary>
+    ''' .Net Framework Application Framework
+    ''' </summary>
     Partial Friend Class MyApplication
-        Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
+        ''' <summary>
+        ''' Used to set the Application Theme, Language and Settings, check for missing Assemblies and initialize Sentry
+        ''' </summary>
+        ''' <param name="sender">Default sender Object</param>
+        ''' <param name="e">Default EventArgs</param>
+        Private Sub MyApplication_Startup(sender As Object, e As StartupEventArgs) Handles Me.Startup
             ' Check for Assembly Reference Version differences, used to compat Crashes if a Reference has been replaced by another Version,
             ' without updating the Reference in Visual Studio. (For example replacing the DLL File)
             CheckAssemblyVersion()
+
+            ' Initialize Sentry
+            SentryHandler.Init()
 
             ' Set Language
             If Settings.TwoCharLanguageCode IsNot "" Then
@@ -90,6 +101,24 @@ Namespace My
                     ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             End If
+        End Sub
+
+        ''' <summary>
+        ''' Used to show the Sentry Exception Dialog
+        ''' </summary>
+        ''' <param name="sender">Default sender Object</param>
+        ''' <param name="e">Unhandled Exception EventArgs</param>
+        Private Sub MyApplication_UnhandledException(sender As Object, e As UnhandledExceptionEventArgs) Handles Me.UnhandledException
+            SentryHandler.ShowSentry(e.Exception)
+        End Sub
+
+        ''' <summary>
+        ''' Used to Dispose of the Sentry SDK to ensure events are flushed and sent to Sentry
+        ''' </summary>
+        ''' <param name="sender">Default sender Object</param>
+        ''' <param name="e">Default EventArgs</param>
+        Private Sub MyApplication_Shutdown(sender As Object, e As EventArgs) Handles Me.Shutdown
+            SentryHandler.Dispose()
         End Sub
     End Class
 End Namespace

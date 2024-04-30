@@ -300,4 +300,7 @@ Successivamente, l'applicazione inizierà automaticamente a scaricare i file PDB
 
 Assicurati che l'applicazione abbia accesso in scrittura alla cartella e che la cartella non sia protetta da scrittura.</value>
   </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Si è verificata un'eccezione sconosciuta</value>
+  </data>
 </root>

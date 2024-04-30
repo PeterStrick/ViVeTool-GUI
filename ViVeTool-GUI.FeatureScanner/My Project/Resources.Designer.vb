@@ -225,6 +225,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to An unknown Exception occurred.
+        '''</summary>
+        Friend ReadOnly Property Error_AnUnknownExceptionOccurred() As String
+            Get
+                Return ResourceManager.GetString("Error_AnUnknownExceptionOccurred", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Collapse Exception.
         '''</summary>
         Friend ReadOnly Property Error_CollapseException() As String
@@ -288,6 +297,33 @@ Namespace My.Resources
         Friend ReadOnly Property Error_MissingFiles_Text_N() As String
             Get
                 Return ResourceManager.GetString("Error_MissingFiles_Text_N", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Restart without sending a Crash Report.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_RestartWithoutReportingBtn_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_RestartWithoutReportingBtn_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Send Crash Report and Restart.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_SendAndReportBtn_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_SendAndReportBtn_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Do you want to send a Crash Report and restart the Application?.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_Text", resourceCulture)
             End Get
         End Property
         

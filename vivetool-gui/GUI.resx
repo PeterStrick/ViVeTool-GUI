@@ -227,8 +227,8 @@
   <data name="__DBG_SEP6.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="__DBG_SentryCrashTest_DivideBy0.Text" xml:space="preserve">
-    <value>[Sentry] Divide by 0 - Crash Test</value>
+  <data name="__DBG_SentryCrashTest_TimeZoneNotFoundException.Text" xml:space="preserve">
+    <value>[Sentry] Throw TimeZoneNotFoundException</value>
   </data>
   <data name="__DBG_CustomDebug.Text" xml:space="preserve">
     <value>Custom Debug</value>
@@ -2393,10 +2393,16 @@
   <data name="&gt;&gt;__DBG_SEP6.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuSeparatorItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;__DBG_SentryCrashTest_DivideBy0.Name" xml:space="preserve">
-    <value>__DBG_SentryCrashTest_DivideBy0</value>
+  <data name="&gt;&gt;__DBG_SentryCrashTest_TimeZoneNotFoundException.Name" xml:space="preserve">
+    <value>__DBG_SentryCrashTest_TimeZoneNotFoundException</value>
   </data>
-  <data name="&gt;&gt;__DBG_SentryCrashTest_DivideBy0.Type" xml:space="preserve">
+  <data name="&gt;&gt;__DBG_SentryCrashTest_TimeZoneNotFoundException.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;__DBG_CustomDebug.Name" xml:space="preserve">
+    <value>__DBG_CustomDebug</value>
+  </data>
+  <data name="&gt;&gt;__DBG_CustomDebug.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RLE_StatusLabel.Name" xml:space="preserve">
@@ -2440,12 +2446,6 @@
   </data>
   <data name="&gt;&gt;FluentTheme.Type" xml:space="preserve">
     <value>Telerik.WinControls.Themes.FluentTheme, Telerik.WinControls.Themes.Fluent, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;__DBG_CustomDebug.Name" xml:space="preserve">
-    <value>__DBG_CustomDebug</value>
-  </data>
-  <data name="&gt;&gt;__DBG_CustomDebug.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GUI</value>

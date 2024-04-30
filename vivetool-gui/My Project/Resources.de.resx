@@ -495,4 +495,13 @@ Das direkte Ausführen von ViVeTool GUI aus einer ZIP-Datei ohne vorheriges Extr
   <data name="Telerik_Ignore" xml:space="preserve">
     <value>Ignorieren</value>
   </data>
+  <data name="Error_Sentry_SendAndReportBtn_Text" xml:space="preserve">
+    <value>Einen Absturzbericht senden und die Anwendung neustarten</value>
+  </data>
+  <data name="Error_Sentry_Text" xml:space="preserve">
+    <value>Möchten Sie einen Absturzbericht senden und die Anwendung neustarten?</value>
+  </data>
+  <data name="Error_Sentry_RestartWithoutReportingBtn_Text" xml:space="preserve">
+    <value>Die Anwendung neustarten ohne einen Absturzbericht zu senden</value>
+  </data>
 </root>

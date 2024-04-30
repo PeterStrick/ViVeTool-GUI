@@ -2,9 +2,11 @@
 <MyApplicationData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <MySubMain>true</MySubMain>
   <MainForm>GUI</MainForm>
-  <SingleInstance>true</SingleInstance>
+  <SingleInstance>false</SingleInstance>
   <ShutdownMode>0</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
   <AuthenticationMode>0</AuthenticationMode>
+  <MinimumSplashScreenDisplayTime>0</MinimumSplashScreenDisplayTime>
   <SaveMySettingsOnExit>true</SaveMySettingsOnExit>
+  <HighDpiMpde>true</HighDpiMpde>
 </MyApplicationData>

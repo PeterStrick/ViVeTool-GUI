@@ -20,7 +20,7 @@ Imports System.Diagnostics, System.Reflection
 ''' </summary>
 Module AssemblyVersion
     ''' <summary>
-    ''' Sub that Checks the ViVe API, AutoUpdater/CrashReporter.NET, WebView2 and Telerik DLLs for Version differences
+    ''' Sub that Checks the ViVe API, AutoUpdater.NET, Sentry, WebView2 and Telerik DLLs for Version differences
     ''' </summary>
     Public Sub CheckAssemblyVersion()
         For Each Reference In Assembly.GetExecutingAssembly().GetReferencedAssemblies()
@@ -29,8 +29,8 @@ Module AssemblyVersion
                     Check(Application.StartupPath & "\Albacore.ViVe.dll", Reference.Version.ToString)
                 Case "AutoUpdater.NET"
                     Check(Application.StartupPath & "\AutoUpdater.NET.dll", Reference.Version.ToString)
-                Case "CrashReporter.NET"
-                    Check(Application.StartupPath & "\CrashReporter.NET.dll", Reference.Version.ToString)
+                Case "Sentry"
+                    Check(Application.StartupPath & "\Sentry.dll", Reference.Version.ToString)
                 Case "Microsoft.Web.WebView2.Core"
                     Check(Application.StartupPath & "\Microsoft.Web.WebView2.Core.dll", Reference.Version.ToString)
                 Case "Microsoft.Web.WebView2.WinForms"

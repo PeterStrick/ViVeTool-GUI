@@ -518,6 +518,33 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Restart without sending a Crash Report.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_RestartWithoutReportingBtn_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_RestartWithoutReportingBtn_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Send Crash Report and Restart.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_SendAndReportBtn_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_SendAndReportBtn_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Do you want to send a Crash Report and restart the Application?.
+        '''</summary>
+        Friend ReadOnly Property Error_Sentry_Text() As String
+            Get
+                Return ResourceManager.GetString("Error_Sentry_Text", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to An Error occurred while trying to set {0} to {1}.
         '''</summary>
         Friend ReadOnly Property Error_SetConfig() As String

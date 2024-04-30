@@ -191,6 +191,10 @@ Public Class GUI
             MsgBox($"Got {CInt(Build)}, {My.Resources.Error_SelectBuild17704OrHigherToUseGrouping}")
         End If
     End Sub
+
+    Private Sub __DBG_SentryCrashTest_TimeZoneNotFoundException_Click(sender As Object, e As EventArgs) Handles __DBG_SentryCrashTest_TimeZoneNotFoundException.Click
+        Throw New TimeZoneNotFoundException
+    End Sub
 #End Region
 
     ''' <summary>
@@ -224,10 +228,6 @@ Public Class GUI
 #If DEBUG Then
         __DBG_Load()
 #End If
-
-        ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
-        AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
-        AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
 
         ' Comment Code
         AddHandler RMI_AddComment.Click, AddressOf ShowCommentForm

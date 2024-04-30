@@ -20,13 +20,13 @@ Imports System.Reflection
 ''' </summary>
 Module AssemblyVersion
     ''' <summary>
-    ''' Sub that Checks the CrashReporter.NET and Telerik DLLs for Version differences
+    ''' Sub that Checks the Sentry and Telerik DLLs for Version differences
     ''' </summary>
     Public Sub CheckAssemblyVersion()
         For Each Reference In Assembly.GetExecutingAssembly().GetReferencedAssemblies()
             Select Case Reference.Name
-                Case "CrashReporter.NET"
-                    Check(Application.StartupPath & "\CrashReporter.NET.dll", Reference.Version.ToString)
+                Case "Sentry"
+                    Check(Application.StartupPath & "\Sentry.dll", Reference.Version.ToString)
                 Case "Telerik.WinControls"
                     Check(Application.StartupPath & "\Telerik.WinControls.dll", Reference.Version.ToString)
                 Case "Telerik.WinControls.RadToastNotification"

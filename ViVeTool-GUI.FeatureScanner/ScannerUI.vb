@@ -31,6 +31,14 @@ Public Class ScannerUI
         My.Resources.Done_Alert_CaptionText, My.Resources.Done_Alert_ContentText))
 
 #Region "Debug Subs"
+    Private Sub __DBG_Load()
+        If Debugger.IsAttached Then
+            __DBG_OPTIONS.Enabled = True
+            __DBG_OPTIONS.Visible = True
+            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
+        End If
+    End Sub
+
     Private Sub __DBG_ScanSymbols_Click(sender As Object, e As EventArgs) Handles __DBG_ScanSymbols.Click
         My.Settings.DebuggerPath = RTB_DbgPath.Text
         My.Settings.SymbolPath = RTB_SymbolPath.Text
@@ -531,11 +539,7 @@ Public Class ScannerUI
     ''' <param name="e">Default EventArgs</param>
     Private Sub ScannerUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 #If DEBUG Then
-        If Debugger.IsAttached Then
-            __DBG_OPTIONS.Enabled = True
-            __DBG_OPTIONS.Visible = True
-            MsgBox("Debugger detected. The Debug Menu is enabled and visible.")
-        End If
+        __DBG_Load()
 #End If
 
         ' Add Toast to RadToastNotificationManager
@@ -543,10 +547,6 @@ Public Class ScannerUI
 
         ' Localize the Introduction Text
         Functions.SetWBDocumentText(WB_Introduction, My.Resources.WB_HTML_Introduction)
-
-        ' Listen to Application Crashes and show CrashReporter.Net if one occurs.
-        AddHandler Application.ThreadException, AddressOf CrashReporter.ApplicationThreadException
-        AddHandler AppDomain.CurrentDomain.UnhandledException, AddressOf CrashReporter.CurrentDomainOnUnhandledException
 
         ' Load About Labels
         Dim ApplicationTitle As String
