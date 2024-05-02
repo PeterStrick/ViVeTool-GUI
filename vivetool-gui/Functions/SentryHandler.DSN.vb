@@ -1,5 +1,5 @@
 ﻿'ViVeTool GUI - Windows Feature Control GUI for ViVeTool
-'Copyright (C) 2023 Peter Strick
+'Copyright (C) 2024 Peter Strick
 '
 'This program is free software: you can redistribute it and/or modify
 'it under the terms of the GNU General Public License as published by
@@ -13,6 +13,6 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Partial Public Class CrashReporter
-    Private Shared ReadOnly GUID As String = "YOUR GUID HERE"
+Partial Public Class SentryHandler
+    Private Shared ReadOnly _DSN As String = "YOUR DSN HERE"
 End Class
