@@ -25,6 +25,9 @@ Partial Public Class SentryHandler
     ''' Initializes the Sentry SDK
     ''' </summary>
     Public Shared Sub Init()
+        ' Do not Initialize Sentry if the DSN is set to the Default Template Value
+        If Not IsEnabled() Then Return
+
         Dim Options As New SentryOptions With {
             .Dsn = _DSN,
             .AutoSessionTracking = True,
@@ -36,7 +39,7 @@ Partial Public Class SentryHandler
 
         ' Enable Debug Logs if a Debugger is attached
 #If DEBUG Then
-        If Diagnostics.Debugger.IsAttached Then
+        If Debugger.IsAttached Then
             Options.Debug = True
             Options.DiagnosticLogger = New FileDiagnosticLogger(Application.StartupPath & "\sentry.log")
             Options.Environment = "debug"
@@ -58,6 +61,12 @@ Partial Public Class SentryHandler
     ''' </summary>
     ''' <param name="ex">Unhandled Exception to Report and Display</param>
     Public Shared Sub ShowSentry(ex As Exception)
+        ' Show Generic Exception if Sentry is disabled
+        If Not IsEnabled() Then
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, "Sentry Crash Reporter Fallback")
+            Return
+        End If
+
         ' Store the Exception in _ex for use in SendSentry()
         _ex = ex
 
@@ -132,4 +141,16 @@ Partial Public Class SentryHandler
         Process.Start(Application.ExecutablePath)
         Application.Exit()
     End Sub
+
+    ''' <summary>
+    ''' Function to check if Sentry should be used
+    ''' </summary>
+    ''' <returns>True if the Sentry DSN is not set to the Default Template Value, False if not</returns>
+    Public Shared Function IsEnabled() As Boolean
+        If _DSN = "YOUR DSN HERE" Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
 End Class
