@@ -445,4 +445,13 @@ Intentará reiniciarse después de que presiones en Cerrar.</value>
   <data name="Generic_Copy" xml:space="preserve">
     <value>Copia</value>
   </data>
+  <data name="Error_Sentry_RestartWithoutReportingBtn_Text" xml:space="preserve">
+    <value>Reiniciar sin enviar un informe de fallo</value>
+  </data>
+  <data name="Error_Sentry_Text" xml:space="preserve">
+    <value>¿Desea enviar un informe de fallos y reiniciar la aplicación?</value>
+  </data>
+  <data name="Error_Sentry_SendAndReportBtn_Text" xml:space="preserve">
+    <value>Enviar informe de fallo y reiniciar</value>
+  </data>
 </root>

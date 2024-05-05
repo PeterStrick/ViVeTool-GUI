@@ -65,7 +65,7 @@
     <value>Idioma</value>
   </data>
   <data name="RL_Description.Text" xml:space="preserve">
-    <value>Interfaz gráfica de usuario de Control de Características de Windows para ViVeTool</value>
+    <value>Interfaz Gráfica de Control de Características de Windows para ViVeTool</value>
   </data>
   <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
     <value>Explorar esta compilación en busca de identificadores de características</value>
