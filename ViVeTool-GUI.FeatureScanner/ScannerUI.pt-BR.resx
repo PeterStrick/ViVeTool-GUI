@@ -61,4 +61,91 @@
   <data name="RadGroupBox1.Text" xml:space="preserve">
     <value>Linguagem</value>
   </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Selecionar idioma:</value>
+  </data>
+  <data name="RB_SymbolPath_Browse.Text" xml:space="preserve">
+    <value>Procurar</value>
+  </data>
+  <data name="RL_SymbolFolders.Text" xml:space="preserve">
+    <value>Total de pastas em {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RL_SymbolFiles.Text" xml:space="preserve">
+    <value>Total de arquivos em {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RL_SymbolSize.Text" xml:space="preserve">
+    <value>Tamanho atual de {My.Settings.SymbolPath}:</value>
+  </data>
+  <data name="RPVP_ScanPDB.Text" xml:space="preserve">
+    <value>Verificar símbolos de depuração por IDs de recursos</value>
+  </data>
+  <data name="RL_OA.Text" xml:space="preserve">
+    <value>Ações opções:</value>
+  </data>
+  <data name="RL_OutputFile.Text" xml:space="preserve">
+    <value>Arquivo de saída: </value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Usar tema do sistema</value>
+  </data>
+  <data name="RB_Continue.Text" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="RPVP_Setup.Text" xml:space="preserve">
+    <value>Introdução e configuração</value>
+  </data>
+  <data name="RL_DbgPath.Text" xml:space="preserve">
+    <value>Caminho para symchk.exe</value>
+  </data>
+  <data name="RB_DbgPath_Browse.Text" xml:space="preserve">
+    <value>Procurar</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema claro</value>
+  </data>
+  <data name="RL_SymbolPath.Text" xml:space="preserve">
+    <value>Caminho para armazenar arquivos PDB</value>
+  </data>
+  <data name="RTB_DbgPath.NullText" xml:space="preserve">
+    <value>Caminho para symchk.exe do Windows 10/11 SDK</value>
+  </data>
+  <data name="RTB_SymbolPath.NullText" xml:space="preserve">
+    <value>Caminho para armazenar os símbolos de depuração baixados</value>
+  </data>
+  <data name="RL_InfoScan.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;O verificador de recursos agora começará a examinar automaticamente os arquivos PDB usando mach2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt; &lt;strong&gt;NÃO &lt;/strong&gt;feche esta janela ou mach2 até ele finalizar o verificação.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Você será notificado assim que a verificação for concluída.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RB_OA_DeleteSymbolPath.Text" xml:space="preserve">
+    <value>Excluir {My.Settings.SymbolPath}</value>
+  </data>
+  <data name="RB_OA_CopyFeaturesTXT.Text" xml:space="preserve">
+    <value>Salvar arquivo Features.txt</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="RPVP_AboutAndSettings.Text" xml:space="preserve">
+    <value>Sobre &amp; configurações</value>
+  </data>
+  <data name="RL_DownloadIntroduction.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Agora que está tudo configurado, é hora de baixar os bancos de dados de depuração do programa. O aplicativo baixará automaticamente os arquivos PDB para arquivos .exe e .dll nas seguintes pastas para a pasta de símbolos especificada e os analisará posteriormente:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 9pt"&gt;C:\Windows,&lt;/span&gt;&lt;span style="font-size: 9pt"&gt; C:\Program Files, C:\Program Files (x86)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 11pt"&gt;Isso levará muito tempo, dependendo da quantidade de programas e aplicativos que você instalou atualmente.&lt;/span&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_DownloadPDB.Text" xml:space="preserve">
+    <value>Baixar símbolos de depuração</value>
+  </data>
+  <data name="RL_Done.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;A verificação foi concluída. Agora você pode:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 10pt"&gt;&lt;span style="font-size: 10pt"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;Revisar o arquivo Features.txt&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style="font-size: 10pt"&gt;ou importar o seu arquivo Features.txt no ViVeTool-GUI, selecionando"Usar manual" na parte inferior da caixa de combinações da compilação&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RPVP_Done.Text" xml:space="preserve">
+    <value>Concluído</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Ícones por &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;repositório PeterStrick/ViVeTool-GUI no Github&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspirado por &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Código Combo Box usando &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;files&lt;/a&gt; de &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Função de atualização fornecida por &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Traduzido por &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;igorruckert&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>

@@ -80,4 +80,378 @@
   <data name="Error_NetworkError" xml:space="preserve">
     <value>Erro de Rede</value>
   </data>
+  <data name="Error_Sentry_Text" xml:space="preserve">
+    <value>Deseja enviar um relatório de falha e reiniciar o aplicativo?</value>
+  </data>
+  <data name="Error_Sentry_RestartWithoutReportingBtn_Text" xml:space="preserve">
+    <value>Reiniciar sem enviar relatório de falha</value>
+  </data>
+  <data name="Error_Sentry_SendAndReportBtn_Text" xml:space="preserve">
+    <value>Enviar relatório de falha e reiniciar</value>
+  </data>
+  <data name="Error_SelectBuild17704OrHigherToUseGrouping" xml:space="preserve">
+    <value>Selecione a compilação 17704 ou superior para usar o agrupamento</value>
+  </data>
+  <data name="Generic_LoadManually" xml:space="preserve">
+    <value>Carregar manualmente…</value>
+  </data>
+  <data name="Generic_AlwaysEnabled" xml:space="preserve">
+    <value>Sempre ativado</value>
+  </data>
+  <data name="Generic_FeatureName" xml:space="preserve">
+    <value>Nome do recurso</value>
+  </data>
+  <data name="Error_NetworkFunctionsDisabledF12" xml:space="preserve">
+    <value>Funções de rede desativadas. Pressione F12 para alterar manualmente um recurso.</value>
+  </data>
+  <data name="LoadManually_PathToAFeatureList" xml:space="preserve">
+    <value>Caminho para lista de recursos</value>
+  </data>
+  <data name="Generic_Done" xml:space="preserve">
+    <value>Concluído.</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureID" xml:space="preserve">
+    <value>O ID do recurso {0} foi definido como {1} com êxito</value>
+  </data>
+  <data name="Error_Error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="Error_ANetworkErrorOccurred" xml:space="preserve">
+    <value>Ocorreu um erro de rede</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema claro</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI" xml:space="preserve">
+    <value>Seu IP pode ter sido temporariamente limitado pela API do GitHub por uma hora.</value>
+  </data>
+  <data name="Generic_PopulatingTheDataGridView" xml:space="preserve">
+    <value>Preenchendo a visualização da grade de dados… Isso pode demorar um pouco.</value>
+  </data>
+  <data name="SystemMenu_ManuallySetFeatureID" xml:space="preserve">
+    <value>Definir manualmente o ID do recurso</value>
+  </data>
+  <data name="Error_SetConfig" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar definir {0} como {1}</value>
+    <comment>{0} references to a ID/Feature, {1} to a Feature State</comment>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Recolher exceção</value>
+  </data>
+  <data name="Generic_Default" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Ocorreu uma exceção desconhecida</value>
+  </data>
+  <data name="Generic_AlwaysDisabled" xml:space="preserve">
+    <value>Sempre desativado</value>
+  </data>
+  <data name="SetConfig_Success" xml:space="preserve">
+    <value> Sucesso</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="SystemMenu_About" xml:space="preserve">
+    <value>&amp;Sobre</value>
+    <comment>The &amp; is used to underline the first character</comment>
+  </data>
+  <data name="Generic_EnabledByDefault" xml:space="preserve">
+    <value>Ativado por padrão</value>
+  </data>
+  <data name="Error_SettingFeatureConfig" xml:space="preserve">
+    <value>Ocorreu um erro ao definir uma configuração de recurso para {0}</value>
+    <comment>{0} references to a Feature</comment>
+  </data>
+  <data name="Generic_FeatureID" xml:space="preserve">
+    <value>ID de recurso</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeature" xml:space="preserve">
+    <value>Recurso {0} definido como {1} com sucesso</value>
+  </data>
+  <data name="Comments_PrivacyInformation" xml:space="preserve">
+    <value>Informações de privacidade</value>
+  </data>
+  <data name="Comments_I_Agree" xml:space="preserve">
+    <value>Concordar</value>
+  </data>
+  <data name="Comments_SendMyComment" xml:space="preserve">
+    <value>Enviar meu comentário</value>
+  </data>
+  <data name="Comments_I_Dont_Agree_Subtext" xml:space="preserve">
+    <value>Fechar este diálogo e não enviar nada</value>
+  </data>
+  <data name="Error_ANetworkExceptionOccurred" xml:space="preserve">
+    <value>Ocorreu uma exceção de rede</value>
+  </data>
+  <data name="Error_FeatureScannerNotFound_N" xml:space="preserve">
+    <value>Ocorreu uma exceção ao tentar iniciar a verificação de recursos do ViVeTool GUI.
+
+O arquivo não existe.</value>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>O ViVeTool GUI precisa ser reiniciado para aplicar a mudança de idioma.
+
+Ele tentará reiniciar após você pressionar Fechar.</value>
+  </data>
+  <data name="Comments_CheckingAvailabillity" xml:space="preserve">
+    <value>Verificando se o servidor de banco de dados de comentários está disponível…</value>
+  </data>
+  <data name="PopulateBuildComboBox_Populating" xml:space="preserve">
+    <value>Preenchendo a caixa de combinações da compilação…</value>
+  </data>
+  <data name="Comments_DBError_CommunicationError" xml:space="preserve">
+    <value>Ocorreu um erro durante a comunicação com o servidor de banco de dados de comentários</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>É necessário reiniciar para mudar o idioma</value>
+  </data>
+  <data name="Comments_DBError_Unavailable" xml:space="preserve">
+    <value>Não foi possível carregar os comentários porque o servidor de banco de dados está indisponível no momento.</value>
+  </data>
+  <data name="Comments_DialogTitle" xml:space="preserve">
+    <value>Comentário para {0}</value>
+  </data>
+  <data name="Error_ADatabaseErrorOccurred" xml:space="preserve">
+    <value>Ocorreu um erro do banco de dados</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Ocorreu uma exceção</value>
+  </data>
+  <data name="Comments_Spaced_PrivacyInformation" xml:space="preserve">
+    <value> Informações de privacidade</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_I_Dont_Agree" xml:space="preserve">
+    <value>Não concordar</value>
+  </data>
+  <data name="Comments_Spaced_SendingYourComment" xml:space="preserve">
+    <value> Enviando seu comentário…</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_SendingYourComment" xml:space="preserve">
+    <value>Enviando seu comentário…</value>
+  </data>
+  <data name="General_Finish" xml:space="preserve">
+    <value>Concluir</value>
+  </data>
+  <data name="Comments_ClosesTheDialog" xml:space="preserve">
+    <value>Fecha este diálogo</value>
+  </data>
+  <data name="Comments_Spaced_CommentSent" xml:space="preserve">
+    <value> Comentário enviado</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Comments_CommentSentSuccessfully" xml:space="preserve">
+    <value>Seu comentário foi enviado com sucesso.</value>
+  </data>
+  <data name="Comments_GettingComments" xml:space="preserve">
+    <value>Obtendo comentários de recursos do banco de dados…</value>
+  </data>
+  <data name="Comments_ServerError_HTTP503" xml:space="preserve">
+    <value>O servidor de comentários não está disponível no momento. {0}</value>
+  </data>
+  <data name="Comments_ServerError_HTTP502" xml:space="preserve">
+    <value>O servidor de comentários não está disponível no momento. HTTP 502: Bad Gateway</value>
+  </data>
+  <data name="Comments_ServerError_HTTP500" xml:space="preserve">
+    <value>O servidor de comentários não está disponível no momento. HTTP 500: Internal Server Error</value>
+  </data>
+  <data name="Comments_ServerError_HTTP404" xml:space="preserve">
+    <value>Ocorreu um erro durante a comunicação com o servidor de comentários. HTTP 404: Not Found</value>
+  </data>
+  <data name="Comments_ServerError_HTTP400" xml:space="preserve">
+    <value>Ocorreu um erro durante a comunicação com o servidor de comentários. HTTP 400: Bad Request</value>
+  </data>
+  <data name="Comments_ServerError_Generic" xml:space="preserve">
+    <value>Ocorreu um erro desconhecido durante a comunicação com o servidor de comentários. {0}</value>
+  </data>
+  <data name="Generic_FeatureManagement" xml:space="preserve">
+    <value>Gerenciador de recursos</value>
+  </data>
+  <data name="Generic_Nothing" xml:space="preserve">
+    <value>Nada</value>
+  </data>
+  <data name="FeatureDictionary_UpdateTitle" xml:space="preserve">
+    <value>Uma atualização do dicionário de recursos está disponível</value>
+  </data>
+  <data name="FeatureDictionary_UpdateText" xml:space="preserve">
+    <value>Uma versão mais recente do dicionário de recursos está disponível. Ele contém traduções de IDs ViVeTool mais recentes para seus nomes de recurso correspondentes. Deseja atualizá-lo agora?</value>
+  </data>
+  <data name="Generic_Version" xml:space="preserve">
+    <value>Versão {0}</value>
+  </data>
+  <data name="FeatureDictionary_DownloadTitle" xml:space="preserve">
+    <value>Download concluído</value>
+  </data>
+  <data name="Generic_FeatureList" xml:space="preserve">
+    <value>Lista de recursos</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Incompatibilidade de versão de dependência</value>
+  </data>
+  <data name="Comments_ServerError_HTTP504" xml:space="preserve">
+    <value>O servidor de comentários está indisponível no momento. HTTP 504: Gateway Timeout</value>
+  </data>
+  <data name="ViVe_LKGStore_Repaired" xml:space="preserve">
+    <value>O último armazenamento em condições conhecidas foi reparado com sucesso.</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Ocorreu uma incompatibilidade de uma versão de dependência de montagem.
+
+Executar o ViVeTool GUI diretamente de um arquivo ZIP sem extraí-lo primeiro ou perder/substituir um arquivo DLL do ViVeTool GUI pode causar esse problema.</value>
+  </data>
+  <data name="FeatureDictionary_MissingTitle" xml:space="preserve">
+    <value>O dicionário de recursos está faltando</value>
+  </data>
+  <data name="FeatureDictionary_DownloadText" xml:space="preserve">
+    <value>O download de um dicionário de recursos mais recente foi concluído com êxito.</value>
+  </data>
+  <data name="ViVe_Priorities_Fixed" xml:space="preserve">
+    <value>As prioridades de recursos foram corrigidas com sucesso. Uma reinicialização é recomendada.</value>
+  </data>
+  <data name="ViVe_Priorities_NotRequired" xml:space="preserve">
+    <value>Não é necessária a correção de prioridades de recursos.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Expanded" xml:space="preserve">
+    <value>As funções retornaram {0}. Esperado 00</value>
+  </data>
+  <data name="Settings_TheCurrentBuildFeatureList" xml:space="preserve">
+    <value>Lista de recursos da compilação atual</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Settings_TheLatestBuildFeatureList" xml:space="preserve">
+    <value>Lista de recursos da compilação mais recente</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Modelo mestre</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abortar</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Digite o texto para pesquisar</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Ocultar detalhes</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignorar</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Corresponder maiúsculas/minúsculas</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Repetir</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Pesquisar da posição atual</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>Pesquisar nas colunas</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>Ver detalhes</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Tentar de novo</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="TelerikLocalization_MissingID" xml:space="preserve">
+    <value>O ID está faltando. Crie um Issue no Github e inclua o seguinte texto: {0}</value>
+  </data>
+  <data name="Generic_NotRequired" xml:space="preserve">
+    <value>Não necessário</value>
+  </data>
+  <data name="ViVe_LKGStore_NotRequired" xml:space="preserve">
+    <value>A correção do último armazenamento em condições conhecidas não é necessária.</value>
+  </data>
+  <data name="Generic_Copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="SetConfig_SuccessfullySetFeatureConfig_Status" xml:space="preserve">
+    <value>Configuração de recurso definida com sucesso para {0} com valor {1}</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Mostrar exceção</value>
+  </data>
+  <data name="PopulateBuildComboBox_Check_Ready" xml:space="preserve">
+    <value>Pronto. Selecione uma compilação ou pressione F12 para alterar manualmente um recurso.</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Heading" xml:space="preserve">
+    <value>Ocorreu uma exceção Win32 genérica.</value>
+  </data>
+  <data name="Error_NetworkException_GithubAPI_Response" xml:space="preserve">
+    <value>Resposta do API do GitHub: </value>
+  </data>
+  <data name="Error_ExceptionSettingFeatureID" xml:space="preserve">
+    <value>Ocorreu uma exceção ao tentar definir o ID do recurso {0} como {1}</value>
+    <comment>{0} references to a ID, {1} to a Feature State</comment>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Compilação não suportada</value>
+  </data>
+  <data name="Comments_PrivacyText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Antes de enviar seu comentário, você deve concordar que seu endereço IP criptografado será armazenado por uma semana como parte de nossa &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI/blob/v1.7-Testing/Comments/privacy.md"&gt;Política de Privacidade&lt;/a&gt;, após pressionar 'Concordar'.&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Comments_Form_EditIntroducionText" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Pressione ""&lt;strong&gt;Editar texto&lt;/strong&gt;"" para editar o texto do comentário.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Você pode escrever um comentário usando texto normal ou &lt;strong&gt;&lt;em&gt;formatação de texto semelhante a HTML&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <comment>Default Text for the Label that shows your own Comment</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copia a exceção para a área de transferência e fecha o diálogo</value>
+  </data>
+  <data name="Generic_FeatureState" xml:space="preserve">
+    <value>Estado do recurso</value>
+  </data>
+  <data name="Error_GenericWin32Exception_Text" xml:space="preserve">
+    <value>Pode haver várias causas para exceções Win32, mas elas geralmente se limitam a software antivírus interferindo na GUI do ViVeTool ou problemas de permissão.</value>
+  </data>
+  <data name="Error_SendComment" xml:space="preserve">
+    <value>Ocorreu um erro ao enviar seu comentário.</value>
+  </data>
+  <data name="Error_NetworkExceptionDetail_N" xml:space="preserve">
+    <value>O ViVeTool-GUI não consegue preencher a caixa de combinações da compilação, se o dispositivo não estiver conectado à Internet ou se a API do GitHub estiver inacessível.
+
+Você ainda pode alterar manualmente um ID de recurso pressionando F12 e carregar uma lista de recursos local.</value>
+  </data>
+  <data name="Comments_DBError_ShuttingDown" xml:space="preserve">
+    <value>Os comentários não puderam ser carregados porque o servidor de banco de dados está sendo encerrado.</value>
+  </data>
+  <data name="Comments_ServerError_HTTP403" xml:space="preserve">
+    <value>Ocorreu um erro durante a comunicação com o servidor de comentários. HTTP 403: Forbidden</value>
+  </data>
+  <data name="FeatureDictionary_MissingText" xml:space="preserve">
+    <value>O dicionário de recursos fornece uma tradução entre nomes de recursos do ViVeTool e IDs do ViVeTool. Embora opcional, é recomendável baixar este dicionário. Gostaria de baixá-lo agora?</value>
+  </data>
+  <data name="FeatureDictionary_UpdateError" xml:space="preserve">
+    <value>Não foi possível executar uma verificação de atualização do dicionário de recursos.</value>
+  </data>
+  <data name="ViVe_Priorities_Error_Text" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar corrigir as prioridades de recursos.</value>
+  </data>
 </root>

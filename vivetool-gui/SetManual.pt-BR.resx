@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -58,4 +58,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RMI_DeactivateF.Text" xml:space="preserve">
+    <value>  Desativar recurso</value>
+  </data>
+  <data name="RDDB_PerformAction.Text" xml:space="preserve">
+    <value>      Executar ação</value>
+  </data>
+  <data name="RMI_ActivateF.Text" xml:space="preserve">
+    <value>  Ativar recurso</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opções avançadas para recursos do ViVeTool</value>
+  </data>
+  <data name="RMI_RevertF.Text" xml:space="preserve">
+    <value>  Reverter recurso ao valor padrão</value>
+  </data>
+  <data name="RTB_VariantID.NullText" xml:space="preserve">
+    <value>Insira um número de variante opcional</value>
+  </data>
+  <data name="RB_FixLKG.Text" xml:space="preserve">
+    <value>Corrigir LastKnownGood</value>
+  </data>
+  <data name="RTB_FeatureID.NullText" xml:space="preserve">
+    <value>Forneça o ID do recurso</value>
+  </data>
+  <data name="RB_FixPriority.Text" xml:space="preserve">
+    <value>Corrigir propriedades</value>
+  </data>
 </root>

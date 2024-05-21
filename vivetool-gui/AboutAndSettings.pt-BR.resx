@@ -61,4 +61,58 @@
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Outro</value>
   </data>
+  <data name="RB_ViVeTool_GUI_FeatureScanner.Text" xml:space="preserve">
+    <value>Examinar compilação por IDs de recursos</value>
+  </data>
+  <data name="RGB_Theming.Text" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="RL_AutoLoad.Text" xml:space="preserve">
+    <value>Carregar automaticamente:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Sobre &amp; configurações</value>
+  </data>
+  <data name="RPVP_About.Text" xml:space="preserve">
+    <value>  Sobre o ViVeTool GUI</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Outro</value>
+  </data>
+  <data name="RTB_ThemeToggle.Text" xml:space="preserve">
+    <value>  Tema claro</value>
+  </data>
+  <data name="RPVP_Language.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="RL_FeatureScanner_Info.Text" xml:space="preserve">
+    <value>Recomendado somente para usuários avançados.</value>
+  </data>
+  <data name="RGB_Behaviour.Text" xml:space="preserve">
+    <value>Comportamento</value>
+  </data>
+  <data name="RGB_Behaviour.HeaderText" xml:space="preserve">
+    <value>Comportamento</value>
+  </data>
+  <data name="RPVP_Settings.Text" xml:space="preserve">
+    <value>  Configurações</value>
+  </data>
+  <data name="RL_SelectLangauge.Text" xml:space="preserve">
+    <value>Selecionar idioma:</value>
+  </data>
+  <data name="RL_Comments.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Ícones por &lt;a href="https://icons8.com/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;Icons8.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;repositório PeterStrick/ViVeTool-GUI no Github&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Inspirado por &lt;a href="https://github.com/thebookisclosed/ViVe/"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;thebookisclosed/ViVe&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Código Combo Box usando &lt;a href="https://github.com/riverar/mach2/tree/master/features"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;files&lt;/a&gt; de &lt;a href="https://github.com/riverar/mach2"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;riverar/mach2&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Função de atualização fornecida por &lt;a href="https://github.com/ravibpatel/AutoUpdater.NET"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;AutoUpdater.NET&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Traduzido por &lt;a href="https://github.com/PeterStrick/ViVeTool-GUI"&gt;&lt;color=186,0,0&gt;&lt;/color=186,0,0&gt;igorruckert&lt;/a&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RL_Description.Text" xml:space="preserve">
+    <value>Interface de Controle de Recursos do Windows para o ViVeTool</value>
+  </data>
+  <data name="RTB_UseSystemTheme.Text" xml:space="preserve">
+    <value>  Usar tema do sistema</value>
+  </data>
+  <data name="RDDB_Language.Text" xml:space="preserve">
+    <value>Selecionar idioma:</value>
+  </data>
+  <data name="RGB_Theming.HeaderText" xml:space="preserve">
+    <value>Tema</value>
+  </data>
 </root>

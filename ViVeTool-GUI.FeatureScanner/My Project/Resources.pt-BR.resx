@@ -80,4 +80,239 @@
   <data name="Error_AnErrorOccurred" xml:space="preserve">
     <value>Houve um Erro</value>
   </data>
+  <data name="Error_AnUnknownExceptionOccurred" xml:space="preserve">
+    <value>Ocorreu uma exceção desconhecida</value>
+  </data>
+  <data name="Error_Sentry_Text" xml:space="preserve">
+    <value>Deseja enviar um relatório de falha e reiniciar o aplicativo?</value>
+  </data>
+  <data name="Error_AnExceptionOccurred" xml:space="preserve">
+    <value>Ocorreu uma exceção</value>
+  </data>
+  <data name="Error_CollapseException" xml:space="preserve">
+    <value>Recolher exceção</value>
+  </data>
+  <data name="Error_ShowException" xml:space="preserve">
+    <value>Mostrar exceção</value>
+  </data>
+  <data name="SymbolDownloaded" xml:space="preserve">
+    <value>Símbolo {0} baixado.</value>
+    <comment>{0} references to a File Name or a File in a Directory, ex: Symbol1.pdb or Dir1/Symbol1.pdb</comment>
+  </data>
+  <data name="Calculation_TotalFilesIn_N" xml:space="preserve">
+    <value>Total de arquivos em {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Done_OutputFile_N" xml:space="preserve">
+    <value>Arquivo de saída: {0}</value>
+    <comment>{0} references to a TXT File and a full Folder Path, ex: C:\New folder\File1.txt</comment>
+  </data>
+  <data name="Done_FileCopySuccessful_Caption" xml:space="preserve">
+    <value> Arquivo copiado com sucesso</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Calculation_Calculating" xml:space="preserve">
+    <value>Calculando…</value>
+  </data>
+  <data name="Error_IOError" xml:space="preserve">
+    <value>Erro de E/S</value>
+  </data>
+  <data name="Done_SymbolDelete" xml:space="preserve">
+    <value>Excluir {0}</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Done_Alert_CaptionText" xml:space="preserve">
+    <value>Verificação de símbolos de depuração concluída</value>
+  </data>
+  <data name="Done_Alert_ContentText" xml:space="preserve">
+    <value>A verificação dos símbolos de depuração foi concluída. Volte à verificação de recursos do ViVeTool GUI para localizar mais.</value>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Heading_N" xml:space="preserve">
+    <value>{0} foi excluído com sucesso.</value>
+    <comment>{0} references to a full Folder Path, ex: C:\New Folder</comment>
+  </data>
+  <data name="Error_SymbolFolderDeleted_N" xml:space="preserve">
+    <value>Ocorreu uma exceção ao tentar excluir {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Done_SymbolFolderDeleted_Caption" xml:space="preserve">
+    <value> Pasta de símbolos excluída com sucesso</value>
+    <comment>The space at the beginning is used to make the text look better</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="Error_SymbolFolderTestFile_N" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar salvar um arquivo de teste na pasta de símbolos.
+
+Uma pasta de símbolos deve ser especificada para baixar os arquivos do banco de dados de depuração do programa.</value>
+  </data>
+  <data name="Generic_LightTheme" xml:space="preserve">
+    <value>Tema claro</value>
+  </data>
+  <data name="Error_CopyExceptionAndClose_ToolTip" xml:space="preserve">
+    <value>Copia a exceção para a área de transferência e fecha o diálogo</value>
+  </data>
+  <data name="Generic_FileSize_Gigabyte" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="Error_UnsupportedBuild" xml:space="preserve">
+    <value>Compilação não suportada</value>
+  </data>
+  <data name="Error_mach2Scan_N" xml:space="preserve">
+    <value>Ocorreu um erro ao verificar os arquivos de símbolos.
+
+O aplicativo tentará verificar a pasta de símbolos novamente.</value>
+  </data>
+  <data name="Error_SymbolDownload_N" xml:space="preserve">
+    <value>Ocorreu um erro ao baixar os arquivos de símbolos.
+
+Veja se você possui acesso ao arquivo symchk.exe e que seu antivírus não o esteja bloqueando.</value>
+  </data>
+  <data name="Error_SymchkPath_N" xml:space="preserve">
+    <value>Ocorreu um erro ao verificar se o caminho especificado para symchk.exe é válido.
+
+Certifique-se de fornecer um caminho válido para symchk.exe.
+
+Se você não localizar symchk.exe, ele geralmente está localizado na pasta de instalação do Windows SDK\10\Debuggers\x64</value>
+  </data>
+  <data name="Error_MissingFiles_Text_N" xml:space="preserve">
+    <value>Verifique se os seguintes arquivos estão presentes:
+
+{0}</value>
+  </data>
+  <data name="Language_Heading" xml:space="preserve">
+    <value>É necessário reiniciar para mudar o idioma</value>
+  </data>
+  <data name="Telerik_All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="Telerik_Abort" xml:space="preserve">
+    <value>Abortar</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSetValidCellValue" xml:space="preserve">
+    <value>Defina um valor de célula válido</value>
+  </data>
+  <data name="Check_AssemblyVersions_Title" xml:space="preserve">
+    <value>Incompatibilidade de versão de dependência</value>
+  </data>
+  <data name="Telerik_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Telerik_ConditionalFormattingPleaseSelectValidCellValue" xml:space="preserve">
+    <value>Selecione um valor de célula válido</value>
+  </data>
+  <data name="Telerik_Continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="Telerik_MasterTemplate" xml:space="preserve">
+    <value>Modelo mestre</value>
+  </data>
+  <data name="Telerik_EnterTextToSearch" xml:space="preserve">
+    <value>Digite o texto para pesquisar</value>
+  </data>
+  <data name="Telerik_No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Telerik_Help" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="Telerik_HideDetails" xml:space="preserve">
+    <value>Ocultar detalhes</value>
+  </data>
+  <data name="Telerik_Ignore" xml:space="preserve">
+    <value>Ignorar</value>
+  </data>
+  <data name="Telerik_Of" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="Telerik_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Telerik_Retry" xml:space="preserve">
+    <value>Repetir</value>
+  </data>
+  <data name="Telerik_SearchFromCurrentPosition" xml:space="preserve">
+    <value>Pesquisar da posição atual</value>
+  </data>
+  <data name="Telerik_SearchInColumns" xml:space="preserve">
+    <value>Pesquisar nas colunas</value>
+  </data>
+  <data name="Telerik_SeeDetails" xml:space="preserve">
+    <value>Ver detalhes</value>
+  </data>
+  <data name="Telerik_TryAgain" xml:space="preserve">
+    <value>Tentar de novo</value>
+  </data>
+  <data name="Telerik_Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="TelerikLocalization_MissingID" xml:space="preserve">
+    <value>O ID está faltando. Crie um Issue no Github e inclua o seguinte texto: {0}</value>
+  </data>
+  <data name="Calculation_TotalFoldersIn_N" xml:space="preserve">
+    <value>Total de pastas em {0}: {{1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Number or Calculation_Calculating</comment>
+  </data>
+  <data name="Error_CopyException" xml:space="preserve">
+    <value>Ocorreu uma exceção ao tentar copiar {0} para sua área de trabalho.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="Error_MissingFiles_Heading" xml:space="preserve">
+    <value>Ocorreu um erro. Arquivos necessários para a verificação de recursos do ViVeTool GUI funcionar corretamente estão faltando.</value>
+  </data>
+  <data name="Error_SymbolPath_NewN" xml:space="preserve">
+    <value>Ocorreu um erro ao tentar salvar um arquivo de teste em {0}
+
+Certifique-se de que o aplicativo tenha acesso de escrita à pasta e que a pasta não esteja protegida contra gravação.</value>
+  </data>
+  <data name="Check_AssemblyVersions_Text" xml:space="preserve">
+    <value>Ocorreu uma incompatibilidade de uma versão de dependência de montagem.
+
+Executar o ViVeTool GUI diretamente de um arquivo ZIP sem extraí-lo primeiro ou perder/substituir um arquivo DLL do ViVeTool GUI pode causar esse problema.</value>
+  </data>
+  <data name="Error_SymbolPathException1_N" xml:space="preserve">
+    <value>Ocorreu uma exceção ao tentar salvar um arquivo de teste em {0}</value>
+    <comment>{0} references to a full Folder Path. Ex: C:\New folder</comment>
+  </data>
+  <data name="Calculation_CurrentSizeOf_N" xml:space="preserve">
+    <value>Tamanho atual de {0}: {1}</value>
+    <comment>{0} references to a full Folder Path, {1} references to a Total File Size or Calculation_Calculating</comment>
+  </data>
+  <data name="Done_FileCopySuccessful_Heading" xml:space="preserve">
+    <value>{0} foi copiado com sucesso para sua área de trabalho.</value>
+    <comment>{0} references to a TXT File, ex: File1.txt</comment>
+  </data>
+  <data name="WB_HTML_Introduction" xml:space="preserve">
+    <value>&lt;html&gt;&lt;body&gt;&lt;span style="font-size: 11pt; font-family: Segoe UI"&gt;&lt;p&gt;
+Bem-vindo à verificação de recursos do ViVeTool GUI
+&lt;/p&gt;&lt;p&gt;
+Esta ferramenta é usada para baixar e verificar arquivos .pdb (Program Debug Database) em novas compilações Insider do Windows 10/11 para criar sua própria lista de recursos.
+&lt;/p&gt;&lt;p&gt;
+A verificação de recursos do ViVeTool GUI &lt;strong&gt;não deve ser usado pelo usuário comum&lt;/strong&gt;. Baixar arquivos PDB do Microsoft Symbol Server geralmente leva uma média de 2 horas dependendo da velocidade da sua Internet.
+&lt;/p&gt;&lt;p&gt;
+Esta ferramenta necessita:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;
+5~30 GB de espaço em disco para o download dos símbolos de depuração
+&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;
+Uma cópia instalada das ferramentas de depuração para Windows disponíveis no SDK do Windows
+&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Após certificar-se de que os requisitos foram atendidos, defina as caixas de texto abaixo com seus respectivos valores e clique em “Continuar”. Passe o mouse sobre eles para ver um exemplo.
+&lt;/p&gt;&lt;p&gt;
+Depois disso, o aplicativo começará automaticamente a baixar os arquivos PDB.
+&lt;/p&gt;&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</value>
+    <comment>Please be sure to leave the HTML intact. A HTML Editor/manually writing a html file and making sure it renders in IE is recommended.</comment>
+  </data>
+  <data name="Language_Text" xml:space="preserve">
+    <value>O ViVeTool precisa ser reiniciado para alterar o idioma. Ele tentará reiniciar após você pressionar Fechar.</value>
+  </data>
+  <data name="Telerik_MatchCase" xml:space="preserve">
+    <value>Corresponder maiúsculas/minúsculas</value>
+  </data>
+  <data name="Error_Sentry_SendAndReportBtn_Text" xml:space="preserve">
+    <value>Enviar relatório de falha e reiniciar</value>
+  </data>
+  <data name="Error_Sentry_RestartWithoutReportingBtn_Text" xml:space="preserve">
+    <value>Reiniciar sem enviar relatório de falha</value>
+  </data>
 </root>
