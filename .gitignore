@@ -362,12 +362,12 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# SonarCloud / SonarScan
+# SonarQube / SonarScan
 /.sonarqube/
 /.snoar/
 /.sonarcloud/
-/Sonar Cloud Scanning Tool.lnk
-/SonarCloudScannerConfig.json
+/SonarQube Scanning Tool.lnk
+/SonarQubeScannerConfig.json
 /.vscode
 
 # Telerik UI for WinForms
@@ -385,4 +385,3 @@ FodyWeavers.xsd
 # Environment Files
 **/*.env
 /Output
-/scan.bat
