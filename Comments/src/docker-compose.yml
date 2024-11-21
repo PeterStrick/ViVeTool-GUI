@@ -1,0 +1,29 @@
+services:
+  discord-bot:
+    build:
+      dockerfile: ./bot/Dockerfile-bot
+      context: .
+    stdin_open: true
+    tty: true
+    env_file: ./bot/bot.env
+    network_mode: host
+    restart: always
+    volumes:
+      - type: bind
+        source: ./bot.log
+        target: /app/bot.log
+
+  api:
+    ports:
+      - 60145:60145
+    build:
+      dockerfile: ./api/Dockerfile-api
+      context: .
+    stdin_open: true
+    tty: true
+    env_file: ./api/api.env
+    restart: always
+    volumes:
+      - type: bind
+        source: ./api.log
+        target: /app/api.log

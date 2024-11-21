@@ -1,0 +1,10 @@
+FROM python:3.10.15
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir mysql-connector-python python-dotenv Flask Flask-RESTful waitress requests pycryptodome
+
+ADD lib /app/lib
+COPY ./api .
+
+CMD [ "python", "./vivetool_api.py" ]

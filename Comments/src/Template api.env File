@@ -3,8 +3,8 @@ VERSION_API=v1.7
 VERSION_BOT=v1.7
 
 # Discord Token and Webhook
-DISCORD_TOKEN=Your_Bot_Token_here
-WEBHOOK_URL="https://discord.com/api/webhooks/Your_Webhook_URL_Here"
+DISCORD_TOKEN=Your Bot Token here
+WEBHOOK_URL="https://discord.com/api/webhooks/YOUR WebHook URL Here"
 
 # Discord Roles
 DISCORD_ROLE_OWNER=123456789
@@ -19,7 +19,7 @@ MYSQL_DB_USER=DB User with Write Privileges here
 MYSQL_DB_PSWD=Password here
 ENC_PSWD=Encryption Password here, recommended to be very long and complex
 
-# Database Names
+# Databases
 DB_COMMENTS_PUBLIC=ViVeTool_GUI
 DB_COMMENTS_API=ViVeTool_GUI_API
 
@@ -27,5 +27,5 @@ DB_COMMENTS_API=ViVeTool_GUI_API
 API_PORT=60145
 API_PORT_ALT=443
 
-# Log File path
-LOG_FILE=/absolute/path/to/a/bot.log
+# Log File
+LOG_FILE=/app/bot.log

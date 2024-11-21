@@ -1,0 +1,10 @@
+FROM python:3.10.15
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir mysql-connector-python python-dotenv py-cord[speed] table2ascii pycryptodome
+
+ADD lib /app/lib
+COPY ./bot .
+
+CMD [ "python", "./vivetool_bot.py" ]
