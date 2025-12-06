@@ -1,6 +1,32 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
+title: "Feature: [short description]"
+labels: enhancement
+---
+
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is.
+
+**Describe the solution you'd like**
+Describe the preferred solution and why it helps.
+
+**Alternatives considered**
+List other solutions or features you considered.
+
+**Acceptance criteria**
+
+- Clear description of when this is done
+- Backwards compatibility notes
+
+**Checklist**
+
+- [ ] I discussed this in an issue or RFC
+- [ ] I can provide tests or a prototype
+
+---
+name: Feature request
+about: Suggest an idea for this project
 title: ''
 labels: 'Enhancement :star:'
 assignees: PeterStrick

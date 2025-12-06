@@ -1,80 +1,95 @@
-> [!CAUTION]
-> # DEPRECATION NOTICE
->
-> This Project is unfortunately deprecated due to number of colliding factors, like me having less Motivation and Time to work on ViVeTool GUI; and the State of Windows deterioating on a day to day basis, which made me switch away from Windows to Linux full time and permanently
->
-> While it hurts me to stop working on a Project that garnered this much attention and Stars, it is better to officially declare it deprecated and unmaintained, instead of just denying the facts
->
-> It was really fun working and gaining experience while developing ViVeTool GUI, if someone else wants to carry on with the Project feel free to create a GitHub Issue to discuss it
+# ViVeTool-GUI
 
-![GitHub all releases](https://img.shields.io/github/downloads/peterstrick/vivetool-gui/total)
-![GitHub License](https://img.shields.io/github/license/peterstrick/vivetool-gui)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/peterstrick/vivetool-gui)
-[![](https://dcbadge.vercel.app/api/server/8vDFXEucp2?style=flat)](https://discord.gg/8vDFXEucp2)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PeterStrick_ViVeTool-GUI&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=PeterStrick_ViVeTool-GUI)
-[![Translation](https://weblate.rawrr.dev/widgets/vivetool-gui/-/svg-badge.svg)](https://weblate.rawrr.dev/engage/vivetool-gui)
+Note: This repository is a fork of the deprecated ViVeTool-GUI originally maintained by PeterStrick. The original repository is deprecated; this fork continues active maintenance and development.
 
-# ViVeTool GUI <img src="/images/icons8-advertisement-page-96.png" alt="ViVeTool GUI Logo" width="32"/> 
-### Windows Feature Control GUI based on ViVeTool
+Windows Feature Control GUI based on ViVe / ViVeTool.
 
-## What is ViVeTool GUI?
-ViVeTool GUI lets you easily enable, disable and search for new hidden Features in Windows Insider Builds, with the use of a Button and a pretty UI.
+Fork & Origin
+----------------
 
-## Disclaimer.
-### No one, including me / [PeterStrick](https://github.com/PeterStrick), [the creators of ViVe and ViVeTool](https://github.com/thebookisclosed/ViVe) or [the creators of mach2](https://github.com/riverar/mach2) are responsible for any damage or unintended side effects, this program might cause to your computer, by changing the Windows Feature Store. Use this program at your own risk.
+- This repository is a fork of the original ViVeTool-GUI by PeterStrick ([PeterStrick/ViVeTool-GUI](https://github.com/PeterStrick/ViVeTool-GUI)). The original project is marked as deprecated; this fork continues active maintenance and modernization efforts.
 
-## How to use it?
-Using it is simple, 
-Either:
+Deprecation note
+----------------
 
-1. Select the Build for which you want to enable or disable features for.
-2. Wait for it to load in, open one of the Groups by pressing the Arrow, and select the Feature that you are looking for.
-3. Press on Perform Action and perform your desired action for the entered feature ID.
+- The original WinForms-based UI in the upstream repository is deprecated in favor of the WPF rewrite. If you are looking for legacy behavior or old releases, refer to the upstream repository archives.
 
-<img width="511" height="355" src="/images/Method1.gif" alt="Image showing you how to perform Method 1" />
+Contributing & Support
+----------------------
 
+- Contributions and issues are welcome. See `CONTRIBUTING.md` for guidelines on patches, PRs, and CI expectations.
+- For security or vulnerability reports, follow the guidance in `SECURITY.md`.
 
----
+Contact
+-------
 
-Or:
-1. Press on "Manually change a Feature" (F12)
-2. Enter a Feature ID
-3. Press on Perform Action and perform your desired action for the selected feature.
+- Primary maintainer: mta1124-1629472
+- For release/CI questions open an issue or ping maintainers via the repository's issue tracker.
 
-<img width="511" height="355" src="/images/Method2.gif" alt="Image showing you how to perform Method 2" />
+Status
 
----
+- This repo is actively maintained — original WinForms is legacy, WPF (.NET 9) is current, Telerik dependency removal in progress.
 
-## What are the additional features?
-Apart from being able to manage features, ViVeTool GUI let´s you also:
-- Load in a Feature List of other Builds
-- Search for Features 
-- Sort Features by Feature Name, Feature ID or Feature State
-- Group Features by: Always Enabled, Always Disabled, Enabled by Default, Disabled by Default and Modifiable
-- Copy Feature Names and IDs by right-clicking them
-- Switch between Dark and Light Mode (Setting get´s saved and applied on Start)
-- Automatically load the latest Feature List when starting ViVeTool GUI
-- Scan a Windows Build for Hidden Features to create your own Feature List
-- Use ViVeTool GUI in multiple translated Languages
-- Fix the LastKnownGood Store, as well as the A/B Testing Priorities for ViVeTool Features
-- and at last, view the About Box by either pressing on the About Icon, or selecting the "About..." Item in the Application System Menu.
+Maintainers
 
-<img width="511" height="175" src="/images/Searching.gif" alt="Image showing you how to search" />
+- Primary maintainer: mta1124-1629472
+- Contact: see SECURITY.md for vulnerability reporting
 
-## What are the System Requirements?
-Since ViVeTool GUI uses the ViVe API, Windows 10 Build 18963 (Version 2004) and newer is the only OS Requirement.
+License
 
-Apart from that, the only Requirement is .Net Framework 4.8
+- This project is licensed under GPLv3. See LICENSE for details.
 
-## Why not just use ViVeTool?
-Using ViVeTool GUI is more easier and user-friendly, besides it lets you also search for features and enable them with a few clicks.
+Overview
 
-# Licensing
-ViVeTool GUI uses Icons from [icons8.com](https://icons8.com/)
+- ViVeTool-GUI provides a graphical frontend for ViVe / ViVeTool feature control.
+- The legacy WinForms UI is retained for historical reference; the WPF UI (targeting .NET 9) is the actively developed and supported implementation.
 
-ViVeTool GUI is inspired by [ViVeTool](https://github.com/thebookisclosed/ViVe) and uses the [ViVe API](https://github.com/thebookisclosed/ViVe/tree/master/ViVe)
+Feed / Publishing workflow (summary)
 
-ViVeTool GUI uses [files](https://github.com/riverar/mach2/tree/master/features) from [mach2](https://github.com/riverar/mach2) for the Build Combo Box.
+- Builds and publish artifacts are performed by GitHub Actions workflows.
+- Feed/Publishing trigger:
+  - Releases (tag push) trigger publish workflow for packaged installers and artifacts.
+  - Manually-triggered workflow_dispatch workflows exist for preview feed publishes.
+- Scanner and CI:
+  - A security/analysis scanner runs on pull requests (see .github/workflows/*).
+  - WPF package builds and smoke tests run in CI for PRs targeting the WPF branch.
 
-ViVeTool GUI - Feature Scanner uses [mach2](https://github.com/riverar/mach2) to create it's Feature Lists
+Example publish workflow snippet
 
+```yaml
+# Example: .github/workflows/publish.yml
+name: Publish
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+      - name: Build WPF
+        run: dotnet publish ./src/ViVeTool.WPF/ViVeTool.WPF.csproj -c Release -r win-x64 --self-contained
+      - name: Package artifacts
+        run: | 
+          # package / sign steps here
+      - name: Publish to feed
+        run: |
+          # push to GitHub Releases / private feed
+```
+
+Future plans
+
+- Harden WPF tests and add automated UI tests for core flows.
+- Provide signed installer artifacts in the release pipeline.
+
+Where to start
+
+- See CONTRIBUTING.md for branch/PR workflow, coding style, and WPF build/test/publish guidelines.
+- See .github/ISSUE_TEMPLATE and .github/PULL_REQUEST_TEMPLATE for how to open issues and PRs.

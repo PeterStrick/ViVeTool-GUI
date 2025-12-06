@@ -13,12 +13,26 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports Albacore.ViVe, Telerik.WinControls.UI
+Imports Albacore.ViVe
 
 ''' <summary>
 ''' ViVeTool GUI - Manual Feature ID UI
 ''' </summary>
 Public Class SetManual
+    ''' <summary>
+    ''' Form Load Event - Set up the button click handler
+    ''' </summary>
+    Private Sub SetManual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AddHandler RDDB_PerformAction.Click, AddressOf RDDB_PerformAction_Click
+    End Sub
+
+    ''' <summary>
+    ''' Handle the Perform Action button click to show the context menu
+    ''' </summary>
+    Private Sub RDDB_PerformAction_Click(sender As Object, e As EventArgs)
+        ActionContextMenu.Show(RDDB_PerformAction, New System.Drawing.Point(0, RDDB_PerformAction.Height))
+    End Sub
+
     ''' <summary>
     ''' Set's the Feature Configuration. Uses the FeatureEnabledState parameter to set the EnabledState of the Feature
     ''' </summary>
@@ -49,55 +63,13 @@ Public Class SetManual
             'RtlFeatureManager.SetBootFeatureConfigurations(_configs) returns True
             'and RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) returns 0
             If Not RtlFeatureManager.SetBootFeatureConfigurations(_configs) OrElse RtlFeatureManager.SetLiveFeatureConfigurations(_configs, FeatureConfigurationSection.Runtime) >= 1 Then
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Error occurred",
-                    .Heading = "An Error occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
-                    .Icon = RadTaskDialogIcon.Error
-                }
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                RadTaskDialog.ShowDialog(RTD)
+                DialogHelper.ShowErrorDialog(" An Error occurred", "An Error occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString)
             Else
-                Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " Success",
-                    .Heading = "Successfully set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
-                    .Icon = RadTaskDialogIcon.ShieldSuccessGreenBar
-                }
-                RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-                RadTaskDialog.ShowDialog(RTD)
+                DialogHelper.ShowSuccessDialog(" Success", "Successfully set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString)
             End If
         Catch ex As Exception
             'Catch Any Exception that may occur
-
-            'Create a Button that on Click, copies the Exception Text
-            Dim CopyExAndClose As New RadTaskDialogButton With {
-                .Text = "Copy Exception and Close"
-            }
-            AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                  Try
-                                                                      My.Computer.Clipboard.SetText(ex.ToString)
-                                                                  Catch clipex As Exception
-                                                                      'Do nothing
-                                                                  End Try
-                                                              End Sub)
-
-            'Fancy Message Box
-            Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Exception occurred",
-                    .Heading = "An Exception occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString,
-                    .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                }
-            'Add the Exception Text to the Expander
-            RTD.Expander.Text = ex.ToString
-
-            'Set the Text for the "Collapse Info" and "More Info" Buttons
-            RTD.Expander.ExpandedButtonText = "Collapse Exception"
-            RTD.Expander.CollapsedButtonText = "Show Exception"
-
-            'Add the Button to the Message Box
-            RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-            'Show the Message Box
-            RadTaskDialog.ShowDialog(RTD)
+            DialogHelper.ShowExceptionDialog(" An Exception occurred", "An Exception occurred while trying to set Feature ID " & RTB_FeatureID.Text & " to " & FeatureEnabledState.ToString, ex.ToString)
         End Try
     End Sub
 

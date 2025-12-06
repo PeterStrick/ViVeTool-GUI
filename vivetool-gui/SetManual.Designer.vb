@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SetManual
-    Inherits Telerik.WinControls.UI.RadForm
+    Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,63 +22,71 @@ Partial Class SetManual
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SetManual))
-        Me.RTB_FeatureID = New Telerik.WinControls.UI.RadTextBox()
-        Me.RDDB_PerformAction = New Telerik.WinControls.UI.RadDropDownButton()
-        Me.RMI_ActivateF = New Telerik.WinControls.UI.RadMenuItem()
-        Me.RMI_DeactivateF = New Telerik.WinControls.UI.RadMenuItem()
-        Me.RMI_RevertF = New Telerik.WinControls.UI.RadMenuItem()
-        CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RTB_FeatureID = New System.Windows.Forms.TextBox()
+        Me.RDDB_PerformAction = New System.Windows.Forms.Button()
+        Me.ActionContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.RMI_ActivateF = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RMI_DeactivateF = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RMI_RevertF = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ActionContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'RTB_FeatureID
         '
-        Me.RTB_FeatureID.Location = New System.Drawing.Point(15, 15)
+        Me.RTB_FeatureID.Location = New System.Drawing.Point(15, 17)
         Me.RTB_FeatureID.Name = "RTB_FeatureID"
-        Me.RTB_FeatureID.NullText = "Enter a Feature ID"
-        Me.RTB_FeatureID.Size = New System.Drawing.Size(237, 28)
+        Me.RTB_FeatureID.Size = New System.Drawing.Size(250, 22)
         Me.RTB_FeatureID.TabIndex = 0
         '
         'RDDB_PerformAction
         '
         Me.RDDB_PerformAction.Enabled = False
         Me.RDDB_PerformAction.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_start_24
-        Me.RDDB_PerformAction.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
-        Me.RDDB_PerformAction.Location = New System.Drawing.Point(258, 15)
+        Me.RDDB_PerformAction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RDDB_PerformAction.Location = New System.Drawing.Point(275, 12)
         Me.RDDB_PerformAction.Name = "RDDB_PerformAction"
-        Me.RDDB_PerformAction.Size = New System.Drawing.Size(154, 26)
+        Me.RDDB_PerformAction.Padding = New System.Windows.Forms.Padding(4)
+        Me.RDDB_PerformAction.Size = New System.Drawing.Size(175, 35)
         Me.RDDB_PerformAction.TabIndex = 1
-        Me.RDDB_PerformAction.Text = "      Perform Action"
-        Me.RDDB_PerformAction.ThemeName = "Fluent"
+        Me.RDDB_PerformAction.Text = "Perform Action ▼"
+        Me.RDDB_PerformAction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.RDDB_PerformAction.UseVisualStyleBackColor = True
+        '
+        'ActionContextMenu
+        '
+        Me.ActionContextMenu.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ActionContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RMI_ActivateF, Me.RMI_DeactivateF, Me.RMI_RevertF})
+        Me.ActionContextMenu.Name = "ActionContextMenu"
+        Me.ActionContextMenu.Size = New System.Drawing.Size(280, 76)
         '
         'RMI_ActivateF
         '
         Me.RMI_ActivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_on_24
         Me.RMI_ActivateF.Name = "RMI_ActivateF"
+        Me.RMI_ActivateF.Size = New System.Drawing.Size(279, 24)
         Me.RMI_ActivateF.Text = "  Activate Feature"
-        Me.RMI_ActivateF.UseCompatibleTextRendering = False
         '
         'RMI_DeactivateF
         '
         Me.RMI_DeactivateF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_toggle_off_24
         Me.RMI_DeactivateF.Name = "RMI_DeactivateF"
+        Me.RMI_DeactivateF.Size = New System.Drawing.Size(279, 24)
         Me.RMI_DeactivateF.Text = "  Deactivate Feature"
-        Me.RMI_DeactivateF.UseCompatibleTextRendering = False
         '
         'RMI_RevertF
         '
         Me.RMI_RevertF.Image = Global.ViVeTool_GUI.My.Resources.Resources.icons8_rollback_24
         Me.RMI_RevertF.Name = "RMI_RevertF"
+        Me.RMI_RevertF.Size = New System.Drawing.Size(279, 24)
         Me.RMI_RevertF.Text = "  Revert Feature to Default Settings"
-        Me.RMI_RevertF.UseCompatibleTextRendering = False
         '
         'SetManual
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 58)
+        Me.ClientSize = New System.Drawing.Size(465, 60)
         Me.Controls.Add(Me.RDDB_PerformAction)
         Me.Controls.Add(Me.RTB_FeatureID)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -86,24 +94,19 @@ Partial Class SetManual
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SetManual"
-        '
-        '
-        '
-        Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Manually change a Feature - Enter a Feature ID"
-        CType(Me.RTB_FeatureID, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RDDB_PerformAction, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ActionContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents RTB_FeatureID As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RDDB_PerformAction As Telerik.WinControls.UI.RadDropDownButton
-    Friend WithEvents RMI_ActivateF As Telerik.WinControls.UI.RadMenuItem
-    Friend WithEvents RMI_DeactivateF As Telerik.WinControls.UI.RadMenuItem
-    Friend WithEvents RMI_RevertF As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents RTB_FeatureID As System.Windows.Forms.TextBox
+    Friend WithEvents RDDB_PerformAction As System.Windows.Forms.Button
+    Friend WithEvents ActionContextMenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents RMI_ActivateF As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RMI_DeactivateF As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RMI_RevertF As System.Windows.Forms.ToolStripMenuItem
 End Class
 

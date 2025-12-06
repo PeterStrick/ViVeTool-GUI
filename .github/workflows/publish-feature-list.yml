@@ -1,0 +1,157 @@
+name: Publish Feature List
+
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'Windows build number'
+        required: true
+        type: string
+      artifact_url:
+        description: 'URL to download the artifact from'
+        required: false
+        type: string
+      artifact_path:
+        description: 'Path to the artifact in the repository'
+        required: false
+        type: string
+      format:
+        description: 'Output format (csv or json)'
+        required: true
+        default: 'csv'
+        type: choice
+        options:
+          - csv
+          - json
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FEED_PUBLISH_TOKEN || github.token }}
+          fetch-depth: 0
+
+      - name: Validate inputs
+        run: |
+          if [ -z "${{ inputs.build }}" ]; then
+            echo "Error: Build number is required"
+            exit 1
+          fi
+          
+          if [ -z "${{ inputs.artifact_url }}" ] && [ -z "${{ inputs.artifact_path }}" ]; then
+            echo "Error: Either artifact_url or artifact_path must be provided"
+            exit 1
+          fi
+          
+          echo "Build: ${{ inputs.build }}"
+          echo "Format: ${{ inputs.format }}"
+          echo "Artifact URL: ${{ inputs.artifact_url }}"
+          echo "Artifact Path: ${{ inputs.artifact_path }}"
+
+      - name: Create features directory
+        run: |
+          mkdir -p features/${{ inputs.build }}
+
+      - name: Download artifact from URL
+        if: ${{ inputs.artifact_url != '' }}
+        run: |
+          curl -L -o features/${{ inputs.build }}/features.${{ inputs.format }} "${{ inputs.artifact_url }}"
+          echo "Downloaded artifact from URL to features/${{ inputs.build }}/features.${{ inputs.format }}"
+
+      - name: Copy artifact from path
+        if: ${{ inputs.artifact_path != '' && inputs.artifact_url == '' }}
+        run: |
+          if [ -f "${{ inputs.artifact_path }}" ]; then
+            cp "${{ inputs.artifact_path }}" features/${{ inputs.build }}/features.${{ inputs.format }}
+            echo "Copied artifact from path to features/${{ inputs.build }}/features.${{ inputs.format }}"
+          else
+            echo "Error: Artifact file not found at ${{ inputs.artifact_path }}"
+            exit 1
+          fi
+
+      - name: Verify artifact
+        run: |
+          if [ ! -f "features/${{ inputs.build }}/features.${{ inputs.format }}" ]; then
+            echo "Error: Feature file was not created"
+            exit 1
+          fi
+          echo "Feature file created successfully:"
+          ls -la features/${{ inputs.build }}/
+          echo "File contents preview (first 10 lines):"
+          head -10 features/${{ inputs.build }}/features.${{ inputs.format }}
+
+      - name: Update latest.json
+        run: |
+          # Create or update latest.json
+          LATEST_FILE="latest.json"
+          BUILD="${{ inputs.build }}"
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          
+          if [ -f "$LATEST_FILE" ]; then
+            # Read existing builds and add new one if not already present
+            EXISTING_BUILDS=$(jq -r '.builds // []' "$LATEST_FILE")
+            HAS_BUILD=$(echo "$EXISTING_BUILDS" | jq --arg b "$BUILD" 'map(select(. == $b)) | length')
+            
+            if [ "$HAS_BUILD" = "0" ]; then
+              # Add new build to the list
+              jq --arg b "$BUILD" --arg t "$TIMESTAMP" '.builds = (.builds + [$b] | sort | reverse) | .latestBuild = $b | .lastUpdated = $t' "$LATEST_FILE" > tmp.json && mv tmp.json "$LATEST_FILE"
+            else
+              # Just update latestBuild if this is a newer build
+              jq --arg b "$BUILD" --arg t "$TIMESTAMP" '.latestBuild = $b | .lastUpdated = $t' "$LATEST_FILE" > tmp.json && mv tmp.json "$LATEST_FILE"
+            fi
+          else
+            # Create new latest.json
+            echo "{\"latestBuild\": \"$BUILD\", \"builds\": [\"$BUILD\"], \"lastUpdated\": \"$TIMESTAMP\"}" | jq '.' > "$LATEST_FILE"
+          fi
+          
+          echo "Updated latest.json:"
+          cat "$LATEST_FILE"
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git commit -m "Add feature list for build ${{ inputs.build }}"
+          
+          # Try to push directly to main
+          if git push origin main; then
+            echo "Successfully pushed to main branch"
+          else
+            # If direct push fails, create a PR branch
+            BRANCH_NAME="feed/update-${{ inputs.build }}-$(date +%s)"
+            git checkout -b "$BRANCH_NAME"
+            git push origin "$BRANCH_NAME"
+            echo "Created branch $BRANCH_NAME for PR"
+            echo "Please create a pull request to merge the changes"
+          fi
+
+      - name: Summary
+        run: |
+          echo "## Feature List Published" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build:** ${{ inputs.build }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Format:** ${{ inputs.format }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Location:** features/${{ inputs.build }}/features.${{ inputs.format }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The feature list has been added to the repository." >> $GITHUB_STEP_SUMMARY

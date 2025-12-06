@@ -1,0 +1,16 @@
+public byte Group
+{
+    get => _group;
+    set
+    {
+        if (value > 14)
+        {
+            _group = 14; // Clamp instead of throwing
+            // Optionally log warning here
+        }
+        else
+        {
+            _group = value;
+        }
+    }
+}

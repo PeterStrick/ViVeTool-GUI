@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports System.Configuration, Telerik.WinControls.UI
+Imports System.Configuration
 
 Namespace My
     Partial Friend Class MyApplication
@@ -27,21 +27,14 @@ Namespace My
 
             'Check if mach2.exe and msdia140.dll are present
             If IO.File.Exists(Application.Info.DirectoryPath & "\mach2.exe") = False OrElse IO.File.Exists(Application.Info.DirectoryPath & "\msdia140.dll") = False Then
-                Dim RTD As New RadTaskDialogPage With {
-                       .Caption = " An Error occurred",
-                       .Heading = "An Error occurred. Files required for ViVeTool GUI - Feature Scanner to work properly are missing.",
-                       .Text = "Please check that the following files are present:" & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll",
-                       .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                   }
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                MessageBox.Show("Please check that the following files are present:" & vbNewLine & vbNewLine & "mach2.exe" & vbNewLine & "msdia140.dll", " An Error occurred - Files required for ViVeTool GUI - Feature Scanner to work properly are missing.", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End
             End If
 
             'Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
             If Settings.UseSystemTheme Then
-                'Set ToggleState for RTB_UseSystemTheme
-                ScannerUI.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                'Set CheckState for CB_UseSystemTheme
+                ScannerUI.CB_UseSystemTheme.Checked = True
 
                 'Get Registry Key Value
                 Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
@@ -51,24 +44,22 @@ Namespace My
 #Disable Warning BC42018
                 If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
 #Enable Warning BC42018
-                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
+                    ScannerUI.CB_ThemeToggle.Checked = True
+                    ScannerUI.CB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
-                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_sun_24
+                    ScannerUI.CB_ThemeToggle.Checked = False
+                    ScannerUI.CB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             Else
-                'Set ToggleState for RTB_UseSystemTheme
-                ScannerUI.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                'Set CheckState for CB_UseSystemTheme
+                ScannerUI.CB_UseSystemTheme.Checked = False
 
                 If Settings.DarkMode Then
-                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
+                    ScannerUI.CB_ThemeToggle.Checked = True
+                    ScannerUI.CB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
-                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-                    ScannerUI.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    ScannerUI.RTB_ThemeToggle.Image = Resources.icons8_sun_24
+                    ScannerUI.CB_ThemeToggle.Checked = False
+                    ScannerUI.CB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             End If
         End Sub

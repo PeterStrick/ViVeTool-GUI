@@ -13,7 +13,7 @@
 '
 'You should have received a copy of the GNU General Public License
 'along with this program.  If not, see <https://www.gnu.org/licenses/>.
-Imports Telerik.WinControls.UI
+
 ''' <summary>
 ''' About && Settings Dialog/Form
 ''' </summary>
@@ -26,6 +26,9 @@ Public NotInheritable Class AboutAndSettings
     Private Sub AboutAndSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Load the About Labels
         LoadAboutLabels()
+
+        'Load settings
+        CB_AutoLoad.Checked = My.Settings.AutoLoad
     End Sub
 
     ''' <summary>
@@ -46,34 +49,28 @@ Public NotInheritable Class AboutAndSettings
     End Sub
 
     ''' <summary>
-    ''' Change the App Icon depending on the selected RadPageViewPage
+    ''' Change the App Icon depending on the selected TabPage
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RPV_Main_SelectedPageChanged(sender As Object, e As EventArgs) Handles RPV_Main.SelectedPageChanged
-        If RPV_Main.SelectedPage Is RPVP_About Then
+    Private Sub TabControl_Main_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl_Main.SelectedIndexChanged
+        If TabControl_Main.SelectedTab Is TabPage_About Then
             Icon = My.Resources.about
-        ElseIf RPV_Main.SelectedPage Is RPVP_Settings Then
+        ElseIf TabControl_Main.SelectedTab Is TabPage_Settings Then
             Icon = My.Resources.settings_system_daydream
         End If
     End Sub
 
     ''' <summary>
-    ''' Changes the Application theme depending on the ToggleState
+    ''' Changes the Application theme depending on the CheckState
     ''' </summary>
     ''' <param name="sender"></param>
-    ''' <param name="args"></param>
-    Private Sub RTB_ThemeToggle_ToggleStateChanging(sender As Object, args As StateChangingEventArgs) Handles RTB_ThemeToggle.ToggleStateChanging
-        If args.NewValue = Telerik.WinControls.Enumerations.ToggleState.On Then
-            Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-            RTB_ThemeToggle.Text = "Dark Theme"
-            RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-            My.Settings.DarkMode = True
+    ''' <param name="e"></param>
+    Private Sub CB_ThemeToggle_CheckedChanged(sender As Object, e As EventArgs) Handles CB_ThemeToggle.CheckedChanged
+        If CB_ThemeToggle.Checked Then
+            ThemeHelper.ApplyDarkTheme(CB_ThemeToggle, My.Resources.icons8_moon_and_stars_24)
         Else
-            Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-            RTB_ThemeToggle.Text = "Light Theme"
-            RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-            My.Settings.DarkMode = False
+            ThemeHelper.ApplyLightTheme(CB_ThemeToggle, My.Resources.icons8_sun_24)
         End If
     End Sub
 
@@ -88,48 +85,10 @@ Public NotInheritable Class AboutAndSettings
                 Diagnostics.Process.Start(Application.StartupPath & "\ViVeTool_GUI.FeatureScanner.exe")
             Catch wex As System.ComponentModel.Win32Exception
                 'Catch Any Exception that may occur
-
-                'Create a Button that on Click, copies the Exception Text
-                Dim CopyExAndClose As New RadTaskDialogButton With {
-                    .Text = "Copy Exception and Close"
-                }
-                AddHandler CopyExAndClose.Click, New EventHandler(Sub()
-                                                                      Try
-                                                                          My.Computer.Clipboard.SetText(wex.ToString)
-                                                                      Catch clipex As Exception
-                                                                          'Do nothing
-                                                                      End Try
-                                                                  End Sub)
-
-                'Fancy Message Box
-                Dim RTD As New RadTaskDialogPage With {
-                        .Caption = " An Exception occurred",
-                        .Heading = "A generic Win32 Exception occurred.",
-                        .Text = "There could be multiple causes for Win32 Exceptions, but they usually narrow down to Antivirus Software interfering with ViVeTool GUI, or Permission problems.",
-                        .Icon = RadTaskDialogIcon.ShieldErrorRedBar
-                    }
-
-                'Add the Exception Text to the Expander
-                RTD.Expander.Text = wex.ToString
-
-                'Set the Text for the "Collapse Info" and "More Info" Buttons
-                RTD.Expander.ExpandedButtonText = "Collapse Exception"
-                RTD.Expander.CollapsedButtonText = "Show Exception"
-
-                'Add the Button to the Message Box
-                RTD.CommandAreaButtons.Add(CopyExAndClose)
-
-                'Show the Message Box
-                RadTaskDialog.ShowDialog(RTD)
+                DialogHelper.ShowExceptionDialog(" An Exception occurred", "A generic Win32 Exception occurred.", wex.ToString, "There could be multiple causes for Win32 Exceptions, but they usually narrow down to Antivirus Software interfering with ViVeTool GUI, or Permission problems.")
             End Try
         Else
-            Dim RTD As New RadTaskDialogPage With {
-                    .Caption = " An Error occurred",
-                    .Heading = "An Error occurred while trying to start ViVeTool GUI - Feature Scanner." & vbNewLine & vbNewLine & "The File doesn't exist.",
-                    .Icon = RadTaskDialogIcon.Error
-                }
-            RTD.CommandAreaButtons.Add(RadTaskDialogButton.Close)
-            RadTaskDialog.ShowDialog(RTD)
+            DialogHelper.ShowErrorDialog(" An Error occurred", "An Error occurred while trying to start ViVeTool GUI - Feature Scanner." & vbNewLine & vbNewLine & "The File doesn't exist.")
         End If
     End Sub
 
@@ -143,39 +102,24 @@ Public NotInheritable Class AboutAndSettings
     End Sub
 
     ''' <summary>
-    ''' Changes the Application theme, using the System Theme depending on the ToggleState
+    ''' Changes the Application theme, using the System Theme depending on the CheckState
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
-    ''' <param name="args">StateChanged EventArgs</param>
-    Private Sub RTB_UseSystemTheme_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles RTB_UseSystemTheme.ToggleStateChanged
-        If args.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On Then
-            My.Settings.UseSystemTheme = True
-            Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = My.Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
-            Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
-#Disable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
-            If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
-#Enable Warning BC42018 ' Für den Operator werden Operanden vom Typ "Object" verwendet.
-                RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                RTB_ThemeToggle.Image = My.Resources.icons8_moon_and_stars_24
-            Else
-                RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                RTB_ThemeToggle.Image = My.Resources.icons8_sun_24
-            End If
+    ''' <param name="e">Default EventArgs</param>
+    Private Sub CB_UseSystemTheme_CheckedChanged(sender As Object, e As EventArgs) Handles CB_UseSystemTheme.CheckedChanged
+        If CB_UseSystemTheme.Checked Then
+            ThemeHelper.ApplySystemTheme(CB_ThemeToggle, My.Resources.icons8_moon_and_stars_24, My.Resources.icons8_sun_24)
         Else
-            My.Settings.UseSystemTheme = False
+            ThemeHelper.DisableSystemTheme()
         End If
     End Sub
 
     ''' <summary>
-    ''' Changes if the latest Build should be auto-loaded, depending on the ToggleState
+    ''' Changes if the latest Build should be auto-loaded, depending on the CheckState
     ''' </summary>
     ''' <param name="sender">Default sender Object</param>
     ''' <param name="e">Default EventArgs</param>
-    Private Sub RTS_AutoLoad_ValueChanged(sender As Object, e As EventArgs) Handles RTS_AutoLoad.ValueChanged
-        If RTS_AutoLoad.Value Then
-            My.Settings.AutoLoad = True
-        Else
-            My.Settings.AutoLoad = False
-        End If
+    Private Sub CB_AutoLoad_CheckedChanged(sender As Object, e As EventArgs) Handles CB_AutoLoad.CheckedChanged
+        My.Settings.AutoLoad = CB_AutoLoad.Checked
     End Sub
 End Class

@@ -40,19 +40,15 @@ Namespace My
             If Not ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).HasFile Then Settings.Upgrade()
 
             'Load Settings States from My.Settings
-            'Set ToggleState for RTS_AutoLoad
-            If Settings.AutoLoad Then
-                AboutAndSettings.RTS_AutoLoad.SetToggleState(True)
-            Else
-                AboutAndSettings.RTS_AutoLoad.SetToggleState(False)
-            End If
+            'Set CheckState for CB_AutoLoad
+            AboutAndSettings.CB_AutoLoad.Checked = Settings.AutoLoad
 
             'Check if DynamicTheme is enabled, else Enable Dark Mode if previously turned on
             If Settings.UseSystemTheme Then
-                'Set ToggleState for RTB_UseSystemTheme
-                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
+                'Set CheckState for CB_UseSystemTheme
+                AboutAndSettings.CB_UseSystemTheme.Checked = True
 
-                'Get Regsitry Key Value
+                'Get Registry Key Value
                 Dim AppsUseLightTheme_CurrentUserDwordKey As Microsoft.Win32.RegistryKey = Computer.Registry.CurrentUser.OpenSubKey("Software\Microsoft\Windows\CurrentVersion\Themes\Personalize")
                 Dim AppsUseLightTheme_CurrentUserDwordValue As Object = AppsUseLightTheme_CurrentUserDwordKey.GetValue("SystemUsesLightTheme")
 
@@ -60,24 +56,22 @@ Namespace My
 #Disable Warning BC42018
                 If AppsUseLightTheme_CurrentUserDwordValue = 0 Then
 #Enable Warning BC42018
-                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
+                    AboutAndSettings.CB_ThemeToggle.Checked = True
+                    AboutAndSettings.CB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
-                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_sun_24
+                    AboutAndSettings.CB_ThemeToggle.Checked = False
+                    AboutAndSettings.CB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             Else
-                'Set ToggleState for RTB_UseSystemTheme
-                AboutAndSettings.RTB_UseSystemTheme.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
+                'Set CheckState for CB_UseSystemTheme
+                AboutAndSettings.CB_UseSystemTheme.Checked = False
 
                 If Settings.DarkMode Then
-                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "FluentDark"
-                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On
-                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
+                    AboutAndSettings.CB_ThemeToggle.Checked = True
+                    AboutAndSettings.CB_ThemeToggle.Image = Resources.icons8_moon_and_stars_24
                 Else
-                    Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "Fluent"
-                    AboutAndSettings.RTB_ThemeToggle.ToggleState = Telerik.WinControls.Enumerations.ToggleState.Off
-                    AboutAndSettings.RTB_ThemeToggle.Image = Resources.icons8_sun_24
+                    AboutAndSettings.CB_ThemeToggle.Checked = False
+                    AboutAndSettings.CB_ThemeToggle.Image = Resources.icons8_sun_24
                 End If
             End If
         End Sub

@@ -1,0 +1,31 @@
+<Application x:Class="App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ViVeTool_GUI.Wpf.Converters"
+             StartupUri="Views/MainWindow.xaml"
+             ThemeMode="System">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- .NET 9 Fluent theme - provides modern Windows 11 styling -->
+                <ResourceDictionary Source="/PresentationFramework.Fluent;component/Themes/Fluent.xaml" />
+                <!-- App-specific theme colors and styles (can override/extend Fluent) -->
+                <ResourceDictionary Source="Themes/Light.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Value Converters -->
+            <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            
+            <!-- Inverse Boolean Converter for IsEnabled bindings -->
+            <local:InverseBooleanConverter x:Key="InverseBoolConverter" />
+
+            <!-- Inverse Boolean to Visibility Converter (False = Visible) -->
+            <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibilityConverter" />
+
+            <!-- Publish-related converters -->
+            <local:PublishStatusToButtonTextConverter x:Key="PublishStatusToButtonTextConverter" />
+            <local:PublishSuccessToVisibilityConverter x:Key="PublishSuccessToVisibilityConverter" />
+            <local:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
